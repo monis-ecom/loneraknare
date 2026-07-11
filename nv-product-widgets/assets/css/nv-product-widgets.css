@@ -2775,6 +2775,8 @@ body.nv-pw-size-chart-open {
 .nv-pw-qb--badge-inline .nv-pw-qb__badge{position:static;display:inline-flex;transform:none;border-radius:999px;margin:0 0 10px;padding:4px 12px;}
 /* Keep the price clear of a top-right badge */
 .nv-pw-qb--badge-top-right .nv-pw-qb__prices{padding-top:14px;}
+/* Free-gift line label in the cart / side cart */
+.nv-pw-gift-free{color:#1D9E75;font-weight:700;}
 .nv-pw-qb__row{display:flex;align-items:center;gap:14px;}
 .nv-pw-qb__radio{flex:0 0 auto;width:22px;height:22px;border-radius:50%;border:2px solid #C3C7D2;background:#fff;position:relative;transition:border-color .15s;}
 .nv-pw-qb__tier.is-selected .nv-pw-qb__radio{border-color:var(--nv-qb-accent);}

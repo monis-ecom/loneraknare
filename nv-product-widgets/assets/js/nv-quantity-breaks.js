@@ -76,6 +76,9 @@
                 var mode = box.getAttribute('data-discount-mode') || 'coupon';
                 var coupon = mode === 'coupon' ? (tier.getAttribute('data-coupon') || '') : '';
                 var discountPct = mode === 'auto' ? (tier.getAttribute('data-discount') || '0') : '0';
+                var isNvcc = mode === 'nvcc';
+                var cartTotal = isNvcc ? (tier.getAttribute('data-cart-total') || '0') : '0';
+                var dealTitle = tier.getAttribute('data-label') || '';
                 var giftId = tier.getAttribute('data-gift-id') || '0';
                 var units = [];
 
@@ -108,6 +111,11 @@
                 body.set('coupon', coupon);
                 body.set('discount_pct', discountPct);
                 body.set('gift_id', giftId);
+                body.set('nvcc', isNvcc ? '1' : '0');
+                if (isNvcc) {
+                    body.set('cart_total', cartTotal);
+                    body.set('deal_title', dealTitle);
+                }
 
                 var afterAdd = box.getAttribute('data-after-add') || 'side_cart';
 

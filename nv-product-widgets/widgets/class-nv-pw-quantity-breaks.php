@@ -55,8 +55,9 @@ class NV_PW_Quantity_Breaks extends \Elementor\Widget_Base {
             'options' => [
                 'coupon' => __('WooCommerce coupon per tier', 'nv-product-widgets'),
                 'auto'   => __('Automatic — no code (per-tier %)', 'nv-product-widgets'),
+                'nvcc'   => __('Exact tier price via NV Commerce Core', 'nv-product-widgets'),
             ],
-            'description' => __('“Automatic” applies each tier’s discount % directly at checkout as a cart reduction — no coupon code needed.', 'nv-product-widgets'),
+            'description' => __('“Exact tier price via NV Commerce Core” charges precisely the tier’s displayed price and stops NV Commerce Core’s bulk discount from also applying to these items — use this if you run NV Commerce Core. The number is read from each tier’s “Price (display)” field.', 'nv-product-widgets'),
         ]);
         $this->add_control('after_add', [
             'label' => __('After add to cart', 'nv-product-widgets'),
@@ -307,12 +308,18 @@ class NV_PW_Quantity_Breaks extends \Elementor\Widget_Base {
                         }
                     }
                     $selected = ($i === $default_index);
+                    // Parse the tier's displayed price into a numeric total for the
+                    // exact-price (NV Commerce Core) mode. Handles "1 109 kr", "499 kr",
+                    // "1 109,50 kr" → 1109 / 499 / 1109.50.
+                    $cart_total = (float) preg_replace('/[^0-9.]/', '', str_replace([' ', "\xC2\xA0", ','], ['', '', '.'], $price));
                     ?>
                     <div class="nv-pw-qb__tier<?php echo $selected ? ' is-selected' : ''; ?>"
                          data-nv-qb-tier="<?php echo (int) $i; ?>"
                          data-qty="<?php echo (int) $qty; ?>"
                          data-coupon="<?php echo esc_attr($coupon); ?>"
                          data-discount="<?php echo esc_attr((string) $discount_pct); ?>"
+                         data-cart-total="<?php echo esc_attr((string) $cart_total); ?>"
+                         data-label="<?php echo esc_attr($label); ?>"
                          data-gift-id="<?php echo esc_attr((string) ($gift_on ? $gift_pid : 0)); ?>">
                         <?php if ($badge !== '') : ?><span class="nv-pw-qb__badge"><?php echo esc_html($badge); ?></span><?php endif; ?>
                         <div class="nv-pw-qb__row">

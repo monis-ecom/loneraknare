@@ -20,6 +20,18 @@ final class NV_PW_Bundle_Cart {
         // Safety net: whatever price another plugin ends up charging for a gift line,
         // subtract it back as a negative fee so the gift is always genuinely free.
         add_action('woocommerce_cart_calculate_fees', [__CLASS__, 'make_gift_free'], 30);
+        // Show gift lines as "Gratis" in the mini-cart / side cart / cart page so the
+        // displayed price matches the zero the customer is actually charged.
+        add_filter('woocommerce_cart_item_price', [__CLASS__, 'gift_free_html'], 20, 3);
+        add_filter('woocommerce_cart_item_subtotal', [__CLASS__, 'gift_free_html'], 20, 3);
+    }
+
+    /** Force gift cart lines to display as free (matches the zero they cost). */
+    public static function gift_free_html($html, $cart_item, $cart_item_key) {
+        if (is_array($cart_item) && !empty($cart_item['nv_pw_gift'])) {
+            return '<span class="nv-pw-gift-free">' . esc_html__('Gratis', 'nv-product-widgets') . '</span>';
+        }
+        return $html;
     }
 
     /**
@@ -33,6 +45,9 @@ final class NV_PW_Bundle_Cart {
         $refund = 0.0;
         foreach ($cart->get_cart() as $item) {
             if (empty($item['nv_pw_gift']) || empty($item['data']) || !is_object($item['data'])) continue;
+            // Skip gifts already handled by NV Commerce Core's bundle-deal engine
+            // (exact-price mode) to avoid subtracting the gift twice.
+            if (!empty($item['_nvcc_bundle_deal_mode'])) continue;
             $refund += (float) $item['data']->get_price() * max(1, (int) $item['quantity']);
         }
         if ($refund > 0.009) {
@@ -95,7 +110,27 @@ final class NV_PW_Bundle_Cart {
         $units = is_array($units) ? $units : [];
 
         $discount_pct = isset($_POST['discount_pct']) ? max(0.0, min(90.0, (float) $_POST['discount_pct'])) : 0.0;
-        $item_data = $discount_pct > 0 ? ['nv_pw_qb_discount' => $discount_pct] : [];
+
+        // Exact-price mode: delegate pricing to NV Commerce Core's custom bundle-deal
+        // engine. It reduces the whole group to exactly `cart_total` and — crucially —
+        // excludes these lines from its own global bulk discount, so the two engines
+        // stop fighting and the tier price the customer sees is the price they pay.
+        $nvcc = isset($_POST['nvcc']) && (string) $_POST['nvcc'] === '1';
+        $cart_total = isset($_POST['cart_total']) ? max(0.0, (float) $_POST['cart_total']) : 0.0;
+        $deal_title = isset($_POST['deal_title']) ? sanitize_text_field(wp_unslash((string) $_POST['deal_title'])) : '';
+        $use_nvcc = $nvcc && $cart_total > 0;
+        $group = $use_nvcc ? uniqid('nvqb_', false) : '';
+
+        if ($use_nvcc) {
+            $item_data = [
+                '_nvcc_bundle_deal_mode'  => 'fixed_price',
+                '_nvcc_bundle_deal_value' => $cart_total,
+                '_nvcc_bundle_group'      => $group,
+                '_nvcc_bundle_deal_title' => $deal_title,
+            ];
+        } else {
+            $item_data = $discount_pct > 0 ? ['nv_pw_qb_discount' => $discount_pct] : [];
+        }
 
         $added = 0;
         if ($product->is_type('variable')) {
@@ -134,7 +169,16 @@ final class NV_PW_Bundle_Cart {
         if ($gift_id > 0) {
             $gift = wc_get_product($gift_id);
             if ($gift instanceof \WC_Product && $gift->exists()) {
-                WC()->cart->add_to_cart($gift_id, 1, 0, [], ['nv_pw_gift' => 1]);
+                $gift_data = ['nv_pw_gift' => 1];
+                if ($use_nvcc) {
+                    // fixed_amount with a large value = "take off the whole line" → free,
+                    // and marks the gift as a custom deal so bulk discount skips it.
+                    $gift_data['_nvcc_bundle_deal_mode']  = 'fixed_amount';
+                    $gift_data['_nvcc_bundle_deal_value'] = 1000000;
+                    $gift_data['_nvcc_bundle_group']      = uniqid('nvqbgift_', false);
+                    $gift_data['_nvcc_bundle_deal_title'] = ($deal_title !== '' ? $deal_title . ' – ' : '') . __('Gratis gåva', 'nv-product-widgets');
+                }
+                WC()->cart->add_to_cart($gift_id, 1, 0, [], $gift_data);
             }
         }
 
