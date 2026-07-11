@@ -1,0 +1,691 @@
+<title>NV Product Widgets — Section Coverage Audit & Build Blueprint</title>
+<style>
+  :root {
+    --paper:#FCFCFE; --surface:#FFFFFF; --surface-2:#F4F5F9; --surface-3:#EDEFF6;
+    --ink:#16181F; --muted:#5B6070; --faint:#878C9C; --line:#E4E6EF;
+    --accent:#2B50E4; --accent-ink:#1B37A8; --accent-soft:#EAEEFD;
+    --have:#1F9D6B; --have-soft:#E4F4EC;
+    --partial:#B9791A; --partial-soft:#F7EEDD;
+    --gap:#DC4F33; --gap-soft:#FBE7E2;
+    --na:#8A90A0; --na-soft:#EEF0F4;
+    --sans: system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono: ui-monospace,"SF Mono","JetBrains Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --maxw: 1080px;
+    --radius:14px;
+    --shadow: 0 1px 2px rgba(20,24,40,.04), 0 8px 24px rgba(20,24,40,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:#0E1016; --surface:#161922; --surface-2:#1C202B; --surface-3:#232838;
+      --ink:#EEF0F6; --muted:#9AA0B2; --faint:#6E7488; --line:#272C39;
+      --accent:#6B86F5; --accent-ink:#93A6F8; --accent-soft:#1B2138;
+      --have:#37C28C; --have-soft:#13291F;
+      --partial:#E0A63C; --partial-soft:#2C2415;
+      --gap:#F27357; --gap-soft:#301C17;
+      --na:#767C90; --na-soft:#1F232E;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#0E1016; --surface:#161922; --surface-2:#1C202B; --surface-3:#232838;
+    --ink:#EEF0F6; --muted:#9AA0B2; --faint:#6E7488; --line:#272C39;
+    --accent:#6B86F5; --accent-ink:#93A6F8; --accent-soft:#1B2138;
+    --have:#37C28C; --have-soft:#13291F;
+    --partial:#E0A63C; --partial-soft:#2C2415;
+    --gap:#F27357; --gap-soft:#301C17;
+    --na:#767C90; --na-soft:#1F232E;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+  }
+  :root[data-theme="light"] {
+    --paper:#FCFCFE; --surface:#FFFFFF; --surface-2:#F4F5F9; --surface-3:#EDEFF6;
+    --ink:#16181F; --muted:#5B6070; --faint:#878C9C; --line:#E4E6EF;
+    --accent:#2B50E4; --accent-ink:#1B37A8; --accent-soft:#EAEEFD;
+    --have:#1F9D6B; --have-soft:#E4F4EC;
+    --partial:#B9791A; --partial-soft:#F7EEDD;
+    --gap:#DC4F33; --gap-soft:#FBE7E2;
+    --na:#8A90A0; --na-soft:#EEF0F4;
+    --shadow: 0 1px 2px rgba(20,24,40,.04), 0 8px 24px rgba(20,24,40,.06);
+  }
+
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body {
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); line-height:1.55;
+    font-size:16px; letter-spacing:-.006em;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:var(--maxw); margin:0 auto; padding:0 22px; }
+  section { padding:26px 0; }
+
+  h1,h2,h3 { text-wrap:balance; margin:0; line-height:1.14; letter-spacing:-.02em; }
+  h1 { font-size:clamp(1.85rem,4.4vw,2.9rem); font-weight:800; }
+  h2 { font-size:clamp(1.25rem,2.6vw,1.7rem); font-weight:780; }
+  h3 { font-size:1.02rem; font-weight:720; letter-spacing:-.01em; }
+  p { margin:0; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+
+  .eyebrow {
+    font-family:var(--mono); font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--faint); font-weight:600;
+  }
+  .mono { font-family:var(--mono); }
+  .tnum { font-variant-numeric:tabular-nums; }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    position:sticky; top:0; z-index:40; background:color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--line);
+  }
+  .topbar .row { display:flex; align-items:center; gap:16px; height:56px; }
+  .brandmark { display:flex; align-items:center; gap:10px; font-weight:720; letter-spacing:-.01em; }
+  .brandmark .dot { width:11px; height:11px; border-radius:3px; background:var(--accent); box-shadow:0 0 0 4px var(--accent-soft); }
+  .topbar .spacer { flex:1; }
+  .mini-prog { display:flex; align-items:center; gap:10px; font-family:var(--mono); font-size:.78rem; color:var(--muted); }
+  .mini-track { width:120px; height:7px; border-radius:99px; background:var(--surface-3); overflow:hidden; }
+  .mini-fill { height:100%; width:0%; background:var(--accent); border-radius:99px; transition:width .35s ease; }
+  .theme-btn {
+    border:1px solid var(--line); background:var(--surface); color:var(--muted);
+    width:34px; height:34px; border-radius:9px; cursor:pointer; font-size:15px; display:grid; place-items:center;
+  }
+  .theme-btn:hover { color:var(--ink); border-color:var(--accent); }
+
+  /* ---------- Hero ---------- */
+  .hero { padding-top:34px; padding-bottom:8px; }
+  .hero .kick { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+  .hero h1 { max-width:16ch; }
+  .lede { margin-top:14px; font-size:1.08rem; color:var(--muted); max-width:60ch; }
+  .metrow { display:flex; gap:8px; flex-wrap:wrap; margin-top:18px; }
+  .chip {
+    display:inline-flex; align-items:center; gap:7px; padding:6px 11px; border-radius:99px;
+    border:1px solid var(--line); background:var(--surface); font-size:.82rem; color:var(--muted);
+    font-family:var(--mono); letter-spacing:-.01em;
+  }
+  .chip b { color:var(--ink); font-weight:700; }
+
+  /* ---------- Verdict / dashboard ---------- */
+  .board {
+    display:grid; grid-template-columns:1.15fr .85fr; gap:16px; margin-top:22px;
+  }
+  .panel {
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    box-shadow:var(--shadow); padding:22px;
+  }
+  .verdict h2 { margin-bottom:8px; }
+  .verdict p { color:var(--muted); }
+  .verdict .big { font-size:2.1rem; font-weight:820; letter-spacing:-.02em; color:var(--ink); margin-top:4px; }
+  .statgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:18px; }
+  .stat { border-radius:11px; padding:13px 12px; border:1px solid var(--line); }
+  .stat .n { font-size:1.65rem; font-weight:800; line-height:1; font-variant-numeric:tabular-nums; }
+  .stat .l { font-size:.74rem; color:var(--muted); margin-top:6px; letter-spacing:.02em; }
+  .stat.have { background:var(--have-soft); border-color:color-mix(in srgb,var(--have) 30%,var(--line)); }
+  .stat.have .n { color:var(--have); }
+  .stat.partial { background:var(--partial-soft); border-color:color-mix(in srgb,var(--partial) 30%,var(--line)); }
+  .stat.partial .n { color:var(--partial); }
+  .stat.gap { background:var(--gap-soft); border-color:color-mix(in srgb,var(--gap) 30%,var(--line)); }
+  .stat.gap .n { color:var(--gap); }
+
+  /* build ring panel */
+  .ring-panel { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:6px; }
+  .ring-wrap { position:relative; width:168px; height:168px; }
+  .ring-wrap svg { transform:rotate(-90deg); width:168px; height:168px; }
+  .ring-wrap .bg { fill:none; stroke:var(--surface-3); stroke-width:14; }
+  .ring-wrap .fg { fill:none; stroke:var(--accent); stroke-width:14; stroke-linecap:round; transition:stroke-dashoffset .5s cubic-bezier(.4,0,.2,1); }
+  .ring-center { position:absolute; inset:0; display:grid; place-content:center; gap:2px; }
+  .ring-center .pct { font-size:2.1rem; font-weight:820; font-variant-numeric:tabular-nums; letter-spacing:-.02em; }
+  .ring-center .sub { font-family:var(--mono); font-size:.72rem; color:var(--muted); letter-spacing:.04em; }
+  .ring-panel .cap { font-size:.86rem; color:var(--muted); max-width:26ch; }
+
+  /* ---------- Section headers ---------- */
+  .shead { display:flex; align-items:baseline; gap:14px; margin-bottom:16px; flex-wrap:wrap; }
+  .shead h2 { }
+  .shead .note { color:var(--muted); font-size:.9rem; }
+
+  /* ---------- Coverage table ---------- */
+  .tablecard { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; }
+  .tscroll { overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-size:.9rem; min-width:640px; }
+  thead th {
+    text-align:left; font-family:var(--mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--faint); font-weight:600; padding:12px 16px; border-bottom:1px solid var(--line); background:var(--surface-2);
+    position:sticky; top:0;
+  }
+  tbody td { padding:11px 16px; border-bottom:1px solid var(--line); vertical-align:middle; }
+  tbody tr:last-child td { border-bottom:0; }
+  tbody tr:hover td { background:var(--surface-2); }
+  .grouprow td {
+    background:var(--surface-3); font-family:var(--mono); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--muted); font-weight:600; padding:8px 16px;
+  }
+  .ttype { font-weight:640; color:var(--ink); }
+  .twidget { font-family:var(--mono); font-size:.78rem; color:var(--muted); }
+  .twidget span { color:var(--accent-ink); }
+  .badge {
+    display:inline-flex; align-items:center; gap:6px; padding:3px 9px 3px 7px; border-radius:99px;
+    font-size:.74rem; font-weight:640; white-space:nowrap; border:1px solid transparent;
+  }
+  .badge::before { content:""; width:7px; height:7px; border-radius:50%; }
+  .badge.have { background:var(--have-soft); color:var(--have); border-color:color-mix(in srgb,var(--have) 28%,transparent); }
+  .badge.have::before { background:var(--have); }
+  .badge.partial { background:var(--partial-soft); color:var(--partial); border-color:color-mix(in srgb,var(--partial) 30%,transparent); }
+  .badge.partial::before { background:var(--partial); }
+  .badge.gap { background:var(--gap-soft); color:var(--gap); border-color:color-mix(in srgb,var(--gap) 30%,transparent); }
+  .badge.gap::before { background:var(--gap); }
+  .badge.na { background:var(--na-soft); color:var(--na); border-color:color-mix(in srgb,var(--na) 26%,transparent); }
+  .badge.na::before { background:var(--na); }
+
+  /* ---------- Gap cards ---------- */
+  .gapgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .gapcard { background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--gap); border-radius:12px; padding:16px 16px 15px; box-shadow:var(--shadow); }
+  .gapcard .gid { font-family:var(--mono); font-size:.74rem; color:var(--gap); font-weight:600; }
+  .gapcard h3 { margin:6px 0 7px; }
+  .gapcard p { font-size:.86rem; color:var(--muted); }
+
+  /* ---------- Roadmap ---------- */
+  .phase { margin-top:20px; }
+  .phase-head { display:flex; align-items:center; gap:12px; margin-bottom:12px; flex-wrap:wrap; }
+  .phase-tag { font-family:var(--mono); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#fff; background:var(--accent); padding:4px 9px; border-radius:6px; font-weight:600; }
+  .phase-head h3 { font-size:1.12rem; }
+  .phase-head .count { font-family:var(--mono); font-size:.78rem; color:var(--muted); margin-left:auto; }
+  .phase.optional .phase-tag { background:var(--na); }
+  .phase.track2 .phase-tag { background:var(--have); }
+
+  .items { display:flex; flex-direction:column; gap:10px; }
+  .item {
+    display:grid; grid-template-columns:26px 1fr auto; gap:14px; align-items:start;
+    background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px 16px;
+    box-shadow:var(--shadow); transition:border-color .2s, opacity .2s;
+  }
+  .item:hover { border-color:color-mix(in srgb,var(--accent) 40%,var(--line)); }
+  .item.done { opacity:.62; }
+  .item.done .it-title { text-decoration:line-through; text-decoration-color:var(--faint); }
+  .cbx { appearance:none; -webkit-appearance:none; width:22px; height:22px; margin-top:1px; border:2px solid var(--line); border-radius:7px; cursor:pointer; background:var(--surface); display:grid; place-content:center; transition:.15s; }
+  .cbx:hover { border-color:var(--accent); }
+  .cbx:checked { background:var(--accent); border-color:var(--accent); }
+  .cbx:checked::after { content:"✓"; color:#fff; font-size:14px; font-weight:800; line-height:1; }
+  .cbx:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  .it-body .id { font-family:var(--mono); font-size:.76rem; color:var(--accent-ink); }
+  .it-title { font-weight:700; font-size:1rem; margin:2px 0 4px; }
+  .it-desc { font-size:.88rem; color:var(--muted); }
+  .it-why { font-size:.83rem; color:var(--ink); margin-top:8px; padding-left:11px; border-left:2px solid var(--accent-soft); }
+  .it-why b { color:var(--accent-ink); font-weight:680; }
+  .it-meta { display:flex; flex-direction:column; gap:6px; align-items:flex-end; min-width:74px; }
+  .tag { font-family:var(--mono); font-size:.68rem; padding:3px 8px; border-radius:6px; white-space:nowrap; border:1px solid var(--line); color:var(--muted); }
+  .tag.impact-high { background:var(--accent-soft); color:var(--accent-ink); border-color:transparent; }
+  .tag.impact-med { background:var(--surface-2); }
+  .tag.eff { background:var(--surface-2); }
+
+  /* ---------- Callout ---------- */
+  .callout { background:var(--accent-soft); border:1px solid color-mix(in srgb,var(--accent) 24%,var(--line)); border-radius:var(--radius); padding:18px 20px; display:flex; gap:14px; align-items:flex-start; }
+  .callout .ico { font-size:1.3rem; line-height:1.3; }
+  .callout h3 { margin-bottom:5px; }
+  .callout p { font-size:.9rem; color:var(--muted); }
+  .callout.warm { background:var(--partial-soft); border-color:color-mix(in srgb,var(--partial) 26%,var(--line)); }
+
+  /* ---------- two-col info ---------- */
+  .cols { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .infocard { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 20px; box-shadow:var(--shadow); }
+  .infocard h3 { margin-bottom:10px; }
+  .infocard ul { margin:0; padding-left:18px; color:var(--muted); font-size:.9rem; }
+  .infocard li { margin:6px 0; }
+  .infocard li b { color:var(--ink); font-weight:660; }
+
+  /* controls bar */
+  .ctl { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:14px; }
+  .btn { font-family:var(--sans); font-size:.84rem; font-weight:600; border:1px solid var(--line); background:var(--surface); color:var(--muted); padding:8px 13px; border-radius:9px; cursor:pointer; }
+  .btn:hover { color:var(--ink); border-color:var(--accent); }
+  .savenote { font-family:var(--mono); font-size:.74rem; color:var(--faint); }
+
+  footer { border-top:1px solid var(--line); margin-top:20px; padding:26px 0 60px; color:var(--muted); font-size:.84rem; }
+  footer .method { background:var(--surface-2); border:1px solid var(--line); border-radius:11px; padding:14px 16px; margin-top:12px; }
+  footer code { font-family:var(--mono); font-size:.8em; background:var(--surface-3); padding:1px 5px; border-radius:4px; }
+
+  @media (max-width:820px) {
+    .board { grid-template-columns:1fr; }
+    .statgrid { grid-template-columns:repeat(3,1fr); }
+    .gapgrid { grid-template-columns:1fr; }
+    .cols { grid-template-columns:1fr; }
+    .mini-prog .lbl { display:none; }
+  }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+</style>
+
+<div class="topbar">
+  <div class="wrap row">
+    <div class="brandmark"><span class="dot"></span> NV&nbsp;Product&nbsp;Widgets</div>
+    <div class="spacer"></div>
+    <div class="mini-prog">
+      <span class="lbl">Build</span>
+      <div class="mini-track"><div class="mini-fill" id="miniFill"></div></div>
+      <span id="miniTxt" class="tnum">0 / 11</span>
+    </div>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle light or dark theme" title="Toggle theme">◑</button>
+  </div>
+</div>
+
+<header class="hero wrap">
+  <div class="kick">
+    <span class="eyebrow">Competitive audit · Build blueprint</span>
+  </div>
+  <h1>You already own most of the section toolkit. Here's the map — and the short list worth building.</h1>
+  <p class="lede">A type-by-type comparison of <b>section.store</b>'s Shopify catalog against your <b>NV&nbsp;Product&nbsp;Widgets</b> plugin, with a prioritised, checkable build plan tuned for a high-converting landing page and a solo, ADHD-friendly workflow.</p>
+  <div class="metrow">
+    <span class="chip"><b>46</b> widgets you have today</span>
+    <span class="chip"><b>~33</b> section types compared</span>
+    <span class="chip"><b>5</b> core widgets to add</span>
+    <span class="chip mono">rev · 2026-07-11</span>
+  </div>
+
+  <div class="board">
+    <div class="panel verdict">
+      <span class="eyebrow">The verdict</span>
+      <div class="big">27 of 33 covered</div>
+      <p>Of the conversion-relevant section types section.store sells, you already ship <b>27 in full</b> — often with <em>more</em> variety than they offer (you have 46 widgets vs their ~33 types). Only <b>3 true gaps</b> remain, plus <b>3 partials</b> worth rounding out.</p>
+      <div class="statgrid">
+        <div class="stat have"><div class="n tnum">27</div><div class="l">Fully covered</div></div>
+        <div class="stat partial"><div class="n tnum">3</div><div class="l">Partial</div></div>
+        <div class="stat gap"><div class="n tnum">3</div><div class="l">Missing</div></div>
+      </div>
+    </div>
+    <div class="panel ring-panel">
+      <span class="eyebrow">Build progress</span>
+      <div class="ring-wrap">
+        <svg viewBox="0 0 168 168" aria-hidden="true">
+          <circle class="bg" cx="84" cy="84" r="70"></circle>
+          <circle class="fg" id="ringFg" cx="84" cy="84" r="70"></circle>
+        </svg>
+        <div class="ring-center">
+          <span class="pct tnum" id="ringPct">0%</span>
+          <span class="sub" id="ringSub">0 / 11 built</span>
+        </div>
+      </div>
+      <p class="cap">Tick items in the roadmap below — progress saves in this browser automatically.</p>
+    </div>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="callout">
+    <span class="ico">✅</span>
+    <div>
+      <h3>Read this first</h3>
+      <p>The point of this report isn't "build more." You're already ahead of most stores. The real leverage for someone running solo is the small capture gap (email &amp; leads) plus a <b>reuse layer</b> so you stop rebuilding the same section by hand. Both are in the plan below.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="shead">
+    <h2>Coverage ledger</h2>
+    <span class="note">Compared by <b>section type</b>, not by section.store's ~700 numbered variants (Hero #1…#20 etc.). One type ≈ one job on the page.</span>
+  </div>
+  <div class="tablecard">
+    <div class="tscroll">
+      <table>
+        <thead>
+          <tr><th>section.store type</th><th>Status</th><th>Your widget(s)</th></tr>
+        </thead>
+        <tbody>
+          <tr class="grouprow"><td colspan="3">Attention &amp; offer</td></tr>
+          <tr><td class="ttype">Announcement bar</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-announcement-bar</span>, nv-free-shipping-bar, nv-offer-ticker</td></tr>
+          <tr><td class="ttype">Countdown timer</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-offer-countdown</span></td></tr>
+          <tr><td class="ttype">Scrolling text / marquee</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-scrolling-text</span>, nv-offer-ticker</td></tr>
+          <tr><td class="ttype">Live viewers / urgency</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-live-viewers</span></td></tr>
+
+          <tr class="grouprow"><td colspan="3">Hero &amp; storytelling</td></tr>
+          <tr><td class="ttype">Hero banner</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-hero</span></td></tr>
+          <tr><td class="ttype">Slideshow / content slider</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-content-slider</span></td></tr>
+          <tr><td class="ttype">Image + text</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-feature</span>, nv-media-headline-text, nv-video-text</td></tr>
+          <tr><td class="ttype">CTA band</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-cta-block</span></td></tr>
+          <tr><td class="ttype">Rich text / description</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-product-description</span>, nv-short-description</td></tr>
+          <tr><td class="ttype">Process / how it works</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-steps</span></td></tr>
+          <tr><td class="ttype">Icon columns / multicolumn</td><td><span class="badge partial">Partial</span></td><td class="twidget">nv-benefits-list <em>(list-style only)</em></td></tr>
+
+          <tr class="grouprow"><td colspan="3">Social proof &amp; trust</td></tr>
+          <tr><td class="ttype">Testimonials</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-testimonials</span></td></tr>
+          <tr><td class="ttype">Reviews / review wall</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-review-wall</span>, nv-reviews, nv-rating-summary</td></tr>
+          <tr><td class="ttype">Trust badges</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-trust-badges</span></td></tr>
+          <tr><td class="ttype">Guarantee</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-guarantee</span></td></tr>
+          <tr><td class="ttype">Logo list</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-logo-scroller</span></td></tr>
+          <tr><td class="ttype">Stats / counters</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-stats-counter</span></td></tr>
+          <tr><td class="ttype">Instagram / UGC feed</td><td><span class="badge gap">Missing</span></td><td class="twidget">—</td></tr>
+
+          <tr class="grouprow"><td colspan="3">Objection handling</td></tr>
+          <tr><td class="ttype">FAQ / accordion</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-faq</span></td></tr>
+          <tr><td class="ttype">Tabs</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-tabs</span></td></tr>
+          <tr><td class="ttype">Comparison table</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-comparison-table</span>, nv-comparison-grid</td></tr>
+          <tr><td class="ttype">Size chart</td><td><span class="badge have">Have</span></td><td class="twidget"><span>size-chart</span> module</td></tr>
+
+          <tr class="grouprow"><td colspan="3">Media &amp; interaction</td></tr>
+          <tr><td class="ttype">Video (shoppable / slider)</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-shoppable-video</span>, nv-video-slider</td></tr>
+          <tr><td class="ttype">Before / after</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-before-after</span>, nv-scrolling-before-after</td></tr>
+          <tr><td class="ttype">Hotspots</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-hotspots</span></td></tr>
+          <tr><td class="ttype">Gallery / lookbook</td><td><span class="badge partial">Partial</span></td><td class="twidget">nv-product-gallery, nv-scrolling-images <em>(no grid+lightbox)</em></td></tr>
+
+          <tr class="grouprow"><td colspan="3">Merchandising &amp; checkout</td></tr>
+          <tr><td class="ttype">Featured product</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-featured-product</span></td></tr>
+          <tr><td class="ttype">Bundles</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-bundle-builder</span>, nv-bundle-selector</td></tr>
+          <tr><td class="ttype">Upsell / quantity breaks</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-upsells</span>, nv-quantity-breaks</td></tr>
+          <tr><td class="ttype">Sticky add-to-cart</td><td><span class="badge have">Have</span></td><td class="twidget"><span>nv-sticky-atc</span></td></tr>
+          <tr><td class="ttype">Product / collection grid</td><td><span class="badge partial">Partial</span></td><td class="twidget">nv-related-products, nv-upsells <em>(auto, not curated)</em></td></tr>
+
+          <tr class="grouprow"><td colspan="3">Lead capture — your real gap</td></tr>
+          <tr><td class="ttype">Newsletter / email capture</td><td><span class="badge gap">Missing</span></td><td class="twidget">—</td></tr>
+          <tr><td class="ttype">Contact / lead form</td><td><span class="badge gap">Missing</span></td><td class="twidget">—</td></tr>
+
+          <tr class="grouprow"><td colspan="3">Theme structure — not applicable to a product/landing widget kit</td></tr>
+          <tr><td class="ttype">Header / Footer</td><td><span class="badge na">N/A</span></td><td class="twidget">Handled by your theme</td></tr>
+          <tr><td class="ttype">Blog posts / Map</td><td><span class="badge na">N/A</span></td><td class="twidget">Storefront-level, not landing-page</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="shead"><h2>The three real gaps</h2><span class="note">Everything a section.store landing page can do that yours literally can't today.</span></div>
+  <div class="gapgrid">
+    <div class="gapcard">
+      <div class="gid">gap 01 · list building</div>
+      <h3>Email capture</h3>
+      <p>No inline opt-in exists in the plugin. This is the single highest-ROI miss — an email list is the one marketing asset you own outright, and it powers every abandoned-cart and launch email later.</p>
+    </div>
+    <div class="gapcard">
+      <div class="gid">gap 02 · lead gen</div>
+      <h3>Contact / lead form</h3>
+      <p>No structured form for quotes, wholesale, consults or support. Right now those come in as scattered DMs and emails — pure context-switching tax for a solo operator.</p>
+    </div>
+    <div class="gapcard">
+      <div class="gid">gap 03 · social proof</div>
+      <h3>Instagram / UGC feed</h3>
+      <p>No customer-content wall. UGC is cheap, high-trust proof — and once wired up it refreshes itself instead of you hand-updating a testimonials block.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="shead"><h2>Build roadmap</h2><span class="note">Two tracks. <b>Track 1</b> = new widgets. <b>Track 2</b> = the reuse layer that actually makes solo work smoother.</span></div>
+
+  <div class="callout warm" style="margin-bottom:6px;">
+    <span class="ico">🧠</span>
+    <div>
+      <h3>ADHD-friendly sequencing</h3>
+      <p>Ordered so momentum compounds: two small, shippable wins first, then the visual polish, then optional stretch. Don't start at Phase 3. Tick a box, feel the ring move, stop when energy dips — the plan holds your place.</p>
+    </div>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase">
+    <div class="phase-head">
+      <span class="phase-tag">Track 1 · Phase 1</span>
+      <h3>Capture — close the only functional gaps</h3>
+      <span class="count">2 widgets</span>
+    </div>
+    <div class="items">
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="w-email">
+        <div class="it-body">
+          <span class="id">nv-email-capture</span>
+          <div class="it-title">NV: Email Capture</div>
+          <div class="it-desc">Inline newsletter / opt-in block — headline, field, button, success state. Store natively + optional Mailchimp/Klaviyo/webhook handoff. Consent checkbox and GDPR-safe copy fields.</div>
+          <div class="it-why"><b>Converts:</b> turns cold landing traffic into an owned list you can re-market for free. <b>Smoother:</b> one reusable block for every campaign — build once, drop anywhere.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-high">Impact ·High</span><span class="tag eff">Effort ·S/M</span></div>
+      </label>
+
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="w-lead">
+        <div class="it-body">
+          <span class="id">nv-lead-form</span>
+          <div class="it-title">NV: Lead / Contact Form</div>
+          <div class="it-desc">Configurable multi-field form (name, email, phone, message, dropdowns) → email notification + WooCommerce/CRM/webhook. Spam honeypot, required-field validation, custom thank-you.</div>
+          <div class="it-why"><b>Converts:</b> captures high-intent quote/consult/wholesale leads a "buy now" button can't. <b>Smoother:</b> standardises intake so the same questions stop landing in your DMs.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-high">Impact ·High</span><span class="tag eff">Effort ·M</span></div>
+      </label>
+    </div>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="phase">
+    <div class="phase-head">
+      <span class="phase-tag">Track 1 · Phase 2</span>
+      <h3>Round out the partials — visual proof &amp; merchandising</h3>
+      <span class="count">3 widgets</span>
+    </div>
+    <div class="items">
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="w-gallery">
+        <div class="it-body">
+          <span class="id">nv-gallery</span>
+          <div class="it-title">NV: Gallery / Lookbook</div>
+          <div class="it-desc">General-purpose image grid (masonry or fixed grid) with lightbox, captions and optional product links per image. Distinct from the product gallery — for lifestyle/lookbook rows on any page.</div>
+          <div class="it-why"><b>Converts:</b> lifestyle imagery sells the outcome, not just the product. <b>Smoother:</b> fills your "partial" gallery slot with a proper reusable block.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-med">Impact ·Med</span><span class="tag eff">Effort ·M</span></div>
+      </label>
+
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="w-social">
+        <div class="it-body">
+          <span class="id">nv-social-feed</span>
+          <div class="it-title">NV: Social / UGC Feed</div>
+          <div class="it-desc">Instagram-style grid of customer content — manual curation to start (image + handle + link), with a clean upgrade path to a feed API later. Shoppable tags optional.</div>
+          <div class="it-why"><b>Converts:</b> real-customer proof beats brand photography for trust. <b>Smoother:</b> self-refreshing proof vs hand-editing testimonials.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-med">Impact ·Med</span><span class="tag eff">Effort ·M</span></div>
+      </label>
+
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="w-grid">
+        <div class="it-body">
+          <span class="id">nv-product-grid</span>
+          <div class="it-title">NV: Product Grid (curated)</div>
+          <div class="it-desc">Hand-pick products or a collection into a responsive card grid with price, badge, rating and add-to-cart. The curated counterpart to your auto-driven related/upsell widgets.</div>
+          <div class="it-why"><b>Converts:</b> lets a landing page merchandise a specific edit or bestseller row. <b>Smoother:</b> one block instead of stacking several featured-product widgets.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-med">Impact ·Med</span><span class="tag eff">Effort ·M</span></div>
+      </label>
+    </div>
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="phase optional">
+    <div class="phase-head">
+      <span class="phase-tag">Track 1 · Phase 3</span>
+      <h3>Optional stretch — only if you want them</h3>
+      <span class="count">3 widgets</span>
+    </div>
+    <div class="items">
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="w-icon">
+        <div class="it-body">
+          <span class="id">nv-icon-columns</span>
+          <div class="it-title">NV: Icon Columns</div>
+          <div class="it-desc">2–6 column icon + heading + text grid with alignment and responsive controls. Upgrades <span class="mono">nv-benefits-list</span> from a vertical list to the flexible multicolumn row every landing page uses.</div>
+          <div class="it-why"><b>Converts:</b> the workhorse "why buy" row. <b>Smoother:</b> replaces fiddly manual column layouts.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-med">Impact ·Med</span><span class="tag eff">Effort ·S</span></div>
+      </label>
+
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="w-popup">
+        <div class="it-body">
+          <span class="id">nv-email-popup</span>
+          <div class="it-title">NV: Email Popup</div>
+          <div class="it-desc">Timed / exit-intent / scroll-triggered popup that reuses the <span class="mono">nv-email-capture</span> engine. Frequency capping so it never nags a returning visitor.</div>
+          <div class="it-why"><b>Converts:</b> recovers leaving visitors with a discount opt-in. <b>Smoother:</b> shares one code path with Phase 1.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-med">Impact ·Med</span><span class="tag eff">Effort ·M</span></div>
+      </label>
+
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="w-pricing">
+        <div class="it-body">
+          <span class="id">nv-pricing-table</span>
+          <div class="it-title">NV: Pricing / Plan Table</div>
+          <div class="it-desc">Side-by-side plan or tier columns with feature ticks, a highlighted "best value" column and per-column CTA. Useful for subscriptions, service tiers or good/better/best offers.</div>
+          <div class="it-why"><b>Converts:</b> anchors price and steers to the middle tier. <b>Smoother:</b> only build if you actually sell tiers.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-med">Impact ·Low</span><span class="tag eff">Effort ·S/M</span></div>
+      </label>
+    </div>
+  </div>
+
+  <!-- TRACK 2 -->
+  <div class="phase track2">
+    <div class="phase-head">
+      <span class="phase-tag">Track 2 · Workflow</span>
+      <h3>The reuse layer — section.store's <em>actual</em> value, minus the $9-a-section</h3>
+      <span class="count">3 items</span>
+    </div>
+    <div class="items">
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="f-presets">
+        <div class="it-body">
+          <span class="id">feature · section presets</span>
+          <div class="it-title">Save &amp; reuse section presets</div>
+          <div class="it-desc">Let any configured widget (or a full section) be saved as a named preset and re-inserted in one click. You already ship a template system (<span class="mono">class-nv-pw-template-system.php</span> with import/export) — this extends it to block-level presets.</div>
+          <div class="it-why"><b>Why it matters most:</b> this is what you were really buying from section.store — pre-made, drop-in blocks. Owning it kills the biggest repeat-work tax for a solo builder.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-high">Impact ·High</span><span class="tag eff">Effort ·M/L</span></div>
+      </label>
+
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="f-templates">
+        <div class="it-body">
+          <span class="id">feature · starter pages</span>
+          <div class="it-title">Starter landing-page templates</div>
+          <div class="it-desc">Ship 2–3 full-page blueprints (product launch, lead-gen, sale) pre-assembled from your existing widgets. Extends your current template system to whole-page starting points.</div>
+          <div class="it-why"><b>Converts:</b> proven layouts out of the box. <b>Smoother:</b> start from 80% done instead of a blank canvas — the hardest moment for an ADHD brain.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-high">Impact ·High</span><span class="tag eff">Effort ·M</span></div>
+      </label>
+
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="f-tokens">
+        <div class="it-body">
+          <span class="id">feature · brand tokens</span>
+          <div class="it-title">Global brand style tokens</div>
+          <div class="it-desc">Set brand colours, fonts and button styles once; every NV widget reads from them. Change the palette in one place and the whole store follows.</div>
+          <div class="it-why"><b>Converts:</b> consistent, trustworthy look. <b>Smoother:</b> removes hundreds of tiny per-widget styling decisions — decision-load is the enemy.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-med">Impact ·Med</span><span class="tag eff">Effort ·M</span></div>
+      </label>
+    </div>
+  </div>
+
+  <div class="ctl">
+    <button class="btn" id="resetBtn">Reset progress</button>
+    <span class="savenote" id="saveNote">Progress saves automatically in this browser.</span>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="shead"><h2>Why this set builds a high-converting landing page</h2></div>
+  <div class="cols">
+    <div class="infocard">
+      <h3>The conversion spine you'll have</h3>
+      <ul>
+        <li><b>Hook</b> — hero + announcement/urgency (have)</li>
+        <li><b>Show</b> — gallery, before/after, video, hotspots (have + new gallery)</li>
+        <li><b>Prove</b> — reviews, testimonials, UGC feed, trust badges (have + new social feed)</li>
+        <li><b>Answer</b> — FAQ, comparison, size chart (have)</li>
+        <li><b>Offer</b> — bundles, quantity breaks, countdown (have)</li>
+        <li><b>Capture</b> — email + lead form <em>(the new part)</em></li>
+        <li><b>Close</b> — sticky ATC + guarantee (have)</li>
+      </ul>
+    </div>
+    <div class="infocard">
+      <h3>Why it's built for solo + ADHD</h3>
+      <ul>
+        <li><b>Short critical path</b> — only 2 must-build widgets; everything else is optional.</li>
+        <li><b>Reuse over rebuild</b> — presets + starter pages mean you assemble, not author.</li>
+        <li><b>Fewer decisions</b> — brand tokens set look once, globally.</li>
+        <li><b>Visible momentum</b> — this tracker's ring rewards each finished piece.</li>
+        <li><b>Self-refreshing proof</b> — UGC/reviews update themselves.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p><b>Scope &amp; totals.</b> Compared ~33 section types. You fully cover 27, partially cover 3, and are missing 3 (theme-structural types like header/footer/blog/map excluded as not applicable). Plan adds <b>5 core widgets</b> (Phases 1–2), up to <b>3 optional</b> (Phase 3), and <b>3 workflow features</b> — 11 trackable items total. Widget count after core build: <b>46 → 51</b>.</p>
+  <div class="method">
+    <p><b>Method &amp; a caveat worth knowing.</b> Your widget list was read directly from the plugin source (46 registered widgets). <b>section.store could not be fetched directly</b> — this environment's network policy blocks the domain (HTTP 403 at the proxy on every request, including <code>/products.json</code>). Their catalogue was therefore reconstructed from web search plus prior knowledge of the store, and compared at the <b>section-type</b> level rather than their ~700 numbered variants. Type names and counts are close but not guaranteed exhaustive — if you can paste their category list from the live page, I'll reconcile any differences.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var KEY = "nvpw-blueprint-progress-v1";
+    var THEMEKEY = "nvpw-blueprint-theme";
+    var boxes = Array.prototype.slice.call(document.querySelectorAll(".cbx"));
+    var total = boxes.length;
+
+    var ringFg = document.getElementById("ringFg");
+    var R = 70, C = 2 * Math.PI * R;
+    ringFg.style.strokeDasharray = C.toFixed(1);
+    ringFg.style.strokeDashoffset = C.toFixed(1);
+
+    function load() {
+      try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
+    }
+    function save(state) {
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function render() {
+      var done = 0;
+      boxes.forEach(function (b) {
+        if (b.checked) done++;
+        var item = b.closest(".item");
+        if (item) item.classList.toggle("done", b.checked);
+      });
+      var pct = total ? Math.round((done / total) * 100) : 0;
+      document.getElementById("ringPct").textContent = pct + "%";
+      document.getElementById("ringSub").textContent = done + " / " + total + " built";
+      ringFg.style.strokeDashoffset = (C * (1 - done / total)).toFixed(1);
+      document.getElementById("miniFill").style.width = pct + "%";
+      document.getElementById("miniTxt").textContent = done + " / " + total;
+    }
+
+    var state = load();
+    boxes.forEach(function (b) {
+      var id = b.getAttribute("data-id");
+      if (state[id]) b.checked = true;
+      b.addEventListener("change", function () {
+        state[id] = b.checked;
+        save(state);
+        render();
+      });
+    });
+    render();
+
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      state = {};
+      save(state);
+      boxes.forEach(function (b) { b.checked = false; });
+      render();
+      var note = document.getElementById("saveNote");
+      note.textContent = "Progress cleared.";
+      setTimeout(function () { note.textContent = "Progress saves automatically in this browser."; }, 1800);
+    });
+
+    // theme toggle
+    var root = document.documentElement;
+    var saved = null;
+    try { saved = localStorage.getItem(THEMEKEY); } catch (e) {}
+    if (saved) root.setAttribute("data-theme", saved);
+    document.getElementById("themeBtn").addEventListener("click", function () {
+      var cur = root.getAttribute("data-theme");
+      if (!cur) {
+        cur = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      var next = cur === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem(THEMEKEY, next); } catch (e) {}
+    });
+  })();
+</script>
