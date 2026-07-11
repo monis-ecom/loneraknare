@@ -12,9 +12,32 @@ final class NV_PW_Bundle_Cart {
         add_action('wp_ajax_nv_pw_add_qty_breaks', [__CLASS__, 'handle_qty_breaks']);
         add_action('wp_ajax_nopriv_nv_pw_add_qty_breaks', [__CLASS__, 'handle_qty_breaks']);
         // Keep free-gift lines at zero on every cart/checkout recalculation.
-        add_action('woocommerce_before_calculate_totals', [__CLASS__, 'zero_gift_price'], 20);
+        // High priority so we run AFTER other plugins (e.g. NV Commerce Core) that
+        // may re-price the line on the same hook.
+        add_action('woocommerce_before_calculate_totals', [__CLASS__, 'zero_gift_price'], 1000);
         // Apply coupon-free per-tier quantity-break discounts as a cart reduction.
         add_action('woocommerce_cart_calculate_fees', [__CLASS__, 'apply_qb_discount'], 20);
+        // Safety net: whatever price another plugin ends up charging for a gift line,
+        // subtract it back as a negative fee so the gift is always genuinely free.
+        add_action('woocommerce_cart_calculate_fees', [__CLASS__, 'make_gift_free'], 30);
+    }
+
+    /**
+     * Guarantee free gifts cost nothing even if another plugin overrides the price:
+     * sum each gift line's currently-active price and refund it as a negative fee.
+     * Self-correcting — if zero_gift_price already made the line 0, this adds nothing.
+     */
+    public static function make_gift_free($cart): void {
+        if (is_admin() && !defined('DOING_AJAX')) return;
+        if (!$cart || !is_object($cart) || !method_exists($cart, 'get_cart')) return;
+        $refund = 0.0;
+        foreach ($cart->get_cart() as $item) {
+            if (empty($item['nv_pw_gift']) || empty($item['data']) || !is_object($item['data'])) continue;
+            $refund += (float) $item['data']->get_price() * max(1, (int) $item['quantity']);
+        }
+        if ($refund > 0.009) {
+            $cart->add_fee(__('Gratis gåva', 'nv-product-widgets'), -1 * round($refund, 2), false);
+        }
     }
 
     /**
@@ -124,7 +147,18 @@ final class NV_PW_Bundle_Cart {
         }
 
         WC()->cart->calculate_totals();
-        wp_send_json_success(['redirect' => wc_get_cart_url(), 'added' => $added]);
+
+        // Return mini-cart fragments + hash so the widget can refresh the header
+        // cart and slide open the theme's side cart instead of redirecting.
+        WC()->cart->maybe_set_cart_cookies();
+        $data = [
+            'added'      => $added,
+            'redirect'   => wc_get_cart_url(),
+            'fragments'  => apply_filters('woocommerce_add_to_cart_fragments', []),
+            'cart_hash'  => WC()->cart->get_cart_hash(),
+            'cart_count' => WC()->cart->get_cart_contents_count(),
+        ];
+        wp_send_json_success($data);
     }
 
     public static function handle(): void {

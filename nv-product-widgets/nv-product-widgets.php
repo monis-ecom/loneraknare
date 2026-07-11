@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: AS Product Widgets
- * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.48 adds Phase 1 lead capture: NV: Email Capture and NV: Lead Form widgets, storing submissions under "NV Leads", emailing the store owner, with a spam honeypot and an nv_pw_lead_created hook for integrations.
- * Version: 1.7.48
+ * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.49 fixes the Quantity Breaks widget: badge placement + per-element font-size controls, a bulletproof free-gift zeroing (negative-fee safety net vs other plugins), and add-to-cart now opens the side cart instead of redirecting.
+ * Version: 1.7.49
  * Author: Alpha Studio
  * Text Domain: nv-product-widgets
  * Requires Plugins: elementor, woocommerce
@@ -13,7 +13,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('NV_PW_VERSION', '1.7.48');
+define('NV_PW_VERSION', '1.7.49');
 define('NV_PW_FILE', __FILE__);
 define('NV_PW_DIR', plugin_dir_path(__FILE__));
 define('NV_PW_URL', plugin_dir_url(__FILE__));

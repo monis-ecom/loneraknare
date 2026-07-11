@@ -1,5 +1,37 @@
 (function () {
     'use strict';
+
+    // Replace WooCommerce mini-cart fragments and fire the standard events that
+    // theme/plugin side-carts listen to — this updates the header cart count.
+    function refreshCart(d) {
+        var $ = window.jQuery;
+        if ($ && d && d.fragments) {
+            try {
+                $.each(d.fragments, function (key, value) { $(key).replaceWith(value); });
+                $(document.body).trigger('wc_fragments_refreshed');
+            } catch (e) {}
+        }
+    }
+
+    // Open the theme's slide-out cart WITHOUT navigating. Most side-carts open on
+    // the standard `added_to_cart` body event; an optional custom selector covers
+    // themes that need their drawer toggle clicked.
+    function openSideCart(box) {
+        var $ = window.jQuery;
+        var d = { fragments: {}, cart_hash: '' };
+        if ($) {
+            try { $(document.body).trigger('added_to_cart', [d.fragments, d.cart_hash, $('<a></a>')]); } catch (e) {}
+            try { $(document.body).trigger('wc_fragment_refresh'); } catch (e2) {}
+        } else {
+            try { document.body.dispatchEvent(new CustomEvent('added_to_cart')); } catch (e3) {}
+        }
+        var sel = box.getAttribute('data-cart-selector');
+        if (sel) {
+            var el = document.querySelector(sel);
+            if (el) { try { el.click(); } catch (e4) {} }
+        }
+    }
+
     function initQB(box) {
         if (box.__nvQbInit) return;
         box.__nvQbInit = true;
@@ -68,11 +100,22 @@
                 body.set('discount_pct', discountPct);
                 body.set('gift_id', giftId);
 
+                var afterAdd = box.getAttribute('data-after-add') || 'side_cart';
+
                 fetch(cfg.ajaxurl, { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
                     .then(function (r) { return r.json(); })
                     .then(function (res) {
-                        if (res && res.success && res.data && res.data.redirect) {
-                            window.location.href = res.data.redirect;
+                        if (res && res.success) {
+                            var d = res.data || {};
+                            if (afterAdd === 'redirect_cart' && d.redirect) {
+                                window.location.href = d.redirect;
+                                return;
+                            }
+                            refreshCart(d);
+                            if (afterAdd === 'side_cart') openSideCart(box);
+                            if (msg) { msg.textContent = cfg.added_ok || 'Tillagd i varukorgen ✓'; msg.className = 'nv-pw-qb__msg is-ok'; }
+                            addBtn.disabled = false;
+                            addBtn.textContent = original;
                         } else {
                             var m = (res && res.data && res.data.message) ? res.data.message : 'Något gick fel.';
                             if (msg) { msg.textContent = m; msg.className = 'nv-pw-qb__msg is-error'; }

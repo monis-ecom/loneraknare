@@ -58,6 +58,24 @@ class NV_PW_Quantity_Breaks extends \Elementor\Widget_Base {
             ],
             'description' => __('“Automatic” applies each tier’s discount % directly at checkout as a cart reduction — no coupon code needed.', 'nv-product-widgets'),
         ]);
+        $this->add_control('after_add', [
+            'label' => __('After add to cart', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'default' => 'side_cart',
+            'options' => [
+                'side_cart' => __('Open side cart (no redirect)', 'nv-product-widgets'),
+                'stay'      => __('Stay on page (refresh cart only)', 'nv-product-widgets'),
+                'redirect_cart' => __('Go to cart page', 'nv-product-widgets'),
+            ],
+            'description' => __('“Open side cart” refreshes the header cart and fires the standard add-to-cart event most themes use to slide their cart open.', 'nv-product-widgets'),
+        ]);
+        $this->add_control('cart_selector', [
+            'label' => __('Side cart trigger selector (optional)', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => '',
+            'condition' => ['after_add' => 'side_cart'],
+            'description' => __('Only if your side cart does not open automatically: the CSS selector of your cart drawer button (e.g. .my-cart-toggle).', 'nv-product-widgets'),
+        ]);
         $this->end_controls_section();
 
         $this->start_controls_section('section_tiers', ['label' => __('Tiers', 'nv-product-widgets')]);
@@ -114,6 +132,18 @@ class NV_PW_Quantity_Breaks extends \Elementor\Widget_Base {
             'type' => \Elementor\Controls_Manager::COLOR, 'default' => '#2A2550',
             'selectors' => ['{{WRAPPER}} .nv-pw-qb' => '--nv-qb-badge-bg: {{VALUE}};'],
         ]);
+        $this->add_control('badge_position', [
+            'label' => __('Badge position', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'default' => 'top-right',
+            'options' => [
+                'top-right'  => __('Top right', 'nv-product-widgets'),
+                'top-left'   => __('Top left', 'nv-product-widgets'),
+                'top-center' => __('Top center', 'nv-product-widgets'),
+                'inline'     => __('Inline pill (above the row)', 'nv-product-widgets'),
+            ],
+            'description' => __('Move the badge off the price. “Top left”, “Top center” or “Inline” keep it clear of the price on the right.', 'nv-product-widgets'),
+        ]);
         $this->add_control('gift_bg', [
             'label' => __('Gift bar background', 'nv-product-widgets'),
             'type' => \Elementor\Controls_Manager::COLOR, 'default' => '#2A2550',
@@ -129,6 +159,31 @@ class NV_PW_Quantity_Breaks extends \Elementor\Widget_Base {
             'type' => \Elementor\Controls_Manager::COLOR, 'default' => '#FFFFFF',
             'selectors' => ['{{WRAPPER}} .nv-pw-qb__cta' => 'color: {{VALUE}};'],
         ]);
+
+        $this->add_control('fs_heading_ctrl', ['label' => __('Font sizes', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::HEADING, 'separator' => 'before']);
+        $font_targets = [
+            'fs_heading'   => [__('Heading', 'nv-product-widgets'), '.nv-pw-qb__heading'],
+            'fs_label'     => [__('Tier label', 'nv-product-widgets'), '.nv-pw-qb__label'],
+            'fs_sub'       => [__('Sub-label', 'nv-product-widgets'), '.nv-pw-qb__sub'],
+            'fs_price'     => [__('Price', 'nv-product-widgets'), '.nv-pw-qb__price'],
+            'fs_orig'      => [__('Original price', 'nv-product-widgets'), '.nv-pw-qb__orig'],
+            'fs_badge'     => [__('Badge', 'nv-product-widgets'), '.nv-pw-qb__badge'],
+            'fs_varlabel'  => [__('Variation group label', 'nv-product-widgets'), '.nv-pw-qb__variations-label'],
+            'fs_variation' => [__('Variation dropdowns', 'nv-product-widgets'), '.nv-pw-qb__vselect'],
+            'fs_gift'      => [__('Gift label', 'nv-product-widgets'), '.nv-pw-qb__gift-label'],
+            'fs_giftval'   => [__('Gift value', 'nv-product-widgets'), '.nv-pw-qb__gift-value'],
+            'fs_button'    => [__('Button', 'nv-product-widgets'), '.nv-pw-qb__cta'],
+            'fs_guarantee' => [__('Guarantee line', 'nv-product-widgets'), '.nv-pw-qb__guarantee'],
+        ];
+        foreach ($font_targets as $key => $meta) {
+            $this->add_responsive_control($key, [
+                'label' => sprintf(__('%s size', 'nv-product-widgets'), $meta[0]),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'range' => ['px' => ['min' => 8, 'max' => 48, 'step' => 1]],
+                'selectors' => ['{{WRAPPER}} ' . $meta[1] => 'font-size: {{SIZE}}{{UNIT}};'],
+            ]);
+        }
         $this->end_controls_section();
     }
 
@@ -212,13 +267,16 @@ class NV_PW_Quantity_Breaks extends \Elementor\Widget_Base {
         $button_text = trim((string) ($s['button_text'] ?? '')) ?: __('Lägg i varukorg', 'nv-product-widgets');
         $guarantee = trim((string) ($s['guarantee_text'] ?? ''));
         $discount_mode = ($s['discount_mode'] ?? 'coupon') === 'auto' ? 'auto' : 'coupon';
+        $badge_pos = in_array(($s['badge_position'] ?? 'top-right'), ['top-right', 'top-left', 'top-center', 'inline'], true) ? (string) $s['badge_position'] : 'top-right';
+        $after_add = in_array(($s['after_add'] ?? 'side_cart'), ['side_cart', 'stay', 'redirect_cart'], true) ? (string) $s['after_add'] : 'side_cart';
+        $cart_selector = trim((string) ($s['cart_selector'] ?? ''));
 
         $default_index = 0;
         foreach ($tiers as $i => $t) {
             if (($t['highlighted'] ?? '') === 'yes') { $default_index = $i; break; }
         }
         ?>
-        <div class="nv-pw-qb" data-nv-qb data-product-id="<?php echo esc_attr((string) $product_id); ?>" data-variable="<?php echo $is_variable ? '1' : '0'; ?>" data-discount-mode="<?php echo esc_attr($discount_mode); ?>">
+        <div class="nv-pw-qb nv-pw-qb--badge-<?php echo esc_attr($badge_pos); ?>" data-nv-qb data-product-id="<?php echo esc_attr((string) $product_id); ?>" data-variable="<?php echo $is_variable ? '1' : '0'; ?>" data-discount-mode="<?php echo esc_attr($discount_mode); ?>" data-after-add="<?php echo esc_attr($after_add); ?>"<?php if ($cart_selector !== '') echo ' data-cart-selector="' . esc_attr($cart_selector) . '"'; ?>>
             <?php if ($heading !== '') : ?><div class="nv-pw-qb__heading"><?php echo esc_html($heading); ?></div><?php endif; ?>
 
             <div class="nv-pw-qb__tiers">
