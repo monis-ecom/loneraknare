@@ -258,7 +258,7 @@
     <div class="mini-prog">
       <span class="lbl">Build</span>
       <div class="mini-track"><div class="mini-fill" id="miniFill"></div></div>
-      <span id="miniTxt" class="tnum">0 / 11</span>
+      <span id="miniTxt" class="tnum">0 / 14</span>
     </div>
     <button class="theme-btn" id="themeBtn" aria-label="Toggle light or dark theme" title="Toggle theme">◑</button>
   </div>
@@ -273,8 +273,8 @@
   <div class="metrow">
     <span class="chip"><b>46</b> widgets you have today</span>
     <span class="chip"><b>~33</b> section types compared</span>
-    <span class="chip"><b>5</b> core widgets to add</span>
-    <span class="chip mono">rev · 2026-07-11</span>
+    <span class="chip"><b>3 / 3</b> of your requested picks already covered</span>
+    <span class="chip mono">rev.2 · 2026-07-11</span>
   </div>
 
   <div class="board">
@@ -297,7 +297,7 @@
         </svg>
         <div class="ring-center">
           <span class="pct tnum" id="ringPct">0%</span>
-          <span class="sub" id="ringSub">0 / 11 built</span>
+          <span class="sub" id="ringSub">0 / 14 built</span>
         </div>
       </div>
       <p class="cap">Tick items in the roadmap below — progress saves in this browser automatically.</p>
@@ -311,6 +311,40 @@
     <div>
       <h3>Read this first</h3>
       <p>The point of this report isn't "build more." You're already ahead of most stores. The real leverage for someone running solo is the small capture gap (email &amp; leads) plus a <b>reuse layer</b> so you stop rebuilding the same section by hand. Both are in the plan below.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="shead">
+    <h2>Your 3 requested picks — you already ship all three</h2>
+    <span class="note">Read from your screenshots (section.store itself is blocked from here). Each maps to an existing widget; only light polish is needed to match pixel-for-pixel. <b>Zero new widgets required.</b></span>
+  </div>
+  <div class="gapgrid">
+    <div class="gapcard" style="border-left-color:var(--have)">
+      <div class="gid" style="color:var(--have)">hero-pro · already ~90%</div>
+      <h3>Hero Pro</h3>
+      <p><b>Covered by <span class="mono">nv-hero</span>.</b> Split layout, overline, headline + accent word, subheadline, rating line, benefit bullets, <b>two CTA buttons</b>, guarantee line and image side are all already there.</p>
+      <p style="margin-top:9px;color:var(--ink);"><b>To match exactly:</b> optional phone/device mockup frame on the image, plus a small avatar-stack next to the rating line.</p>
+    </div>
+    <div class="gapcard" style="border-left-color:var(--have)">
+      <div class="gid" style="color:var(--have)">comparison-table-6 · already ~85%</div>
+      <h3>Comparison Table #6</h3>
+      <p><b>Covered by <span class="mono">nv-comparison-grid</span>.</b> Highlighted "us" column with badge + product image, up to 3 competitor columns, and cells that already take <b>free text</b> ("24 Hours", "$$") <em>or</em> auto ✓/✕. The 2-column "US vs Other Brands" variant is <span class="mono">nv-comparison-table</span>.</p>
+      <p style="margin-top:9px;color:var(--ink);"><b>To match exactly:</b> add the optional left "marketing column" — headline + check-bullet list + CTA sitting beside the matrix.</p>
+    </div>
+    <div class="gapcard" style="border-left-color:var(--have)">
+      <div class="gid" style="color:var(--have)">testimonials-8 · already ~95%</div>
+      <h3>Testimonial #8</h3>
+      <p><b>Covered by <span class="mono">nv-review-wall</span>.</b> Eyebrow, headline, "View All" button, the <b>aggregate 4.7/5 rating bar</b> (your v1.7.45 feature), star cards with avatar / name / role / text — all shipping today.</p>
+      <p style="margin-top:9px;color:var(--ink);"><b>To match exactly:</b> add an optional bold per-card headline above the review body.</p>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:16px;">
+    <span class="ico">🎯</span>
+    <div>
+      <h3>What this means for the plan</h3>
+      <p>Your three picks don't need new widgets — they need <b>three small enhancements</b> to widgets you already own (now <b>Phase 0</b> in the roadmap below). That's a fast, high-confidence first win before the capture widgets in Phase 1.</p>
     </div>
   </div>
 </section>
@@ -412,6 +446,49 @@
     <div>
       <h3>ADHD-friendly sequencing</h3>
       <p>Ordered so momentum compounds: two small, shippable wins first, then the visual polish, then optional stretch. Don't start at Phase 3. Tick a box, feel the ring move, stop when energy dips — the plan holds your place.</p>
+    </div>
+  </div>
+
+  <!-- PHASE 0 -->
+  <div class="phase track2">
+    <div class="phase-head">
+      <span class="phase-tag">Track 1 · Phase 0</span>
+      <h3>Match your 3 requested picks — enhancements, not new widgets</h3>
+      <span class="count">3 enhancements</span>
+    </div>
+    <div class="items">
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="e-hero-pro">
+        <div class="it-body">
+          <span class="id">nv-hero · enhance</span>
+          <div class="it-title">Hero Pro parity</div>
+          <div class="it-desc">Add an optional device/phone mockup frame around the hero image and a small avatar-stack next to the rating line. Everything else (split layout, dual CTA, rating, bullets, guarantee) already exists.</div>
+          <div class="it-why"><b>Result:</b> pixel-match to section.store "Hero Pro" without a new widget.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-high">Impact ·High</span><span class="tag eff">Effort ·S</span></div>
+      </label>
+
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="e-cmp6">
+        <div class="it-body">
+          <span class="id">nv-comparison-grid · enhance</span>
+          <div class="it-title">Comparison Table #6 parity</div>
+          <div class="it-desc">Add the optional left "marketing column" — headline + check-bullet checklist + CTA button — sitting beside the matrix. Text cells, competitor columns, highlighted "us" column and image already work.</div>
+          <div class="it-why"><b>Result:</b> matches the "US vs Other Brands" split layout across all four colour variants you sent.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-high">Impact ·High</span><span class="tag eff">Effort ·S/M</span></div>
+      </label>
+
+      <label class="item" data-track>
+        <input type="checkbox" class="cbx" data-id="e-test8">
+        <div class="it-body">
+          <span class="id">nv-review-wall · enhance</span>
+          <div class="it-title">Testimonial #8 parity</div>
+          <div class="it-desc">Add an optional bold per-card headline above the review body. Aggregate rating bar, "View All" button, star cards and grid layout already ship.</div>
+          <div class="it-why"><b>Result:</b> matches "Testimonial #8" exactly — the closest of the three to done.</div>
+        </div>
+        <div class="it-meta"><span class="tag impact-med">Impact ·Med</span><span class="tag eff">Effort ·S</span></div>
+      </label>
     </div>
   </div>
 
@@ -611,7 +688,7 @@
 </section>
 
 <footer class="wrap">
-  <p><b>Scope &amp; totals.</b> Compared ~33 section types. You fully cover 27, partially cover 3, and are missing 3 (theme-structural types like header/footer/blog/map excluded as not applicable). Plan adds <b>5 core widgets</b> (Phases 1–2), up to <b>3 optional</b> (Phase 3), and <b>3 workflow features</b> — 11 trackable items total. Widget count after core build: <b>46 → 51</b>.</p>
+  <p><b>Scope &amp; totals.</b> Compared ~33 section types. You fully cover 27, partially cover 3, and are missing 3 (theme-structural types like header/footer/blog/map excluded as not applicable). Your 3 requested picks (Hero Pro, Comparison Table #6, Testimonial #8) are <b>already covered</b> and need only <b>3 enhancements</b> (Phase 0). The wider plan then adds <b>5 core widgets</b> (Phases 1–2), up to <b>3 optional</b> (Phase 3), and <b>3 workflow features</b> — <b>14 trackable items total</b>. Widget count after core build: <b>46 → 51</b> (the 3 picks add no new widgets).</p>
   <div class="method">
     <p><b>Method &amp; a caveat worth knowing.</b> Your widget list was read directly from the plugin source (46 registered widgets). <b>section.store could not be fetched directly</b> — this environment's network policy blocks the domain (HTTP 403 at the proxy on every request, including <code>/products.json</code>). Their catalogue was therefore reconstructed from web search plus prior knowledge of the store, and compared at the <b>section-type</b> level rather than their ~700 numbered variants. Type names and counts are close but not guaranteed exhaustive — if you can paste their category list from the live page, I'll reconcile any differences.</p>
   </div>
