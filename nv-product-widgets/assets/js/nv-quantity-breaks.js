@@ -25,10 +25,19 @@
         } else {
             try { document.body.dispatchEvent(new CustomEvent('added_to_cart')); } catch (e3) {}
         }
+        // NV Nordic Precision theme / NV Conversion Booster convention: the side
+        // cart drawer opens on this custom event.
+        try {
+            var ev = new CustomEvent('nv:sidecart:open', { bubbles: true });
+            document.dispatchEvent(ev);
+            document.body.dispatchEvent(new CustomEvent('nv:sidecart:open', { bubbles: true }));
+        } catch (e4) {}
+        // Optional explicit trigger element (only if the user supplies a real
+        // drawer toggle — NOT a link to the cart page).
         var sel = box.getAttribute('data-cart-selector');
         if (sel) {
             var el = document.querySelector(sel);
-            if (el) { try { el.click(); } catch (e4) {} }
+            if (el) { try { el.click(); } catch (e5) {} }
         }
     }
 
