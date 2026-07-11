@@ -48,6 +48,7 @@ class NV_PW_Review_Wall extends \Elementor\Widget_Base {
         $r->add_control('name', ['label' => __('Author name', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('Anna Lind', 'nv-product-widgets')]);
         $r->add_control('role', ['label' => __('Role / location', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('Verifierad köpare', 'nv-product-widgets')]);
         $r->add_control('stars', ['label' => __('Stars', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::SELECT, 'default' => '5', 'options' => ['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5']]);
+        $r->add_control('title', ['label' => __('Card headline (optional)', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => '', 'description' => __('Bold title shown above the review text (e.g. "Very good product").', 'nv-product-widgets')]);
         $r->add_control('text', ['label' => __('Review text', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXTAREA, 'default' => __('Bästa köpet i år. Jag spelar smärtfritt igen efter bara två veckor.', 'nv-product-widgets')]);
         $r->add_control('highlight', ['label' => __('Highlight phrase (optional)', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => '', 'description' => __('If this exact phrase appears in the text above, it gets a highlight background.', 'nv-product-widgets')]);
         $this->add_control('items', [
@@ -189,6 +190,8 @@ class NV_PW_Review_Wall extends \Elementor\Widget_Base {
                                 </span>
                             </div>
                             <?php echo $this->stars_html($stars); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                            <?php $card_title = trim((string) ($it['title'] ?? '')); ?>
+                            <?php if ($card_title !== '') : ?><strong class="nv-pw-rw__title"><?php echo esc_html($card_title); ?></strong><?php endif; ?>
                             <blockquote class="nv-pw-rw__text"><?php echo $this->text_html((string) ($it['text'] ?? ''), (string) ($it['highlight'] ?? '')); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></blockquote>
                         </figure>
                     <?php endforeach; ?>

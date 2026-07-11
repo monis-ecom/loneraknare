@@ -50,6 +50,12 @@ class NV_PW_Hero extends \Elementor\Widget_Base {
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => __('4.8/5 baserat på 2 400+ recensioner', 'nv-product-widgets'),
         ]);
+        $this->add_control('rating_avatars', [
+            'label' => __('Rating avatars (optional)', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::GALLERY,
+            'default' => [],
+            'description' => __('Small stacked customer avatars shown next to the rating.', 'nv-product-widgets'),
+        ]);
 
         $bullets = new \Elementor\Repeater();
         $bullets->add_control('text', [
@@ -99,6 +105,17 @@ class NV_PW_Hero extends \Elementor\Widget_Base {
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => ['url' => \Elementor\Utils::get_placeholder_image_src()],
         ]);
+        $this->add_control('image_frame', [
+            'label' => __('Image frame', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'default' => 'none',
+            'options' => [
+                'none' => __('None', 'nv-product-widgets'),
+                'phone' => __('Phone mockup', 'nv-product-widgets'),
+                'browser' => __('Browser window', 'nv-product-widgets'),
+            ],
+            'description' => __('Wrap the image in a device mockup (Hero Pro style).', 'nv-product-widgets'),
+        ]);
         $this->add_control('image_side', [
             'label' => __('Image position', 'nv-product-widgets'),
             'type' => \Elementor\Controls_Manager::SELECT,
@@ -147,6 +164,12 @@ class NV_PW_Hero extends \Elementor\Widget_Base {
         $rating = trim((string) ($s['rating_text'] ?? ''));
         $guarantee = trim((string) ($s['guarantee'] ?? ''));
         $img = isset($s['image']['url']) ? (string) $s['image']['url'] : '';
+        $frame = in_array(($s['image_frame'] ?? 'none'), ['none', 'phone', 'browser'], true) ? (string) $s['image_frame'] : 'none';
+        $rating_avatars = [];
+        foreach ((array) ($s['rating_avatars'] ?? []) as $av) {
+            if (is_array($av) && !empty($av['url'])) $rating_avatars[] = (string) $av['url'];
+        }
+        $rating_avatars = array_slice($rating_avatars, 0, 5);
         $side = ($s['image_side'] ?? 'right') === 'left' ? 'left' : 'right';
         $layout = in_array(($s['layout'] ?? 'split'), ['split', 'centered', 'overlay', 'minimal'], true) ? (string) $s['layout'] : 'split';
 
@@ -168,12 +191,17 @@ class NV_PW_Hero extends \Elementor\Widget_Base {
                 <h2 class="nv-pw-hero__headline">
                     <?php echo esc_html($headline); ?><?php if ($highlight !== '') : ?> <span class="nv-pw-hero__hl"><?php echo esc_html($highlight); ?></span><?php endif; ?>
                 </h2>
-                <?php if ($rating !== '') : ?>
+                <?php if ($rating !== '' || !empty($rating_avatars)) : ?>
                     <div class="nv-pw-hero__rating">
+                        <?php if (!empty($rating_avatars)) : ?>
+                            <span class="nv-pw-hero__avatars" aria-hidden="true">
+                                <?php foreach ($rating_avatars as $av) : ?><img class="nv-pw-hero__avatar" src="<?php echo esc_url($av); ?>" alt="" loading="lazy"><?php endforeach; ?>
+                            </span>
+                        <?php endif; ?>
                         <span class="nv-pw-hero__stars" aria-hidden="true">
                             <?php for ($i = 0; $i < 5; $i++) : ?><svg viewBox="0 0 24 24" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><?php endfor; ?>
                         </span>
-                        <span class="nv-pw-hero__rating-text"><?php echo esc_html($rating); ?></span>
+                        <?php if ($rating !== '') : ?><span class="nv-pw-hero__rating-text"><?php echo esc_html($rating); ?></span><?php endif; ?>
                     </div>
                 <?php endif; ?>
                 <?php if ($sub !== '') : ?><p class="nv-pw-hero__sub"><?php echo esc_html($sub); ?></p><?php endif; ?>
@@ -193,7 +221,15 @@ class NV_PW_Hero extends \Elementor\Widget_Base {
                 <?php endif; ?>
             </div>
             <?php if ($img !== '') : ?>
-                <div class="nv-pw-hero__media"><img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($headline . ' ' . $highlight); ?>" loading="lazy"></div>
+                <div class="nv-pw-hero__media nv-pw-hero__media--frame-<?php echo esc_attr($frame); ?>">
+                    <?php if ($frame === 'phone') : ?>
+                        <span class="nv-pw-hero__device nv-pw-hero__device--phone"><span class="nv-pw-hero__notch" aria-hidden="true"></span><img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($headline . ' ' . $highlight); ?>" loading="lazy"></span>
+                    <?php elseif ($frame === 'browser') : ?>
+                        <span class="nv-pw-hero__device nv-pw-hero__device--browser"><span class="nv-pw-hero__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($headline . ' ' . $highlight); ?>" loading="lazy"></span>
+                    <?php else : ?>
+                        <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($headline . ' ' . $highlight); ?>" loading="lazy">
+                    <?php endif; ?>
+                </div>
             <?php endif; ?>
         </div>
         <?php

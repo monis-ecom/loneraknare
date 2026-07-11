@@ -13,6 +13,22 @@ class NV_PW_Comparison_Grid extends \Elementor\Widget_Base {
         $this->add_control('eyebrow', ['label' => __('Overline', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('JÄMFÖRELSE', 'nv-product-widgets')]);
         $this->add_control('headline', ['label' => __('Headline', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('Varför vi vinner', 'nv-product-widgets'), 'label_block' => true]);
         $this->add_control('intro', ['label' => __('Intro', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXTAREA, 'default' => __('Se hur vi står oss mot andra märken.', 'nv-product-widgets')]);
+        $this->add_control('split_layout', ['label' => __('Marketing column beside table', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::SWITCHER, 'default' => '', 'description' => __('Puts the heading, a benefit checklist and the button in a column to the left of the comparison matrix (section.store "US vs Other Brands" style).', 'nv-product-widgets')]);
+        $b = new \Elementor\Repeater();
+        $b->add_control('text', ['label' => __('Benefit', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('Snabb effekt', 'nv-product-widgets')]);
+        $this->add_control('bullets', [
+            'label' => __('Benefit checklist (marketing column)', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::REPEATER,
+            'fields' => $b->get_controls(),
+            'title_field' => '{{{ text }}}',
+            'condition' => ['split_layout' => 'yes'],
+            'default' => [
+                ['text' => __('Fall asleep quicker', 'nv-product-widgets')],
+                ['text' => __('Relax & restorative sleep', 'nv-product-widgets')],
+                ['text' => __('Wake up refreshed', 'nv-product-widgets')],
+                ['text' => __('Plant based', 'nv-product-widgets')],
+            ],
+        ]);
         $this->end_controls_section();
 
         $this->start_controls_section('section_cols', ['label' => __('Columns', 'nv-product-widgets')]);
@@ -105,15 +121,38 @@ class NV_PW_Comparison_Grid extends \Elementor\Widget_Base {
         $cta_url = isset($s['cta_link']['url']) ? (string) $s['cta_link']['url'] : '';
         $cta_target = !empty($s['cta_link']['is_external']) ? ' target="_blank" rel="noopener"' : '';
         $hl_labels = (($s['highlight_labels'] ?? 'yes') === 'yes');
+        $split = (($s['split_layout'] ?? '') === 'yes');
+        $bullets = [];
+        if ($split) {
+            foreach ((array) ($s['bullets'] ?? []) as $bl) {
+                if (is_array($bl) && trim((string) ($bl['text'] ?? '')) !== '') $bullets[] = trim((string) $bl['text']);
+            }
+        }
+
+        // The marketing column (heading + checklist + CTA) is shared between layouts;
+        // in split mode it sits left of the table, otherwise it stacks above it.
+        $head_html = '';
+        if ($eyebrow !== '' || $headline !== '' || $intro !== '' || ($split && (!empty($bullets) || $cta_text !== ''))) {
+            ob_start(); ?>
+            <div class="nv-pw-cg__head">
+                <?php if ($eyebrow !== '') : ?><span class="nv-pw-cg__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
+                <?php if ($headline !== '') : ?><h3 class="nv-pw-cg__headline"><?php echo esc_html($headline); ?></h3><?php endif; ?>
+                <?php if ($intro !== '') : ?><p class="nv-pw-cg__intro"><?php echo esc_html($intro); ?></p><?php endif; ?>
+                <?php if ($split && !empty($bullets)) : ?>
+                    <ul class="nv-pw-cg__bullets">
+                        <?php foreach ($bullets as $bt) : ?>
+                            <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><?php echo esc_html($bt); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+                <?php if ($split && $cta_text !== '') : ?><a class="nv-pw-cg__cta" href="<?php echo esc_url($cta_url !== '' ? $cta_url : '#'); ?>"<?php echo $cta_target; ?>><?php echo esc_html($cta_text); ?></a><?php endif; ?>
+            </div>
+            <?php $head_html = (string) ob_get_clean();
+        }
         ?>
-        <div class="nv-pw-cg<?php echo $hl_labels ? ' nv-pw-cg--hl' : ''; ?>" style="--nv-cg-cols: <?php echo (int) $total_cols; ?>;">
-            <?php if ($eyebrow !== '' || $headline !== '' || $intro !== '') : ?>
-                <div class="nv-pw-cg__head">
-                    <?php if ($eyebrow !== '') : ?><span class="nv-pw-cg__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
-                    <?php if ($headline !== '') : ?><h3 class="nv-pw-cg__headline"><?php echo esc_html($headline); ?></h3><?php endif; ?>
-                    <?php if ($intro !== '') : ?><p class="nv-pw-cg__intro"><?php echo esc_html($intro); ?></p><?php endif; ?>
-                </div>
-            <?php endif; ?>
+        <div class="nv-pw-cg<?php echo $hl_labels ? ' nv-pw-cg--hl' : ''; ?><?php echo $split ? ' nv-pw-cg--split' : ''; ?>" style="--nv-cg-cols: <?php echo (int) $total_cols; ?>;">
+            <?php if (!$split && $head_html !== '') echo $head_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+            <?php if ($split) : ?><div class="nv-pw-cg__split"><?php if ($head_html !== '') echo $head_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><div class="nv-pw-cg__tablewrap"><?php endif; ?>
 
             <div class="nv-pw-cg__table" role="table">
                 <div class="nv-pw-cg__row nv-pw-cg__row--head" role="row">
@@ -138,7 +177,9 @@ class NV_PW_Comparison_Grid extends \Elementor\Widget_Base {
                 <?php endforeach; ?>
             </div>
 
-            <?php if ($cta_text !== '') : ?>
+            <?php if ($split) : ?></div><?php /* .nv-pw-cg__tablewrap */ ?></div><?php /* .nv-pw-cg__split */ ?><?php endif; ?>
+
+            <?php if (!$split && $cta_text !== '') : ?>
                 <div class="nv-pw-cg__foot"><a class="nv-pw-cg__cta" href="<?php echo esc_url($cta_url !== '' ? $cta_url : '#'); ?>"<?php echo $cta_target; ?>><?php echo esc_html($cta_text); ?></a></div>
             <?php endif; ?>
         </div>

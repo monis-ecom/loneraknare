@@ -122,6 +122,7 @@ final class NV_PW_Loader {
 
             /* NEW v1.7.44 — Phase I */
             'class-nv-pw-review-wall',
+            'class-nv-pw-trustpilot-wall',
         ];
 
         foreach ($widget_files as $file) {
@@ -206,6 +207,7 @@ final class NV_PW_Loader {
 
         /* v1.7.44 — Phase I */
         $widgets_manager->register(new NV_PW_Review_Wall());
+        $widgets_manager->register(new NV_PW_Trustpilot_Wall());
     }
 
     public function enqueue_styles(): void {
