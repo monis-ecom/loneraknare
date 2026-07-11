@@ -7,9 +7,11 @@ final class NV_PW_Loader {
         require_once NV_PW_DIR . 'includes/class-nv-pw-size-chart.php';
         require_once NV_PW_DIR . 'includes/class-nv-pw-module-settings-page.php';
         require_once NV_PW_DIR . 'includes/class-nv-pw-bundle-cart.php';
+        require_once NV_PW_DIR . 'includes/class-nv-pw-leads.php';
         NV_PW_Size_Chart::init();
         NV_PW_Module_Settings_Page::init();
         NV_PW_Bundle_Cart::init();
+        NV_PW_Leads::init();
 
         // Register Elementor widgets
         add_action('elementor/widgets/register', [new self(), 'register_widgets']);
@@ -123,6 +125,8 @@ final class NV_PW_Loader {
             /* NEW v1.7.44 — Phase I */
             'class-nv-pw-review-wall',
             'class-nv-pw-trustpilot-wall',
+            'class-nv-pw-email-capture',
+            'class-nv-pw-lead-form',
         ];
 
         foreach ($widget_files as $file) {
@@ -208,6 +212,8 @@ final class NV_PW_Loader {
         /* v1.7.44 — Phase I */
         $widgets_manager->register(new NV_PW_Review_Wall());
         $widgets_manager->register(new NV_PW_Trustpilot_Wall());
+        $widgets_manager->register(new NV_PW_Email_Capture());
+        $widgets_manager->register(new NV_PW_Lead_Form());
     }
 
     public function enqueue_styles(): void {
@@ -242,6 +248,15 @@ final class NV_PW_Loader {
         wp_localize_script('nv-bundle-builder', 'nvPwBundle', [
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce'   => wp_create_nonce('nv_pw_bundle'),
+        ]);
+        wp_register_script('nv-lead-form',             NV_PW_URL . 'assets/js/nv-lead-form.js',             [],           NV_PW_VERSION, true);
+        wp_localize_script('nv-lead-form', 'nvPwLead', [
+            'ajaxurl'      => admin_url('admin-ajax.php'),
+            'nonce'        => wp_create_nonce('nv_pw_lead'),
+            'sending'      => __('Sending…', 'nv-product-widgets'),
+            'required'     => __('Please fill in all required fields.', 'nv-product-widgets'),
+            'invalidEmail' => __('Please enter a valid email address.', 'nv-product-widgets'),
+            'error'        => __('Something went wrong. Please try again.', 'nv-product-widgets'),
         ]);
     }
 }
