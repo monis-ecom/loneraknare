@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: AS Product Widgets
- * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.45 adds an aggregate rating bar (stars + score + count) to the NV: Review Wall header — one self-contained review section.
- * Version: 1.7.45
+ * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.46 fixes a duplicate bulk-discount section that was auto-injected above the buy box on pages whose purchase mechanism is the Quantity Breaks widget.
+ * Version: 1.7.46
  * Author: Alpha Studio
  * Text Domain: nv-product-widgets
  * Requires Plugins: elementor, woocommerce
@@ -13,7 +13,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('NV_PW_VERSION', '1.7.45');
+define('NV_PW_VERSION', '1.7.46');
 define('NV_PW_FILE', __FILE__);
 define('NV_PW_DIR', plugin_dir_path(__FILE__));
 define('NV_PW_URL', plugin_dir_url(__FILE__));
