@@ -8,10 +8,14 @@ final class NV_PW_Loader {
         require_once NV_PW_DIR . 'includes/class-nv-pw-module-settings-page.php';
         require_once NV_PW_DIR . 'includes/class-nv-pw-bundle-cart.php';
         require_once NV_PW_DIR . 'includes/class-nv-pw-leads.php';
+        require_once NV_PW_DIR . 'includes/class-nv-pw-brand.php';
+        require_once NV_PW_DIR . 'includes/class-nv-pw-starter.php';
         NV_PW_Size_Chart::init();
         NV_PW_Module_Settings_Page::init();
         NV_PW_Bundle_Cart::init();
         NV_PW_Leads::init();
+        NV_PW_Brand::init();
+        NV_PW_Starter::init();
 
         // Register Elementor widgets
         add_action('elementor/widgets/register', [new self(), 'register_widgets']);
@@ -130,6 +134,9 @@ final class NV_PW_Loader {
             'class-nv-pw-gallery',
             'class-nv-pw-social-feed',
             'class-nv-pw-product-grid',
+            'class-nv-pw-icon-columns',
+            'class-nv-pw-pricing-table',
+            'class-nv-pw-email-popup',
         ];
 
         foreach ($widget_files as $file) {
@@ -220,6 +227,9 @@ final class NV_PW_Loader {
         $widgets_manager->register(new NV_PW_Gallery());
         $widgets_manager->register(new NV_PW_Social_Feed());
         $widgets_manager->register(new NV_PW_Product_Grid());
+        $widgets_manager->register(new NV_PW_Icon_Columns());
+        $widgets_manager->register(new NV_PW_Pricing_Table());
+        $widgets_manager->register(new NV_PW_Email_Popup());
     }
 
     public function enqueue_styles(): void {
@@ -256,6 +266,7 @@ final class NV_PW_Loader {
             'nonce'   => wp_create_nonce('nv_pw_bundle'),
         ]);
         wp_register_script('nv-gallery',               NV_PW_URL . 'assets/js/nv-gallery.js',               [],           NV_PW_VERSION, true);
+        wp_register_script('nv-popup',                 NV_PW_URL . 'assets/js/nv-popup.js',                 [],           NV_PW_VERSION, true);
         wp_register_script('nv-lead-form',             NV_PW_URL . 'assets/js/nv-lead-form.js',             [],           NV_PW_VERSION, true);
         wp_localize_script('nv-lead-form', 'nvPwLead', [
             'ajaxurl'      => admin_url('admin-ajax.php'),
