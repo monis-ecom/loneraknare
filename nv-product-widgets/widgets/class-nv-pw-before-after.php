@@ -20,6 +20,13 @@ class NV_PW_Before_After extends \Elementor\Widget_Base {
             'default' => '',
             'placeholder' => __('Se skillnaden själv', 'nv-product-widgets'),
         ]);
+        $this->add_control('subheading', [
+            'label' => __('Sub-heading (optional)', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::TEXTAREA,
+            'default' => '',
+            'placeholder' => __('Dra i reglaget för att jämföra.', 'nv-product-widgets'),
+        ]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->add_control('before_image', [
             'label' => __('Before image', 'nv-product-widgets'),
             'type' => \Elementor\Controls_Manager::MEDIA,
@@ -145,7 +152,11 @@ class NV_PW_Before_After extends \Elementor\Widget_Base {
         ?>
         <div class="nv-pw-ba-wrap">
             <?php if ($heading !== '') : ?>
-                <h3 class="nv-pw-ba-heading"><?php echo esc_html($heading); ?></h3>
+                <h3 class="nv-pw-ba-heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3>
+            <?php endif; ?>
+            <?php $ba_sub = trim((string) ($s['subheading'] ?? '')); ?>
+            <?php if ($ba_sub !== '') : ?>
+                <p class="nv-pw-ba-sub"><?php echo esc_html($ba_sub); ?></p>
             <?php endif; ?>
             <div class="nv-pw-ba" data-nv-ba data-orientation="<?php echo esc_attr($orientation); ?>" style="--nv-ba-pos: <?php echo esc_attr($start); ?>%;">
                 <div class="nv-pw-ba__layer nv-pw-ba__after">

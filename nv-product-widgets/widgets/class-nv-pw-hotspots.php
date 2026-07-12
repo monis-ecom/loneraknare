@@ -17,6 +17,12 @@ class NV_PW_Hotspots extends \Elementor\Widget_Base {
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '',
         ]);
+        $this->add_control('subheading', [
+            'label' => __('Sub-heading (optional)', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::TEXTAREA,
+            'default' => '',
+        ]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->add_control('image', [
             'label' => __('Image', 'nv-product-widgets'),
             'type' => \Elementor\Controls_Manager::MEDIA,
@@ -162,12 +168,24 @@ class NV_PW_Hotspots extends \Elementor\Widget_Base {
         $uid = 'nvhs-' . $this->get_id();
         ?>
         <div class="nv-pw-hs nv-pw-hs--<?php echo esc_attr($trigger); ?> nv-pw-hs--pin-<?php echo esc_attr($shape); ?>">
-            <?php if ($heading !== '') : ?><h3 class="nv-pw-hs__heading"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+            <?php $hs_sub = trim((string) ($s['subheading'] ?? '')); ?>
+            <?php if ($heading !== '' || $hs_sub !== '') : ?>
+                <div class="nv-pw-hs__head">
+                    <?php if ($heading !== '') : ?><h3 class="nv-pw-hs__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+                    <?php if ($hs_sub !== '') : ?><p class="nv-pw-hs__sub"><?php echo esc_html($hs_sub); ?></p><?php endif; ?>
+                </div>
+            <?php endif; ?>
             <div class="nv-pw-hs__figure" data-nv-hotspots data-trigger="<?php echo esc_attr($trigger); ?>">
                 <img class="nv-pw-hs__img" src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($img_alt); ?>" loading="lazy" draggable="false">
                 <?php foreach ($points as $i => $p) :
-                    $pid = $uid . '-p' . $i; ?>
-                    <div class="nv-pw-hs__spot" style="left: <?php echo esc_attr((string) $p['x']); ?>%; top: <?php echo esc_attr((string) $p['y']); ?>%;">
+                    $pid = $uid . '-p' . $i;
+                    // Flip the tooltip away from edges so it is never clipped.
+                    $flip = '';
+                    if ($p['y'] < 32) $flip .= ' nv-pw-hs__spot--below';
+                    if ($p['x'] < 22) $flip .= ' nv-pw-hs__spot--right';
+                    elseif ($p['x'] > 78) $flip .= ' nv-pw-hs__spot--left';
+                    ?>
+                    <div class="nv-pw-hs__spot<?php echo $flip; ?>" style="left: <?php echo esc_attr((string) $p['x']); ?>%; top: <?php echo esc_attr((string) $p['y']); ?>%;">
                         <button type="button" class="nv-pw-hs__pin" aria-expanded="false" aria-controls="<?php echo esc_attr($pid); ?>" aria-label="<?php echo esc_attr($p['title'] !== '' ? $p['title'] : __('Hotspot', 'nv-product-widgets')); ?>">
                             <span class="nv-pw-hs__plus" aria-hidden="true"></span>
                         </button>

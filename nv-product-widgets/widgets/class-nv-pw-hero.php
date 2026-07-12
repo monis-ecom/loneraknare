@@ -45,6 +45,7 @@ class NV_PW_Hero extends \Elementor\Widget_Base {
             'type' => \Elementor\Controls_Manager::TEXTAREA,
             'default' => __('Den smarta lösningen som hjälper tusentals svenskar att varva ner och sova bättre – varje natt.', 'nv-product-widgets'),
         ]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->add_control('rating_text', [
             'label' => __('Rating text (optional)', 'nv-product-widgets'),
             'type' => \Elementor\Controls_Manager::TEXT,
@@ -188,7 +189,7 @@ class NV_PW_Hero extends \Elementor\Widget_Base {
         <div class="nv-pw-hero nv-pw-hero--L-<?php echo esc_attr($layout); ?> nv-pw-hero--img-<?php echo esc_attr($side); ?>">
             <div class="nv-pw-hero__text">
                 <?php if ($eyebrow !== '') : ?><span class="nv-pw-hero__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
-                <h2 class="nv-pw-hero__headline">
+                <h2 class="nv-pw-hero__headline<?php echo NV_PW_Headline::mod($s); ?>">
                     <?php echo esc_html($headline); ?><?php if ($highlight !== '') : ?> <span class="nv-pw-hero__hl"><?php echo esc_html($highlight); ?></span><?php endif; ?>
                 </h2>
                 <?php if ($rating !== '' || !empty($rating_avatars)) : ?>

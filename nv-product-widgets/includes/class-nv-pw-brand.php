@@ -20,12 +20,13 @@ final class NV_PW_Brand {
 
     public static function defaults(): array {
         return [
-            'enabled'        => 'no',
-            'accent'         => '#3B37C4',
-            'heading_color'  => '#14161D',
-            'text_color'     => '#4A5160',
-            'radius'         => '12',
-            'font'           => '',
+            'enabled'             => 'no',
+            'editorial_headlines' => 'no',
+            'accent'              => '#3B37C4',
+            'heading_color'       => '#14161D',
+            'text_color'          => '#4A5160',
+            'radius'              => '12',
+            'font'                => '',
         ];
     }
 
@@ -46,7 +47,8 @@ final class NV_PW_Brand {
         $d = self::defaults();
         $input = is_array($input) ? $input : [];
         return [
-            'enabled'       => (($input['enabled'] ?? 'no') === 'yes') ? 'yes' : 'no',
+            'enabled'             => (($input['enabled'] ?? 'no') === 'yes') ? 'yes' : 'no',
+            'editorial_headlines' => (($input['editorial_headlines'] ?? 'no') === 'yes') ? 'yes' : 'no',
             'accent'        => sanitize_hex_color((string) ($input['accent'] ?? $d['accent'])) ?: $d['accent'],
             'heading_color' => sanitize_hex_color((string) ($input['heading_color'] ?? $d['heading_color'])) ?: $d['heading_color'],
             'text_color'    => sanitize_hex_color((string) ($input['text_color'] ?? $d['text_color'])) ?: $d['text_color'],
@@ -77,6 +79,9 @@ final class NV_PW_Brand {
                 <table class="form-table" role="presentation">
                     <tr><th scope="row"><?php esc_html_e('Apply brand font to NV widgets', 'nv-product-widgets'); ?></th>
                         <td><label><input type="checkbox" name="<?php echo esc_attr(self::OPTION); ?>[enabled]" value="yes" <?php checked($o['enabled'], 'yes'); ?>> <?php esc_html_e('Use the brand font below across NV widgets', 'nv-product-widgets'); ?></label></td></tr>
+                    <tr><th scope="row"><?php esc_html_e('Editorial headlines everywhere', 'nv-product-widgets'); ?></th>
+                        <td><label><input type="checkbox" name="<?php echo esc_attr(self::OPTION); ?>[editorial_headlines]" value="yes" <?php checked($o['editorial_headlines'], 'yes'); ?>> <?php esc_html_e('Use the Newsreader serif-italic display style for every NV widget headline', 'nv-product-widgets'); ?></label>
+                        <p class="description"><?php esc_html_e('Or set it per widget via each headline widget’s “Headline style” control.', 'nv-product-widgets'); ?></p></td></tr>
                     <tr><th scope="row"><?php esc_html_e('Accent colour', 'nv-product-widgets'); ?></th>
                         <td><input type="text" name="<?php echo esc_attr(self::OPTION); ?>[accent]" value="<?php echo esc_attr($o['accent']); ?>" class="regular-text" placeholder="#3B37C4"></td></tr>
                     <tr><th scope="row"><?php esc_html_e('Heading colour', 'nv-product-widgets'); ?></th>
@@ -109,6 +114,22 @@ final class NV_PW_Brand {
         if ($o['enabled'] === 'yes' && $font !== '') {
             $css .= '[class^="nv-pw-"],[class*=" nv-pw-"]{font-family:var(--nv-brand-font)!important;}';
         }
+        // Opt-in: editorial serif-italic headline style across every NV widget headline.
+        if (($o['editorial_headlines'] ?? 'no') === 'yes') {
+            $css .= self::headline_selectors() . '{font-family:\'Newsreader\',\'Playfair Display\',Georgia,serif!important;font-style:italic!important;font-weight:400!important;letter-spacing:-.01em;line-height:1.08;}';
+        }
         echo "\n<style id=\"nv-pw-brand\">" . $css . "</style>\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+    }
+
+    /** Every NV widget headline selector, for the global editorial toggle. */
+    private static function headline_selectors(): string {
+        return '.nv-pw-ba-heading,.nv-pw-bb__heading,.nv-pw-benefits__heading,.nv-pw-cg__headline,'
+            . '.nv-pw-cs__heading,.nv-pw-ec__heading,.nv-pw-feat__headline,.nv-pw-gal__heading,'
+            . '.nv-pw-guarantee__heading,.nv-pw-hero__headline,.nv-pw-hs__heading,.nv-pw-ic__heading,'
+            . '.nv-pw-lf__heading,.nv-pw-pg__heading,.nv-pw-pop__heading,.nv-pw-pt__heading,'
+            . '.nv-pw-qb__heading,.nv-pw-related__heading,.nv-pw-rv__heading,.nv-pw-rw__headline,'
+            . '.nv-pw-sba__heading,.nv-pw-sf__heading,.nv-pw-si__heading,.nv-pw-steps__heading,'
+            . '.nv-pw-sv__heading,.nv-pw-tabs__heading,.nv-pw-tm__heading,.nv-pw-tp__headline,'
+            . '.nv-pw-upsells__heading,.nv-pw-vs__heading,.nv-pw-vt__headline';
     }
 }

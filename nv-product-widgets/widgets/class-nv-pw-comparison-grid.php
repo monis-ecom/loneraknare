@@ -13,6 +13,7 @@ class NV_PW_Comparison_Grid extends \Elementor\Widget_Base {
         $this->add_control('eyebrow', ['label' => __('Overline', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('JÄMFÖRELSE', 'nv-product-widgets')]);
         $this->add_control('headline', ['label' => __('Headline', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('Varför vi vinner', 'nv-product-widgets'), 'label_block' => true]);
         $this->add_control('intro', ['label' => __('Intro', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXTAREA, 'default' => __('Se hur vi står oss mot andra märken.', 'nv-product-widgets')]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->add_control('split_layout', ['label' => __('Marketing column beside table', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::SWITCHER, 'default' => '', 'description' => __('Puts the heading, a benefit checklist and the button in a column to the left of the comparison matrix (section.store "US vs Other Brands" style).', 'nv-product-widgets')]);
         $b = new \Elementor\Repeater();
         $b->add_control('text', ['label' => __('Benefit', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('Snabb effekt', 'nv-product-widgets')]);
@@ -72,6 +73,17 @@ class NV_PW_Comparison_Grid extends \Elementor\Widget_Base {
         $this->add_control('label_col_bg', ['label' => __('Feature column background', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::COLOR, 'default' => '#3B37C4', 'selectors' => ['{{WRAPPER}} .nv-pw-cg' => '--nv-cg-label-bg: {{VALUE}};'], 'condition' => ['highlight_labels' => 'yes']]);
         $this->add_control('label_col_color', ['label' => __('Feature column text color', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::COLOR, 'default' => '#FFFFFF', 'selectors' => ['{{WRAPPER}} .nv-pw-cg' => '--nv-cg-label-color: {{VALUE}};'], 'condition' => ['highlight_labels' => 'yes']]);
         $this->add_control('radius', ['label' => __('Card radius', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::SLIDER, 'range' => ['px' => ['min' => 0, 'max' => 32]], 'default' => ['size' => 18, 'unit' => 'px'], 'selectors' => ['{{WRAPPER}} .nv-pw-cg__table' => 'border-radius: {{SIZE}}{{UNIT}};']]);
+        $this->add_responsive_control('label_col_width', [
+            'label' => __('Feature column width', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'size_units' => ['fr'],
+            'range' => ['fr' => ['min' => 0.6, 'max' => 3, 'step' => 0.1]],
+            'default' => ['size' => 1.5, 'unit' => 'fr'],
+            'tablet_default' => ['size' => 1.2, 'unit' => 'fr'],
+            'mobile_default' => ['size' => 1, 'unit' => 'fr'],
+            'description' => __('Relative width of the left feature column vs the brand/competitor columns. Lower it on mobile so the whole table fits without scrolling.', 'nv-product-widgets'),
+            'selectors' => ['{{WRAPPER}} .nv-pw-cg' => '--nv-cg-label-w: {{SIZE}}fr;'],
+        ]);
         $this->add_control('cta_text', ['label' => __('Button text (optional)', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => '']);
         $this->add_control('cta_link', ['label' => __('Button link', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::URL, 'default' => ['url' => '#'], 'condition' => ['cta_text!' => '']]);
         $this->end_controls_section();
@@ -136,7 +148,7 @@ class NV_PW_Comparison_Grid extends \Elementor\Widget_Base {
             ob_start(); ?>
             <div class="nv-pw-cg__head">
                 <?php if ($eyebrow !== '') : ?><span class="nv-pw-cg__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
-                <?php if ($headline !== '') : ?><h3 class="nv-pw-cg__headline"><?php echo esc_html($headline); ?></h3><?php endif; ?>
+                <?php if ($headline !== '') : ?><h3 class="nv-pw-cg__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($headline); ?></h3><?php endif; ?>
                 <?php if ($intro !== '') : ?><p class="nv-pw-cg__intro"><?php echo esc_html($intro); ?></p><?php endif; ?>
                 <?php if ($split && !empty($bullets)) : ?>
                     <ul class="nv-pw-cg__bullets">
