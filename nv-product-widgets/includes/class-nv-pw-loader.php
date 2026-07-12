@@ -127,6 +127,9 @@ final class NV_PW_Loader {
             'class-nv-pw-trustpilot-wall',
             'class-nv-pw-email-capture',
             'class-nv-pw-lead-form',
+            'class-nv-pw-gallery',
+            'class-nv-pw-social-feed',
+            'class-nv-pw-product-grid',
         ];
 
         foreach ($widget_files as $file) {
@@ -214,6 +217,9 @@ final class NV_PW_Loader {
         $widgets_manager->register(new NV_PW_Trustpilot_Wall());
         $widgets_manager->register(new NV_PW_Email_Capture());
         $widgets_manager->register(new NV_PW_Lead_Form());
+        $widgets_manager->register(new NV_PW_Gallery());
+        $widgets_manager->register(new NV_PW_Social_Feed());
+        $widgets_manager->register(new NV_PW_Product_Grid());
     }
 
     public function enqueue_styles(): void {
@@ -249,6 +255,7 @@ final class NV_PW_Loader {
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce'   => wp_create_nonce('nv_pw_bundle'),
         ]);
+        wp_register_script('nv-gallery',               NV_PW_URL . 'assets/js/nv-gallery.js',               [],           NV_PW_VERSION, true);
         wp_register_script('nv-lead-form',             NV_PW_URL . 'assets/js/nv-lead-form.js',             [],           NV_PW_VERSION, true);
         wp_localize_script('nv-lead-form', 'nvPwLead', [
             'ajaxurl'      => admin_url('admin-ajax.php'),
