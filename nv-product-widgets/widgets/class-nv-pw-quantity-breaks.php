@@ -267,7 +267,7 @@ class NV_PW_Quantity_Breaks extends \Elementor\Widget_Base {
         $placeholder = trim((string) ($s['variation_placeholder'] ?? 'välj')) ?: 'välj';
         $button_text = trim((string) ($s['button_text'] ?? '')) ?: __('Lägg i varukorg', 'nv-product-widgets');
         $guarantee = trim((string) ($s['guarantee_text'] ?? ''));
-        $discount_mode = ($s['discount_mode'] ?? 'coupon') === 'auto' ? 'auto' : 'coupon';
+        $discount_mode = in_array(($s['discount_mode'] ?? 'coupon'), ['coupon', 'auto', 'nvcc'], true) ? (string) ($s['discount_mode'] ?? 'coupon') : 'coupon';
         $badge_pos = in_array(($s['badge_position'] ?? 'top-right'), ['top-right', 'top-left', 'top-center', 'inline'], true) ? (string) $s['badge_position'] : 'top-right';
         $after_add = in_array(($s['after_add'] ?? 'side_cart'), ['side_cart', 'stay', 'redirect_cart'], true) ? (string) $s['after_add'] : 'side_cart';
         $cart_selector = trim((string) ($s['cart_selector'] ?? ''));

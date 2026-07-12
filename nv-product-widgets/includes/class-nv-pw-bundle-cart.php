@@ -15,6 +15,9 @@ final class NV_PW_Bundle_Cart {
         // High priority so we run AFTER other plugins (e.g. NV Commerce Core) that
         // may re-price the line on the same hook.
         add_action('woocommerce_before_calculate_totals', [__CLASS__, 'zero_gift_price'], 1000);
+        // Exact-price mode: pin our tier lines to their exact unit price AFTER other
+        // plugins (NV Commerce Core's bulk discount runs at priority 20) have had their say.
+        add_action('woocommerce_before_calculate_totals', [__CLASS__, 'apply_fixed_unit_price'], 9999);
         // Apply coupon-free per-tier quantity-break discounts as a cart reduction.
         add_action('woocommerce_cart_calculate_fees', [__CLASS__, 'apply_qb_discount'], 20);
         // Safety net: whatever price another plugin ends up charging for a gift line,
@@ -45,9 +48,6 @@ final class NV_PW_Bundle_Cart {
         $refund = 0.0;
         foreach ($cart->get_cart() as $item) {
             if (empty($item['nv_pw_gift']) || empty($item['data']) || !is_object($item['data'])) continue;
-            // Skip gifts already handled by NV Commerce Core's bundle-deal engine
-            // (exact-price mode) to avoid subtracting the gift twice.
-            if (!empty($item['_nvcc_bundle_deal_mode'])) continue;
             $refund += (float) $item['data']->get_price() * max(1, (int) $item['quantity']);
         }
         if ($refund > 0.009) {
@@ -72,6 +72,30 @@ final class NV_PW_Bundle_Cart {
         }
         if ($discount > 0.009) {
             $cart->add_fee(__('Mängdrabatt', 'nv-product-widgets'), -1 * round($discount, 2), false);
+        }
+    }
+
+    /**
+     * Exact-price mode: set each tier line to its pinned unit price, overriding any
+     * upstream bulk-discount price rewrite, and strip NV Commerce Core's per-line
+     * "bulk discount" badge from our lines + gifts so the displayed discount matches.
+     */
+    public static function apply_fixed_unit_price($cart): void {
+        if (is_admin() && !defined('DOING_AJAX')) return;
+        if (!$cart || !is_object($cart) || empty($cart->cart_contents)) return;
+        foreach ($cart->cart_contents as $key => $item) {
+            $has_fixed = isset($item['_nv_pw_fixed_unit']) && (float) $item['_nv_pw_fixed_unit'] > 0;
+            $is_gift = !empty($item['nv_pw_gift']);
+            if (!$has_fixed && !$is_gift) continue;
+            if ($has_fixed && isset($item['data']) && is_object($item['data'])) {
+                $cart->cart_contents[$key]['data']->set_price((float) $item['_nv_pw_fixed_unit']);
+            }
+            unset(
+                $cart->cart_contents[$key]['nv_bulk_discount_percent'],
+                $cart->cart_contents[$key]['nv_bulk_base_price'],
+                $cart->cart_contents[$key]['nv_bulk_discount_unit'],
+                $cart->cart_contents[$key]['nv_bulk_discount_line']
+            );
         }
     }
 
@@ -111,23 +135,16 @@ final class NV_PW_Bundle_Cart {
 
         $discount_pct = isset($_POST['discount_pct']) ? max(0.0, min(90.0, (float) $_POST['discount_pct'])) : 0.0;
 
-        // Exact-price mode: delegate pricing to NV Commerce Core's custom bundle-deal
-        // engine. It reduces the whole group to exactly `cart_total` and — crucially —
-        // excludes these lines from its own global bulk discount, so the two engines
-        // stop fighting and the tier price the customer sees is the price they pay.
+        // Exact-price mode: pin each line to a fixed unit price (tier total ÷ quantity),
+        // applied late (priority 9999) so it overrides NV Commerce Core's global bulk
+        // discount, which rewrites line prices at priority 20. See apply_fixed_unit_price().
         $nvcc = isset($_POST['nvcc']) && (string) $_POST['nvcc'] === '1';
         $cart_total = isset($_POST['cart_total']) ? max(0.0, (float) $_POST['cart_total']) : 0.0;
-        $deal_title = isset($_POST['deal_title']) ? sanitize_text_field(wp_unslash((string) $_POST['deal_title'])) : '';
-        $use_nvcc = $nvcc && $cart_total > 0;
-        $group = $use_nvcc ? uniqid('nvqb_', false) : '';
+        $use_fixed = $nvcc && $cart_total > 0 && $qty > 0;
+        $fixed_unit = $use_fixed ? ($cart_total / $qty) : 0.0;
 
-        if ($use_nvcc) {
-            $item_data = [
-                '_nvcc_bundle_deal_mode'  => 'fixed_price',
-                '_nvcc_bundle_deal_value' => $cart_total,
-                '_nvcc_bundle_group'      => $group,
-                '_nvcc_bundle_deal_title' => $deal_title,
-            ];
+        if ($use_fixed && $fixed_unit > 0) {
+            $item_data = ['_nv_pw_fixed_unit' => $fixed_unit];
         } else {
             $item_data = $discount_pct > 0 ? ['nv_pw_qb_discount' => $discount_pct] : [];
         }
@@ -169,16 +186,7 @@ final class NV_PW_Bundle_Cart {
         if ($gift_id > 0) {
             $gift = wc_get_product($gift_id);
             if ($gift instanceof \WC_Product && $gift->exists()) {
-                $gift_data = ['nv_pw_gift' => 1];
-                if ($use_nvcc) {
-                    // fixed_amount with a large value = "take off the whole line" → free,
-                    // and marks the gift as a custom deal so bulk discount skips it.
-                    $gift_data['_nvcc_bundle_deal_mode']  = 'fixed_amount';
-                    $gift_data['_nvcc_bundle_deal_value'] = 1000000;
-                    $gift_data['_nvcc_bundle_group']      = uniqid('nvqbgift_', false);
-                    $gift_data['_nvcc_bundle_deal_title'] = ($deal_title !== '' ? $deal_title . ' – ' : '') . __('Gratis gåva', 'nv-product-widgets');
-                }
-                WC()->cart->add_to_cart($gift_id, 1, 0, [], $gift_data);
+                WC()->cart->add_to_cart($gift_id, 1, 0, [], ['nv_pw_gift' => 1]);
             }
         }
 

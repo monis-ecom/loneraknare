@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: AS Product Widgets
- * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.49 fixes the Quantity Breaks widget: badge placement + per-element font-size controls, a bulletproof free-gift zeroing (negative-fee safety net vs other plugins), and add-to-cart opens the side cart instead of redirecting (v1.7.51 resolves the NV Commerce Core discount conflict with an exact-tier-price mode and shows free gifts as “Gratis” in the side cart).
- * Version: 1.7.51
+ * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.49 fixes the Quantity Breaks widget: badge placement + per-element font-size controls, a bulletproof free-gift zeroing (negative-fee safety net vs other plugins), and add-to-cart opens the side cart instead of redirecting (v1.7.52 fixes exact-tier pricing (overrides NV Commerce Core’s line-level bulk discount) and the badge-position control).
+ * Version: 1.7.52
  * Author: Alpha Studio
  * Text Domain: nv-product-widgets
  * Requires Plugins: elementor, woocommerce
@@ -13,7 +13,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('NV_PW_VERSION', '1.7.51');
+define('NV_PW_VERSION', '1.7.52');
 define('NV_PW_FILE', __FILE__);
 define('NV_PW_DIR', plugin_dir_path(__FILE__));
 define('NV_PW_URL', plugin_dir_url(__FILE__));
