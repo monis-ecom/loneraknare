@@ -11,3 +11,5 @@ test/ssr2.tsx
 .design-sync/node_modules
 test/*.mjs
 test/mix.tsx
+test/landing.tsx
+test/*.html
