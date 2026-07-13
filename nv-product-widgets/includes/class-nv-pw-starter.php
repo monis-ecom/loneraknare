@@ -7,6 +7,10 @@ if (!defined('ABSPATH')) exit;
  * from a blank canvas — the hardest moment for a solo builder.
  */
 final class NV_PW_Starter {
+    /** Live PadelFlex™ product page — the buy CTAs on the starter point here.
+     * Change this one line to repoint every CTA (or edit them per-widget in Elementor). */
+    const PADELFLEX_URL = 'https://nordiskavaruhuset.se/product/padelflex/';
+
     public static function init(): void {
         add_action('admin_menu', [__CLASS__, 'add_menu']);
         add_action('admin_post_nv_pw_install_starter', [__CLASS__, 'handle_install']);
@@ -174,9 +178,9 @@ final class NV_PW_Starter {
                     self::row(['text' => 'Kliniskt utprovad']),
                 ],
                 'cta_text'  => 'Köp nu – 499 kr',
-                'cta_link'  => ['url' => '#kop'],
+                'cta_link'  => ['url' => self::PADELFLEX_URL],
                 'cta2_text' => 'Läs mer',
-                'cta2_link' => ['url' => '#funktion'],
+                'cta2_link' => ['url' => self::PADELFLEX_URL],
                 'guarantee' => '60 dagars nöjd-kund-garanti',
                 'image_side' => 'right',
             ]],
@@ -194,7 +198,7 @@ final class NV_PW_Starter {
                     self::row(['marker_type' => 'icon', 'text' => 'Padelanpassad biomekanik', 'desc' => 'Utvecklad med spelare']),
                 ],
                 'cta_text' => 'Se hur det fungerar',
-                'cta_link' => ['url' => '#kop'],
+                'cta_link' => ['url' => self::PADELFLEX_URL],
             ]],
             ['type' => 'nv-comparison-grid', 'settings' => [
                 'eyebrow'     => 'JÄMFÖRELSE',
@@ -222,9 +226,9 @@ final class NV_PW_Starter {
                 'headline'       => 'Ge fötterna det stöd de förtjänar',
                 'description'    => 'Fri frakt i Norden · 60 dagars öppet köp · Över 9 000 nöjda spelare.',
                 'primary_text'   => 'Köp PadelFlex™ – 499 kr',
-                'primary_url'    => ['url' => '#kop'],
+                'primary_url'    => ['url' => self::PADELFLEX_URL],
                 'secondary_text' => 'Se alla paket',
-                'secondary_url'  => ['url' => '#paket'],
+                'secondary_url'  => ['url' => self::PADELFLEX_URL],
             ]],
         ];
     }
