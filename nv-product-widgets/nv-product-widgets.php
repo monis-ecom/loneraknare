@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: AS Product Widgets
- * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.60 adds an "Editorial headline letter-spacing (em)" control under Settings → NV Brand to fine-tune the tracking of the editorial + mixed headline styles (and the *asterisk* accent). Builds on v1.7.59 mixed inline headline styling and Swedish Stats Counter defaults.
- * Version: 1.7.60
+ * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.61 adds a one-click "PadelFlex™ Landing Page" starter (Tools → NV Starter Templates) — the full 10-section page pre-written in Swedish with the editorial mixed headlines. Builds on the NV Brand headline letter-spacing control and mixed inline headline styling.
+ * Version: 1.7.61
  * Author: Alpha Studio
  * Text Domain: nv-product-widgets
  * Requires Plugins: elementor, woocommerce
@@ -13,7 +13,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('NV_PW_VERSION', '1.7.60');
+define('NV_PW_VERSION', '1.7.61');
 define('NV_PW_FILE', __FILE__);
 define('NV_PW_DIR', plugin_dir_path(__FILE__));
 define('NV_PW_URL', plugin_dir_url(__FILE__));

@@ -26,6 +26,10 @@ final class NV_PW_Starter {
     /** Available starters: key => [label, description, builder]. */
     private static function starters(): array {
         return [
+            'padelflex-landing' => [
+                'label' => __('PadelFlex™ Landing Page', 'nv-product-widgets'),
+                'desc'  => __('The full 10-section PadelFlex page, pre-written in Swedish with the editorial “mixed” headlines: Hero → USPs → Feature → Comparison → Quantity Breaks → Reviews → Stats → Guarantee → FAQ → CTA.', 'nv-product-widgets'),
+            ],
             'product-landing' => [
                 'label' => __('Product Landing Page', 'nv-product-widgets'),
                 'desc'  => __('Hero → icon USPs → Trustpilot reviews → comparison → FAQ → CTA. The full conversion spine, ready to edit.', 'nv-product-widgets'),
@@ -73,11 +77,16 @@ final class NV_PW_Starter {
         $starters = self::starters();
         if (!isset($starters[$key])) wp_die('Unknown starter');
 
-        $widgets = $key === 'lead-gen'
-            ? ['nv-hero', 'nv-benefits-list', 'nv-testimonials', 'nv-lead-form']
-            : ['nv-hero', 'nv-icon-columns', 'nv-trustpilot-wall', 'nv-comparison-grid', 'nv-faq', 'nv-cta-block'];
+        if ($key === 'padelflex-landing') {
+            $specs = self::padelflex_specs();
+        } else {
+            $widgets = $key === 'lead-gen'
+                ? ['nv-hero', 'nv-benefits-list', 'nv-testimonials', 'nv-lead-form']
+                : ['nv-hero', 'nv-icon-columns', 'nv-trustpilot-wall', 'nv-comparison-grid', 'nv-faq', 'nv-cta-block'];
+            $specs = array_map(static fn($t) => ['type' => $t, 'settings' => new stdClass()], $widgets);
+        }
 
-        $data = self::build_elementor_data($widgets);
+        $data = self::build_elementor_data($specs);
 
         $post_type = class_exists('NV_PW_Template_System') ? NV_PW_Template_System::CPT : 'page';
         $post_id = wp_insert_post([
@@ -103,10 +112,26 @@ final class NV_PW_Starter {
         return substr(md5(uniqid('nvpw', true)), 0, 8);
     }
 
-    /** Build canonical Elementor data: one full-width section+column per widget. */
-    private static function build_elementor_data(array $widget_types): array {
+    /** Unique 7-char id for an Elementor repeater row. */
+    private static function rid(): string {
+        return substr(md5(uniqid('nvr', true)), 0, 7);
+    }
+
+    /** A repeater row with a fresh _id merged in. */
+    private static function row(array $fields): array {
+        return array_merge(['_id' => self::rid()], $fields);
+    }
+
+    /**
+     * Build canonical Elementor data from specs: one full-width section+column per
+     * widget. Each spec is ['type' => <widgetType>, 'settings' => array|stdClass].
+     */
+    private static function build_elementor_data(array $specs): array {
         $sections = [];
-        foreach ($widget_types as $type) {
+        foreach ($specs as $spec) {
+            $type = (string) ($spec['type'] ?? '');
+            if ($type === '') continue;
+            $settings = $spec['settings'] ?? new stdClass();
             $sections[] = [
                 'id' => self::eid(),
                 'elType' => 'section',
@@ -119,7 +144,7 @@ final class NV_PW_Starter {
                         'id' => self::eid(),
                         'elType' => 'widget',
                         'widgetType' => $type,
-                        'settings' => new stdClass(),
+                        'settings' => $settings,
                     ]],
                     'isInner' => false,
                 ]],
@@ -127,5 +152,80 @@ final class NV_PW_Starter {
             ];
         }
         return $sections;
+    }
+
+    /**
+     * The PadelFlex™ landing page: the same 10-section composition as the design
+     * kit's sample, pre-filled with Swedish copy and the editorial "mixed"
+     * headline style (wrap words in *asterisks* for the Newsreader italic accent).
+     */
+    private static function padelflex_specs(): array {
+        return [
+            ['type' => 'nv-hero', 'settings' => [
+                'eyebrow'            => 'PADELFLEX™ SULOR',
+                'headline'           => 'Mindre skador. *Mer spel.*',
+                'headline_highlight' => '',
+                'nv_hl_style'        => 'mixed',
+                'subheadline'        => 'Padelanpassade innersulor som ger riktad stötdämpning och förstärkt sidostabilitet – matchning efter matchning.',
+                'rating_text'        => '4,8/5 · 9 000+ nöjda padelspelare',
+                'bullets'            => [
+                    self::row(['text' => 'Riktad stötdämpning']),
+                    self::row(['text' => 'Förstärkt sidostabilitet']),
+                    self::row(['text' => 'Kliniskt utprovad']),
+                ],
+                'cta_text'  => 'Köp nu – 499 kr',
+                'cta_link'  => ['url' => '#kop'],
+                'cta2_text' => 'Läs mer',
+                'cta2_link' => ['url' => '#funktion'],
+                'guarantee' => '60 dagars nöjd-kund-garanti',
+                'image_side' => 'right',
+            ]],
+            ['type' => 'nv-icon-columns', 'settings' => new stdClass()],
+            ['type' => 'nv-feature', 'settings' => [
+                'layout'      => 'split',
+                'image_side'  => 'right',
+                'eyebrow'     => 'FUNKTION',
+                'headline'    => 'Byggd för *padelns* sidorörelser.',
+                'nv_hl_style' => 'mixed',
+                'text'        => 'Generiska multisportsulor tar inte hänsyn till padelns snabba sidled. PadelFlex™ är formad efter belastningen där du faktiskt spelar.',
+                'bullets'     => [
+                    self::row(['marker_type' => 'icon', 'text' => 'Riktad stötdämpning', 'desc' => 'Där hälen och trampdynan tar smällen']),
+                    self::row(['marker_type' => 'icon', 'text' => 'Förstärkt sidostabilitet', 'desc' => 'Håller foten stadig i utfallen']),
+                    self::row(['marker_type' => 'icon', 'text' => 'Padelanpassad biomekanik', 'desc' => 'Utvecklad med spelare']),
+                ],
+                'cta_text' => 'Se hur det fungerar',
+                'cta_link' => ['url' => '#kop'],
+            ]],
+            ['type' => 'nv-comparison-grid', 'settings' => [
+                'eyebrow'     => 'JÄMFÖRELSE',
+                'headline'    => 'Varför spelare *byter* till PadelFlex™',
+                'nv_hl_style' => 'mixed',
+            ]],
+            ['type' => 'nv-quantity-breaks', 'settings' => [
+                'heading'     => 'Välj ditt *paket*',
+                'nv_hl_style' => 'mixed',
+            ]],
+            ['type' => 'nv-review-wall', 'settings' => [
+                'headline_1'      => 'Därför älskar spelare',
+                'headline_accent' => 'PadelFlex™',
+                'nv_hl_style'     => 'mixed',
+            ]],
+            ['type' => 'nv-stats-counter', 'settings' => new stdClass()],
+            ['type' => 'nv-guarantee', 'settings' => [
+                'heading'     => '60 dagars *nöjd-kund-garanti*',
+                'nv_hl_style' => 'mixed',
+                'text'        => 'Inte helt nöjd? Skicka tillbaka produkten inom 60 dagar så får du pengarna tillbaka – inga frågor.',
+            ]],
+            ['type' => 'nv-faq', 'settings' => new stdClass()],
+            ['type' => 'nv-cta-block', 'settings' => [
+                'eyebrow'        => 'REDO ATT SPELA SMARTARE?',
+                'headline'       => 'Ge fötterna det stöd de förtjänar',
+                'description'    => 'Fri frakt i Norden · 60 dagars öppet köp · Över 9 000 nöjda spelare.',
+                'primary_text'   => 'Köp PadelFlex™ – 499 kr',
+                'primary_url'    => ['url' => '#kop'],
+                'secondary_text' => 'Se alla paket',
+                'secondary_url'  => ['url' => '#paket'],
+            ]],
+        ];
     }
 }
