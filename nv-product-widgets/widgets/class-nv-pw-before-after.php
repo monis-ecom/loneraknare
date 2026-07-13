@@ -152,7 +152,7 @@ class NV_PW_Before_After extends \Elementor\Widget_Base {
         ?>
         <div class="nv-pw-ba-wrap">
             <?php if ($heading !== '') : ?>
-                <h3 class="nv-pw-ba-heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3>
+                <h3 class="nv-pw-ba-heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3>
             <?php endif; ?>
             <?php $ba_sub = trim((string) ($s['subheading'] ?? '')); ?>
             <?php if ($ba_sub !== '') : ?>

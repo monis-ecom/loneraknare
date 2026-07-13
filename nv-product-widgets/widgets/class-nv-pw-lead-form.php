@@ -100,7 +100,7 @@ class NV_PW_Lead_Form extends \Elementor\Widget_Base {
             <div class="nv-pw-lf__body" data-nv-lead-body>
                 <?php if ($heading !== '' || $subtext !== '') : ?>
                     <div class="nv-pw-lf__head">
-                        <?php if ($heading !== '') : ?><h3 class="nv-pw-lf__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+                        <?php if ($heading !== '') : ?><h3 class="nv-pw-lf__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3><?php endif; ?>
                         <?php if ($subtext !== '') : ?><p class="nv-pw-lf__subtext"><?php echo esc_html($subtext); ?></p><?php endif; ?>
                     </div>
                 <?php endif; ?>

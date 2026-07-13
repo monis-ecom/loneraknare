@@ -191,7 +191,7 @@ class NV_PW_Benefits_List extends \Elementor\Widget_Base {
         ?>
         <div class="nv-pw-benefits">
             <?php if ($heading !== '') : ?>
-                <h3 class="nv-pw-benefits__heading<?php echo NV_PW_Headline::mod($settings); ?>"><?php echo esc_html($heading); ?></h3>
+                <h3 class="nv-pw-benefits__heading<?php echo NV_PW_Headline::mod($settings); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3>
             <?php endif; ?>
             <ul class="nv-pw-benefits__list">
                 <?php foreach ($items as $item) :

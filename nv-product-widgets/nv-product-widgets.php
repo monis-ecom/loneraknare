@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: AS Product Widgets
- * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.57 adds the "Headline style" control to NV: Media + Headline + Text (the last widget that was missing it) and adds self-hosted video (MP4/WebM) as an alternative to the still image on both NV: Media + Headline + Text and NV: Feature / Image + Text, with poster + autoplay/loop/muted/controls options.
- * Version: 1.7.57
+ * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.58 adds inline mixed headline styling: wrap words in *asterisks* to render them in the Newsreader italic accent, a new "Editorial mixed" headline style (upright serif base + italic accent, the "Skandinavisk design *för ditt hem*" design-system look), across every headline widget; also localises the Stats Counter defaults to Swedish.
+ * Version: 1.7.58
  * Author: Alpha Studio
  * Text Domain: nv-product-widgets
  * Requires Plugins: elementor, woocommerce
@@ -13,7 +13,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('NV_PW_VERSION', '1.7.57');
+define('NV_PW_VERSION', '1.7.58');
 define('NV_PW_FILE', __FILE__);
 define('NV_PW_DIR', plugin_dir_path(__FILE__));
 define('NV_PW_URL', plugin_dir_url(__FILE__));

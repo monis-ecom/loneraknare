@@ -68,7 +68,7 @@ class NV_PW_Gallery extends \Elementor\Widget_Base {
         <div class="nv-pw-gal nv-pw-gal--<?php echo esc_attr($layout); ?><?php echo $lightbox ? ' nv-pw-gal--lightbox' : ''; ?>"<?php echo $lightbox ? ' data-nv-gallery' : ''; ?>>
             <?php if ($heading !== '' || $sub !== '') : ?>
                 <div class="nv-pw-gal__head">
-                    <?php if ($heading !== '') : ?><h2 class="nv-pw-gal__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h2><?php endif; ?>
+                    <?php if ($heading !== '') : ?><h2 class="nv-pw-gal__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h2><?php endif; ?>
                     <?php if ($sub !== '') : ?><p class="nv-pw-gal__sub"><?php echo esc_html($sub); ?></p><?php endif; ?>
                 </div>
             <?php endif; ?>

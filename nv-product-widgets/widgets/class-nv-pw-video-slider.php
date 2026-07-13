@@ -176,7 +176,7 @@ class NV_PW_Video_Slider extends \Elementor\Widget_Base {
         ?>
         <div class="nv-pw-vs" data-nv-video>
             <div class="nv-pw-vs__head">
-                <?php if ($heading !== '') : ?><h3 class="nv-pw-vs__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+                <?php if ($heading !== '') : ?><h3 class="nv-pw-vs__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3><?php endif; ?>
                 <div class="nv-pw-vs__arrows">
                     <button type="button" class="nv-pw-vs__arrow" data-nv-prev aria-label="<?php echo esc_attr__('Föregående', 'nv-product-widgets'); ?>"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
                     <button type="button" class="nv-pw-vs__arrow" data-nv-next aria-label="<?php echo esc_attr__('Nästa', 'nv-product-widgets'); ?>"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>

@@ -66,7 +66,7 @@ class NV_PW_Email_Capture extends \Elementor\Widget_Base {
         ?>
         <form class="nv-pw-lead nv-pw-ec nv-pw-ec--<?php echo esc_attr($layout); ?>" data-nv-lead data-source="email" data-success="<?php echo esc_attr($success); ?>"<?php if ($redirect !== '') echo ' data-redirect="' . esc_url($redirect) . '"'; ?>>
             <div class="nv-pw-ec__body" data-nv-lead-body>
-                <?php if ($heading !== '') : ?><h3 class="nv-pw-ec__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+                <?php if ($heading !== '') : ?><h3 class="nv-pw-ec__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3><?php endif; ?>
                 <?php if ($subtext !== '') : ?><p class="nv-pw-ec__subtext"><?php echo esc_html($subtext); ?></p><?php endif; ?>
                 <div class="nv-pw-ec__row">
                     <label class="nv-pw-ec__field">

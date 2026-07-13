@@ -164,7 +164,7 @@ class NV_PW_Feature extends \Elementor\Widget_Base {
             <?php endif; ?>
             <div class="nv-pw-feat__body">
                 <?php if ($eyebrow !== '') : ?><span class="nv-pw-feat__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
-                <?php if ($headline !== '') : ?><h3 class="nv-pw-feat__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($headline); ?></h3><?php endif; ?>
+                <?php if ($headline !== '') : ?><h3 class="nv-pw-feat__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($headline); ?></h3><?php endif; ?>
                 <?php if ($text !== '') : ?><p class="nv-pw-feat__text"><?php echo esc_html($text); ?></p><?php endif; ?>
                 <?php if (!empty($brows)) : ?>
                     <ul class="nv-pw-feat__bullets">

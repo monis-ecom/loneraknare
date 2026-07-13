@@ -133,7 +133,7 @@ class NV_PW_Trustpilot_Wall extends \Elementor\Widget_Base {
         <section class="nv-pw-tp nv-pw-tp--<?php echo esc_attr($theme); ?>" style="--nv-tp-cols: <?php echo esc_attr($cols); ?>;">
             <?php if ($headline !== '' || $show_rating) : ?>
                 <div class="nv-pw-tp__head">
-                    <?php if ($headline !== '') : ?><h2 class="nv-pw-tp__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($headline); ?></h2><?php endif; ?>
+                    <?php if ($headline !== '') : ?><h2 class="nv-pw-tp__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($headline); ?></h2><?php endif; ?>
                     <?php if ($show_rating) : ?>
                         <div class="nv-pw-tp__rating">
                             <?php if ($rating_label !== '') : ?><span class="nv-pw-tp__rating-label"><?php echo esc_html($rating_label); ?></span><?php endif; ?>

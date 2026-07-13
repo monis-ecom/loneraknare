@@ -2075,6 +2075,23 @@ body.nv-pw-size-chart-open {
   font-style: italic !important; font-weight: 400 !important;
   letter-spacing: -.01em; line-height: 1.08;
 }
+/* Editorial "mixed": upright Newsreader serif base — only the *asterisked*
+   accent (.nv-hl-em) goes italic, for the "Skandinavisk design för ditt hem" look. */
+.nv-hl--mixed {
+  font-family: 'Newsreader', 'Playfair Display', Georgia, serif !important;
+  font-style: normal !important; font-weight: 400 !important;
+  letter-spacing: -.005em; line-height: 1.1;
+}
+/* Inline italic accent — works in every headline style (sans base gets a serif
+   italic accent; editorial-mixed base is serif upright with a serif italic accent). */
+.nv-hl-em {
+  font-family: 'Newsreader', 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.01em;
+}
+/* In the all-italic editorial style the accent is already italic; keep it consistent. */
+.nv-hl--editorial .nv-hl-em { font-style: italic; }
 .nv-pw-ba {
   --nv-ba-pos: 50%;
   --nv-ba-accent: #FFFFFF;

@@ -171,7 +171,7 @@ class NV_PW_Hotspots extends \Elementor\Widget_Base {
             <?php $hs_sub = trim((string) ($s['subheading'] ?? '')); ?>
             <?php if ($heading !== '' || $hs_sub !== '') : ?>
                 <div class="nv-pw-hs__head">
-                    <?php if ($heading !== '') : ?><h3 class="nv-pw-hs__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+                    <?php if ($heading !== '') : ?><h3 class="nv-pw-hs__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3><?php endif; ?>
                     <?php if ($hs_sub !== '') : ?><p class="nv-pw-hs__sub"><?php echo esc_html($hs_sub); ?></p><?php endif; ?>
                 </div>
             <?php endif; ?>

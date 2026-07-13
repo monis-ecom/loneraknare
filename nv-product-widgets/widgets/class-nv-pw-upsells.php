@@ -97,7 +97,7 @@ class NV_PW_Upsells extends \Elementor\Widget_Base {
         $settings    = $this->get_settings_for_display();
         $limit       = intval($settings['posts_per_page'] ?? 3);
         $columns     = intval($settings['columns'] ?? 3);
-        $title_str   = esc_html($settings['section_title'] ?? 'Du kanske också gillar');
+        $title_str   = NV_PW_Headline::html($settings['section_title'] ?? 'Du kanske också gillar');
         $show_btn    = !empty($settings['show_cta_button']);
         $btn_text    = esc_html($settings['cta_text'] ?? 'Se produkt');
 

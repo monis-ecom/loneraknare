@@ -80,7 +80,7 @@ class NV_PW_Content_Slider extends \Elementor\Widget_Base {
         ?>
         <div class="nv-pw-cs nv-pw-cs--<?php echo esc_attr($layout); ?>" data-nv-slider data-autoplay="<?php echo $autoplay ? '1' : '0'; ?>" style="--nv-cs-pv: <?php echo esc_attr($pv); ?>;">
             <div class="nv-pw-cs__head">
-                <?php if ($heading !== '') : ?><h3 class="nv-pw-cs__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+                <?php if ($heading !== '') : ?><h3 class="nv-pw-cs__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3><?php endif; ?>
                 <?php if ($arrows) : ?>
                     <div class="nv-pw-cs__arrows">
                         <button type="button" class="nv-pw-cs__arrow" data-nv-prev aria-label="<?php echo esc_attr__('Föregående', 'nv-product-widgets'); ?>"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>

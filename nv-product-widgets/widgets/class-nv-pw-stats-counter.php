@@ -70,7 +70,7 @@ class NV_PW_Stats_Counter extends \Elementor\Widget_Base {
         $r->add_control('label', [
             'label' => __('Label', 'nv-product-widgets'),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('COMMANDES', 'nv-product-widgets'),
+            'default' => __('NÖJDA SPELARE', 'nv-product-widgets'),
         ]);
         $this->add_control('items', [
             'label' => __('Stats', 'nv-product-widgets'),
@@ -78,8 +78,8 @@ class NV_PW_Stats_Counter extends \Elementor\Widget_Base {
             'fields' => $r->get_controls(),
             'title_field' => '{{{ value }}} {{{ label }}}',
             'default' => [
-                ['value' => 9000, 'decimals' => 0, 'prefix' => '', 'suffix' => '', 'label' => __('COMMANDES', 'nv-product-widgets')],
-                ['value' => 98.3, 'decimals' => 1, 'prefix' => '', 'suffix' => '%', 'label' => __('DE SATISFACTION', 'nv-product-widgets')],
+                ['value' => 9000, 'decimals' => 0, 'prefix' => '', 'suffix' => '', 'label' => __('NÖJDA SPELARE', 'nv-product-widgets')],
+                ['value' => 98.3, 'decimals' => 1, 'prefix' => '', 'suffix' => '%', 'label' => __('NÖJDHET', 'nv-product-widgets')],
             ],
         ]);
 

@@ -279,7 +279,7 @@ class NV_PW_Quantity_Breaks extends \Elementor\Widget_Base {
         }
         ?>
         <div class="nv-pw-qb nv-pw-qb--badge-<?php echo esc_attr($badge_pos); ?>" data-nv-qb data-product-id="<?php echo esc_attr((string) $product_id); ?>" data-variable="<?php echo $is_variable ? '1' : '0'; ?>" data-discount-mode="<?php echo esc_attr($discount_mode); ?>" data-after-add="<?php echo esc_attr($after_add); ?>"<?php if ($cart_selector !== '') echo ' data-cart-selector="' . esc_attr($cart_selector) . '"'; ?>>
-            <?php if ($heading !== '') : ?><div class="nv-pw-qb__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></div><?php endif; ?>
+            <?php if ($heading !== '') : ?><div class="nv-pw-qb__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></div><?php endif; ?>
 
             <div class="nv-pw-qb__tiers">
                 <?php foreach ($tiers as $i => $t) :

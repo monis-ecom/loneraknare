@@ -94,7 +94,7 @@ class NV_PW_Bundle_Builder extends \Elementor\Widget_Base {
         ?>
         <div class="nv-pw-bb" data-nv-bundle data-symbol="<?php echo esc_attr($symbol); ?>" data-decimals="<?php echo (int) $decimals; ?>" style="--nv-bb-cols: <?php echo esc_attr($cols); ?>;">
             <?php if ($eyebrow !== '') : ?><span class="nv-pw-bb__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
-            <?php if ($heading !== '') : ?><h3 class="nv-pw-bb__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+            <?php if ($heading !== '') : ?><h3 class="nv-pw-bb__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3><?php endif; ?>
 
             <div class="nv-pw-bb__tiers" role="tablist">
                 <?php foreach ($tiers as $i => $t) : ?>

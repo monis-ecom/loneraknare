@@ -158,9 +158,9 @@ class NV_PW_Review_Wall extends \Elementor\Widget_Base {
                     <?php if ($rating_bar !== '' && $rating_pos === 'top') echo $rating_bar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                     <?php if ($h1 !== '' || $accent !== '') : ?>
                         <h2 class="nv-pw-rw__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php
-                            echo esc_html($h1);
+                            echo NV_PW_Headline::html($h1);
                             if ($accent !== '') echo ($h1 !== '' ? ' ' : '') . '<span class="nv-pw-rw__accent">' . esc_html($accent) . '</span>';
-                            if ($h2 !== '') echo ' ' . esc_html($h2);
+                            if ($h2 !== '') echo ' ' . NV_PW_Headline::html($h2);
                         ?></h2>
                     <?php endif; ?>
                     <?php if ($sub !== '') : ?><p class="nv-pw-rw__sub"><?php echo esc_html($sub); ?></p><?php endif; ?>

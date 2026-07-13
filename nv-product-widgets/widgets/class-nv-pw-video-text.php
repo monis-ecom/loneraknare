@@ -152,7 +152,7 @@ class NV_PW_Video_Text extends \Elementor\Widget_Base {
             <?php endif; ?>
             <div class="nv-pw-vt__body">
                 <?php if ($eyebrow !== '') : ?><span class="nv-pw-vt__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
-                <?php if ($headline !== '') : ?><h3 class="nv-pw-vt__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($headline); ?></h3><?php endif; ?>
+                <?php if ($headline !== '') : ?><h3 class="nv-pw-vt__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($headline); ?></h3><?php endif; ?>
                 <?php if ($text !== '') : ?><p class="nv-pw-vt__text"><?php echo esc_html($text); ?></p><?php endif; ?>
                 <?php if (!empty($bullets)) : ?>
                     <ul class="nv-pw-vt__bullets">

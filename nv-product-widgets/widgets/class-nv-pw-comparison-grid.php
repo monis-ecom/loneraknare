@@ -148,7 +148,7 @@ class NV_PW_Comparison_Grid extends \Elementor\Widget_Base {
             ob_start(); ?>
             <div class="nv-pw-cg__head">
                 <?php if ($eyebrow !== '') : ?><span class="nv-pw-cg__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
-                <?php if ($headline !== '') : ?><h3 class="nv-pw-cg__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($headline); ?></h3><?php endif; ?>
+                <?php if ($headline !== '') : ?><h3 class="nv-pw-cg__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($headline); ?></h3><?php endif; ?>
                 <?php if ($intro !== '') : ?><p class="nv-pw-cg__intro"><?php echo esc_html($intro); ?></p><?php endif; ?>
                 <?php if ($split && !empty($bullets)) : ?>
                     <ul class="nv-pw-cg__bullets">

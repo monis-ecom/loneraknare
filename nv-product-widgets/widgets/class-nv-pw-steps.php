@@ -126,7 +126,7 @@ class NV_PW_Steps extends \Elementor\Widget_Base {
         $layout_class = $layout === 'connected' ? ' nv-pw-steps--connected' : '';
         ?>
         <div class="nv-pw-steps<?php echo $layout_class; ?>" style="--nv-steps-cols: <?php echo esc_attr($cols); ?>;">
-            <?php if ($heading !== '') : ?><h3 class="nv-pw-steps__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+            <?php if ($heading !== '') : ?><h3 class="nv-pw-steps__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3><?php endif; ?>
             <ol class="nv-pw-steps__grid">
                 <?php $n = 0; foreach ($items as $it) : $n++;
                     $title = trim((string) ($it['title'] ?? ''));

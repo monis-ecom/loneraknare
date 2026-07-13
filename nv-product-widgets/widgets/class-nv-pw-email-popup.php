@@ -65,7 +65,7 @@ class NV_PW_Email_Popup extends \Elementor\Widget_Base {
                 <?php if ($img !== '') : ?><div class="nv-pw-pop__media" style="background-image:url('<?php echo esc_url($img); ?>');"></div><?php endif; ?>
                 <form class="nv-pw-lead nv-pw-pop__form" data-nv-lead data-source="email" data-success="<?php echo esc_attr($success); ?>">
                     <div class="nv-pw-lead__body" data-nv-lead-body>
-                        <?php if ($heading !== '') : ?><h3 class="nv-pw-pop__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+                        <?php if ($heading !== '') : ?><h3 class="nv-pw-pop__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3><?php endif; ?>
                         <?php if ($subtext !== '') : ?><p class="nv-pw-pop__subtext"><?php echo esc_html($subtext); ?></p><?php endif; ?>
                         <label class="nv-pw-pop__field">
                             <span class="screen-reader-text"><?php echo esc_html($placeholder); ?></span>

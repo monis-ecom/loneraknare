@@ -162,7 +162,7 @@ class NV_PW_Media_Headline_Text extends \Elementor\Widget_Base {
                     <p class="nv-pw-media-text__eyebrow"><?php echo esc_html($eyebrow); ?></p>
                 <?php endif; ?>
                 <?php if ($headline !== '') : ?>
-                    <h3 class="nv-pw-media-text__headline<?php echo NV_PW_Headline::mod($settings); ?>"><?php echo esc_html($headline); ?></h3>
+                    <h3 class="nv-pw-media-text__headline<?php echo NV_PW_Headline::mod($settings); ?>"><?php echo NV_PW_Headline::html($headline); ?></h3>
                 <?php endif; ?>
                 <?php if ($body !== '') : ?>
                     <div class="nv-pw-media-text__body"><?php echo wp_kses_post(wpautop($body)); ?></div>

@@ -155,7 +155,7 @@ class NV_PW_Guarantee extends \Elementor\Widget_Base {
                     ?>
                 </span>
                 <div class="nv-pw-guarantee__body">
-                    <?php if ($heading !== '') : ?><h3 class="nv-pw-guarantee__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+                    <?php if ($heading !== '') : ?><h3 class="nv-pw-guarantee__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3><?php endif; ?>
                     <?php if ($text !== '') : ?><p class="nv-pw-guarantee__text"><?php echo esc_html($text); ?></p><?php endif; ?>
                 </div>
             </div>

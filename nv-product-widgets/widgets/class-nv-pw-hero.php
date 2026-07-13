@@ -190,7 +190,7 @@ class NV_PW_Hero extends \Elementor\Widget_Base {
             <div class="nv-pw-hero__text">
                 <?php if ($eyebrow !== '') : ?><span class="nv-pw-hero__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
                 <h2 class="nv-pw-hero__headline<?php echo NV_PW_Headline::mod($s); ?>">
-                    <?php echo esc_html($headline); ?><?php if ($highlight !== '') : ?> <span class="nv-pw-hero__hl"><?php echo esc_html($highlight); ?></span><?php endif; ?>
+                    <?php echo NV_PW_Headline::html($headline); ?><?php if ($highlight !== '') : ?> <span class="nv-pw-hero__hl"><?php echo esc_html($highlight); ?></span><?php endif; ?>
                 </h2>
                 <?php if ($rating !== '' || !empty($rating_avatars)) : ?>
                     <div class="nv-pw-hero__rating">

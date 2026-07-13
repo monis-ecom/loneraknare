@@ -47,7 +47,7 @@ class NV_PW_Scrolling_Images extends \Elementor\Widget_Base {
         $loop = array_merge($imgs, $imgs);
         ?>
         <div class="nv-pw-si nv-pw-si--<?php echo esc_attr($dir); ?>">
-            <?php if ($heading !== '') : ?><h3 class="nv-pw-si__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+            <?php if ($heading !== '') : ?><h3 class="nv-pw-si__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h3><?php endif; ?>
             <div class="nv-pw-si__mask">
                 <div class="nv-pw-si__track">
                     <?php foreach ($loop as $u) : ?>

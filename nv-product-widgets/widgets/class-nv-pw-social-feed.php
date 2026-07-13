@@ -67,7 +67,7 @@ class NV_PW_Social_Feed extends \Elementor\Widget_Base {
         <div class="nv-pw-sf">
             <?php if ($heading !== '' || $sub !== '') : ?>
                 <div class="nv-pw-sf__head">
-                    <?php if ($heading !== '') : ?><h2 class="nv-pw-sf__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h2><?php endif; ?>
+                    <?php if ($heading !== '') : ?><h2 class="nv-pw-sf__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h2><?php endif; ?>
                     <?php if ($sub !== '') : ?><p class="nv-pw-sf__sub"><?php echo esc_html($sub); ?></p><?php endif; ?>
                     <?php if ($follow_text !== '') : ?><a class="nv-pw-sf__follow" href="<?php echo esc_url($follow_url !== '' ? $follow_url : '#'); ?>"<?php echo $follow_target; ?>><?php echo $ig; // phpcs:ignore ?> <?php echo esc_html($follow_text); ?></a><?php endif; ?>
                 </div>

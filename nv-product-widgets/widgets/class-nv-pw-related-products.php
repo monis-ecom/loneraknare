@@ -96,7 +96,7 @@ class NV_PW_Related_Products extends \Elementor\Widget_Base {
         $limit     = intval($settings['posts_per_page'] ?? 4);
         $columns   = intval($settings['columns'] ?? 4);
         $orderby   = sanitize_key($settings['orderby'] ?? 'rand');
-        $title_str = esc_html($settings['section_title'] ?? 'Liknande produkter');
+        $title_str = NV_PW_Headline::html($settings['section_title'] ?? 'Liknande produkter');
 
         /* ── Get related product IDs via WooCommerce ── */
         $related_ids = wc_get_related_products($product->get_id(), $limit);

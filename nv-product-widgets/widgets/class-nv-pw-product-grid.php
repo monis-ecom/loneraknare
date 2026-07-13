@@ -123,7 +123,7 @@ class NV_PW_Product_Grid extends \Elementor\Widget_Base {
         <div class="nv-pw-pg">
             <?php if ($heading !== '' || $sub !== '') : ?>
                 <div class="nv-pw-pg__head">
-                    <?php if ($heading !== '') : ?><h2 class="nv-pw-pg__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h2><?php endif; ?>
+                    <?php if ($heading !== '') : ?><h2 class="nv-pw-pg__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo NV_PW_Headline::html($heading); ?></h2><?php endif; ?>
                     <?php if ($sub !== '') : ?><p class="nv-pw-pg__sub"><?php echo esc_html($sub); ?></p><?php endif; ?>
                 </div>
             <?php endif; ?>
