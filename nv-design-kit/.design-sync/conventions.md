@@ -35,8 +35,12 @@ Two kinds of props:
   `reviews`), etc. Read each component's `.d.ts` for its exact set.
 - **Brand knobs** (common across sections): `accent` (highlights & buttons),
   `headingColor`, `textColor`, `bg`, `radius`, `imageSide` (`'left'|'right'`),
-  and **`headlineStyle`** — `'default'` (Sora sans) or `'editorial'`
-  (Newsreader serif-italic, the design-system display look).
+  and **`headlineStyle`** — `'default'` (Sora sans), `'editorial'` (whole
+  headline in Newsreader serif-italic), or `'mixed'` (upright Newsreader serif
+  base). In **any** style you can wrap part of the headline text in
+  `*asterisks*` to render just those words in the Newsreader italic accent —
+  e.g. `headline="Skandinavisk design *för ditt hem*"` — the design-system
+  display look. `'mixed'` + an asterisked tail is that exact treatment.
 
 Brand color/radius flow through CSS custom properties defined at `:root`:
 `--nv-brand-accent` (#3B37C4), `--nv-brand-heading` (#14161D),
