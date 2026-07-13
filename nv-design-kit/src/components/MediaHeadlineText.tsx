@@ -1,4 +1,4 @@
-import { headlineMod, type HeadlineStyle } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle } from '../types';
 
 /** Best-effort MIME type from a self-hosted video's file extension — mirrors
  * NV_PW_Media::mime(). */
@@ -99,7 +99,7 @@ export function MediaHeadlineText({
 
       <div className="nv-pw-media-text__content">
         {eyebrow && <p className="nv-pw-media-text__eyebrow">{eyebrow}</p>}
-        {headline && <h3 className={`nv-pw-media-text__headline${headlineMod(headlineStyle)}`}>{headline}</h3>}
+        {headline && <h3 className={`nv-pw-media-text__headline${headlineMod(headlineStyle)}`}>{renderHeadline(headline)}</h3>}
         {body && (
           <div className="nv-pw-media-text__body">
             <p>{body}</p>

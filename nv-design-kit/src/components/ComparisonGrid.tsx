@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 
 /** One feature row of the comparison matrix. Each cell accepts `yes`/`ja` (→ a
  * check), `no`/`nej`/`-` (→ a cross), or any other text (rendered as a value). */
@@ -164,7 +164,7 @@ export function ComparisonGrid({
   const head = hasHead ? (
     <div className="nv-pw-cg__head">
       {eyebrow !== '' && <span className="nv-pw-cg__eyebrow">{eyebrow}</span>}
-      {headline !== '' && <h3 className={`nv-pw-cg__headline${headlineMod(headlineStyle)}`}>{headline}</h3>}
+      {headline !== '' && <h3 className={`nv-pw-cg__headline${headlineMod(headlineStyle)}`}>{renderHeadline(headline)}</h3>}
       {intro !== '' && <p className="nv-pw-cg__intro">{intro}</p>}
       {splitLayout && validBullets.length > 0 && (
         <ul className="nv-pw-cg__bullets">

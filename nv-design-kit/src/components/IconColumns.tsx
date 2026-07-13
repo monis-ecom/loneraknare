@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 
 const Star = () => (
   <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
@@ -101,7 +101,7 @@ export function IconColumns({
     <div className={rootClass} style={style}>
       {(heading !== '' || subheading !== '') && (
         <div className="nv-pw-ic__head">
-          {heading !== '' && <h2 className={`nv-pw-ic__heading${headlineMod(headlineStyle)}`}>{heading}</h2>}
+          {heading !== '' && <h2 className={`nv-pw-ic__heading${headlineMod(headlineStyle)}`}>{renderHeadline(heading)}</h2>}
           {subheading !== '' && <p className="nv-pw-ic__sub">{subheading}</p>}
         </div>
       )}

@@ -1,4 +1,4 @@
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 
 /** One pricing column: name, price, features and a CTA. */
 export interface PricingPlan {
@@ -85,7 +85,7 @@ export function PricingTable({
     <div className="nv-pw-pt" style={style}>
       {hasHead && (
         <div className="nv-pw-pt__head">
-          {heading !== '' && <h2 className={`nv-pw-pt__heading${headlineMod(headlineStyle)}`}>{heading}</h2>}
+          {heading !== '' && <h2 className={`nv-pw-pt__heading${headlineMod(headlineStyle)}`}>{renderHeadline(heading)}</h2>}
           {subheading !== '' && <p className="nv-pw-pt__sub">{subheading}</p>}
         </div>
       )}

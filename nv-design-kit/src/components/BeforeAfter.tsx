@@ -1,5 +1,5 @@
 import { useRef, useState, type PointerEvent as ReactPointerEvent, type KeyboardEvent as ReactKeyboardEvent } from 'react';
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 import { PLACEHOLDER_IMAGE } from '../placeholder';
 
 export interface BeforeAfterProps {
@@ -130,7 +130,7 @@ export function BeforeAfter({
 
   return (
     <div className="nv-pw-ba-wrap">
-      {heading !== '' && <h3 className={`nv-pw-ba-heading${headlineMod(headlineStyle)}`}>{heading}</h3>}
+      {heading !== '' && <h3 className={`nv-pw-ba-heading${headlineMod(headlineStyle)}`}>{renderHeadline(heading)}</h3>}
       {subheading !== '' && <p className="nv-pw-ba-sub">{subheading}</p>}
       <div
         className={`nv-pw-ba${dragging ? ' is-dragging' : ''}`}

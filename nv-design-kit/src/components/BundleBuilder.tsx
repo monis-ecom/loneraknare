@@ -1,4 +1,4 @@
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 import { PLACEHOLDER_IMAGE } from '../placeholder';
 
 /** One bundle tier: how many items to pick and the discount that unlocks. */
@@ -94,7 +94,7 @@ export function BundleBuilder({
   return (
     <div className="nv-pw-bb" data-nv-bundle="" data-symbol={symbol} data-decimals={decimals} style={style}>
       {eyebrow !== '' && <span className="nv-pw-bb__eyebrow">{eyebrow}</span>}
-      {heading !== '' && <h3 className={`nv-pw-bb__heading${headlineMod(headlineStyle)}`}>{heading}</h3>}
+      {heading !== '' && <h3 className={`nv-pw-bb__heading${headlineMod(headlineStyle)}`}>{renderHeadline(heading)}</h3>}
 
       <div className="nv-pw-bb__tiers" role="tablist">
         {tiers.map((t, i) => {

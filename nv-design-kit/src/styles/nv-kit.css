@@ -5,7 +5,7 @@
    ============================================================================ */
 
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@700;800&family=Newsreader:ital,wght@1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@700;800&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 /* ============================================================================
    BRAND TOKENS (design-kit standalone defaults)
@@ -2088,6 +2088,21 @@ body.nv-pw-size-chart-open {
   font-style: italic !important; font-weight: 400 !important;
   letter-spacing: -.01em; line-height: 1.08;
 }
+/* Editorial "mixed": upright Newsreader serif base — only the *asterisked*
+   accent (.nv-hl-em) goes italic. */
+.nv-hl--mixed {
+  font-family: 'Newsreader', 'Playfair Display', Georgia, serif !important;
+  font-style: normal !important; font-weight: 400 !important;
+  letter-spacing: -.005em; line-height: 1.1;
+}
+/* Inline italic accent — works in every headline style. */
+.nv-hl-em {
+  font-family: 'Newsreader', 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.01em;
+}
+.nv-hl--editorial .nv-hl-em { font-style: italic; }
 .nv-pw-ba {
   --nv-ba-pos: 50%;
   --nv-ba-accent: #FFFFFF;

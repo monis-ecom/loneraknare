@@ -1,4 +1,4 @@
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 
 /** A single testimonial card: a star rating, quote, author name, meta line and
  * optional avatar (falls back to an initial) plus a verified badge. */
@@ -169,7 +169,7 @@ export function Testimonials({
       )}
       {(head !== '' || sub !== '') && (
         <div className="nv-pw-tm__head">
-          {head !== '' && <h3 className={`nv-pw-tm__heading${headlineMod(headlineStyle)}`}>{head}</h3>}
+          {head !== '' && <h3 className={`nv-pw-tm__heading${headlineMod(headlineStyle)}`}>{renderHeadline(head)}</h3>}
           {sub !== '' && <p className="nv-pw-tm__sub">{sub}</p>}
         </div>
       )}

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { headlineMod, type HeadlineStyle } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle } from '../types';
 
 const Check = () => (
   <svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
@@ -50,7 +50,7 @@ export function BenefitsList({
   return (
     <div className="nv-pw-benefits">
       {heading !== '' && (
-        <h3 className={`nv-pw-benefits__heading${headlineMod(headlineStyle)}`}>{heading}</h3>
+        <h3 className={`nv-pw-benefits__heading${headlineMod(headlineStyle)}`}>{renderHeadline(heading)}</h3>
       )}
       <ul className="nv-pw-benefits__list">
         {items.map((item, i) => {

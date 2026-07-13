@@ -46,3 +46,13 @@ a `:root` block of brand-token defaults. Fidelity source of truth = the PHP.
 - `nv-kit.css` is a copy — re-copy it from the plugin if the plugin CSS changes.
 - Preview variant props (e.g. `Testimonials layout="marquee"`, `Hero
   layout="minimal"`) assume those enum values still exist in the component props.
+
+## Update: mixed inline headline styling (mirrors plugin v1.7.59)
+- `HeadlineStyle` gained `'mixed'`; `headlineMod` maps it to `.nv-hl--mixed`.
+- `renderHeadline(text)` parses `*asterisks*` → `<em class="nv-hl-em">` (italic
+  Newsreader accent) and is wired into every headline component.
+- CSS: added `.nv-hl--mixed` (upright Newsreader base) + `.nv-hl-em`, and added
+  upright Newsreader (0,400;0,500) to the font `@import`.
+- StatsCounter default labels localised to Swedish (NÖJDA SPELARE / NÖJDHET) to
+  match the plugin.
+- Default previews use no asterisks, so captured cards are visually unchanged.

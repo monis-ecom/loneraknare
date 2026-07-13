@@ -1,4 +1,4 @@
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 
 /** A single Trustpilot-style review card: green star blocks, a bold headline,
  * review text and an author + date line (with an optional avatar). */
@@ -185,7 +185,7 @@ export function TrustpilotWall({
     <section className={`nv-pw-tp nv-pw-tp--${theme}`} style={style}>
       {(head !== '' || showRating) && (
         <div className="nv-pw-tp__head">
-          {head !== '' && <h2 className={`nv-pw-tp__headline${headlineMod(headlineStyle)}`}>{head}</h2>}
+          {head !== '' && <h2 className={`nv-pw-tp__headline${headlineMod(headlineStyle)}`}>{renderHeadline(head)}</h2>}
           {showRating && (
             <>
               <div className="nv-pw-tp__rating">

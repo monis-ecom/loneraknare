@@ -72,8 +72,8 @@ export function StatsCounter({
   thousandSep = 'space',
   decimalSep = 'dot',
   items = [
-    { value: 9000, decimals: 0, prefix: '', suffix: '', label: 'COMMANDES' },
-    { value: 98.3, decimals: 1, prefix: '', suffix: '%', label: 'DE SATISFACTION' },
+    { value: 9000, decimals: 0, prefix: '', suffix: '', label: 'NÖJDA SPELARE' },
+    { value: 98.3, decimals: 1, prefix: '', suffix: '%', label: 'NÖJDHET' },
   ],
   subtext = '+9 000 spelare. Nästan inga ångrar sig.',
   buttonText = 'Beställ nu',

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 
 /** A single rich review card: avatar (or initial), author name + role, a star
  * rating, an optional bold card headline and the review text (with an optional
@@ -230,9 +230,9 @@ export function ReviewWall({
           {ratingBar && ratingPosition === 'top' && ratingBar}
           {(h1 !== '' || accentWord !== '') && (
             <h2 className={`nv-pw-rw__headline${headlineMod(headlineStyle)}`}>
-              {h1}
+              {renderHeadline(h1)}
               {accentWord !== '' && <>{h1 !== '' ? ' ' : ''}<span className="nv-pw-rw__accent">{accentWord}</span></>}
-              {h2 !== '' && <>{' '}{h2}</>}
+              {h2 !== '' && <>{' '}{renderHeadline(h2)}</>}
             </h2>
           )}
           {sub !== '' && <p className="nv-pw-rw__sub">{sub}</p>}

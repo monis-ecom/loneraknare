@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 
 /** One step: an optional marker (icon or image), a title and a description. When
  * no marker is supplied the step shows its number (or a dot). */
@@ -70,7 +70,7 @@ export function Steps({
   return (
     <div className={rootClass} style={style}>
       {heading !== '' && (
-        <h3 className={`nv-pw-steps__heading${headlineMod(headlineStyle)}`}>{heading}</h3>
+        <h3 className={`nv-pw-steps__heading${headlineMod(headlineStyle)}`}>{renderHeadline(heading)}</h3>
       )}
       <ol className="nv-pw-steps__grid">
         {items.map((it, i) => {

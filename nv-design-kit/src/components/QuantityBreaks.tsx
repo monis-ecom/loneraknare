@@ -1,4 +1,4 @@
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 
 /** One variation option shown in a per-unit size dropdown (variable products only). */
 export interface QuantityVariation {
@@ -146,7 +146,7 @@ export function QuantityBreaks({
       {...(cartSelector !== '' ? { 'data-cart-selector': cartSelector } : {})}
       style={style}
     >
-      {heading !== '' && <div className={`nv-pw-qb__heading${headlineMod(headlineStyle)}`}>{heading}</div>}
+      {heading !== '' && <div className={`nv-pw-qb__heading${headlineMod(headlineStyle)}`}>{renderHeadline(heading)}</div>}
 
       <div className="nv-pw-qb__tiers">
         {tiers.map((t, i) => {

@@ -1,4 +1,4 @@
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 import { PLACEHOLDER_IMAGE } from '../placeholder';
 
 const Star = () => (
@@ -95,7 +95,7 @@ export function Hero({
       <div className="nv-pw-hero__text">
         {eyebrow && <span className="nv-pw-hero__eyebrow">{eyebrow}</span>}
         <h2 className={`nv-pw-hero__headline${headlineMod(headlineStyle)}`}>
-          {headline}{highlight && <> <span className="nv-pw-hero__hl">{highlight}</span></>}
+          {renderHeadline(headline)}{highlight && <> <span className="nv-pw-hero__hl">{renderHeadline(highlight)}</span></>}
         </h2>
         {(ratingText || avatars.length > 0) && (
           <div className="nv-pw-hero__rating">

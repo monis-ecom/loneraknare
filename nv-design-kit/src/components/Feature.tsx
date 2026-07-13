@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { headlineMod, type HeadlineStyle, type CSSVars } from '../types';
+import { headlineMod, renderHeadline, type HeadlineStyle, type CSSVars } from '../types';
 import { PLACEHOLDER_IMAGE } from '../placeholder';
 
 /** One feature bullet: a marker (image URL, custom icon node, or the default
@@ -105,7 +105,7 @@ export function Feature({
       )}
       <div className="nv-pw-feat__body">
         {eyebrow && <span className="nv-pw-feat__eyebrow">{eyebrow}</span>}
-        {headline && <h3 className={`nv-pw-feat__headline${headlineMod(headlineStyle)}`}>{headline}</h3>}
+        {headline && <h3 className={`nv-pw-feat__headline${headlineMod(headlineStyle)}`}>{renderHeadline(headline)}</h3>}
         {text && <p className="nv-pw-feat__text">{text}</p>}
         {bullets.length > 0 && (
           <ul className="nv-pw-feat__bullets">
