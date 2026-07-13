@@ -1,9 +1,11 @@
 {
   "pkg": "nv-design-kit",
   "globalName": "NVKit",
+  "projectId": "4d53181f-a862-4a1e-b9cd-745a09c7d927",
   "shape": "package",
   "buildCmd": "npm run build",
   "srcDir": "src",
   "tsconfig": "tsconfig.json",
-  "cssEntry": "src/styles/nv-kit.css"
+  "cssEntry": "src/styles/nv-kit.css",
+  "readmeHeader": ".design-sync/conventions.md"
 }
