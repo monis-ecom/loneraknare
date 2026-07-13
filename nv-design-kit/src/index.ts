@@ -20,3 +20,6 @@ export * from './components/ComparisonGrid';
 export * from './components/BeforeAfter';
 export * from './components/Faq';
 export * from './components/StatsCounter';
+
+// Self-contained on-brand placeholder image (data-URI) for previews/demos.
+export { PLACEHOLDER_IMAGE } from './placeholder';
