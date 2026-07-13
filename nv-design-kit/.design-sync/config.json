@@ -1,0 +1,9 @@
+{
+  "pkg": "nv-design-kit",
+  "globalName": "NVKit",
+  "shape": "package",
+  "buildCmd": "npm run build",
+  "srcDir": "src",
+  "tsconfig": "tsconfig.json",
+  "cssEntry": "src/styles/nv-kit.css"
+}

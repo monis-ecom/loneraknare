@@ -1,0 +1,11 @@
+node_modules/
+dist/
+ds-bundle/
+.ds-sync/
+test/out/
+test/ssr.mjs
+test/ssr2.mjs
+test/ssr2.tsx
+.design-sync/.cache/
+.design-sync/learnings/
+.design-sync/node_modules
