@@ -22,10 +22,13 @@ class NV_PW_Feature extends \Elementor\Widget_Base {
             ],
         ]);
 
+        NV_PW_Media::add_controls($this, ['layout' => ['split', 'icon-list']]);
+
         $this->add_control('image', [
             'label' => __('Image', 'nv-product-widgets'),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => ['url' => \Elementor\Utils::get_placeholder_image_src()],
+            'condition' => ['nv_media_type' => 'image', 'layout' => ['split', 'icon-list']],
         ]);
         $this->add_control('image_side', [
             'label' => __('Image position', 'nv-product-widgets'),
@@ -126,7 +129,7 @@ class NV_PW_Feature extends \Elementor\Widget_Base {
             'type' => \Elementor\Controls_Manager::SLIDER,
             'range' => ['px' => ['min' => 0, 'max' => 40]],
             'default' => ['size' => 16, 'unit' => 'px'],
-            'selectors' => ['{{WRAPPER}} .nv-pw-feat__media img' => 'border-radius: {{SIZE}}{{UNIT}};'],
+            'selectors' => ['{{WRAPPER}} .nv-pw-feat__media img, {{WRAPPER}} .nv-pw-feat__media video' => 'border-radius: {{SIZE}}{{UNIT}};'],
         ]);
         $this->end_controls_section();
     }
@@ -135,8 +138,10 @@ class NV_PW_Feature extends \Elementor\Widget_Base {
         $s = $this->get_settings_for_display();
         $headline = trim((string) ($s['headline'] ?? ''));
         $text = trim((string) ($s['text'] ?? ''));
+        $is_video = NV_PW_Media::is_video($s);
         $img = isset($s['image']['url']) ? (string) $s['image']['url'] : '';
-        if ($headline === '' && $text === '' && $img === '') {
+        $has_media = $is_video || $img !== '';
+        if ($headline === '' && $text === '' && !$has_media) {
             if (NV_PW_Editor_Helper::is_editor()) {
                 NV_PW_Editor_Helper::render_placeholder('NV: Feature / Image + Text', '🖼️');
             }
@@ -154,8 +159,8 @@ class NV_PW_Feature extends \Elementor\Widget_Base {
         $cta_target = !empty($s['cta_link']['is_external']) ? ' target="_blank" rel="noopener"' : '';
         ?>
         <div class="nv-pw-feat nv-pw-feat--L-<?php echo esc_attr($layout); ?> nv-pw-feat--img-<?php echo esc_attr($side); ?>">
-            <?php if ($img !== '' && $layout !== 'centered') : ?>
-                <div class="nv-pw-feat__media"><img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($headline); ?>" loading="lazy"></div>
+            <?php if ($has_media && $layout !== 'centered') : ?>
+                <div class="nv-pw-feat__media"><?php if ($is_video) { NV_PW_Media::render_video($s); } else { ?><img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($headline); ?>" loading="lazy"><?php } ?></div>
             <?php endif; ?>
             <div class="nv-pw-feat__body">
                 <?php if ($eyebrow !== '') : ?><span class="nv-pw-feat__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>

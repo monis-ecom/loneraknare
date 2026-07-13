@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: AS Product Widgets
- * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.56 rolls the per-widget "Headline style" control (Default sans / Editorial serif-italic) out to every widget with a headline — 31 widgets in total — so any section headline can be switched to the design-system editorial look right from its own settings.
- * Version: 1.7.56
+ * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.57 adds the "Headline style" control to NV: Media + Headline + Text (the last widget that was missing it) and adds self-hosted video (MP4/WebM) as an alternative to the still image on both NV: Media + Headline + Text and NV: Feature / Image + Text, with poster + autoplay/loop/muted/controls options.
+ * Version: 1.7.57
  * Author: Alpha Studio
  * Text Domain: nv-product-widgets
  * Requires Plugins: elementor, woocommerce
@@ -13,7 +13,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('NV_PW_VERSION', '1.7.56');
+define('NV_PW_VERSION', '1.7.57');
 define('NV_PW_FILE', __FILE__);
 define('NV_PW_DIR', plugin_dir_path(__FILE__));
 define('NV_PW_URL', plugin_dir_url(__FILE__));

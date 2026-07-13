@@ -13,9 +13,12 @@ class NV_PW_Media_Headline_Text extends \Elementor\Widget_Base {
             'label' => __('Content', 'nv-product-widgets'),
         ]);
 
+        NV_PW_Media::add_controls($this);
+
         $this->add_control('media', [
             'label' => __('Image', 'nv-product-widgets'),
             'type' => \Elementor\Controls_Manager::MEDIA,
+            'condition' => ['nv_media_type' => 'image'],
         ]);
 
         $this->add_control('media_position', [
@@ -58,6 +61,8 @@ class NV_PW_Media_Headline_Text extends \Elementor\Widget_Base {
             'placeholder' => 'https://',
             'default' => ['url' => ''],
         ]);
+
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
 
         $this->end_controls_section();
 
@@ -113,14 +118,16 @@ class NV_PW_Media_Headline_Text extends \Elementor\Widget_Base {
     protected function render(): void {
         $settings = $this->get_settings_for_display();
 
+        $is_video = NV_PW_Media::is_video($settings);
         $image_url = (string) ($settings['media']['url'] ?? '');
+        $has_media = $is_video || $image_url !== '';
         $eyebrow = trim((string) ($settings['eyebrow'] ?? ''));
         $headline = trim((string) ($settings['headline'] ?? ''));
         $body = trim((string) ($settings['body'] ?? ''));
         $button_text = trim((string) ($settings['button_text'] ?? ''));
         $button_url = trim((string) ($settings['button_url']['url'] ?? ''));
 
-        if ($headline === '' && $body === '' && $image_url === '') {
+        if ($headline === '' && $body === '' && !$has_media) {
             if (NV_PW_Editor_Helper::is_editor()) {
                 NV_PW_Editor_Helper::render_placeholder('NV: Media + Headline + Text', '🖼️');
             }
@@ -142,9 +149,11 @@ class NV_PW_Media_Headline_Text extends \Elementor\Widget_Base {
 
         ?>
         <div class="nv-pw-media-text nv-pw-media-text--<?php echo esc_attr($position); ?>">
-            <?php if ($image_url !== '') : ?>
+            <?php if ($has_media) : ?>
                 <div class="nv-pw-media-text__media">
-                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($headline); ?>" loading="lazy" />
+                    <?php if ($is_video) : NV_PW_Media::render_video($settings); else : ?>
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($headline); ?>" loading="lazy" />
+                    <?php endif; ?>
                 </div>
             <?php endif; ?>
 
@@ -153,7 +162,7 @@ class NV_PW_Media_Headline_Text extends \Elementor\Widget_Base {
                     <p class="nv-pw-media-text__eyebrow"><?php echo esc_html($eyebrow); ?></p>
                 <?php endif; ?>
                 <?php if ($headline !== '') : ?>
-                    <h3 class="nv-pw-media-text__headline"><?php echo esc_html($headline); ?></h3>
+                    <h3 class="nv-pw-media-text__headline<?php echo NV_PW_Headline::mod($settings); ?>"><?php echo esc_html($headline); ?></h3>
                 <?php endif; ?>
                 <?php if ($body !== '') : ?>
                     <div class="nv-pw-media-text__body"><?php echo wp_kses_post(wpautop($body)); ?></div>

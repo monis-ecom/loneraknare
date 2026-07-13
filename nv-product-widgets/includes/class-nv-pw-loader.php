@@ -46,6 +46,7 @@ final class NV_PW_Loader {
         // Load the editor helper first (required by all widgets)
         require_once NV_PW_DIR . 'includes/class-nv-pw-editor-helper.php';
         require_once NV_PW_DIR . 'includes/class-nv-pw-headline.php';
+        require_once NV_PW_DIR . 'includes/class-nv-pw-media.php';
 
         $widget_files = [
             /* Original widgets */
