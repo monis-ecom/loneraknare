@@ -22,6 +22,7 @@ final class NV_PW_Brand {
         return [
             'enabled'             => 'no',
             'editorial_headlines' => 'no',
+            'headline_tracking'   => '',
             'accent'              => '#3B37C4',
             'heading_color'       => '#14161D',
             'text_color'          => '#4A5160',
@@ -49,6 +50,12 @@ final class NV_PW_Brand {
         return [
             'enabled'             => (($input['enabled'] ?? 'no') === 'yes') ? 'yes' : 'no',
             'editorial_headlines' => (($input['editorial_headlines'] ?? 'no') === 'yes') ? 'yes' : 'no',
+            'headline_tracking'   => (static function ($v) {
+                $v = trim((string) $v);
+                if ($v === '') return '';
+                $f = max(-0.1, min(0.1, (float) $v));
+                return rtrim(rtrim(number_format($f, 3, '.', ''), '0'), '.');
+            })($input['headline_tracking'] ?? ''),
             'accent'        => sanitize_hex_color((string) ($input['accent'] ?? $d['accent'])) ?: $d['accent'],
             'heading_color' => sanitize_hex_color((string) ($input['heading_color'] ?? $d['heading_color'])) ?: $d['heading_color'],
             'text_color'    => sanitize_hex_color((string) ($input['text_color'] ?? $d['text_color'])) ?: $d['text_color'],
@@ -82,6 +89,9 @@ final class NV_PW_Brand {
                     <tr><th scope="row"><?php esc_html_e('Editorial headlines everywhere', 'nv-product-widgets'); ?></th>
                         <td><label><input type="checkbox" name="<?php echo esc_attr(self::OPTION); ?>[editorial_headlines]" value="yes" <?php checked($o['editorial_headlines'], 'yes'); ?>> <?php esc_html_e('Use the Newsreader serif-italic display style for every NV widget headline', 'nv-product-widgets'); ?></label>
                         <p class="description"><?php esc_html_e('Or set it per widget via each headline widget’s “Headline style” control.', 'nv-product-widgets'); ?></p></td></tr>
+                    <tr><th scope="row"><?php esc_html_e('Editorial headline letter-spacing (em)', 'nv-product-widgets'); ?></th>
+                        <td><input type="number" name="<?php echo esc_attr(self::OPTION); ?>[headline_tracking]" value="<?php echo esc_attr($o['headline_tracking']); ?>" step="0.005" min="-0.1" max="0.1" class="small-text" placeholder="-0.005">
+                        <p class="description"><?php esc_html_e('Tracking for the “Editorial” and “Editorial mixed” headline styles (and the *asterisk* accent). e.g. -0.01 for the tighter design-system look. Leave blank for the default.', 'nv-product-widgets'); ?></p></td></tr>
                     <tr><th scope="row"><?php esc_html_e('Accent colour', 'nv-product-widgets'); ?></th>
                         <td><input type="text" name="<?php echo esc_attr(self::OPTION); ?>[accent]" value="<?php echo esc_attr($o['accent']); ?>" class="regular-text" placeholder="#3B37C4"></td></tr>
                     <tr><th scope="row"><?php esc_html_e('Heading colour', 'nv-product-widgets'); ?></th>
@@ -103,11 +113,13 @@ final class NV_PW_Brand {
     public static function output_css(): void {
         $o = self::get();
         $font = trim((string) $o['font']);
+        $tracking = trim((string) ($o['headline_tracking'] ?? ''));
         $css = ':root{'
             . '--nv-brand-accent:' . esc_html($o['accent']) . ';'
             . '--nv-brand-heading:' . esc_html($o['heading_color']) . ';'
             . '--nv-brand-text:' . esc_html($o['text_color']) . ';'
             . '--nv-brand-radius:' . esc_html($o['radius']) . 'px;'
+            . ($tracking !== '' ? '--nv-hl-tracking:' . esc_html($tracking) . 'em;' : '')
             . ($font !== '' ? '--nv-brand-font:' . esc_html($font) . ';' : '')
             . '}';
         // Opt-in: apply the brand font across NV widgets.
@@ -116,7 +128,7 @@ final class NV_PW_Brand {
         }
         // Opt-in: editorial serif-italic headline style across every NV widget headline.
         if (($o['editorial_headlines'] ?? 'no') === 'yes') {
-            $css .= self::headline_selectors() . '{font-family:\'Newsreader\',\'Playfair Display\',Georgia,serif!important;font-style:italic!important;font-weight:400!important;letter-spacing:-.01em;line-height:1.08;}';
+            $css .= self::headline_selectors() . '{font-family:\'Newsreader\',\'Playfair Display\',Georgia,serif!important;font-style:italic!important;font-weight:400!important;letter-spacing:var(--nv-hl-tracking,-.01em);line-height:1.08;}';
         }
         echo "\n<style id=\"nv-pw-brand\">" . $css . "</style>\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     }

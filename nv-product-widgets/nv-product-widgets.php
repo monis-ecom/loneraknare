@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: AS Product Widgets
- * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.59 adds inline mixed headline styling: wrap words in *asterisks* to render them in the Newsreader italic accent, a new "Editorial mixed" headline style (upright serif base + italic accent, the "Skandinavisk design *för ditt hem*" design-system look), across every headline widget; also localises the Stats Counter defaults to Swedish.
- * Version: 1.7.59
+ * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.60 adds an "Editorial headline letter-spacing (em)" control under Settings → NV Brand to fine-tune the tracking of the editorial + mixed headline styles (and the *asterisk* accent). Builds on v1.7.59 mixed inline headline styling and Swedish Stats Counter defaults.
+ * Version: 1.7.60
  * Author: Alpha Studio
  * Text Domain: nv-product-widgets
  * Requires Plugins: elementor, woocommerce
@@ -13,7 +13,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('NV_PW_VERSION', '1.7.59');
+define('NV_PW_VERSION', '1.7.60');
 define('NV_PW_FILE', __FILE__);
 define('NV_PW_DIR', plugin_dir_path(__FILE__));
 define('NV_PW_URL', plugin_dir_url(__FILE__));
