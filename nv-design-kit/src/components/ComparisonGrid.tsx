@@ -134,10 +134,13 @@ export function ComparisonGrid({
   const validRows = rows.filter((r) => (r.label ?? '').trim() !== '');
   if (validRows.length === 0) return null;
 
-  const comp: Array<['c1' | 'c2' | 'c3', string]> = [];
-  ([['c1', c1Header], ['c2', c2Header], ['c3', c3Header]] as const).forEach(([k, h]) => {
-    if ((h ?? '').trim() !== '') comp.push([k, h]);
-  });
+  type CompKey = 'c1' | 'c2' | 'c3';
+  const compSource: Array<{ key: CompKey; header: string }> = [
+    { key: 'c1', header: c1Header },
+    { key: 'c2', header: c2Header },
+    { key: 'c3', header: c3Header },
+  ];
+  const comp = compSource.filter((c) => (c.header ?? '').trim() !== '');
 
   const usHeaderText = (usHeader || '').trim() || 'Vi';
   const totalCols = 1 + comp.length;
@@ -188,9 +191,9 @@ export function ComparisonGrid({
           {usImage && <img className="nv-pw-cg__colimg" src={usImage} alt={usHeaderText} loading="lazy" />}
           <span className="nv-pw-cg__colname">{usHeaderText}</span>
         </span>
-        {comp.map(([k, h]) => (
-          <span className="nv-pw-cg__cell" role="columnheader" key={k}>
-            <span className="nv-pw-cg__colname">{h}</span>
+        {comp.map((c) => (
+          <span className="nv-pw-cg__cell" role="columnheader" key={c.key}>
+            <span className="nv-pw-cg__colname">{c.header}</span>
           </span>
         ))}
       </div>
@@ -198,8 +201,8 @@ export function ComparisonGrid({
         <div className="nv-pw-cg__row" role="row" key={i}>
           <span className="nv-pw-cg__cell nv-pw-cg__cell--label" role="cell">{row.label ?? ''}</span>
           <span className="nv-pw-cg__cell nv-pw-cg__cell--us" role="cell">{cell(row.us ?? '', true)}</span>
-          {comp.map(([k]) => (
-            <span className="nv-pw-cg__cell" role="cell" key={k}>{cell(row[k] ?? '', false)}</span>
+          {comp.map((c) => (
+            <span className="nv-pw-cg__cell" role="cell" key={c.key}>{cell(row[c.key] ?? '', false)}</span>
           ))}
         </div>
       ))}
