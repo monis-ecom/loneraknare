@@ -18,5 +18,5 @@ export * from './components/PricingTable';
 export * from './components/BundleBuilder';
 export * from './components/ComparisonGrid';
 export * from './components/BeforeAfter';
-export * from './components/FAQ';
+export * from './components/Faq';
 export * from './components/StatsCounter';

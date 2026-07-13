@@ -6,7 +6,7 @@ export interface FaqItem {
   answer?: string;
 }
 
-export interface FAQProps {
+export interface FaqProps {
   /** Section title above the accordion. */
   title?: string;
   /** The FAQ items. The first item renders open, matching the PHP. */
@@ -18,14 +18,14 @@ export interface FAQProps {
  * optional section title; the first item is open by default. Mirrors the
  * `nv-faq` Elementor widget.
  */
-export function FAQ({
+export function Faq({
   title = 'Vanliga frågor',
   items = [
     { question: 'Hur snabbt ser jag resultat?', answer: 'De flesta märker en skillnad inom de första två veckorna vid daglig användning.' },
     { question: 'Har ni fri frakt?', answer: 'Ja, vi erbjuder fri frakt på alla beställningar över 500 kr.' },
     { question: 'Vad är er returpolicy?', answer: 'Du har 60 dagars öppet köp med nöjd-kund-garanti.' },
   ],
-}: FAQProps) {
+}: FaqProps) {
   if (items.length === 0) return null;
 
   return (
