@@ -39,6 +39,7 @@ class NV_PW_Review_Wall extends \Elementor\Widget_Base {
             'default' => 'center',
             'selectors' => ['{{WRAPPER}} .nv-pw-rw__head' => 'text-align: {{VALUE}};'],
         ]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         /* ── Reviews ── */
@@ -156,7 +157,7 @@ class NV_PW_Review_Wall extends \Elementor\Widget_Base {
                     <?php if ($eyebrow !== '') : ?><span class="nv-pw-rw__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
                     <?php if ($rating_bar !== '' && $rating_pos === 'top') echo $rating_bar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                     <?php if ($h1 !== '' || $accent !== '') : ?>
-                        <h2 class="nv-pw-rw__headline"><?php
+                        <h2 class="nv-pw-rw__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php
                             echo esc_html($h1);
                             if ($accent !== '') echo ($h1 !== '' ? ' ' : '') . '<span class="nv-pw-rw__accent">' . esc_html($accent) . '</span>';
                             if ($h2 !== '') echo ' ' . esc_html($h2);

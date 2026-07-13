@@ -26,6 +26,7 @@ class NV_PW_Email_Capture extends \Elementor\Widget_Base {
         $this->add_control('consent', ['label' => __('Consent text (optional)', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXTAREA, 'default' => '', 'description' => __('If set, a required consent checkbox is shown (e.g. "I agree to receive emails").', 'nv-product-widgets')]);
         $this->add_control('success', ['label' => __('Success message', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXTAREA, 'default' => __('You’re in! Check your inbox to confirm.', 'nv-product-widgets')]);
         $this->add_control('redirect', ['label' => __('Redirect after signup (optional)', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::URL, 'default' => ['url' => ''], 'description' => __('Leave blank to show the success message instead.', 'nv-product-widgets')]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         /* ── Style ── */
@@ -65,7 +66,7 @@ class NV_PW_Email_Capture extends \Elementor\Widget_Base {
         ?>
         <form class="nv-pw-lead nv-pw-ec nv-pw-ec--<?php echo esc_attr($layout); ?>" data-nv-lead data-source="email" data-success="<?php echo esc_attr($success); ?>"<?php if ($redirect !== '') echo ' data-redirect="' . esc_url($redirect) . '"'; ?>>
             <div class="nv-pw-ec__body" data-nv-lead-body>
-                <?php if ($heading !== '') : ?><h3 class="nv-pw-ec__heading"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+                <?php if ($heading !== '') : ?><h3 class="nv-pw-ec__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
                 <?php if ($subtext !== '') : ?><p class="nv-pw-ec__subtext"><?php echo esc_html($subtext); ?></p><?php endif; ?>
                 <div class="nv-pw-ec__row">
                     <label class="nv-pw-ec__field">

@@ -28,6 +28,7 @@ class NV_PW_Product_Grid extends \Elementor\Widget_Base {
         $this->add_control('product_ids', ['label' => __('Products', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::SELECT2, 'multiple' => true, 'label_block' => true, 'options' => $this->product_options(), 'condition' => ['source' => 'pick']]);
         $this->add_control('category_id', ['label' => __('Category', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::SELECT2, 'label_block' => true, 'options' => $this->category_options(), 'condition' => ['source' => 'category']]);
         $this->add_control('count', ['label' => __('Max products', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::NUMBER, 'default' => 8, 'min' => 1, 'max' => 24, 'condition' => ['source!' => 'pick']]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_display', ['label' => __('Display', 'nv-product-widgets')]);
@@ -122,7 +123,7 @@ class NV_PW_Product_Grid extends \Elementor\Widget_Base {
         <div class="nv-pw-pg">
             <?php if ($heading !== '' || $sub !== '') : ?>
                 <div class="nv-pw-pg__head">
-                    <?php if ($heading !== '') : ?><h2 class="nv-pw-pg__heading"><?php echo esc_html($heading); ?></h2><?php endif; ?>
+                    <?php if ($heading !== '') : ?><h2 class="nv-pw-pg__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h2><?php endif; ?>
                     <?php if ($sub !== '') : ?><p class="nv-pw-pg__sub"><?php echo esc_html($sub); ?></p><?php endif; ?>
                 </div>
             <?php endif; ?>

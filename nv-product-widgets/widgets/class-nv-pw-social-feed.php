@@ -30,6 +30,7 @@ class NV_PW_Social_Feed extends \Elementor\Widget_Base {
             'title_field' => '{{{ handle || "Post" }}}',
             'default' => array_fill(0, 6, ['image' => ['url' => \Elementor\Utils::get_placeholder_image_src()], 'handle' => '@kund']),
         ]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_layout', ['label' => __('Layout', 'nv-product-widgets')]);
@@ -66,7 +67,7 @@ class NV_PW_Social_Feed extends \Elementor\Widget_Base {
         <div class="nv-pw-sf">
             <?php if ($heading !== '' || $sub !== '') : ?>
                 <div class="nv-pw-sf__head">
-                    <?php if ($heading !== '') : ?><h2 class="nv-pw-sf__heading"><?php echo esc_html($heading); ?></h2><?php endif; ?>
+                    <?php if ($heading !== '') : ?><h2 class="nv-pw-sf__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h2><?php endif; ?>
                     <?php if ($sub !== '') : ?><p class="nv-pw-sf__sub"><?php echo esc_html($sub); ?></p><?php endif; ?>
                     <?php if ($follow_text !== '') : ?><a class="nv-pw-sf__follow" href="<?php echo esc_url($follow_url !== '' ? $follow_url : '#'); ?>"<?php echo $follow_target; ?>><?php echo $ig; // phpcs:ignore ?> <?php echo esc_html($follow_text); ?></a><?php endif; ?>
                 </div>

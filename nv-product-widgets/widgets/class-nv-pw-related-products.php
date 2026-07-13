@@ -52,6 +52,7 @@ class NV_PW_Related_Products extends \Elementor\Widget_Base {
                 'price' => 'Price',
             ],
         ]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         /* ── Style ── */
@@ -132,7 +133,7 @@ class NV_PW_Related_Products extends \Elementor\Widget_Base {
         ?>
         <div class="nv-pw-related">
             <?php if ($title_str) : ?>
-                <h3 class="nv-pw-related__heading"><?php echo $title_str; ?></h3>
+                <h3 class="nv-pw-related__heading<?php echo NV_PW_Headline::mod($settings); ?>"><?php echo $title_str; ?></h3>
             <?php endif; ?>
             <div class="nv-pw-related__grid" style="--nv-rel-cols:<?php echo $columns; ?>;">
                 <?php while ($query->have_posts()) : $query->the_post();

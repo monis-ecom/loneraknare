@@ -53,6 +53,7 @@ class NV_PW_Upsells extends \Elementor\Widget_Base {
             'default'   => 'Se produkt',
             'condition' => ['show_cta_button' => 'yes'],
         ]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         /* ── Style ── */
@@ -126,7 +127,7 @@ class NV_PW_Upsells extends \Elementor\Widget_Base {
         ?>
         <div class="nv-pw-upsells">
             <?php if ($title_str) : ?>
-                <h3 class="nv-pw-upsells__heading"><?php echo $title_str; ?></h3>
+                <h3 class="nv-pw-upsells__heading<?php echo NV_PW_Headline::mod($settings); ?>"><?php echo $title_str; ?></h3>
             <?php endif; ?>
             <div class="nv-pw-upsells__grid" style="--nv-ups-cols:<?php echo $columns; ?>;">
                 <?php while ($query->have_posts()) : $query->the_post();

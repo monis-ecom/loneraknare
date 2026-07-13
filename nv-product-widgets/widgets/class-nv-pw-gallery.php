@@ -29,6 +29,7 @@ class NV_PW_Gallery extends \Elementor\Widget_Base {
             'title_field' => '{{{ caption || "Image" }}}',
             'default' => array_fill(0, 6, ['image' => ['url' => \Elementor\Utils::get_placeholder_image_src()]]),
         ]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_layout', ['label' => __('Layout', 'nv-product-widgets')]);
@@ -67,7 +68,7 @@ class NV_PW_Gallery extends \Elementor\Widget_Base {
         <div class="nv-pw-gal nv-pw-gal--<?php echo esc_attr($layout); ?><?php echo $lightbox ? ' nv-pw-gal--lightbox' : ''; ?>"<?php echo $lightbox ? ' data-nv-gallery' : ''; ?>>
             <?php if ($heading !== '' || $sub !== '') : ?>
                 <div class="nv-pw-gal__head">
-                    <?php if ($heading !== '') : ?><h2 class="nv-pw-gal__heading"><?php echo esc_html($heading); ?></h2><?php endif; ?>
+                    <?php if ($heading !== '') : ?><h2 class="nv-pw-gal__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h2><?php endif; ?>
                     <?php if ($sub !== '') : ?><p class="nv-pw-gal__sub"><?php echo esc_html($sub); ?></p><?php endif; ?>
                 </div>
             <?php endif; ?>

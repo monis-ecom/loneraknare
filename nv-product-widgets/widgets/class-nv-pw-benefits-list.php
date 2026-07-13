@@ -82,6 +82,7 @@ class NV_PW_Benefits_List extends \Elementor\Widget_Base {
             ],
         ]);
 
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_style', ['label' => __('Style', 'nv-product-widgets'), 'tab' => \Elementor\Controls_Manager::TAB_STYLE]);
@@ -190,7 +191,7 @@ class NV_PW_Benefits_List extends \Elementor\Widget_Base {
         ?>
         <div class="nv-pw-benefits">
             <?php if ($heading !== '') : ?>
-                <h3 class="nv-pw-benefits__heading"><?php echo esc_html($heading); ?></h3>
+                <h3 class="nv-pw-benefits__heading<?php echo NV_PW_Headline::mod($settings); ?>"><?php echo esc_html($heading); ?></h3>
             <?php endif; ?>
             <ul class="nv-pw-benefits__list">
                 <?php foreach ($items as $item) :

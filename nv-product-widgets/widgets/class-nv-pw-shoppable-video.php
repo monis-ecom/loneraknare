@@ -24,6 +24,7 @@ class NV_PW_Shoppable_Video extends \Elementor\Widget_Base {
         $this->add_control('aspect', ['label' => __('Video shape', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::SELECT, 'default' => '9-16', 'options' => ['9-16' => __('Vertical 9:16', 'nv-product-widgets'), '1-1' => __('Square 1:1', 'nv-product-widgets'), '16-9' => __('Wide 16:9', 'nv-product-widgets')]]);
         $this->add_control('heading', ['label' => __('Heading (optional)', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('Shoppa looken', 'nv-product-widgets')]);
         $this->add_control('hotspots', ['label' => __('Show hotspots on video', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::SWITCHER, 'default' => 'yes']);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_products', ['label' => __('Products', 'nv-product-widgets')]);
@@ -107,7 +108,7 @@ class NV_PW_Shoppable_Video extends \Elementor\Widget_Base {
         $atc_label = trim((string) ($s['atc_label'] ?? 'Lägg i varukorg')) ?: 'Lägg i varukorg';
         ?>
         <div class="nv-pw-sv" data-nv-video data-nv-shoppable>
-            <?php if ($heading !== '') : ?><h3 class="nv-pw-sv__heading"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+            <?php if ($heading !== '') : ?><h3 class="nv-pw-sv__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
             <div class="nv-pw-sv__layout">
                 <div class="nv-pw-sv__videowrap">
                     <div class="nv-pw-video nv-pw-ar nv-pw-ar--<?php echo esc_attr($aspect); ?>" data-type="<?php echo esc_attr($type); ?>" <?php if ($embed !== '') : ?>data-embed="<?php echo esc_url($embed); ?>"<?php endif; ?> <?php if ($file !== '') : ?>data-file="<?php echo esc_url($file); ?>"<?php endif; ?>>

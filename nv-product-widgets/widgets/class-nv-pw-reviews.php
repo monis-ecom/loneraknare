@@ -67,6 +67,7 @@ class NV_PW_Reviews extends \Elementor\Widget_Base {
             'default' => '',
             'description' => __('If your review importer stores photo URLs in a comment meta key, enter it here to show review photos.', 'nv-product-widgets'),
         ]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_style', ['label' => __('Style', 'nv-product-widgets'), 'tab' => \Elementor\Controls_Manager::TAB_STYLE]);
@@ -162,7 +163,7 @@ class NV_PW_Reviews extends \Elementor\Widget_Base {
         }
         ?>
         <div class="nv-pw-rv" style="--nv-rv-cols: <?php echo esc_attr($cols); ?>;">
-            <?php if ($heading !== '') : ?><h3 class="nv-pw-rv__heading"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+            <?php if ($heading !== '') : ?><h3 class="nv-pw-rv__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
 
             <?php if ($show_summary && $total > 0) : ?>
                 <div class="nv-pw-rv__summary">

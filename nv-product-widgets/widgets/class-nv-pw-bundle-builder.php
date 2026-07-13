@@ -13,6 +13,7 @@ class NV_PW_Bundle_Builder extends \Elementor\Widget_Base {
         $this->start_controls_section('section_head', ['label' => __('Heading', 'nv-product-widgets')]);
         $this->add_control('eyebrow', ['label' => __('Overline', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('BYGG DITT EGET PAKET', 'nv-product-widgets')]);
         $this->add_control('heading', ['label' => __('Heading', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('Välj dina favoriter och spara mer', 'nv-product-widgets'), 'label_block' => true]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_tiers', ['label' => __('Tiers', 'nv-product-widgets')]);
@@ -93,7 +94,7 @@ class NV_PW_Bundle_Builder extends \Elementor\Widget_Base {
         ?>
         <div class="nv-pw-bb" data-nv-bundle data-symbol="<?php echo esc_attr($symbol); ?>" data-decimals="<?php echo (int) $decimals; ?>" style="--nv-bb-cols: <?php echo esc_attr($cols); ?>;">
             <?php if ($eyebrow !== '') : ?><span class="nv-pw-bb__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
-            <?php if ($heading !== '') : ?><h3 class="nv-pw-bb__heading"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+            <?php if ($heading !== '') : ?><h3 class="nv-pw-bb__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
 
             <div class="nv-pw-bb__tiers" role="tablist">
                 <?php foreach ($tiers as $i => $t) : ?>

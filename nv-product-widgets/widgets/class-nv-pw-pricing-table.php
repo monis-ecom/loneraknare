@@ -38,6 +38,7 @@ class NV_PW_Pricing_Table extends \Elementor\Widget_Base {
                 ['name' => __('Pro', 'nv-product-widgets'), 'price' => '599 kr', 'period' => __('/ mån', 'nv-product-widgets'), 'features' => __("3 par\nFri frakt\nPrioriterad support", 'nv-product-widgets'), 'button_text' => __('Välj Pro', 'nv-product-widgets')],
             ],
         ]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_style', ['label' => __('Style', 'nv-product-widgets'), 'tab' => \Elementor\Controls_Manager::TAB_STYLE]);
@@ -66,7 +67,7 @@ class NV_PW_Pricing_Table extends \Elementor\Widget_Base {
         <div class="nv-pw-pt" style="--nv-pt-count: <?php echo count($plans); ?>;">
             <?php if ($heading !== '' || $sub !== '') : ?>
                 <div class="nv-pw-pt__head">
-                    <?php if ($heading !== '') : ?><h2 class="nv-pw-pt__heading"><?php echo esc_html($heading); ?></h2><?php endif; ?>
+                    <?php if ($heading !== '') : ?><h2 class="nv-pw-pt__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h2><?php endif; ?>
                     <?php if ($sub !== '') : ?><p class="nv-pw-pt__sub"><?php echo esc_html($sub); ?></p><?php endif; ?>
                 </div>
             <?php endif; ?>

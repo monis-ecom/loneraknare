@@ -33,6 +33,7 @@ class NV_PW_Icon_Columns extends \Elementor\Widget_Base {
                 ['icon' => ['value' => 'fas fa-medal', 'library' => 'fa-solid'], 'title' => __('9 000+ nöjda kunder', 'nv-product-widgets'), 'text' => __('Betyg 4,8 av 5 i snitt.', 'nv-product-widgets')],
             ],
         ]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_style', ['label' => __('Style', 'nv-product-widgets'), 'tab' => \Elementor\Controls_Manager::TAB_STYLE]);
@@ -69,7 +70,7 @@ class NV_PW_Icon_Columns extends \Elementor\Widget_Base {
         <div class="nv-pw-ic nv-pw-ic--<?php echo esc_attr($layout); ?><?php echo $boxed ? ' nv-pw-ic--boxed' : ''; ?><?php echo $has_bg ? ' nv-pw-ic--icon-bg' : ''; ?>">
             <?php if ($heading !== '' || $sub !== '') : ?>
                 <div class="nv-pw-ic__head">
-                    <?php if ($heading !== '') : ?><h2 class="nv-pw-ic__heading"><?php echo esc_html($heading); ?></h2><?php endif; ?>
+                    <?php if ($heading !== '') : ?><h2 class="nv-pw-ic__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h2><?php endif; ?>
                     <?php if ($sub !== '') : ?><p class="nv-pw-ic__sub"><?php echo esc_html($sub); ?></p><?php endif; ?>
                 </div>
             <?php endif; ?>

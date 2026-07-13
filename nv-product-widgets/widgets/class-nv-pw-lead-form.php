@@ -23,6 +23,7 @@ class NV_PW_Lead_Form extends \Elementor\Widget_Base {
         $this->add_control('button_text', ['label' => __('Button text', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('Send request', 'nv-product-widgets')]);
         $this->add_control('success', ['label' => __('Success message', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXTAREA, 'default' => __('Thanks — we’ve got your request and will be in touch shortly.', 'nv-product-widgets')]);
         $this->add_control('redirect', ['label' => __('Redirect after submit (optional)', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::URL, 'default' => ['url' => '']]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         /* ── Fields ── */
@@ -99,7 +100,7 @@ class NV_PW_Lead_Form extends \Elementor\Widget_Base {
             <div class="nv-pw-lf__body" data-nv-lead-body>
                 <?php if ($heading !== '' || $subtext !== '') : ?>
                     <div class="nv-pw-lf__head">
-                        <?php if ($heading !== '') : ?><h3 class="nv-pw-lf__heading"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+                        <?php if ($heading !== '') : ?><h3 class="nv-pw-lf__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
                         <?php if ($subtext !== '') : ?><p class="nv-pw-lf__subtext"><?php echo esc_html($subtext); ?></p><?php endif; ?>
                     </div>
                 <?php endif; ?>

@@ -88,6 +88,7 @@ class NV_PW_Video_Text extends \Elementor\Widget_Base {
         $this->add_control('cta_text', ['label' => __('Button text (optional)', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => '']);
         $this->add_control('cta_link', ['label' => __('Button link', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::URL, 'default' => ['url' => '#'], 'condition' => ['cta_text!' => '']]);
 
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_style', ['label' => __('Style', 'nv-product-widgets'), 'tab' => \Elementor\Controls_Manager::TAB_STYLE]);
@@ -151,7 +152,7 @@ class NV_PW_Video_Text extends \Elementor\Widget_Base {
             <?php endif; ?>
             <div class="nv-pw-vt__body">
                 <?php if ($eyebrow !== '') : ?><span class="nv-pw-vt__eyebrow"><?php echo esc_html($eyebrow); ?></span><?php endif; ?>
-                <?php if ($headline !== '') : ?><h3 class="nv-pw-vt__headline"><?php echo esc_html($headline); ?></h3><?php endif; ?>
+                <?php if ($headline !== '') : ?><h3 class="nv-pw-vt__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($headline); ?></h3><?php endif; ?>
                 <?php if ($text !== '') : ?><p class="nv-pw-vt__text"><?php echo esc_html($text); ?></p><?php endif; ?>
                 <?php if (!empty($bullets)) : ?>
                     <ul class="nv-pw-vt__bullets">

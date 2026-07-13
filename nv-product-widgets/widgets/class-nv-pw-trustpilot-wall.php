@@ -27,6 +27,7 @@ class NV_PW_Trustpilot_Wall extends \Elementor\Widget_Base {
         $this->add_control('reviews_suffix', ['label' => __('Count suffix', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('reviews', 'nv-product-widgets'), 'condition' => ['show_rating' => 'yes']]);
         $this->add_control('cta_text', ['label' => __('Button text (optional)', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __('View All', 'nv-product-widgets')]);
         $this->add_control('cta_link', ['label' => __('Button link', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::URL, 'default' => ['url' => ''], 'condition' => ['cta_text!' => '']]);
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         /* ── Reviews ── */
@@ -132,7 +133,7 @@ class NV_PW_Trustpilot_Wall extends \Elementor\Widget_Base {
         <section class="nv-pw-tp nv-pw-tp--<?php echo esc_attr($theme); ?>" style="--nv-tp-cols: <?php echo esc_attr($cols); ?>;">
             <?php if ($headline !== '' || $show_rating) : ?>
                 <div class="nv-pw-tp__head">
-                    <?php if ($headline !== '') : ?><h2 class="nv-pw-tp__headline"><?php echo esc_html($headline); ?></h2><?php endif; ?>
+                    <?php if ($headline !== '') : ?><h2 class="nv-pw-tp__headline<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($headline); ?></h2><?php endif; ?>
                     <?php if ($show_rating) : ?>
                         <div class="nv-pw-tp__rating">
                             <?php if ($rating_label !== '') : ?><span class="nv-pw-tp__rating-label"><?php echo esc_html($rating_label); ?></span><?php endif; ?>

@@ -157,6 +157,7 @@ class NV_PW_Testimonials extends \Elementor\Widget_Base {
             ],
         ]);
 
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_style', [
@@ -255,7 +256,7 @@ class NV_PW_Testimonials extends \Elementor\Widget_Base {
             <?php endif; ?>
             <?php if ($heading !== '' || $subheading !== '') : ?>
                 <div class="nv-pw-tm__head">
-                    <?php if ($heading !== '') : ?><h3 class="nv-pw-tm__heading"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+                    <?php if ($heading !== '') : ?><h3 class="nv-pw-tm__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
                     <?php if ($subheading !== '') : ?><p class="nv-pw-tm__sub"><?php echo esc_html($subheading); ?></p><?php endif; ?>
                 </div>
             <?php endif; ?>

@@ -50,6 +50,7 @@ class NV_PW_Tabs extends \Elementor\Widget_Base {
             ],
         ]);
 
+        $this->add_control('nv_hl_style', NV_PW_Headline::args());
         $this->end_controls_section();
 
         $this->start_controls_section('section_style', ['label' => __('Style', 'nv-product-widgets'), 'tab' => \Elementor\Controls_Manager::TAB_STYLE]);
@@ -88,7 +89,7 @@ class NV_PW_Tabs extends \Elementor\Widget_Base {
         $uid = 'nvtabs-' . $this->get_id();
         ?>
         <div class="nv-pw-tabs<?php echo $nav_class; ?>" data-nv-tabs>
-            <?php if ($heading !== '') : ?><h3 class="nv-pw-tabs__heading"><?php echo esc_html($heading); ?></h3><?php endif; ?>
+            <?php if ($heading !== '') : ?><h3 class="nv-pw-tabs__heading<?php echo NV_PW_Headline::mod($s); ?>"><?php echo esc_html($heading); ?></h3><?php endif; ?>
             <div class="nv-pw-tabs__nav" role="tablist">
                 <?php foreach ($items as $idx => $it) :
                     $active = $idx === 0 ? ' is-active' : '';
