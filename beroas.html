@@ -1,0 +1,215 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Break-Even ROAS · Profit Tracker</title>
+<style>
+  :root{
+    --bg:#0a0c10; --panel:#12161d; --panel2:#161b24; --line:#232a35;
+    --ink:#eaedf2; --ink2:#98a1b0; --ink3:#69727f;
+    --blue:#4f8eff; --blue-soft:#16233d;
+    --gn:#28c07f; --am:#f0a53a; --rd:#f0655f;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;
+    -webkit-font-smoothing:antialiased;padding:max(20px,env(safe-area-inset-top)) 16px 60px}
+  .wrap{max-width:760px;margin:0 auto}
+  h1{font-size:19px;font-weight:700;letter-spacing:-.01em;margin:0}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0 0 4px}
+  .top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+  .picker{display:flex;gap:8px;align-items:center}
+  select{font:inherit;font-size:13px;color:var(--ink);background:var(--panel2);border:1px solid var(--line);
+    border-radius:9px;padding:8px 11px;cursor:pointer;max-width:240px}
+
+  .hero{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
+    border-radius:16px;padding:22px 24px;margin-bottom:16px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+  .hero-main{flex:1;min-width:200px}
+  .hero-label{font-size:12.5px;color:var(--ink2);margin-bottom:2px}
+  .hero-num{font-size:52px;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+  .hero-sub{font-size:13px;color:var(--ink2);margin-top:8px}
+  .mini{display:flex;gap:10px}
+  .mcard{background:var(--panel2);border:1px solid var(--line);border-top-width:3px;border-radius:12px;padding:12px 14px;min-width:104px}
+  .mcard .l{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.06em}
+  .mcard .v{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:3px}
+
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 18px 16px;margin-bottom:16px}
+  .card-t{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);padding:12px 0 4px}
+  .row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+  .row:first-of-type{border-top:0}
+  .row label{font-size:14px;font-weight:600}
+  .row .hint{font-size:12px;color:var(--ink3);font-weight:400}
+  .inp{display:flex;align-items:center;gap:6px}
+  .inp input{width:92px;font:inherit;font-size:15px;font-variant-numeric:tabular-nums;text-align:right;color:var(--ink);
+    background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:7px 9px}
+  .inp input:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+  .inp .u{font-size:12px;color:var(--ink3);width:22px}
+  .slider{grid-column:1/-1;-webkit-appearance:none;appearance:none;height:5px;border-radius:20px;background:var(--line);margin:2px 0 0}
+  .slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--blue);cursor:pointer;border:3px solid var(--bg)}
+  .slider::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--blue);cursor:pointer;border:3px solid var(--bg)}
+
+  table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+  th{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink3);text-align:right;padding:6px 8px;font-weight:600}
+  th:first-child{text-align:left}
+  td{padding:9px 8px;font-size:13.5px;border-top:1px solid var(--line);text-align:right}
+  td:first-child{text-align:left;font-weight:700;color:var(--blue)}
+  .badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .contrib{font-size:12px;color:var(--ink3);padding:10px 8px 2px}
+  .foot{font-size:12px;color:var(--ink3);margin-top:14px;line-height:1.6}
+</style>
+
+<div class="wrap">
+  <div class="top">
+    <div>
+      <p class="eyebrow">Profit Tracker · Planning</p>
+      <h1>Break-Even ROAS</h1>
+    </div>
+    <div class="picker">
+      <select id="prod"><option value="">Load a product…</option></select>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-main">
+      <div class="hero-label">Keep your ad ROAS above</div>
+      <div class="hero-num" id="be">—</div>
+      <div class="hero-sub" id="be-sub">Enter a product's numbers below.</div>
+    </div>
+    <div class="mini">
+      <div class="mcard" id="mc-mg"><div class="l">Margin</div><div class="v" id="mg">—</div></div>
+      <div class="mcard" id="mc-ct"><div class="l">Profit / unit</div><div class="v" id="ct">—</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Your numbers</div>
+    <div id="fields"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">If your ad ROAS is…</div>
+    <table>
+      <thead><tr><th>ROAS</th><th>Ad cost / sale</th><th>Profit / sale</th><th>Result</th></tr></thead>
+      <tbody id="ladder"></tbody>
+    </table>
+    <div class="contrib" id="ladder-note"></div>
+    <p class="foot">
+      Break-even ROAS = selling price ÷ contribution per unit, computed on ex-VAT margin so it matches your real
+      profit. Because Meta reports ROAS on VAT-inclusive revenue, compare this number directly to Meta's ROAS:
+      above it you profit, below it you lose money on ads. <span id="live-note"></span>
+    </p>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var F = { price:499, cogs:120, ship:59, fee:2.5, vat:25, other:0 };
+  var FIELDS = [
+    { k:"price", label:"Selling price", hint:"incl. VAT", min:0,  max:3000, step:1,   u:"kr" },
+    { k:"cogs",  label:"Product cost (COGS)", hint:"per unit", min:0, max:2000, step:1, u:"kr" },
+    { k:"ship",  label:"Shipping cost", hint:"to carrier", min:0, max:400, step:1, u:"kr" },
+    { k:"fee",   label:"Transaction fee", hint:"% of price", min:0, max:6, step:0.1, u:"%" },
+    { k:"other", label:"Other cost / unit", hint:"packaging, etc.", min:0, max:500, step:1, u:"kr" },
+    { k:"vat",   label:"VAT rate", hint:"Sweden = 25%", min:0, max:27, step:1, u:"%" }
+  ];
+  var $ = function(id){ return document.getElementById(id); };
+  var kr = function(n){ return (Math.round(n*100)/100).toLocaleString("sv-SE",{minimumFractionDigits:0,maximumFractionDigits:2})+" kr"; };
+  var f1 = function(n){ return (Math.round(n*10)/10).toString(); };
+
+  // Mirrors pt_break_even() in lib/profit_calc.php exactly.
+  function breakEven(f){
+    var priceExcl = f.vat>0 ? f.price/(1+f.vat/100) : f.price;
+    var tx = f.price*(f.fee/100);
+    var contribution = priceExcl - f.cogs - f.ship - tx - f.other;
+    var margin = priceExcl>0 ? contribution/priceExcl*100 : 0;
+    var be = contribution>0 ? f.price/contribution : null;
+    var ladder = [1,1.5,2,2.5,3,4,5].map(function(r){
+      var ad=f.price/r, profit=contribution-ad;
+      return { r:r, ad:ad, profit:profit, ok:profit>0 };
+    });
+    return { priceExcl:priceExcl, tx:tx, contribution:contribution, margin:margin, be:be, ladder:ladder };
+  }
+  function beColor(be){ return be==null?"var(--rd)":be<2?"var(--gn)":be<3?"var(--am)":"var(--rd)"; }
+  function mgColor(m){ return m>30?"var(--gn)":m>15?"var(--am)":"var(--rd)"; }
+
+  var wrap = $("fields");
+  FIELDS.forEach(function(fl){
+    var row = document.createElement("div"); row.className="row";
+    var lab = document.createElement("label"); lab.textContent = fl.label+" ";
+    var hint = document.createElement("span"); hint.className="hint"; hint.textContent="· "+fl.hint; lab.appendChild(hint);
+    var inpWrap = document.createElement("div"); inpWrap.className="inp";
+    var num = document.createElement("input"); num.type="number"; num.value=F[fl.k]; num.min=fl.min; num.max=fl.max; num.step=fl.step; num.id="n-"+fl.k;
+    var u = document.createElement("span"); u.className="u"; u.textContent=fl.u;
+    inpWrap.appendChild(num); inpWrap.appendChild(u);
+    var slider = document.createElement("input"); slider.type="range"; slider.className="slider";
+    slider.min=fl.min; slider.max=fl.max; slider.step=fl.step; slider.value=F[fl.k]; slider.id="s-"+fl.k;
+    slider.setAttribute("aria-label", fl.label);
+    num.addEventListener("input", function(){ F[fl.k]=parseFloat(num.value)||0; slider.value=F[fl.k]; render(); });
+    slider.addEventListener("input", function(){ F[fl.k]=parseFloat(slider.value)||0; num.value=(fl.step<1)?F[fl.k].toFixed(1):Math.round(F[fl.k]); render(); });
+    row.appendChild(lab); row.appendChild(inpWrap); row.appendChild(slider);
+    wrap.appendChild(row);
+  });
+
+  function render(){
+    var m = breakEven(F);
+    $("be").textContent = m.be==null ? "∞" : (Math.round(m.be*100)/100).toFixed(2)+"×";
+    $("be").style.color = beColor(m.be);
+    $("be-sub").textContent = m.be==null
+      ? "This unit loses money before any ads — fix the cost or price first."
+      : "Contribution per unit: "+kr(m.contribution)+" · ex-VAT price "+kr(m.priceExcl);
+    $("mg").textContent = f1(m.margin)+"%"; $("mg").style.color = mgColor(m.margin);
+    $("mc-mg").style.borderTopColor = mgColor(m.margin);
+    $("ct").textContent = kr(m.contribution); $("ct").style.color = m.contribution>0?"var(--gn)":"var(--rd)";
+    $("mc-ct").style.borderTopColor = m.contribution>0?"var(--gn)":"var(--rd)";
+
+    var body = $("ladder"); body.textContent="";
+    m.ladder.forEach(function(row){
+      var tr=document.createElement("tr");
+      if(m.be && Math.abs(row.r-m.be)<0.3) tr.style.background="var(--blue-soft)";
+      var c = row.ok?"var(--gn)":"var(--rd)";
+      function td(txt,color){var d=document.createElement("td");d.textContent=txt;if(color)d.style.color=color;return d;}
+      tr.appendChild(td(row.r+"×"));
+      tr.appendChild(td(kr(row.ad),"var(--ink2)"));
+      var pd=td((row.profit>=0?"+":"")+kr(row.profit),c); pd.style.fontWeight="700"; tr.appendChild(pd);
+      var rd=document.createElement("td");
+      var b=document.createElement("span"); b.className="badge"; b.textContent=row.ok?"✓ Profit":"✗ Loss";
+      b.style.background=row.ok?"rgba(40,192,127,.14)":"rgba(240,101,95,.14)"; b.style.color=c; rd.appendChild(b);
+      tr.appendChild(rd);
+      body.appendChild(tr);
+    });
+    $("ladder-note").textContent = m.be==null ? "" :
+      "Highlighted row ≈ your break-even point ("+(Math.round(m.be*100)/100).toFixed(2)+"×).";
+  }
+  render();
+
+  // R2 — auto-fill from the live catalog endpoint when deployed behind the app.
+  var token = null;
+  try { token = localStorage.getItem("profit_token") || localStorage.getItem("token"); } catch(e){}
+  function api(path){
+    return fetch("api.php?action="+path, { headers: token?{Authorization:"Bearer "+token}:{} })
+      .then(function(r){ return r.ok?r.json():Promise.reject(r.status); });
+  }
+  api("break-even-catalog").then(function(d){
+    if(!d || !d.products || !d.products.length) return;
+    var sel=$("prod");
+    d.products.forEach(function(p){
+      var o=document.createElement("option");
+      o.value=p.product_id;
+      o.textContent=(p.has_cogs?"":"⚠ ")+p.name+"  ("+(p.be_roas?p.be_roas+"×":"∞")+")";
+      o.dataset.price=p.price_incl; o.dataset.cogs=p.cogs; o.dataset.hascogs=p.has_cogs?1:0;
+      sel.appendChild(o);
+    });
+    if(d.shipping!=null) F.ship=+d.shipping;
+    if(d.fee_pct!=null) F.fee=+d.fee_pct;
+    if(d.vat_rate!=null) F.vat=+d.vat_rate;
+    sel.addEventListener("change", function(){
+      var o=sel.selectedOptions[0]; if(!o||!o.value) return;
+      F.price=+o.dataset.price||0; F.cogs=+o.dataset.cogs||0;
+      FIELDS.forEach(function(fl){ var n=$("n-"+fl.k),s=$("s-"+fl.k); if(n){n.value=(fl.step<1)?(+F[fl.k]).toFixed(1):Math.round(F[fl.k]);} if(s){s.value=F[fl.k];} });
+      render();
+      if(o.dataset.hascogs!=="1") $("be-sub").textContent="⚠ No product cost set for this product yet — add it in Costs for an accurate number.";
+    });
+    $("live-note").textContent = "Loaded "+d.products.length+" products from your store.";
+  }).catch(function(){ /* offline / not deployed — calculator still works with manual entry */ });
+})();
+</script>

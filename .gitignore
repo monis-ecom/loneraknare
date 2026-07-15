@@ -1,0 +1,7 @@
+# NEVER commit real credentials
+db-config.php
+db-config-profit.php
+
+# Local/OS noise
+.DS_Store
+*.log

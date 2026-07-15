@@ -1,0 +1,10 @@
+# Deny direct web access to any config file (defense in depth — the real
+# secret file should live OUTSIDE the web root as db-config-profit.php).
+<FilesMatch "^(db-config.*\.php|.*\.example\.php)$">
+  Require all denied
+</FilesMatch>
+
+# The PHP calc library and the test harness must never be web-served.
+RedirectMatch 404 (?i)/(lib|tests)/.*$
+
+Options -Indexes
