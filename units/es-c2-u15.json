@@ -1,0 +1,260 @@
+{
+  "unit": {
+    "id": "es-c2-u15",
+    "title": "Homophones, Paronyms & Spelling Traps",
+    "subtitle": "haya/halla, echo/hecho, sino/si no, porque/por qué and friends",
+    "level": "C2",
+    "order": 15,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The spelling traps that catch even natives",
+    "intro": "At C2, listening is easy; <b>spelling</b> is where mastery shows. Spanish is full of words that sound identical but mean utterly different things — <b>haya</b>/<b>halla</b>, <b>echo</b>/<b>hecho</b>, <b>tuvo</b>/<b>tubo</b>, <b>valla</b>/<b>vaya</b>/<b>baya</b> — and of splits that hinge on a single space or accent: <b>sino</b> vs <b>si no</b>, the <b>porque</b> family, <b>también</b> vs <b>tan bien</b>. Get these right and your written Spanish reads as fully native.",
+    "sections": [
+      {
+        "tag": "homófonos",
+        "heading": "Same sound, different word (h and b/v)",
+        "body": "<b>Haya</b> is from <b>haber</b> (subjunctive) or the beech tree; <b>halla</b> is from <b>hallar</b> (to find); <b>aya</b> is a nanny; <b>allá</b> means “over there”. <b>Echo</b> is from <b>echar</b> (to throw/put); <b>hecho</b> is from <b>hacer</b> (done) or “a fact”. <b>Tuvo</b> is from <b>tener</b>; <b>tubo</b> is a pipe. <b>Valla</b> is a fence/hurdle; <b>vaya</b> is from <b>ir</b>; <b>baya</b> is a berry.",
+        "conj": [
+          ["haya", "haber (subj.) / beech tree"],
+          ["halla", "hallar → finds"],
+          ["echo / hecho", "echar → I throw / hacer → done, fact"],
+          ["tuvo / tubo", "tener → had / a pipe"],
+          ["valla / vaya / baya", "fence / ir (subj.) / berry"]
+        ],
+        "ex": [
+          {
+            "es": "Espero que <b>haya</b> terminado antes de que la policía lo <b>halle</b>.",
+            "en": "I hope he has finished before the police find him.",
+            "note": "haya (haber) vs halle (hallar)"
+          },
+          {
+            "es": "Te <b>echo</b> de menos desde que se ha <b>hecho</b> de noche.",
+            "en": "I miss you now that night has fallen.",
+            "note": "echar (echo) vs hacer (hecho)"
+          }
+        ]
+      },
+      {
+        "tag": "sino / si no",
+        "heading": "sino vs si no",
+        "body": "<b>Sino</b> (one word) is a conjunction of contrast, “but rather”, and also a noun meaning “fate”. <b>Si no</b> (two words) is the conditional <b>si</b> + negation, “if not / unless”. Test: if you can insert a verb or “entonces” after it, it's the two-word <b>si no</b>.",
+        "conj": [
+          ["no… sino…", "not X but rather Y"],
+          ["el sino", "fate, destiny (noun)"],
+          ["si no", "if not / otherwise / unless"]
+        ],
+        "ex": [
+          {
+            "es": "No lo hizo por dinero, <b>sino</b> por orgullo.",
+            "en": "He didn't do it for money, but out of pride.",
+            "note": "contrast → sino (one word)"
+          },
+          {
+            "es": "Avísame; <b>si no</b>, me marcho sin ti.",
+            "en": "Let me know; if not, I'm leaving without you.",
+            "note": "condition → si no (two words)"
+          }
+        ]
+      },
+      {
+        "tag": "porqué",
+        "heading": "The porque family",
+        "body": "Four forms, four jobs. <b>¿Por qué?</b> (two words, accent) asks “why?”. <b>Porque</b> (one word) answers “because”. <b>El porqué</b> (one word, accent) is the noun “the reason”. <b>Por que</b> (two words, no accent) is the rarer “for which / for … to”, where <b>que</b> is a relative or <b>por</b> is demanded by a verb (preocuparse por que…).",
+        "conj": [
+          ["¿por qué?", "why? (question)"],
+          ["porque", "because (answer/cause)"],
+          ["el porqué", "the reason (noun)"],
+          ["por que", "for which / for … to (relative)"]
+        ],
+        "ex": [
+          {
+            "es": "<b>¿Por qué</b> callas? — <b>Porque</b> no quiero discutir.",
+            "en": "Why are you silent? — Because I don't want to argue.",
+            "note": "question vs cause"
+          },
+          {
+            "es": "Nunca entendí el <b>porqué</b> de su enfado.",
+            "en": "I never understood the reason for his anger.",
+            "note": "el porqué = the reason (noun)"
+          }
+        ]
+      },
+      {
+        "tag": "trampas fijas",
+        "heading": "a ver/haber · asimismo/así mismo · también/tan bien",
+        "body": "<b>A ver</b> (a + the verb ver) means “let's see”; <b>haber</b> is the auxiliary/infinitive. <b>Asimismo</b> (one word) means “likewise, also”; <b>así mismo</b> (two words) means “in that very way / right there”. <b>También</b> (one word) means “also”; <b>tan bien</b> (two words) means “so well”.",
+        "conj": [
+          ["a ver / haber", "let's see / to have (aux.)"],
+          ["asimismo", "likewise, also (also spelled 'así mismo')"],
+          ["así mismo", "in that very manner / right there"],
+          ["también / tan bien", "also / so well"]
+        ],
+        "ex": [
+          {
+            "es": "<b>A ver</b> si debería <b>haber</b> avisado antes.",
+            "en": "Let's see whether he should have warned us earlier.",
+            "note": "a ver (ver) vs haber (aux.)"
+          },
+          {
+            "es": "Canta <b>tan bien</b> que yo <b>también</b> quiero aprender.",
+            "en": "She sings so well that I want to learn too.",
+            "note": "tan bien (so well) vs también (also)"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "haya = haber/tree · halla = hallar · aya = nanny · allá = over there.",
+      "echo = echar · hecho = hacer/fact; tuvo = tener · tubo = pipe; valla = fence · vaya = ir · baya = berry.",
+      "sino = 'but rather'/fate; si no = 'if not'. porque (because) / ¿por qué? (why) / el porqué (the reason) / por que (for which).",
+      "a ver ≠ haber; también (also) ≠ tan bien (so well); asimismo (likewise) ≠ así mismo (in that very way)."
+    ],
+    "mistakes": [
+      {
+        "w": "No fue culpa suya, si no del sistema.",
+        "r": "No fue culpa suya, sino del sistema.",
+        "why": "This is contrast ('not X but Y'), so it's the one-word conjunction 'sino', not the conditional 'si no'."
+      },
+      {
+        "w": "Espero que halla llegado bien.",
+        "r": "Espero que haya llegado bien.",
+        "why": "The auxiliary of haber is 'haya'; 'halla' is from hallar (to find)."
+      },
+      {
+        "w": "No sé porqué lo dijo.",
+        "r": "No sé por qué lo dijo.",
+        "why": "An indirect question uses two words with an accent: 'por qué'. 'Porqué' (one word) is only the noun 'the reason'."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Espero que ___ estudiado lo suficiente para el examen.",
+      "prompt_en": "I hope you've studied enough for the exam.",
+      "options": [
+        { "id": "a", "text": "hayas" },
+        { "id": "b", "text": "hallas" },
+        { "id": "c", "text": "ayas" },
+        { "id": "d", "text": "allás" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Auxiliar de haber → hayas.",
+      "no": "The auxiliary (haber) is “hayas”; “hallas” is from hallar (you find)."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No lo hice por interés, ___ por convicción.",
+      "prompt_en": "I didn't do it out of self-interest, but out of conviction.",
+      "options": [
+        { "id": "a", "text": "sino" },
+        { "id": "b", "text": "si no" },
+        { "id": "c", "text": "sinó" },
+        { "id": "d", "text": "si non" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Contraste 'no… sino…' → una palabra.",
+      "no": "This is contrast ('not X but Y'), so it's the one-word conjunction “sino”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"I never understood the reason for his anger.\"",
+      "tokens": ["Nunca", "entendí", "el", "porqué", "de", "su", "enfado", "por qué", "porque"],
+      "answer": ["Nunca", "entendí", "el", "porqué", "de", "su", "enfado"],
+      "ok": "¡Perfecto! El sustantivo 'el porqué' (una palabra, con tilde).",
+      "no": "The noun 'the reason' is “el porqué” — one word with an accent."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "prompt": "Se le rompió un ___ del fregadero y el agua salió a chorros. (pipe)",
+      "prompt_en": "A pipe under the sink broke and water gushed out.",
+      "xp": 2,
+      "accepted": ["tubo"],
+      "ignore_accents": true,
+      "hint": "A pipe — spelled with b, not from 'tener'.",
+      "ok": "¡Bien! El objeto es 'tubo' (con b).",
+      "no": "A pipe is “tubo” (with b); “tuvo” is from tener."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each homophone to its meaning.",
+      "pairs": [
+        ["echo", "I throw / put"],
+        ["hecho", "done / a fact"],
+        ["valla", "fence"],
+        ["baya", "berry"]
+      ],
+      "ok": "¡Excelente! Homófonos dominados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "A ver si debería haber avisado antes.",
+      "accepted": ["a ver si deberia haber avisado antes"],
+      "ignore_accents": true,
+      "translation": "Let's see whether he should have warned us earlier.",
+      "ok": "¡Correcto! 'a ver' (dos palabras) y 'haber' (auxiliar).",
+      "no": "It was: “A ver si debería haber avisado antes.” (a ver = let's see; haber = auxiliary)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend proofreads your message and questions a word 🔍",
+      "lines": [
+        {
+          "speaker": "Elena",
+          "es": "Escribiste “canta tan bien que yo también quiero aprender”. ¿No es todo con “también”?",
+          "en": "You wrote “canta tan bien que yo también quiero aprender”. Isn't it all with “también”?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "No: “tan bien” (dos palabras) es 'so well', y “también” (una) es 'also'. Cada uno está en su sitio." },
+        { "id": "b", "text": "Tienes razón, debería ser “canta también que yo también quiero aprender”." },
+        { "id": "c", "text": "Da igual, “tan bien” y “también” significan exactamente lo mismo." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! 'tan bien' = so well; 'también' = also.",
+      "no": "“tan bien” (two words) means 'so well' and “también” (one) means 'also' — both are correct as written, option a."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "No fue por dinero, sino por orgullo, aunque nadie entienda el porqué.",
+      "en": "It wasn't for money, but out of pride, though nobody understands the reason.",
+      "ok": "¡Perfecto! 'sino' y 'el porqué', impecables.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “No fue por dinero, sino por orgullo, aunque nadie entienda el porqué.”"
+    }
+  ],
+  "vocab": [
+    { "es": "haya / halla", "en": "haber (subj.) or beech / hallar (finds)" },
+    { "es": "echo / hecho", "en": "echar (I throw) / hacer (done, fact)" },
+    { "es": "tuvo / tubo", "en": "tener (had) / a pipe" },
+    { "es": "sino / si no", "en": "but rather / if not" },
+    { "es": "el porqué", "en": "the reason (noun)" },
+    { "es": "a ver / haber", "en": "let's see / to have (auxiliary)" },
+    { "es": "también / tan bien", "en": "also / so well" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["haya / halla", "echo / hecho", "sino / si no", "el porqué", "también / tan bien"]
+  }
+}

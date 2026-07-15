@@ -1,0 +1,259 @@
+{
+  "unit": {
+    "id": "es-c2-u18",
+    "title": "C2 Mastery — The Capstone",
+    "subtitle": "A triumphant review of the whole A1→C2 journey",
+    "level": "C2",
+    "order": 18,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "You've reached the summit",
+    "intro": "This is the <b>final unit</b> of the entire course. From <i>hola</i> to the literary <b>-ra</b>, you've climbed all six CEFR levels. This capstone weaves together the C2 threads — main-clause subjunctive, the values of <b>se</b>, queísmo/dequeísmo, expressive morphology, pragmatics, rhetoric, refranes and the mot juste. Review them once more, then celebrate: you now command Spanish at a near-native level. <b>¡Enhorabuena!</b>",
+    "sections": [
+      {
+        "tag": "subjuntivo y estilo",
+        "heading": "Main-clause subjunctive & the literary -ra",
+        "body": "The subjunctive escapes subordinate clauses: wishes with <b>ojalá / quién + imperfect subjunctive</b> (<i>¡Quién pudiera!</i>), blessings (<i>Que te vaya bien</i>), and the literary <b>-ra</b> standing in for the pluperfect indicative (<i>el discurso que pronunciara</i> = había pronunciado).",
+        "conj": [
+          ["¡Quién pudiera!", "if only I could!"],
+          ["Que te vaya bien", "may it go well for you"],
+          ["que pronunciara", "= había pronunciado (literary)"]
+        ],
+        "ex": [
+          {
+            "es": "<b>¡Quién pudiera</b> dominar tantos matices!",
+            "en": "If only one could master so many nuances!",
+            "note": "quién + imperfect subj. = wish"
+          },
+          {
+            "es": "La novela que <b>escribiera</b> en su juventud sigue viva.",
+            "en": "The novel he had written in his youth is still alive.",
+            "note": "-ra = había escrito"
+          }
+        ]
+      },
+      {
+        "tag": "se y (de)queísmo",
+        "heading": "The values of se & de vs que",
+        "body": "<b>Se</b> covers reflexive, reciprocal, impersonal (<i>se dice</i>), passive refleja (<i>se venden pisos</i>) and the involuntary (<i>se me cayó</i>). Meanwhile, watch the preposition: <b>dequeísmo</b> adds a wrong <b>de</b> (<i>pienso de que</i> ✗), <b>queísmo</b> drops a needed one (<i>me acuerdo que</i> ✗ → <b>de que</b>).",
+        "conj": [
+          ["se me cayó", "involuntary se ('it slipped')"],
+          ["se venden pisos", "passive refleja"],
+          ["pienso que", "no de (dequeísmo avoided)"],
+          ["me acuerdo de que", "keep de (queísmo avoided)"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Se me</b> cayeron las llaves sin querer.",
+            "en": "I accidentally dropped the keys.",
+            "note": "se of involuntariness"
+          },
+          {
+            "es": "Estoy seguro <b>de que</b> lo conseguirás.",
+            "en": "I'm sure you'll manage it.",
+            "note": "estar seguro DE que"
+          }
+        ]
+      },
+      {
+        "tag": "morfología y pragmática",
+        "heading": "Diminutives, augmentatives & discourse markers",
+        "body": "Expressive suffixes carry attitude: <b>-ito</b> softens (<i>un momentito</i>), <b>-azo</b> augments or hits (<i>un golazo</i>), <b>-ucho</b> disparages (<i>un cuartucho</i>). Pragmatic markers frame tone: <b>a decir verdad, la verdad sea dicha, dicho sea de paso, ahora bien</b>.",
+        "conj": [
+          ["-ito/-illo", "affection, softening"],
+          ["-azo", "augmentative / a great one"],
+          ["-ucho", "pejorative"],
+          ["a decir verdad", "to tell the truth"]
+        ],
+        "ex": [
+          {
+            "es": "<b>A decir verdad</b>, el plan no me convence del todo.",
+            "en": "To tell the truth, the plan doesn't entirely convince me.",
+            "note": "discourse marker → tone"
+          },
+          {
+            "es": "Vivía en un <b>cuartucho</b> sin ventanas.",
+            "en": "He lived in a wretched little room with no windows.",
+            "note": "-ucho = pejorative"
+          }
+        ]
+      },
+      {
+        "tag": "retórica y léxico",
+        "heading": "Refranes, Latinisms, irony & the mot juste",
+        "body": "The finishing touches: refranes (<i>más vale tarde que nunca</i>), Latinisms used correctly (<b>grosso modo</b>, <b>motu proprio</b>, <b>statu quo</b> — no stray <i>a-</i> or <i>de-</i>), irony and connotation, correlatives (<i>no solo… sino</i>) and native collocations (<i>surtir efecto, zanjar</i>). This is the register that reads as truly educated Spanish.",
+        "conj": [
+          ["más vale tarde que nunca", "better late than never"],
+          ["grosso modo", "roughly (not 'a grosso modo')"],
+          ["motu proprio", "of one's own accord"],
+          ["statu quo", "the current state of things"]
+        ],
+        "ex": [
+          {
+            "es": "Lo explicó <b>grosso modo</b>, sin entrar en detalles.",
+            "en": "He explained it roughly, without going into detail.",
+            "note": "no 'a' before grosso modo"
+          },
+          {
+            "es": "Vino <b>motu proprio</b>, sin que nadie se lo pidiera.",
+            "en": "He came of his own accord, without anyone asking him.",
+            "note": "motu proprio, not 'de motu propio'"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "The subjunctive lives in main clauses too: ¡Quién pudiera!, Que te vaya bien, and the literary -ra.",
+      "Master se (se me cayó, se venden) and avoid dequeísmo/queísmo (pienso que · me acuerdo de que).",
+      "Suffixes and discourse markers encode attitude; refranes and Latinisms polish the register.",
+      "You've completed A1→C2 — you now wield Spanish with near-native precision. ¡Enhorabuena!"
+    ],
+    "mistakes": [
+      {
+        "w": "Pienso de que deberíamos irnos.",
+        "r": "Pienso que deberíamos irnos.",
+        "why": "Pensar takes que with no de — adding it is dequeísmo."
+      },
+      {
+        "w": "Lo resumió a grosso modo.",
+        "r": "Lo resumió grosso modo.",
+        "why": "The Latinism is grosso modo, with no preposition a."
+      },
+      {
+        "w": "Me caí las llaves.",
+        "r": "Se me cayeron las llaves.",
+        "why": "The involuntary event needs the se construction: se me cayeron."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Estoy seguro ___ que lo conseguirás.",
+      "prompt_en": "I'm sure you'll manage it.",
+      "options": [
+        { "id": "a", "text": "de" },
+        { "id": "b", "text": "(nada)" },
+        { "id": "c", "text": "en" },
+        { "id": "d", "text": "por" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! estar seguro DE que — sin caer en queísmo.",
+      "no": "It's “estar seguro de que”; dropping the de would be queísmo."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ya te vas… Pues nada, que te ___ bien.",
+      "prompt_en": "You're off already… Well then, may it go well for you.",
+      "options": [
+        { "id": "a", "text": "vaya" },
+        { "id": "b", "text": "va" },
+        { "id": "c", "text": "vayas" },
+        { "id": "d", "text": "irá" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Deseo con que + subjuntivo → vaya.",
+      "no": "The blessing “que te vaya bien” uses the main-clause subjunctive: vaya."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I accidentally dropped the keys.”",
+      "tokens": ["Se", "me", "cayeron", "las", "llaves", "cayó", "le"],
+      "answer": ["Se", "me", "cayeron", "las", "llaves"],
+      "ok": "¡Perfecto! se de involuntariedad → se me cayeron.",
+      "no": "“Se me cayeron las llaves” — the involuntary se, with the verb agreeing with llaves (cayeron)."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Lo explicó ___ modo, sin entrar en detalles.",
+      "prompt_en": "He explained it roughly, without going into detail.",
+      "accepted": ["grosso"],
+      "ignore_accents": true,
+      "hint": "A Latin phrase meaning 'roughly' (…modo).",
+      "ok": "¡Bien! grosso modo, sin la 'a'.",
+      "no": "The Latinism is “grosso modo” (never 'a grosso modo')."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each Latin phrase to its meaning.",
+      "pairs": [
+        ["grosso modo", "roughly"],
+        ["motu proprio", "of one's own accord"],
+        ["statu quo", "the current state of things"],
+        ["a posteriori", "after the fact"]
+      ],
+      "ok": "¡Excelente! Latinismos usados con precisión.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "A decir verdad, no me convence del todo.",
+      "accepted": ["a decir verdad no me convence del todo"],
+      "ignore_accents": true,
+      "translation": "To tell the truth, it doesn't entirely convince me.",
+      "ok": "¡Correcto! “A decir verdad, no me convence del todo.”",
+      "no": "It was: “A decir verdad, no me convence del todo.” (a discourse marker framing tone)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend arrives late yet again ⏰",
+      "lines": [
+        {
+          "speaker": "Ana",
+          "es": "Ya sé, llego tarde otra vez… lo siento.",
+          "en": "I know, I'm late again… sorry."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Tranquila, más vale tarde que nunca." },
+        { "id": "b", "text": "Tranquila, vale más nunca que tarde." },
+        { "id": "c", "text": "Tranquila, más vale tarde que jamás nunca." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! El refrán es “más vale tarde que nunca”.",
+      "no": "The set proverb is “más vale tarde que nunca” — the other two garble it."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Ojalá nunca deje de aprender.",
+      "en": "May I never stop learning.",
+      "ok": "¡Perfecto! Un cierre digno de un C2. ¡Enhorabuena!",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Ojalá nunca deje de aprender.”"
+    }
+  ],
+  "vocab": [
+    { "es": "¡quién pudiera!", "en": "if only I could!" },
+    { "es": "que te vaya bien", "en": "may it go well for you" },
+    { "es": "se me cayó", "en": "I dropped it (accidentally)" },
+    { "es": "a decir verdad", "en": "to tell the truth" },
+    { "es": "grosso modo", "en": "roughly, broadly speaking" },
+    { "es": "motu proprio", "en": "of one's own accord" },
+    { "es": "más vale tarde que nunca", "en": "better late than never" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["¡quién pudiera!", "se me cayó", "a decir verdad", "grosso modo", "más vale tarde que nunca"]
+  }
+}

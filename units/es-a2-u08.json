@@ -1,0 +1,325 @@
+{
+  "unit": {
+    "id": "es-a2-u08",
+    "title": "Superlatives",
+    "subtitle": "The most, the least, and the '-ísimo' trick",
+    "level": "A2",
+    "order": 8,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Say it's the best — and the biggest",
+    "intro": "Comparatives compare two things; <b>superlatives</b> single out the top or bottom of a whole group: the most, the least, the best. Spanish builds them with <b>el/la/los/las + más/menos + adjective</b>. There's also a punchy shortcut, <b>-ísimo/a</b>, that means “extremely”.",
+    "sections": [
+      {
+        "tag": "estructura",
+        "heading": "The most / least: el/la + más/menos + adjective",
+        "body": "Use the article that matches the noun, then <b>más</b> or <b>menos</b>, then the adjective. Add <b>de</b> for the group you're comparing within:",
+        "conj": [
+          ["the tallest", "el/la más alto/a"],
+          ["the least expensive", "el/la menos caro/a"],
+          ["the most … in", "el/la más … de"]
+        ],
+        "ex": [
+          {
+            "es": "Ana es <b>la más alta de</b> la clase.",
+            "en": "Ana is the tallest in the class.",
+            "note": "la (Ana) + más + de"
+          },
+          {
+            "es": "Es <b>el menos caro de</b> la tienda.",
+            "en": "It's the least expensive in the shop.",
+            "note": "menos for 'least'"
+          }
+        ]
+      },
+      {
+        "tag": "irregulares",
+        "heading": "Irregular: el mejor / el peor",
+        "body": "As with comparatives, <b>bueno</b> and <b>malo</b> use special words — say <b>el mejor</b> and <b>el peor</b>, never “el más bueno”:",
+        "conj": [
+          ["the best", "el/la mejor"],
+          ["the worst", "el/la peor"]
+        ],
+        "ex": [
+          {
+            "es": "Es <b>el mejor</b> restaurante de la ciudad.",
+            "en": "It's the best restaurant in the city.",
+            "note": "not 'el más bueno'"
+          },
+          {
+            "es": "Fue <b>el peor</b> día del año.",
+            "en": "It was the worst day of the year.",
+            "note": "el peor = the worst"
+          }
+        ]
+      },
+      {
+        "tag": "isimo",
+        "heading": "The -ísimo shortcut: extremely",
+        "body": "Drop the final vowel of an adjective and add <b>-ísimo/a</b> to mean “extremely / super”. Watch a couple of spelling shifts (c→qu):",
+        "conj": [
+          ["grande → very big", "grandísimo"],
+          ["bueno → really good", "buenísimo"],
+          ["fácil → super easy", "facilísimo"]
+        ],
+        "ex": [
+          {
+            "es": "La comida está <b>buenísima</b>.",
+            "en": "The food is really good.",
+            "note": "buena → buenísima"
+          },
+          {
+            "es": "El examen fue <b>facilísimo</b>.",
+            "en": "The exam was super easy.",
+            "note": "fácil → facilísimo (c→c, no accent)"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "el/la/los/las + más/menos + adjective (+ de) = the most/least … (in).",
+      "Ana es la más alta de la clase.",
+      "Irregulars: el mejor (the best), el peor (the worst).",
+      "-ísimo/a means 'extremely': buenísimo, grandísimo, facilísimo.",
+      "Spelling: rico → riquísimo, largo → larguísimo."
+    ],
+    "mistakes": [
+      {
+        "w": "Es el más bueno restaurante.",
+        "r": "Es el mejor restaurante.",
+        "why": "'bueno' is irregular in the superlative too: el mejor."
+      },
+      {
+        "w": "La comida está buenísimo.",
+        "r": "La comida está buenísima.",
+        "why": "-ísimo agrees in gender: comida is feminine → buenísima."
+      },
+      {
+        "w": "Ana es la más alta en la clase.",
+        "r": "Ana es la más alta de la clase.",
+        "why": "Use 'de' (not 'en') for the group: la más alta de la clase."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ana es ___ alta de la clase.",
+      "prompt_en": "Ana is the tallest in the class.",
+      "options": [
+        {
+          "id": "a",
+          "text": "la más"
+        },
+        {
+          "id": "b",
+          "text": "más"
+        },
+        {
+          "id": "c",
+          "text": "tan"
+        },
+        {
+          "id": "d",
+          "text": "la tan"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! el/la + más + adjetivo.",
+      "no": "Superlative needs the article: “la más alta de la clase”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Es ___ restaurante de la ciudad.",
+      "prompt_en": "It's the best restaurant in the city.",
+      "options": [
+        {
+          "id": "a",
+          "text": "el más bueno"
+        },
+        {
+          "id": "b",
+          "text": "el mejor"
+        },
+        {
+          "id": "c",
+          "text": "el más mejor"
+        },
+        {
+          "id": "d",
+          "text": "el buenísimo"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! bueno → el mejor.",
+      "no": "Use the irregular “el mejor”, never 'el más bueno'."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “It's the most interesting book of all.”",
+      "tokens": [
+        "Es",
+        "el",
+        "libro",
+        "más",
+        "interesante",
+        "de",
+        "todos",
+        "la",
+        "menos"
+      ],
+      "answer": [
+        "Es",
+        "el",
+        "libro",
+        "más",
+        "interesante",
+        "de",
+        "todos"
+      ],
+      "ok": "¡Perfecto! el + noun + más + adj + de.",
+      "no": "“Es el libro más interesante de todos.” — article + más + de."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "La comida está ___. (buena → extremely good)",
+      "prompt_en": "The food is really good.",
+      "accepted": [
+        "buenísima"
+      ],
+      "ignore_accents": true,
+      "hint": "buena + -ísima, agreeing with comida.",
+      "ok": "¡Bien! buena → buenísima.",
+      "no": "Add -ísima to buena: “buenísima” (feminine)."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each adjective to its -ísimo form.",
+      "pairs": [
+        [
+          "grande",
+          "grandísimo"
+        ],
+        [
+          "bueno",
+          "buenísimo"
+        ],
+        [
+          "fácil",
+          "facilísimo"
+        ],
+        [
+          "malo",
+          "malísimo"
+        ]
+      ],
+      "ok": "¡Excelente! You've got -ísimo down.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Es la mejor película del año.",
+      "accepted": [
+        "es la mejor pelicula del ano",
+        "es la mejor pelicula del año"
+      ],
+      "ignore_accents": true,
+      "translation": "It's the best movie of the year.",
+      "ok": "¡Correcto! “Es la mejor película del año.”",
+      "no": "It was: “Es la mejor película del año.” (It's the best movie of the year.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Recommending a restaurant to a friend 🍽️",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "¿Conoces un buen restaurante por aquí?",
+          "en": "Do you know a good restaurant around here?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, es el mejor de la ciudad."
+        },
+        {
+          "id": "b",
+          "text": "Sí, es el más bueno de la ciudad."
+        },
+        {
+          "id": "c",
+          "text": "Sí, es tan bueno de la ciudad."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! el mejor de la ciudad — spot on.",
+      "no": "Use “el mejor de la ciudad” (the best in the city)."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "el mejor de la clase",
+      "en": "the best in the class",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "el más",
+      "en": "the most"
+    },
+    {
+      "es": "la mejor",
+      "en": "the best (f.)"
+    },
+    {
+      "es": "el peor",
+      "en": "the worst"
+    },
+    {
+      "es": "buenísimo",
+      "en": "really good / delicious"
+    },
+    {
+      "es": "grandísimo",
+      "en": "huge / very big"
+    },
+    {
+      "es": "facilísimo",
+      "en": "super easy"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "el más",
+      "la mejor",
+      "buenísimo",
+      "grandísimo",
+      "el peor"
+    ]
+  }
+}

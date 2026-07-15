@@ -1,0 +1,237 @@
+{
+  "unit": {
+    "id": "es-c2-u08",
+    "title": "The Little Words That Sound Native",
+    "subtitle": "Pragmatic markers and discourse fillers: pues, o sea, vamos, hombre, en plan",
+    "level": "C2",
+    "order": 8,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Muletillas: the glue of spoken Spanish",
+    "intro": "The gap between correct Spanish and <b>native</b> Spanish is often a handful of tiny words that carry almost no dictionary meaning but do enormous <b>pragmatic</b> work: they hedge, emphasize, buy thinking time, manage turns and signal your stance. Master <b>pues, o sea, vamos, hombre, en plan</b> and the rest, and your speech stops sounding translated. These are spoken and informal — save them for conversation, not formal writing.",
+    "sections": [
+      {
+        "tag": "función",
+        "heading": "Fillers and reformulators",
+        "body": "Some markers mainly fill space or repackage what you just said. <b>Pues</b> opens a turn and buys a beat (“well…”). <b>O sea</b> reformulates or clarifies (“I mean / that is”), and among younger speakers it also hedges. <b>En plan</b> is the newer quotative/approximator (“like…”), introducing an example, a manner or reported speech. <b>Bueno</b> concedes, backtracks or changes topic.",
+        "conj": [
+          ["pues", "well… (opens a turn, buys time)"],
+          ["o sea", "I mean / that is (reformulates)"],
+          ["en plan", "like… (approximates, quotes)"],
+          ["bueno", "well / anyway (concedes, shifts topic)"]
+        ],
+        "ex": [
+          {
+            "es": "—¿Vienes? —<b>Pues</b> no sé, depende de la hora.",
+            "en": "—Coming? —Well, I dunno, depends on the time.",
+            "note": "pues opens the reply and stalls"
+          },
+          {
+            "es": "Me miró <b>en plan</b> “¿y tú quién eres?”.",
+            "en": "She looked at me like, “and who are you?”",
+            "note": "en plan introduces reported manner/speech"
+          }
+        ]
+      },
+      {
+        "tag": "énfasis",
+        "heading": "Emphasis, appeal and softening",
+        "body": "Other markers colour the whole utterance. <b>Vamos</b> and <b>pero vamos</b> reinforce or sum up a stance (“I mean, really / to be honest”). <b>Hombre</b> and <b>mujer</b> (used to anyone, regardless of gender in many regions) appeal to the listener — surprise, mild protest or warmth (“come on / oh come now”). <b>Venga</b> urges, agrees or closes (“come on / all right then”). <b>Digamos</b> hedges an approximate word choice (“let's say”).",
+        "conj": [
+          ["vamos / pero vamos", "I mean, honestly (reinforces)"],
+          ["hombre / mujer", "come on / oh come now (appeal)"],
+          ["venga", "come on / all right then (urges, closes)"],
+          ["digamos", "let's say (hedges a wording)"]
+        ],
+        "ex": [
+          {
+            "es": "No es tonto, <b>hombre</b>, solo está despistado.",
+            "en": "He's not stupid, come on, he's just distracted.",
+            "note": "hombre = mild protest, appeal to listener"
+          },
+          {
+            "es": "<b>Venga</b>, nos vemos mañana y lo hablamos.",
+            "en": "All right, see you tomorrow and we'll talk it over.",
+            "note": "venga closes and agrees"
+          }
+        ]
+      },
+      {
+        "tag": "matiz",
+        "heading": "ya, mira, oye and emphatic si",
+        "body": "A final cluster manages attention and stance. <b>Mira</b> and <b>oye</b> grab the floor or flag what follows (“look… / hey, listen…”), oye often introducing a new topic or a favour. <b>Ya</b> signals understanding or (with irony) disbelief (“right / yeah, sure”). Emphatic <b>si</b> at the start of a clause — written without an accent, unlike conditional <i>si</i> and affirmative <i>sí</i> — protests or justifies: <b>¡Si no lo sabía!</b> = “But I didn't even know!”.",
+        "conj": [
+          ["mira", "look… (flags a point)"],
+          ["oye", "hey, listen… (grabs floor, new topic)"],
+          ["ya", "right / yeah, sure (understanding or irony)"],
+          ["¡si…!", "but…! (emphatic protest/justification)"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Oye</b>, ¿te importaría echarme una mano con esto?",
+            "en": "Hey, would you mind giving me a hand with this?",
+            "note": "oye opens a request"
+          },
+          {
+            "es": "—Te lo dije. —¡<b>Si</b> yo no estaba allí!",
+            "en": "—I told you. —But I wasn't even there!",
+            "note": "emphatic si: protest, no accent"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "pues stalls and opens a turn; o sea reformulates; en plan approximates or quotes (“like”).",
+      "vamos / pero vamos reinforce a stance; digamos hedges a wording.",
+      "hombre / mujer appeal to the listener; venga urges, agrees or closes.",
+      "Emphatic si (no accent) protests or justifies: ¡Si no lo sabía!"
+    ],
+    "mistakes": [
+      {
+        "w": "Sí no lo sabía, ¿por qué me culpas?",
+        "r": "¡Si no lo sabía! ¿Por qué me culpas?",
+        "why": "Emphatic protesting si takes no accent; sí (with accent) would mean the affirmative 'yes'."
+      },
+      {
+        "w": "No estoy enfadado, mujer… bien, un poco.",
+        "r": "No estoy enfadado, mujer… bueno, un poco.",
+        "why": "To concede or backtrack you need bueno; bien means 'well/fine' in the manner sense, not the discourse marker."
+      },
+      {
+        "w": "Era, como plan, muy raro todo.",
+        "r": "Era, en plan, muy raro todo.",
+        "why": "The colloquial approximator is the fixed phrase en plan, not 'como plan'."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "—Te avisé ayer. —¡___ yo no estaba en casa!",
+      "prompt_en": "—I warned you yesterday. —But I wasn't even home!",
+      "options": [
+        { "id": "a", "text": "Si" },
+        { "id": "b", "text": "Sí" },
+        { "id": "c", "text": "Así" },
+        { "id": "d", "text": "Se" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! El si enfático de protesta va sin tilde.",
+      "no": "The emphatic protest is “si” without an accent; “sí” would be the affirmative 'yes'."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No me cae mal, ___, es que no lo conozco mucho.",
+      "prompt_en": "I don't dislike him, I mean, it's just that I don't know him well.",
+      "options": [
+        { "id": "a", "text": "o sea" },
+        { "id": "b", "text": "o sea que sí" },
+        { "id": "c", "text": "sea" },
+        { "id": "d", "text": "o será" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! o sea reformula lo dicho.",
+      "no": "To reformulate/clarify you use “o sea” (I mean). The other forms change the meaning or are ungrammatical here."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Hey, would you mind giving me a hand with this?”",
+      "tokens": ["Oye", ",", "¿te", "importaría", "echarme", "una", "mano", "con", "esto", "?", "mira", "importaba"],
+      "answer": ["Oye", ",", "¿te", "importaría", "echarme", "una", "mano", "con", "esto", "?"],
+      "ok": "¡Perfecto! Oye abre la petición con naturalidad.",
+      "no": "Open the favour with “Oye” and keep the polite conditional “importaría”."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "No es tonto, ___, solo está un poco despistado.",
+      "prompt_en": "He's not stupid, come on, he's just a bit distracted.",
+      "accepted": ["hombre", "mujer"],
+      "ignore_accents": true,
+      "hint": "An appeal to the listener — a mild 'come on' that isn't gender-bound.",
+      "ok": "¡Bien! hombre apela al interlocutor.",
+      "no": "The appeal marker here is “hombre” (a mild 'come on' addressed to the listener)."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each marker to its pragmatic function.",
+      "pairs": [
+        ["pues", "stalls / opens a turn"],
+        ["o sea", "reformulates / clarifies"],
+        ["en plan", "approximates or quotes ('like')"],
+        ["venga", "urges, agrees or closes"]
+      ],
+      "ok": "¡Excelente! Cada muletilla, su función.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Pues no sé, o sea, depende de cómo lo mires.",
+      "accepted": ["pues no se, o sea, depende de como lo mires"],
+      "ignore_accents": true,
+      "translation": "Well, I dunno, I mean, it depends how you look at it.",
+      "ok": "¡Correcto! “Pues no sé, o sea, depende de cómo lo mires.”",
+      "no": "It was: “Pues no sé, o sea, depende de cómo lo mires.” (two fillers stacked, very colloquial)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend is beating himself up over a tiny mistake 😅",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "Soy un desastre, lo he hecho fatal, no sirvo para esto.",
+          "en": "I'm a disaster, I did it terribly, I'm no good at this."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Hombre, no exageres, que ha sido solo un fallo tonto." },
+        { "id": "b", "text": "Sí, tienes toda la razón, eres un desastre absoluto." },
+        { "id": "c", "text": "Vaya, en plan desastre total, digamos que sí." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Hombre + no exageres reconforta y quita hierro.",
+      "no": "The warm, reassuring reply opens with “Hombre, no exageres…”. The others agree with the self-criticism or misuse the fillers."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Pues no sé, o sea, ya veremos.",
+      "en": "Well, I dunno, I mean, we'll see.",
+      "ok": "¡Perfecto! Suena a conversación de verdad.",
+      "no": "Almost — tap “Hear it” and let pues and o sea flow casually, without pausing on them."
+    }
+  ],
+  "vocab": [
+    { "es": "pues", "en": "well… (stalls, opens a turn)" },
+    { "es": "o sea", "en": "I mean / that is (reformulates)" },
+    { "es": "en plan", "en": "like… (approximates, quotes)" },
+    { "es": "hombre", "en": "come on / oh come now (appeal)" },
+    { "es": "venga", "en": "come on / all right then" },
+    { "es": "¡si…!", "en": "but…! (emphatic protest)" },
+    { "es": "digamos", "en": "let's say (hedges a wording)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["pues", "o sea", "en plan", "hombre", "¡si…!"]
+  }
+}

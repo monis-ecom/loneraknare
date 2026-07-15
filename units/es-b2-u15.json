@@ -1,0 +1,324 @@
+{
+  "unit": {
+    "id": "es-b2-u15",
+    "title": "Concession, cause, purpose & result",
+    "subtitle": "aunque, porque, para que, así que — and the mood each one demands",
+    "level": "B2",
+    "order": 15,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Link your ideas with precision",
+    "intro": "Sophisticated Spanish connects clauses: <b>concession</b> (aunque), <b>cause</b> (porque, como), <b>purpose</b> (para que) and <b>result</b> (así que, tan… que). The tricky part is <b>mood</b>: <b>aunque</b> + indicative states a real fact, but <b>aunque</b> + subjunctive concedes a hypothesis. Purpose clauses always take the subjunctive. Master these four connectors and your Spanish gains real nuance.",
+    "sections": [
+      {
+        "tag": "concesión",
+        "heading": "Concession: aunque + indicative vs subjunctive",
+        "body": "<b>Aunque</b> + indicative = a real, known fact. <b>Aunque</b> + subjunctive = a hypothesis or a concession “even if”. Also: <b>a pesar de que</b>, <b>por más que</b>:",
+        "ex": [
+          {
+            "es": "<b>Aunque llueve</b>, salgo.",
+            "en": "Even though it's raining, I'm going out.",
+            "note": "real fact → indicative (llueve)"
+          },
+          {
+            "es": "<b>Aunque llueva</b>, saldré.",
+            "en": "Even if it rains, I'll go out.",
+            "note": "hypothesis → subjunctive (llueva)"
+          }
+        ]
+      },
+      {
+        "tag": "causa",
+        "heading": "Cause: porque, ya que, como, puesto que",
+        "body": "<b>Porque</b> answers “why”. <b>Como</b> states a cause and goes at the <b>start</b> of the sentence. <b>Ya que / puesto que / debido a que</b> introduce a known reason:",
+        "ex": [
+          {
+            "es": "<b>Como llegué tarde</b>, perdí el tren.",
+            "en": "Since I arrived late, I missed the train.",
+            "note": "como = cause, sentence-initial"
+          },
+          {
+            "es": "No fui <b>porque</b> estaba enfermo.",
+            "en": "I didn't go because I was ill.",
+            "note": "porque answers 'why'"
+          }
+        ]
+      },
+      {
+        "tag": "finalidad",
+        "heading": "Purpose: para que + subjunctive / para + inf",
+        "body": "Same subject → <b>para</b> + infinitive. Different subject → <b>para que</b> + subjunctive. Also <b>a fin de que</b> + subjunctive:",
+        "ex": [
+          {
+            "es": "Te lo explico <b>para que</b> lo <b>entiendas</b>.",
+            "en": "I'm explaining it so that you understand it.",
+            "note": "different subject → para que + subjunctive"
+          },
+          {
+            "es": "Estudio <b>para aprobar</b> el examen.",
+            "en": "I study (in order) to pass the exam.",
+            "note": "same subject → para + infinitive"
+          }
+        ]
+      },
+      {
+        "tag": "consecuencia",
+        "heading": "Result: así que, de modo que, tan/tanto… que",
+        "body": "<b>Así que / de modo que</b> = “so”. <b>Tan</b> + adjective/adverb + que; <b>tanto/-a/-os/-as</b> + noun + que, or <b>verb</b> + <b>tanto que</b>. <b>De ahí que</b> takes the subjunctive:",
+        "ex": [
+          {
+            "es": "Estaba <b>tan cansado que</b> me dormí.",
+            "en": "I was so tired that I fell asleep.",
+            "note": "tan + adjective + que"
+          },
+          {
+            "es": "<b>Habló tanto que</b> se quedó sin voz.",
+            "en": "He talked so much that he lost his voice.",
+            "note": "verb + tanto que"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "aunque + indicative = real fact (Aunque llueve, salgo); aunque + subjunctive = hypothesis (Aunque llueva, saldré).",
+      "Cause: porque, ya que, puesto que, debido a que; como goes sentence-initial.",
+      "Purpose: para + infinitive (same subject), para que + subjunctive (different subject).",
+      "Result: así que, de modo que; tan + adj/adv + que, tanto + noun/verb + que; de ahí que + subjunctive."
+    ],
+    "mistakes": [
+      {
+        "w": "Aunque llueve mañana, saldré.",
+        "r": "Aunque llueva mañana, saldré.",
+        "why": "A future hypothesis takes the subjunctive: aunque llueva."
+      },
+      {
+        "w": "Estaba tanto cansado que me dormí.",
+        "r": "Estaba tan cansado que me dormí.",
+        "why": "Before an adjective use tan, not tanto: tan cansado."
+      },
+      {
+        "w": "Te lo explico para que lo entiendes.",
+        "r": "Te lo explico para que lo entiendas.",
+        "why": "para que always takes the subjunctive: entiendas."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ llueva mañana, iré igualmente (hypothesis).",
+      "prompt_en": "Even if it rains tomorrow, I'll go anyway.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aunque"
+        },
+        {
+          "id": "b",
+          "text": "Porque"
+        },
+        {
+          "id": "c",
+          "text": "Así que"
+        },
+        {
+          "id": "d",
+          "text": "Para que"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! concesión hipotética: aunque + subjuntivo (llueva).",
+      "no": "Concession “even if” uses aunque + subjunctive: “Aunque llueva…”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Te lo digo para que lo ___ (different subject).",
+      "prompt_en": "I'm telling you so that you understand it.",
+      "options": [
+        {
+          "id": "a",
+          "text": "entiendas"
+        },
+        {
+          "id": "b",
+          "text": "entiendes"
+        },
+        {
+          "id": "c",
+          "text": "entender"
+        },
+        {
+          "id": "d",
+          "text": "entenderás"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! para que + subjuntivo: entiendas.",
+      "no": "para que always takes the subjunctive: “para que lo entiendas”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I was so tired that I fell asleep.”",
+      "tokens": [
+        "Estaba",
+        "tan",
+        "cansado",
+        "que",
+        "me",
+        "dormí",
+        "tanto",
+        "porque"
+      ],
+      "answer": [
+        "Estaba",
+        "tan",
+        "cansado",
+        "que",
+        "me",
+        "dormí"
+      ],
+      "ok": "¡Perfecto! tan + adjetivo + que: tan cansado que.",
+      "no": "Before an adjective use tan: “Estaba tan cansado que me dormí”."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "___ llegué tarde, perdí el tren.",
+      "prompt_en": "Since I arrived late, I missed the train.",
+      "accepted": [
+        "como"
+      ],
+      "ignore_accents": true,
+      "hint": "A cause connector that goes at the start of the sentence.",
+      "ok": "¡Bien! como = causa, al inicio de la frase.",
+      "no": "A sentence-initial cause uses como: “Como llegué tarde, perdí el tren”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each connector to its function.",
+      "pairs": [
+        [
+          "aunque",
+          "concession"
+        ],
+        [
+          "porque",
+          "cause"
+        ],
+        [
+          "para que",
+          "purpose"
+        ],
+        [
+          "así que",
+          "result"
+        ]
+      ],
+      "ok": "¡Excelente! Concesión, causa, finalidad y consecuencia, claras.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Habló tanto que se quedó sin voz.",
+      "accepted": [
+        "hablo tanto que se quedo sin voz"
+      ],
+      "ignore_accents": true,
+      "translation": "He talked so much that he lost his voice.",
+      "ok": "¡Correcto! “Habló tanto que se quedó sin voz.”",
+      "no": "It was: “Habló tanto que se quedó sin voz.” (verb + tanto que)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Deciding whether to go to the beach despite the forecast 🌦️",
+      "lines": [
+        {
+          "speaker": "Sofía",
+          "es": "Dicen que quizá llueva esta tarde. ¿Vamos a la playa igualmente?",
+          "en": "They say it might rain this afternoon. Shall we go to the beach anyway?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, aunque llueva, vamos."
+        },
+        {
+          "id": "b",
+          "text": "Sí, aunque llueve seguro, vamos."
+        },
+        {
+          "id": "c",
+          "text": "Sí, para que llueva, vamos."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! hipótesis futura → aunque + subjuntivo (llueva).",
+      "no": "For an uncertain future, use aunque + subjunctive: “aunque llueva, vamos”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Aunque llueva, saldré, así que no te preocupes",
+      "en": "Even if it rains, I'll go out, so don't worry",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “aunque llueva… así que”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "aunque",
+      "en": "although / even if"
+    },
+    {
+      "es": "a pesar de que",
+      "en": "despite the fact that"
+    },
+    {
+      "es": "para que",
+      "en": "so that (+ subjunctive)"
+    },
+    {
+      "es": "así que",
+      "en": "so / therefore"
+    },
+    {
+      "es": "tan… que",
+      "en": "so… that"
+    },
+    {
+      "es": "puesto que",
+      "en": "since / given that"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "aunque",
+      "a pesar de que",
+      "para que",
+      "así que",
+      "tan… que"
+    ]
+  }
+}

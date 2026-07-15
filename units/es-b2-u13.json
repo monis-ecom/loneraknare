@@ -1,0 +1,350 @@
+{
+  "unit": {
+    "id": "es-b2-u13",
+    "title": "Reported speech (advanced)",
+    "subtitle": "Full estilo indirecto: statements, questions, requests, and every tense shift",
+    "level": "B2",
+    "order": 13,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Retell any conversation with precision",
+    "intro": "At B2 you master the <b>estilo indirecto</b> completely. A past reporting verb (<b>dijo</b>, <b>preguntó</b>, <b>pidió</b>) forces the reported clause back in time, questions restructure with <b>si</b> or a question word, and requests demand the <b>imperfect subjunctive</b>. On top of that, words like <b>hoy</b> and <b>aquí</b> shift too. Get all three layers right and your reported speech sounds native.",
+    "sections": [
+      {
+        "tag": "afirmaciones",
+        "heading": "Statements: dijo que + tense shift",
+        "body": "With a past reporting verb, the reported tense steps back one level. Learn the three core shifts:",
+        "conj": [
+          [
+            "present → imperfect",
+            "«Estudio» → dijo que estudiaba"
+          ],
+          [
+            "preterite / perfect → pluperfect",
+            "«Terminé» → dijo que había terminado"
+          ],
+          [
+            "future → conditional",
+            "«Vendré» → dijo que vendría"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "«He terminado» → <b>Comentó que había terminado</b>.",
+            "en": "“I've finished” → He remarked that he had finished.",
+            "note": "perfect he terminado → pluperfect había terminado"
+          },
+          {
+            "es": "«Lo haré» → <b>Añadió que lo haría</b>.",
+            "en": "“I'll do it” → He added that he would do it.",
+            "note": "future haré → conditional haría"
+          }
+        ]
+      },
+      {
+        "tag": "preguntas",
+        "heading": "Questions: preguntó si / qué / dónde / cuándo",
+        "body": "Yes/no questions become <b>preguntó si</b>. Question words (<b>qué, dónde, cuándo</b>) stay, but the tense still shifts back:",
+        "ex": [
+          {
+            "es": "«¿Has terminado?» → Me <b>preguntó si había terminado</b>.",
+            "en": "“Have you finished?” → She asked me whether I had finished.",
+            "note": "¿…? → preguntó si + pluperfect"
+          },
+          {
+            "es": "«¿Dónde vives?» → <b>Preguntó dónde</b> vivía.",
+            "en": "“Where do you live?” → He asked where I lived.",
+            "note": "keep dónde, shift vives → vivía"
+          }
+        ]
+      },
+      {
+        "tag": "peticiones",
+        "heading": "Commands & requests: pidió / dijo que + imperfect subjunctive",
+        "body": "An order or request becomes <b>pedir/decir que</b> + the <b>imperfect subjunctive</b> (-ara / -iera). This is the shift learners forget most:",
+        "ex": [
+          {
+            "es": "«Ven» → Me <b>pidió que viniera</b>.",
+            "en": "“Come” → He asked me to come.",
+            "note": "pidió que + viniera (subjunctive)"
+          },
+          {
+            "es": "«Esperad» → Nos <b>dijo que esperáramos</b>.",
+            "en": "“Wait” → He told us to wait.",
+            "note": "decir que + esperáramos, a request not a statement"
+          }
+        ]
+      },
+      {
+        "tag": "tiempo y lugar",
+        "heading": "Time & place shifts",
+        "body": "When you report later or elsewhere, deictic words move too:",
+        "conj": [
+          [
+            "hoy → aquel día",
+            "«Salgo hoy» → dijo que salía aquel día"
+          ],
+          [
+            "mañana → al día siguiente",
+            "«Iré mañana» → dijo que iría al día siguiente"
+          ],
+          [
+            "aquí → allí",
+            "«Estoy aquí» → dijo que estaba allí"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "«Llego mañana» → <b>Explicó que llegaba al día siguiente</b>.",
+            "en": "“I arrive tomorrow” → She explained that she was arriving the next day.",
+            "note": "mañana → al día siguiente"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Statements: dijo/comentó/añadió que + tense shift (present→imperfect, preterite/perfect→pluperfect, future→conditional).",
+      "Questions: preguntó si (yes/no) or preguntó qué/dónde/cuándo, tense still shifts.",
+      "Requests & commands: pidió/dijo que + imperfect subjunctive (viniera, esperáramos).",
+      "Shift time and place too: hoy→aquel día, mañana→al día siguiente, aquí→allí."
+    ],
+    "mistakes": [
+      {
+        "w": "Dijo que estudio mucho.",
+        "r": "Dijo que estudiaba mucho.",
+        "why": "After a past reporting verb, the present estudio shifts to the imperfect estudiaba."
+      },
+      {
+        "w": "Me pidió que vengo pronto.",
+        "r": "Me pidió que viniera pronto.",
+        "why": "A reported request needs the imperfect subjunctive (viniera), not the present indicative."
+      },
+      {
+        "w": "Me preguntó si he terminado.",
+        "r": "Me preguntó si había terminado.",
+        "why": "After a past preguntó, the perfect he terminado shifts to the pluperfect había terminado."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "«Estudio todos los días» → Dijo que ___ todos los días.",
+      "prompt_en": "“I study every day” → He said he studied every day.",
+      "options": [
+        {
+          "id": "a",
+          "text": "estudiaba"
+        },
+        {
+          "id": "b",
+          "text": "estudio"
+        },
+        {
+          "id": "c",
+          "text": "estudiará"
+        },
+        {
+          "id": "d",
+          "text": "estudie"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! presente → imperfecto: estudiaba.",
+      "no": "The present “estudio” shifts to the imperfect: “Dijo que estudiaba”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "«¿Has terminado?» → Me preguntó si ___ terminado.",
+      "prompt_en": "“Have you finished?” → She asked me whether I had finished.",
+      "options": [
+        {
+          "id": "a",
+          "text": "había"
+        },
+        {
+          "id": "b",
+          "text": "he"
+        },
+        {
+          "id": "c",
+          "text": "habré"
+        },
+        {
+          "id": "d",
+          "text": "haya"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! perfecto → pluscuamperfecto: había terminado.",
+      "no": "The perfect “he terminado” shifts to the pluperfect: “si había terminado”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “He asked me to come the next day.”",
+      "tokens": [
+        "Me",
+        "pidió",
+        "que",
+        "viniera",
+        "al",
+        "día",
+        "siguiente",
+        "vengo",
+        "mañana"
+      ],
+      "answer": [
+        "Me",
+        "pidió",
+        "que",
+        "viniera",
+        "al",
+        "día",
+        "siguiente"
+      ],
+      "ok": "¡Perfecto! pedir que + subjuntivo (viniera) y mañana → al día siguiente.",
+      "no": "“Me pidió que viniera al día siguiente” — request → subjunctive, and mañana shifts."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "«Esperad un momento» → Nos dijo que ___ un momento.",
+      "prompt_en": "“Wait a moment” → He told us to wait a moment.",
+      "accepted": [
+        "esperáramos",
+        "esperásemos"
+      ],
+      "ignore_accents": true,
+      "hint": "A command becomes the imperfect subjunctive of esperar (nosotros form).",
+      "ok": "¡Bien! decir que como petición → esperáramos.",
+      "no": "A reported command uses the imperfect subjunctive: “que esperáramos”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each direct quote to its reported form.",
+      "pairs": [
+        [
+          "«Estudio»",
+          "Dijo que estudiaba"
+        ],
+        [
+          "«Terminé»",
+          "Dijo que había terminado"
+        ],
+        [
+          "«Vendré»",
+          "Dijo que vendría"
+        ],
+        [
+          "«Ven»",
+          "Me pidió que viniera"
+        ]
+      ],
+      "ok": "¡Excelente! Dominas los cuatro casos del estilo indirecto.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Me preguntó si había terminado el trabajo.",
+      "accepted": [
+        "me pregunto si habia terminado el trabajo"
+      ],
+      "ignore_accents": true,
+      "translation": "He asked me whether I had finished the work.",
+      "ok": "¡Correcto! “Me preguntó si había terminado el trabajo.”",
+      "no": "It was: “Me preguntó si había terminado el trabajo.” (He asked whether I had finished the work.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "You're relaying what the boss told the team 🗂️",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Qué nos pidió el jefe?",
+          "en": "What did the boss ask us to do?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Nos pidió que esperáramos hasta el lunes."
+        },
+        {
+          "id": "b",
+          "text": "Nos pidió que esperamos hasta el lunes."
+        },
+        {
+          "id": "c",
+          "text": "Nos pide que esperar hasta el lunes."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! pedir que + subjuntivo imperfecto: esperáramos.",
+      "no": "A reported request takes the imperfect subjunctive: “Nos pidió que esperáramos”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Me pidió que viniera al día siguiente",
+      "en": "He asked me to come the next day",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “pidió que viniera”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "dijo que",
+      "en": "he/she said that"
+    },
+    {
+      "es": "me preguntó si",
+      "en": "he/she asked me whether"
+    },
+    {
+      "es": "me pidió que",
+      "en": "he/she asked me to"
+    },
+    {
+      "es": "sugirió que",
+      "en": "he/she suggested that"
+    },
+    {
+      "es": "al día siguiente",
+      "en": "the next day"
+    },
+    {
+      "es": "añadió que",
+      "en": "he/she added that"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "dijo que",
+      "me preguntó si",
+      "me pidió que",
+      "sugirió que",
+      "al día siguiente"
+    ]
+  }
+}

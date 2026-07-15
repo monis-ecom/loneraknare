@@ -1,0 +1,237 @@
+{
+  "unit": {
+    "id": "es-c2-u09",
+    "title": "Reading the Room",
+    "subtitle": "Register shifting: colloquial, neutral, formal and the art of usted",
+    "level": "C2",
+    "order": 9,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "One idea, four registers",
+    "intro": "True mastery is not knowing the fanciest word — it is choosing the <b>right</b> one for the situation and gliding between <b>colloquial, neutral, formal</b> and <b>academic</b> without a bump. At C2 you read the room: you pick the pronoun (<b>tú/vosotros</b> vs. <b>usted/ustedes</b>), soften requests to the degree the moment demands, and reach for euphemism where bluntness would jar. Same idea, different clothes.",
+    "sections": [
+      {
+        "tag": "registro",
+        "heading": "The register ladder",
+        "body": "The same message climbs a ladder from intimate to academic. Compare <b>“Oye, ¿me echas una mano?”</b> (colloquial) → <b>“¿Me puedes ayudar?”</b> (neutral) → <b>“¿Sería tan amable de ayudarme?”</b> (formal) → <b>“Se agradecería la colaboración de los asistentes”</b> (academic/impersonal). Higher registers favour <b>usted</b>, the conditional, impersonal <b>se</b>, nominalization and Latinate vocabulary; lower ones favour <b>tú</b>, direct imperatives and everyday words.",
+        "conj": [
+          ["colloquial", "Oye, ¿me echas una mano?"],
+          ["neutral", "¿Me puedes ayudar?"],
+          ["formal", "¿Sería tan amable de ayudarme?"],
+          ["academic", "Se agradecería su colaboración"]
+        ],
+        "ex": [
+          {
+            "es": "En el correo escribí “<b>Le agradecería que</b> me <b>enviara</b> el informe”.",
+            "en": "In the email I wrote, “I'd be grateful if you could send me the report.”",
+            "note": "formal request → conditional + imperfect subj."
+          },
+          {
+            "es": "A mi hermano le diría “<b>pásame</b> el informe y ya”.",
+            "en": "To my brother I'd just say, “send me the report, that's it.”",
+            "note": "same request, colloquial tú"
+          }
+        ]
+      },
+      {
+        "tag": "tratamiento",
+        "heading": "The tú/usted axis as social distance",
+        "body": "Switching between <b>tú</b> and <b>usted</b> is a live social signal, not a fixed rule. Moving to <b>usted</b> marks respect or distance (and, pointedly, can freeze someone out mid-argument); offering <b>tú</b> — <b>“podemos tutearnos”</b> — closes distance. Note the geography: much of Latin America has no <b>vosotros</b> and uses <b>ustedes</b> for every plural 'you', while parts use <b>vos</b>; peninsular Spanish keeps <b>vosotros</b> for informal plural.",
+        "conj": [
+          ["tú / vosotros", "informal (Spain keeps vosotros)"],
+          ["usted / ustedes", "formal; ustedes = all plural in L. America"],
+          ["¿nos tuteamos?", "shall we use tú? (closing distance)"],
+          ["tratar de usted", "to address as usted (respect/distance)"]
+        ],
+        "ex": [
+          {
+            "es": "Cuando se enfadó, empezó a <b>tratarme de usted</b> para marcar distancia.",
+            "en": "When she got angry, she started addressing me as usted to mark distance.",
+            "note": "switch to usted = social coldness"
+          },
+          {
+            "es": "Tras un rato, el cliente dijo: “<b>Podemos tutearnos</b>, ¿no?”.",
+            "en": "After a while the client said, “We can use tú, right?”",
+            "note": "invitation to close distance"
+          }
+        ]
+      },
+      {
+        "tag": "eufemismo",
+        "heading": "Euphemism, correspondence and softened requests",
+        "body": "High register leans on <b>euphemism</b> and political correctness: <b>persona sin hogar</b> (not 'mendigo'), <b>personas de la tercera edad</b> (not 'viejos'), <b>estar en paro</b> (softer than 'no tener trabajo'). Formal letters run on fixed frames: openings <b>Estimado/a…</b> and <b>A la atención de…</b>, closings <b>Atentamente</b> and <b>Le saluda atentamente</b>. And you soften requests with the conditional plus the subjunctive: <b>¿Sería tan amable de…?</b>, <b>Le agradecería que + imperfecto de subjuntivo</b>.",
+        "conj": [
+          ["persona sin hogar", "homeless person (not 'mendigo')"],
+          ["de la tercera edad", "elderly (not 'viejo')"],
+          ["Estimado/a…", "Dear… (formal opening)"],
+          ["Le saluda atentamente", "Yours faithfully (closing)"]
+        ],
+        "ex": [
+          {
+            "es": "<b>A la atención de</b>l Departamento de Recursos Humanos:",
+            "en": "For the attention of the Human Resources Department:",
+            "note": "formal correspondence frame"
+          },
+          {
+            "es": "<b>¿Sería tan amable de</b> confirmarme la cita antes del viernes?",
+            "en": "Would you be so kind as to confirm the appointment before Friday?",
+            "note": "conditional softener + de + infinitive"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Match the register to the room: colloquial → neutral → formal → academic, same idea reworded.",
+      "Switching to usted signals respect or distance; offering tú (¿nos tuteamos?) closes it.",
+      "L. America uses ustedes for all plural 'you'; Spain keeps vosotros for the informal plural.",
+      "Formal requests soften with the conditional + subjunctive: ¿Sería tan amable de…?, Le agradecería que + imperfecto de subjuntivo."
+    ],
+    "mistakes": [
+      {
+        "w": "Le agradecería que me envía el informe.",
+        "r": "Le agradecería que me enviara el informe.",
+        "why": "Le agradecería que triggers the subjunctive; with the conditional the natural pairing is the imperfect subjunctive enviara."
+      },
+      {
+        "w": "Estimado señor, ¿me puedes mandar los datos?",
+        "r": "Estimado señor: ¿sería tan amable de mandarme los datos?",
+        "why": "Mixing a formal opening (Estimado señor) with informal tú (puedes) clashes; keep the register consistent with usted."
+      },
+      {
+        "w": "En el barrio hay muchos viejos que no tienen trabajo.",
+        "r": "En el barrio hay muchas personas de la tercera edad en paro.",
+        "why": "Formal/considerate register prefers the euphemisms de la tercera edad and en paro over blunt viejos / no tener trabajo."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Le agradecería que me ___ el informe cuanto antes.",
+      "prompt_en": "I'd be grateful if you could send me the report as soon as possible.",
+      "options": [
+        { "id": "a", "text": "enviara" },
+        { "id": "b", "text": "envía" },
+        { "id": "c", "text": "enviará" },
+        { "id": "d", "text": "envíe" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! condicional + imperfecto de subjuntivo → enviara.",
+      "no": "“Le agradecería que” pairs with the imperfect subjunctive: “enviara”. Indicative or future don't fit."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "En un correo formal, la despedida más adecuada es:",
+      "prompt_en": "In a formal email, the most appropriate closing is:",
+      "options": [
+        { "id": "a", "text": "Le saluda atentamente" },
+        { "id": "b", "text": "Un abrazo muy fuerte" },
+        { "id": "c", "text": "Nos vemos, ¡chao!" },
+        { "id": "d", "text": "Besos y que te vaya bien" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! “Le saluda atentamente” es la fórmula formal.",
+      "no": "The formal closing is “Le saluda atentamente”; the others are affectionate or colloquial."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Would you be so kind as to confirm the appointment?”",
+      "tokens": ["¿Sería", "tan", "amable", "de", "confirmar", "la", "cita", "?", "puedes", "amablemente"],
+      "answer": ["¿Sería", "tan", "amable", "de", "confirmar", "la", "cita", "?"],
+      "ok": "¡Perfecto! Fórmula formal con condicional + de + infinitivo.",
+      "no": "The formal softener is “¿Sería tan amable de confirmar la cita?” — conditional + de + infinitive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "El ayuntamiento abrió un albergue para personas sin ___.",
+      "prompt_en": "The council opened a shelter for homeless people.",
+      "accepted": ["hogar"],
+      "ignore_accents": true,
+      "hint": "The euphemism 'persona sin ___' replaces the blunt 'mendigo'.",
+      "ok": "¡Bien! persona sin hogar, el eufemismo cuidado.",
+      "no": "The considerate term is “persona sin hogar” (homeless person), softer than 'mendigo'."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each phrasing to its register.",
+      "pairs": [
+        ["Oye, ¿me echas una mano?", "colloquial"],
+        ["¿Me puedes ayudar?", "neutral"],
+        ["¿Sería tan amable de ayudarme?", "formal"],
+        ["Se agradecería su colaboración", "academic / impersonal"]
+      ],
+      "ok": "¡Excelente! Has leído la escalera de registro.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Cuando se enfadó, empezó a tratarme de usted.",
+      "accepted": ["cuando se enfado, empezo a tratarme de usted"],
+      "ignore_accents": true,
+      "translation": "When she got angry, she started addressing me as usted.",
+      "ok": "¡Correcto! “Cuando se enfadó, empezó a tratarme de usted.”",
+      "no": "It was: “Cuando se enfadó, empezó a tratarme de usted.” (the switch to usted marks distance)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "You're writing to a company's HR department about a job posting 📧",
+      "lines": [
+        {
+          "speaker": "Borrador",
+          "es": "Tienes que empezar el correo. ¿Cuál es la apertura más adecuada?",
+          "en": "You need to start the email. Which opening is most appropriate?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Estimados señores: me dirijo a ustedes en relación con la oferta publicada." },
+        { "id": "b", "text": "¡Hola, chicos! Os escribo por lo del curro que habéis colgado." },
+        { "id": "c", "text": "Buenas, oye, que quería preguntaros una cosita del anuncio." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Apertura formal, usted y léxico neutro.",
+      "no": "A formal HR email opens with “Estimados señores…” and usted, not with colloquial chicos/os or 'cosita'."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "¿Sería tan amable de confirmarme la cita?",
+      "en": "Would you be so kind as to confirm the appointment for me?",
+      "ok": "¡Perfecto! Tono formal impecable.",
+      "no": "Almost — tap “Hear it” and keep the measured, courteous tone of the formal request."
+    }
+  ],
+  "vocab": [
+    { "es": "¿Sería tan amable de…?", "en": "Would you be so kind as to…?" },
+    { "es": "Le agradecería que", "en": "I'd be grateful if you would (+ subjunctive)" },
+    { "es": "Estimado/a…", "en": "Dear… (formal opening)" },
+    { "es": "Le saluda atentamente", "en": "Yours faithfully (formal closing)" },
+    { "es": "A la atención de", "en": "For the attention of" },
+    { "es": "persona sin hogar", "en": "homeless person (euphemism)" },
+    { "es": "tratar de usted", "en": "to address as usted (respect/distance)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["¿Sería tan amable de…?", "Le agradecería que", "Le saluda atentamente", "A la atención de", "persona sin hogar"]
+  }
+}

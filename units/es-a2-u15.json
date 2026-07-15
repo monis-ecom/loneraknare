@@ -1,0 +1,343 @@
+{
+  "unit": {
+    "id": "es-a2-u15",
+    "title": "Negative & formal commands",
+    "subtitle": "Telling someone not to do something, and being formal",
+    "level": "A2",
+    "order": 15,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Say 'don't' — and give orders politely",
+    "intro": "Last unit you learned <b>“Habla!”</b> for a friend. But to say <b>“Don't speak!”</b> — or to give an order to someone you address as <b>usted</b> — Spanish switches to a special form. Both use the <b>subjunctive</b> command endings: flip the vowel of the verb.",
+    "sections": [
+      {
+        "tag": "negativas",
+        "heading": "Negative tú: flip the vowel",
+        "body": "For negative <b>tú</b> commands, take the yo form, drop the <b>-o</b>, and add the <b>opposite</b> vowel: <b>-ar</b> verbs take <b>-es</b>, and <b>-er/-ir</b> verbs take <b>-as</b>:",
+        "conj": [
+          [
+            "hablar",
+            "no hables"
+          ],
+          [
+            "comer",
+            "no comas"
+          ],
+          [
+            "escribir",
+            "no escribas"
+          ],
+          [
+            "ir",
+            "no vayas"
+          ],
+          [
+            "hacer",
+            "no hagas"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>No hables</b> tan rápido.",
+            "en": "Don't speak so fast.",
+            "note": "hablar → no hables"
+          },
+          {
+            "es": "<b>No vayas</b> sin mí.",
+            "en": "Don't go without me.",
+            "note": "ir → no vayas"
+          }
+        ]
+      },
+      {
+        "tag": "formal",
+        "heading": "Formal usted commands",
+        "body": "For someone you address as <b>usted</b>, use the same subjunctive form for both <b>affirmative</b> and <b>negative</b>. The <b>-ar</b> verbs end in <b>-e</b>, the <b>-er/-ir</b> verbs in <b>-a</b>:",
+        "conj": [
+          [
+            "hablar",
+            "hable"
+          ],
+          [
+            "comer",
+            "coma"
+          ],
+          [
+            "venir",
+            "venga"
+          ],
+          [
+            "hacer",
+            "haga"
+          ],
+          [
+            "hablar (neg.)",
+            "no hable"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Hable</b> más despacio, por favor.",
+            "en": "Speak more slowly, please.",
+            "note": "polite: usted"
+          },
+          {
+            "es": "<b>Venga</b> por aquí, señor.",
+            "en": "Come this way, sir.",
+            "note": "venir → venga"
+          }
+        ]
+      },
+      {
+        "tag": "contraste",
+        "heading": "Friend vs. formal, side by side",
+        "body": "Notice how the same idea shifts with formality. The negative tú and the usted forms both come from the subjunctive:",
+        "ex": [
+          {
+            "es": "<b>No hagas</b> eso. / <b>No haga</b> eso.",
+            "en": "Don't do that. (friend / formal)",
+            "note": "hagas = tú, haga = usted"
+          },
+          {
+            "es": "<b>No comas</b> ahí. / <b>No coma</b> ahí.",
+            "en": "Don't eat there. (friend / formal)",
+            "note": "comas = tú, coma = usted"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Negative tú uses the subjunctive: no hables, no comas, no escribas.",
+      "Irregulars: no vayas (ir), no hagas (hacer).",
+      "Usted commands use the same subjunctive form for yes and no: hable, coma, venga, haga; no hable.",
+      "-ar verbs flip to -e(s), -er/-ir verbs flip to -a(s)."
+    ],
+    "mistakes": [
+      {
+        "w": "No habla tan rápido.",
+        "r": "No hables tan rápido.",
+        "why": "A negative tú command needs the subjunctive: no hables, not no habla."
+      },
+      {
+        "w": "No comes eso.",
+        "r": "No comas eso.",
+        "why": "-er verbs flip to -as in the negative command: no comas."
+      },
+      {
+        "w": "Habla más despacio, señor. (formal)",
+        "r": "Hable más despacio, señor.",
+        "why": "For usted, use the subjunctive form: hable, not habla."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¡___ tan rápido! (tú)",
+      "prompt_en": "Don't speak so fast!",
+      "options": [
+        {
+          "id": "a",
+          "text": "No habla"
+        },
+        {
+          "id": "b",
+          "text": "No hables"
+        },
+        {
+          "id": "c",
+          "text": "No hablas"
+        },
+        {
+          "id": "d",
+          "text": "No hablar"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! Negative tú → no hables.",
+      "no": "Negative tú uses the subjunctive: “No hables”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ más despacio, por favor. (usted)",
+      "prompt_en": "Speak more slowly, please. (formal)",
+      "options": [
+        {
+          "id": "a",
+          "text": "Habla"
+        },
+        {
+          "id": "b",
+          "text": "Hablas"
+        },
+        {
+          "id": "c",
+          "text": "Hable"
+        },
+        {
+          "id": "d",
+          "text": "Hablar"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Exacto! usted → hable.",
+      "no": "The formal command uses the subjunctive: “Hable”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Don't go without me.” (tú)",
+      "tokens": [
+        "No",
+        "vayas",
+        "sin",
+        "mí",
+        "vas",
+        "va"
+      ],
+      "answer": [
+        "No",
+        "vayas",
+        "sin",
+        "mí"
+      ],
+      "ok": "¡Perfecto! ir → no vayas.",
+      "no": "“No vayas sin mí” — ir's negative command is no vayas."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "No ___ eso, es peligroso. (hacer, tú)",
+      "prompt_en": "Don't do that, it's dangerous.",
+      "accepted": [
+        "hagas"
+      ],
+      "ignore_accents": true,
+      "hint": "hacer → yo hago → no hag__.",
+      "ok": "¡Bien! hacer → no hagas.",
+      "no": "The negative tú command is “no hagas”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each verb to its formal (usted) command.",
+      "pairs": [
+        [
+          "hablar",
+          "hable"
+        ],
+        [
+          "comer",
+          "coma"
+        ],
+        [
+          "venir",
+          "venga"
+        ],
+        [
+          "hacer",
+          "haga"
+        ]
+      ],
+      "ok": "¡Excelente! Formal commands, sorted.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "No hables tan rápido.",
+      "accepted": [
+        "no hables tan rapido"
+      ],
+      "ignore_accents": true,
+      "translation": "Don't speak so fast.",
+      "ok": "¡Correcto! “No hables tan rápido.”",
+      "no": "It was: “No hables tan rápido.” (Don't speak so fast.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A customer asks the waiter to slow down 🍽️",
+      "lines": [
+        {
+          "speaker": "Camarero",
+          "es": "Hoytenemoslassiguientesopciones...",
+          "en": "Today we have the following options..."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Hable más despacio, por favor."
+        },
+        {
+          "id": "b",
+          "text": "Habla más despacio, por favor."
+        },
+        {
+          "id": "c",
+          "text": "No habla despacio."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Formal and polite: usted → hable.",
+      "no": "To a waiter you use usted: “Hable más despacio, por favor.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "No hagas eso.",
+      "en": "Don't do that.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “No hagas eso.”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "no hables",
+      "en": "don't speak! (tú)"
+    },
+    {
+      "es": "hable usted",
+      "en": "speak! (formal)"
+    },
+    {
+      "es": "no vayas",
+      "en": "don't go! (tú)"
+    },
+    {
+      "es": "venga",
+      "en": "come! (formal)"
+    },
+    {
+      "es": "no hagas",
+      "en": "don't do it! (tú)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "no hables",
+      "hable usted",
+      "no vayas",
+      "venga",
+      "no hagas"
+    ]
+  }
+}

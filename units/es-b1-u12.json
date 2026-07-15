@@ -1,0 +1,377 @@
+{
+  "unit": {
+    "id": "es-b1-u12",
+    "title": "Por vs para — advanced & set phrases",
+    "subtitle": "Deeper por/para and the fixed phrases natives use",
+    "level": "B1",
+    "order": 12,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "From the rules to the phrases natives actually say",
+    "intro": "You met <b>por</b> and <b>para</b> at A2. Now we go deeper — the finer uses of each — and, just as important, the <b>fixed phrases</b> where you simply have to know which one it is: <b>por cierto</b>, <b>por supuesto</b>, <b>para siempre</b>. Memorise the buckets, then memorise the phrases.",
+    "sections": [
+      {
+        "tag": "por",
+        "heading": "POR — cause, means, exchange, approximate, reason",
+        "body": "<b>por</b> covers the <b>cause</b> or motive, the <b>means</b> (how), an <b>exchange</b>, and <b>approximate</b> time or place. Also <b>por + infinitive</b> = the reason something happened.",
+        "conj": [
+          [
+            "cause",
+            "por amor"
+          ],
+          [
+            "means",
+            "por email"
+          ],
+          [
+            "exchange",
+            "por 20 euros"
+          ],
+          [
+            "approximate",
+            "por aquí"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Te escribo <b>por email</b>.",
+            "en": "I'll write to you by email.",
+            "note": "means / how"
+          },
+          {
+            "es": "Lo hago <b>por</b> no molestar.",
+            "en": "I do it so as not to bother (out of not wanting to bother).",
+            "note": "por + infinitive = reason"
+          }
+        ]
+      },
+      {
+        "tag": "para",
+        "heading": "PARA — purpose, goal, deadline, recipient, opinion",
+        "body": "<b>para</b> points forward: a <b>purpose</b> or goal, a <b>deadline</b>, a <b>recipient</b>, and your <b>opinion</b> (<b>para mí</b> = in my opinion / for me).",
+        "conj": [
+          [
+            "purpose",
+            "para estudiar"
+          ],
+          [
+            "deadline",
+            "para el viernes"
+          ],
+          [
+            "recipient",
+            "para ti"
+          ],
+          [
+            "opinion",
+            "para mí"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Estudio <b>para</b> un examen.",
+            "en": "I'm studying for an exam.",
+            "note": "goal"
+          },
+          {
+            "es": "<b>Para mí</b>, es la mejor opción.",
+            "en": "For me / in my opinion, it's the best option.",
+            "note": "para mí = opinion"
+          }
+        ]
+      },
+      {
+        "tag": "fijas",
+        "heading": "Fixed phrases — just memorise these",
+        "body": "These don't follow a rule you can reason out; they're set. Learn them as whole chunks:",
+        "conj": [
+          [
+            "por cierto",
+            "by the way"
+          ],
+          [
+            "por supuesto",
+            "of course"
+          ],
+          [
+            "por lo menos",
+            "at least"
+          ],
+          [
+            "por eso",
+            "that's why"
+          ],
+          [
+            "para siempre",
+            "forever"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Por supuesto</b>, te ayudo.",
+            "en": "Of course, I'll help you.",
+            "note": "fixed"
+          },
+          {
+            "es": "Te quiero <b>para siempre</b>.",
+            "en": "I love you forever.",
+            "note": "para siempre = forever"
+          }
+        ]
+      },
+      {
+        "tag": "gracias",
+        "heading": "Thanking and giving reasons",
+        "body": "Thanks uses <b>por</b> (you thank for a cause). And <b>por eso</b> links a reason to its result.",
+        "ex": [
+          {
+            "es": "Gracias <b>por</b> venir.",
+            "en": "Thanks for coming.",
+            "note": "gracias por + infinitive"
+          },
+          {
+            "es": "Llueve; <b>por eso</b> llevo paraguas.",
+            "en": "It's raining; that's why I'm carrying an umbrella.",
+            "note": "por eso = that's why"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "POR = cause, means (por email), exchange (por 20 euros), approximate (por aquí), reason (por + infinitive).",
+      "PARA = purpose, deadline (para el viernes), recipient (para ti), opinion (para mí).",
+      "Fixed with por: por cierto, por supuesto, por lo menos, por eso.",
+      "Fixed with para: para siempre.",
+      "Gracias por venir — thanking uses por."
+    ],
+    "mistakes": [
+      {
+        "w": "Para cierto, ¿vienes mañana?",
+        "r": "Por cierto, ¿vienes mañana?",
+        "why": "‘By the way’ is a fixed phrase with por: por cierto."
+      },
+      {
+        "w": "Gracias para venir.",
+        "r": "Gracias por venir.",
+        "why": "You thank for a cause → gracias por."
+      },
+      {
+        "w": "Te quiero por siempre.",
+        "r": "Te quiero para siempre.",
+        "why": "‘Forever’ is a fixed phrase with para: para siempre."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___, ¿sabes a qué hora llega el tren?",
+      "prompt_en": "By the way, do you know what time the train arrives?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Por cierto"
+        },
+        {
+          "id": "b",
+          "text": "Para cierto"
+        },
+        {
+          "id": "c",
+          "text": "Por siempre"
+        },
+        {
+          "id": "d",
+          "text": "Para mí"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Por cierto = by the way.",
+      "no": "‘By the way’ is the fixed phrase “por cierto”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El trabajo es ___ el viernes.",
+      "prompt_en": "The assignment is (due) for Friday.",
+      "options": [
+        {
+          "id": "a",
+          "text": "por"
+        },
+        {
+          "id": "b",
+          "text": "para"
+        },
+        {
+          "id": "c",
+          "text": "por lo"
+        },
+        {
+          "id": "d",
+          "text": "por el"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! Fecha límite → para el viernes.",
+      "no": "A deadline uses para: “para el viernes”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Of course, thanks for coming.”",
+      "tokens": [
+        "Por",
+        "supuesto,",
+        "gracias",
+        "por",
+        "venir",
+        "para",
+        "siempre"
+      ],
+      "answer": [
+        "Por",
+        "supuesto,",
+        "gracias",
+        "por",
+        "venir"
+      ],
+      "ok": "¡Perfecto! Por supuesto + gracias por.",
+      "no": "“Por supuesto, gracias por venir” — both use por."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Te querré ___ siempre.",
+      "prompt_en": "I'll love you forever.",
+      "accepted": [
+        "para"
+      ],
+      "ignore_accents": true,
+      "hint": "Fixed phrase meaning ‘forever’.",
+      "ok": "¡Bien! Para siempre = forever.",
+      "no": "‘Forever’ is the fixed phrase “para siempre”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each set phrase to its meaning.",
+      "pairs": [
+        [
+          "por cierto",
+          "by the way"
+        ],
+        [
+          "por supuesto",
+          "of course"
+        ],
+        [
+          "por lo menos",
+          "at least"
+        ],
+        [
+          "para siempre",
+          "forever"
+        ]
+      ],
+      "ok": "¡Excelente! You've locked in the phrases.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Gracias por venir a mi casa.",
+      "accepted": [
+        "gracias por venir a mi casa"
+      ],
+      "ignore_accents": true,
+      "translation": "Thanks for coming to my house.",
+      "ok": "¡Correcto! “Gracias por venir a mi casa.”",
+      "no": "It was: “Gracias por venir a mi casa.” (Thanks for coming to my house.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Asking a favour of a good friend 🙏",
+      "lines": [
+        {
+          "speaker": "Pablo",
+          "es": "¿Me puedes ayudar con la mudanza?",
+          "en": "Can you help me with the move?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "¡Por supuesto! ¿A qué hora?"
+        },
+        {
+          "id": "b",
+          "text": "¡Para supuesto! ¿A qué hora?"
+        },
+        {
+          "id": "c",
+          "text": "¡Para siempre! ¿A qué hora?"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Por supuesto = of course.",
+      "no": "‘Of course’ is the fixed phrase “por supuesto”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Por supuesto, gracias por venir",
+      "en": "Of course, thanks for coming",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "por cierto",
+      "en": "by the way"
+    },
+    {
+      "es": "por supuesto",
+      "en": "of course"
+    },
+    {
+      "es": "para siempre",
+      "en": "forever"
+    },
+    {
+      "es": "por lo menos",
+      "en": "at least"
+    },
+    {
+      "es": "por eso",
+      "en": "that's why"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "por cierto",
+      "por supuesto",
+      "para siempre",
+      "por lo menos",
+      "por eso"
+    ]
+  }
+}

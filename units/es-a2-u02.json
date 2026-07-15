@@ -1,0 +1,359 @@
+{
+  "unit": {
+    "id": "es-a2-u02",
+    "title": "-AR preterite",
+    "subtitle": "The completed past of -ar verbs: Ayer hablé con Ana",
+    "level": "A2",
+    "order": 2,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The past that's over and done",
+    "intro": "The <b>pretérito indefinido</b> is Spanish's main past tense for <b>completed</b> actions — things that happened and finished at a specific moment: <i><b>Ayer</b> hablé con Ana.</i> (Yesterday I spoke with Ana.) In this unit you'll master the regular <b>-ar</b> verbs. Watch the accents on <b>hablé</b> and <b>habló</b> — they change the meaning completely.",
+    "sections": [
+      {
+        "tag": "terminaciones",
+        "heading": "The -ar preterite endings",
+        "body": "Take an -ar verb, drop the <b>-ar</b>, and add these endings. Notice the accents on the <b>yo</b> and <b>él/ella</b> forms — they carry the stress and are essential:",
+        "conj": [
+          [
+            "yo",
+            "hablé"
+          ],
+          [
+            "tú",
+            "hablaste"
+          ],
+          [
+            "él/ella",
+            "habló"
+          ],
+          [
+            "nosotros",
+            "hablamos"
+          ],
+          [
+            "vosotros",
+            "hablasteis"
+          ],
+          [
+            "ellos",
+            "hablaron"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Ayer <b>hablé</b> con Ana.",
+            "en": "Yesterday I spoke with Ana.",
+            "note": "yo → hablé (accent!)"
+          },
+          {
+            "es": "Ella <b>habló</b> con el médico.",
+            "en": "She spoke with the doctor.",
+            "note": "él/ella → habló"
+          }
+        ]
+      },
+      {
+        "tag": "uso",
+        "heading": "When to use it",
+        "body": "Use the preterite for actions that are <b>finished</b>, usually with a time marker like <b>ayer</b> (yesterday) or <b>la semana pasada</b> (last week):",
+        "conj": [
+          [
+            "yesterday",
+            "ayer"
+          ],
+          [
+            "last week",
+            "la semana pasada"
+          ],
+          [
+            "last night",
+            "anoche"
+          ],
+          [
+            "two days ago",
+            "hace dos días"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>La semana pasada</b> trabajé mucho.",
+            "en": "Last week I worked a lot.",
+            "note": "finished time period"
+          },
+          {
+            "es": "<b>Ayer</b> estudié español.",
+            "en": "Yesterday I studied Spanish.",
+            "note": "estudiar → estudié"
+          }
+        ]
+      },
+      {
+        "tag": "acentos",
+        "heading": "The accent changes everything",
+        "body": "Without its accent, <b>habló</b> (he/she spoke, past) becomes <b>hablo</b> (I speak, present). The little mark is the whole tense:",
+        "conj": [
+          [
+            "I speak (now)",
+            "hablo"
+          ],
+          [
+            "he/she spoke",
+            "habló"
+          ],
+          [
+            "I spoke",
+            "hablé"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Yo <b>hablo</b> inglés.",
+            "en": "I speak English.",
+            "note": "present, no accent"
+          },
+          {
+            "es": "Él <b>habló</b> ayer.",
+            "en": "He spoke yesterday.",
+            "note": "past, with accent"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "-ar preterite endings: -é, -aste, -ó, -amos, -asteis, -aron.",
+      "Use it for completed past actions: Ayer hablé con Ana.",
+      "Time markers: ayer, la semana pasada, anoche, hace dos días.",
+      "Mind the accents: habló (past) vs hablo (present); hablé vs hablo."
+    ],
+    "mistakes": [
+      {
+        "w": "Ayer él hablo con Ana.",
+        "r": "Ayer él habló con Ana.",
+        "why": "The él/ella preterite needs the accent: habló, not hablo (which is present 'I speak')."
+      },
+      {
+        "w": "Ayer hablo con Ana.",
+        "r": "Ayer hablé con Ana.",
+        "why": "For 'I spoke' use hablé; hablo means 'I speak' (present)."
+      },
+      {
+        "w": "Ayer yo trabajé mucho ayer.",
+        "r": "Ayer trabajé mucho.",
+        "why": "One time marker is enough — don't double it."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ayer yo ___ con Ana.",
+      "prompt_en": "Yesterday I spoke with Ana.",
+      "options": [
+        {
+          "id": "a",
+          "text": "hablo"
+        },
+        {
+          "id": "b",
+          "text": "hablé"
+        },
+        {
+          "id": "c",
+          "text": "habló"
+        },
+        {
+          "id": "d",
+          "text": "hablaste"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! yo → hablé.",
+      "no": "For 'I spoke' use “hablé” (with the accent)."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ella ___ con el médico.",
+      "prompt_en": "She spoke with the doctor.",
+      "options": [
+        {
+          "id": "a",
+          "text": "hablo"
+        },
+        {
+          "id": "b",
+          "text": "hablé"
+        },
+        {
+          "id": "c",
+          "text": "habló"
+        },
+        {
+          "id": "d",
+          "text": "hablamos"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Exacto! él/ella → habló.",
+      "no": "The él/ella form is “habló” — with the accent, it's past."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Last week I worked a lot.”",
+      "tokens": [
+        "La",
+        "semana",
+        "pasada",
+        "trabajé",
+        "mucho",
+        "trabajo",
+        "hablé"
+      ],
+      "answer": [
+        "La",
+        "semana",
+        "pasada",
+        "trabajé",
+        "mucho"
+      ],
+      "ok": "¡Perfecto! trabajar → trabajé.",
+      "no": "“La semana pasada trabajé mucho.” — yo preterite of trabajar is trabajé."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Ayer ___ español dos horas.",
+      "prompt_en": "Yesterday I studied Spanish for two hours.",
+      "accepted": [
+        "estudie"
+      ],
+      "ignore_accents": true,
+      "hint": "yo form of estudiar in the preterite.",
+      "ok": "¡Bien! estudiar → estudié.",
+      "no": "yo preterite of estudiar → “estudié”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each subject to the correct preterite of HABLAR.",
+      "pairs": [
+        [
+          "yo",
+          "hablé"
+        ],
+        [
+          "tú",
+          "hablaste"
+        ],
+        [
+          "él/ella",
+          "habló"
+        ],
+        [
+          "ellos",
+          "hablaron"
+        ]
+      ],
+      "ok": "¡Excelente! You've got the -ar preterite.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Ayer hablé con mi madre.",
+      "accepted": [
+        "ayer hable con mi madre"
+      ],
+      "ignore_accents": true,
+      "translation": "Yesterday I spoke with my mother.",
+      "ok": "¡Correcto! “Ayer hablé con mi madre.”",
+      "no": "It was: “Ayer hablé con mi madre.” (Yesterday I spoke with my mother.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A coworker asks about yesterday 🗓️",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "¿Con quién hablaste ayer?",
+          "en": "Who did you speak with yesterday?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Hablé con el director."
+        },
+        {
+          "id": "b",
+          "text": "Hablo con el director."
+        },
+        {
+          "id": "c",
+          "text": "Habló con el director."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! yo → hablé.",
+      "no": "You need the yo form in the past: “Hablé con el director.” (I spoke with the director.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Ayer hablé",
+      "en": "Yesterday I spoke",
+      "ok": "¡Perfecto! Nice stress on hablé.",
+      "no": "Almost — tap “Hear it”, then stress the final syllable: ha-BLÉ."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "ayer",
+      "en": "yesterday"
+    },
+    {
+      "es": "la semana pasada",
+      "en": "last week"
+    },
+    {
+      "es": "hablé",
+      "en": "I spoke"
+    },
+    {
+      "es": "trabajé",
+      "en": "I worked"
+    },
+    {
+      "es": "estudié",
+      "en": "I studied"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "ayer",
+      "la semana pasada",
+      "hablé",
+      "trabajé",
+      "estudié"
+    ]
+  }
+}

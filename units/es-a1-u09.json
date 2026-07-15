@@ -1,0 +1,374 @@
+{
+  "unit": {
+    "id": "es-a1-u09",
+    "title": "Family",
+    "subtitle": "Family members and possessives",
+    "level": "A1",
+    "order": 9,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Talk about your family and what's yours",
+    "intro": "Spanish family words come in matched pairs — <b>madre/padre</b>, <b>hermano/hermana</b>. To say <b>my</b>, <b>your</b>, or <b>our</b>, you use possessive adjectives, and they change to match the noun. Add <b>de</b> and you can say who owns what.",
+    "sections": [
+      {
+        "tag": "familia",
+        "heading": "The family",
+        "body": "Most family words pair a masculine and a feminine form:",
+        "conj": [
+          [
+            "madre / padre",
+            "mother / father"
+          ],
+          [
+            "hermana / hermano",
+            "sister / brother"
+          ],
+          [
+            "hija / hijo",
+            "daughter / son"
+          ],
+          [
+            "abuela / abuelo",
+            "grandmother / grandfather"
+          ],
+          [
+            "tía / tío",
+            "aunt / uncle"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Ella es mi <b>madre</b>.",
+            "en": "She is my mother.",
+            "note": "ser for relationships"
+          },
+          {
+            "es": "Tengo un <b>hermano</b> y una <b>hermana</b>.",
+            "en": "I have a brother and a sister.",
+            "note": "one of each"
+          }
+        ]
+      },
+      {
+        "tag": "posesivos",
+        "heading": "my · your · his/her — agree in NUMBER",
+        "body": "<b>mi, tu, su</b> add <b>-s</b> only when the noun is plural — the gender doesn't matter:",
+        "conj": [
+          [
+            "mi / mis",
+            "my"
+          ],
+          [
+            "tu / tus",
+            "your"
+          ],
+          [
+            "su / sus",
+            "his / her / their"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>mi</b> hermano · <b>mis</b> hermanos",
+            "en": "my brother · my brothers",
+            "note": "singular vs plural"
+          },
+          {
+            "es": "<b>su</b> hija · <b>sus</b> hijas",
+            "en": "his daughter · his daughters",
+            "note": "-s only for plural"
+          }
+        ]
+      },
+      {
+        "tag": "nuestro",
+        "heading": "our — agrees in GENDER and NUMBER",
+        "body": "<b>nuestro</b> is fussier: it matches both the gender and the number of the noun.",
+        "conj": [
+          [
+            "nuestro",
+            "our (masc. sing.)"
+          ],
+          [
+            "nuestra",
+            "our (fem. sing.)"
+          ],
+          [
+            "nuestros",
+            "our (masc. pl.)"
+          ],
+          [
+            "nuestras",
+            "our (fem. pl.)"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>nuestra</b> madre",
+            "en": "our mother",
+            "note": "madre is feminine"
+          },
+          {
+            "es": "<b>nuestros</b> abuelos",
+            "en": "our grandparents",
+            "note": "masculine plural"
+          }
+        ]
+      },
+      {
+        "tag": "de",
+        "heading": "Showing possession with «de»",
+        "body": "There's no apostrophe-s in Spanish. Flip it around with <b>de</b> (of):",
+        "ex": [
+          {
+            "es": "el libro <b>de</b> Ana",
+            "en": "Ana's book",
+            "note": "the book of Ana"
+          },
+          {
+            "es": "la madre <b>de</b> Juan",
+            "en": "Juan's mother",
+            "note": "the mother of Juan"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "mi/tu/su add -s only for plural nouns: mi hermano → mis hermanos.",
+      "nuestro matches gender AND number: nuestra madre, nuestros hijos.",
+      "No 's in Spanish — use de: la casa de María.",
+      "Use ser to say who someone is: es mi padre."
+    ],
+    "mistakes": [
+      {
+        "w": "mis hermano",
+        "r": "mi hermano",
+        "why": "hermano is singular, so use mi — mis is only for plural."
+      },
+      {
+        "w": "nuestro madre",
+        "r": "nuestra madre",
+        "why": "madre is feminine, so nuestro becomes nuestra."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ hermanos viven en Madrid.",
+      "prompt_en": "My brothers live in Madrid.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mi"
+        },
+        {
+          "id": "b",
+          "text": "Mis"
+        },
+        {
+          "id": "c",
+          "text": "Nuestro"
+        },
+        {
+          "id": "d",
+          "text": "Tu"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! hermanos is plural → mis.",
+      "no": "hermanos is plural, so use “mis”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Es ___ madre.",
+      "prompt_en": "She is our mother.",
+      "options": [
+        {
+          "id": "a",
+          "text": "nuestro"
+        },
+        {
+          "id": "b",
+          "text": "nuestros"
+        },
+        {
+          "id": "c",
+          "text": "nuestra"
+        },
+        {
+          "id": "d",
+          "text": "nuestras"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Muy bien! madre is feminine singular → nuestra.",
+      "no": "madre is feminine singular → “nuestra”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “She is my sister.”",
+      "tokens": [
+        "Ella",
+        "es",
+        "mi",
+        "mis",
+        "hermana",
+        "hermano"
+      ],
+      "answer": [
+        "Ella",
+        "es",
+        "mi",
+        "hermana"
+      ],
+      "ok": "¡Perfecto! mi hermana — singular, so mi.",
+      "no": "“Ella es mi hermana.” — hermana is singular → mi."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "la madre ___ Juan",
+      "prompt_en": "Juan's mother",
+      "accepted": [
+        "de"
+      ],
+      "ignore_accents": true,
+      "hint": "There's no 's in Spanish.",
+      "ok": "¡Bien! la madre de Juan.",
+      "no": "Use “de”: la madre de Juan."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each Spanish family word to its meaning.",
+      "pairs": [
+        [
+          "padre",
+          "father"
+        ],
+        [
+          "hija",
+          "daughter"
+        ],
+        [
+          "abuela",
+          "grandmother"
+        ],
+        [
+          "tío",
+          "uncle"
+        ]
+      ],
+      "ok": "¡Excelente! You know the family.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Mi padre y mi abuela.",
+      "accepted": [
+        "mi padre y mi abuela"
+      ],
+      "ignore_accents": true,
+      "translation": "My father and my grandmother.",
+      "ok": "¡Correcto! “Mi padre y mi abuela.”",
+      "no": "It was: “Mi padre y mi abuela.” (My father and my grandmother.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Showing a friend a family photo 📷",
+      "lines": [
+        {
+          "speaker": "Laura",
+          "es": "¿Quién es ella? ¿Es tu hermana?",
+          "en": "Who is she? Is she your sister?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "No, es mi madre."
+        },
+        {
+          "id": "b",
+          "text": "Sí, mis hermano."
+        },
+        {
+          "id": "c",
+          "text": "Es nuestro madre."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! “No, es mi madre.” — clear and correct.",
+      "no": "The natural, correct reply is “No, es mi madre.” (No, she's my mother.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "familia",
+      "en": "family",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "familia",
+      "en": "family"
+    },
+    {
+      "es": "madre",
+      "en": "mother"
+    },
+    {
+      "es": "padre",
+      "en": "father"
+    },
+    {
+      "es": "hermano",
+      "en": "brother"
+    },
+    {
+      "es": "hija",
+      "en": "daughter"
+    },
+    {
+      "es": "mi",
+      "en": "my"
+    },
+    {
+      "es": "nuestro",
+      "en": "our"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "familia",
+      "madre",
+      "padre",
+      "hermano",
+      "hija",
+      "mi"
+    ]
+  }
+}

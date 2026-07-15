@@ -1,0 +1,397 @@
+{
+  "unit": {
+    "id": "es-a1-u07",
+    "title": "Numbers 0–100",
+    "subtitle": "Counting from cero to cien",
+    "level": "A1",
+    "order": 7,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Count anything from 0 to 100",
+    "intro": "Numbers power prices, ages, phone numbers and times. Spanish 0–15 are unique words you memorize, and from there a few simple patterns get you all the way to <b>cien</b> (100).",
+    "sections": [
+      {
+        "tag": "cero-quince",
+        "heading": "0–15: memorize these",
+        "body": "These first sixteen are their own words — learn them one by one:",
+        "conj": [
+          [
+            "0 / 1 / 2",
+            "cero · uno · dos"
+          ],
+          [
+            "3 / 4 / 5",
+            "tres · cuatro · cinco"
+          ],
+          [
+            "6 / 7 / 8",
+            "seis · siete · ocho"
+          ],
+          [
+            "9 / 10 / 11",
+            "nueve · diez · once"
+          ],
+          [
+            "12 / 13",
+            "doce · trece"
+          ],
+          [
+            "14 / 15",
+            "catorce · quince"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Tengo <b>cinco</b> libros.",
+            "en": "I have five books.",
+            "note": "cinco = 5"
+          },
+          {
+            "es": "Hay <b>doce</b> meses.",
+            "en": "There are twelve months.",
+            "note": "doce = 12"
+          }
+        ]
+      },
+      {
+        "tag": "dieciseis-veintinueve",
+        "heading": "16–29: one single word",
+        "body": "From 16 to 29, Spanish glues the number into one word (note the accents on <b>dieciséis</b>, <b>veintidós</b>, etc.):",
+        "conj": [
+          [
+            "16 / 17",
+            "dieciséis · diecisiete"
+          ],
+          [
+            "18 / 19",
+            "dieciocho · diecinueve"
+          ],
+          [
+            "20 / 21",
+            "veinte · veintiuno"
+          ],
+          [
+            "22 / 23",
+            "veintidós · veintitrés"
+          ],
+          [
+            "24 / 25",
+            "veinticuatro · veinticinco"
+          ],
+          [
+            "26–29",
+            "veintiséis · veintisiete · veintiocho · veintinueve"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Tengo <b>veinte</b> años.",
+            "en": "I am twenty years old.",
+            "note": "veinte = 20"
+          },
+          {
+            "es": "Hay <b>veintiuno</b>.",
+            "en": "There are twenty-one.",
+            "note": "one word"
+          }
+        ]
+      },
+      {
+        "tag": "decenas",
+        "heading": "Tens, and 31+ with y",
+        "body": "The tens each have their own word. From 31 upward you write <b>three</b> words joined by <b>y</b> (treinta y uno). 100 on its own is <b>cien</b>.",
+        "conj": [
+          [
+            "30 / 40",
+            "treinta · cuarenta"
+          ],
+          [
+            "50 / 60",
+            "cincuenta · sesenta"
+          ],
+          [
+            "70 / 80",
+            "setenta · ochenta"
+          ],
+          [
+            "90 / 100",
+            "noventa · cien"
+          ],
+          [
+            "31 / 45",
+            "treinta y uno · cuarenta y cinco"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Mi abuela tiene <b>ochenta</b> años.",
+            "en": "My grandmother is eighty years old.",
+            "note": "ochenta = 80"
+          },
+          {
+            "es": "Cuesta <b>cuarenta y cinco</b> euros.",
+            "en": "It costs forty-five euros.",
+            "note": "40 + y + 5"
+          }
+        ]
+      },
+      {
+        "tag": "uno-un",
+        "heading": "uno → un before a noun",
+        "body": "Before a masculine noun, <b>uno</b> shortens to <b>un</b>; before a feminine noun it becomes <b>una</b>. This also affects veintiuno, treinta y uno, etc.",
+        "ex": [
+          {
+            "es": "Tengo <b>un</b> libro.",
+            "en": "I have one book.",
+            "note": "un + masculine"
+          },
+          {
+            "es": "Tengo <b>una</b> mesa.",
+            "en": "I have one table.",
+            "note": "una + feminine"
+          },
+          {
+            "es": "Hay <b>veintiún</b> días.",
+            "en": "There are twenty-one days.",
+            "note": "veintiuno → veintiún"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "0–15 are unique words; 16–29 are one glued word.",
+      "Tens: treinta, cuarenta, cincuenta, sesenta, setenta, ochenta, noventa.",
+      "From 31, use three words with y: treinta y uno.",
+      "100 alone = cien; uno → un before a masculine noun."
+    ],
+    "mistakes": [
+      {
+        "w": "veinte y uno",
+        "r": "veintiuno",
+        "why": "16–29 are a single word, not three separate words."
+      },
+      {
+        "w": "treintaiuno",
+        "r": "treinta y uno",
+        "why": "From 31 up, keep three separate words with y."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "15 = ___",
+      "prompt_en": "Which word means 15?",
+      "options": [
+        {
+          "id": "a",
+          "text": "cinco"
+        },
+        {
+          "id": "b",
+          "text": "cincuenta"
+        },
+        {
+          "id": "c",
+          "text": "quince"
+        },
+        {
+          "id": "d",
+          "text": "catorce"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Correcto! 15 = quince.",
+      "no": "15 is “quince” (don't confuse it with catorce = 14)."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "21 = ___",
+      "prompt_en": "Which word means 21?",
+      "options": [
+        {
+          "id": "a",
+          "text": "veinte y uno"
+        },
+        {
+          "id": "b",
+          "text": "veintiuno"
+        },
+        {
+          "id": "c",
+          "text": "dos uno"
+        },
+        {
+          "id": "d",
+          "text": "veintiún"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Muy bien! 21 = veintiuno (one word).",
+      "no": "21 is one word: “veintiuno”, not “veinte y uno”."
+    },
+    {
+      "id": "ex3",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each number to its Spanish word.",
+      "pairs": [
+        [
+          "10",
+          "diez"
+        ],
+        [
+          "30",
+          "treinta"
+        ],
+        [
+          "50",
+          "cincuenta"
+        ],
+        [
+          "100",
+          "cien"
+        ]
+      ],
+      "ok": "¡Excelente! You've got the tens down.",
+      "no": ""
+    },
+    {
+      "id": "ex4",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build the number 45 in words.",
+      "tokens": [
+        "cuarenta",
+        "y",
+        "cinco",
+        "cincuenta",
+        "cuatro"
+      ],
+      "answer": [
+        "cuarenta",
+        "y",
+        "cinco"
+      ],
+      "ok": "¡Perfecto! 45 = cuarenta y cinco.",
+      "no": "From 31 up use three words: “cuarenta y cinco”."
+    },
+    {
+      "id": "ex5",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Tengo ___ años. (20)",
+      "prompt_en": "I am 20 years old.",
+      "accepted": [
+        "veinte"
+      ],
+      "ignore_accents": true,
+      "hint": "The word for 20.",
+      "ok": "¡Bien! 20 = veinte.",
+      "no": "20 is “veinte”."
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type the number word you hear.",
+      "tts": "treinta y siete",
+      "accepted": [
+        "treinta y siete"
+      ],
+      "ignore_accents": true,
+      "translation": "thirty-seven (37)",
+      "ok": "¡Correcto! “treinta y siete” (37).",
+      "no": "It was: “treinta y siete” (37)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A waiter tells you the bill 🧾",
+      "lines": [
+        {
+          "speaker": "Camarero",
+          "es": "Son cincuenta euros, por favor.",
+          "en": "That's fifty euros, please."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Aquí tiene cincuenta euros. Gracias."
+        },
+        {
+          "id": "b",
+          "text": "Buenos días, ¿cómo estás?"
+        },
+        {
+          "id": "c",
+          "text": "Tengo cinco años."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! A natural way to hand over the money.",
+      "no": "The natural reply is “Aquí tiene cincuenta euros. Gracias.” (Here's fifty euros. Thanks.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "treinta",
+      "en": "thirty",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "cero",
+      "en": "zero"
+    },
+    {
+      "es": "cinco",
+      "en": "five"
+    },
+    {
+      "es": "diez",
+      "en": "ten"
+    },
+    {
+      "es": "veinte",
+      "en": "twenty"
+    },
+    {
+      "es": "treinta",
+      "en": "thirty"
+    },
+    {
+      "es": "cien",
+      "en": "one hundred"
+    },
+    {
+      "es": "número",
+      "en": "number"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "cero",
+      "cinco",
+      "diez",
+      "veinte",
+      "treinta",
+      "cien"
+    ]
+  }
+}

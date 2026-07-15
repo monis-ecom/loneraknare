@@ -1,0 +1,333 @@
+{
+  "unit": {
+    "id": "es-b2-u04",
+    "title": "Subjunctive in Relative & Concessive Clauses",
+    "subtitle": "Unknown antecedents and 'no matter how much' with the subjunctive",
+    "level": "B2",
+    "order": 4,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "When the thing you're describing might not exist",
+    "intro": "In a <b>relative clause</b> (a clause that describes a noun), the mood depends on one thing: is the noun <b>real and known</b>, or <b>unknown, hypothetical, or nonexistent</b>? If you know it exists, use the <b>indicative</b>. If you're searching for it, doubt it, or deny it, use the <b>subjunctive</b>. The same instinct powers <b>concessive</b> clauses — <b>por más que</b>, <b>por mucho que</b>, and <b>aunque</b> — where you concede a point that may or may not hold.",
+    "sections": [
+      {
+        "tag": "antecedente",
+        "heading": "Known vs. unknown antecedent",
+        "body": "Compare the two. If the person or thing is <b>specific and real</b>, the verb stays <b>indicative</b>. If it's <b>hypothetical</b> — someone you're looking for but haven't found — switch to the <b>subjunctive</b>:",
+        "conj": [
+          [
+            "Known (real)",
+            "que habla / que sabe"
+          ],
+          [
+            "Unknown (sought)",
+            "que hable / que sepa"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Conozco a alguien que <b>habla</b> inglés.",
+            "en": "I know someone who speaks English.",
+            "note": "real person → indicative"
+          },
+          {
+            "es": "Busco a alguien que <b>hable</b> inglés.",
+            "en": "I'm looking for someone who speaks English.",
+            "note": "unknown → subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "inexistente",
+        "heading": "Nonexistent antecedent: no hay nadie que…",
+        "body": "When you <b>deny</b> that the thing exists at all — <b>no hay nadie que</b>, <b>no hay nada que</b> — the subjunctive is obligatory. The same goes for describing something you <b>need but don't yet have</b>:",
+        "ex": [
+          {
+            "es": "No hay nadie que <b>sepa</b> la respuesta.",
+            "en": "There's no one who knows the answer.",
+            "note": "nonexistent → subjunctive"
+          },
+          {
+            "es": "Necesito un libro que <b>sea</b> fácil.",
+            "en": "I need a book that's easy.",
+            "note": "any such book → subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "concesivas",
+        "heading": "Concession: por más/mucho que + subjunctive",
+        "body": "To say <b>no matter how much</b>, use <b>por más que</b> or <b>por mucho que</b> + subjunctive. And <b>aunque</b> takes the subjunctive when you concede a hypothetical (even if it were / even if it turns out to be):",
+        "conj": [
+          [
+            "no matter how much I study",
+            "por mucho que estudie"
+          ],
+          [
+            "no matter how hard you try",
+            "por más que lo intentes"
+          ],
+          [
+            "even if it rains",
+            "aunque llueva"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Por mucho que estudie</b>, no apruebo.",
+            "en": "No matter how much I study, I don't pass.",
+            "note": "por mucho que → subjunctive"
+          },
+          {
+            "es": "<b>Aunque llueva</b>, saldré a correr.",
+            "en": "Even if it rains, I'll go running.",
+            "note": "concession → subjunctive"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Known/real antecedent → indicative: Conozco a alguien que habla inglés.",
+      "Unknown/sought antecedent → subjunctive: Busco a alguien que hable inglés.",
+      "Nonexistent → subjunctive: No hay nadie que sepa; Necesito un libro que sea fácil.",
+      "Concession: por más/mucho que + subjunctive; aunque + subjunctive for a hypothetical."
+    ],
+    "mistakes": [
+      {
+        "w": "Busco a alguien que habla francés.",
+        "r": "Busco a alguien que hable francés.",
+        "why": "The person is unknown (you're still looking), so the relative clause needs the subjunctive: hable."
+      },
+      {
+        "w": "No hay nadie que sabe la verdad.",
+        "r": "No hay nadie que sepa la verdad.",
+        "why": "A nonexistent antecedent (no hay nadie) forces the subjunctive: sepa."
+      },
+      {
+        "w": "Por mucho que estudio, no apruebo.",
+        "r": "Por mucho que estudie, no apruebo.",
+        "why": "Por mucho que expresses a concession and takes the subjunctive: estudie."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Busco a alguien que ___ inglés. (hablar)",
+      "prompt_en": "I'm looking for someone who speaks English.",
+      "options": [
+        {
+          "id": "a",
+          "text": "hable"
+        },
+        {
+          "id": "b",
+          "text": "habla"
+        },
+        {
+          "id": "c",
+          "text": "hablaba"
+        },
+        {
+          "id": "d",
+          "text": "hablará"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Antecedente desconocido → subjuntivo.",
+      "no": "You're looking for an unknown person, so use the subjunctive: “hable”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Conozco a alguien que ___ inglés. (hablar)",
+      "prompt_en": "I know someone who speaks English.",
+      "options": [
+        {
+          "id": "a",
+          "text": "habla"
+        },
+        {
+          "id": "b",
+          "text": "hable"
+        },
+        {
+          "id": "c",
+          "text": "hablara"
+        },
+        {
+          "id": "d",
+          "text": "haya hablado"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Persona real y conocida → indicativo.",
+      "no": "The person is real and known, so use the indicative: “habla”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “There's no one who knows the answer.”",
+      "tokens": [
+        "No",
+        "hay",
+        "nadie",
+        "que",
+        "sepa",
+        "la",
+        "respuesta",
+        "sabe",
+        "nada"
+      ],
+      "answer": [
+        "No",
+        "hay",
+        "nadie",
+        "que",
+        "sepa",
+        "la",
+        "respuesta"
+      ],
+      "ok": "¡Perfecto! No hay nadie que + subjuntivo.",
+      "no": "“No hay nadie que sepa la respuesta” — a nonexistent antecedent needs the subjunctive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Por mucho que ___, no apruebo. (estudiar, yo)",
+      "prompt_en": "No matter how much I study, I don't pass.",
+      "accepted": [
+        "estudie"
+      ],
+      "ignore_accents": true,
+      "hint": "Concession — 'por mucho que' takes the subjunctive.",
+      "ok": "¡Bien! Por mucho que + subjuntivo → estudie.",
+      "no": "Por mucho que triggers the subjunctive: “estudie”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each Spanish clause to its meaning.",
+      "pairs": [
+        [
+          "que sepa",
+          "who may know"
+        ],
+        [
+          "que hable",
+          "who may speak"
+        ],
+        [
+          "por mucho que",
+          "no matter how much"
+        ],
+        [
+          "no hay nadie que",
+          "there's no one who"
+        ]
+      ],
+      "ok": "¡Excelente! Antecedentes y concesivas dominadas.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Necesito un libro que sea fácil.",
+      "accepted": [
+        "necesito un libro que sea facil"
+      ],
+      "ignore_accents": true,
+      "translation": "I need a book that's easy.",
+      "ok": "¡Correcto! “Necesito un libro que sea fácil.”",
+      "no": "It was: “Necesito un libro que sea fácil.” (I need a book that's easy.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "At the office, a colleague needs help 💼",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "Necesitamos a alguien para el proyecto. ¿Alguna idea?",
+          "en": "We need someone for the project. Any ideas?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Busco a alguien que sepa alemán."
+        },
+        {
+          "id": "b",
+          "text": "Busco a alguien que sabe alemán."
+        },
+        {
+          "id": "c",
+          "text": "Busco a alguien que sabrá alemán."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Antecedente desconocido → sepa.",
+      "no": "The person is still unknown, so use the subjunctive: “que sepa alemán”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "No hay nadie que sepa la respuesta.",
+      "en": "There's no one who knows the answer.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “No hay nadie que sepa la respuesta.”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "que sepa",
+      "en": "who may know / that knows (subj.)"
+    },
+    {
+      "es": "que hable",
+      "en": "who may speak / that speaks (subj.)"
+    },
+    {
+      "es": "por más que",
+      "en": "no matter how much"
+    },
+    {
+      "es": "por mucho que",
+      "en": "no matter how much"
+    },
+    {
+      "es": "no hay nadie que",
+      "en": "there's no one who"
+    },
+    {
+      "es": "aunque llueva",
+      "en": "even if it rains"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "que sepa",
+      "que hable",
+      "por más que",
+      "por mucho que",
+      "no hay nadie que"
+    ]
+  }
+}

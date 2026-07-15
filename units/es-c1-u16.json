@@ -1,0 +1,269 @@
+{
+  "unit": {
+    "id": "es-c1-u16",
+    "title": "Verbs and Their Prepositions",
+    "subtitle": "Régimen preposicional: verbs that lock onto a fixed preposition",
+    "level": "C1",
+    "order": 16,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The preposition is part of the verb",
+    "intro": "At C1, mastery is in the small words. Dozens of Spanish verbs govern a <b>fixed preposition</b> (régimen preposicional) that rarely maps onto the English one. You don't <i>rely on</i> someone, you <b>cuentas con</b> them; you don't <i>dream about</i>, you <b>sueñas con</b>. Worse, the same verb can change meaning with the preposition: <b>pensar en</b> (to think about) vs <b>pensar de</b> (to have an opinion of). Learn the verb and its preposition as a single unit.",
+    "sections": [
+      {
+        "tag": "con",
+        "heading": "Verbs governed by CON",
+        "body": "A cluster of very frequent verbs takes <b>con</b> where English uses <i>on</i>, <i>about</i>, or nothing at all. Notice how far the English preposition drifts:",
+        "conj": [
+          ["contar con", "to rely on / count on"],
+          ["soñar con", "to dream about"],
+          ["dar con", "to find / come across"],
+          ["cumplir con", "to fulfil / honour (an obligation)"],
+          ["acabar con", "to put an end to / destroy"]
+        ],
+        "ex": [
+          {
+            "es": "Sé que puedo <b>contar con</b> vosotros pase lo que pase.",
+            "en": "I know I can rely on you come what may.",
+            "note": "contar con = rely on, not 'contar en'"
+          },
+          {
+            "es": "Tras horas de búsqueda, por fin <b>di con</b> la solución.",
+            "en": "After hours of searching, I finally hit upon the solution.",
+            "note": "dar con = to come across, stumble upon"
+          }
+        ]
+      },
+      {
+        "tag": "en / de",
+        "heading": "EN and DE: where meaning shifts",
+        "body": "Several verbs demand <b>en</b> (insistir en, consistir en, fijarse en, tardar en, confiar en) or <b>de</b> (depender de, tratarse de, acordarse de). The trap is the pair <b>pensar en</b> (to have on your mind) vs <b>pensar de</b> (to hold an opinion), and <b>acordarse de</b> vs the transitive <b>recordar</b> (no preposition):",
+        "conj": [
+          ["insistir en", "to insist on"],
+          ["consistir en", "to consist of"],
+          ["fijarse en", "to notice / pay attention to"],
+          ["tardar en", "to take (time) to"],
+          ["depender de", "to depend on"],
+          ["tratarse de", "to be a matter/question of"],
+          ["acordarse de = recordar (algo)", "to remember"]
+        ],
+        "ex": [
+          {
+            "es": "No <b>me acuerdo de</b> su nombre, pero <b>recuerdo</b> su cara.",
+            "en": "I don't remember his name, but I remember his face.",
+            "note": "acordarse DE algo · recordar algo (no preposition)"
+          },
+          {
+            "es": "¿Qué <b>piensas de</b> la propuesta? Yo llevo días <b>pensando en</b> ella.",
+            "en": "What do you think of the proposal? I've been thinking about it for days.",
+            "note": "pensar DE = opinion · pensar EN = have on your mind"
+          }
+        ]
+      },
+      {
+        "tag": "a",
+        "heading": "Verbs governed by A",
+        "body": "Verbs of beginning, daring, giving up and refusal take <b>a</b> before an infinitive or noun. <b>Atreverse a</b>, <b>renunciar a</b>, <b>negarse a</b> and <b>ponerse a</b> are C1 staples:",
+        "conj": [
+          ["atreverse a", "to dare to"],
+          ["renunciar a", "to give up / renounce"],
+          ["negarse a", "to refuse to"],
+          ["ponerse a", "to set about / start to"],
+          ["quedar en", "to agree to / arrange to"]
+        ],
+        "ex": [
+          {
+            "es": "Se <b>negó a</b> firmar y <b>renunció a</b> su parte de la herencia.",
+            "en": "He refused to sign and gave up his share of the inheritance.",
+            "note": "negarse A + inf · renunciar A + noun"
+          },
+          {
+            "es": "<b>Quedamos en</b> vernos a las ocho, pero nadie <b>se atrevió a</b> llegar tarde.",
+            "en": "We agreed to meet at eight, but nobody dared to be late.",
+            "note": "quedar EN = to agree/arrange · atreverse A = to dare"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Learn verb + preposition as one chunk: contar con, soñar con, insistir en, depender de, atreverse a.",
+      "The Spanish preposition rarely mirrors English: rely ON = contar CON; dream ABOUT = soñar CON.",
+      "pensar EN = have on your mind; pensar DE = have an opinion of — different prepositions, different meanings.",
+      "acordarse DE algo = recordar algo (transitive, no preposition); quedar EN = to agree/arrange to."
+    ],
+    "mistakes": [
+      {
+        "w": "Cuento en ti para el proyecto.",
+        "r": "Cuento contigo para el proyecto.",
+        "why": "contar governs 'con', not 'en'; and con + ti fuses into 'contigo'."
+      },
+      {
+        "w": "No me recuerdo de su nombre.",
+        "r": "No me acuerdo de su nombre.",
+        "why": "recordar is transitive (recordar algo); the pronominal verb that takes 'de' is acordarse de."
+      },
+      {
+        "w": "Me negué de firmar el contrato.",
+        "r": "Me negué a firmar el contrato.",
+        "why": "negarse governs 'a' before the infinitive, not 'de'."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Puedes ___ nosotros para lo que necesites.",
+      "prompt_en": "You can count on us for whatever you need.",
+      "options": [
+        { "id": "a", "text": "contar con" },
+        { "id": "b", "text": "contar en" },
+        { "id": "c", "text": "contar de" },
+        { "id": "d", "text": "contar a" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! contar con = to rely on.",
+      "no": "‘To rely on’ is contar CON, never contar en."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Todo ___ de que lleguemos a tiempo al aeropuerto.",
+      "prompt_en": "Everything depends on our getting to the airport on time.",
+      "options": [
+        { "id": "a", "text": "depende" },
+        { "id": "b", "text": "consiste" },
+        { "id": "c", "text": "insiste" },
+        { "id": "d", "text": "trata" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! depender de = to depend on.",
+      "no": "The verb that governs ‘de’ here is depender (depender de = to depend on)."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “We agreed to meet the following day.”",
+      "tokens": [
+        "Quedamos",
+        "en",
+        "vernos",
+        "al",
+        "día",
+        "siguiente",
+        "de",
+        "con"
+      ],
+      "answer": [
+        "Quedamos",
+        "en",
+        "vernos",
+        "al",
+        "día",
+        "siguiente"
+      ],
+      "ok": "¡Perfecto! quedar en = to agree/arrange to.",
+      "no": "“Quedamos en vernos al día siguiente” — quedar governs EN, not de/con."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "No me ___ dónde dejé las llaves.",
+      "prompt_en": "I don't remember where I left the keys.",
+      "accepted": [
+        "acuerdo de",
+        "acuerdo"
+      ],
+      "ignore_accents": true,
+      "hint": "Pronominal verb + de: (yo) me ___ ___.",
+      "ok": "¡Bien! acordarse de = to remember.",
+      "no": "Use acordarse de: “No me acuerdo de dónde…”. (recordar would need no preposition.)"
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each verb to the preposition it governs.",
+      "pairs": [
+        ["soñar", "con"],
+        ["insistir", "en"],
+        ["tratarse", "de"],
+        ["atreverse", "a"]
+      ],
+      "ok": "¡Excelente! El régimen preposicional, dominado.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Insistió en pagar la cuenta él mismo.",
+      "accepted": [
+        "insistio en pagar la cuenta el mismo"
+      ],
+      "ignore_accents": true,
+      "translation": "He insisted on paying the bill himself.",
+      "ok": "¡Correcto! “Insistió en pagar la cuenta él mismo.”",
+      "no": "It was: “Insistió en pagar la cuenta él mismo.” (insistir en = to insist on)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A colleague asks your view on a plan they can't stop mulling over 💭",
+      "lines": [
+        {
+          "speaker": "Elena",
+          "es": "Llevo toda la semana pensando en la reestructuración. ¿Tú qué piensas de ella?",
+          "en": "I've been thinking about the restructuring all week. What do you think of it?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Pienso que es arriesgada, pero puede salir bien." },
+        { "id": "b", "text": "Pienso en que es arriesgada, pero puede salir bien." },
+        { "id": "c", "text": "Pienso de que es arriesgada, pero puede salir bien." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Para dar una opinión: pienso que… (o ¿qué piensas de…?).",
+      "no": "To state an opinion you use ‘pienso que…’. ‘Pensar de’ appears in the question (¿qué piensas de…?), not before ‘que’."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "No me atrevo a contradecirle.",
+      "en": "I don't dare to contradict him.",
+      "ok": "¡Perfecto! atreverse a, con acento natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “No me atrevo a contradecirle.”"
+    }
+  ],
+  "vocab": [
+    { "es": "contar con", "en": "to rely on / count on" },
+    { "es": "dar con", "en": "to find / come across" },
+    { "es": "acordarse de", "en": "to remember" },
+    { "es": "depender de", "en": "to depend on" },
+    { "es": "atreverse a", "en": "to dare to" },
+    { "es": "quedar en", "en": "to agree / arrange to" },
+    { "es": "insistir en", "en": "to insist on" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "contar con",
+      "dar con",
+      "acordarse de",
+      "depender de",
+      "atreverse a"
+    ]
+  }
+}

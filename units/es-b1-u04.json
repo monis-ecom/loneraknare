@@ -1,0 +1,336 @@
+{
+  "unit": {
+    "id": "es-b1-u04",
+    "title": "Subjunctive with conjunctions",
+    "subtitle": "cuando, para que, aunque and the future",
+    "level": "B1",
+    "order": 4,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "When time and purpose flip the verb",
+    "intro": "Some little connectors pull the <b>subjunctive</b> along with them. The trick is <b>time</b>: with <b>cuando</b>, <b>hasta que</b>, and <b>en cuanto</b>, use the subjunctive when you point at the <b>future</b> (something that hasn't happened yet), but the indicative for habits. A few connectors — <b>para que</b>, <b>antes de que</b>, <b>sin que</b>, <b>a menos que</b> — take the subjunctive <b>every single time</b>. And <b>aunque</b> flips to subjunctive when you're conceding a possibility.",
+    "sections": [
+      {
+        "tag": "el tiempo",
+        "heading": "cuando / hasta que / en cuanto + the future",
+        "body": "When these time words point to a <b>future</b> action that hasn't happened yet, the verb goes subjunctive. Think “whenever it eventually happens”:",
+        "conj": [
+          ["Cuando llegues,", "llámame"],
+          ["Hasta que termines,", "no salgas"],
+          ["En cuanto pueda,", "te escribo"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Cuando llegues</b>, llámame.",
+            "en": "When you arrive, call me.",
+            "note": "future → llegues (subjunctive)"
+          },
+          {
+            "es": "Espera <b>hasta que termine</b> la película.",
+            "en": "Wait until the film finishes.",
+            "note": "not yet done → termine"
+          }
+        ]
+      },
+      {
+        "tag": "el contraste",
+        "heading": "cuando + indicative for habits",
+        "body": "But if <b>cuando</b> describes something you do <b>routinely</b>, it stays in the normal indicative. Habit, not future:",
+        "ex": [
+          {
+            "es": "<b>Cuando llego</b> a casa, como.",
+            "en": "When I get home, I eat.",
+            "note": "habit → llego (indicative)"
+          },
+          {
+            "es": "<b>Cuando llegue</b> a casa, comeré.",
+            "en": "When I get home, I'll eat.",
+            "note": "future plan → llegue (subjunctive)"
+          }
+        ]
+      },
+      {
+        "tag": "siempre subjuntivo",
+        "heading": "Always subjunctive: para que, antes de que, sin que, a menos que",
+        "body": "These four never take the indicative. Purpose, “before”, “without”, and “unless” always point to something unrealised:",
+        "conj": [
+          ["para que", "vengas"],
+          ["antes de que", "salgas"],
+          ["sin que", "lo sepa"],
+          ["a menos que", "llueva"]
+        ],
+        "ex": [
+          {
+            "es": "Te lo explico <b>para que</b> lo <b>entiendas</b>.",
+            "en": "I'll explain it so that you understand it.",
+            "note": "para que → siempre subjuntivo"
+          },
+          {
+            "es": "Salgamos <b>antes de que</b> <b>empiece</b> a llover.",
+            "en": "Let's leave before it starts to rain.",
+            "note": "antes de que → empiece"
+          }
+        ]
+      },
+      {
+        "tag": "aunque",
+        "heading": "aunque — concession",
+        "body": "<b>Aunque</b> takes the subjunctive when you concede something as a <b>possibility</b> (“even if”). Use the indicative when it's a known <b>fact</b> (“even though”):",
+        "ex": [
+          {
+            "es": "<b>Aunque</b> <b>llueva</b>, iremos a la playa.",
+            "en": "Even if it rains, we'll go to the beach.",
+            "note": "possibility → llueva"
+          },
+          {
+            "es": "<b>Aunque</b> <b>llueve</b>, salgo a correr.",
+            "en": "Even though it's raining, I go out to run.",
+            "note": "known fact → llueve"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "cuando / hasta que / en cuanto + subjunctive when it's the future: Cuando llegues, llámame.",
+      "cuando + indicative for habits: Cuando llego a casa, como.",
+      "para que, antes de que, sin que, a menos que → always subjunctive.",
+      "aunque + subjunctive = 'even if' (possibility); + indicative = 'even though' (fact)."
+    ],
+    "mistakes": [
+      {
+        "w": "Cuando llegas mañana, llámame.",
+        "r": "Cuando llegues mañana, llámame.",
+        "why": "A future action after 'cuando' takes the subjunctive: llegues, not llegas."
+      },
+      {
+        "w": "Te lo digo para que vienes.",
+        "r": "Te lo digo para que vengas.",
+        "why": "'para que' always takes the subjunctive: vengas, not vienes."
+      },
+      {
+        "w": "Salgamos antes de que empieza a llover.",
+        "r": "Salgamos antes de que empiece a llover.",
+        "why": "'antes de que' always takes the subjunctive: empiece, not empieza."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Cuando ___ a casa, llámame.",
+      "prompt_en": "When you get home, call me.",
+      "options": [
+        {
+          "id": "a",
+          "text": "llegas"
+        },
+        {
+          "id": "b",
+          "text": "llegues"
+        },
+        {
+          "id": "c",
+          "text": "llegar"
+        },
+        {
+          "id": "d",
+          "text": "llegaste"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! Es futuro → llegues.",
+      "no": "A future action after 'cuando' takes the subjunctive: “llegues”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Cuando ___ a casa, siempre como. (todos los días)",
+      "prompt_en": "When I get home, I always eat. (every day)",
+      "options": [
+        {
+          "id": "a",
+          "text": "llegue"
+        },
+        {
+          "id": "b",
+          "text": "llego"
+        },
+        {
+          "id": "c",
+          "text": "llegara"
+        },
+        {
+          "id": "d",
+          "text": "llegar"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! Es un hábito → indicativo: llego.",
+      "no": "A habit after 'cuando' stays in the indicative: “llego”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I'll explain it so that you understand it.”",
+      "tokens": [
+        "Te",
+        "lo",
+        "explico",
+        "para",
+        "que",
+        "entiendas",
+        "entiendes",
+        "entender"
+      ],
+      "answer": [
+        "Te",
+        "lo",
+        "explico",
+        "para",
+        "que",
+        "entiendas"
+      ],
+      "ok": "¡Perfecto! para que → siempre subjuntivo.",
+      "no": "“Te lo explico para que entiendas” — 'para que' always takes the subjunctive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Salgamos antes de que ___ a llover. (empezar)",
+      "prompt_en": "Let's leave before it starts to rain.",
+      "accepted": [
+        "empiece"
+      ],
+      "ignore_accents": true,
+      "hint": "empezar in the subjunctive: emp___.",
+      "ok": "¡Bien! antes de que empiece.",
+      "no": "'antes de que' always takes the subjunctive → “empiece”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each connector to its meaning.",
+      "pairs": [
+        [
+          "cuando",
+          "when"
+        ],
+        [
+          "para que",
+          "so that"
+        ],
+        [
+          "antes de que",
+          "before"
+        ],
+        [
+          "a menos que",
+          "unless"
+        ]
+      ],
+      "ok": "¡Excelente! You know your connectors.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "En cuanto pueda, te escribo.",
+      "accepted": [
+        "en cuanto pueda te escribo",
+        "en cuanto pueda, te escribo"
+      ],
+      "ignore_accents": true,
+      "translation": "As soon as I can, I'll write to you.",
+      "ok": "¡Correcto! “En cuanto pueda, te escribo.”",
+      "no": "It was: “En cuanto pueda, te escribo.” (As soon as I can, I'll write to you.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Planning a beach trip despite the forecast 🏖️",
+      "lines": [
+        {
+          "speaker": "Rosa",
+          "es": "Dicen que mañana va a llover.",
+          "en": "They say it's going to rain tomorrow."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Aunque llueva, iremos a la playa."
+        },
+        {
+          "id": "b",
+          "text": "Aunque llueve mañana, iremos."
+        },
+        {
+          "id": "c",
+          "text": "Para que llueve, iremos a la playa."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Aunque + subjuntivo = 'even if'.",
+      "no": "For a possibility, use 'aunque' + subjunctive: “Aunque llueva, iremos a la playa.” (Even if it rains, we'll go.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Cuando llegues, llámame.",
+      "en": "When you arrive, call me.",
+      "ok": "¡Perfecto! Great pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "cuando",
+      "en": "when"
+    },
+    {
+      "es": "para que",
+      "en": "so that / in order that"
+    },
+    {
+      "es": "antes de que",
+      "en": "before"
+    },
+    {
+      "es": "en cuanto",
+      "en": "as soon as"
+    },
+    {
+      "es": "aunque",
+      "en": "even if / even though"
+    },
+    {
+      "es": "a menos que",
+      "en": "unless"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "cuando",
+      "para que",
+      "antes de que",
+      "en cuanto",
+      "aunque"
+    ]
+  }
+}

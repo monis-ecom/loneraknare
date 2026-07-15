@@ -1,0 +1,359 @@
+{
+  "unit": {
+    "id": "es-b2-u01",
+    "title": "The Pluperfect Subjunctive",
+    "subtitle": "Regrets and hypotheticals about the completed past",
+    "level": "B2",
+    "order": 1,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The subjunctive for the past-before-the-past",
+    "intro": "The <b>pluperfect subjunctive</b> (pluscuamperfecto de subjuntivo) expresses a <b>completed, hypothetical past</b> inside a subjunctive context. It's a compound tense: take the imperfect subjunctive of <b>haber</b> (hubiera) and add a <b>past participle</b>. Think of it as the subjunctive version of 'I had done' — perfect for regrets and things that never happened.",
+    "sections": [
+      {
+        "tag": "formación",
+        "heading": "hubiera + past participle",
+        "body": "Conjugate <b>haber</b> in the imperfect subjunctive, then add the participle (which never changes). The <b>nosotros</b> form takes a written accent. An <b>-iese</b> variant also exists (hubiese hablado) with the exact same meaning:",
+        "conj": [
+          [
+            "yo",
+            "hubiera hablado"
+          ],
+          [
+            "tú",
+            "hubieras hablado"
+          ],
+          [
+            "él/ella",
+            "hubiera hablado"
+          ],
+          [
+            "nosotros",
+            "hubiéramos hablado"
+          ],
+          [
+            "vosotros",
+            "hubierais hablado"
+          ],
+          [
+            "ellos",
+            "hubieran hablado"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Ojalá <b>hubiera estudiado</b> más.",
+            "en": "I wish I had studied more.",
+            "note": "regret about the past"
+          },
+          {
+            "es": "No creía que <b>hubiéramos ido</b>.",
+            "en": "I didn't think we had gone.",
+            "note": "nosotros → accent"
+          }
+        ]
+      },
+      {
+        "tag": "participios",
+        "heading": "Watch the irregular participles",
+        "body": "The participle carries the meaning, so the irregular ones matter. Memorise these — they show up constantly:",
+        "conj": [
+          [
+            "hacer",
+            "hecho"
+          ],
+          [
+            "ver",
+            "visto"
+          ],
+          [
+            "decir",
+            "dicho"
+          ],
+          [
+            "escribir",
+            "escrito"
+          ],
+          [
+            "volver",
+            "vuelto"
+          ],
+          [
+            "poner",
+            "puesto"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Ojalá lo <b>hubiera hecho</b> antes.",
+            "en": "I wish I had done it earlier.",
+            "note": "hacer → hecho, not 'hacido'"
+          },
+          {
+            "es": "No creía que <b>hubieran vuelto</b>.",
+            "en": "I didn't think they had come back.",
+            "note": "volver → vuelto"
+          }
+        ]
+      },
+      {
+        "tag": "usos",
+        "heading": "When you need it",
+        "body": "Use it after a <b>past-tense trigger</b> that demands the subjunctive, but where the action is <b>already completed</b> — one step further back than the imperfect subjunctive. Classic homes: <b>Ojalá</b> for regrets, and emotion/doubt verbs in the past:",
+        "ex": [
+          {
+            "es": "Me alegré de que <b>hubieras venido</b>.",
+            "en": "I was glad you had come.",
+            "note": "past emotion + prior action"
+          },
+          {
+            "es": "Habría sido mejor que <b>hubiera sido</b> honesto.",
+            "en": "It would have been better if he had been honest.",
+            "note": "ser → sido"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Pluperfect subjunctive = hubiera/hubiese + past participle.",
+      "Forms: hubiera, hubieras, hubiera, hubiéramos, hubierais, hubieran.",
+      "It marks a completed, hypothetical past: Ojalá hubiera estudiado más.",
+      "Irregular participles matter: hecho, visto, dicho, escrito, vuelto, puesto."
+    ],
+    "mistakes": [
+      {
+        "w": "Ojalá viniera a la fiesta de ayer.",
+        "r": "Ojalá hubiera venido a la fiesta de ayer.",
+        "why": "For a regret about a completed past event, use the pluperfect subjunctive, not the imperfect subjunctive."
+      },
+      {
+        "w": "Ojalá lo hubiera hacido antes.",
+        "r": "Ojalá lo hubiera hecho antes.",
+        "why": "hacer has an irregular participle: hecho, not 'hacido'."
+      },
+      {
+        "w": "Me alegré de que hubieras venir.",
+        "r": "Me alegré de que hubieras venido.",
+        "why": "After hubieras you need a past participle (venido), not an infinitive."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ojalá ___ más. (estudiar, yo)",
+      "prompt_en": "I wish I had studied more.",
+      "options": [
+        {
+          "id": "a",
+          "text": "hubiera estudiado"
+        },
+        {
+          "id": "b",
+          "text": "estudiara"
+        },
+        {
+          "id": "c",
+          "text": "había estudiado"
+        },
+        {
+          "id": "d",
+          "text": "hubiera estudiar"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Un lamento del pasado → hubiera estudiado.",
+      "no": "A completed-past regret needs the pluperfect subjunctive: “hubiera estudiado”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No creía que ellos ___. (volver)",
+      "prompt_en": "I didn't think they had come back.",
+      "options": [
+        {
+          "id": "a",
+          "text": "hubieran vuelto"
+        },
+        {
+          "id": "b",
+          "text": "hubieran volvido"
+        },
+        {
+          "id": "c",
+          "text": "habían vuelto"
+        },
+        {
+          "id": "d",
+          "text": "volvieran"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! volver → vuelto.",
+      "no": "Doubt in the past + a completed action: “hubieran vuelto” (volver → vuelto)."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I was glad you had come.”",
+      "tokens": [
+        "Me",
+        "alegré",
+        "de",
+        "que",
+        "hubieras",
+        "venido",
+        "vinieras",
+        "venir"
+      ],
+      "answer": [
+        "Me",
+        "alegré",
+        "de",
+        "que",
+        "hubieras",
+        "venido"
+      ],
+      "ok": "¡Perfecto! hubieras + venido.",
+      "no": "“Me alegré de que hubieras venido” — hubieras plus the participle venido."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Ojalá lo ___ antes. (hacer, yo)",
+      "prompt_en": "I wish I had done it earlier.",
+      "accepted": [
+        "hubiera hecho"
+      ],
+      "ignore_accents": true,
+      "hint": "hubiera + the irregular participle of hacer.",
+      "ok": "¡Bien! hacer → hecho: hubiera hecho.",
+      "no": "It's “hubiera hecho” — hacer has the irregular participle hecho."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each verb to its past participle.",
+      "pairs": [
+        [
+          "hacer",
+          "hecho"
+        ],
+        [
+          "ver",
+          "visto"
+        ],
+        [
+          "decir",
+          "dicho"
+        ],
+        [
+          "escribir",
+          "escrito"
+        ]
+      ],
+      "ok": "¡Excelente! Los participios irregulares, dominados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Ojalá hubiera estudiado más.",
+      "accepted": [
+        "ojala hubiera estudiado mas"
+      ],
+      "ignore_accents": true,
+      "translation": "I wish I had studied more.",
+      "ok": "¡Correcto! “Ojalá hubiera estudiado más.”",
+      "no": "It was: “Ojalá hubiera estudiado más.” (I wish I had studied more.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend missed a great party 🎉",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "La fiesta de anoche fue increíble. ¡Qué pena que no vinieras!",
+          "en": "Last night's party was amazing. What a shame you didn't come!"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, ojalá hubiera ido."
+        },
+        {
+          "id": "b",
+          "text": "Sí, ojalá fuera."
+        },
+        {
+          "id": "c",
+          "text": "Sí, ojalá había ido."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Un lamento del pasado → hubiera ido.",
+      "no": "A regret about a completed past uses the pluperfect subjunctive: “ojalá hubiera ido”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Ojalá hubiera venido antes.",
+      "en": "I wish I had come earlier.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Ojalá hubiera venido antes.”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "hubiera hecho",
+      "en": "(I/he/she) had done"
+    },
+    {
+      "es": "ojalá hubiera",
+      "en": "I wish I had"
+    },
+    {
+      "es": "hubiéramos ido",
+      "en": "(we) had gone"
+    },
+    {
+      "es": "me alegré de que hubieras",
+      "en": "I was glad you had"
+    },
+    {
+      "es": "hubiera sido",
+      "en": "(it/he/she) had been"
+    },
+    {
+      "es": "hubieran vuelto",
+      "en": "(they) had come back"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "hubiera hecho",
+      "ojalá hubiera",
+      "hubiéramos ido",
+      "me alegré de que hubieras",
+      "hubiera sido"
+    ]
+  }
+}

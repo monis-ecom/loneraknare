@@ -1,0 +1,239 @@
+{
+  "unit": {
+    "id": "es-c2-u07",
+    "title": "Suffixes with Attitude",
+    "subtitle": "Diminutives, augmentatives and the connotations they carry",
+    "level": "C2",
+    "order": 7,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "It was never really about size",
+    "intro": "At C2 the Spanish suffix system stops being about <b>big</b> and <b>small</b> and becomes a tool for <b>attitude</b>. The same ending can soften a request, drip with affection, belittle, admire or insult — and which reading applies depends on the word, the region and the tone. Learn the <b>connotation</b> each suffix carries, not just its literal size.",
+    "sections": [
+      {
+        "tag": "matiz",
+        "heading": "Diminutives: affection, softening, minimizing",
+        "body": "The diminutive rarely means “physically small”. <b>-ito/-ita</b> mainly adds warmth or softens: <b>un momentito</b> asks for patience, <b>¿un cafelito?</b> is a cosy invitation, <b>pobrecito</b> drips sympathy. It can also downplay: <b>ahorita</b> (in a moment), <b>un problemilla</b> (a minor snag). Variants carry their own flavour: <b>-illo</b> often trivializes or turns pejorative (<b>un abogadillo</b> = a two-bit lawyer), while <b>-ín</b> and <b>-ico</b> are affectionate regional forms.",
+        "conj": [
+          ["un momentito", "just a second (softening)"],
+          ["¿un cafelito?", "fancy a little coffee? (cosy)"],
+          ["pobrecito", "poor little thing (sympathy)"],
+          ["un abogadillo", "a two-bit lawyer (pejorative -illo)"],
+          ["ahorita", "in a moment (minimizing)"]
+        ],
+        "ex": [
+          {
+            "es": "Espera un <b>momentito</b>, que ya casi termino.",
+            "en": "Hold on just a sec, I'm almost done.",
+            "note": "softens the wait, not about time being tiny"
+          },
+          {
+            "es": "No es más que un <b>abogadillo</b> de tres al cuarto.",
+            "en": "He's nothing but a two-bit lawyer.",
+            "note": "-illo turns it dismissive"
+          }
+        ]
+      },
+      {
+        "tag": "aumentativo",
+        "heading": "Augmentatives: bigness, admiration and the -azo blow",
+        "body": "Augmentatives amplify, but the emotional colour varies. <b>-ón/-ona</b> can admire or exaggerate (<b>un caserón</b> = a huge house, <b>un tragón</b> = a big eater). <b>-azo</b> is the star: on a noun it means admiration (<b>un cochazo</b> = a stunning car, <b>un golazo</b> = a screamer of a goal), but it also lexicalizes as a <b>blow</b> or sudden event (<b>un portazo</b> = a slammed door, <b>un codazo</b> = a jab with the elbow). Context decides which <b>-azo</b> you're hearing.",
+        "conj": [
+          ["un golazo", "a stunning goal (admiration)"],
+          ["un cochazo", "a beast of a car (admiration)"],
+          ["un portazo", "a door slam (a blow/event)"],
+          ["un codazo", "an elbow jab (a blow)"],
+          ["un caserón", "a huge, rambling house (-ón)"]
+        ],
+        "ex": [
+          {
+            "es": "¡Menudo <b>golazo</b> ha marcado desde el centro del campo!",
+            "en": "What a stunner of a goal he scored from midfield!",
+            "note": "-azo = admiration here"
+          },
+          {
+            "es": "Se fue del despacho y pegó un <b>portazo</b> que retumbó.",
+            "en": "He left the office and slammed the door so hard it echoed.",
+            "note": "same suffix, now 'a blow/event'"
+          }
+        ]
+      },
+      {
+        "tag": "despectivo",
+        "heading": "Pejoratives: suffixes that sneer",
+        "body": "Some suffixes exist mainly to <b>disparage</b>. <b>-ucho/-ucha</b> marks something shabby (<b>una casucha</b> = a hovel, <b>un cuartucho</b> = a grotty little room). <b>-aco/-aca</b> and <b>-ajo</b> add contempt (<b>un pajarraco</b> = an ugly great bird, <b>un latinajo</b> = pretentious Latin), and <b>-orrio/-orro</b> makes things dreary (<b>un villorrio</b> = a dead-end village). These are rarely neutral — reach for them only when you mean to look down on something.",
+        "conj": [
+          ["una casucha", "a shabby little house / hovel"],
+          ["un cuartucho", "a grotty room"],
+          ["un pajarraco", "an ugly great bird"],
+          ["un villorrio", "a dreary backwater"]
+        ],
+        "ex": [
+          {
+            "es": "Vivían en una <b>casucha</b> destartalada a las afueras.",
+            "en": "They lived in a run-down hovel on the outskirts.",
+            "note": "-ucho = shabby, contemptuous"
+          },
+          {
+            "es": "Se posó en la antena un <b>pajarraco</b> negro y enorme.",
+            "en": "A huge, ugly black bird landed on the aerial.",
+            "note": "-aco adds distaste"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Diminutives mostly signal affection or softening, not literal smallness: un momentito, ¿un cafelito?",
+      "-illo often trivializes or turns pejorative: un abogadillo, un problemilla.",
+      "-azo splits two ways: admiration (un golazo, un cochazo) vs. a blow/event (un portazo, un codazo).",
+      "-ucho / -aco / -orrio are pejorative by default: una casucha, un pajarraco, un villorrio."
+    ],
+    "mistakes": [
+      {
+        "w": "Dame un momento pequeñito.",
+        "r": "Dame un momentito.",
+        "why": "The diminutive already carries the softening; adding pequeñito is redundant and unnatural."
+      },
+      {
+        "w": "¡Qué cochito tan impresionante se ha comprado!",
+        "r": "¡Qué cochazo se ha comprado!",
+        "why": "Admiration for an impressive car calls for the augmentative -azo, not the diminutive."
+      },
+      {
+        "w": "Le dio un portito a la puerta.",
+        "r": "Dio un portazo a la puerta.",
+        "why": "The sudden blow/slam is lexicalized as portazo (-azo); portito does not exist."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¡Vaya ___! Marcó desde treinta metros.",
+      "prompt_en": "What a goal! He scored from thirty metres.",
+      "options": [
+        { "id": "a", "text": "golazo" },
+        { "id": "b", "text": "golecito" },
+        { "id": "c", "text": "golillo" },
+        { "id": "d", "text": "golucho" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! -azo aquí expresa admiración: un golazo.",
+      "no": "Admiration for a spectacular goal uses -azo: “golazo”, not a diminutive or pejorative."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No te fíes de él: no es más que un ___ que perdió su primer caso.",
+      "prompt_en": "Don't trust him: he's just a two-bit lawyer who lost his first case.",
+      "options": [
+        { "id": "a", "text": "abogadillo" },
+        { "id": "b", "text": "abogadazo" },
+        { "id": "c", "text": "abogadito" },
+        { "id": "d", "text": "abogadón" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! -illo aquí desprecia: un abogadillo.",
+      "no": "To belittle him, use the pejorative -illo: “abogadillo”. -azo/-ón would sound admiring."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Hold on just a sec, poor thing, and have a little coffee.”",
+      "tokens": ["Espera", "un", "momentito", ",", "pobrecito", ",", "y", "tómate", "un", "cafelito", "momentazo", "cafetazo"],
+      "answer": ["Espera", "un", "momentito", ",", "pobrecito", ",", "y", "tómate", "un", "cafelito"],
+      "ok": "¡Perfecto! Diminutivos afectivos encadenados.",
+      "no": "All three are affectionate diminutives: momentito, pobrecito, cafelito."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Salió furioso y dio un ___ que se oyó en toda la casa. (puerta + golpe)",
+      "prompt_en": "He stormed out and slammed the door so hard the whole house heard it.",
+      "accepted": ["portazo", "un portazo"],
+      "ignore_accents": true,
+      "hint": "The -azo that means 'a sudden blow', derived from puerta.",
+      "ok": "¡Bien! El -azo de golpe: un portazo.",
+      "no": "A door slammed shut is a “portazo” — the -azo meaning a blow/event."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each suffixed word to the connotation it carries.",
+      "pairs": [
+        ["un cochazo", "admiration (an impressive car)"],
+        ["una casucha", "contempt (a shabby hovel)"],
+        ["pobrecito", "affection / sympathy"],
+        ["un codazo", "a blow (a jab with the elbow)"]
+      ],
+      "ok": "¡Excelente! La connotación, no el tamaño.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Vivían en una casucha a las afueras del pueblo.",
+      "accepted": ["vivian en una casucha a las afueras del pueblo"],
+      "ignore_accents": true,
+      "translation": "They lived in a shabby little house on the edge of the village.",
+      "ok": "¡Correcto! “Vivían en una casucha a las afueras del pueblo.”",
+      "no": "It was: “Vivían en una casucha a las afueras del pueblo.” (casucha = pejorative -ucho)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend shows off the sports car he just bought 🚗",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "Mira lo que me he comprado. ¿Qué te parece?",
+          "en": "Look what I've bought myself. What do you reckon?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "¡Menudo cochazo! Te ha tenido que costar una fortuna." },
+        { "id": "b", "text": "¡Vaya cochecito! Es monísimo y diminuto." },
+        { "id": "c", "text": "¡Qué cochucho! Da pena verlo." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Para admirar un coción impresionante → cochazo.",
+      "no": "To admire an impressive car you want the augmentative “cochazo”, not the diminutive or the pejorative -ucho."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Espera un momentito, ahora mismo voy.",
+      "en": "Hold on just a sec, I'm coming right now.",
+      "ok": "¡Perfecto! El momentito suena de lo más natural.",
+      "no": "Almost — tap “Hear it” and match the warm, softening tone of “un momentito”."
+    }
+  ],
+  "vocab": [
+    { "es": "un momentito", "en": "just a second (softening diminutive)" },
+    { "es": "¿un cafelito?", "en": "fancy a little coffee? (cosy)" },
+    { "es": "un abogadillo", "en": "a two-bit lawyer (pejorative -illo)" },
+    { "es": "un golazo", "en": "a stunning goal (admiring -azo)" },
+    { "es": "un cochazo", "en": "a beast of a car (admiring -azo)" },
+    { "es": "un portazo", "en": "a door slam (-azo as a blow)" },
+    { "es": "una casucha", "en": "a shabby hovel (pejorative -ucho)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["un momentito", "un abogadillo", "un golazo", "un portazo", "una casucha"]
+  }
+}

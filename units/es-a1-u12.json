@@ -1,0 +1,345 @@
+{
+  "unit": {
+    "id": "es-a1-u12",
+    "title": "Questions",
+    "subtitle": "Question words and how to ask in Spanish",
+    "level": "A1",
+    "order": 12,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Ask anything in Spanish",
+    "intro": "Spanish opens a question with an upside-down <b>¿</b> and closes it with <b>?</b>. To ask for information, start with a <b>question word</b> — and note that every question word carries a written <b>accent</b>: qué, quién, dónde…",
+    "sections": [
+      {
+        "tag": "palabras",
+        "heading": "The question words",
+        "body": "Learn these and you can ask almost anything. All of them have an accent:",
+        "conj": [
+          [
+            "qué",
+            "what"
+          ],
+          [
+            "quién / quiénes",
+            "who (sing. / plural)"
+          ],
+          [
+            "dónde",
+            "where"
+          ],
+          [
+            "cuándo",
+            "when"
+          ],
+          [
+            "cómo",
+            "how"
+          ],
+          [
+            "por qué",
+            "why"
+          ],
+          [
+            "cuánto / cuánta",
+            "how much"
+          ],
+          [
+            "cuántos / cuántas",
+            "how many"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "¿<b>Qué</b> quieres?",
+            "en": "What do you want?",
+            "note": "qué = what"
+          },
+          {
+            "es": "¿<b>Quién</b> es?",
+            "en": "Who is it?",
+            "note": "quién = who"
+          }
+        ]
+      },
+      {
+        "tag": "orden",
+        "heading": "Word order",
+        "body": "The usual pattern is <b>¿ + question word + verb + …?</b> The subject often comes after the verb or is left out entirely:",
+        "conj": [
+          [
+            "¿Dónde vives?",
+            "Where do you live?"
+          ],
+          [
+            "¿Cómo estás?",
+            "How are you?"
+          ],
+          [
+            "¿Cuándo trabajas?",
+            "When do you work?"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "¿<b>Dónde</b> está el baño?",
+            "en": "Where is the bathroom?",
+            "note": "dónde + estar"
+          },
+          {
+            "es": "¿<b>Cuántos</b> años tienes?",
+            "en": "How old are you? (lit. how many years)",
+            "note": "cuántos agrees with años"
+          }
+        ]
+      },
+      {
+        "tag": "porque",
+        "heading": "¿Por qué? vs porque",
+        "body": "Don’t mix these up: <b>¿por qué?</b> (two words, with accent) means <b>why?</b>. <b>porque</b> (one word, no accent) means <b>because</b> and is the answer:",
+        "ex": [
+          {
+            "es": "— ¿<b>Por qué</b> estudias español? — <b>Porque</b> me gusta.",
+            "en": "— Why do you study Spanish? — Because I like it.",
+            "note": "question vs answer"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Open with ¿ and close with ? — always both.",
+      "Every question word has a written accent: qué, quién, dónde, cuándo, cómo, por qué.",
+      "Order: ¿question word + verb + …? → ¿Dónde vives?",
+      "¿Por qué? (two words) = why; porque (one word) = because."
+    ],
+    "mistakes": [
+      {
+        "w": "¿Como estás?",
+        "r": "¿Cómo estás?",
+        "why": "As a question word, cómo needs an accent."
+      },
+      {
+        "w": "¿Por que estudias? Porqué me gusta.",
+        "r": "¿Por qué estudias? Porque me gusta.",
+        "why": "Why = por qué (two words, accent); because = porque (one word, no accent)."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¿___ estás?",
+      "prompt_en": "How are you?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Qué"
+        },
+        {
+          "id": "b",
+          "text": "Cómo"
+        },
+        {
+          "id": "c",
+          "text": "Dónde"
+        },
+        {
+          "id": "d",
+          "text": "Quién"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! ¿Cómo estás? = How are you?",
+      "no": "“How” is “cómo” → ¿Cómo estás?"
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¿___ vives?",
+      "prompt_en": "Where do you live?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cuándo"
+        },
+        {
+          "id": "b",
+          "text": "Qué"
+        },
+        {
+          "id": "c",
+          "text": "Dónde"
+        },
+        {
+          "id": "d",
+          "text": "Cómo"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Sí! ¿Dónde vives? = Where do you live?",
+      "no": "“Where” is “dónde” → ¿Dónde vives?"
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “What do you want?”",
+      "tokens": [
+        "¿Qué",
+        "¿Quién",
+        "quieres?",
+        "vives?",
+        "estás?"
+      ],
+      "answer": [
+        "¿Qué",
+        "quieres?"
+      ],
+      "ok": "¡Perfecto! ¿Qué quieres?",
+      "no": "“What do you want?” → “¿Qué quieres?”"
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "¿___ es? (Who is it?)",
+      "prompt_en": "Who is it?",
+      "accepted": [
+        "quien"
+      ],
+      "ignore_accents": true,
+      "hint": "who, singular.",
+      "ok": "¡Bien! ¿Quién es? = Who is it?",
+      "no": "“Who” is “quién” → ¿Quién es?"
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each question word to its meaning.",
+      "pairs": [
+        [
+          "qué",
+          "what"
+        ],
+        [
+          "dónde",
+          "where"
+        ],
+        [
+          "cuándo",
+          "when"
+        ],
+        [
+          "por qué",
+          "why"
+        ]
+      ],
+      "ok": "¡Excelente! You know your question words.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "¿Cuántos años tienes?",
+      "accepted": [
+        "cuantos anos tienes",
+        "cuantos años tienes"
+      ],
+      "ignore_accents": true,
+      "translation": "How old are you?",
+      "ok": "¡Correcto! “¿Cuántos años tienes?”",
+      "no": "It was: “¿Cuántos años tienes?” (How old are you?)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Chatting with a new classmate 🎒",
+      "lines": [
+        {
+          "speaker": "Luis",
+          "es": "Hola, soy nuevo aquí.",
+          "en": "Hi, I'm new here."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        },
+        {
+          "speaker": "Luis",
+          "es": "Soy de México.",
+          "en": "I'm from Mexico."
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "¿De dónde eres?"
+        },
+        {
+          "id": "b",
+          "text": "¿Cuándo eres?"
+        },
+        {
+          "id": "c",
+          "text": "¿Por qué eres?"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! ¿De dónde eres? asks where he’s from.",
+      "no": "To ask where someone is from: “¿De dónde eres?”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "por qué",
+      "en": "why",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "qué",
+      "en": "what"
+    },
+    {
+      "es": "quién",
+      "en": "who"
+    },
+    {
+      "es": "dónde",
+      "en": "where"
+    },
+    {
+      "es": "cuándo",
+      "en": "when"
+    },
+    {
+      "es": "cómo",
+      "en": "how"
+    },
+    {
+      "es": "por qué",
+      "en": "why"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "qué",
+      "quién",
+      "dónde",
+      "cuándo",
+      "cómo",
+      "por qué"
+    ]
+  }
+}

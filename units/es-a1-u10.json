@@ -1,0 +1,379 @@
+{
+  "unit": {
+    "id": "es-a1-u10",
+    "title": "Food",
+    "subtitle": "Food and ordering at a café",
+    "level": "A1",
+    "order": 10,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Order food and drinks with confidence",
+    "intro": "Whether it's a café or a restaurant, a few polite phrases go a long way. Learn to say what you <b>want</b>, to accept the waiter's <b>«¿Qué desea?»</b>, and to ask for <b>la cuenta</b> at the end.",
+    "sections": [
+      {
+        "tag": "comida",
+        "heading": "Food and drink",
+        "body": "Everyday things you'll order — note the article and its gender:",
+        "conj": [
+          [
+            "el agua",
+            "water"
+          ],
+          [
+            "el pan",
+            "bread"
+          ],
+          [
+            "el café",
+            "coffee"
+          ],
+          [
+            "el té",
+            "tea"
+          ],
+          [
+            "la leche",
+            "milk"
+          ],
+          [
+            "la fruta",
+            "fruit"
+          ],
+          [
+            "la ensalada",
+            "salad"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "un <b>café</b> con <b>leche</b>",
+            "en": "a coffee with milk",
+            "note": "a classic order"
+          },
+          {
+            "es": "una <b>ensalada</b>, por favor",
+            "en": "a salad, please",
+            "note": "ensalada is feminine"
+          }
+        ]
+      },
+      {
+        "tag": "pedir",
+        "heading": "Ordering: I want / I'd like",
+        "body": "Use <b>quiero</b> (I want) or the softer <b>me gustaría</b> (I'd like) + the food:",
+        "conj": [
+          [
+            "Quiero…",
+            "I want…"
+          ],
+          [
+            "Me gustaría…",
+            "I'd like…"
+          ],
+          [
+            "Para mí…",
+            "For me…"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Quiero</b> un café, por favor.",
+            "en": "I want a coffee, please.",
+            "note": "simple and correct"
+          },
+          {
+            "es": "<b>Para mí</b>, una ensalada.",
+            "en": "For me, a salad.",
+            "note": "handy at a table"
+          }
+        ]
+      },
+      {
+        "tag": "camarero",
+        "heading": "What the waiter says",
+        "body": "You'll hear these — and you'll ask for the bill at the end:",
+        "conj": [
+          [
+            "¿Qué desea?",
+            "What would you like?"
+          ],
+          [
+            "¿Algo más?",
+            "Anything else?"
+          ],
+          [
+            "La cuenta, por favor.",
+            "The bill, please."
+          ]
+        ],
+        "ex": [
+          {
+            "es": "— ¿Qué desea? — <b>Un té, por favor.</b>",
+            "en": "— What would you like? — A tea, please.",
+            "note": "a full exchange"
+          },
+          {
+            "es": "<b>La cuenta</b>, por favor.",
+            "en": "The bill, please.",
+            "note": "time to pay"
+          }
+        ]
+      },
+      {
+        "tag": "gustar",
+        "heading": "«gustar» vs «querer»",
+        "body": "To order, say <b>quiero</b> (I want). Save <b>me gusta</b> for talking about what you <b>like</b> in general — and never say «yo gusto».",
+        "ex": [
+          {
+            "es": "<b>Quiero</b> un café.",
+            "en": "I want a coffee.",
+            "note": "ordering now"
+          },
+          {
+            "es": "<b>Me gusta</b> el café.",
+            "en": "I like coffee.",
+            "note": "in general"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "To order, use quiero or me gustaría + the food.",
+      "La cuenta, por favor = the bill, please.",
+      "The waiter asks ¿Qué desea? — reply with «…, por favor».",
+      "Watch the article: el pan, la leche, la ensalada."
+    ],
+    "mistakes": [
+      {
+        "w": "Yo gusto un café.",
+        "r": "Quiero un café.",
+        "why": "To order, use quiero. «Gustar» works differently: Me gusta el café."
+      },
+      {
+        "w": "un ensalada",
+        "r": "una ensalada",
+        "why": "ensalada is feminine, so use una — not un."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ un café, por favor.",
+      "prompt_en": "I want a coffee, please.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Quiero"
+        },
+        {
+          "id": "b",
+          "text": "Yo gusto"
+        },
+        {
+          "id": "c",
+          "text": "Me gustas"
+        },
+        {
+          "id": "d",
+          "text": "Quieres"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! To order, use “Quiero”.",
+      "no": "To order, use “Quiero”, not “Yo gusto”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Quiero ___ ensalada.",
+      "prompt_en": "I want a salad.",
+      "options": [
+        {
+          "id": "a",
+          "text": "un"
+        },
+        {
+          "id": "b",
+          "text": "una"
+        },
+        {
+          "id": "c",
+          "text": "el"
+        },
+        {
+          "id": "d",
+          "text": "los"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Muy bien! ensalada is feminine → una.",
+      "no": "ensalada is feminine → “una ensalada”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “The bill, please.”",
+      "tokens": [
+        "La",
+        "cuenta,",
+        "por",
+        "favor",
+        "gracias",
+        "el"
+      ],
+      "answer": [
+        "La",
+        "cuenta,",
+        "por",
+        "favor"
+      ],
+      "ok": "¡Perfecto! “La cuenta, por favor.”",
+      "no": "“La cuenta, por favor.” — that's how you ask for the bill."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Para ___, un té con leche.",
+      "prompt_en": "For me, a tea with milk.",
+      "accepted": [
+        "mi"
+      ],
+      "ignore_accents": true,
+      "hint": "«For me…» = Para ___.",
+      "ok": "¡Bien! Para mí, un té con leche.",
+      "no": "“Para mí” = for me."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each Spanish word to its meaning.",
+      "pairs": [
+        [
+          "agua",
+          "water"
+        ],
+        [
+          "pan",
+          "bread"
+        ],
+        [
+          "leche",
+          "milk"
+        ],
+        [
+          "fruta",
+          "fruit"
+        ]
+      ],
+      "ok": "¡Excelente! Menu vocabulary locked in.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Me gustaría un café, por favor.",
+      "accepted": [
+        "me gustaria un cafe por favor",
+        "me gustaria un cafe, por favor"
+      ],
+      "ignore_accents": true,
+      "translation": "I'd like a coffee, please.",
+      "ok": "¡Correcto! “Me gustaría un café, por favor.”",
+      "no": "It was: “Me gustaría un café, por favor.” (I'd like a coffee, please.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Ordering at a café ☕",
+      "lines": [
+        {
+          "speaker": "Camarero",
+          "es": "Buenos días. ¿Qué desea?",
+          "en": "Good morning. What would you like?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Quiero un café con leche, por favor."
+        },
+        {
+          "id": "b",
+          "text": "Yo gusto un café."
+        },
+        {
+          "id": "c",
+          "text": "La cuenta, por favor."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! A polite, natural order.",
+      "no": "The natural reply is “Quiero un café con leche, por favor.” — you order first, and pay later."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "restaurante",
+      "en": "restaurant",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "comida",
+      "en": "food"
+    },
+    {
+      "es": "agua",
+      "en": "water"
+    },
+    {
+      "es": "pan",
+      "en": "bread"
+    },
+    {
+      "es": "café",
+      "en": "coffee"
+    },
+    {
+      "es": "la cuenta",
+      "en": "the bill"
+    },
+    {
+      "es": "quiero",
+      "en": "I want"
+    },
+    {
+      "es": "restaurante",
+      "en": "restaurant"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "comida",
+      "agua",
+      "pan",
+      "café",
+      "la cuenta",
+      "quiero"
+    ]
+  }
+}

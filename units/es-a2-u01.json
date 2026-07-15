@@ -1,0 +1,387 @@
+{
+  "unit": {
+    "id": "es-a2-u01",
+    "title": "Present perfect",
+    "subtitle": "Talking about what you've done today with haber + participle",
+    "level": "A2",
+    "order": 1,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Your first past tense: what has happened",
+    "intro": "The <b>pretérito perfecto</b> (present perfect) is how Spanish talks about the recent past — things you've done <b>today</b>, this week, or ever in your life. It pairs the helper verb <b>haber</b> with a <b>past participle</b>: <i>Hoy <b>he comido</b> paella.</i> (Today I've eaten paella.) It's the perfect bridge from the present into the past.",
+    "sections": [
+      {
+        "tag": "haber",
+        "heading": "The helper: haber",
+        "body": "Every present perfect starts with <b>haber</b>. It's irregular but short — memorise these six forms and you're halfway there:",
+        "conj": [
+          [
+            "yo",
+            "he"
+          ],
+          [
+            "tú",
+            "has"
+          ],
+          [
+            "él/ella",
+            "ha"
+          ],
+          [
+            "nosotros",
+            "hemos"
+          ],
+          [
+            "vosotros",
+            "habéis"
+          ],
+          [
+            "ellos",
+            "han"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Yo <b>he</b> hablado con Ana.",
+            "en": "I have spoken with Ana.",
+            "note": "yo → he"
+          },
+          {
+            "es": "Nosotros <b>hemos</b> comido.",
+            "en": "We have eaten.",
+            "note": "nosotros → hemos"
+          }
+        ]
+      },
+      {
+        "tag": "participios",
+        "heading": "Building the participle",
+        "body": "The second part is the <b>past participle</b>. Drop the ending and add <b>-ado</b> to -ar verbs, or <b>-ido</b> to -er and -ir verbs. The participle never changes — it stays the same for every subject:",
+        "conj": [
+          [
+            "hablar",
+            "hablado"
+          ],
+          [
+            "comer",
+            "comido"
+          ],
+          [
+            "vivir",
+            "vivido"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Hoy <b>he comido</b> paella.",
+            "en": "Today I've eaten paella.",
+            "note": "comer → comido"
+          },
+          {
+            "es": "Ella <b>ha vivido</b> en Madrid.",
+            "en": "She has lived in Madrid.",
+            "note": "vivir → vivido"
+          }
+        ]
+      },
+      {
+        "tag": "irregulares",
+        "heading": "Irregular participles to memorise",
+        "body": "A handful of common verbs have their own participle. These come up constantly, so learn them now:",
+        "conj": [
+          [
+            "hacer",
+            "hecho"
+          ],
+          [
+            "ver",
+            "visto"
+          ],
+          [
+            "decir",
+            "dicho"
+          ],
+          [
+            "escribir",
+            "escrito"
+          ],
+          [
+            "volver",
+            "vuelto"
+          ],
+          [
+            "poner",
+            "puesto"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "¿Qué <b>has hecho</b> hoy?",
+            "en": "What have you done today?",
+            "note": "hacer → hecho"
+          },
+          {
+            "es": "<b>He escrito</b> un correo.",
+            "en": "I've written an email.",
+            "note": "never 'he escribido'"
+          }
+        ]
+      },
+      {
+        "tag": "ya-todavia",
+        "heading": "ya and todavía no",
+        "body": "The present perfect loves two little words: <b>ya</b> (already) for what's done, and <b>todavía no</b> (not yet) for what isn't:",
+        "ex": [
+          {
+            "es": "<b>Ya</b> he desayunado.",
+            "en": "I've already had breakfast.",
+            "note": "ya = already"
+          },
+          {
+            "es": "<b>Todavía no</b> he visto la película.",
+            "en": "I haven't seen the film yet.",
+            "note": "todavía no = not yet"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Present perfect = haber (he, has, ha, hemos, habéis, han) + participle.",
+      "Participles: -ar → -ado (hablado), -er/-ir → -ido (comido, vivido).",
+      "Irregulars: hecho, visto, dicho, escrito, vuelto, puesto.",
+      "Use it for the recent past and with ya (already) / todavía no (not yet)."
+    ],
+    "mistakes": [
+      {
+        "w": "He escribido un correo.",
+        "r": "He escrito un correo.",
+        "why": "Escribir has an irregular participle: escrito, not escribido."
+      },
+      {
+        "w": "He comer paella.",
+        "r": "He comido paella.",
+        "why": "After haber you need the participle (comido), not the infinitive."
+      },
+      {
+        "w": "Yo ha hablado.",
+        "r": "Yo he hablado.",
+        "why": "The yo form of haber is 'he', not 'ha'."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Hoy yo ___ comido paella.",
+      "prompt_en": "Today I have eaten paella.",
+      "options": [
+        {
+          "id": "a",
+          "text": "he"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "ha"
+        },
+        {
+          "id": "d",
+          "text": "hemos"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! yo → he.",
+      "no": "The yo form of haber is “he”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ella ha ___ un correo.",
+      "prompt_en": "She has written an email.",
+      "options": [
+        {
+          "id": "a",
+          "text": "escribido"
+        },
+        {
+          "id": "b",
+          "text": "escrito"
+        },
+        {
+          "id": "c",
+          "text": "escribir"
+        },
+        {
+          "id": "d",
+          "text": "escribiendo"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! escribir → escrito (irregular).",
+      "no": "Escribir is irregular: “ha escrito”, not escribido."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “What have you done today?”",
+      "tokens": [
+        "¿Qué",
+        "has",
+        "hecho",
+        "hoy?",
+        "hacido",
+        "ha"
+      ],
+      "answer": [
+        "¿Qué",
+        "has",
+        "hecho",
+        "hoy?"
+      ],
+      "ok": "¡Perfecto! hacer → hecho.",
+      "no": "“¿Qué has hecho hoy?” — hacer has the irregular participle hecho."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Todavía no ___ visto la película.",
+      "prompt_en": "I haven't seen the film yet.",
+      "accepted": [
+        "he"
+      ],
+      "ignore_accents": true,
+      "hint": "The yo form of haber.",
+      "ok": "¡Bien! “Todavía no he visto…”.",
+      "no": "yo + haber → “he”: Todavía no he visto."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its past participle.",
+      "pairs": [
+        [
+          "hablar",
+          "hablado"
+        ],
+        [
+          "comer",
+          "comido"
+        ],
+        [
+          "hacer",
+          "hecho"
+        ],
+        [
+          "ver",
+          "visto"
+        ]
+      ],
+      "ok": "¡Excelente! Participles locked in.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Ya he desayunado.",
+      "accepted": [
+        "ya he desayunado"
+      ],
+      "ignore_accents": true,
+      "translation": "I've already had breakfast.",
+      "ok": "¡Correcto! “Ya he desayunado.”",
+      "no": "It was: “Ya he desayunado.” (I've already had breakfast.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend asks about your day 🌞",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Has comido ya?",
+          "en": "Have you eaten already?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, ya he comido."
+        },
+        {
+          "id": "b",
+          "text": "Sí, ya comer."
+        },
+        {
+          "id": "c",
+          "text": "Sí, he comer."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! haber + participio → he comido.",
+      "no": "Use haber + participle: “Sí, ya he comido.” (Yes, I've already eaten.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "He comido",
+      "en": "I have eaten",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “He comido”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "he hablado",
+      "en": "I have spoken"
+    },
+    {
+      "es": "hoy",
+      "en": "today"
+    },
+    {
+      "es": "ya",
+      "en": "already"
+    },
+    {
+      "es": "todavía no",
+      "en": "not yet"
+    },
+    {
+      "es": "hecho",
+      "en": "done / made"
+    },
+    {
+      "es": "visto",
+      "en": "seen"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "he hablado",
+      "hoy",
+      "ya",
+      "todavía no",
+      "hecho",
+      "visto"
+    ]
+  }
+}

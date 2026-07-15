@@ -1,0 +1,335 @@
+{
+  "unit": {
+    "id": "es-a1-u16",
+    "title": "Present continuous",
+    "subtitle": "Saying what's happening right now",
+    "level": "A1",
+    "order": 16,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "What are you doing right now?",
+    "intro": "To say an action is happening <b>at this very moment</b>, Spanish uses <b>estar</b> (which you already know) plus a special verb form called the <b>gerund</b> — the <b>-ing</b> form. So “I'm speaking” = <b>estoy hablando</b>. It's just two pieces: estar + gerund.",
+    "sections": [
+      {
+        "tag": "gerundio",
+        "heading": "Building the gerund",
+        "body": "Drop the infinitive ending and add the gerund ending: <b>-ar → -ando</b>, <b>-er/-ir → -iendo</b>:",
+        "conj": [
+          [
+            "hablar",
+            "hablando"
+          ],
+          [
+            "comer",
+            "comiendo"
+          ],
+          [
+            "vivir",
+            "viviendo"
+          ],
+          [
+            "escribir",
+            "escribiendo"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "hablar → <b>hablando</b>",
+            "en": "speaking",
+            "note": "-ar verbs → -ando"
+          },
+          {
+            "es": "comer → <b>comiendo</b>",
+            "en": "eating",
+            "note": "-er/-ir verbs → -iendo"
+          }
+        ]
+      },
+      {
+        "tag": "estar",
+        "heading": "estar + gerund",
+        "body": "Conjugate <b>estar</b> for the subject, then add the gerund (which never changes):",
+        "conj": [
+          [
+            "yo",
+            "estoy hablando"
+          ],
+          [
+            "tú",
+            "estás comiendo"
+          ],
+          [
+            "él/ella",
+            "está viviendo"
+          ],
+          [
+            "nosotros",
+            "estamos escribiendo"
+          ],
+          [
+            "ellos",
+            "están hablando"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Estoy hablando</b> por teléfono.",
+            "en": "I'm talking on the phone.",
+            "note": "right now"
+          },
+          {
+            "es": "Ellos <b>están comiendo</b> ahora.",
+            "en": "They are eating now.",
+            "note": "ahora = now"
+          }
+        ]
+      },
+      {
+        "tag": "contraste",
+        "heading": "Simple present vs. right now",
+        "body": "Use the simple present for habits and general facts; use estar + gerund only for what's happening <b>at this moment</b>:",
+        "ex": [
+          {
+            "es": "<b>Hablo</b> español.",
+            "en": "I speak Spanish.",
+            "note": "general — a skill I have"
+          },
+          {
+            "es": "<b>Estoy hablando</b> con Ana.",
+            "en": "I'm speaking with Ana.",
+            "note": "right now, in progress"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Present continuous = estar + gerund (estoy hablando).",
+      "Gerund: -ar → -ando; -er/-ir → -iendo.",
+      "Simple present = habits/facts; estar + gerund = happening right now."
+    ],
+    "mistakes": [
+      {
+        "w": "Yo soy hablando.",
+        "r": "Estoy hablando.",
+        "why": "The present continuous always uses estar, never ser."
+      },
+      {
+        "w": "Estoy comando.",
+        "r": "Estoy comiendo.",
+        "why": "comer is an -er verb, so the gerund is comiendo, not comando."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Yo ___ hablando por teléfono.",
+      "prompt_en": "I'm talking on the phone.",
+      "options": [
+        {
+          "id": "a",
+          "text": "estoy"
+        },
+        {
+          "id": "b",
+          "text": "soy"
+        },
+        {
+          "id": "c",
+          "text": "está"
+        },
+        {
+          "id": "d",
+          "text": "estás"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Present continuous usa estar → estoy.",
+      "no": "Use estar, not ser: yo → estoy hablando."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El gerundio de “comer” es ___.",
+      "prompt_en": "The gerund of “comer” is ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "comando"
+        },
+        {
+          "id": "b",
+          "text": "comiendo"
+        },
+        {
+          "id": "c",
+          "text": "comendo"
+        },
+        {
+          "id": "d",
+          "text": "comiando"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Sí! comer es -er → comiendo.",
+      "no": "comer is an -er verb → -iendo → “comiendo”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “She is writing a letter.”",
+      "tokens": [
+        "Ella",
+        "está",
+        "escribiendo",
+        "una",
+        "carta",
+        "escribe",
+        "estoy"
+      ],
+      "answer": [
+        "Ella",
+        "está",
+        "escribiendo",
+        "una",
+        "carta"
+      ],
+      "ok": "¡Perfecto! Ella está escribiendo una carta.",
+      "no": "estar + gerund: “Ella está escribiendo una carta.”"
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Nosotros estamos ___ ahora.",
+      "prompt_en": "We are eating now. (comer)",
+      "accepted": [
+        "comiendo"
+      ],
+      "ignore_accents": true,
+      "hint": "Gerund of comer (-er → -iendo).",
+      "ok": "¡Bien! comer → comiendo.",
+      "no": "comer → -iendo → “comiendo”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its gerund.",
+      "pairs": [
+        [
+          "hablar",
+          "hablando"
+        ],
+        [
+          "comer",
+          "comiendo"
+        ],
+        [
+          "vivir",
+          "viviendo"
+        ],
+        [
+          "escribir",
+          "escribiendo"
+        ]
+      ],
+      "ok": "¡Excelente! You've got the gerund pattern.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Ellos están comiendo ahora.",
+      "accepted": [
+        "ellos estan comiendo ahora"
+      ],
+      "ignore_accents": true,
+      "translation": "They are eating now.",
+      "ok": "¡Correcto! “Ellos están comiendo ahora.”",
+      "no": "It was: “Ellos están comiendo ahora.” (They are eating now.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend calls while you're busy 📞",
+      "lines": [
+        {
+          "speaker": "Luis",
+          "es": "¡Hola! ¿Qué estás haciendo?",
+          "en": "Hi! What are you doing?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Estoy comiendo, ¿y tú?"
+        },
+        {
+          "id": "b",
+          "text": "Yo soy comiendo."
+        },
+        {
+          "id": "c",
+          "text": "Como español."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! estar + gerund for what's happening now.",
+      "no": "For an action in progress use “Estoy comiendo, ¿y tú?”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "estar + gerundio",
+      "en": "to be + -ing (present continuous)",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "estar + gerundio",
+      "en": "to be + -ing (present continuous)"
+    },
+    {
+      "es": "hablando",
+      "en": "speaking"
+    },
+    {
+      "es": "comiendo",
+      "en": "eating"
+    },
+    {
+      "es": "escribiendo",
+      "en": "writing"
+    },
+    {
+      "es": "ahora",
+      "en": "now"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "estar + gerundio",
+      "hablando",
+      "comiendo",
+      "escribiendo",
+      "ahora"
+    ]
+  }
+}

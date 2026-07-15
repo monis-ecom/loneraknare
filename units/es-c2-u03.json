@@ -1,0 +1,237 @@
+{
+  "unit": {
+    "id": "es-c2-u03",
+    "title": "The Future Subjunctive",
+    "subtitle": "Hablare, fuere and the frozen -re forms of law and proverb",
+    "level": "C2",
+    "order": 3,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The tense that almost died",
+    "intro": "The <b>future subjunctive</b> (<b>hablare</b>, <b>tuviere</b>, <b>fuere</b>) once expressed a hypothetical future, but in modern Spanish it is virtually <b>extinct</b> in speech. It survives only in <b>legal texts</b>, <b>proverbs</b>, and a handful of <b>frozen expressions</b>. A C2 speaker doesn't produce it freely — you <b>recognise</b> it, read it as roughly the <b>present subjunctive</b>, and know it belongs to those set contexts only.",
+    "sections": [
+      {
+        "tag": "formas",
+        "heading": "How the -re forms are built",
+        "body": "Take the third-person plural preterite (<b>hablaron</b>, <b>tuvieron</b>, <b>fueron</b>), drop <b>-ron</b>, and add <b>-re, -res, -re, -remos, -reis, -ren</b>. So it shares its irregular stem with the imperfect subjunctive — <b>tuviera</b> ↔ <b>tuviere</b>, <b>fuera</b> ↔ <b>fuere</b>. There is a compound form too: <b>hubiere hablado</b>.",
+        "conj": [
+          ["hablar", "hablare, hablares, hablare, habláremos, hablareis, hablaren"],
+          ["tener", "tuviere, tuvieres, tuviere…"],
+          ["ser / ir", "fuere, fueres, fuere…"],
+          ["venir", "viniere, vinieres, viniere…"]
+        ],
+        "ex": [
+          {
+            "es": "El que <b>infringiere</b> esta norma será sancionado.",
+            "en": "Whoever breaks this rule shall be penalised.",
+            "note": "infringiere = infrinja (legal)"
+          },
+          {
+            "es": "Si alguien lo <b>supiere</b>, que lo declare.",
+            "en": "Should anyone know it, let them declare it.",
+            "note": "supiere = sepa (formal)"
+          }
+        ]
+      },
+      {
+        "tag": "frases hechas",
+        "heading": "Proverbs and frozen expressions",
+        "body": "A small set of fixed phrases keeps the future subjunctive alive in everyday cultural memory. They mean roughly “whatever may happen / wherever you may go”. You use them <b>as blocks</b>; you don't conjugate new verbs into them.",
+        "conj": [
+          ["Sea lo que fuere", "Be that as it may / whatever it may be"],
+          ["Venga lo que viniere", "Come what may"],
+          ["Adonde fueres, haz lo que vieres", "When in Rome, do as the Romans do"],
+          ["Sea como fuere", "However it may be"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Sea lo que fuere</b>, no pienso rendirme.",
+            "en": "Whatever may come, I don't intend to give up.",
+            "note": "frozen phrase; fuere = sea"
+          },
+          {
+            "es": "<b>Adonde fueres</b>, haz lo que <b>vieres</b>.",
+            "en": "Wherever you go, do as you see (When in Rome…).",
+            "note": "a proverb, learned as a block"
+          }
+        ]
+      },
+      {
+        "tag": "registro",
+        "heading": "Register: recognise it, don't overuse it",
+        "body": "The future subjunctive signals <b>legal</b> or <b>archaic-solemn</b> register. In modern prose or speech you would use the <b>present subjunctive</b> instead: everyday Spanish says <b>el que lo sepa</b>, and only a statute would write <b>el que lo supiere</b>. Producing it in casual contexts sounds either legalistic or affectedly old-fashioned — the C2 skill is knowing <b>when not</b> to use it.",
+        "conj": [
+          ["Everyday", "El que lo sepa, que lo diga"],
+          ["Legal / archaic", "El que lo supiere, que lo declare"],
+          ["Everyday", "Pase lo que pase"],
+          ["Solemn / literary", "Venga lo que viniere"]
+        ],
+        "ex": [
+          {
+            "es": "En el habla real diríamos “pase lo que <b>pase</b>”, no “viniere”.",
+            "en": "In real speech we'd say “pase lo que pase”, not “viniere”.",
+            "note": "present subj. is the living form"
+          },
+          {
+            "es": "Solo un texto jurídico escribe “quien <b>incumpliere</b> el contrato…”.",
+            "en": "Only a legal text writes “whoever breaches the contract…”.",
+            "note": "restricted to legal register"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Future subjunctive endings: -re, -res, -re, -remos, -reis, -ren, on the preterite stem (fueron → fuere).",
+      "It survives only in legal language, proverbs, and frozen phrases like ‘sea lo que fuere’.",
+      "In meaning it equals the present subjunctive: el que infringiere ≈ el que infrinja.",
+      "The C2 skill is to recognise it and NOT overuse it — modern Spanish prefers the present subjunctive."
+    ],
+    "mistakes": [
+      {
+        "w": "Cuando llegares a casa, llámame.",
+        "r": "Cuando llegues a casa, llámame.",
+        "why": "In ordinary speech the future subjunctive is dead; use the present subjunctive: cuando llegues."
+      },
+      {
+        "w": "Sea lo que sea… (quoting the proverb) → but written as ‘sea lo que fuera’.",
+        "r": "Sea lo que fuere.",
+        "why": "The fixed proverb keeps the future subjunctive fuere; ‘fuera’ breaks the set expression."
+      },
+      {
+        "w": "El que infringe la norma será sancionado. (in a statute)",
+        "r": "El que infringiere la norma será sancionado.",
+        "why": "In legal register the future subjunctive (infringiere) is the expected, formulaic choice."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "En un contrato: “El que ___ esta cláusula responderá de los daños.”",
+      "prompt_en": "In a contract: “Whoever breaches this clause shall be liable for damages.”",
+      "options": [
+        { "id": "a", "text": "infringiere" },
+        { "id": "b", "text": "infringirá" },
+        { "id": "c", "text": "infringía" },
+        { "id": "d", "text": "infringiría" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! El registro jurídico usa el futuro de subjuntivo: infringiere.",
+      "no": "Legal texts use the future subjunctive here: “El que infringiere esta cláusula…” (= infrinja)."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El futuro de subjuntivo “fuere” equivale en significado a…",
+      "prompt_en": "In meaning, the future subjunctive “fuere” is equivalent to…",
+      "options": [
+        { "id": "a", "text": "sea (presente de subjuntivo)" },
+        { "id": "b", "text": "fue (pretérito)" },
+        { "id": "c", "text": "será (futuro de indicativo)" },
+        { "id": "d", "text": "fuera (solo pasado irreal)" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! El futuro de subjuntivo se lee como presente de subjuntivo.",
+      "no": "In meaning the future subjunctive equals the present subjunctive: fuere ≈ sea."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build the saying: “Whatever may come, I won't give up.”",
+      "tokens": ["Sea", "lo", "que", "fuere,", "no", "pienso", "rendirme", "sea,", "será"],
+      "answer": ["Sea", "lo", "que", "fuere,", "no", "pienso", "rendirme"],
+      "ok": "¡Perfecto! “Sea lo que fuere” es una fórmula fija.",
+      "no": "The frozen phrase keeps the future subjunctive: “Sea lo que fuere, no pienso rendirme.”"
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Refrán: “Adonde fueres, haz lo que ___.” (ver, futuro de subjuntivo)",
+      "prompt_en": "Proverb: “Wherever you go, do as you see” (When in Rome…).",
+      "accepted": ["vieres"],
+      "ignore_accents": true,
+      "hint": "Future subjunctive of ver, rhyming with 'fueres'.",
+      "ok": "¡Bien! “…haz lo que vieres.” Refrán clásico.",
+      "no": "The proverb is “Adonde fueres, haz lo que vieres” — future subjunctive of ver."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each frozen expression to its English meaning.",
+      "pairs": [
+        ["Sea lo que fuere", "Be that as it may"],
+        ["Venga lo que viniere", "Come what may"],
+        ["Adonde fueres, haz lo que vieres", "When in Rome…"],
+        ["El que lo supiere", "Whoever may know it"]
+      ],
+      "ok": "¡Excelente! Reconoces el -re en su hábitat natural.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Sea lo que fuere, seguiremos adelante.",
+      "accepted": ["sea lo que fuere seguiremos adelante"],
+      "ignore_accents": true,
+      "translation": "Whatever may be, we'll carry on.",
+      "ok": "¡Correcto! “Sea lo que fuere, seguiremos adelante.”",
+      "no": "It was: “Sea lo que fuere, seguiremos adelante.”"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Chatting casually about weekend plans ☕",
+      "lines": [
+        {
+          "speaker": "Nacho",
+          "es": "Oye, cuando llegues a casa, ¿me avisas?",
+          "en": "Hey, when you get home, will you let me know?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Claro, en cuanto llegue te escribo." },
+        { "id": "b", "text": "Claro, en cuanto llegare te escribo." },
+        { "id": "c", "text": "Claro, en cuanto llegaré te escribo." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! En el habla real: presente de subjuntivo, no el futuro de subjuntivo.",
+      "no": "Everyday speech uses the present subjunctive: “en cuanto llegue”, never the archaic llegare."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Sea lo que fuere, no pienso rendirme.",
+      "en": "Whatever may come, I don't intend to give up.",
+      "ok": "¡Perfecto! Una fórmula solemne bien dicha.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Sea lo que fuere, no pienso rendirme.”"
+    }
+  ],
+  "vocab": [
+    { "es": "el futuro de subjuntivo", "en": "the future subjunctive" },
+    { "es": "sea lo que fuere", "en": "be that as it may / whatever it may be" },
+    { "es": "venga lo que viniere", "en": "come what may" },
+    { "es": "adonde fueres, haz lo que vieres", "en": "when in Rome, do as the Romans do" },
+    { "es": "el que infringiere", "en": "whoever breaks (it) (legal register)" },
+    { "es": "si alguien lo supiere", "en": "should anyone know it (formal)" },
+    { "es": "sea como fuere", "en": "however it may be" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["sea lo que fuere", "venga lo que viniere", "adonde fueres, haz lo que vieres", "el que infringiere", "sea como fuere"]
+  }
+}

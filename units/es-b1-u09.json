@@ -1,0 +1,320 @@
+{
+  "unit": {
+    "id": "es-b1-u09",
+    "title": "Relative clauses",
+    "subtitle": "que, quien, lo que, donde and cuyo: joining ideas smoothly",
+    "level": "B1",
+    "order": 9,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Linking two ideas into one sentence",
+    "intro": "<b>Relative clauses</b> let you add information without starting a new sentence — “the book <b>that</b> I read,” “the person <b>with whom</b> I speak.” The workhorse is <b>que</b>. Add <b>quien</b> after prepositions, <b>lo que</b> for “what,” <b>donde</b> for places, and <b>cuyo</b> for “whose.” Master these five and your Spanish flows.",
+    "sections": [
+      {
+        "tag": "que",
+        "heading": "que — the all-purpose relative",
+        "body": "<b>que</b> covers “that / which / who” for things and people alike. It's by far the most common:",
+        "ex": [
+          {
+            "es": "El libro <b>que</b> leí es interesante.",
+            "en": "The book that I read is interesting.",
+            "note": "que for a thing"
+          },
+          {
+            "es": "La chica <b>que</b> canta es mi prima.",
+            "en": "The girl who sings is my cousin.",
+            "note": "que for a person"
+          }
+        ]
+      },
+      {
+        "tag": "quien / lo que",
+        "heading": "quien after prepositions · lo que for “what”",
+        "body": "After a preposition (con, de, para…), use <b>quien/quienes</b> for people. Use <b>lo que</b> for “what / that which” (an idea, not a named noun):",
+        "conj": [
+          [
+            "with whom",
+            "con quien"
+          ],
+          [
+            "about whom",
+            "de quien"
+          ],
+          [
+            "what / that which",
+            "lo que"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "La persona <b>con quien</b> hablo es médica.",
+            "en": "The person with whom I speak is a doctor.",
+            "note": "preposition + quien"
+          },
+          {
+            "es": "<b>Lo que</b> dices es verdad.",
+            "en": "What you say is true.",
+            "note": "lo que = the thing that"
+          }
+        ]
+      },
+      {
+        "tag": "donde / cuyo",
+        "heading": "donde for places · cuyo for “whose”",
+        "body": "Use <b>donde</b> for places. Use <b>cuyo</b> for “whose” — and remember it <b>agrees</b> with the thing owned, not the owner (cuyo/cuya/cuyos/cuyas):",
+        "ex": [
+          {
+            "es": "La casa <b>donde</b> vivo es pequeña.",
+            "en": "The house where I live is small.",
+            "note": "donde for a place"
+          },
+          {
+            "es": "La casa <b>cuyo</b> tejado es rojo.",
+            "en": "The house whose roof is red.",
+            "note": "cuyo agrees with tejado (masc.)"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "que = that/which/who — the default for people and things.",
+      "After a preposition, use quien/quienes for people: con quien.",
+      "lo que = “what / that which”; donde = “where”.",
+      "cuyo (whose) agrees with the thing owned: cuyo tejado, cuya puerta."
+    ],
+    "mistakes": [
+      {
+        "w": "La persona que hablo con es médica.",
+        "r": "La persona con quien hablo es médica.",
+        "why": "Don't strand the preposition; put it before quien: con quien hablo."
+      },
+      {
+        "w": "La casa cuya tejado es rojo.",
+        "r": "La casa cuyo tejado es rojo.",
+        "why": "Cuyo agrees with the thing owned (tejado, masculine), not the owner."
+      },
+      {
+        "w": "Que dices es verdad.",
+        "r": "Lo que dices es verdad.",
+        "why": "For “what / that which” you need lo que, not bare que."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El libro ___ leí es muy bueno.",
+      "prompt_en": "The book that I read is very good.",
+      "options": [
+        {
+          "id": "a",
+          "text": "que"
+        },
+        {
+          "id": "b",
+          "text": "quien"
+        },
+        {
+          "id": "c",
+          "text": "lo que"
+        },
+        {
+          "id": "d",
+          "text": "cuyo"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Para cosas y personas → que.",
+      "no": "The default relative for a thing is “que”: el libro que leí."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "La persona con ___ hablo es médica.",
+      "prompt_en": "The person with whom I speak is a doctor.",
+      "options": [
+        {
+          "id": "a",
+          "text": "quien"
+        },
+        {
+          "id": "b",
+          "text": "que"
+        },
+        {
+          "id": "c",
+          "text": "donde"
+        },
+        {
+          "id": "d",
+          "text": "cuyo"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Tras preposición y persona → con quien.",
+      "no": "After a preposition, use quien for people: “con quien hablo”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “What you say is true.”",
+      "tokens": [
+        "Lo",
+        "que",
+        "dices",
+        "es",
+        "verdad",
+        "quien",
+        "cuyo"
+      ],
+      "answer": [
+        "Lo",
+        "que",
+        "dices",
+        "es",
+        "verdad"
+      ],
+      "ok": "¡Perfecto! “what” → lo que.",
+      "no": "“Lo que dices es verdad” — use lo que for “what / that which”."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "La casa ___ tejado es rojo es antigua.",
+      "prompt_en": "The house whose roof is red is old.",
+      "accepted": [
+        "cuyo"
+      ],
+      "ignore_accents": true,
+      "hint": "“whose” — agrees with tejado (masculine).",
+      "ok": "¡Bien! cuyo concuerda con tejado.",
+      "no": "Cuyo agrees with the thing owned (tejado, masc.): “cuyo tejado”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each relative word to its meaning.",
+      "pairs": [
+        [
+          "que",
+          "that / which"
+        ],
+        [
+          "quien",
+          "who (after prep.)"
+        ],
+        [
+          "lo que",
+          "what"
+        ],
+        [
+          "donde",
+          "where"
+        ]
+      ],
+      "ok": "¡Excelente! Los relativos están claros.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "La casa donde vivo es pequeña.",
+      "accepted": [
+        "la casa donde vivo es pequena",
+        "la casa donde vivo es pequeña"
+      ],
+      "ignore_accents": true,
+      "translation": "The house where I live is small.",
+      "ok": "¡Correcto! “La casa donde vivo es pequeña.”",
+      "no": "It was: “La casa donde vivo es pequeña.” (The house where I live is small.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Pointing out a friend at a party 🎉",
+      "lines": [
+        {
+          "speaker": "Rosa",
+          "es": "¿Quién es esa chica?",
+          "en": "Who is that girl?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Es la amiga con quien estudio español."
+        },
+        {
+          "id": "b",
+          "text": "Es la amiga que estudio español con."
+        },
+        {
+          "id": "c",
+          "text": "Es la amiga lo que estudio español."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! preposición + persona → con quien.",
+      "no": "Put the preposition before quien: “la amiga con quien estudio español”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "La persona con quien hablo es médica",
+      "en": "The person with whom I speak is a doctor",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “con quien hablo”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "que",
+      "en": "that / which / who"
+    },
+    {
+      "es": "quien",
+      "en": "who (after a preposition)"
+    },
+    {
+      "es": "lo que",
+      "en": "what / that which"
+    },
+    {
+      "es": "donde",
+      "en": "where"
+    },
+    {
+      "es": "cuyo",
+      "en": "whose"
+    },
+    {
+      "es": "con quien",
+      "en": "with whom"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "que",
+      "quien",
+      "lo que",
+      "donde",
+      "cuyo"
+    ]
+  }
+}

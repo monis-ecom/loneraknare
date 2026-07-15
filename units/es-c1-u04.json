@@ -1,0 +1,232 @@
+{
+  "unit": {
+    "id": "es-c1-u04",
+    "title": "Purpose & Condition Clauses",
+    "subtitle": "Para que, a menos que, con tal de que and the subjunctive",
+    "level": "C1",
+    "order": 4,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Subordinate clauses that bend reality",
+    "intro": "Two families of subordinate clauses almost always demand the <b>subjunctive</b> because they describe a goal or a condition that isn't (yet) real. <b>Purpose</b> clauses (<b>para que</b>, <b>a fin de que</b>) point at an intended result; <b>conditional/restrictive</b> clauses (<b>a menos que</b>, <b>con tal de que</b>, <b>en caso de que</b>) fence off when something holds. Master the connectors and the mood is automatic.",
+    "sections": [
+      {
+        "tag": "finalidad",
+        "heading": "Purpose: para que + subjunctive",
+        "body": "To express an intended result with a <b>different subject</b>, use <b>para que</b>, <b>a fin de que</b> or the formal <b>con (el) objeto de que</b> — all followed by the subjunctive. If the subject is the <b>same</b>, drop the <b>que</b> and use an infinitive: <b>para</b> + infinitive.",
+        "conj": [
+          ["different subject", "para que + subjuntivo"],
+          ["same subject", "para + infinitivo"],
+          ["formal / written", "a fin de que + subjuntivo"],
+          ["very formal", "con el objeto de que + subjuntivo"]
+        ],
+        "ex": [
+          {
+            "es": "Te lo repito <b>para que</b> lo <b>entiendas</b> bien.",
+            "en": "I'm repeating it so that you understand it well.",
+            "note": "two subjects → para que + subj."
+          },
+          {
+            "es": "Vengo <b>para ayudarte</b>, no para molestar.",
+            "en": "I'm coming to help you, not to bother you.",
+            "note": "same subject → para + infinitive"
+          }
+        ]
+      },
+      {
+        "tag": "condición",
+        "heading": "Restrictive conditions + subjunctive",
+        "body": "A cluster of connectors introduces a <b>condition</b> or <b>restriction</b> and always takes the subjunctive: <b>con tal (de) que</b> and <b>siempre y cuando</b> (provided that), <b>a menos que</b> / <b>a no ser que</b> / <b>salvo que</b> (unless), and <b>en caso de que</b> (in case).",
+        "conj": [
+          ["con tal (de) que", "provided that"],
+          ["siempre y cuando", "as long as"],
+          ["a menos que / a no ser que", "unless"],
+          ["salvo que", "unless / except that"],
+          ["en caso de que", "in case (that)"]
+        ],
+        "ex": [
+          {
+            "es": "Te dejo el coche <b>con tal de que conduzcas</b> despacio.",
+            "en": "I'll lend you the car provided you drive slowly.",
+            "note": "condition → subjunctive"
+          },
+          {
+            "es": "No iré <b>a menos que</b> me lo <b>pidan</b> por escrito.",
+            "en": "I won't go unless they ask me in writing.",
+            "note": "a menos que = unless"
+          }
+        ]
+      },
+      {
+        "tag": "matiz",
+        "heading": "Como + subjunctive = a warning",
+        "body": "At the start of a sentence, <b>como</b> + subjunctive turns into a <b>threat or warning</b>: “if you dare / if it turns out that…, then watch out.” It's colloquial but very common in native speech.",
+        "ex": [
+          {
+            "es": "<b>Como no estudies</b>, suspenderás el examen.",
+            "en": "If you don't study, you'll fail the exam.",
+            "note": "warning, not a neutral 'if'"
+          },
+          {
+            "es": "<b>Como llegues</b> tarde otra vez, me voy sin ti.",
+            "en": "If you're late again, I'm leaving without you.",
+            "note": "como + subj. = veiled threat"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "para que / a fin de que / con el objeto de que + subjunctive (different subject).",
+      "Same subject? Use para + infinitive, not para que.",
+      "Conditions: con tal de que, siempre y cuando, a menos que, a no ser que, salvo que, en caso de que — all + subjunctive.",
+      "Sentence-initial como + subjunctive is a warning: Como no estudies, suspenderás."
+    ],
+    "mistakes": [
+      {
+        "w": "Te llamo para que sabes la verdad.",
+        "r": "Te llamo para que sepas la verdad.",
+        "why": "para que always triggers the subjunctive (sepas), never the indicative."
+      },
+      {
+        "w": "Vengo para que ayudarte.",
+        "r": "Vengo para ayudarte.",
+        "why": "With the same subject use para + infinitive, not para que + verb."
+      },
+      {
+        "w": "No iré a menos que me lo piden.",
+        "r": "No iré a menos que me lo pidan.",
+        "why": "a menos que requires the subjunctive: pidan, not piden."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Te lo explico otra vez para que lo ___ bien.",
+      "prompt_en": "I'll explain it to you again so that you understand it well.",
+      "options": [
+        { "id": "a", "text": "entiendas" },
+        { "id": "b", "text": "entiendes" },
+        { "id": "c", "text": "entender" },
+        { "id": "d", "text": "entendieras" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! para que + presente de subjuntivo → entiendas.",
+      "no": "“para que” needs the subjunctive, and a present main verb → present subjunctive: entiendas."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No pienso ir a la fiesta ___ venga Marta.",
+      "prompt_en": "I don't plan to go to the party unless Marta comes.",
+      "options": [
+        { "id": "a", "text": "a menos que" },
+        { "id": "b", "text": "siempre que" },
+        { "id": "c", "text": "para que" },
+        { "id": "d", "text": "con tal de que" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! “a menos que” = unless.",
+      "no": "“Unless” is a menos que (or a no ser que); the others mean provided/so that."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I'll lend you the car provided that you drive slowly.”",
+      "tokens": ["Te", "dejo", "el", "coche", "con", "tal", "de", "que", "conduzcas", "despacio", "conduces", "para"],
+      "answer": ["Te", "dejo", "el", "coche", "con", "tal", "de", "que", "conduzcas", "despacio"],
+      "ok": "¡Perfecto! con tal de que + subjuntivo → conduzcas.",
+      "no": "“Te dejo el coche con tal de que conduzcas despacio” — the condition takes the subjunctive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Como no ___ ahora mismo, perderemos el tren. (salir, tú)",
+      "prompt_en": "If you don't leave right now, we'll miss the train.",
+      "accepted": ["salgas"],
+      "ignore_accents": true,
+      "hint": "Sentence-initial como (warning) + present subjunctive of salir.",
+      "ok": "¡Bien! como + subjuntivo (advertencia) → salgas.",
+      "no": "This warning-like “como” takes the subjunctive: salgas."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each connector to its English meaning.",
+      "pairs": [
+        ["a menos que", "unless"],
+        ["con tal de que", "provided that"],
+        ["en caso de que", "in case (that)"],
+        ["a fin de que", "so that"]
+      ],
+      "ok": "¡Excelente! Conectores dominados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Te lo digo para que no cometas el mismo error.",
+      "accepted": ["te lo digo para que no cometas el mismo error"],
+      "ignore_accents": true,
+      "translation": "I'm telling you so that you don't make the same mistake.",
+      "ok": "¡Correcto! “Te lo digo para que no cometas el mismo error.”",
+      "no": "It was: “Te lo digo para que no cometas el mismo error.”"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A recruiter presses you about a job offer 💼",
+      "lines": [
+        {
+          "speaker": "Andrés",
+          "es": "Entonces, ¿aceptarás finalmente la oferta de trabajo?",
+          "en": "So, will you finally accept the job offer?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "La aceptaré, siempre y cuando me suban el sueldo." },
+        { "id": "b", "text": "La aceptaré, siempre y cuando me suben el sueldo." },
+        { "id": "c", "text": "La aceptaré, a fin de que me suban el sueldo." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! siempre y cuando + subjuntivo, y es una condición.",
+      "no": "You need a condition (siempre y cuando) plus the subjunctive suban: “siempre y cuando me suban el sueldo”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Te lo cuento para que lo entiendas.",
+      "en": "I'm telling you so that you understand it.",
+      "ok": "¡Perfecto! Natural y claro.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Te lo cuento para que lo entiendas.”"
+    }
+  ],
+  "vocab": [
+    { "es": "para que", "en": "so that (+ subjunctive)" },
+    { "es": "a fin de que", "en": "in order that / so that" },
+    { "es": "con tal de que", "en": "provided that / as long as" },
+    { "es": "a menos que", "en": "unless" },
+    { "es": "en caso de que", "en": "in case (that)" },
+    { "es": "siempre y cuando", "en": "as long as / provided that" },
+    { "es": "como + subjuntivo", "en": "if (warning) + subjunctive" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["para que", "a fin de que", "con tal de que", "a menos que", "en caso de que"]
+  }
+}

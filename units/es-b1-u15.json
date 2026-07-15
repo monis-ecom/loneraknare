@@ -1,0 +1,322 @@
+{
+  "unit": {
+    "id": "es-b1-u15",
+    "title": "Si Clauses (Hypothetical)",
+    "subtitle": "Imagining unreal situations: 'If I were... I would...'",
+    "level": "B1",
+    "order": 15,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The dream tense: imagine the impossible",
+    "intro": "To talk about situations that are <b>unreal or imaginary</b> in the present — things that aren't true but that you like to picture — Spanish pairs the <b>imperfect subjunctive</b> with the <b>conditional</b>. The formula is fixed: <b>si</b> + imperfect subjunctive, then the result in the <b>conditional</b>. <b>Si tuviera dinero, viajaría.</b> Never put the conditional in the si-clause.",
+    "sections": [
+      {
+        "tag": "estructura",
+        "heading": "si + imperfect subjunctive → conditional",
+        "body": "This is the mirror of the real conditional you learned in unit 13. Here the condition is <b>imaginary</b>, so the si-clause takes the <b>imperfect subjunctive</b> and the result takes the <b>conditional</b>:",
+        "conj": [
+          [
+            "money (I don't have)",
+            "Si tuviera dinero, viajaría."
+          ],
+          [
+            "being rich (I'm not)",
+            "Si fuera rico, compraría una casa."
+          ],
+          [
+            "winning (unlikely)",
+            "Si ganara la lotería, dejaría de trabajar."
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Si tuviera</b> dinero, <b>viajaría</b> por el mundo.",
+            "en": "If I had money, I'd travel the world.",
+            "note": "subjuntivo + condicional"
+          },
+          {
+            "es": "<b>Si fuera</b> tú, no <b>lo haría</b>.",
+            "en": "If I were you, I wouldn't do it.",
+            "note": "fuera + haría"
+          }
+        ]
+      },
+      {
+        "tag": "preguntas",
+        "heading": "Asking 'what would you do if...?'",
+        "body": "A very common pattern flips the order and asks a question. The conditional leads, and the <b>si</b> clause with the imperfect subjunctive follows:",
+        "ex": [
+          {
+            "es": "¿Qué <b>harías</b> si <b>ganaras</b> la lotería?",
+            "en": "What would you do if you won the lottery?",
+            "note": "harías + ganaras"
+          },
+          {
+            "es": "¿Adónde <b>irías</b> si <b>pudieras</b> viajar gratis?",
+            "en": "Where would you go if you could travel for free?",
+            "note": "irías + pudieras"
+          }
+        ]
+      },
+      {
+        "tag": "errores",
+        "heading": "Keep each half in its own mood",
+        "body": "The two classic slips: putting the <b>conditional</b> after si, or repeating the <b>subjunctive</b> in the result. Each half has exactly one job:",
+        "ex": [
+          {
+            "es": "Si <b>tuviera</b>… (not 'si tendría')",
+            "en": "the si-clause = subjunctive",
+            "note": "never conditional after si"
+          },
+          {
+            "es": "…<b>viajaría</b> (not 'viajara')",
+            "en": "the result = conditional",
+            "note": "never subjunctive in the result"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Hypothetical: si + imperfect subjunctive, result in the conditional.",
+      "Si tuviera dinero, viajaría · Si fuera rico, compraría una casa.",
+      "Question form: ¿Qué harías si ganaras la lotería?",
+      "Never 'si tendría' (use si tuviera) and never a subjunctive result (use viajaría)."
+    ],
+    "mistakes": [
+      {
+        "w": "Si tendría dinero, viajaría.",
+        "r": "Si tuviera dinero, viajaría.",
+        "why": "The si-clause takes the imperfect subjunctive, not the conditional: tuviera."
+      },
+      {
+        "w": "Si tuviera dinero, viajara.",
+        "r": "Si tuviera dinero, viajaría.",
+        "why": "The result clause must be the conditional (viajaría), not another subjunctive."
+      },
+      {
+        "w": "Si fuera rico, compro una casa.",
+        "r": "Si fuera rico, compraría una casa.",
+        "why": "An unreal condition needs the conditional in the result, not the present."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Si ___ dinero, viajaría por el mundo.",
+      "prompt_en": "If I had money, I'd travel the world.",
+      "options": [
+        {
+          "id": "a",
+          "text": "tuviera"
+        },
+        {
+          "id": "b",
+          "text": "tendría"
+        },
+        {
+          "id": "c",
+          "text": "tengo"
+        },
+        {
+          "id": "d",
+          "text": "tenía"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! si + imperfecto de subjuntivo: tuviera.",
+      "no": "The unreal si-clause needs the imperfect subjunctive: “si tuviera”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Si fuera rico, ___ una casa grande.",
+      "prompt_en": "If I were rich, I'd buy a big house.",
+      "options": [
+        {
+          "id": "a",
+          "text": "compraría"
+        },
+        {
+          "id": "b",
+          "text": "comprara"
+        },
+        {
+          "id": "c",
+          "text": "compro"
+        },
+        {
+          "id": "d",
+          "text": "compré"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! El resultado va en condicional: compraría.",
+      "no": "The result of an unreal condition takes the conditional: “compraría”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “What would you do if you won the lottery?”",
+      "tokens": [
+        "¿Qué",
+        "harías",
+        "si",
+        "ganaras",
+        "la",
+        "lotería?",
+        "harás",
+        "ganas"
+      ],
+      "answer": [
+        "¿Qué",
+        "harías",
+        "si",
+        "ganaras",
+        "la",
+        "lotería?"
+      ],
+      "ok": "¡Perfecto! condicional + si + imperfecto de subjuntivo.",
+      "no": "“¿Qué harías si ganaras la lotería?” — conditional + si + imperfect subjunctive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Si fuera tú, no lo ___. (hacer, yo)",
+      "prompt_en": "If I were you, I wouldn't do it.",
+      "accepted": [
+        "haría"
+      ],
+      "ignore_accents": true,
+      "hint": "The result clause is conditional: hacer → har- + ía.",
+      "ok": "¡Bien! El resultado en condicional: haría.",
+      "no": "The result takes the conditional: “no lo haría”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each hypothetical si-clause to its conditional result.",
+      "pairs": [
+        [
+          "Si tuviera dinero,",
+          "viajaría"
+        ],
+        [
+          "Si fuera rico,",
+          "compraría una casa"
+        ],
+        [
+          "Si ganara la lotería,",
+          "dejaría de trabajar"
+        ],
+        [
+          "Si pudiera,",
+          "te ayudaría"
+        ]
+      ],
+      "ok": "¡Excelente! Subjunctive condition, conditional result.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Si fuera rico, compraría una casa.",
+      "accepted": [
+        "si fuera rico compraria una casa",
+        "si fuera rico, compraria una casa"
+      ],
+      "ignore_accents": true,
+      "translation": "If I were rich, I'd buy a house.",
+      "ok": "¡Correcto! “Si fuera rico, compraría una casa.”",
+      "no": "It was: “Si fuera rico, compraría una casa.” (If I were rich, I'd buy a house.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Daydreaming with a friend about winning big 💰",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "¿Qué harías si ganaras la lotería?",
+          "en": "What would you do if you won the lottery?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Si ganara, viajaría por todo el mundo."
+        },
+        {
+          "id": "b",
+          "text": "Si ganaría, viajaría por todo el mundo."
+        },
+        {
+          "id": "c",
+          "text": "Si gano, viajara por todo el mundo."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! si + subjuntivo (ganara) + condicional (viajaría).",
+      "no": "Use si + imperfect subjunctive + conditional: “Si ganara, viajaría...”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "¿Qué harías si fueras rico?",
+      "en": "What would you do if you were rich?",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “¿Qué harías si fueras rico?”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "si tuviera",
+      "en": "if I had"
+    },
+    {
+      "es": "viajaría",
+      "en": "I would travel"
+    },
+    {
+      "es": "si fuera",
+      "en": "if I were"
+    },
+    {
+      "es": "qué harías si",
+      "en": "what would you do if"
+    },
+    {
+      "es": "sería",
+      "en": "it would be"
+    },
+    {
+      "es": "compraría",
+      "en": "I would buy"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "si tuviera",
+      "viajaría",
+      "si fuera",
+      "qué harías si",
+      "sería"
+    ]
+  }
+}

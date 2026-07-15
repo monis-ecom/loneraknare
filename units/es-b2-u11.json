@@ -1,0 +1,350 @@
+{
+  "unit": {
+    "id": "es-b2-u11",
+    "title": "Advanced connectors & discourse markers",
+    "subtitle": "no obstante, por consiguiente, dado que, a pesar de que, es decir",
+    "level": "B2",
+    "order": 11,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The linkers that make writing sound educated",
+    "intro": "Basic connectors (pero, porque, entonces) work, but formal and written Spanish reaches for richer links. Learn a set for <b>contrast</b>, <b>consequence</b>, <b>cause</b>, <b>concession</b>, <b>reformulation</b> and <b>summary</b>, and your essays and emails will sound like a native professional's.",
+    "sections": [
+      {
+        "tag": "contraste / consecuencia",
+        "heading": "Contrast and consequence",
+        "body": "For a formal “however”, use <b>no obstante</b> or <b>sin embargo</b>. For “therefore”, use <b>por (lo) tanto</b>, <b>por consiguiente</b> or <b>así pues</b>:",
+        "conj": [
+          [
+            "however",
+            "no obstante / sin embargo"
+          ],
+          [
+            "therefore",
+            "por lo tanto / por consiguiente"
+          ],
+          [
+            "so, thus",
+            "así pues"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Es caro. <b>No obstante</b>, vale la pena.",
+            "en": "It's expensive. However, it's worth it.",
+            "note": "no obstante = however"
+          },
+          {
+            "es": "No hay pruebas; <b>por consiguiente</b>, se cierra el caso.",
+            "en": "There is no evidence; therefore, the case is closed.",
+            "note": "por consiguiente = therefore"
+          }
+        ]
+      },
+      {
+        "tag": "causa",
+        "heading": "Cause: “given that / since”",
+        "body": "To give a reason formally, use <b>dado que</b>, <b>puesto que</b>, <b>ya que</b> or <b>debido a que</b> + a clause. They often open the sentence:",
+        "ex": [
+          {
+            "es": "<b>Dado que</b> llueve, nos quedamos en casa.",
+            "en": "Given that it's raining, we're staying home.",
+            "note": "dado que + clause"
+          },
+          {
+            "es": "No fuimos, <b>puesto que</b> era tarde.",
+            "en": "We didn't go, since it was late.",
+            "note": "puesto que = since"
+          }
+        ]
+      },
+      {
+        "tag": "concesión",
+        "heading": "Concession: “despite / although”",
+        "body": "Use <b>a pesar de que</b> + a full clause. With just a noun or an infinitive, drop the <b>que</b>: <b>a pesar de</b> + noun/infinitive:",
+        "conj": [
+          [
+            "despite + noun",
+            "a pesar de"
+          ],
+          [
+            "despite the fact that + clause",
+            "a pesar de que"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>A pesar de que</b> estudió, suspendió.",
+            "en": "Even though he studied, he failed.",
+            "note": "a pesar de QUE + clause"
+          },
+          {
+            "es": "<b>A pesar del</b> frío, salimos.",
+            "en": "Despite the cold, we went out.",
+            "note": "a pesar de + noun (no que)"
+          }
+        ]
+      },
+      {
+        "tag": "reformulación / resumen",
+        "heading": "Reformulation, summary and addition",
+        "body": "To rephrase, use <b>es decir</b> or <b>o sea</b> (that is). To wrap up, use <b>en definitiva</b> or <b>en resumen</b>. To add, use <b>además</b> or the formal <b>asimismo</b>:",
+        "ex": [
+          {
+            "es": "Es bilingüe, <b>es decir</b>, habla dos lenguas.",
+            "en": "She's bilingual, that is, she speaks two languages.",
+            "note": "es decir = that is"
+          },
+          {
+            "es": "<b>En definitiva</b>, la propuesta conviene.",
+            "en": "In short, the proposal is worthwhile.",
+            "note": "en definitiva = in short"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Contrast: no obstante / sin embargo (however). Consequence: por (lo) tanto / por consiguiente / así pues (therefore).",
+      "Cause: dado que / puesto que / ya que / debido a que + clause (given that / since).",
+      "Concession: a pesar de + noun/infinitive; a pesar de QUE + a full clause.",
+      "Reformulation: es decir / o sea. Summary: en definitiva / en resumen. Addition: además / asimismo."
+    ],
+    "mistakes": [
+      {
+        "w": "A pesar de que el frío, salimos.",
+        "r": "A pesar del frío, salimos.",
+        "why": "With a noun (el frío) drop the 'que': a pesar de + noun. Keep 'que' only before a full clause."
+      },
+      {
+        "w": "A pesar de estudió mucho, suspendió.",
+        "r": "A pesar de que estudió mucho, suspendió.",
+        "why": "Before a conjugated clause you need 'a pesar de QUE'."
+      },
+      {
+        "w": "Por consiguiente que no hay pruebas, se cierra el caso.",
+        "r": "Dado que no hay pruebas, se cierra el caso.",
+        "why": "Por consiguiente marks consequence, not cause; use dado que / puesto que for the reason."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Es caro. ___, creo que vale la pena.",
+      "prompt_en": "It's expensive. However, I think it's worth it.",
+      "options": [
+        {
+          "id": "a",
+          "text": "No obstante"
+        },
+        {
+          "id": "b",
+          "text": "Dado que"
+        },
+        {
+          "id": "c",
+          "text": "Es decir"
+        },
+        {
+          "id": "d",
+          "text": "Además"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Contraste formal → no obstante.",
+      "no": "For a formal “however”, use “no obstante”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No hay pruebas; ___, se cierra el caso.",
+      "prompt_en": "There is no evidence; therefore, the case is closed.",
+      "options": [
+        {
+          "id": "a",
+          "text": "por consiguiente"
+        },
+        {
+          "id": "b",
+          "text": "a pesar de que"
+        },
+        {
+          "id": "c",
+          "text": "es decir"
+        },
+        {
+          "id": "d",
+          "text": "puesto que"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Consecuencia → por consiguiente.",
+      "no": "To mark a consequence (“therefore”), use “por consiguiente”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Given that it's raining, we're staying home.”",
+      "tokens": [
+        "Dado",
+        "que",
+        "llueve,",
+        "nos",
+        "quedamos",
+        "en",
+        "casa",
+        "obstante"
+      ],
+      "answer": [
+        "Dado",
+        "que",
+        "llueve,",
+        "nos",
+        "quedamos",
+        "en",
+        "casa"
+      ],
+      "ok": "¡Perfecto! Causa → dado que + oración.",
+      "no": "“Dado que llueve, nos quedamos en casa” — dado que introduces the cause."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "A pesar de ___ estudió mucho, suspendió el examen.",
+      "prompt_en": "Even though he studied a lot, he failed the exam.",
+      "accepted": [
+        "que"
+      ],
+      "ignore_accents": true,
+      "hint": "Before a full clause (estudió), you need this word.",
+      "ok": "¡Bien! Ante una oración → a pesar de que.",
+      "no": "Before a conjugated clause use “a pesar de que”: a pesar de que estudió."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each connector to its function.",
+      "pairs": [
+        [
+          "no obstante",
+          "however"
+        ],
+        [
+          "por consiguiente",
+          "therefore"
+        ],
+        [
+          "dado que",
+          "given that"
+        ],
+        [
+          "es decir",
+          "that is"
+        ]
+      ],
+      "ok": "¡Excelente! Los conectores están claros.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "A pesar del frío, salimos a caminar.",
+      "accepted": [
+        "a pesar del frio salimos a caminar",
+        "a pesar del frío, salimos a caminar"
+      ],
+      "ignore_accents": true,
+      "translation": "Despite the cold, we went out for a walk.",
+      "ok": "¡Correcto! “A pesar del frío, salimos a caminar.”",
+      "no": "It was: “A pesar del frío, salimos a caminar.” (Despite the cold, we went out for a walk.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Wrapping up a formal presentation 📊",
+      "lines": [
+        {
+          "speaker": "Colega",
+          "es": "¿Cuál es tu conclusión final?",
+          "en": "What's your final conclusion?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "En definitiva, el proyecto es viable y conviene aprobarlo."
+        },
+        {
+          "id": "b",
+          "text": "Dado que el proyecto es viable y conviene aprobarlo."
+        },
+        {
+          "id": "c",
+          "text": "Es decir el proyecto es viable y conviene aprobarlo."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Para resumir → en definitiva.",
+      "no": "To sum up a conclusion, open with “En definitiva” (in short)."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "No obstante, vale la pena intentarlo",
+      "en": "However, it's worth trying",
+      "ok": "¡Perfecto! Muy natural y formal.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “No obstante, vale la pena intentarlo”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "no obstante",
+      "en": "however / nevertheless"
+    },
+    {
+      "es": "por consiguiente",
+      "en": "therefore / consequently"
+    },
+    {
+      "es": "dado que",
+      "en": "given that / since"
+    },
+    {
+      "es": "a pesar de que",
+      "en": "even though / despite the fact that"
+    },
+    {
+      "es": "es decir",
+      "en": "that is / in other words"
+    },
+    {
+      "es": "en definitiva",
+      "en": "in short / ultimately"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "no obstante",
+      "por consiguiente",
+      "dado que",
+      "a pesar de que",
+      "es decir"
+    ]
+  }
+}

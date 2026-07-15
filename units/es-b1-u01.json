@@ -1,0 +1,321 @@
+{
+  "unit": {
+    "id": "es-b1-u01",
+    "title": "Subjunctive: emotions & reactions",
+    "subtitle": "React with feeling: me alegro de que, es una lástima que, siento que",
+    "level": "B1",
+    "order": 1,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "When your feelings react to someone else",
+    "intro": "You already flip verbs to the subjunctive after <b>quiero que</b> and <b>espero que</b>. The same thing happens whenever you <b>react emotionally</b> to what someone else does. Being glad, sorry, annoyed, or moved — if there's a feeling plus <b>que</b> plus a <b>different subject</b>, the second verb goes subjunctive.",
+    "sections": [
+      {
+        "tag": "la idea",
+        "heading": "Emotion + que + subjunctive",
+        "body": "The pattern is: <b>[emotion]</b> + <b>que</b> + <b>[subjunctive verb]</b>. Your feeling is the trigger; the person you're reacting to is the second subject.",
+        "conj": [
+          ["I'm glad that…", "me alegro de que"],
+          ["I like that…", "me gusta que"],
+          ["It's a shame that…", "es una lástima que"],
+          ["I'm sorry that…", "siento que"],
+          ["It bothers me that…", "me molesta que"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Me alegro de que</b> estés aquí.",
+            "en": "I'm glad you're here.",
+            "note": "estar → esté/estés"
+          },
+          {
+            "es": "<b>Me molesta que</b> llegues tarde.",
+            "en": "It bothers me that you arrive late.",
+            "note": "llegar → llegue/llegues"
+          }
+        ]
+      },
+      {
+        "tag": "irregulares",
+        "heading": "The irregulars you'll reuse forever",
+        "body": "A handful of verbs have irregular subjunctive stems. You'll meet these constantly, so memorise them now:",
+        "conj": [
+          ["ser → que él", "sea"],
+          ["estar → que él", "esté"],
+          ["tener → que él", "tenga"],
+          ["ir → que él", "vaya"],
+          ["hacer → que él", "haga"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Es una lástima que</b> no tengas tiempo.",
+            "en": "It's a shame you don't have time.",
+            "note": "tener → tenga/tengas"
+          },
+          {
+            "es": "<b>Me gusta que</b> seas tan amable.",
+            "en": "I like that you're so kind.",
+            "note": "ser → sea/seas"
+          }
+        ]
+      },
+      {
+        "tag": "mismo sujeto",
+        "heading": "Same person? Use the infinitive",
+        "body": "The subjunctive only appears when the two subjects are <b>different</b>. If <b>you</b> feel something about <b>your own</b> action, drop the <b>que</b> and use the plain infinitive.",
+        "ex": [
+          {
+            "es": "<b>Me alegro de estar</b> aquí.",
+            "en": "I'm glad to be here.",
+            "note": "one subject → infinitive, no que"
+          },
+          {
+            "es": "<b>Me alegro de que</b> tú <b>estés</b> aquí.",
+            "en": "I'm glad that you're here.",
+            "note": "two subjects → que + subjunctive"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Emotion + que + different subject → subjunctive.",
+      "Me alegro de que, me gusta que, es una lástima que, siento que, me molesta que.",
+      "Reuse the irregulars: sea, esté, tenga, vaya, haga.",
+      "Same subject? Skip que and use the infinitive: Me alegro de estar aquí."
+    ],
+    "mistakes": [
+      {
+        "w": "Me alegro de que estás aquí.",
+        "r": "Me alegro de que estés aquí.",
+        "why": "After an emotion + que, use the subjunctive (estés), not the indicative (estás)."
+      },
+      {
+        "w": "Me alegro de que yo esté aquí.",
+        "r": "Me alegro de estar aquí.",
+        "why": "With the same subject, drop the que and use the infinitive."
+      },
+      {
+        "w": "Es una lástima que no tienes tiempo.",
+        "r": "Es una lástima que no tengas tiempo.",
+        "why": "tener flips to the subjunctive after this expression: tengas, not tienes."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Me alegro de que tú ___ aquí.",
+      "prompt_en": "I'm glad you're here.",
+      "options": [
+        {
+          "id": "a",
+          "text": "estás"
+        },
+        {
+          "id": "b",
+          "text": "estés"
+        },
+        {
+          "id": "c",
+          "text": "estar"
+        },
+        {
+          "id": "d",
+          "text": "estoy"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! Me alegro de que → estés.",
+      "no": "After an emotion + que, use the subjunctive: “estés”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Es una lástima que no ___ venir.",
+      "prompt_en": "It's a shame you can't come.",
+      "options": [
+        {
+          "id": "a",
+          "text": "puedes"
+        },
+        {
+          "id": "b",
+          "text": "puedas"
+        },
+        {
+          "id": "c",
+          "text": "poder"
+        },
+        {
+          "id": "d",
+          "text": "puedo"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! poder → puedas.",
+      "no": "After 'es una lástima que', use the subjunctive: “puedas”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I'm glad you're here.”",
+      "tokens": [
+        "Me",
+        "alegro",
+        "de",
+        "que",
+        "estés",
+        "aquí",
+        "estás",
+        "está"
+      ],
+      "answer": [
+        "Me",
+        "alegro",
+        "de",
+        "que",
+        "estés",
+        "aquí"
+      ],
+      "ok": "¡Perfecto! Me alegro de que estés — subjuntivo.",
+      "no": "“Me alegro de que estés aquí” — estar flips to estés."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Me molesta que tú ___ tarde. (llegar)",
+      "prompt_en": "It bothers me that you arrive late.",
+      "accepted": [
+        "llegues"
+      ],
+      "ignore_accents": true,
+      "hint": "llegar in the subjunctive: lle___.",
+      "ok": "¡Bien! Me molesta que llegues tarde.",
+      "no": "Emotion + que → subjunctive: “llegues”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its subjunctive (yo/él) form.",
+      "pairs": [
+        [
+          "ser",
+          "sea"
+        ],
+        [
+          "estar",
+          "esté"
+        ],
+        [
+          "tener",
+          "tenga"
+        ],
+        [
+          "ir",
+          "vaya"
+        ]
+      ],
+      "ok": "¡Excelente! You've locked in the key irregulars.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Siento que estés enfermo.",
+      "accepted": [
+        "siento que estes enfermo"
+      ],
+      "ignore_accents": true,
+      "translation": "I'm sorry you're sick.",
+      "ok": "¡Correcto! “Siento que estés enfermo.”",
+      "no": "It was: “Siento que estés enfermo.” (I'm sorry you're sick.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend finally arrives at your party 🎉",
+      "lines": [
+        {
+          "speaker": "Ana",
+          "es": "¡Por fin llegué a tu fiesta!",
+          "en": "I finally made it to your party!"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "¡Me alegro de que estés aquí!"
+        },
+        {
+          "id": "b",
+          "text": "Me alegro de que estás aquí."
+        },
+        {
+          "id": "c",
+          "text": "Me molesta que vienes."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Emoción + que → subjuntivo (estés).",
+      "no": "After 'me alegro de que' use the subjunctive: “¡Me alegro de que estés aquí!” (I'm glad you're here!)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Me alegro de que estés aquí.",
+      "en": "I'm glad you're here.",
+      "ok": "¡Perfecto! Great pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "me alegro de que",
+      "en": "I'm glad that…"
+    },
+    {
+      "es": "es una lástima que",
+      "en": "it's a shame that…"
+    },
+    {
+      "es": "siento que",
+      "en": "I'm sorry that…"
+    },
+    {
+      "es": "me gusta que",
+      "en": "I like that…"
+    },
+    {
+      "es": "me molesta que",
+      "en": "it bothers me that…"
+    },
+    {
+      "es": "ojalá",
+      "en": "hopefully / I hope"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "me alegro de que",
+      "es una lástima que",
+      "siento que",
+      "me gusta que",
+      "me molesta que"
+    ]
+  }
+}

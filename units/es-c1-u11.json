@@ -1,0 +1,187 @@
+{
+  "unit": { "id": "es-c1-u11", "title": "Cleft Sentences & Emphasis", "subtitle": "Focusing one element with ser + relative", "level": "C1", "order": 11, "xp_reward": 20 },
+  "grammar": {
+    "title": "Spotlight one word with a cleft",
+    "intro": "A <b>cleft sentence</b> (oración enfática / perífrasis de relativo) splits a neutral sentence to spotlight a single element. You frame the focus between a form of <b>ser</b> and a relative word: <b>Fue Ana quien lo hizo</b> (It was Ana who did it), <b>Es aquí donde vivo</b> (This is where I live). It is the everyday way advanced speakers add emphasis without raising their voice.",
+    "sections": [
+      {
+        "tag": "estructura",
+        "heading": "ser + focus + relative",
+        "body": "Take the neutral sentence, lift out the element you want to stress, and rebuild it as <b>ser</b> + that element + a relative: <i>Ana lo hizo</i> → <b>Fue Ana quien lo hizo</b>. <b>ser</b> introduces the focus and the relative word reconnects the rest of the clause.",
+        "conj": [
+          ["persona", "quien / que"],
+          ["lugar", "donde"],
+          ["tiempo", "cuando"],
+          ["modo", "como"]
+        ],
+        "ex": [
+          { "es": "<b>Fue Ana quien</b> lo hizo.", "en": "It was Ana who did it.", "note": "focus on the subject" },
+          { "es": "<b>Es aquí donde</b> vivo.", "en": "This is where I live.", "note": "focus on place" }
+        ]
+      },
+      {
+        "tag": "el relativo",
+        "heading": "Pick the right relative",
+        "body": "Match the relative to the kind of element in focus: <b>quien</b> (or <i>el que</i>) for people, <b>donde</b> for places, <b>cuando</b> for time, <b>como</b> for manner. With a preposition the whole phrase moves: <b>Es por eso por lo que</b>… (That's why…).",
+        "ex": [
+          { "es": "<b>Fue entonces cuando</b> lo entendí todo.", "en": "It was then that I understood everything.", "note": "time → cuando" },
+          { "es": "<b>Es así como</b> se hace.", "en": "That's how it's done.", "note": "manner → como" }
+        ]
+      },
+      {
+        "tag": "lo que … es",
+        "heading": "Lo que … es …",
+        "body": "A second cleft frames a whole idea with <b>lo que</b> + clause and then <b>es</b> + the focus: <b>Lo que necesito es descansar</b> (What I need is to rest). The colloquial opener <b>lo que pasa es que…</b> softly introduces an explanation.",
+        "ex": [
+          { "es": "<b>Lo que</b> necesito <b>es</b> descansar.", "en": "What I need is to rest.", "note": "clause + es + focus" },
+          { "es": "<b>Lo que pasa es que</b> no me avisaron.", "en": "The thing is, they didn't tell me.", "note": "soft explanation" }
+        ]
+      },
+      {
+        "tag": "concordancia",
+        "heading": "Ser agrees with the tense",
+        "body": "The verb <b>ser</b> normally copies the tense of the main clause: past focus → <b>fue</b>, present → <b>es</b>, future → <b>será</b>. When the focus is plural, <b>ser</b> and the relative may agree in the plural: <b>Fueron ellos quienes</b> vinieron.",
+        "conj": [
+          ["Es aquí donde…", "present"],
+          ["Fue entonces cuando…", "past"],
+          ["Será mañana cuando…", "future"],
+          ["Fueron ellos quienes…", "plural agreement"]
+        ],
+        "ex": [
+          { "es": "<b>Fueron</b> ellos <b>quienes</b> lo decidieron.", "en": "It was they who decided it.", "note": "plural → fueron / quienes" },
+          { "es": "<b>Será</b> en junio <b>cuando</b> firmemos.", "en": "It will be in June that we sign.", "note": "future ser + subjunctive" }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Cleft = ser + focused element + relative (quien/donde/cuando/como).",
+      "Match the relative: people → quien, place → donde, time → cuando, manner → como.",
+      "Lo que + clause + es + focus highlights a whole idea: Lo que necesito es descansar.",
+      "Ser copies the tense/number: fue… quien, fueron… quienes, es… donde."
+    ],
+    "mistakes": [
+      { "w": "Fue Ana que lo hizo.", "r": "Fue Ana quien lo hizo.", "why": "For a highlighted person, careful register prefers quien (or la que) over bare que." },
+      { "w": "Es aquí que vivo.", "r": "Es aquí donde vivo.", "why": "A focused place takes donde, not que ('que galicado')." },
+      { "w": "Fue entonces que entendí.", "r": "Fue entonces cuando entendí.", "why": "A focused time takes cuando, not que." }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Fue entonces ___ lo entendí todo.",
+      "prompt_en": "It was then that I understood it all.",
+      "options": [
+        { "id": "a", "text": "cuando" },
+        { "id": "b", "text": "que" },
+        { "id": "c", "text": "cuál" },
+        { "id": "d", "text": "donde" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Tiempo enfatizado → cuando.",
+      "no": "A focused time takes cuando, not que: “Fue entonces cuando…”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Es aquí ___ nos conocimos.",
+      "prompt_en": "This is where we met.",
+      "options": [
+        { "id": "a", "text": "donde" },
+        { "id": "b", "text": "que" },
+        { "id": "c", "text": "cuando" },
+        { "id": "d", "text": "quien" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Lugar enfatizado → donde.",
+      "no": "A focused place takes donde: “Es aquí donde nos conocimos”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “What I need is to rest.”",
+      "tokens": ["Lo", "que", "necesito", "es", "descansar", "El", "descanso"],
+      "answer": ["Lo", "que", "necesito", "es", "descansar"],
+      "ok": "¡Perfecto! Lo que + cláusula + es + foco.",
+      "no": "“Lo que necesito es descansar” — the cleft frames the whole idea."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Fueron ellos ___ lo decidieron.",
+      "prompt_en": "It was they who decided it.",
+      "accepted": ["quienes", "los que"],
+      "ignore_accents": true,
+      "hint": "Relative for plural people, agreeing with ellos.",
+      "ok": "¡Bien! Plural → quienes.",
+      "no": "For plural people the relative agrees: “Fueron ellos quienes…”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each focus type to its relative word.",
+      "pairs": [
+        ["persona", "quien"],
+        ["lugar", "donde"],
+        ["tiempo", "cuando"],
+        ["modo", "como"]
+      ],
+      "ok": "¡Excelente! Los relativos, dominados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Lo que pasa es que no me avisaron.",
+      "accepted": ["lo que pasa es que no me avisaron"],
+      "ignore_accents": true,
+      "translation": "The thing is, they didn't tell me.",
+      "ok": "¡Correcto! “Lo que pasa es que no me avisaron.”",
+      "no": "It was: “Lo que pasa es que no me avisaron.” (The thing is, they didn't tell me.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Explaining why you were late 🚗",
+      "lines": [
+        { "speaker": "Roberto", "es": "¿Por qué llegaste tarde a la reunión?", "en": "Why were you late to the meeting?" },
+        { "speaker": "You", "blank": true }
+      ],
+      "options": [
+        { "id": "a", "text": "Lo que pasa es que se me averió el coche." },
+        { "id": "b", "text": "Lo que pasa que se me averió el coche." },
+        { "id": "c", "text": "Es lo que pasa que se me averió el coche." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Lo que pasa es que… introduces the reason.",
+      "no": "The set opener is “Lo que pasa es que…” — with es que before the clause."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Es por eso por lo que me fui.",
+      "en": "That's why I left.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Es por eso por lo que me fui.”"
+    }
+  ],
+  "vocab": [
+    { "es": "fue Ana quien", "en": "it was Ana who" },
+    { "es": "es aquí donde", "en": "this is where" },
+    { "es": "fue entonces cuando", "en": "it was then that" },
+    { "es": "lo que necesito es", "en": "what I need is" },
+    { "es": "lo que pasa es que", "en": "the thing is that" },
+    { "es": "es por eso por lo que", "en": "that's why" },
+    { "es": "así es como", "en": "that's how" }
+  ],
+  "completion": { "xp_on_complete": 20, "adds_vocab_to_srs": ["es aquí donde", "fue entonces cuando", "lo que necesito es", "lo que pasa es que", "es por eso por lo que"] }
+}

@@ -1,0 +1,340 @@
+{
+  "unit": {
+    "id": "es-a1-u11",
+    "title": "Adjectives",
+    "subtitle": "Describing things: agreement, colors, and position",
+    "level": "A1",
+    "order": 11,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Make your adjectives match",
+    "intro": "In Spanish an adjective must <b>agree</b> with the noun it describes — in <b>gender</b> (masculine/feminine) and <b>number</b> (singular/plural). And unlike English, the adjective usually comes <b>after</b> the noun: <b>una casa blanca</b> (a white house), not “una blanca casa”.",
+    "sections": [
+      {
+        "tag": "concordancia",
+        "heading": "Agreement: the four forms of -o adjectives",
+        "body": "An adjective ending in <b>-o</b> has four forms. Change the ending to match the noun:",
+        "conj": [
+          [
+            "masc. singular",
+            "alto"
+          ],
+          [
+            "fem. singular",
+            "alta"
+          ],
+          [
+            "masc. plural",
+            "altos"
+          ],
+          [
+            "fem. plural",
+            "altas"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "El chico es <b>alto</b>.",
+            "en": "The boy is tall.",
+            "note": "masc. sing."
+          },
+          {
+            "es": "Las chicas son <b>altas</b>.",
+            "en": "The girls are tall.",
+            "note": "fem. plural"
+          },
+          {
+            "es": "Un coche <b>rojo</b>.",
+            "en": "A red car.",
+            "note": "coche is masculine"
+          }
+        ]
+      },
+      {
+        "tag": "otras",
+        "heading": "Adjectives ending in -e or a consonant",
+        "body": "Adjectives ending in <b>-e</b> (grande, verde) don’t change for gender — only add <b>-s</b> for plural. Adjectives ending in a consonant (azul, gris) add <b>-es</b> for plural:",
+        "conj": [
+          [
+            "grande → plural",
+            "grandes"
+          ],
+          [
+            "verde → plural",
+            "verdes"
+          ],
+          [
+            "azul → plural",
+            "azules"
+          ],
+          [
+            "gris → plural",
+            "grises"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Una casa <b>grande</b> y dos casas <b>grandes</b>.",
+            "en": "A big house and two big houses.",
+            "note": "-e: same for gender"
+          },
+          {
+            "es": "Los ojos <b>azules</b>.",
+            "en": "The blue eyes.",
+            "note": "azul → azules"
+          }
+        ]
+      },
+      {
+        "tag": "colores",
+        "heading": "Colors + position",
+        "body": "Colors are adjectives and go <b>after</b> the noun. Common ones: <b>rojo</b> (red), <b>azul</b> (blue), <b>verde</b> (green), <b>blanco</b> (white), <b>negro</b> (black), <b>amarillo</b> (yellow). Use <b>ser</b> to describe: <b>La casa es blanca</b>.",
+        "ex": [
+          {
+            "es": "Una flor <b>amarilla</b>.",
+            "en": "A yellow flower.",
+            "note": "flor is fem. → amarilla"
+          },
+          {
+            "es": "El libro es <b>negro</b>.",
+            "en": "The book is black.",
+            "note": "ser + color"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Adjectives agree with the noun in gender AND number.",
+      "-o adjectives have 4 forms: alto / alta / altos / altas.",
+      "-e adjectives (grande) add -s; consonant adjectives (azul) add -es for plural.",
+      "Descriptive adjectives and colors come after the noun: una casa blanca."
+    ],
+    "mistakes": [
+      {
+        "w": "una casa blanco",
+        "r": "una casa blanca",
+        "why": "Casa is feminine, so the color must be feminine: blanca."
+      },
+      {
+        "w": "los libros rojo",
+        "r": "los libros rojos",
+        "why": "Libros is plural, so the adjective must be plural: rojos."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Una casa ___.",
+      "prompt_en": "A white house.",
+      "options": [
+        {
+          "id": "a",
+          "text": "blanco"
+        },
+        {
+          "id": "b",
+          "text": "blanca"
+        },
+        {
+          "id": "c",
+          "text": "blancos"
+        },
+        {
+          "id": "d",
+          "text": "blancas"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! casa es femenina → blanca.",
+      "no": "Casa is feminine and singular → “blanca”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Los coches ___.",
+      "prompt_en": "The red cars.",
+      "options": [
+        {
+          "id": "a",
+          "text": "rojo"
+        },
+        {
+          "id": "b",
+          "text": "roja"
+        },
+        {
+          "id": "c",
+          "text": "rojos"
+        },
+        {
+          "id": "d",
+          "text": "rojas"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Sí! coches es masculino plural → rojos.",
+      "no": "Coches is masculine and plural → “rojos”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “The girls are tall.”",
+      "tokens": [
+        "Las",
+        "chicas",
+        "son",
+        "altas",
+        "altos",
+        "alta"
+      ],
+      "answer": [
+        "Las",
+        "chicas",
+        "son",
+        "altas"
+      ],
+      "ok": "¡Perfecto! chicas → femenino plural → altas.",
+      "no": "chicas is feminine plural → “Las chicas son altas.”"
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Los ojos ___.",
+      "prompt_en": "The blue eyes.",
+      "accepted": [
+        "azules"
+      ],
+      "ignore_accents": true,
+      "hint": "azul, plural.",
+      "ok": "¡Bien! azul → azules en plural.",
+      "no": "azul adds -es in the plural → “azules”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each noun to the correct form of the adjective.",
+      "pairs": [
+        [
+          "un coche",
+          "rojo"
+        ],
+        [
+          "una casa",
+          "roja"
+        ],
+        [
+          "unos coches",
+          "rojos"
+        ],
+        [
+          "unas casas",
+          "rojas"
+        ]
+      ],
+      "ok": "¡Excelente! You’ve nailed adjective agreement.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "La casa es grande y bonita.",
+      "accepted": [
+        "la casa es grande y bonita"
+      ],
+      "ignore_accents": true,
+      "translation": "The house is big and pretty.",
+      "ok": "¡Correcto! “La casa es grande y bonita.”",
+      "no": "It was: “La casa es grande y bonita.” (The house is big and pretty.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend shows you her new car 🚗",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "Tengo un coche nuevo. ¿Te gusta?",
+          "en": "I have a new car. Do you like it?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, es un coche rojo muy bonito."
+        },
+        {
+          "id": "b",
+          "text": "Sí, es un coche roja muy bonito."
+        },
+        {
+          "id": "c",
+          "text": "Sí, es una coche rojos muy bonitas."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! coche es masculino → rojo, bonito.",
+      "no": "Coche is masculine, so “un coche rojo muy bonito.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "pequeño",
+      "en": "small",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "grande",
+      "en": "big"
+    },
+    {
+      "es": "pequeño",
+      "en": "small"
+    },
+    {
+      "es": "bonito",
+      "en": "pretty / nice"
+    },
+    {
+      "es": "rojo",
+      "en": "red"
+    },
+    {
+      "es": "azul",
+      "en": "blue"
+    },
+    {
+      "es": "blanco",
+      "en": "white"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "grande",
+      "pequeño",
+      "bonito",
+      "rojo",
+      "azul",
+      "blanco"
+    ]
+  }
+}

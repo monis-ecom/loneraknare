@@ -1,0 +1,246 @@
+{
+  "unit": {
+    "id": "es-c1-u06",
+    "title": "Nuanced Subjunctive Triggers",
+    "subtitle": "El hecho de que, no es que, que yo sepa and value judgments",
+    "level": "C1",
+    "order": 6,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The subtle triggers natives never miss",
+    "intro": "Beyond the obvious <b>quiero / dudo / espero</b>, C1 Spanish is full of quieter structures that quietly demand the subjunctive: fronted facts, denied causes, value judgments and a few fixed expressions. These are the ones that give away a non-native — learn to hear them and the mood becomes second nature.",
+    "sections": [
+      {
+        "tag": "el hecho de que",
+        "heading": "El hecho de que + subjunctive",
+        "body": "When you <b>comment on</b> or <b>react to</b> a fact, <b>el hecho de que</b> takes the subjunctive — the fact is the topic, not fresh information. Native speakers do allow the indicative when they're purely <b>asserting</b> the fact as news, but the subjunctive is the safe, default choice after this phrase.",
+        "conj": [
+          ["comment / reaction", "el hecho de que + subjuntivo"],
+          ["plain assertion (rarer)", "el hecho de que + indicativo"]
+        ],
+        "ex": [
+          {
+            "es": "<b>El hecho de que llueva</b> no cambia el plan.",
+            "en": "The fact that it's raining doesn't change the plan.",
+            "note": "reacting to the fact → subj."
+          },
+          {
+            "es": "<b>El hecho de que llegues</b> tarde molesta a todos.",
+            "en": "The fact that you arrive late annoys everyone.",
+            "note": "topic, not news → subj."
+          }
+        ]
+      },
+      {
+        "tag": "no es que",
+        "heading": "No es que… (sino que) + subjunctive",
+        "body": "To <b>deny a reason</b> before giving the real one, use <b>no es que</b> + subjunctive, typically paired with <b>sino que</b> + indicative for the true explanation. The negated clause is hypothetical, so it stays in the subjunctive.",
+        "ex": [
+          {
+            "es": "<b>No es que no me guste</b>, sino que no tengo tiempo.",
+            "en": "It's not that I don't like it, it's that I don't have time.",
+            "note": "no es que + subj. / sino que + ind."
+          },
+          {
+            "es": "<b>No es que</b> sea difícil, es que es aburrido.",
+            "en": "It's not that it's hard, it's that it's boring.",
+            "note": "denied reason → subj."
+          }
+        ]
+      },
+      {
+        "tag": "juicios",
+        "heading": "Value judgments + fixed expressions",
+        "body": "Impersonal value judgments — <b>lo normal / lo lógico / lo raro es que</b> and <b>es una pena / lástima que</b> — evaluate rather than report, so they take the subjunctive. The same holds for <b>el que</b> meaning “whoever” in a general sense.",
+        "conj": [
+          ["lo lógico es que", "the logical thing is that"],
+          ["lo raro es que", "the strange thing is that"],
+          ["es una pena/lástima que", "it's a shame that"],
+          ["el que + subj.", "whoever…"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Lo lógico es que</b> te <b>disculpes</b>.",
+            "en": "The logical thing is for you to apologize.",
+            "note": "value judgment → subj."
+          },
+          {
+            "es": "<b>El que</b> lo <b>sepa</b> que levante la mano.",
+            "en": "Whoever knows it, raise your hand.",
+            "note": "unknown referent → subj."
+          }
+        ]
+      },
+      {
+        "tag": "matices fijos",
+        "heading": "Que yo sepa / que yo recuerde",
+        "body": "These frozen hedges mean “as far as I know / recall” and are <b>always</b> in the subjunctive. They soften a claim, signalling the limits of your knowledge.",
+        "ex": [
+          {
+            "es": "<b>Que yo sepa</b>, nadie ha dimitido.",
+            "en": "As far as I know, nobody has resigned.",
+            "note": "fixed hedge → subj."
+          },
+          {
+            "es": "<b>Que yo recuerde</b>, no dijo eso.",
+            "en": "As far as I recall, he didn't say that.",
+            "note": "recuerde, not recuerdo"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "el hecho de que → subjunctive when you comment on the fact (the default at C1).",
+      "no es que + subjunctive denies a reason; the real one follows in sino que + indicative.",
+      "Value judgments — lo lógico/raro es que, es una pena que — take the subjunctive.",
+      "Fixed hedges que yo sepa / que yo recuerde are always subjunctive."
+    ],
+    "mistakes": [
+      {
+        "w": "No es que no me gusta, es que no puedo.",
+        "r": "No es que no me guste, es que no puedo.",
+        "why": "no es que denies a reason and requires the subjunctive: guste, not gusta."
+      },
+      {
+        "w": "Que yo sé, nadie ha llamado.",
+        "r": "Que yo sepa, nadie ha llamado.",
+        "why": "The fixed hedge is que yo sepa (subjunctive), never que yo sé."
+      },
+      {
+        "w": "Es una pena que no puedes venir.",
+        "r": "Es una pena que no puedas venir.",
+        "why": "A value judgment (es una pena que) triggers the subjunctive: puedas."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El hecho de que ___ tarde no justifica nada.",
+      "prompt_en": "The fact that you arrive late justifies nothing.",
+      "options": [
+        { "id": "a", "text": "llegues" },
+        { "id": "b", "text": "llegas" },
+        { "id": "c", "text": "llegaste" },
+        { "id": "d", "text": "llegar" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Comentar el hecho → el hecho de que + subjuntivo.",
+      "no": "When you comment on the fact, “el hecho de que” takes the subjunctive: llegues."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No es que no ___, es que estoy agotado.",
+      "prompt_en": "It's not that I don't want to, it's that I'm exhausted.",
+      "options": [
+        { "id": "a", "text": "quiera" },
+        { "id": "b", "text": "quiero" },
+        { "id": "c", "text": "quería" },
+        { "id": "d", "text": "querer" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! no es que + subjuntivo → quiera.",
+      "no": "“No es que” denies a reason and needs the subjunctive: quiera."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “It's a shame that you can't come.”",
+      "tokens": ["Es", "una", "pena", "que", "no", "puedas", "venir", "puedes", "poder"],
+      "answer": ["Es", "una", "pena", "que", "no", "puedas", "venir"],
+      "ok": "¡Perfecto! juicio de valor → puedas.",
+      "no": "“Es una pena que no puedas venir” — the value judgment takes the subjunctive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Que yo ___, nadie ha dicho semejante cosa. (recordar)",
+      "prompt_en": "As far as I recall, nobody has said such a thing.",
+      "accepted": ["recuerde"],
+      "ignore_accents": true,
+      "hint": "The fixed hedge 'que yo…' is always subjunctive.",
+      "ok": "¡Bien! que yo recuerde (subjuntivo fijo).",
+      "no": "The frozen expression is “que yo recuerde”, in the subjunctive — not recuerdo."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each trigger to its English meaning.",
+      "pairs": [
+        ["que yo sepa", "as far as I know"],
+        ["no es que…", "it's not that…"],
+        ["el hecho de que", "the fact that"],
+        ["es una lástima que", "it's a shame that"]
+      ],
+      "ok": "¡Excelente! Disparadores sutiles, dominados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Lo lógico es que te disculpes.",
+      "accepted": ["lo logico es que te disculpes"],
+      "ignore_accents": true,
+      "translation": "The logical thing is for you to apologize.",
+      "ok": "¡Correcto! “Lo lógico es que te disculpes.”",
+      "no": "It was: “Lo lógico es que te disculpes.” (a value judgment → subjunctive)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A colleague asks about a pending decision 📋",
+      "lines": [
+        {
+          "speaker": "Rosa",
+          "es": "¿Sabes si han aprobado ya el proyecto?",
+          "en": "Do you know whether they've already approved the project?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Que yo sepa, todavía no lo han decidido." },
+        { "id": "b", "text": "Que yo sé, todavía no lo han decidido." },
+        { "id": "c", "text": "Que yo supiera, todavía no lo han decidido." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! “Que yo sepa” es la fórmula fija.",
+      "no": "The fixed hedge is “que yo sepa” (present subjunctive), not sé or supiera."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "No es que no me importe, es que no puedo.",
+      "en": "It's not that I don't care, it's that I can't.",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “No es que no me importe, es que no puedo.”"
+    }
+  ],
+  "vocab": [
+    { "es": "el hecho de que", "en": "the fact that (+ subjunctive)" },
+    { "es": "no es que…", "en": "it's not that…" },
+    { "es": "que yo sepa", "en": "as far as I know" },
+    { "es": "que yo recuerde", "en": "as far as I recall" },
+    { "es": "lo lógico es que", "en": "the logical thing is that" },
+    { "es": "es una pena que", "en": "it's a shame that" },
+    { "es": "el que", "en": "whoever (+ subjunctive)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["el hecho de que", "no es que…", "que yo sepa", "lo lógico es que", "es una pena que"]
+  }
+}

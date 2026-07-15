@@ -1,0 +1,325 @@
+{
+  "unit": {
+    "id": "es-b1-u18",
+    "title": "B1 Review",
+    "subtitle": "Capstone: bring all your B1 skills together",
+    "level": "B1",
+    "order": 18,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Everything you built at B1, in one place",
+    "intro": "No new grammar today — this is your <b>capstone</b>. At B1 you learned to express <b>doubt and emotion</b> with the subjunctive, reach further back in time with the <b>pluperfect</b>, report what others said, join ideas with <b>relative</b> and <b>si</b>-clauses, and link it all with <b>connectors</b>. Let's recap the highlights, then mix them together.",
+    "sections": [
+      {
+        "tag": "subjuntivo",
+        "heading": "Subjunctive: doubt, emotion, wishes",
+        "body": "After feelings, doubt, and impersonal expressions, the second verb goes into the <b>subjunctive</b>. Also after <b>ojalá</b> and after <b>cuando</b> pointing to the future:",
+        "ex": [
+          {
+            "es": "<b>No creo que</b> <b>venga</b> hoy.",
+            "en": "I don't think he's coming today.",
+            "note": "doubt → subjunctive"
+          },
+          {
+            "es": "<b>Ojalá</b> <b>haga</b> sol mañana.",
+            "en": "I hope it's sunny tomorrow.",
+            "note": "ojalá + subjunctive"
+          },
+          {
+            "es": "Te llamo <b>cuando</b> <b>llegue</b>.",
+            "en": "I'll call you when I arrive.",
+            "note": "future cuando → subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "pasado y estilo indirecto",
+        "heading": "Pluperfect & reported speech",
+        "body": "The <b>pluperfect</b> (<b>había</b> + participle) marks the 'past before the past'. In <b>reported speech</b>, tenses shift back a step:",
+        "ex": [
+          {
+            "es": "Cuando llegué, ya <b>había</b> <b>empezado</b> la película.",
+            "en": "When I arrived, the film had already started.",
+            "note": "earlier past = había + participle"
+          },
+          {
+            "es": "Dijo que <b>vendría</b> tarde.",
+            "en": "He said he would come late.",
+            "note": "'vendré' → 'vendría' when reported"
+          }
+        ]
+      },
+      {
+        "tag": "relativos y condicionales",
+        "heading": "Relative & si-clauses + connectors",
+        "body": "Join sentences with <b>que</b> / <b>lo que</b>. Real conditions use the present; hypothetical ones use <b>si</b> + imperfect subjunctive + conditional. And glue ideas with connectors like <b>sin embargo</b>:",
+        "ex": [
+          {
+            "es": "Eso es <b>lo que</b> quería decir.",
+            "en": "That's what I wanted to say.",
+            "note": "lo que = what / the thing that"
+          },
+          {
+            "es": "<b>Si tuviera</b> tiempo, <b>viajaría</b> más.",
+            "en": "If I had time, I would travel more.",
+            "note": "hypothetical si-clause"
+          },
+          {
+            "es": "Quería ir; <b>sin embargo</b>, estaba cansado.",
+            "en": "I wanted to go; however, I was tired.",
+            "note": "connector for contrast"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Subjunctive after doubt/emotion/impersonal, ojalá, and future cuando.",
+      "Pluperfect = había + participle: the past before the past.",
+      "Reported speech shifts tenses back: dijo que vendría.",
+      "Relatives: que, lo que. Real si = present; hypothetical si = si tuviera… viajaría.",
+      "Connectors (sin embargo, por lo tanto…) link your ideas smoothly."
+    ],
+    "mistakes": [
+      {
+        "w": "No creo que viene hoy.",
+        "r": "No creo que venga hoy.",
+        "why": "'No creo que' expresses doubt, so it triggers the subjunctive: venga."
+      },
+      {
+        "w": "Si tendría tiempo, viajaría más.",
+        "r": "Si tuviera tiempo, viajaría más.",
+        "why": "A hypothetical 'si' uses the imperfect subjunctive (tuviera), never the conditional."
+      },
+      {
+        "w": "Cuando llegué, ya empezó la película.",
+        "r": "Cuando llegué, ya había empezado la película.",
+        "why": "An action finished before another past action needs the pluperfect: había empezado."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No creo que ___ hoy.",
+      "prompt_en": "I don't think he's coming today.",
+      "options": [
+        {
+          "id": "a",
+          "text": "viene"
+        },
+        {
+          "id": "b",
+          "text": "venga"
+        },
+        {
+          "id": "c",
+          "text": "vendrá"
+        },
+        {
+          "id": "d",
+          "text": "vino"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! La duda pide subjuntivo → venga.",
+      "no": "'No creo que' expresses doubt → subjunctive: “venga”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Cuando llegué, la película ya ___ empezado.",
+      "prompt_en": "When I arrived, the film had already started.",
+      "options": [
+        {
+          "id": "a",
+          "text": "ha"
+        },
+        {
+          "id": "b",
+          "text": "habrá"
+        },
+        {
+          "id": "c",
+          "text": "había"
+        },
+        {
+          "id": "d",
+          "text": "habría"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Exacto! El pasado antes del pasado → pluscuamperfecto: había empezado.",
+      "no": "The past before another past uses the pluperfect: “había empezado”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “If I had money, I would travel more.”",
+      "tokens": [
+        "Si",
+        "tuviera",
+        "dinero,",
+        "viajaría",
+        "más",
+        "tendría",
+        "viajo"
+      ],
+      "answer": [
+        "Si",
+        "tuviera",
+        "dinero,",
+        "viajaría",
+        "más"
+      ],
+      "ok": "¡Perfecto! si + imperfecto de subjuntivo + condicional.",
+      "no": "Hypothetical: “Si tuviera dinero, viajaría más” — si + tuviera + conditional."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Eso es ___ que quería decir. (what)",
+      "prompt_en": "That's what I wanted to say.",
+      "accepted": [
+        "lo"
+      ],
+      "ignore_accents": true,
+      "hint": "Two words 'lo ___' mean 'what / the thing that'.",
+      "ok": "¡Bien! lo que = what / the thing that.",
+      "no": "'What / the thing that' is “lo que”: eso es lo que quería decir."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each B1 tool to its use.",
+      "pairs": [
+        [
+          "no creo que",
+          "doubt → subjunctive"
+        ],
+        [
+          "había",
+          "pluperfect (earlier past)"
+        ],
+        [
+          "si tuviera",
+          "hypothetical condition"
+        ],
+        [
+          "sin embargo",
+          "however (contrast)"
+        ]
+      ],
+      "ok": "¡Excelente! Dominas tus herramientas de B1.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Dijo que vendría cuando terminara el trabajo.",
+      "accepted": [
+        "dijo que vendria cuando terminara el trabajo"
+      ],
+      "ignore_accents": true,
+      "translation": "He said he would come when he finished work.",
+      "ok": "¡Correcto! “Dijo que vendría cuando terminara el trabajo.”",
+      "no": "It was: “Dijo que vendría cuando terminara el trabajo.” (He said he'd come when he finished work.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend asks for advice about a job offer 💼",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "Me han ofrecido un trabajo en otra ciudad, pero no sé qué hacer.",
+          "en": "They've offered me a job in another city, but I don't know what to do."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Te aconsejo que lo pienses bien; si yo estuviera en tu lugar, lo aceptaría."
+        },
+        {
+          "id": "b",
+          "text": "Te aconsejo que lo piensas bien; si yo estaría en tu lugar, lo aceptaría."
+        },
+        {
+          "id": "c",
+          "text": "Te aconsejo que lo pensarías bien; si yo estuviera en tu lugar, lo acepto."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Consejo con subjuntivo (que lo pienses) + condición hipotética (si estuviera… aceptaría). ¡Todo el B1 junto!",
+      "no": "Advice uses the subjunctive and a hypothetical si-clause: “Te aconsejo que lo pienses bien; si yo estuviera en tu lugar, lo aceptaría.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Ojalá tuviera más tiempo para viajar.",
+      "en": "I wish I had more time to travel.",
+      "ok": "¡Perfecto! ojalá + subjuntivo, muy natural.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "no creo que",
+      "en": "I don't think that (+ subjunctive)"
+    },
+    {
+      "es": "ojalá",
+      "en": "I hope / hopefully (+ subjunctive)"
+    },
+    {
+      "es": "si tuviera",
+      "en": "if I had (hypothetical)"
+    },
+    {
+      "es": "había",
+      "en": "had (+ participle, pluperfect)"
+    },
+    {
+      "es": "lo que",
+      "en": "what / the thing that"
+    },
+    {
+      "es": "cuando llegue",
+      "en": "when I/he arrives (+ subjunctive)"
+    },
+    {
+      "es": "sin embargo",
+      "en": "however"
+    },
+    {
+      "es": "dijo que",
+      "en": "he/she said that (reported speech)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "no creo que",
+      "ojalá",
+      "si tuviera",
+      "había",
+      "lo que",
+      "sin embargo"
+    ]
+  }
+}

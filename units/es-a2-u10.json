@@ -1,0 +1,347 @@
+{
+  "unit": {
+    "id": "es-a2-u10",
+    "title": "Indirect object pronouns",
+    "subtitle": "me, te, le, nos, os, les — saying to/for whom",
+    "level": "A2",
+    "order": 10,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "To whom? For whom? Meet the indirect object",
+    "intro": "The <b>indirect object pronoun</b> tells you <b>to whom</b> or <b>for whom</b> something happens. In <i>Le doy el libro a Ana</i> (I give the book to Ana), the book is the direct object and <b>Ana</b> is the indirect one — the person receiving. These little words appear constantly, so let's lock them in.",
+    "sections": [
+      {
+        "tag": "pronombres",
+        "heading": "The six forms",
+        "body": "Notice they match the direct-object pronouns except for the third person, where both singular and plural use <b>le</b> / <b>les</b> regardless of gender:",
+        "conj": [
+          [
+            "to/for me",
+            "me"
+          ],
+          [
+            "to/for you",
+            "te"
+          ],
+          [
+            "to/for him/her/you (formal)",
+            "le"
+          ],
+          [
+            "to/for us",
+            "nos"
+          ],
+          [
+            "to/for you all",
+            "os"
+          ],
+          [
+            "to/for them/you all",
+            "les"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Me</b> das el número.",
+            "en": "You give me the number.",
+            "note": "me = to me"
+          },
+          {
+            "es": "<b>Les</b> escribo un correo.",
+            "en": "I write them an email.",
+            "note": "les = to them"
+          }
+        ]
+      },
+      {
+        "tag": "colocación",
+        "heading": "Where it goes",
+        "body": "Placement works just like direct-object pronouns: <b>before</b> the conjugated verb, or <b>attached</b> to an infinitive or gerund.",
+        "ex": [
+          {
+            "es": "<b>Le</b> voy a explicar el plan.",
+            "en": "I'm going to explain the plan to him.",
+            "note": "before the conjugated verb"
+          },
+          {
+            "es": "Voy a explicar<b>le</b> el plan.",
+            "en": "I'm going to explain the plan to him.",
+            "note": "attached to the infinitive"
+          }
+        ]
+      },
+      {
+        "tag": "duplicación",
+        "heading": "Doubling with 'a + person'",
+        "body": "Spanish often uses the pronoun <b>and</b> names the person with <b>a + [person]</b> in the same sentence. It sounds redundant to English ears, but it's completely normal — even required with <b>le</b> / <b>les</b>.",
+        "ex": [
+          {
+            "es": "<b>Le</b> doy el libro <b>a Ana</b>.",
+            "en": "I give the book to Ana.",
+            "note": "le AND a Ana together"
+          },
+          {
+            "es": "<b>Les</b> hablo <b>a mis padres</b>.",
+            "en": "I talk to my parents.",
+            "note": "les AND a mis padres"
+          }
+        ]
+      },
+      {
+        "tag": "se-lo",
+        "heading": "le/les → se before lo/la/los/las",
+        "body": "When an indirect <b>le</b> or <b>les</b> meets a direct <b>lo/la/los/las</b>, the <b>le/les turns into se</b>. So \"I give it to him\" is <b>Se lo doy</b>, never \"le lo doy\".",
+        "ex": [
+          {
+            "es": "<b>Se lo</b> doy.",
+            "en": "I give it to him/her.",
+            "note": "le + lo → se lo"
+          },
+          {
+            "es": "<b>Se la</b> mando mañana.",
+            "en": "I'll send it to them tomorrow.",
+            "note": "les + la → se la"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Indirect object = to/for whom: me, te, le, nos, os, les.",
+      "Third person is le (singular) and les (plural), regardless of gender.",
+      "Place it before the conjugated verb, or attach it to an infinitive/gerund.",
+      "le/les become se before lo/la/los/las: Se lo doy, not 'le lo doy'.",
+      "Spanish often doubles: Le doy el libro a Ana."
+    ],
+    "mistakes": [
+      {
+        "w": "Le lo doy a Ana.",
+        "r": "Se lo doy a Ana.",
+        "why": "le/les turn into se before lo/la/los/las."
+      },
+      {
+        "w": "Le hablo a mis padres.",
+        "r": "Les hablo a mis padres.",
+        "why": "The people are plural (mis padres), so use les, not le."
+      },
+      {
+        "w": "Yo doy a Ana el libro.",
+        "r": "Le doy el libro a Ana.",
+        "why": "Spanish uses the pronoun le even when the person is named."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ doy el libro a Ana.",
+      "prompt_en": "I give the book to Ana.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le"
+        },
+        {
+          "id": "b",
+          "text": "Les"
+        },
+        {
+          "id": "c",
+          "text": "Lo"
+        },
+        {
+          "id": "d",
+          "text": "Me"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! A una persona → le.",
+      "no": "Ana is one person → “le”: Le doy el libro a Ana."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¿El libro? ___ doy a él mañana.",
+      "prompt_en": "The book? I'll give it to him tomorrow.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le lo"
+        },
+        {
+          "id": "b",
+          "text": "Se lo"
+        },
+        {
+          "id": "c",
+          "text": "Lo le"
+        },
+        {
+          "id": "d",
+          "text": "Les lo"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! le + lo → se lo.",
+      "no": "le/les turn into se before lo → “Se lo doy”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I write them an email.”",
+      "tokens": [
+        "Les",
+        "escribo",
+        "un",
+        "correo",
+        "Le",
+        "escriben"
+      ],
+      "answer": [
+        "Les",
+        "escribo",
+        "un",
+        "correo"
+      ],
+      "ok": "¡Perfecto! A ellos → les.",
+      "no": "“Les escribo un correo” — them (plural) → les."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "¿La carta? Se ___ mando a ella.",
+      "prompt_en": "The letter? I'll send it to her.",
+      "accepted": [
+        "la"
+      ],
+      "ignore_accents": true,
+      "hint": "The letter (la carta) is feminine singular.",
+      "ok": "¡Bien! Se la mando = I send it to her.",
+      "no": "La carta is feminine → “se la”: Se la mando."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each person to its indirect object pronoun.",
+      "pairs": [
+        [
+          "to me",
+          "me"
+        ],
+        [
+          "to you",
+          "te"
+        ],
+        [
+          "to us",
+          "nos"
+        ],
+        [
+          "to them",
+          "les"
+        ]
+      ],
+      "ok": "¡Excelente! You've got the pronouns down.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Se lo doy a él.",
+      "accepted": [
+        "se lo doy a el"
+      ],
+      "ignore_accents": true,
+      "translation": "I give it to him.",
+      "ok": "¡Correcto! “Se lo doy a él.”",
+      "no": "It was: “Se lo doy a él.” (I give it to him.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend asks about the gift for Ana 🎁",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Le compraste un regalo a Ana?",
+          "en": "Did you buy Ana a gift?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, se lo doy mañana."
+        },
+        {
+          "id": "b",
+          "text": "Sí, le lo doy mañana."
+        },
+        {
+          "id": "c",
+          "text": "Sí, lo le doy mañana."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! le + lo → se lo.",
+      "no": "Before lo, le becomes se → “Se lo doy mañana”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Se lo doy a ella",
+      "en": "I give it to her",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "me",
+      "en": "to/for me"
+    },
+    {
+      "es": "te",
+      "en": "to/for you"
+    },
+    {
+      "es": "le",
+      "en": "to/for him/her/you (formal)"
+    },
+    {
+      "es": "les",
+      "en": "to/for them/you all"
+    },
+    {
+      "es": "nos",
+      "en": "to/for us"
+    },
+    {
+      "es": "se lo",
+      "en": "it (to him/her/them)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "me",
+      "te",
+      "le",
+      "les",
+      "se lo"
+    ]
+  }
+}

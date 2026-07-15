@@ -1,0 +1,346 @@
+{
+  "unit": {
+    "id": "es-b2-u16",
+    "title": "Idioms, expressions & register",
+    "subtitle": "Sound native: everyday idioms and knowing when to be formal",
+    "level": "B2",
+    "order": 16,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Say it the way Spaniards actually say it",
+    "intro": "At B2 the grammar is mostly in place — now you polish the <b>colour</b>. Two things separate a textbook speaker from a natural one: <b>idioms</b> (fixed expressions you can't translate word for word) and <b>register</b> (choosing formal or informal for the situation). Learn the meaning of each idiom as a whole, and match your tone to the person.",
+    "sections": [
+      {
+        "tag": "modismos",
+        "heading": "Idioms: learn the meaning, not the words",
+        "body": "These expressions have a fixed meaning that has nothing to do with the literal words. Memorise them as chunks:",
+        "conj": [
+          ["echar de menos", "to miss (someone/something)"],
+          ["dar igual", "to not matter / not care"],
+          ["tener ganas de", "to feel like (doing)"],
+          ["valer la pena", "to be worth it"],
+          ["estar harto de", "to be fed up with"],
+          ["ponerse las pilas", "to get one's act together"],
+          ["meter la pata", "to put one's foot in it"],
+          ["tomar el pelo", "to tease / pull someone's leg"]
+        ],
+        "ex": [
+          {
+            "es": "Te <b>echo de menos</b>.",
+            "en": "I miss you.",
+            "note": "not 'te pierdo'"
+          },
+          {
+            "es": "<b>Me da igual</b> dónde comamos.",
+            "en": "I don't mind where we eat.",
+            "note": "dar igual = to not matter"
+          },
+          {
+            "es": "El esfuerzo <b>vale la pena</b>.",
+            "en": "The effort is worth it.",
+            "note": "vale la pena, not 'vale el dolor'"
+          }
+        ]
+      },
+      {
+        "tag": "más modismos",
+        "heading": "Feelings & nudges",
+        "body": "A few more you'll hear constantly — some are reflexive, so the verb changes with the person:",
+        "ex": [
+          {
+            "es": "<b>Tengo ganas de</b> viajar.",
+            "en": "I feel like travelling.",
+            "note": "tener ganas de + infinitive"
+          },
+          {
+            "es": "<b>Estoy harto de</b> esperar.",
+            "en": "I'm fed up with waiting.",
+            "note": "estar harto/a de + infinitive"
+          },
+          {
+            "es": "¡<b>Ponte las pilas</b>, que llegamos tarde!",
+            "en": "Get moving, we're going to be late!",
+            "note": "ponerse las pilas = shake it up"
+          }
+        ]
+      },
+      {
+        "tag": "registro",
+        "heading": "Register: formal vs informal",
+        "body": "Choose <b>usted</b> and softened requests with people you don't know or must respect; use <b>tú</b> and direct requests with friends. Compare the same request:",
+        "conj": [
+          ["Informal (tú)", "¿Puedes ayudarme?"],
+          ["Informal (tú)", "¿Te importa cerrar?"],
+          ["Formal (usted)", "¿Podría ayudarme?"],
+          ["Formal (usted)", "¿Le importaría cerrar?"],
+          ["Very formal", "¿Sería tan amable de esperar?"]
+        ],
+        "ex": [
+          {
+            "es": "<b>¿Te importa</b> abrir la ventana?",
+            "en": "Do you mind opening the window? (friend)",
+            "note": "informal, tú"
+          },
+          {
+            "es": "<b>¿Le importaría</b> repetirlo, por favor?",
+            "en": "Would you mind repeating that? (formal)",
+            "note": "conditional softens it"
+          },
+          {
+            "es": "<b>¿Sería tan amable de</b> firmar aquí?",
+            "en": "Would you be so kind as to sign here?",
+            "note": "very polite, official settings"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Idioms are chunks: echar de menos = to miss, dar igual = to not matter, valer la pena = to be worth it.",
+      "tener ganas de + infinitive = to feel like; estar harto de = to be fed up with.",
+      "ponerse las pilas = get moving; meter la pata = put your foot in it; tomar el pelo = tease.",
+      "Informal: tú + ¿Puedes…? / ¿Te importa…? — Formal: usted + ¿Podría…? / ¿Le importaría…? / ¿Sería tan amable de…?",
+      "Match your register to the person, and never translate idioms word for word."
+    ],
+    "mistakes": [
+      {
+        "w": "Te pierdo mucho.",
+        "r": "Te echo de menos.",
+        "why": "'To miss someone' is the idiom echar de menos, not the literal perder (to lose)."
+      },
+      {
+        "w": "Estoy cansado de esperar. (to a stranger, using tú)",
+        "r": "¿Le importaría esperar un momento?",
+        "why": "Register mismatch: with someone you don't know, use usted and a softened, polite request."
+      },
+      {
+        "w": "Vale la dolor estudiar.",
+        "r": "Vale la pena estudiar.",
+        "why": "The fixed expression is valer la pena — 'pena', not a literal translation of 'pain'."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Cuando estoy de viaje, ___ a mi familia.",
+      "prompt_en": "When I'm travelling, I miss my family.",
+      "options": [
+        {
+          "id": "a",
+          "text": "pierdo"
+        },
+        {
+          "id": "b",
+          "text": "echo de menos"
+        },
+        {
+          "id": "c",
+          "text": "doy igual"
+        },
+        {
+          "id": "d",
+          "text": "tomo el pelo"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! echar de menos = to miss someone.",
+      "no": "'To miss someone' is the idiom “echar de menos”, not perder."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "A stranger at reception: “___ esperar un momento?”",
+      "prompt_en": "Would you be so kind as to wait a moment? (formal)",
+      "options": [
+        {
+          "id": "a",
+          "text": "¿Puedes"
+        },
+        {
+          "id": "b",
+          "text": "¿Te importa"
+        },
+        {
+          "id": "c",
+          "text": "¿Sería tan amable de"
+        },
+        {
+          "id": "d",
+          "text": "¿Quieres"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Exacto! Con desconocidos, registro formal: ¿Sería tan amable de…?",
+      "no": "With a stranger, use the formal register: “¿Sería tan amable de esperar…?”"
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I feel like going to the beach.”",
+      "tokens": [
+        "Tengo",
+        "ganas",
+        "de",
+        "ir",
+        "a",
+        "la",
+        "playa",
+        "gano",
+        "menos"
+      ],
+      "answer": [
+        "Tengo",
+        "ganas",
+        "de",
+        "ir",
+        "a",
+        "la",
+        "playa"
+      ],
+      "ok": "¡Perfecto! tener ganas de + infinitivo.",
+      "no": "“Tengo ganas de ir a la playa” — tener ganas de + infinitive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Me da ___: puedes elegir tú el restaurante.",
+      "prompt_en": "I don't mind: you can choose the restaurant.",
+      "accepted": [
+        "igual"
+      ],
+      "ignore_accents": true,
+      "hint": "dar ___ = to not matter.",
+      "ok": "¡Bien! Me da igual = it's all the same to me.",
+      "no": "The idiom is “dar igual”: Me da igual."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each idiom to its meaning.",
+      "pairs": [
+        [
+          "valer la pena",
+          "to be worth it"
+        ],
+        [
+          "estar harto de",
+          "to be fed up with"
+        ],
+        [
+          "ponerse las pilas",
+          "to get one's act together"
+        ],
+        [
+          "meter la pata",
+          "to put one's foot in it"
+        ]
+      ],
+      "ok": "¡Excelente! Dominas los modismos.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Estoy harto de esperar el autobús.",
+      "accepted": [
+        "estoy harto de esperar el autobus"
+      ],
+      "ignore_accents": true,
+      "translation": "I'm fed up with waiting for the bus.",
+      "ok": "¡Correcto! “Estoy harto de esperar el autobús.”",
+      "no": "It was: “Estoy harto de esperar el autobús.” (I'm fed up with waiting for the bus.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Your manager asks you, politely and formally, for a favour 🧑‍💼",
+      "lines": [
+        {
+          "speaker": "Sra. Díaz",
+          "es": "¿Le importaría enviarme el informe antes de las cinco?",
+          "en": "Would you mind sending me the report before five?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Claro, se lo envío enseguida. No hay problema."
+        },
+        {
+          "id": "b",
+          "text": "Qué va, tío, paso de eso ahora mismo."
+        },
+        {
+          "id": "c",
+          "text": "Me da igual tu informe."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Respondes en un registro cortés que encaja con la pregunta formal.",
+      "no": "Match the formal register: “Claro, se lo envío enseguida. No hay problema.” The other replies are too informal or rude."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Vale la pena ponerse las pilas.",
+      "en": "It's worth getting your act together.",
+      "ok": "¡Perfecto! Dos modismos seguidos, muy natural.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "echar de menos",
+      "en": "to miss (someone/something)"
+    },
+    {
+      "es": "dar igual",
+      "en": "to not matter / not mind"
+    },
+    {
+      "es": "tener ganas de",
+      "en": "to feel like (doing)"
+    },
+    {
+      "es": "valer la pena",
+      "en": "to be worth it"
+    },
+    {
+      "es": "estar harto de",
+      "en": "to be fed up with"
+    },
+    {
+      "es": "ponerse las pilas",
+      "en": "to get one's act together"
+    },
+    {
+      "es": "¿le importaría?",
+      "en": "would you mind? (formal)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "echar de menos",
+      "dar igual",
+      "tener ganas de",
+      "valer la pena",
+      "estar harto de"
+    ]
+  }
+}

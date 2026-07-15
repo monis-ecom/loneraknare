@@ -1,0 +1,356 @@
+{
+  "unit": {
+    "id": "es-b1-u10",
+    "title": "The passive & impersonal se",
+    "subtitle": "Say what people do in general — without naming who",
+    "level": "B1",
+    "order": 10,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "One little word for 'one, you, they, people'",
+    "intro": "How do you say “English is spoken here” or “they need waiters” without naming a subject? Spanish reaches for <b>se</b>. It turns a verb impersonal — meaning <b>one</b>, <b>you</b>, <b>they</b>, or <b>people in general</b> — and it's everywhere: on signs, in rules, in the news. The one trap: the verb must <b>agree</b> with the thing that follows.",
+    "sections": [
+      {
+        "tag": "impersonal",
+        "heading": "Impersonal se: no subject at all",
+        "body": "Use <b>se</b> + a <b>third-person singular</b> verb to talk about what people do generally. There's no “who” — it's the same as English “one does”, “you do”, or “they do”.",
+        "conj": [
+          [
+            "one speaks",
+            "se habla"
+          ],
+          [
+            "one says",
+            "se dice"
+          ],
+          [
+            "one can",
+            "se puede"
+          ],
+          [
+            "one lives",
+            "se vive"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Aquí <b>se habla</b> inglés.",
+            "en": "English is spoken here.",
+            "note": "no named speaker"
+          },
+          {
+            "es": "En España <b>se cena</b> tarde.",
+            "en": "In Spain people have dinner late.",
+            "note": "people in general"
+          }
+        ]
+      },
+      {
+        "tag": "acuerdo",
+        "heading": "Passive se: the verb agrees with the noun",
+        "body": "When a thing receives the action, the verb <b>agrees</b> with that thing: singular thing → singular verb, plural things → plural verb. This is the mistake everyone makes.",
+        "conj": [
+          [
+            "a house is sold",
+            "se vende casa"
+          ],
+          [
+            "houses are sold",
+            "se venden casas"
+          ],
+          [
+            "a waiter is needed",
+            "se necesita camarero"
+          ],
+          [
+            "waiters are needed",
+            "se necesitan camareros"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Se vende</b> un piso.",
+            "en": "A flat is for sale.",
+            "note": "one flat → singular"
+          },
+          {
+            "es": "<b>Se venden</b> casas.",
+            "en": "Houses for sale.",
+            "note": "plural noun → venden"
+          }
+        ]
+      },
+      {
+        "tag": "frases",
+        "heading": "Everyday se phrases",
+        "body": "A few you'll see constantly on signs and in speech: <b>se dice que…</b> (they say that…), <b>se puede</b> (one can / is it allowed), <b>se necesita</b> (is needed / wanted).",
+        "ex": [
+          {
+            "es": "<b>Se dice que</b> va a llover.",
+            "en": "They say it's going to rain.",
+            "note": "se dice que + clause"
+          },
+          {
+            "es": "¿<b>Se puede</b> pagar con tarjeta?",
+            "en": "Can one pay by card?",
+            "note": "se puede + infinitive"
+          }
+        ]
+      },
+      {
+        "tag": "ser",
+        "heading": "A note on the true passive: ser + participle",
+        "body": "Spanish also has a formal passive with <b>ser</b> + past participle (like English “was built”), but it's mostly for writing and news. In everyday Spanish, prefer <b>se</b>.",
+        "ex": [
+          {
+            "es": "El puente <b>fue construido</b> en 1900.",
+            "en": "The bridge was built in 1900.",
+            "note": "formal / written"
+          },
+          {
+            "es": "Aquí <b>se construyó</b> un puente.",
+            "en": "A bridge was built here.",
+            "note": "everyday se version"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Impersonal se + singular verb = one / you / they / people in general.",
+      "Passive se: the verb agrees with the noun — se vende casa, se venden casas.",
+      "Handy phrases: se dice que…, se puede, se necesita(n).",
+      "The formal passive ser + participle (fue construido) is mostly for writing — use se in speech."
+    ],
+    "mistakes": [
+      {
+        "w": "Se vende casas.",
+        "r": "Se venden casas.",
+        "why": "The noun is plural (casas), so the verb must be plural: se venden."
+      },
+      {
+        "w": "Se necesita camareros.",
+        "r": "Se necesitan camareros.",
+        "why": "Camareros is plural → se necesitan, not se necesita."
+      },
+      {
+        "w": "Aquí habla inglés.",
+        "r": "Aquí se habla inglés.",
+        "why": "To make it impersonal (‘is spoken’), you need se."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Aquí ___ español.",
+      "prompt_en": "Spanish is spoken here.",
+      "options": [
+        {
+          "id": "a",
+          "text": "se habla"
+        },
+        {
+          "id": "b",
+          "text": "se hablan"
+        },
+        {
+          "id": "c",
+          "text": "habla se"
+        },
+        {
+          "id": "d",
+          "text": "es hablado"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Español es singular → se habla.",
+      "no": "One singular thing (español) → “se habla”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ camareros para el verano.",
+      "prompt_en": "Waiters are needed for the summer.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Se necesita"
+        },
+        {
+          "id": "b",
+          "text": "Se necesitan"
+        },
+        {
+          "id": "c",
+          "text": "Necesitan se"
+        },
+        {
+          "id": "d",
+          "text": "Se necesito"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! Camareros es plural → se necesitan.",
+      "no": "Camareros is plural, so the verb is plural: “se necesitan”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Houses are sold here.”",
+      "tokens": [
+        "Aquí",
+        "se",
+        "venden",
+        "casas",
+        "vende",
+        "una"
+      ],
+      "answer": [
+        "Aquí",
+        "se",
+        "venden",
+        "casas"
+      ],
+      "ok": "¡Perfecto! Casas (plural) → se venden.",
+      "no": "Plural noun → “Aquí se venden casas”."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "¿___ pagar con tarjeta?",
+      "prompt_en": "Can one pay by card?",
+      "accepted": [
+        "se puede"
+      ],
+      "ignore_accents": true,
+      "hint": "impersonal ‘one can’, se + puede",
+      "ok": "¡Bien! Se puede = is it allowed / can one.",
+      "no": "‘Can one…?’ → “¿Se puede pagar con tarjeta?”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each se phrase to its meaning.",
+      "pairs": [
+        [
+          "se habla",
+          "is spoken"
+        ],
+        [
+          "se venden",
+          "are sold"
+        ],
+        [
+          "se dice que",
+          "they say that"
+        ],
+        [
+          "se necesita",
+          "is needed"
+        ]
+      ],
+      "ok": "¡Excelente! You've matched them all.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Aquí se habla inglés.",
+      "accepted": [
+        "aqui se habla ingles"
+      ],
+      "ignore_accents": true,
+      "translation": "English is spoken here.",
+      "ok": "¡Correcto! “Aquí se habla inglés.”",
+      "no": "It was: “Aquí se habla inglés.” (English is spoken here.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Reading a shop window with a friend 🏠",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "Mira ese cartel. ¿Qué pone?",
+          "en": "Look at that sign. What does it say?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Pone “Se venden casas”."
+        },
+        {
+          "id": "b",
+          "text": "Pone “Se vende casas”."
+        },
+        {
+          "id": "c",
+          "text": "Pone “Casas se venden mucho”."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Casas (plural) → se venden.",
+      "no": "The plural casas needs the plural verb: “Se venden casas”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Se necesitan camareros",
+      "en": "Waiters are needed",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "se habla",
+      "en": "is spoken / one speaks"
+    },
+    {
+      "es": "se vende",
+      "en": "is for sale / is sold"
+    },
+    {
+      "es": "se necesita",
+      "en": "is needed / wanted"
+    },
+    {
+      "es": "se dice que",
+      "en": "they say that"
+    },
+    {
+      "es": "se puede",
+      "en": "one can / is allowed"
+    },
+    {
+      "es": "se venden",
+      "en": "are sold"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "se habla",
+      "se vende",
+      "se necesita",
+      "se dice que",
+      "se puede"
+    ]
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "unit": {
+    "id": "es-a1-u17",
+    "title": "Hay (there is/are)",
+    "subtitle": "Saying what exists and where things are",
+    "level": "A1",
+    "order": 17,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "One tiny word for “there is” and “there are”",
+    "intro": "Spanish uses a single word — <b>hay</b> — for both <b>there is</b> and <b>there are</b>. It never changes: <b>hay un libro</b> (there is a book), <b>hay dos libros</b> (there are two books). Pair it with a few <b>prepositions of place</b> and you can describe any room.",
+    "sections": [
+      {
+        "tag": "hay",
+        "heading": "hay = there is / there are",
+        "body": "<b>Hay</b> is invariable — one word for singular and plural. Use it with <b>un/una</b>, <b>unos/unas</b>, a number, or a bare plural:",
+        "conj": [
+          [
+            "Singular",
+            "Hay un gato"
+          ],
+          [
+            "Plural",
+            "Hay dos gatos"
+          ],
+          [
+            "Many",
+            "Hay muchas casas"
+          ],
+          [
+            "Some",
+            "Hay unas sillas"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Hay</b> un libro sobre la mesa.",
+            "en": "There is a book on the table.",
+            "note": "one word, both meanings"
+          },
+          {
+            "es": "<b>Hay</b> dos sillas en la cocina.",
+            "en": "There are two chairs in the kitchen.",
+            "note": "never “hay son”"
+          }
+        ]
+      },
+      {
+        "tag": "lugar",
+        "heading": "Prepositions of place",
+        "body": "These little words tell you <b>where</b> something is. Note that several end in <b>de</b>:",
+        "conj": [
+          [
+            "in / on",
+            "en"
+          ],
+          [
+            "on top of",
+            "sobre"
+          ],
+          [
+            "under",
+            "debajo de"
+          ],
+          [
+            "next to",
+            "al lado de"
+          ],
+          [
+            "between",
+            "entre"
+          ],
+          [
+            "in front of",
+            "delante de"
+          ],
+          [
+            "behind",
+            "detrás de"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Hay un gato <b>debajo de</b> la silla.",
+            "en": "There is a cat under the chair.",
+            "note": "debajo DE la silla"
+          },
+          {
+            "es": "El perro está <b>entre</b> las mesas.",
+            "en": "The dog is between the tables.",
+            "note": "entre needs no de"
+          }
+        ]
+      },
+      {
+        "tag": "contraste",
+        "heading": "hay vs está / están",
+        "body": "Use <b>hay</b> to say something <b>exists</b> (usually with un/una/a number). Use <b>está / están</b> for the <b>location of a specific, known</b> thing:",
+        "ex": [
+          {
+            "es": "<b>Hay</b> un libro en la mesa.",
+            "en": "There is a book on the table.",
+            "note": "exists — introducing it"
+          },
+          {
+            "es": "El libro <b>está</b> sobre la mesa.",
+            "en": "The book is on the table.",
+            "note": "a known book — its location"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "hay = there is AND there are — one word, it never changes.",
+      "Use hay with un/una, unos/unas, numbers, or bare plurals — never “hay son”.",
+      "“under / next to / on top of” often carry de: debajo de, al lado de.",
+      "hay = it exists; está/están = where a known thing is located."
+    ],
+    "mistakes": [
+      {
+        "w": "Ay un libro.",
+        "r": "Hay un libro.",
+        "why": "It is spelled hay (h + ay), not “ay” or “hax”."
+      },
+      {
+        "w": "Hay son dos sillas.",
+        "r": "Hay dos sillas.",
+        "why": "hay already means “there are” — don’t add son."
+      },
+      {
+        "w": "El gato está debajo la mesa.",
+        "r": "El gato está debajo de la mesa.",
+        "why": "debajo needs de: debajo de la mesa."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ dos gatos en la casa.",
+      "prompt_en": "There are two cats in the house.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hay"
+        },
+        {
+          "id": "b",
+          "text": "Está"
+        },
+        {
+          "id": "c",
+          "text": "Son"
+        },
+        {
+          "id": "d",
+          "text": "Es"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! hay = there is / there are.",
+      "no": "Existence → “Hay dos gatos”."
+    },
+    {
+      "id": "ex2",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “There is a book on the table.”",
+      "tokens": [
+        "Hay",
+        "un",
+        "libro",
+        "sobre",
+        "la",
+        "mesa",
+        "debajo",
+        "son"
+      ],
+      "answer": [
+        "Hay",
+        "un",
+        "libro",
+        "sobre",
+        "la",
+        "mesa"
+      ],
+      "ok": "¡Perfecto! Hay + un libro + sobre la mesa.",
+      "no": "“Hay un libro sobre la mesa.” — hay, then the place."
+    },
+    {
+      "id": "ex3",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Hay un gato debajo ___ la silla.",
+      "prompt_en": "There is a cat under the chair.",
+      "accepted": [
+        "de"
+      ],
+      "ignore_accents": true,
+      "hint": "debajo ___ la silla — the little linking word.",
+      "ok": "¡Bien! debajo de la silla.",
+      "no": "debajo needs “de”: debajo de la silla."
+    },
+    {
+      "id": "ex4",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each preposition to its meaning.",
+      "pairs": [
+        [
+          "sobre",
+          "on top of"
+        ],
+        [
+          "debajo de",
+          "under"
+        ],
+        [
+          "al lado de",
+          "next to"
+        ],
+        [
+          "entre",
+          "between"
+        ]
+      ],
+      "ok": "¡Excelente! You’ve mapped the room.",
+      "no": ""
+    },
+    {
+      "id": "ex5",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El libro ___ sobre la mesa.",
+      "prompt_en": "The book is on the table. (a specific, known book)",
+      "options": [
+        {
+          "id": "a",
+          "text": "está"
+        },
+        {
+          "id": "b",
+          "text": "hay"
+        },
+        {
+          "id": "c",
+          "text": "es"
+        },
+        {
+          "id": "d",
+          "text": "son"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Sí! A known thing’s location → está.",
+      "no": "For a specific, known book’s location use “está”, not hay."
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Hay una silla al lado de la mesa.",
+      "accepted": [
+        "hay una silla al lado de la mesa"
+      ],
+      "ignore_accents": true,
+      "translation": "There is a chair next to the table.",
+      "ok": "¡Correcto! “Hay una silla al lado de la mesa.”",
+      "no": "It was: “Hay una silla al lado de la mesa.” (There is a chair next to the table.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend asks about your new kitchen 🍽️",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Qué hay en la cocina?",
+          "en": "What is there in the kitchen?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Hay una mesa y dos sillas."
+        },
+        {
+          "id": "b",
+          "text": "La cocina son grande."
+        },
+        {
+          "id": "c",
+          "text": "Hay son tres sillas."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! “Hay una mesa y dos sillas.”",
+      "no": "The natural reply is “Hay una mesa y dos sillas.” (There is a table and two chairs.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "al lado de",
+      "en": "next to",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "hay",
+      "en": "there is / there are"
+    },
+    {
+      "es": "en",
+      "en": "in / on"
+    },
+    {
+      "es": "sobre",
+      "en": "on top of"
+    },
+    {
+      "es": "debajo de",
+      "en": "under"
+    },
+    {
+      "es": "al lado de",
+      "en": "next to"
+    },
+    {
+      "es": "entre",
+      "en": "between"
+    },
+    {
+      "es": "delante de",
+      "en": "in front of"
+    },
+    {
+      "es": "detrás de",
+      "en": "behind"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "hay",
+      "en",
+      "sobre",
+      "debajo de",
+      "al lado de",
+      "entre"
+    ]
+  }
+}

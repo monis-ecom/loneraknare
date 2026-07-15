@@ -1,0 +1,356 @@
+{
+  "unit": {
+    "id": "es-a1-u14",
+    "title": "Ir + future",
+    "subtitle": "The verb ir and the near future (going to)",
+    "level": "A1",
+    "order": 14,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Talk about the future with one easy verb",
+    "intro": "<b>Ir</b> means “to go”. It’s short and irregular, but once you know it you can talk about <b>where</b> you go — and, best of all, about the <b>future</b>: “I’m going to eat” is just <b>ir + a + infinitive</b>. No new tense to learn.",
+    "sections": [
+      {
+        "tag": "conjugación",
+        "heading": "ir, conjugated",
+        "body": "Only six little forms — memorise them:",
+        "conj": [
+          [
+            "yo",
+            "voy"
+          ],
+          [
+            "tú",
+            "vas"
+          ],
+          [
+            "él/ella",
+            "va"
+          ],
+          [
+            "nosotros",
+            "vamos"
+          ],
+          [
+            "vosotros",
+            "vais"
+          ],
+          [
+            "ellos",
+            "van"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Yo <b>voy</b> a casa.",
+            "en": "I'm going home.",
+            "note": "yo → voy"
+          },
+          {
+            "es": "Nosotros <b>vamos</b> juntos.",
+            "en": "We're going together.",
+            "note": "nosotros → vamos"
+          }
+        ]
+      },
+      {
+        "tag": "lugar",
+        "heading": "ir + a + place",
+        "body": "To say where you go, use <b>ir + a</b>. Don’t drop the <b>a</b>. And remember: <b>a + el = al</b>:",
+        "conj": [
+          [
+            "a + el",
+            "al"
+          ],
+          [
+            "a + la",
+            "a la"
+          ],
+          [
+            "Voy a + Madrid",
+            "Voy a Madrid"
+          ],
+          [
+            "Voy a + el cine",
+            "Voy al cine"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Voy a</b> Madrid.",
+            "en": "I'm going to Madrid.",
+            "note": "always keep the a"
+          },
+          {
+            "es": "<b>Voy al</b> cine.",
+            "en": "I'm going to the cinema.",
+            "note": "a + el = al"
+          }
+        ]
+      },
+      {
+        "tag": "futuro",
+        "heading": "The near future: ir + a + infinitive",
+        "body": "This is the everyday way to talk about the future. Take <b>ir</b>, add <b>a</b>, then an <b>infinitive</b> (-ar/-er/-ir). It means “going to…”:",
+        "ex": [
+          {
+            "es": "<b>Voy a comer</b>.",
+            "en": "I'm going to eat.",
+            "note": "voy + a + comer"
+          },
+          {
+            "es": "<b>Vamos a estudiar</b> esta noche.",
+            "en": "We're going to study tonight.",
+            "note": "vamos + a + infinitive"
+          },
+          {
+            "es": "Ella <b>va a viajar</b>.",
+            "en": "She's going to travel.",
+            "note": "never 'va a viaja'"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "ir: voy, vas, va, vamos, vais, van.",
+      "ir + a + place: Voy a Madrid (keep the a).",
+      "a + el = al: Voy al cine.",
+      "ir + a + infinitive = the near future: Voy a comer = I'm going to eat."
+    ],
+    "mistakes": [
+      {
+        "w": "Voy Madrid.",
+        "r": "Voy a Madrid.",
+        "why": "After ir you need the preposition a."
+      },
+      {
+        "w": "Voy a el cine.",
+        "r": "Voy al cine.",
+        "why": "a + el always contract to al."
+      },
+      {
+        "w": "Voy a como.",
+        "r": "Voy a comer.",
+        "why": "Use the infinitive after 'a', not a conjugated verb."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Yo ___ a la playa.",
+      "prompt_en": "I'm going to the beach.",
+      "options": [
+        {
+          "id": "a",
+          "text": "voy"
+        },
+        {
+          "id": "b",
+          "text": "vas"
+        },
+        {
+          "id": "c",
+          "text": "va"
+        },
+        {
+          "id": "d",
+          "text": "van"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! yo → voy.",
+      "no": "yo → “voy”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Esta noche ___ a estudiar.",
+      "prompt_en": "Tonight we're going to study.",
+      "options": [
+        {
+          "id": "a",
+          "text": "vamos"
+        },
+        {
+          "id": "b",
+          "text": "vais"
+        },
+        {
+          "id": "c",
+          "text": "van"
+        },
+        {
+          "id": "d",
+          "text": "voy"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! nosotros → vamos a estudiar.",
+      "no": "nosotros → “vamos a estudiar”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I'm going to eat now.”",
+      "tokens": [
+        "Voy",
+        "a",
+        "comer",
+        "ahora",
+        "como",
+        "vas"
+      ],
+      "answer": [
+        "Voy",
+        "a",
+        "comer",
+        "ahora"
+      ],
+      "ok": "¡Perfecto! ir + a + infinitivo → voy a comer.",
+      "no": "“Voy a comer ahora” — use the infinitive after 'a'."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Voy ___ cine con Ana.",
+      "prompt_en": "I'm going to the cinema with Ana.",
+      "accepted": [
+        "al"
+      ],
+      "ignore_accents": true,
+      "hint": "a + el = ?",
+      "ok": "¡Bien! a + el = al.",
+      "no": "a + el contract to “al”: Voy al cine."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each subject to the correct form of IR.",
+      "pairs": [
+        [
+          "yo",
+          "voy"
+        ],
+        [
+          "tú",
+          "vas"
+        ],
+        [
+          "nosotros",
+          "vamos"
+        ],
+        [
+          "ellos",
+          "van"
+        ]
+      ],
+      "ok": "¡Excelente! You’ve got ir locked in.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Mañana voy a trabajar.",
+      "accepted": [
+        "manana voy a trabajar"
+      ],
+      "ignore_accents": true,
+      "translation": "Tomorrow I'm going to work.",
+      "ok": "¡Correcto! “Mañana voy a trabajar.”",
+      "no": "It was: “Mañana voy a trabajar.” (Tomorrow I'm going to work.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Making plans for the weekend 🗓️",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Qué vas a hacer el sábado?",
+          "en": "What are you going to do on Saturday?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Voy a visitar a mi familia."
+        },
+        {
+          "id": "b",
+          "text": "Voy familia."
+        },
+        {
+          "id": "c",
+          "text": "Voy a visito a mi familia."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! ir + a + infinitivo.",
+      "no": "Use ir + a + infinitive: “Voy a visitar a mi familia.” (I'm going to visit my family.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "el cine",
+      "en": "the cinema",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "ir",
+      "en": "to go"
+    },
+    {
+      "es": "voy",
+      "en": "I go / I'm going"
+    },
+    {
+      "es": "vamos",
+      "en": "we go / let's go"
+    },
+    {
+      "es": "al",
+      "en": "to the (a + el)"
+    },
+    {
+      "es": "ir a",
+      "en": "to be going to"
+    },
+    {
+      "es": "mañana",
+      "en": "tomorrow"
+    },
+    {
+      "es": "el cine",
+      "en": "the cinema"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "ir",
+      "voy",
+      "vamos",
+      "al",
+      "ir a"
+    ]
+  }
+}

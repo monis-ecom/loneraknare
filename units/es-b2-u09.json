@@ -1,0 +1,359 @@
+{
+  "unit": {
+    "id": "es-b2-u09",
+    "title": "Verbal periphrases",
+    "subtitle": "acabar de, volver a, dejar de, ponerse a, llevar + gerundio, seguir",
+    "level": "B2",
+    "order": 9,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Little verb combos that make you sound fluent",
+    "intro": "A <b>perífrasis verbal</b> is a small team of verbs — an auxiliary + an infinitive or gerund — that expresses <b>when</b>, <b>how</b> or <b>how long</b> an action happens. They're the shortcuts native speakers reach for constantly: “I've just arrived”, “I've been waiting an hour”, “it started to rain”. Learn the pattern each one takes and your Spanish jumps forward.",
+    "sections": [
+      {
+        "tag": "acabar / volver / dejar",
+        "heading": "acabar de, volver a, dejar de + infinitive",
+        "body": "These three all take the <b>infinitive</b>. <b>Acabar de</b> = to have just done. <b>Volver a</b> = to do again. <b>Dejar de</b> = to stop doing.",
+        "conj": [
+          [
+            "I have just arrived",
+            "acabo de llegar"
+          ],
+          [
+            "I called again",
+            "volví a llamar"
+          ],
+          [
+            "I stopped smoking",
+            "dejé de fumar"
+          ],
+          [
+            "he has just eaten",
+            "acaba de comer"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Acabo de llegar</b> a casa.",
+            "en": "I've just arrived home.",
+            "note": "acabar de + infinitive"
+          },
+          {
+            "es": "<b>Dejé de fumar</b> hace un año.",
+            "en": "I stopped smoking a year ago.",
+            "note": "dejar de + infinitive"
+          }
+        ]
+      },
+      {
+        "tag": "ponerse / estar a punto",
+        "heading": "ponerse a and estar a punto de + infinitive",
+        "body": "<b>Ponerse a</b> + infinitive = to <b>start suddenly</b>. <b>Estar a punto de</b> + infinitive = to be <b>about to</b>, right on the edge of doing it.",
+        "conj": [
+          [
+            "it started to rain",
+            "se puso a llover"
+          ],
+          [
+            "she started to cry",
+            "se puso a llorar"
+          ],
+          [
+            "he's about to leave",
+            "está a punto de salir"
+          ],
+          [
+            "I'm about to finish",
+            "estoy a punto de terminar"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "De repente <b>se puso a llover</b>.",
+            "en": "Suddenly it started to rain.",
+            "note": "ponerse a — sudden start"
+          },
+          {
+            "es": "El tren <b>está a punto de salir</b>.",
+            "en": "The train is about to leave.",
+            "note": "estar a punto de + infinitive"
+          }
+        ]
+      },
+      {
+        "tag": "llevar / seguir + gerundio",
+        "heading": "llevar and seguir + gerund (duration)",
+        "body": "These take the <b>gerundio</b> (-ando/-iendo). <b>Llevar</b> + time + gerund = how long you've been doing something (use this, not <b>hace</b>, for ongoing duration). <b>Seguir</b> + gerund = to keep on doing.",
+        "conj": [
+          [
+            "I've been studying for two years",
+            "llevo dos años estudiando"
+          ],
+          [
+            "I've been waiting an hour",
+            "llevo una hora esperando"
+          ],
+          [
+            "I'm still working",
+            "sigo trabajando"
+          ],
+          [
+            "she keeps living there",
+            "sigue viviendo allí"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Llevo dos años estudiando</b> español.",
+            "en": "I've been studying Spanish for two years.",
+            "note": "llevar + time + gerundio"
+          },
+          {
+            "es": "Aunque es tarde, <b>sigo trabajando</b>.",
+            "en": "Even though it's late, I'm still working.",
+            "note": "seguir + gerundio"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Infinitive combos: acabar de (have just), volver a (again), dejar de (stop), ponerse a (start suddenly), estar a punto de (about to).",
+      "Acabo de llegar = I've just arrived; volví a llamar = I called again; dejé de fumar = I stopped smoking.",
+      "Duration takes the gerundio: llevo una hora esperando — use llevar, not hace, for ongoing duration.",
+      "seguir + gerundio = to keep doing: sigo trabajando."
+    ],
+    "mistakes": [
+      {
+        "w": "Llevo dos años estudio español.",
+        "r": "Llevo dos años estudiando español.",
+        "why": "Llevar for duration takes the gerundio (estudiando), not a conjugated verb."
+      },
+      {
+        "w": "Hace una hora esperando.",
+        "r": "Llevo una hora esperando.",
+        "why": "For ongoing duration with a gerund, use llevar, not hace."
+      },
+      {
+        "w": "Acabo de llegando.",
+        "r": "Acabo de llegar.",
+        "why": "Acabar de takes the infinitive, not the gerundio."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No te preocupes, ___ comer. Ya no tengo hambre.",
+      "prompt_en": "Don't worry, I've just eaten. I'm not hungry anymore.",
+      "options": [
+        {
+          "id": "a",
+          "text": "acabo de"
+        },
+        {
+          "id": "b",
+          "text": "vuelvo a"
+        },
+        {
+          "id": "c",
+          "text": "dejo de"
+        },
+        {
+          "id": "d",
+          "text": "llevo"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Acción recién hecha → acabar de.",
+      "no": "'To have just done' → “acabo de comer”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ una hora esperando el autobús.",
+      "prompt_en": "I've been waiting for the bus for an hour.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hace"
+        },
+        {
+          "id": "b",
+          "text": "Llevo"
+        },
+        {
+          "id": "c",
+          "text": "Acabo"
+        },
+        {
+          "id": "d",
+          "text": "Vuelvo"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! Duración con gerundio → llevar.",
+      "no": "For ongoing duration + gerund, use llevar: “Llevo una hora esperando”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I've been studying Spanish for two years.”",
+      "tokens": [
+        "Llevo",
+        "dos",
+        "años",
+        "estudiando",
+        "español",
+        "estudio",
+        "hace"
+      ],
+      "answer": [
+        "Llevo",
+        "dos",
+        "años",
+        "estudiando",
+        "español"
+      ],
+      "ok": "¡Perfecto! llevar + tiempo + gerundio.",
+      "no": "Duration takes llevar + gerundio → “Llevo dos años estudiando español”."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "De repente se ___ a llover. (ponerse, él/ello)",
+      "prompt_en": "Suddenly it started to rain.",
+      "accepted": [
+        "puso"
+      ],
+      "ignore_accents": true,
+      "hint": "ponerse a + infinitive — a sudden start, in the past",
+      "ok": "¡Bien! Inicio repentino → se puso a llover.",
+      "no": "A sudden start → “se puso a llover”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each periphrasis to its meaning.",
+      "pairs": [
+        [
+          "acabar de",
+          "to have just"
+        ],
+        [
+          "volver a",
+          "to do again"
+        ],
+        [
+          "dejar de",
+          "to stop doing"
+        ],
+        [
+          "seguir + gerundio",
+          "to keep doing"
+        ]
+      ],
+      "ok": "¡Excelente! You've matched every combo.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "El tren está a punto de salir.",
+      "accepted": [
+        "el tren esta a punto de salir"
+      ],
+      "ignore_accents": true,
+      "translation": "The train is about to leave.",
+      "ok": "¡Correcto! “El tren está a punto de salir.”",
+      "no": "It was: “El tren está a punto de salir.” (The train is about to leave.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend calls while you're busy 📞",
+      "lines": [
+        {
+          "speaker": "Carmen",
+          "es": "¿Sigues en la oficina? ¡Es tardísimo!",
+          "en": "Are you still at the office? It's really late!"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, llevo tres horas trabajando y sigo aquí."
+        },
+        {
+          "id": "b",
+          "text": "Sí, hace tres horas trabajando y sigo aquí."
+        },
+        {
+          "id": "c",
+          "text": "Sí, llevo tres horas trabajo y sigo aquí."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! llevar + tiempo + gerundio, natural y correcto.",
+      "no": "Duration = llevar + gerundio → “llevo tres horas trabajando”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Acabo de llegar y llevo diez minutos esperando",
+      "en": "I've just arrived and I've been waiting ten minutes",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "acabar de",
+      "en": "to have just (done something)"
+    },
+    {
+      "es": "volver a",
+      "en": "to do (something) again"
+    },
+    {
+      "es": "dejar de",
+      "en": "to stop (doing something)"
+    },
+    {
+      "es": "llevar + gerundio",
+      "en": "to have been doing (for X time)"
+    },
+    {
+      "es": "ponerse a",
+      "en": "to start (doing) suddenly"
+    },
+    {
+      "es": "estar a punto de",
+      "en": "to be about to"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "acabar de",
+      "volver a",
+      "dejar de",
+      "llevar + gerundio",
+      "ponerse a"
+    ]
+  }
+}

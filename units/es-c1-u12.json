@@ -1,0 +1,181 @@
+{
+  "unit": { "id": "es-c1-u12", "title": "Emphatic Word Order", "subtitle": "Fronting, topicalization and dislocation", "level": "C1", "order": 12, "xp_reward": 20 },
+  "grammar": {
+    "title": "Move words to shift the emphasis",
+    "intro": "Spanish word order is flexible, and advanced speakers exploit that to shift emphasis away from neutral subject–verb–object. You can <b>front</b> an object (<b>El pan lo compré yo</b>), lift a <b>topic</b> to the front (<b>De dinero, no hablemos</b>) or front an adjective (<b>Muy interesante fue la charla</b>). The one hard rule: when you front a direct object, a matching <b>clitic pronoun</b> must stay behind.",
+    "sections": [
+      {
+        "tag": "dislocación",
+        "heading": "Front the object, keep a clitic",
+        "body": "You may move the direct object to the front for emphasis, but a matching <b>clitic pronoun</b> must remain in its usual place: <b>El pan lo compré yo</b> (The bread, I bought). Drop the clitic and the sentence is ungrammatical for native ears.",
+        "ex": [
+          { "es": "<b>El pan lo</b> compré yo.", "en": "The bread, I bought (it).", "note": "lo doubles the fronted object" },
+          { "es": "<b>Esa película ya la</b> he visto.", "en": "That film, I've already seen (it).", "note": "la agrees with película" }
+        ]
+      },
+      {
+        "tag": "el clítico",
+        "heading": "The clitic must agree",
+        "body": "Pick the clitic that matches the fronted object in gender and number — <b>lo, la, los, las</b>. When the object is a specific person it keeps its <b>personal a</b> as well: <b>A María la vi ayer</b> (María, I saw yesterday). Standard usage uses <b>la/lo</b>, not <i>le</i>, for the direct object.",
+        "conj": [
+          ["el pan → lo", "masculine singular"],
+          ["la carta → la", "feminine singular"],
+          ["los libros → los", "masculine plural"],
+          ["a María → la", "personal a + la"]
+        ],
+        "ex": [
+          { "es": "<b>A tus padres los</b> llamé anoche.", "en": "Your parents, I called (them) last night.", "note": "a + los" },
+          { "es": "<b>Las llaves las</b> dejé en casa.", "en": "The keys, I left (them) at home.", "note": "las agrees with llaves" }
+        ]
+      },
+      {
+        "tag": "tematización",
+        "heading": "Topic first, comment after",
+        "body": "You can lift a whole theme to the front — often after a preposition — and then comment on it: <b>De dinero, no hablemos</b> (As for money, let's not talk about it). Markers like <b>en cuanto a</b> and <b>por lo que respecta a</b> announce the topic before the sentence proper.",
+        "ex": [
+          { "es": "<b>De política,</b> mejor no hablar.", "en": "As for politics, better not to talk.", "note": "topic fronting" },
+          { "es": "<b>En cuanto a</b> Juan, ya veremos.", "en": "As for Juan, we'll see.", "note": "topic marker" }
+        ]
+      },
+      {
+        "tag": "orden marcado",
+        "heading": "Fronting adjectives, adverbs & afterthoughts",
+        "body": "Moving an <b>adjective</b> or <b>adverb</b> to the front adds emphasis or a literary tone: <b>Muy interesante fue la charla</b> (Very interesting was the talk). <b>Right-dislocation</b> instead tacks a clarifying element onto the end: <b>Ya lo sabía, lo del despido</b>.",
+        "ex": [
+          { "es": "<b>Muy interesante fue</b> la charla.", "en": "Very interesting was the talk.", "note": "fronted adjective + ser" },
+          { "es": "Ya <b>lo</b> sabía, <b>lo del</b> despido.", "en": "I already knew — about the layoff.", "note": "right dislocation clarifies lo" }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Front a direct object and you must add a matching clitic: El pan lo compré yo.",
+      "The clitic agrees in gender and number: lo, la, los, las.",
+      "A specific-person object keeps its personal a: A María la vi.",
+      "Topicalization (De dinero, no hablemos) and fronted adjectives (Muy interesante fue…) mark emphasis."
+    ],
+    "mistakes": [
+      { "w": "El pan compré yo.", "r": "El pan lo compré yo.", "why": "A fronted direct object requires a resumptive clitic: lo." },
+      { "w": "A María vi ayer.", "r": "A María la vi ayer.", "why": "A fronted personal object still needs its clitic: la." },
+      { "w": "Las llaves los dejé en casa.", "r": "Las llaves las dejé en casa.", "why": "The clitic must agree with llaves (feminine plural): las, not los." }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El pan ___ compré yo.",
+      "prompt_en": "The bread, I bought (it).",
+      "options": [
+        { "id": "a", "text": "lo" },
+        { "id": "b", "text": "le" },
+        { "id": "c", "text": "la" },
+        { "id": "d", "text": "los" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! El pan (masc. sing.) → lo.",
+      "no": "The fronted object el pan needs the matching clitic lo."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "A María ___ vi ayer.",
+      "prompt_en": "María, I saw (her) yesterday.",
+      "options": [
+        { "id": "a", "text": "la" },
+        { "id": "b", "text": "le" },
+        { "id": "c", "text": "lo" },
+        { "id": "d", "text": "se" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Objeto directo femenino → la.",
+      "no": "The direct-object clitic for María is la (standard usage avoids leísmo 'le')."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “The keys, I left at home.”",
+      "tokens": ["Las", "llaves", "las", "dejé", "en", "casa", "los", "dejaron"],
+      "answer": ["Las", "llaves", "las", "dejé", "en", "casa"],
+      "ok": "¡Perfecto! Las llaves las dejé — clitic agrees.",
+      "no": "“Las llaves las dejé en casa” — the clitic las doubles the fronted object."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "A tus padres ___ llamé anoche.",
+      "prompt_en": "Your parents, I called (them) last night.",
+      "accepted": ["los"],
+      "ignore_accents": true,
+      "hint": "Clitic agreeing with a masculine-plural person.",
+      "ok": "¡Bien! A tus padres → los.",
+      "no": "The fronted object needs the clitic los: “A tus padres los llamé”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each fronted object to its clitic.",
+      "pairs": [
+        ["el pan", "lo"],
+        ["la carta", "la"],
+        ["los libros", "los"],
+        ["las llaves", "las"]
+      ],
+      "ok": "¡Excelente! La concordancia del clítico, dominada.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "De dinero, no hablemos.",
+      "accepted": ["de dinero no hablemos"],
+      "ignore_accents": true,
+      "translation": "As for money, let's not talk about it.",
+      "ok": "¡Correcto! “De dinero, no hablemos.”",
+      "no": "It was: “De dinero, no hablemos.” (As for money, let's not talk about it.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Sorting out who bought the bread 🥖",
+      "lines": [
+        { "speaker": "Sofía", "es": "¿Compraste tú el pan o lo compró Marcos?", "en": "Did you buy the bread, or did Marcos buy it?" },
+        { "speaker": "You", "blank": true }
+      ],
+      "options": [
+        { "id": "a", "text": "El pan lo compré yo." },
+        { "id": "b", "text": "El pan compré yo." },
+        { "id": "c", "text": "El pan le compré yo." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! El pan lo compré yo — clitic kept.",
+      "no": "A fronted object needs its clitic: “El pan lo compré yo”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "A María la vi ayer.",
+      "en": "María, I saw yesterday.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “A María la vi ayer.”"
+    }
+  ],
+  "vocab": [
+    { "es": "el pan lo compré yo", "en": "the bread, I bought (it)" },
+    { "es": "a María la vi", "en": "María, I saw (her)" },
+    { "es": "las llaves las dejé", "en": "the keys, I left (them)" },
+    { "es": "de dinero, no hablemos", "en": "as for money, let's not talk" },
+    { "es": "en cuanto a", "en": "as for / regarding" },
+    { "es": "muy interesante fue", "en": "very interesting was" },
+    { "es": "ya lo sabía", "en": "I already knew (it)" }
+  ],
+  "completion": { "xp_on_complete": 20, "adds_vocab_to_srs": ["el pan lo compré yo", "a María la vi", "de dinero, no hablemos", "en cuanto a", "ya lo sabía"] }
+}

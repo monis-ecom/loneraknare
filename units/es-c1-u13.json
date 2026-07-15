@@ -1,0 +1,239 @@
+{
+  "unit": {
+    "id": "es-c1-u13",
+    "title": "Ser vs. Estar — the meaning shift",
+    "subtitle": "Adjectives that change meaning with ser or estar",
+    "level": "C1",
+    "order": 13,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Same adjective, two completely different meanings",
+    "intro": "At C1 the ser/estar contrast stops being about ‘permanent vs. temporary’ and becomes <b>lexical</b>: many adjectives literally change meaning depending on the verb. <b>Ser listo</b> means clever, but <b>estar listo</b> means ready; <b>ser rico</b> means wealthy, but <b>estar rico</b> means tasty. Getting these wrong is one of the clearest tells of a non-native speaker.",
+    "sections": [
+      {
+        "tag": "matiz",
+        "heading": "The classic meaning-shift adjectives",
+        "body": "With these adjectives, <b>ser</b> marks an inherent trait or identity, while <b>estar</b> marks a condition, state or perception. The English translation changes completely:",
+        "conj": [
+          ["ser listo", "to be clever"],
+          ["estar listo", "to be ready"],
+          ["ser aburrido", "to be boring"],
+          ["estar aburrido", "to be bored"],
+          ["ser rico", "to be wealthy"],
+          ["estar rico", "to be tasty"],
+          ["ser malo", "to be bad / evil"],
+          ["estar malo", "to be ill"]
+        ],
+        "ex": [
+          {
+            "es": "Juan <b>es</b> muy <b>listo</b>, pero todavía no <b>está listo</b>.",
+            "en": "Juan is very clever, but he isn't ready yet.",
+            "note": "trait (ser) vs. state (estar)"
+          },
+          {
+            "es": "La tarta <b>está riquísima</b>, aunque su familia <b>es rica</b>.",
+            "en": "The cake is delicious, though his family is wealthy.",
+            "note": "estar = tasty, ser = wealthy"
+          }
+        ]
+      },
+      {
+        "tag": "más matices",
+        "heading": "More pairs that trip people up",
+        "body": "The same logic runs through a whole set of adjectives. Note that <b>estar bueno</b> means tasty (and, colloquially, good-looking), never simply ‘to be a good person’:",
+        "conj": [
+          ["ser verde", "to be inexperienced / green"],
+          ["estar verde", "to be unripe / not ready"],
+          ["ser vivo", "to be sharp, quick-witted"],
+          ["estar vivo", "to be alive"],
+          ["ser orgulloso", "to be arrogant (trait)"],
+          ["estar orgulloso", "to be proud (of something)"],
+          ["ser bueno", "to be good / kind"],
+          ["estar bueno", "to be tasty / good-looking"]
+        ],
+        "ex": [
+          {
+            "es": "Todavía <b>está verde</b> para dirigir el proyecto.",
+            "en": "He's still too green to lead the project.",
+            "note": "estar verde = not ready / inexperienced"
+          },
+          {
+            "es": "<b>Estoy orgulloso</b> de ti, aunque él <b>es</b> muy <b>orgulloso</b>.",
+            "en": "I'm proud of you, though he is very arrogant.",
+            "note": "estar = feeling, ser = character trait"
+          }
+        ]
+      },
+      {
+        "tag": "participios",
+        "heading": "ser vs. estar + past participle",
+        "body": "With a past participle the contrast is aspectual: <b>ser + participle</b> is the true passive (it names the <b>action</b>, often with <b>por</b>), while <b>estar + participle</b> describes the <b>resulting state</b> after the action is over:",
+        "ex": [
+          {
+            "es": "La puerta <b>fue cerrada</b> por el guardia a las diez.",
+            "en": "The door was closed by the guard at ten.",
+            "note": "ser = passive, the action happening"
+          },
+          {
+            "es": "Cuando llegué, la puerta ya <b>estaba cerrada</b>.",
+            "en": "When I arrived, the door was already closed.",
+            "note": "estar = the resulting state"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Same adjective, different verb, different meaning: es listo (clever) vs. está listo (ready).",
+      "estar rico = tasty; ser rico = wealthy. estar malo = ill; ser malo = a bad person.",
+      "estar verde = unripe/not ready; ser verde = inexperienced. estar orgulloso = proud; ser orgulloso = arrogant.",
+      "ser + participle = the passive action (often + por); estar + participle = the resulting state."
+    ],
+    "mistakes": [
+      {
+        "w": "La comida es muy rica.",
+        "r": "La comida está muy rica.",
+        "why": "To say food tastes good, use estar: está rica. Ser rica here would mean the food is ‘wealthy’."
+      },
+      {
+        "w": "Hoy soy malo, no voy a trabajar.",
+        "r": "Hoy estoy malo, no voy a trabajar.",
+        "why": "To be ill is estar malo; ser malo means to be a bad or evil person."
+      },
+      {
+        "w": "Estoy muy orgulloso; nunca pide ayuda a nadie.",
+        "r": "Es muy orgulloso; nunca pide ayuda a nadie.",
+        "why": "As a permanent character trait (arrogant) use ser orgulloso; estar orgulloso means proud of something."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ese crío ___ listísimo: capta cualquier concepto al vuelo.",
+      "prompt_en": "That kid is really clever: he grasps any concept instantly.",
+      "options": [
+        { "id": "a", "text": "es" },
+        { "id": "b", "text": "está" },
+        { "id": "c", "text": "estaba" },
+        { "id": "d", "text": "haya" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Ser listo = ser inteligente.",
+      "no": "‘Clever’ as a trait is ser listo; está listo would mean he's ‘ready’."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "—¿Nos vamos ya? —Sí, ya ___ listo.",
+      "prompt_en": "—Shall we go now? —Yes, I'm ready now.",
+      "options": [
+        { "id": "a", "text": "estoy" },
+        { "id": "b", "text": "soy" },
+        { "id": "c", "text": "seré" },
+        { "id": "d", "text": "era" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Estar listo = preparado.",
+      "no": "‘Ready’ is estar listo; soy listo would mean ‘I'm clever’."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “This paella is delicious.”",
+      "tokens": ["Esta", "paella", "está", "riquísima", "es", "buenísima"],
+      "answer": ["Esta", "paella", "está", "riquísima"],
+      "ok": "¡Perfecto! Para el sabor, estar rico.",
+      "no": "For taste, use estar: “Esta paella está riquísima.”"
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "No vino a trabajar porque ___ malo toda la semana.",
+      "prompt_en": "He didn't come to work because he was ill all week.",
+      "accepted": ["estaba", "estuvo"],
+      "ignore_accents": true,
+      "hint": "‘To be ill’ = estar malo (past tense here).",
+      "ok": "¡Bien! Estar malo = estar enfermo.",
+      "no": "‘To be ill’ is estar malo → estaba malo. Ser malo would mean ‘evil’."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each expression to its meaning.",
+      "pairs": [
+        ["ser rico", "to be wealthy"],
+        ["estar rico", "to be tasty"],
+        ["ser aburrido", "to be boring"],
+        ["estar aburrido", "to be bored"]
+      ],
+      "ok": "¡Excelente! El matiz ser/estar, dominado.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "El plátano todavía está verde.",
+      "accepted": ["el platano todavia esta verde"],
+      "ignore_accents": true,
+      "translation": "The banana is still unripe.",
+      "ok": "¡Correcto! “El plátano todavía está verde.”",
+      "no": "It was: “El plátano todavía está verde.” (still unripe → estar verde)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend tells you she passed a tough civil-service exam 🎓",
+      "lines": [
+        {
+          "speaker": "Lucía",
+          "es": "¡Al final aprobé las oposiciones!",
+          "en": "I finally passed the civil-service exam!"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "¡Enhorabuena! Estoy muy orgulloso de ti." },
+        { "id": "b", "text": "¡Enhorabuena! Soy muy orgulloso de ti." },
+        { "id": "c", "text": "¡Enhorabuena! Estoy muy aburrido de ti." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Estar orgulloso de alguien = feeling proud.",
+      "no": "To feel proud of someone is estar orgulloso; ser orgulloso means arrogant."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "No vino porque estaba malo.",
+      "en": "He didn't come because he was ill.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “No vino porque estaba malo.”"
+    }
+  ],
+  "vocab": [
+    { "es": "ser listo", "en": "to be clever" },
+    { "es": "estar listo", "en": "to be ready" },
+    { "es": "estar rico", "en": "to be tasty (food)" },
+    { "es": "estar malo", "en": "to be ill" },
+    { "es": "estar verde", "en": "to be unripe / not ready" },
+    { "es": "estar orgulloso", "en": "to be proud (of something)" },
+    { "es": "ser orgulloso", "en": "to be arrogant" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["ser listo", "estar listo", "estar rico", "estar malo", "estar verde"]
+  }
+}

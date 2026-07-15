@@ -1,0 +1,237 @@
+{
+  "unit": {
+    "id": "es-c1-u14",
+    "title": "Aspectual verbal periphrases",
+    "subtitle": "venir, andar, ir, llevar + gerund and result periphrases",
+    "level": "C1",
+    "order": 14,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The nuance a helper verb adds to the gerund",
+    "intro": "Spanish loads huge amounts of <b>aspect</b> onto simple gerund periphrases. <b>Llevo dos horas esperando</b> tells you how long; <b>vengo diciéndolo</b> tells you it's been building up for a while; <b>voy entendiendo</b> tells you it's happening gradually; <b>anda buscando trabajo</b> tells you it's scattered and repeated. Choosing the right auxiliary is pure C1 finesse.",
+    "sections": [
+      {
+        "tag": "duración",
+        "heading": "How long, and building up: llevar / venir + gerund",
+        "body": "<b>Llevar + gerund</b> measures the <b>duration</b> of an ongoing action up to now — it replaces ‘have been -ing for’. <b>Venir + gerund</b> stresses that the action has been <b>accumulating from the past</b> toward the present:",
+        "conj": [
+          ["Llevo tres años estudiándolo", "I've been studying it for three years"],
+          ["¿Cuánto llevas esperando?", "How long have you been waiting?"],
+          ["Te lo vengo diciendo hace tiempo", "I've been telling you for a while"],
+          ["El problema viene arrastrándose", "The problem has been dragging on"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Llevo</b> dos horas <b>esperando</b> el tren.",
+            "en": "I've been waiting for the train for two hours.",
+            "note": "llevar + gerund = duration so far"
+          },
+          {
+            "es": "Te lo <b>vengo diciendo</b> desde hace meses.",
+            "en": "I've been telling you this for months.",
+            "note": "venir + gerund = accumulated from the past"
+          }
+        ]
+      },
+      {
+        "tag": "progresión",
+        "heading": "Gradual vs. scattered: ir / andar + gerund",
+        "body": "<b>Ir + gerund</b> marks a <b>gradual, step-by-step</b> change — progress unfolding little by little. <b>Andar + gerund</b> marks a <b>repeated or scattered</b> activity, often with a mildly critical or dismissive tone:",
+        "conj": [
+          ["Voy entendiendo el subjuntivo", "I'm gradually getting the subjunctive"],
+          ["Ve apagando las luces", "Start turning off the lights (one by one)"],
+          ["Anda buscando piso", "He's going around looking for a flat"],
+          ["Anda diciendo tonterías", "He goes around talking nonsense"]
+        ],
+        "ex": [
+          {
+            "es": "Poco a poco <b>voy entendiendo</b> el subjuntivo.",
+            "en": "Little by little I'm coming to understand the subjunctive.",
+            "note": "ir + gerund = gradual progress"
+          },
+          {
+            "es": "Últimamente <b>anda buscando</b> trabajo por todas partes.",
+            "en": "Lately he's been going around looking for work everywhere.",
+            "note": "andar + gerund = scattered, repeated"
+          }
+        ]
+      },
+      {
+        "tag": "resultado",
+        "heading": "Accumulated result: tener / ir + participle, acabar + gerund",
+        "body": "<b>Tener + participle</b> and <b>ir + participle</b> express an <b>accumulated result</b> — and the participle <b>agrees</b> with the object (tengo escrit<b>as</b> tres cartas). <b>Acabar/terminar + gerund</b> means ‘to end up doing’, and <b>dar por + participle</b> means ‘to consider something done’:",
+        "conj": [
+          ["Tengo escritas tres cartas", "I've got three letters written"],
+          ["Van vendidas cien entradas", "A hundred tickets sold so far"],
+          ["Acabó aceptando la oferta", "He ended up accepting the offer"],
+          ["Doy por hecho que vendrás", "I take it for granted you'll come"]
+        ],
+        "ex": [
+          {
+            "es": "Ya <b>tengo escritas</b> tres cartas.",
+            "en": "I've already got three letters written.",
+            "note": "participle agrees: escritas (fem. pl.)"
+          },
+          {
+            "es": "Tras mucho dudar, <b>acabó aceptando</b> la oferta.",
+            "en": "After much hesitation, he ended up accepting the offer.",
+            "note": "acabar + gerund = to end up doing"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "llevar + gerund = how long something has been going on: Llevo dos horas esperando.",
+      "venir + gerund = a process built up from the past; ir + gerund = gradual, step-by-step change.",
+      "andar + gerund = a repeated or scattered action, often with a critical tone.",
+      "tener/ir + participle = accumulated result (participle agrees); acabar + gerund = to end up doing; dar por + participle = to consider it done."
+    ],
+    "mistakes": [
+      {
+        "w": "Llevo esperar dos horas.",
+        "r": "Llevo dos horas esperando.",
+        "why": "In this durative sense llevar takes a gerund (esperando), not an infinitive."
+      },
+      {
+        "w": "Tengo escrito tres cartas.",
+        "r": "Tengo escritas tres cartas.",
+        "why": "With tener + participle the participle agrees with the object: cartas → escritas (fem. plural)."
+      },
+      {
+        "w": "Acabó a aceptar la oferta.",
+        "r": "Acabó aceptando la oferta.",
+        "why": "‘To end up doing’ is acabar + gerund (aceptando), never acabar a + infinitive."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ dos horas esperando el autobús y no llega.",
+      "prompt_en": "I've been waiting for the bus for two hours and it isn't coming.",
+      "options": [
+        { "id": "a", "text": "Llevo" },
+        { "id": "b", "text": "Vengo" },
+        { "id": "c", "text": "Ando" },
+        { "id": "d", "text": "Voy" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Para la duración, llevar + gerundio.",
+      "no": "Duration up to now uses llevar + gerund: “Llevo dos horas esperando.”"
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Te lo ___ diciendo desde hace meses; deberías hacerme caso.",
+      "prompt_en": "I've been telling you this for months; you should listen to me.",
+      "options": [
+        { "id": "a", "text": "vengo" },
+        { "id": "b", "text": "digo" },
+        { "id": "c", "text": "diré" },
+        { "id": "d", "text": "he dicho" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Venir + gerundio = algo que se acumula desde el pasado.",
+      "no": "For something built up over months, use venir + gerund: “te lo vengo diciendo”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I've got three letters written.”",
+      "tokens": ["Tengo", "escritas", "tres", "cartas", "escrito", "tienen"],
+      "answer": ["Tengo", "escritas", "tres", "cartas"],
+      "ok": "¡Perfecto! El participio concuerda: escritas.",
+      "no": "The participle agrees with cartas: “Tengo escritas tres cartas.”"
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Poco a poco ___ entendiendo el subjuntivo.",
+      "prompt_en": "Little by little I'm coming to understand the subjunctive.",
+      "accepted": ["voy"],
+      "ignore_accents": true,
+      "hint": "Gradual progress → ir + gerund.",
+      "ok": "¡Bien! Ir + gerundio = progreso gradual.",
+      "no": "Gradual progress uses ir + gerund: “voy entendiendo”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each periphrasis to the nuance it adds.",
+      "pairs": [
+        ["llevar + gerundio", "duration so far"],
+        ["ir + gerundio", "gradual change"],
+        ["andar + gerundio", "repeated / scattered"],
+        ["acabar + gerundio", "to end up doing"]
+      ],
+      "ok": "¡Excelente! Los matices aspectuales, dominados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Anda buscando piso por el centro.",
+      "accepted": ["anda buscando piso por el centro"],
+      "ignore_accents": true,
+      "translation": "He's going around looking for a flat downtown.",
+      "ok": "¡Correcto! “Anda buscando piso por el centro.”",
+      "no": "It was: “Anda buscando piso por el centro.” (andar + gerund = scattered)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "You ask a colleague how a friend's job offer turned out 💼",
+      "lines": [
+        {
+          "speaker": "Marcos",
+          "es": "Oye, ¿al final qué hizo Ana con la oferta de trabajo?",
+          "en": "Hey, what did Ana finally do about the job offer?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Al final acabó aceptándola." },
+        { "id": "b", "text": "Al final acabó a aceptarla." },
+        { "id": "c", "text": "Al final lleva aceptándola." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Acabar + gerundio = to end up doing.",
+      "no": "‘Ended up accepting it’ is acabar + gerund: “acabó aceptándola”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Llevo media hora buscando las llaves.",
+      "en": "I've been looking for the keys for half an hour.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Llevo media hora buscando las llaves.”"
+    }
+  ],
+  "vocab": [
+    { "es": "llevar + gerundio", "en": "to have been (doing) for [time]" },
+    { "es": "venir + gerundio", "en": "to have been (doing) — accumulating from the past" },
+    { "es": "ir + gerundio", "en": "to gradually (do), little by little" },
+    { "es": "andar + gerundio", "en": "to go around (doing), repeatedly" },
+    { "es": "tener + participio", "en": "to have (things) done — accumulated result" },
+    { "es": "acabar + gerundio", "en": "to end up (doing)" },
+    { "es": "dar por hecho", "en": "to take for granted" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["llevar + gerundio", "venir + gerundio", "ir + gerundio", "andar + gerundio", "acabar + gerundio"]
+  }
+}

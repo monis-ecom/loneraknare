@@ -1,0 +1,345 @@
+{
+  "unit": {
+    "id": "es-a2-u07",
+    "title": "Comparatives",
+    "subtitle": "More than, less than, and as… as",
+    "level": "A2",
+    "order": 7,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Compare anything: taller, cheaper, as fast as",
+    "intro": "To compare two things in Spanish you slot an adjective into a fixed frame: <b>más … que</b> (more than), <b>menos … que</b> (less than), or <b>tan … como</b> (as … as). A few common adjectives break the pattern with their own words: <b>mejor</b>, <b>peor</b>, <b>mayor</b>, <b>menor</b>.",
+    "sections": [
+      {
+        "tag": "superioridad",
+        "heading": "More than: más + adjective + que",
+        "body": "Put the adjective between <b>más</b> and <b>que</b>. The adjective still agrees with the first thing:",
+        "conj": [
+          ["more … than", "más … que"],
+          ["taller than", "más alto que"],
+          ["more expensive than", "más caro que"]
+        ],
+        "ex": [
+          {
+            "es": "Ana es <b>más alta que</b> Luis.",
+            "en": "Ana is taller than Luis.",
+            "note": "alta agrees with Ana"
+          },
+          {
+            "es": "El tren es <b>más rápido que</b> el bus.",
+            "en": "The train is faster than the bus.",
+            "note": "más + adj + que"
+          }
+        ]
+      },
+      {
+        "tag": "inferioridad",
+        "heading": "Less than: menos + adjective + que",
+        "body": "Same frame, but with <b>menos</b> to say something has less of a quality:",
+        "ex": [
+          {
+            "es": "Este coche es <b>menos caro que</b> el otro.",
+            "en": "This car is less expensive than the other.",
+            "note": "menos + adj + que"
+          },
+          {
+            "es": "Hoy estoy <b>menos cansada que</b> ayer.",
+            "en": "Today I'm less tired than yesterday.",
+            "note": "cansada agrees with a woman"
+          }
+        ]
+      },
+      {
+        "tag": "igualdad",
+        "heading": "As … as: tan + adjective + como",
+        "body": "For equality use <b>tan … como</b> with an adjective. Careful: it's <b>como</b>, not <b>que</b>. For equal <b>quantities of a noun</b>, use <b>tanto/a/os/as … como</b>, agreeing with the noun:",
+        "conj": [
+          ["as … as (adj)", "tan … como"],
+          ["as much (money) as", "tanto dinero como"],
+          ["as many (books) as", "tantos libros como"]
+        ],
+        "ex": [
+          {
+            "es": "Luis es <b>tan alto como</b> Ana.",
+            "en": "Luis is as tall as Ana.",
+            "note": "tan + adj + como"
+          },
+          {
+            "es": "Tengo <b>tantos libros como</b> tú.",
+            "en": "I have as many books as you.",
+            "note": "tantos agrees with libros"
+          }
+        ]
+      },
+      {
+        "tag": "irregulares",
+        "heading": "Irregular comparatives",
+        "body": "Four adjectives have their own comparative word — don't say “más bueno” or “más malo”:",
+        "conj": [
+          ["better", "mejor"],
+          ["worse", "peor"],
+          ["older / bigger", "mayor"],
+          ["younger / smaller", "menor"]
+        ],
+        "ex": [
+          {
+            "es": "Este café es <b>mejor que</b> el otro.",
+            "en": "This coffee is better than the other.",
+            "note": "not 'más bueno'"
+          },
+          {
+            "es": "Mi hermano es <b>mayor que</b> yo.",
+            "en": "My brother is older than me.",
+            "note": "mayor = older"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "más + adjective + que = more … than.",
+      "menos + adjective + que = less … than.",
+      "tan + adjective + como = as … as (adjective).",
+      "tanto/a/os/as + noun + como = as much/many … as.",
+      "Irregulars: mejor, peor, mayor, menor — never 'más bueno'."
+    ],
+    "mistakes": [
+      {
+        "w": "Este vino es más bueno que el otro.",
+        "r": "Este vino es mejor que el otro.",
+        "why": "'bueno' has an irregular comparative: mejor, not 'más bueno'."
+      },
+      {
+        "w": "Ana es tan alta que Luis.",
+        "r": "Ana es tan alta como Luis.",
+        "why": "With 'tan' the second word is 'como', not 'que'."
+      },
+      {
+        "w": "Tengo tan libros como tú.",
+        "r": "Tengo tantos libros como tú.",
+        "why": "Before a noun use tanto/a/os/as (here tantos), not 'tan'."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ana es ___ alta ___ Luis.",
+      "prompt_en": "Ana is taller than Luis.",
+      "options": [
+        {
+          "id": "a",
+          "text": "más … que"
+        },
+        {
+          "id": "b",
+          "text": "tan … como"
+        },
+        {
+          "id": "c",
+          "text": "menos … como"
+        },
+        {
+          "id": "d",
+          "text": "más … como"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! más + adjetivo + que.",
+      "no": "For 'more than' use más … que: “más alta que”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Este café es ___ que el otro.",
+      "prompt_en": "This coffee is better than the other.",
+      "options": [
+        {
+          "id": "a",
+          "text": "más bueno"
+        },
+        {
+          "id": "b",
+          "text": "mejor"
+        },
+        {
+          "id": "c",
+          "text": "más mejor"
+        },
+        {
+          "id": "d",
+          "text": "tan bueno"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! bueno → mejor.",
+      "no": "'bueno' is irregular: use “mejor”, never 'más bueno'."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Luis is as tall as Ana.”",
+      "tokens": [
+        "Luis",
+        "es",
+        "tan",
+        "alto",
+        "como",
+        "Ana",
+        "que",
+        "más"
+      ],
+      "answer": [
+        "Luis",
+        "es",
+        "tan",
+        "alto",
+        "como",
+        "Ana"
+      ],
+      "ok": "¡Perfecto! tan + adjetivo + como.",
+      "no": "Equality uses tan … como: “Luis es tan alto como Ana.”"
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Mi hermano es ___ que yo. (older)",
+      "prompt_en": "My brother is older than me.",
+      "accepted": [
+        "mayor"
+      ],
+      "ignore_accents": true,
+      "hint": "Irregular comparative for 'older'.",
+      "ok": "¡Bien! mayor = older.",
+      "no": "Older → “mayor”: “Mi hermano es mayor que yo.”"
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each English comparative to its Spanish word.",
+      "pairs": [
+        [
+          "better",
+          "mejor"
+        ],
+        [
+          "worse",
+          "peor"
+        ],
+        [
+          "older",
+          "mayor"
+        ],
+        [
+          "younger",
+          "menor"
+        ]
+      ],
+      "ok": "¡Excelente! Irregulars locked in.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "El tren es más rápido que el autobús.",
+      "accepted": [
+        "el tren es mas rapido que el autobus"
+      ],
+      "ignore_accents": true,
+      "translation": "The train is faster than the bus.",
+      "ok": "¡Correcto! “El tren es más rápido que el autobús.”",
+      "no": "It was: “El tren es más rápido que el autobús.” (The train is faster than the bus.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Comparing two phones in a shop 📱",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "Este móvil cuesta más. ¿Es mejor?",
+          "en": "This phone costs more. Is it better?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, es mejor que el otro."
+        },
+        {
+          "id": "b",
+          "text": "Sí, es más bueno que el otro."
+        },
+        {
+          "id": "c",
+          "text": "Sí, es tan mejor que el otro."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! mejor que — natural and correct.",
+      "no": "Use the irregular “mejor que”: “Sí, es mejor que el otro.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "más alto que",
+      "en": "taller than",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "más… que",
+      "en": "more … than"
+    },
+    {
+      "es": "menos… que",
+      "en": "less … than"
+    },
+    {
+      "es": "tan… como",
+      "en": "as … as"
+    },
+    {
+      "es": "mejor",
+      "en": "better"
+    },
+    {
+      "es": "peor",
+      "en": "worse"
+    },
+    {
+      "es": "mayor",
+      "en": "older / bigger"
+    },
+    {
+      "es": "menor",
+      "en": "younger / smaller"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "más… que",
+      "menos… que",
+      "tan… como",
+      "mejor",
+      "peor"
+    ]
+  }
+}

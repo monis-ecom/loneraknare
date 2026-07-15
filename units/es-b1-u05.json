@@ -1,0 +1,314 @@
+{
+  "unit": {
+    "id": "es-b1-u05",
+    "title": "Commands + pronouns",
+    "subtitle": "dámelo vs no me lo des: attaching and placing pronouns",
+    "level": "B1",
+    "order": 5,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Where pronouns go with orders",
+    "intro": "Object pronouns (<b>me, te, lo, la, se…</b>) behave differently depending on whether the command is a <b>yes</b> or a <b>no</b>. With an <b>affirmative</b> command they <b>attach to the end</b> of the verb (often needing a written accent): <b>dime</b>, <b>dámelo</b>. With a <b>negative</b> command they jump <b>in front</b>: <b>no me lo des</b>. Learn the switch and you'll sound instantly more natural.",
+    "sections": [
+      {
+        "tag": "afirmativo",
+        "heading": "Affirmative: attach to the end",
+        "body": "Stick the pronoun(s) onto the back of the command. Because the word grows longer, you usually add a <b>written accent</b> to keep the stress in place:",
+        "conj": [
+          ["di + me", "dime"],
+          ["da + me + lo", "dámelo"],
+          ["levanta + te", "levántate"],
+          ["cuenta + me + lo", "cuéntamelo"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Dámelo</b>, por favor.",
+            "en": "Give it to me, please.",
+            "note": "da + me + lo → dámelo"
+          },
+          {
+            "es": "<b>Levántate</b>, es tarde.",
+            "en": "Get up, it's late.",
+            "note": "levanta + te → levántate"
+          }
+        ]
+      },
+      {
+        "tag": "negativo",
+        "heading": "Negative: pronoun goes before",
+        "body": "With <b>no</b>, the pronouns detach and sit <b>between no and the verb</b> — no accent gymnastics needed:",
+        "conj": [
+          ["no + me + lo + des", "no me lo des"],
+          ["no + te + levantes", "no te levantes"],
+          ["no + lo + hagas", "no lo hagas"]
+        ],
+        "ex": [
+          {
+            "es": "<b>No me lo des</b> todavía.",
+            "en": "Don't give it to me yet.",
+            "note": "pronouns before the verb"
+          },
+          {
+            "es": "<b>No te levantes</b>, descansa.",
+            "en": "Don't get up, rest.",
+            "note": "no + te + levantes"
+          }
+        ]
+      },
+      {
+        "tag": "el orden",
+        "heading": "Pronoun order: indirect before direct",
+        "body": "When you have two pronouns, the <b>indirect</b> (to whom) comes before the <b>direct</b> (what): <b>me lo</b>, <b>te lo</b>. And when both would start with l-, the indirect turns into <b>se</b>: le lo → <b>se lo</b>.",
+        "ex": [
+          {
+            "es": "<b>Cuéntamelo</b> todo.",
+            "en": "Tell me all of it.",
+            "note": "me (indirect) + lo (direct)"
+          },
+          {
+            "es": "<b>Dáselo</b> a ella.",
+            "en": "Give it to her.",
+            "note": "le + lo → se lo → dáselo"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Affirmative command → pronouns attach to the end: dime, dámelo, levántate.",
+      "Negative command → pronouns go before the verb: no me lo des, no te levantes.",
+      "Order is indirect + direct: me lo, te lo; le+lo becomes se lo.",
+      "Attaching pronouns usually needs a written accent: dámelo, cuéntamelo."
+    ],
+    "mistakes": [
+      {
+        "w": "Da me lo.",
+        "r": "Dámelo.",
+        "why": "In affirmative commands the pronouns attach as one word, with an accent: dámelo."
+      },
+      {
+        "w": "No dámelo.",
+        "r": "No me lo des.",
+        "why": "In negative commands the pronouns go before the verb, which stays subjunctive: no me lo des."
+      },
+      {
+        "w": "Cuentamelo todo.",
+        "r": "Cuéntamelo todo.",
+        "why": "Attaching two pronouns needs the written accent: cuéntamelo."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Affirmative: “Give it to me.” →",
+      "prompt_en": "Give it to me.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Da me lo."
+        },
+        {
+          "id": "b",
+          "text": "Dámelo."
+        },
+        {
+          "id": "c",
+          "text": "Me lo da."
+        },
+        {
+          "id": "d",
+          "text": "No me lo des."
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! Se une con acento → dámelo.",
+      "no": "Affirmative commands attach the pronouns with an accent: “Dámelo”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Negative: “Don't give it to me.” →",
+      "prompt_en": "Don't give it to me.",
+      "options": [
+        {
+          "id": "a",
+          "text": "No dámelo."
+        },
+        {
+          "id": "b",
+          "text": "No damelo."
+        },
+        {
+          "id": "c",
+          "text": "No me lo des."
+        },
+        {
+          "id": "d",
+          "text": "No des me lo."
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Exacto! En negativo los pronombres van delante.",
+      "no": "In negative commands the pronouns go before the verb: “No me lo des”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build the negative command: “Don't get up, rest.”",
+      "tokens": [
+        "No",
+        "te",
+        "levantes,",
+        "descansa",
+        "levántate",
+        "levantas"
+      ],
+      "answer": [
+        "No",
+        "te",
+        "levantes,",
+        "descansa"
+      ],
+      "ok": "¡Perfecto! no + te + levantes.",
+      "no": "“No te levantes, descansa” — negative puts the pronoun before the verb."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Tell me all of it: Cuénta___ todo. (me + lo)",
+      "prompt_en": "Tell me all of it.",
+      "accepted": [
+        "melo"
+      ],
+      "ignore_accents": true,
+      "hint": "indirect (me) before direct (lo), attached.",
+      "ok": "¡Bien! Cuéntamelo = cuenta + me + lo.",
+      "no": "Attach indirect + direct: “cuéntamelo”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each command to its meaning.",
+      "pairs": [
+        [
+          "dime",
+          "tell me"
+        ],
+        [
+          "dámelo",
+          "give it to me"
+        ],
+        [
+          "levántate",
+          "get up"
+        ],
+        [
+          "no lo hagas",
+          "don't do it"
+        ]
+      ],
+      "ok": "¡Excelente! You've got commands down.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Cuéntamelo todo.",
+      "accepted": [
+        "cuentamelo todo"
+      ],
+      "ignore_accents": true,
+      "translation": "Tell me all of it.",
+      "ok": "¡Correcto! “Cuéntamelo todo.”",
+      "no": "It was: “Cuéntamelo todo.” (Tell me all of it.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend has gossip to share 🤫",
+      "lines": [
+        {
+          "speaker": "Pablo",
+          "es": "Tengo algo increíble que contarte.",
+          "en": "I have something amazing to tell you."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "¡Cuéntamelo todo!"
+        },
+        {
+          "id": "b",
+          "text": "¡Cuenta me lo todo!"
+        },
+        {
+          "id": "c",
+          "text": "¡No me lo cuentes todo!"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! cuenta + me + lo → cuéntamelo.",
+      "no": "Attach the pronouns with an accent: “¡Cuéntamelo todo!” (Tell me all of it!)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Dámelo, por favor.",
+      "en": "Give it to me, please.",
+      "ok": "¡Perfecto! Great pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "dámelo",
+      "en": "give it to me"
+    },
+    {
+      "es": "dime",
+      "en": "tell me"
+    },
+    {
+      "es": "levántate",
+      "en": "get up"
+    },
+    {
+      "es": "no lo hagas",
+      "en": "don't do it"
+    },
+    {
+      "es": "cuéntamelo",
+      "en": "tell it to me"
+    },
+    {
+      "es": "no me lo des",
+      "en": "don't give it to me"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "dámelo",
+      "dime",
+      "levántate",
+      "no lo hagas",
+      "cuéntamelo"
+    ]
+  }
+}

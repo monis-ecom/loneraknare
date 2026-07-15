@@ -1,0 +1,373 @@
+{
+  "unit": {
+    "id": "es-a2-u05",
+    "title": "Imperfect",
+    "subtitle": "The pretérito imperfecto: habits, descriptions, and the way things used to be",
+    "level": "A2",
+    "order": 5,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The past that sets the scene",
+    "intro": "The <b>imperfect</b> (pretérito imperfecto) is the past tense for <b>habits</b>, <b>ongoing</b> actions, and <b>descriptions</b> — think “I <b>used to</b> play” or “it <b>was</b> raining.” It's wonderfully regular: only <b>three</b> verbs break the rules. Where the preterite says a thing <i>happened</i>, the imperfect paints the background.",
+    "sections": [
+      {
+        "tag": "-AR",
+        "heading": "-AR verbs → -aba",
+        "body": "For <b>-ar</b> verbs, drop the ending and add <b>-aba</b>. Notice the <b>nosotros</b> form carries an accent (habl<b>á</b>bamos):",
+        "conj": [
+          [
+            "yo",
+            "hablaba"
+          ],
+          [
+            "tú",
+            "hablabas"
+          ],
+          [
+            "él/ella",
+            "hablaba"
+          ],
+          [
+            "nosotros",
+            "hablábamos"
+          ],
+          [
+            "vosotros",
+            "hablabais"
+          ],
+          [
+            "ellos",
+            "hablaban"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "De niño, <b>hablaba</b> mucho.",
+            "en": "As a child, I talked a lot.",
+            "note": "yo and él/ella share the form"
+          },
+          {
+            "es": "<b>Jugábamos</b> en el parque.",
+            "en": "We used to play in the park.",
+            "note": "nosotros → accent on the á"
+          }
+        ]
+      },
+      {
+        "tag": "-ER / -IR",
+        "heading": "-ER and -IR verbs → -ía",
+        "body": "For <b>-er</b> and <b>-ir</b> verbs, add <b>-ía</b>. Every form keeps the accent on the <b>í</b>:",
+        "conj": [
+          [
+            "comer → yo",
+            "comía"
+          ],
+          [
+            "comer → tú",
+            "comías"
+          ],
+          [
+            "comer → nosotros",
+            "comíamos"
+          ],
+          [
+            "vivir → yo",
+            "vivía"
+          ],
+          [
+            "vivir → él/ella",
+            "vivía"
+          ],
+          [
+            "vivir → ellos",
+            "vivían"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Antes <b>vivía</b> en Madrid.",
+            "en": "I used to live in Madrid.",
+            "note": "vivir → vivía"
+          },
+          {
+            "es": "Siempre <b>comíamos</b> juntos.",
+            "en": "We always ate together.",
+            "note": "comer → comíamos"
+          }
+        ]
+      },
+      {
+        "tag": "irregulares",
+        "heading": "The only three irregulars: ser, ir, ver",
+        "body": "Just three verbs are irregular in the imperfect — memorise them and you know them all:",
+        "conj": [
+          [
+            "ser → era, eras, era…",
+            "era"
+          ],
+          [
+            "ir → iba, ibas, iba…",
+            "iba"
+          ],
+          [
+            "ver → veía, veías, veía…",
+            "veía"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Cuando <b>era</b> niño, <b>iba</b> a la playa.",
+            "en": "When I was a child, I used to go to the beach.",
+            "note": "ser → era, ir → iba"
+          },
+          {
+            "es": "<b>Veía</b> la tele cada noche.",
+            "en": "I used to watch TV every night.",
+            "note": "ver → veía"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "-ar → -aba (hablaba); -er/-ir → -ía (comía, vivía).",
+      "Use it for habits, descriptions, and ongoing past: “used to”, “was …-ing”.",
+      "Only three irregulars: ser → era, ir → iba, ver → veía.",
+      "-ía forms always keep the accent: comía, vivía, veía."
+    ],
+    "mistakes": [
+      {
+        "w": "Cuando fui niño, jugaba mucho.",
+        "r": "Cuando era niño, jugaba mucho.",
+        "why": "A description of the past uses the imperfect: era, not the preterite fui."
+      },
+      {
+        "w": "Antes comia pan cada día.",
+        "r": "Antes comía pan cada día.",
+        "why": "The -ía ending always carries an accent: comía."
+      },
+      {
+        "w": "De niño ibo al colegio a pie.",
+        "r": "De niño iba al colegio a pie.",
+        "why": "The yo form of ir in the imperfect is iba, not 'ibo'."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Cuando yo ___ niño, jugaba mucho.",
+      "prompt_en": "When I was a child, I played a lot.",
+      "options": [
+        {
+          "id": "a",
+          "text": "era"
+        },
+        {
+          "id": "b",
+          "text": "fui"
+        },
+        {
+          "id": "c",
+          "text": "soy"
+        },
+        {
+          "id": "d",
+          "text": "estaba"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Descripción del pasado → era.",
+      "no": "A background description uses the imperfect: “era niño”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Antes nosotros ___ en Madrid.",
+      "prompt_en": "Before, we lived in Madrid.",
+      "options": [
+        {
+          "id": "a",
+          "text": "vivíamos"
+        },
+        {
+          "id": "b",
+          "text": "vivimos"
+        },
+        {
+          "id": "c",
+          "text": "vivíais"
+        },
+        {
+          "id": "d",
+          "text": "vivían"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! nosotros → vivíamos.",
+      "no": "nosotros in the imperfect → “vivíamos”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “As a child, I used to go to the beach.”",
+      "tokens": [
+        "De",
+        "niño,",
+        "iba",
+        "a",
+        "la",
+        "playa",
+        "fui",
+        "voy"
+      ],
+      "answer": [
+        "De",
+        "niño,",
+        "iba",
+        "a",
+        "la",
+        "playa"
+      ],
+      "ok": "¡Perfecto! Costumbre del pasado → iba.",
+      "no": "“De niño, iba a la playa” — a past habit uses the imperfect iba."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Siempre ___ pan por la mañana.",
+      "prompt_en": "I always used to eat bread in the morning.",
+      "accepted": [
+        "comía"
+      ],
+      "ignore_accents": true,
+      "hint": "comer, yo form, imperfect (-ía).",
+      "ok": "¡Bien! comer → comía.",
+      "no": "comer (yo) in the imperfect → “comía”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its imperfect (yo) form.",
+      "pairs": [
+        [
+          "ser",
+          "era"
+        ],
+        [
+          "ir",
+          "iba"
+        ],
+        [
+          "ver",
+          "veía"
+        ],
+        [
+          "hablar",
+          "hablaba"
+        ]
+      ],
+      "ok": "¡Excelente! El imperfecto está claro.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Antes vivía en Madrid.",
+      "accepted": [
+        "antes vivia en madrid"
+      ],
+      "ignore_accents": true,
+      "translation": "Before, I lived in Madrid.",
+      "ok": "¡Correcto! “Antes vivía en Madrid.”",
+      "no": "It was: “Antes vivía en Madrid.” (Before, I lived in Madrid.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Chatting about your childhood 🧒",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "¿Qué hacías de niño los veranos?",
+          "en": "What did you do as a child in the summers?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Siempre iba a casa de mis abuelos."
+        },
+        {
+          "id": "b",
+          "text": "Ayer fui a casa de mis abuelos."
+        },
+        {
+          "id": "c",
+          "text": "Mañana voy a casa de mis abuelos."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Costumbre → imperfecto (iba).",
+      "no": "A repeated childhood habit uses the imperfect: “Siempre iba a casa de mis abuelos.” (I always used to go to my grandparents' house.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Cuando era niño, jugaba mucho",
+      "en": "When I was a child, I played a lot",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “era” and “jugaba”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "era",
+      "en": "I was / used to be"
+    },
+    {
+      "es": "iba",
+      "en": "I used to go"
+    },
+    {
+      "es": "antes",
+      "en": "before / in the past"
+    },
+    {
+      "es": "siempre",
+      "en": "always"
+    },
+    {
+      "es": "de niño/a",
+      "en": "as a child"
+    },
+    {
+      "es": "vivía",
+      "en": "I used to live"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "era",
+      "iba",
+      "antes",
+      "siempre",
+      "de niño/a"
+    ]
+  }
+}

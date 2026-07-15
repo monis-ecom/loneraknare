@@ -1,0 +1,193 @@
+{
+  "unit": { "id": "es-c1-u10", "title": "Nominalization", "subtitle": "Turning verbs, adjectives and clauses into noun phrases", "level": "C1", "order": 10, "xp_reward": 20 },
+  "grammar": {
+    "title": "Turn anything into a noun",
+    "intro": "Formal Spanish loves to <b>nominalize</b> — to package a quality, an action or a whole clause as a noun phrase. The neuter article <b>lo</b> abstracts adjectives and clauses (<b>lo importante</b>, <b>lo que dijiste</b>), <b>el</b> + infinitive names an activity (<b>el atardecer</b>), and deverbal nouns (<b>la decisión</b>, <b>el crecimiento</b>) replace bulky verb clauses. Mastering this makes your speech and writing more concise and sophisticated.",
+    "sections": [
+      {
+        "tag": "lo neutro",
+        "heading": "lo + adjective = the … thing / what is …",
+        "body": "The neuter article <b>lo</b> plus a <b>masculine-singular</b> adjective builds an abstract noun: <b>lo bueno</b> (the good thing / the upside), <b>lo importante</b> (what matters). It names a quality or idea, never a concrete object, so the adjective stays masculine singular even about feminine or plural referents.",
+        "conj": [
+          ["lo bueno", "the good thing / the upside"],
+          ["lo difícil", "the hard part"],
+          ["lo importante", "what matters"],
+          ["lo mejor", "the best thing"]
+        ],
+        "ex": [
+          { "es": "<b>Lo difícil</b> es empezar.", "en": "The hard part is starting.", "note": "lo + adjective = abstract" },
+          { "es": "Eso es <b>lo de menos</b>.", "en": "That's the least of it.", "note": "fixed expression" }
+        ]
+      },
+      {
+        "tag": "lo de / lo que",
+        "heading": "lo de + noun and lo que + clause",
+        "body": "<b>lo de</b> + a noun or a time refers to a whole matter or affair: <b>lo de ayer</b> (that business from yesterday). <b>lo que</b> + a clause nominalizes an entire idea: <b>lo que importa</b> (what matters), <b>lo que dijiste</b> (what you said).",
+        "ex": [
+          { "es": "Todavía pienso en <b>lo de ayer</b>.", "en": "I'm still thinking about that business from yesterday.", "note": "lo de + noun" },
+          { "es": "<b>Lo que</b> me molesta es su tono.", "en": "What bothers me is his tone.", "note": "lo que + clause" }
+        ]
+      },
+      {
+        "tag": "el infinitivo",
+        "heading": "el + infinitive = a full noun",
+        "body": "An infinitive introduced by <b>el</b> works as a complete noun — the name of an activity or concept: <b>el deber</b> (duty), <b>el saber</b> (knowledge), <b>el atardecer</b> (dusk). Like any noun it can take an adjective or a complement.",
+        "conj": [
+          ["el deber", "duty"],
+          ["el saber", "knowledge"],
+          ["el atardecer", "dusk / nightfall"],
+          ["el amanecer", "dawn"]
+        ],
+        "ex": [
+          { "es": "<b>El saber</b> no ocupa lugar.", "en": "Knowledge takes up no space.", "note": "proverb; el + infinitive" },
+          { "es": "Disfrutamos del <b>lento atardecer</b>.", "en": "We enjoyed the slow dusk.", "note": "the noun takes an adjective" }
+        ]
+      },
+      {
+        "tag": "sustantivación",
+        "heading": "From verb to abstract noun",
+        "body": "Careful register prefers a <b>deverbal noun</b> to a full clause: instead of <i>cuando decidieron</i>, write <b>tras la decisión</b>. Frequent suffixes are <b>-ción</b>, <b>-miento</b> and <b>-aje</b>. Watch the gender: <b>-ción</b> nouns are feminine, most <b>-miento</b>/<b>-aje</b> nouns masculine.",
+        "conj": [
+          ["decidir → la decisión", "decision"],
+          ["crecer → el crecimiento", "growth"],
+          ["descubrir → el descubrimiento", "discovery"],
+          ["aterrizar → el aterrizaje", "landing"]
+        ],
+        "ex": [
+          { "es": "El <b>crecimiento</b> de la empresa sorprendió a todos.", "en": "The company's growth surprised everyone.", "note": "crecer → crecimiento" },
+          { "es": "Tras la <b>decisión</b> del juez, apelaron.", "en": "After the judge's decision, they appealed.", "note": "decidir → decisión" }
+        ]
+      }
+    ],
+    "takeaways": [
+      "lo + masculine-singular adjective = an abstract idea: lo bueno, lo importante.",
+      "lo de + noun = 'the matter of'; lo que + clause = 'what…'.",
+      "el + infinitive turns a verb into a noun: el deber, el atardecer.",
+      "Formal register favours deverbal nouns (-ción, -miento, -aje) over full clauses."
+    ],
+    "mistakes": [
+      { "w": "La bueno es que llegamos.", "r": "Lo bueno es que llegamos.", "why": "The abstract 'the good thing' uses neuter lo, never la." },
+      { "w": "Lo importantes son los detalles.", "r": "Lo importante son los detalles.", "why": "After lo the adjective stays masculine singular (lo importante), even when the verb is plural." },
+      { "w": "el decisión fue difícil.", "r": "la decisión fue difícil.", "why": "Deverbal nouns ending in -ción are feminine: la decisión." }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ importante es la salud.",
+      "prompt_en": "What matters is health.",
+      "options": [
+        { "id": "a", "text": "Lo" },
+        { "id": "b", "text": "La" },
+        { "id": "c", "text": "El" },
+        { "id": "d", "text": "Los" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Lo + adjetivo abstracto → lo importante.",
+      "no": "An abstract quality takes neuter lo: “Lo importante”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Tras la ___ del jurado, todos aplaudieron. (decidir)",
+      "prompt_en": "After the jury's decision, everyone applauded.",
+      "options": [
+        { "id": "a", "text": "decisión" },
+        { "id": "b", "text": "decidición" },
+        { "id": "c", "text": "decidimiento" },
+        { "id": "d", "text": "decido" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! decidir → la decisión.",
+      "no": "The deverbal noun of decidir is “la decisión”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “What bothers me is his tone.”",
+      "tokens": ["Lo", "que", "me", "molesta", "es", "su", "tono", "El", "cual"],
+      "answer": ["Lo", "que", "me", "molesta", "es", "su", "tono"],
+      "ok": "¡Perfecto! Lo que + cláusula → lo que me molesta.",
+      "no": "“Lo que me molesta es su tono” — lo que nominalizes the whole idea."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "___ difícil es empezar.",
+      "prompt_en": "The hard part is starting.",
+      "accepted": ["lo"],
+      "ignore_accents": true,
+      "hint": "Neuter article for an abstract quality.",
+      "ok": "¡Bien! Lo difícil = the hard part.",
+      "no": "Use neuter lo for the abstract quality: “Lo difícil”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each verb to its deverbal noun.",
+      "pairs": [
+        ["crecer", "el crecimiento"],
+        ["decidir", "la decisión"],
+        ["descubrir", "el descubrimiento"],
+        ["aterrizar", "el aterrizaje"]
+      ],
+      "ok": "¡Excelente! Sustantivación dominada.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Lo importante es no rendirse.",
+      "accepted": ["lo importante es no rendirse"],
+      "ignore_accents": true,
+      "translation": "What matters is not giving up.",
+      "ok": "¡Correcto! “Lo importante es no rendirse.”",
+      "no": "It was: “Lo importante es no rendirse.” (What matters is not giving up.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend brings up yesterday's argument 😕",
+      "lines": [
+        { "speaker": "Marta", "es": "¿Sigues dándole vueltas a lo de ayer?", "en": "Are you still mulling over that business from yesterday?" },
+        { "speaker": "You", "blank": true }
+      ],
+      "options": [
+        { "id": "a", "text": "Sí, lo que más me duele es cómo lo dijo." },
+        { "id": "b", "text": "Sí, la que más me duele es cómo lo dijo." },
+        { "id": "c", "text": "Sí, el que más me duele es cómo lo dijo." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Lo que nominalizes the abstract idea.",
+      "no": "For an abstract idea use neuter lo que: “lo que más me duele”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Lo bueno es que aprendemos.",
+      "en": "The good thing is that we learn.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Lo bueno es que aprendemos.”"
+    }
+  ],
+  "vocab": [
+    { "es": "lo bueno", "en": "the good thing / the upside" },
+    { "es": "lo importante", "en": "what matters / the important thing" },
+    { "es": "lo de ayer", "en": "that business from yesterday" },
+    { "es": "lo que importa", "en": "what matters" },
+    { "es": "el atardecer", "en": "dusk / nightfall" },
+    { "es": "el crecimiento", "en": "growth" },
+    { "es": "la decisión", "en": "decision" }
+  ],
+  "completion": { "xp_on_complete": 20, "adds_vocab_to_srs": ["lo bueno", "lo importante", "lo que importa", "el atardecer", "el crecimiento"] }
+}

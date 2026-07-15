@@ -1,0 +1,310 @@
+{
+  "unit": {
+    "id": "es-b1-u02",
+    "title": "Subjunctive: doubt & denial",
+    "subtitle": "When you're not sure: no creo que, dudo que, es imposible que",
+    "level": "B1",
+    "order": 2,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Certainty stays; doubt flips",
+    "intro": "Here's the elegant rule of this unit. When you <b>believe</b> something is true, the verb stays in the <b>indicative</b> (the normal form). But the moment you <b>doubt</b> or <b>deny</b> it, the verb flips to the <b>subjunctive</b>. The same idea, plus or minus certainty, changes the mood entirely.",
+    "sections": [
+      {
+        "tag": "el contraste",
+        "heading": "The key contrast: creo que vs no creo que",
+        "body": "This pair is the heart of the unit. <b>Creo que</b> (I think) states a belief → <b>indicative</b>. <b>No creo que</b> (I don't think) casts doubt → <b>subjunctive</b>.",
+        "ex": [
+          {
+            "es": "<b>Creo que</b> viene hoy.",
+            "en": "I think he's coming today.",
+            "note": "belief → indicative (viene)"
+          },
+          {
+            "es": "<b>No creo que</b> venga hoy.",
+            "en": "I don't think he's coming today.",
+            "note": "doubt → subjunctive (venga)"
+          }
+        ]
+      },
+      {
+        "tag": "los disparadores",
+        "heading": "Doubt & denial triggers",
+        "body": "These openers all express doubt or deny a fact, so they all take the <b>subjunctive</b>:",
+        "conj": [
+          ["I don't think that…", "no creo que"],
+          ["I doubt that…", "dudo que"],
+          ["It's impossible that…", "es imposible que"],
+          ["It's not true that…", "no es verdad que"],
+          ["I don't think that…", "no pienso que"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Dudo que</b> sea verdad.",
+            "en": "I doubt it's true.",
+            "note": "ser → sea"
+          },
+          {
+            "es": "<b>Es imposible que</b> lo sepas.",
+            "en": "It's impossible you know it.",
+            "note": "saber → sepa/sepas"
+          }
+        ]
+      },
+      {
+        "tag": "quizás",
+        "heading": "Maybe: quizás & tal vez",
+        "body": "<b>Quizás</b> and <b>tal vez</b> both mean <b>maybe</b>. Because they signal genuine uncertainty, they usually take the <b>subjunctive</b> — the more unsure you are, the more natural it sounds.",
+        "ex": [
+          {
+            "es": "<b>Quizás</b> llueva mañana.",
+            "en": "Maybe it'll rain tomorrow.",
+            "note": "llover → llueva"
+          },
+          {
+            "es": "<b>Tal vez</b> tenga razón.",
+            "en": "Maybe he's right.",
+            "note": "tener → tenga"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Belief → indicative: creo que viene. Doubt → subjunctive: no creo que venga.",
+      "Doubt/denial triggers: no creo que, dudo que, es imposible que, no es verdad que, no pienso que.",
+      "Common irregulars here: venga, sea, sepa, esté, tenga.",
+      "Quizás / tal vez usually take the subjunctive: quizás llueva."
+    ],
+    "mistakes": [
+      {
+        "w": "No creo que viene.",
+        "r": "No creo que venga.",
+        "why": "No creo que expresses doubt, so the verb goes subjunctive: venga, not viene."
+      },
+      {
+        "w": "Dudo que es verdad.",
+        "r": "Dudo que sea verdad.",
+        "why": "After 'dudo que', ser flips to the subjunctive: sea, not es."
+      },
+      {
+        "w": "No creo que venga… creo que venga.",
+        "r": "Creo que viene.",
+        "why": "When you DO believe it (creo que), keep the indicative: viene, not venga."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No creo que él ___ hoy.",
+      "prompt_en": "I don't think he's coming today.",
+      "options": [
+        {
+          "id": "a",
+          "text": "viene"
+        },
+        {
+          "id": "b",
+          "text": "venga"
+        },
+        {
+          "id": "c",
+          "text": "venir"
+        },
+        {
+          "id": "d",
+          "text": "vino"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! No creo que → venga (subjuntivo).",
+      "no": "No creo que expresses doubt → subjunctive: “venga”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Creo que ella ___ española.",
+      "prompt_en": "I think she's Spanish.",
+      "options": [
+        {
+          "id": "a",
+          "text": "es"
+        },
+        {
+          "id": "b",
+          "text": "sea"
+        },
+        {
+          "id": "c",
+          "text": "ser"
+        },
+        {
+          "id": "d",
+          "text": "sean"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Creo que → indicativo (es).",
+      "no": "When you believe it (creo que), keep the indicative: “es”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I doubt it's true.”",
+      "tokens": [
+        "Dudo",
+        "que",
+        "sea",
+        "verdad",
+        "es",
+        "ser"
+      ],
+      "answer": [
+        "Dudo",
+        "que",
+        "sea",
+        "verdad"
+      ],
+      "ok": "¡Perfecto! Dudo que sea — subjuntivo.",
+      "no": "“Dudo que sea verdad” — ser flips to sea after doubt."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "No es verdad que él ___ enfermo. (estar)",
+      "prompt_en": "It's not true that he is sick.",
+      "accepted": [
+        "esté"
+      ],
+      "ignore_accents": true,
+      "hint": "estar in the subjunctive: est__.",
+      "ok": "¡Bien! No es verdad que esté enfermo.",
+      "no": "Denial + que → subjunctive: “esté”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its subjunctive (yo/él) form.",
+      "pairs": [
+        [
+          "venir",
+          "venga"
+        ],
+        [
+          "ser",
+          "sea"
+        ],
+        [
+          "saber",
+          "sepa"
+        ],
+        [
+          "estar",
+          "esté"
+        ]
+      ],
+      "ok": "¡Excelente! These irregulars come up again and again.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "No creo que venga mañana.",
+      "accepted": [
+        "no creo que venga manana"
+      ],
+      "ignore_accents": true,
+      "translation": "I don't think he's coming tomorrow.",
+      "ok": "¡Correcto! “No creo que venga mañana.”",
+      "no": "It was: “No creo que venga mañana.” (I don't think he's coming tomorrow.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Wondering if a friend will show up 🤔",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Crees que Pablo viene a la reunión?",
+          "en": "Do you think Pablo is coming to the meeting?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "No creo que venga, está muy ocupado."
+        },
+        {
+          "id": "b",
+          "text": "No creo que viene hoy."
+        },
+        {
+          "id": "c",
+          "text": "Dudo que es verdad."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! No creo que + subjuntivo → venga.",
+      "no": "After 'no creo que' use the subjunctive: “No creo que venga.” (I don't think he's coming.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "No creo que venga hoy.",
+      "en": "I don't think he's coming today.",
+      "ok": "¡Perfecto! Great pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "no creo que",
+      "en": "I don't think that…"
+    },
+    {
+      "es": "dudo que",
+      "en": "I doubt that…"
+    },
+    {
+      "es": "es imposible que",
+      "en": "it's impossible that…"
+    },
+    {
+      "es": "no es verdad que",
+      "en": "it's not true that…"
+    },
+    {
+      "es": "quizás",
+      "en": "maybe / perhaps"
+    },
+    {
+      "es": "creo que",
+      "en": "I think that… (+ indicative)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "no creo que",
+      "dudo que",
+      "es imposible que",
+      "no es verdad que",
+      "quizás"
+    ]
+  }
+}

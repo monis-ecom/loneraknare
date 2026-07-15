@@ -1,0 +1,361 @@
+{
+  "unit": {
+    "id": "es-b2-u07",
+    "title": "The passive voice",
+    "subtitle": "ser vs se vs estar + participle — action, impersonal, and state",
+    "level": "B2",
+    "order": 7,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Three ways to leave the doer out",
+    "intro": "How do you say something <b>was done</b> without dwelling on who did it? Spanish gives you three tools, and they mean different things. The formal <b>ser + participle</b> reports an <b>action</b> (and its participle must agree). The everyday <b>se</b> makes it impersonal. And <b>estar + participle</b> describes the <b>resulting state</b>, not the action. Mixing up <b>ser</b> and <b>estar</b> here changes the meaning entirely.",
+    "sections": [
+      {
+        "tag": "ser + participio",
+        "heading": "True passive: ser + past participle (+ por)",
+        "body": "The formal written passive uses <b>ser</b> + the past participle. The participle behaves like an adjective and <b>agrees in gender and number</b> with the subject. The doer, if named, follows <b>por</b>.",
+        "conj": [
+          [
+            "was written",
+            "fue escrito/-a"
+          ],
+          [
+            "were built",
+            "fueron construidos/-as"
+          ],
+          [
+            "was published",
+            "fue publicado/-a"
+          ],
+          [
+            "were sold",
+            "fueron vendidos/-as"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "La novela <b>fue escrita</b> por Cervantes.",
+            "en": "The novel was written by Cervantes.",
+            "note": "novela is feminine → escrita"
+          },
+          {
+            "es": "Los edificios <b>fueron construidos</b> en 1990.",
+            "en": "The buildings were built in 1990.",
+            "note": "plural masculine → construidos"
+          }
+        ]
+      },
+      {
+        "tag": "se pasiva",
+        "heading": "Passive / impersonal se: the everyday choice",
+        "body": "In speech, Spanish prefers <b>se</b> + a verb that agrees with the thing. It's shorter and far more natural than <b>ser</b> + participle. Use it when the doer doesn't matter.",
+        "conj": [
+          [
+            "the buildings were built",
+            "se construyeron los edificios"
+          ],
+          [
+            "Spanish is spoken here",
+            "aquí se habla español"
+          ],
+          [
+            "it is sold",
+            "se vende"
+          ],
+          [
+            "they are sold",
+            "se venden"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Se construyeron</b> los edificios en 1990.",
+            "en": "The buildings were built in 1990.",
+            "note": "everyday version of the passive"
+          },
+          {
+            "es": "Aquí <b>se habla</b> español.",
+            "en": "Spanish is spoken here.",
+            "note": "impersonal, on a sign"
+          }
+        ]
+      },
+      {
+        "tag": "estar + participio",
+        "heading": "Estar + participle: the resulting STATE",
+        "body": "This is the key contrast. <b>Ser + participle</b> = the <b>action</b> happened. <b>Estar + participle</b> = the <b>state</b> that resulted, how things <b>are now</b>. A door doesn't do anything in <b>está cerrada</b> — it's simply closed.",
+        "conj": [
+          [
+            "is closed (state)",
+            "está cerrado/-a"
+          ],
+          [
+            "was closed (action)",
+            "fue cerrado/-a"
+          ],
+          [
+            "is open (state)",
+            "está abierto/-a"
+          ],
+          [
+            "is broken (state)",
+            "está roto/-a"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "La puerta <b>está cerrada</b>.",
+            "en": "The door is closed.",
+            "note": "state now — no action described"
+          },
+          {
+            "es": "La puerta <b>fue cerrada</b> por el guardia.",
+            "en": "The door was closed by the guard.",
+            "note": "action — someone closed it"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "ser + participle = the action, and the participle agrees: la novela fue escrita, los edificios fueron construidos.",
+      "Name the doer with por: fue escrita por Cervantes.",
+      "In everyday Spanish, prefer se: se construyeron los edificios, aquí se habla español.",
+      "estar + participle = the resulting state now (está cerrada), not the action (fue cerrada)."
+    ],
+    "mistakes": [
+      {
+        "w": "La puerta fue cerrada. (meaning: it's closed now)",
+        "r": "La puerta está cerrada.",
+        "why": "For the state now, use estar. Ser + participle reports the action of closing it."
+      },
+      {
+        "w": "La novela fue escrito por Cervantes.",
+        "r": "La novela fue escrita por Cervantes.",
+        "why": "The participle agrees with novela (feminine) → escrita, not escrito."
+      },
+      {
+        "w": "Los edificios fue construidos.",
+        "r": "Los edificios fueron construidos.",
+        "why": "Ser must also agree in number: plural subject → fueron."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "La novela ___ por Cervantes.",
+      "prompt_en": "The novel was written by Cervantes.",
+      "options": [
+        {
+          "id": "a",
+          "text": "fue escrita"
+        },
+        {
+          "id": "b",
+          "text": "fue escrito"
+        },
+        {
+          "id": "c",
+          "text": "está escrita"
+        },
+        {
+          "id": "d",
+          "text": "fueron escritas"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Novela es femenina singular → fue escrita.",
+      "no": "The participle agrees with novela (feminine singular): “fue escrita”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No puedes entrar: la tienda ___.",
+      "prompt_en": "You can't go in: the shop is closed.",
+      "options": [
+        {
+          "id": "a",
+          "text": "fue cerrada"
+        },
+        {
+          "id": "b",
+          "text": "está cerrada"
+        },
+        {
+          "id": "c",
+          "text": "es cerrada"
+        },
+        {
+          "id": "d",
+          "text": "se cierra"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! Es el estado ahora → estar: está cerrada.",
+      "no": "For the state right now, use estar: “está cerrada”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “The buildings were built in 1990.”",
+      "tokens": [
+        "Los",
+        "edificios",
+        "fueron",
+        "construidos",
+        "en",
+        "1990",
+        "fue",
+        "construido"
+      ],
+      "answer": [
+        "Los",
+        "edificios",
+        "fueron",
+        "construidos",
+        "en",
+        "1990"
+      ],
+      "ok": "¡Perfecto! Plural masculino → fueron construidos.",
+      "no": "Plural subject → “Los edificios fueron construidos en 1990”."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "En este barrio ___ muchos pisos. (venderse, plural)",
+      "prompt_en": "In this neighbourhood many flats are sold.",
+      "accepted": [
+        "se venden"
+      ],
+      "ignore_accents": true,
+      "hint": "passive se, plural noun (pisos) → plural verb",
+      "ok": "¡Bien! Pisos es plural → se venden.",
+      "no": "Plural noun (pisos) → “se venden”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each Spanish form to its meaning.",
+      "pairs": [
+        [
+          "fue escrito",
+          "was written (action)"
+        ],
+        [
+          "está cerrado",
+          "is closed (state now)"
+        ],
+        [
+          "se vende",
+          "is for sale (impersonal)"
+        ],
+        [
+          "fueron construidos",
+          "were built (action)"
+        ]
+      ],
+      "ok": "¡Excelente! You've told action, state and se apart.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "La casa fue vendida por una familia.",
+      "accepted": [
+        "la casa fue vendida por una familia"
+      ],
+      "ignore_accents": true,
+      "translation": "The house was sold by a family.",
+      "ok": "¡Correcto! “La casa fue vendida por una familia.”",
+      "no": "It was: “La casa fue vendida por una familia.” (The house was sold by a family.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Explaining why you couldn't get in 🏬",
+      "lines": [
+        {
+          "speaker": "Rosa",
+          "es": "¿Por qué no compraste el pan?",
+          "en": "Why didn't you buy the bread?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "La panadería ya estaba cerrada."
+        },
+        {
+          "id": "b",
+          "text": "La panadería ya fue cerrada."
+        },
+        {
+          "id": "c",
+          "text": "La panadería ya es cerrada."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! El estado (cerrada) → estar: estaba cerrada.",
+      "no": "You're describing the state it was in → estar: “ya estaba cerrada”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "La novela fue escrita por Cervantes",
+      "en": "The novel was written by Cervantes",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "fue escrito por",
+      "en": "was written by"
+    },
+    {
+      "es": "fueron construidos",
+      "en": "were built"
+    },
+    {
+      "es": "está cerrado",
+      "en": "is closed (state)"
+    },
+    {
+      "es": "se vende",
+      "en": "is for sale / is sold"
+    },
+    {
+      "es": "por",
+      "en": "by (the doer)"
+    },
+    {
+      "es": "fue vendida",
+      "en": "was sold"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "fue escrito por",
+      "fueron construidos",
+      "está cerrado",
+      "se vende",
+      "por"
+    ]
+  }
+}

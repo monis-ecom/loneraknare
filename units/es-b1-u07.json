@@ -1,0 +1,353 @@
+{
+  "unit": {
+    "id": "es-b1-u07",
+    "title": "Pluperfect (pluscuamperfecto)",
+    "subtitle": "había + participle: the past before the past",
+    "level": "B1",
+    "order": 7,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The action that happened even earlier",
+    "intro": "The <b>pluperfect</b> (pluscuamperfecto) is your “<b>had done</b>” tense. It marks an action that was already finished <b>before</b> another past moment. Build it with the imperfect of <b>haber</b> (había…) plus a <b>participle</b>. When you say “When I arrived, they had already eaten,” the eating came first — that earlier action is the pluperfect.",
+    "sections": [
+      {
+        "tag": "formación",
+        "heading": "había + participle",
+        "body": "Take the imperfect of <b>haber</b> and add the <b>participle</b> (-ar → -ado, -er/-ir → -ido). The participle never changes for person or gender here:",
+        "conj": [
+          [
+            "yo",
+            "había hablado"
+          ],
+          [
+            "tú",
+            "habías hablado"
+          ],
+          [
+            "él/ella",
+            "había hablado"
+          ],
+          [
+            "nosotros",
+            "habíamos hablado"
+          ],
+          [
+            "vosotros",
+            "habíais hablado"
+          ],
+          [
+            "ellos",
+            "habían hablado"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Ya <b>había hablado</b> con él.",
+            "en": "I had already spoken with him.",
+            "note": "había + hablado"
+          },
+          {
+            "es": "Ellos <b>habían comido</b> antes.",
+            "en": "They had eaten before.",
+            "note": "habían + comido"
+          }
+        ]
+      },
+      {
+        "tag": "participios",
+        "heading": "Irregular participles",
+        "body": "A few common participles are irregular — memorise these, you'll reuse them everywhere:",
+        "conj": [
+          [
+            "hacer",
+            "hecho"
+          ],
+          [
+            "ver",
+            "visto"
+          ],
+          [
+            "decir",
+            "dicho"
+          ],
+          [
+            "escribir",
+            "escrito"
+          ],
+          [
+            "volver",
+            "vuelto"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Nunca <b>había visto</b> el mar.",
+            "en": "I had never seen the sea.",
+            "note": "ver → visto"
+          },
+          {
+            "es": "Ya <b>había hecho</b> la cena.",
+            "en": "I had already made dinner.",
+            "note": "hacer → hecho"
+          }
+        ]
+      },
+      {
+        "tag": "uso",
+        "heading": "Two past actions in order",
+        "body": "Use the pluperfect for the <b>earlier</b> action and the preterite for the <b>later</b> one. Words like <b>ya</b> (already) and <b>todavía no</b> (not yet) love this tense:",
+        "ex": [
+          {
+            "es": "Cuando <b>llegué</b>, ya <b>había comido</b>.",
+            "en": "When I arrived, I had already eaten.",
+            "note": "llegué = later, había comido = earlier"
+          },
+          {
+            "es": "<b>Todavía no había</b> terminado cuando sonó.",
+            "en": "I hadn't finished yet when it rang.",
+            "note": "todavía no + había"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Pluperfect = imperfect of haber (había…) + participle.",
+      "It marks an action finished before another past moment.",
+      "Irregular participles: hecho, visto, dicho, escrito, vuelto.",
+      "Pair it with the preterite: Cuando llegué, ya había comido."
+    ],
+    "mistakes": [
+      {
+        "w": "Cuando llegué, ya comí.",
+        "r": "Cuando llegué, ya había comido.",
+        "why": "The earlier action needs the pluperfect (había comido), not the preterite comí."
+      },
+      {
+        "w": "Había comer antes.",
+        "r": "Había comido antes.",
+        "why": "After haber you need the participle (comido), not the infinitive."
+      },
+      {
+        "w": "Nunca había ver el mar.",
+        "r": "Nunca había visto el mar.",
+        "why": "The participle of ver is irregular: visto, not 'ver'."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Cuando llegué, ellos ya ___ comido.",
+      "prompt_en": "When I arrived, they had already eaten.",
+      "options": [
+        {
+          "id": "a",
+          "text": "habían"
+        },
+        {
+          "id": "b",
+          "text": "han"
+        },
+        {
+          "id": "c",
+          "text": "habré"
+        },
+        {
+          "id": "d",
+          "text": "hubieron"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! ellos → habían comido.",
+      "no": "The earlier past action uses the pluperfect: “habían comido”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Nunca ___ el mar antes de ese día.",
+      "prompt_en": "I had never seen the sea before that day.",
+      "options": [
+        {
+          "id": "a",
+          "text": "había visto"
+        },
+        {
+          "id": "b",
+          "text": "había ver"
+        },
+        {
+          "id": "c",
+          "text": "había veído"
+        },
+        {
+          "id": "d",
+          "text": "veía"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! ver → visto: había visto.",
+      "no": "Use haber + the participle visto: “había visto”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “When I arrived, I had already eaten.”",
+      "tokens": [
+        "Cuando",
+        "llegué,",
+        "ya",
+        "había",
+        "comido",
+        "comí",
+        "comer"
+      ],
+      "answer": [
+        "Cuando",
+        "llegué,",
+        "ya",
+        "había",
+        "comido"
+      ],
+      "ok": "¡Perfecto! La acción anterior → había comido.",
+      "no": "“Cuando llegué, ya había comido” — the earlier action uses the pluperfect."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Todavía no ___ terminado cuando llamaste.",
+      "prompt_en": "I hadn't finished yet when you called.",
+      "accepted": [
+        "había"
+      ],
+      "ignore_accents": true,
+      "hint": "Imperfect of haber, yo form.",
+      "ok": "¡Bien! yo → había terminado.",
+      "no": "The pluperfect uses the imperfect of haber: “había”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its participle.",
+      "pairs": [
+        [
+          "hacer",
+          "hecho"
+        ],
+        [
+          "ver",
+          "visto"
+        ],
+        [
+          "decir",
+          "dicho"
+        ],
+        [
+          "comer",
+          "comido"
+        ]
+      ],
+      "ok": "¡Excelente! Los participios están claros.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Cuando llegué, ya había comido.",
+      "accepted": [
+        "cuando llegue ya habia comido"
+      ],
+      "ignore_accents": true,
+      "translation": "When I arrived, I had already eaten.",
+      "ok": "¡Correcto! “Cuando llegué, ya había comido.”",
+      "no": "It was: “Cuando llegué, ya había comido.” (When I arrived, I had already eaten.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend offers you dinner, but you're late 🍽️",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Quieres cenar con nosotros?",
+          "en": "Do you want to have dinner with us?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Gracias, pero ya había comido antes de venir."
+        },
+        {
+          "id": "b",
+          "text": "Gracias, pero ya como antes de venir."
+        },
+        {
+          "id": "c",
+          "text": "Gracias, pero ya comeré antes de venir."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Acción anterior al presente pasado → había comido.",
+      "no": "The eating happened before you arrived, so use the pluperfect: “ya había comido antes de venir”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Cuando llegué, ya había comido",
+      "en": "When I arrived, I had already eaten",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “había comido”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "había hablado",
+      "en": "I had spoken"
+    },
+    {
+      "es": "ya",
+      "en": "already"
+    },
+    {
+      "es": "cuando llegué",
+      "en": "when I arrived"
+    },
+    {
+      "es": "había comido",
+      "en": "I had eaten"
+    },
+    {
+      "es": "todavía no había",
+      "en": "hadn't yet"
+    },
+    {
+      "es": "había visto",
+      "en": "I had seen"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "había hablado",
+      "ya",
+      "cuando llegué",
+      "había comido",
+      "todavía no había"
+    ]
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "unit": {
+    "id": "es-c1-u18",
+    "title": "C1 Capstone Review",
+    "subtitle": "Consolidating the whole C1 course",
+    "level": "C1",
+    "order": 18,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Bringing the C1 course together",
+    "intro": "This capstone weaves together the big threads of C1: the <b>advanced subjunctive</b> across relative, temporal, concessive and purpose clauses; <b>sophisticated connectors</b> and reformulation; <b>formal register</b>; <b>nominalization</b> and <b>cleft</b> emphasis; the fine line of <b>ser/estar</b>; <b>aspectual periphrases</b>; idioms; and the <b>lexical precision</b> of the last units. Nothing new here — just the whole toolkit, side by side, so it clicks as one system.",
+    "sections": [
+      {
+        "tag": "subjuntivo",
+        "heading": "Subjunctive across subordinate clauses",
+        "body": "The advanced subjunctive is triggered by clause type, not vocabulary lists. It's required after an <b>unknown/non-existent antecedent</b> (relative), a <b>future-looking</b> temporal marker (<b>cuando</b>, <b>en cuanto</b>), most <b>concessive</b> uses (<b>por más que</b>, <b>aunque</b> + hypothesis), and every <b>purpose</b> clause (<b>para que</b>, <b>a fin de que</b>):",
+        "conj": [
+          ["relative (unknown)", "Busco a alguien que sepa alemán."],
+          ["temporal (future)", "Cuando termines, avísame."],
+          ["concessive", "Por más que insistas, no cederé."],
+          ["purpose", "Te lo explico para que lo entiendas."]
+        ],
+        "ex": [
+          {
+            "es": "En cuanto <b>se publiquen</b> los resultados, te escribiré.",
+            "en": "As soon as the results are published, I'll write to you.",
+            "note": "en cuanto + future → subjunctive"
+          },
+          {
+            "es": "No hay nada que <b>me haga</b> cambiar de opinión.",
+            "en": "There's nothing that would make me change my mind.",
+            "note": "non-existent antecedent → subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "cohesión",
+        "heading": "Connectors, reformulation and formal register",
+        "body": "Discourse-level markers signal your relationship to the previous idea: <b>no obstante</b> (concession), <b>por consiguiente</b> (consequence), <b>es decir</b> / <b>dicho de otro modo</b> (reformulation). In formal register you'll also nominalize and use cleft structures (<b>lo que… es…</b>) to foreground the key element:",
+        "conj": [
+          ["no obstante", "nevertheless / however"],
+          ["por consiguiente", "consequently"],
+          ["dicho de otro modo", "in other words"],
+          ["cabe destacar que", "it is worth noting that"]
+        ],
+        "ex": [
+          {
+            "es": "El plan es ambicioso; <b>no obstante</b>, carece de financiación.",
+            "en": "The plan is ambitious; nevertheless, it lacks funding.",
+            "note": "no obstante = formal concessive connector"
+          },
+          {
+            "es": "<b>Lo que</b> nos preocupa <b>es</b> la falta de tiempo.",
+            "en": "What worries us is the lack of time.",
+            "note": "cleft (lo que… es…) foregrounds the key point"
+          }
+        ]
+      },
+      {
+        "tag": "matices",
+        "heading": "ser/estar, periphrases and lexical precision",
+        "body": "The last strands: <b>ser</b> vs <b>estar</b> can flip meaning (es listo = clever / está listo = ready); <b>aspectual periphrases</b> add nuance (<b>llevar + gerundio</b> for duration, <b>acabar de</b> for the very recent past); and the right lexical choice (<b>tomar una decisión</b>, <b>dar con</b>) still decides whether you sound native:",
+        "conj": [
+          ["es listo / está listo", "he's clever / he's ready"],
+          ["llevar + gerundio", "to have been doing (duration)"],
+          ["acabar de + inf.", "to have just done"],
+          ["dar con", "to come across / find"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Llevo</b> dos horas <b>esperando</b> y acabo <b>de dar con</b> la respuesta.",
+            "en": "I've been waiting for two hours and I've just hit upon the answer.",
+            "note": "llevar + gerundio · acabar de · dar con"
+          },
+          {
+            "es": "Juan <b>es</b> muy listo, pero todavía no <b>está</b> listo para el examen.",
+            "en": "Juan is very clever, but he's not yet ready for the exam.",
+            "note": "ser listo = clever · estar listo = ready"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "The subjunctive follows the clause type: unknown antecedent, future 'cuando/en cuanto', concession, and every 'para que'.",
+      "Connectors carry logic: no obstante (concession), por consiguiente (consequence), es decir (reformulation).",
+      "Cleft 'lo que… es…' and nominalization foreground your key point in formal register.",
+      "ser/estar can change meaning; periphrases (llevar + gerundio, acabar de) and precise verbs (dar con, tomar una decisión) keep you native."
+    ],
+    "mistakes": [
+      {
+        "w": "Cuando llegas mañana, te llamo.",
+        "r": "Cuando llegues mañana, te llamo.",
+        "why": "A future action after 'cuando' takes the present subjunctive: llegues, not llegas."
+      },
+      {
+        "w": "Aunque estoy cansado, terminaría el informe si pudiera.",
+        "r": "Aunque esté cansado, terminaría el informe si pudiera.",
+        "why": "Here 'aunque' introduces a hypothesis, so it needs the subjunctive: aunque esté."
+      },
+      {
+        "w": "Llevo esperando por dos horas.",
+        "r": "Llevo dos horas esperando.",
+        "why": "The periphrasis is llevar + [time] + gerundio; no 'por' is used for the duration."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "En cuanto ___ el informe, te lo envío. (terminar, yo)",
+      "prompt_en": "As soon as I finish the report, I'll send it to you.",
+      "options": [
+        { "id": "a", "text": "termine" },
+        { "id": "b", "text": "termino" },
+        { "id": "c", "text": "terminaré" },
+        { "id": "d", "text": "terminaba" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! en cuanto + acción futura → subjuntivo.",
+      "no": "A future action after ‘en cuanto’ takes the present subjunctive: termine."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El proyecto se retrasó; ___, cumplimos el plazo final.",
+      "prompt_en": "The project was delayed; nevertheless, we met the final deadline.",
+      "options": [
+        { "id": "a", "text": "no obstante" },
+        { "id": "b", "text": "por consiguiente" },
+        { "id": "c", "text": "es decir" },
+        { "id": "d", "text": "por lo tanto" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! no obstante marca concesión (nevertheless).",
+      "no": "The idea is concessive (‘nevertheless’) → no obstante. The others mark consequence or reformulation."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “What worries me is the lack of time.”",
+      "tokens": [
+        "Lo",
+        "que",
+        "me",
+        "preocupa",
+        "es",
+        "la",
+        "falta",
+        "de",
+        "tiempo",
+        "está"
+      ],
+      "answer": [
+        "Lo",
+        "que",
+        "me",
+        "preocupa",
+        "es",
+        "la",
+        "falta",
+        "de",
+        "tiempo"
+      ],
+      "ok": "¡Perfecto! Estructura enfática: lo que… es…",
+      "no": "“Lo que me preocupa es la falta de tiempo” — the cleft uses ser (es), not estar."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "___ dos horas esperando el tren.",
+      "prompt_en": "I've been waiting for the train for two hours.",
+      "accepted": [
+        "llevo"
+      ],
+      "ignore_accents": true,
+      "hint": "Periphrasis for duration: ___ + time + gerundio.",
+      "ok": "¡Bien! llevar + tiempo + gerundio expresa duración.",
+      "no": "Use the periphrasis llevar: “Llevo dos horas esperando…” (no ‘por’ needed)."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each C1 structure to a correct example.",
+      "pairs": [
+        ["relative + subjunctive", "Busco a alguien que sepa alemán."],
+        ["purpose clause", "Te lo digo para que lo sepas."],
+        ["cleft emphasis", "Fue entonces cuando lo entendí."],
+        ["ser vs estar", "Es listo, pero no está listo."]
+      ],
+      "ok": "¡Excelente! Las grandes estructuras del C1, integradas.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Por más que lo intentes, no conseguirás convencerme.",
+      "accepted": [
+        "por mas que lo intentes no conseguiras convencerme"
+      ],
+      "ignore_accents": true,
+      "translation": "However much you try, you won't manage to convince me.",
+      "ok": "¡Correcto! “Por más que lo intentes, no conseguirás convencerme.”",
+      "no": "It was: “Por más que lo intentes, no conseguirás convencerme.” (concessive + subjuntivo)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "In a formal review meeting, a manager asks for your recommendation 🗂️",
+      "lines": [
+        {
+          "speaker": "Directora",
+          "es": "Dadas las cifras, ¿qué recomienda usted que hagamos con la campaña?",
+          "en": "Given the figures, what do you recommend we do with the campaign?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Recomiendo que la suspendamos hasta que mejoren los resultados." },
+        { "id": "b", "text": "Recomiendo que la suspendemos hasta que mejoran los resultados." },
+        { "id": "c", "text": "Recomiendo que la suspenderemos hasta que mejorarán los resultados." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! recomendar que + subjuntivo, y ‘hasta que’ futuro + subjuntivo.",
+      "no": "‘Recomendar que’ and future ‘hasta que’ both need the subjunctive: suspendamos… mejoren."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Aunque cueste, conviene que lo hagamos bien.",
+      "en": "Even if it's hard, it's best that we do it well.",
+      "ok": "¡Perfecto! Concesión + subjuntivo, con acento natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Aunque cueste, conviene que lo hagamos bien.”"
+    }
+  ],
+  "vocab": [
+    { "es": "en cuanto", "en": "as soon as (+ subjunctive for future)" },
+    { "es": "no obstante", "en": "nevertheless / however" },
+    { "es": "por consiguiente", "en": "consequently" },
+    { "es": "lo que… es…", "en": "what… is… (cleft emphasis)" },
+    { "es": "por más que", "en": "however much (+ subjunctive)" },
+    { "es": "llevar + gerundio", "en": "to have been doing (duration)" },
+    { "es": "acabar de", "en": "to have just (done)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "en cuanto",
+      "no obstante",
+      "por consiguiente",
+      "por más que",
+      "llevar + gerundio"
+    ]
+  }
+}

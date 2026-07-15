@@ -1,0 +1,317 @@
+{
+  "unit": {
+    "id": "es-a2-u18",
+    "title": "A2 Review",
+    "subtitle": "Capstone: pull all your A2 skills together",
+    "level": "A2",
+    "order": 18,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Everything you built at A2, in one place",
+    "intro": "No new grammar today — this is your <b>capstone</b>. You've come a long way: you can talk about the <b>past</b>, replace nouns with <b>pronouns</b>, <b>compare</b> things, look to the <b>future</b>, be <b>polite</b> with the conditional, and split <b>por</b> from <b>para</b>. Let's recap the greatest hits and then mix them all together.",
+    "sections": [
+      {
+        "tag": "pasado",
+        "heading": "Preterite vs imperfect",
+        "body": "Two past tenses, two jobs. The <b>preterite</b> is for finished actions (a snapshot). The <b>imperfect</b> paints the background — what was going on, or used to happen:",
+        "ex": [
+          {
+            "es": "<b>Fui</b> a Madrid y <b>hacía</b> mucho calor.",
+            "en": "I went to Madrid and it was very hot.",
+            "note": "fui = event · hacía = background"
+          },
+          {
+            "es": "De niño <b>jugaba</b> al fútbol.",
+            "en": "As a kid I used to play football.",
+            "note": "imperfect = used to"
+          }
+        ]
+      },
+      {
+        "tag": "pronombres",
+        "heading": "Object pronouns: lo, la, le",
+        "body": "Replace the noun so you don't repeat it. <b>lo/la</b> = it/him/her (direct); <b>le</b> = to him/her (indirect). They go <b>before</b> the verb:",
+        "ex": [
+          {
+            "es": "¿El libro? <b>Lo</b> tengo.",
+            "en": "The book? I have it.",
+            "note": "lo replaces el libro"
+          },
+          {
+            "es": "<b>Le</b> di el regalo a Ana.",
+            "en": "I gave the gift to Ana.",
+            "note": "le = to her"
+          }
+        ]
+      },
+      {
+        "tag": "comparar",
+        "heading": "Comparatives & future & politeness",
+        "body": "Compare with <b>más … que</b> / <b>mejor que</b>. Talk about plans with the <b>future</b> (<b>iré</b>) or <b>ir a</b> + infinitive. Be polite with the conditional <b>me gustaría</b>. And remember <b>por</b> (reason/through) vs <b>para</b> (goal/destination):",
+        "ex": [
+          {
+            "es": "Este hotel es <b>mejor que</b> el otro.",
+            "en": "This hotel is better than the other.",
+            "note": "mejor que = better than"
+          },
+          {
+            "es": "<b>Me gustaría</b> un café, <b>por</b> favor.",
+            "en": "I would like a coffee, please.",
+            "note": "polite conditional"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Preterite = finished event; imperfect = background or 'used to'.",
+      "lo/la = it/him/her; le = to him/her; both go before the verb.",
+      "Compare with más…que / mejor que; superlative with el más.",
+      "Future: iré or voy a ir. Polite wish: me gustaría.",
+      "por = reason/through; para = goal/recipient/destination."
+    ],
+    "mistakes": [
+      {
+        "w": "Ayer iba al cine y veía una buena película.",
+        "r": "Ayer fui al cine y vi una buena película.",
+        "why": "A specific finished event yesterday uses the preterite: fui, vi."
+      },
+      {
+        "w": "Gracias para tu ayuda.",
+        "r": "Gracias por tu ayuda.",
+        "why": "Thanks 'for' a reason uses por, not para."
+      },
+      {
+        "w": "Quiero el libro. Tengo lo.",
+        "r": "Quiero el libro. Lo tengo.",
+        "why": "The object pronoun goes before the conjugated verb: lo tengo."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ayer ___ a la playa con mis amigos.",
+      "prompt_en": "Yesterday I went to the beach with my friends.",
+      "options": [
+        {
+          "id": "a",
+          "text": "iba"
+        },
+        {
+          "id": "b",
+          "text": "fui"
+        },
+        {
+          "id": "c",
+          "text": "voy"
+        },
+        {
+          "id": "d",
+          "text": "iré"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! Un evento terminado → fui.",
+      "no": "A finished event 'yesterday' uses the preterite: “fui”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¿La carta? Ya ___ escribí.",
+      "prompt_en": "The letter? I already wrote it.",
+      "options": [
+        {
+          "id": "a",
+          "text": "le"
+        },
+        {
+          "id": "b",
+          "text": "lo"
+        },
+        {
+          "id": "c",
+          "text": "la"
+        },
+        {
+          "id": "d",
+          "text": "les"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Exacto! carta es femenina → la.",
+      "no": "'La carta' is feminine, so the direct object is “la”: ya la escribí."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I would like a table, please.”",
+      "tokens": [
+        "Me",
+        "gustaría",
+        "una",
+        "mesa,",
+        "por",
+        "favor",
+        "quiero",
+        "para"
+      ],
+      "answer": [
+        "Me",
+        "gustaría",
+        "una",
+        "mesa,",
+        "por",
+        "favor"
+      ],
+      "ok": "¡Perfecto! Me gustaría… por favor — muy cortés.",
+      "no": "“Me gustaría una mesa, por favor” — polite conditional + por favor."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Este café es ___ que el otro. (better)",
+      "prompt_en": "This coffee is better than the other one.",
+      "accepted": [
+        "mejor"
+      ],
+      "ignore_accents": true,
+      "hint": "The special word for 'better' (not 'más bueno').",
+      "ok": "¡Bien! mejor que = better than.",
+      "no": "'Better' is the irregular “mejor”: mejor que el otro."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each A2 word to its use.",
+      "pairs": [
+        [
+          "por",
+          "reason / through"
+        ],
+        [
+          "para",
+          "goal / recipient"
+        ],
+        [
+          "ayer",
+          "yesterday (preterite)"
+        ],
+        [
+          "me gustaría",
+          "I would like (polite)"
+        ]
+      ],
+      "ok": "¡Excelente! You know your A2 tools.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "El viaje fue mejor que el año pasado.",
+      "accepted": [
+        "el viaje fue mejor que el ano pasado"
+      ],
+      "ignore_accents": true,
+      "translation": "The trip was better than last year.",
+      "ok": "¡Correcto! “El viaje fue mejor que el año pasado.”",
+      "no": "It was: “El viaje fue mejor que el año pasado.” (The trip was better than last year.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Catching up about a friend's holiday ✈️",
+      "lines": [
+        {
+          "speaker": "Elena",
+          "es": "¿Qué tal el viaje a Sevilla?",
+          "en": "How was the trip to Seville?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Fue genial. Hacía sol y fue mejor que el año pasado."
+        },
+        {
+          "id": "b",
+          "text": "Es genial. Hace sol y es mejor que el año pasado."
+        },
+        {
+          "id": "c",
+          "text": "Voy a Sevilla y hará mejor que el año pasado."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Pretérito (fue) + imperfecto (hacía) + comparativo (mejor que). ¡Todo junto!",
+      "no": "Talking about a finished trip: preterite for the event + imperfect for the background + a comparison: “Fue genial. Hacía sol y fue mejor que el año pasado.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Me gustaría viajar por España.",
+      "en": "I would like to travel through Spain.",
+      "ok": "¡Perfecto! Beautiful — polite conditional + por.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "ayer",
+      "en": "yesterday"
+    },
+    {
+      "es": "mañana",
+      "en": "tomorrow / morning"
+    },
+    {
+      "es": "mejor",
+      "en": "better"
+    },
+    {
+      "es": "lo",
+      "en": "it / him (direct object)"
+    },
+    {
+      "es": "le",
+      "en": "to him / to her (indirect)"
+    },
+    {
+      "es": "por",
+      "en": "for / through / because of"
+    },
+    {
+      "es": "para",
+      "en": "for / to / in order to"
+    },
+    {
+      "es": "me gustaría",
+      "en": "I would like"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "ayer",
+      "mejor",
+      "lo",
+      "le",
+      "por",
+      "me gustaría"
+    ]
+  }
+}

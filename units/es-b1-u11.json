@@ -1,0 +1,372 @@
+{
+  "unit": {
+    "id": "es-b1-u11",
+    "title": "Ser vs estar — advanced",
+    "subtitle": "Adjectives that change meaning with ser or estar",
+    "level": "B1",
+    "order": 11,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Same adjective, two totally different meanings",
+    "intro": "You already know <b>ser</b> for identity and <b>estar</b> for states. At B1 the stakes go up: some adjectives <b>change meaning entirely</b> depending on which verb you pick. Say <b>es rico</b> and someone's wealthy; say <b>está rico</b> and the food's delicious. Choose the wrong one and you change the sentence.",
+    "sections": [
+      {
+        "tag": "cambio",
+        "heading": "Adjectives that flip meaning",
+        "body": "With <b>ser</b> the adjective is a permanent trait; with <b>estar</b> it's a state or reaction. Learn these pairs — they trip up every learner.",
+        "conj": [
+          [
+            "ser listo",
+            "to be clever"
+          ],
+          [
+            "estar listo",
+            "to be ready"
+          ],
+          [
+            "ser aburrido",
+            "to be boring"
+          ],
+          [
+            "estar aburrido",
+            "to be bored"
+          ],
+          [
+            "ser rico",
+            "to be rich"
+          ],
+          [
+            "estar rico",
+            "to be tasty"
+          ],
+          [
+            "ser malo",
+            "to be a bad person"
+          ],
+          [
+            "estar malo",
+            "to be sick"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Juan <b>es</b> muy <b>listo</b>.",
+            "en": "Juan is very clever.",
+            "note": "ser = trait"
+          },
+          {
+            "es": "Ya <b>estoy listo</b>, vamos.",
+            "en": "I'm ready now, let's go.",
+            "note": "estar = state"
+          }
+        ]
+      },
+      {
+        "tag": "comida",
+        "heading": "rico: rich vs delicious",
+        "body": "A classic at the dinner table. <b>ser rico</b> = wealthy (a trait). <b>estar rico</b> = tastes great (a reaction to this food, right now).",
+        "ex": [
+          {
+            "es": "La sopa <b>está rica</b>.",
+            "en": "The soup is delicious.",
+            "note": "estar = tasty"
+          },
+          {
+            "es": "Ese señor <b>es rico</b>.",
+            "en": "That man is rich.",
+            "note": "ser = wealthy"
+          }
+        ]
+      },
+      {
+        "tag": "estados",
+        "heading": "estar for the result of a change",
+        "body": "When something has changed into a new state, use <b>estar</b> — even when it feels permanent. Broken, dead, closed: these are results, so they take <b>estar</b>.",
+        "conj": [
+          [
+            "está roto",
+            "it's broken"
+          ],
+          [
+            "está muerto",
+            "it's dead"
+          ],
+          [
+            "está cerrado",
+            "it's closed"
+          ],
+          [
+            "está cansado",
+            "he's tired"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "El móvil <b>está roto</b>.",
+            "en": "The phone is broken.",
+            "note": "result of change → estar"
+          },
+          {
+            "es": "La tienda <b>está cerrada</b>.",
+            "en": "The shop is closed.",
+            "note": "state → estar"
+          }
+        ]
+      },
+      {
+        "tag": "salud",
+        "heading": "malo: a bad person vs sick",
+        "body": "<b>ser malo</b> describes character (a bad person). <b>estar malo</b> means feeling ill — a temporary state.",
+        "ex": [
+          {
+            "es": "El villano <b>es malo</b>.",
+            "en": "The villain is bad/evil.",
+            "note": "ser = character"
+          },
+          {
+            "es": "Hoy <b>estoy malo</b>, tengo fiebre.",
+            "en": "I'm sick today, I have a fever.",
+            "note": "estar = ill"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "ser listo = clever · estar listo = ready.",
+      "ser aburrido = boring · estar aburrido = bored.",
+      "ser rico = rich · estar rico = tasty/delicious.",
+      "ser malo = a bad person · estar malo = sick.",
+      "Results of change take estar: está roto, está muerto, está cerrado."
+    ],
+    "mistakes": [
+      {
+        "w": "La sopa es rica.",
+        "r": "La sopa está rica.",
+        "why": "Tasting delicious is a reaction to the food → estar, not ser."
+      },
+      {
+        "w": "Estoy aburrido de ver la tele → “I am boring”.",
+        "r": "Estoy aburrido = I'm bored; Soy aburrido = I'm boring.",
+        "why": "estar aburrido = bored; ser aburrido = boring. Don't mix them."
+      },
+      {
+        "w": "El móvil es roto.",
+        "r": "El móvil está roto.",
+        "why": "Broken is the result of a change → estar."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "La sopa ___ rica.",
+      "prompt_en": "The soup is delicious.",
+      "options": [
+        {
+          "id": "a",
+          "text": "es"
+        },
+        {
+          "id": "b",
+          "text": "está"
+        },
+        {
+          "id": "c",
+          "text": "son"
+        },
+        {
+          "id": "d",
+          "text": "ser"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! Sabor rico → estar rica.",
+      "no": "Tasty is a reaction → “La sopa está rica”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Juan ___ muy listo, saca buenas notas.",
+      "prompt_en": "Juan is very clever, he gets good grades.",
+      "options": [
+        {
+          "id": "a",
+          "text": "está"
+        },
+        {
+          "id": "b",
+          "text": "es"
+        },
+        {
+          "id": "c",
+          "text": "están"
+        },
+        {
+          "id": "d",
+          "text": "estar"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! Ser listo = clever (trait).",
+      "no": "Clever is a trait → “Juan es muy listo”. (estar listo = ready)"
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I'm ready, let's go.”",
+      "tokens": [
+        "Estoy",
+        "listo,",
+        "vamos",
+        "Soy",
+        "lista",
+        "ya"
+      ],
+      "answer": [
+        "Estoy",
+        "listo,",
+        "vamos"
+      ],
+      "ok": "¡Perfecto! Estar listo = ready.",
+      "no": "Ready → “Estoy listo, vamos”. (ser listo = clever)"
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Hoy no trabajo, ___ malo y tengo fiebre.",
+      "prompt_en": "I'm not working today, I'm sick and have a fever.",
+      "accepted": [
+        "estoy"
+      ],
+      "ignore_accents": true,
+      "hint": "Being ill is a temporary state.",
+      "ok": "¡Bien! Estar malo = to be sick.",
+      "no": "Sick → “estoy malo”. (ser malo = a bad person)"
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each phrase to its meaning.",
+      "pairs": [
+        [
+          "ser rico",
+          "to be rich"
+        ],
+        [
+          "estar rico",
+          "to be tasty"
+        ],
+        [
+          "ser aburrido",
+          "to be boring"
+        ],
+        [
+          "estar aburrido",
+          "to be bored"
+        ]
+      ],
+      "ok": "¡Excelente! You've sorted the pairs.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "La comida está muy rica.",
+      "accepted": [
+        "la comida esta muy rica"
+      ],
+      "ignore_accents": true,
+      "translation": "The food is very tasty.",
+      "ok": "¡Correcto! “La comida está muy rica.”",
+      "no": "It was: “La comida está muy rica.” (The food is very tasty.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "At dinner, your friend asks about the meal 🍲",
+      "lines": [
+        {
+          "speaker": "Lucía",
+          "es": "¿Te gusta la paella?",
+          "en": "Do you like the paella?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, está riquísima."
+        },
+        {
+          "id": "b",
+          "text": "Sí, es muy rica de dinero."
+        },
+        {
+          "id": "c",
+          "text": "Sí, soy aburrido."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! El sabor → estar rica.",
+      "no": "To praise the taste, use estar: “Está riquísima”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "La sopa está muy rica",
+      "en": "The soup is very tasty",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "ser listo",
+      "en": "to be clever"
+    },
+    {
+      "es": "estar listo",
+      "en": "to be ready"
+    },
+    {
+      "es": "ser aburrido",
+      "en": "to be boring"
+    },
+    {
+      "es": "estar aburrido",
+      "en": "to be bored"
+    },
+    {
+      "es": "estar rico",
+      "en": "to be tasty / delicious"
+    },
+    {
+      "es": "estar malo",
+      "en": "to be sick"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "ser listo",
+      "estar listo",
+      "ser aburrido",
+      "estar aburrido",
+      "estar rico"
+    ]
+  }
+}

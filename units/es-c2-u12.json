@@ -1,0 +1,252 @@
+{
+  "unit": {
+    "id": "es-c2-u12",
+    "title": "Irony, Connotation & Reading Between the Lines",
+    "subtitle": "Sarcasmo, connotación, doble sentido and pragmatic implicature",
+    "level": "C2",
+    "order": 12,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "When the meaning lives under the words",
+    "intro": "Near-native comprehension is mostly about what is <b>not</b> said. Spanish loads attitude into <b>tone</b> (sarcasm), into <b>word choice</b> (connotation: <b>delgado</b> vs <b>esquelético</b>), and into <b>context</b> (implicature: “<b>hace frío aquí</b>” = shut the window). At C2 you decode the intended message, not the literal one — and you learn which near-synonym quietly reveals the speaker's stance.",
+    "sections": [
+      {
+        "tag": "sarcasmo",
+        "heading": "Verbal irony and sarcasm",
+        "body": "<b>Ironía verbal</b> states the opposite of the intended meaning; <b>sarcasmo</b> is its biting form. Delivery is everything: “<b>¡Qué bien, otra reunión!</b>” said flatly means the exact reverse. Cues include a deadpan tone, an over-enthusiastic word against a tedious event, or markers like <b>sí, claro</b> and <b>faltaría más</b> read against context.",
+        "conj": [
+          ["¡Qué bien, otra reunión!", "said flatly = ‘oh great, not again’"],
+          ["Sí, claro…", "yeah, right… (disbelief)"],
+          ["Menudo genio…", "some genius… (mockery)"]
+        ],
+        "ex": [
+          {
+            "es": "—Llego una hora tarde. —<b>¡Qué puntual eres!</b>",
+            "en": "—I'm an hour late. —How punctual you are!",
+            "note": "ironía: opposite of the words"
+          },
+          {
+            "es": "<b>Sí, claro</b>, seguro que esta vez sí llama.",
+            "en": "Yeah, right, I'm sure he'll call this time.",
+            "note": "sarcastic disbelief"
+          }
+        ]
+      },
+      {
+        "tag": "connotación",
+        "heading": "Denotation vs connotation",
+        "body": "Near-synonyms share a <b>denotation</b> (dictionary sense) but carry different <b>connotation</b> (attitude). <b>Delgado</b> is neutral, <b>flaco</b> plainer, <b>esquelético</b> negative. <b>Curioso</b> flatters; <b>cotilla</b> disparages. <b>Ahorrador</b> praises thrift; <b>tacaño</b> condemns stinginess. Choosing one over another silently reveals how the speaker feels.",
+        "conj": [
+          ["delgado → flaco → esquelético", "thin → skinny → skeletal (neutral → harsh)"],
+          ["curioso → cotilla", "inquisitive → nosy gossip"],
+          ["ahorrador → tacaño", "thrifty → stingy"],
+          ["joven → crío", "young person → mere kid (dismissive)"]
+        ],
+        "ex": [
+          {
+            "es": "No es <b>ahorrador</b>, es <b>tacaño</b>: no invita ni a un café.",
+            "en": "He's not thrifty, he's stingy: he won't even buy you a coffee.",
+            "note": "same denotation, opposite attitude"
+          },
+          {
+            "es": "Dijo que soy <b>curioso</b>, pero quería decir <b>cotilla</b>.",
+            "en": "He said I'm inquisitive, but he meant nosy.",
+            "note": "connotation carries the judgment"
+          }
+        ]
+      },
+      {
+        "tag": "implicatura",
+        "heading": "Pragmatic implicature",
+        "body": "Speakers often mean more than they say, trusting you to infer it. “<b>Hace frío aquí</b>” is rarely weather talk — it's a request to <b>shut the window</b>. “<b>¿Tú no tenías examen mañana?</b>” hints you should be studying. This is <b>implicatura</b>: the literal words are a polite vehicle for the real, unstated point.",
+        "conj": [
+          ["Hace frío aquí.", "= please close the window"],
+          ["Es tardísimo…", "= we should leave / you should go"],
+          ["¿Otra vez pizza?", "= I'd rather eat something else"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Qué callado está el teléfono hoy</b>, ¿no?",
+            "en": "The phone's awfully quiet today, isn't it?",
+            "note": "implies: you were supposed to call someone"
+          },
+          {
+            "es": "<b>Yo que tú, me lo pensaría dos veces.</b>",
+            "en": "If I were you, I'd think twice.",
+            "note": "a veiled warning, not neutral advice"
+          }
+        ]
+      },
+      {
+        "tag": "doble sentido",
+        "heading": "Understatement and double meaning",
+        "body": "<b>Lítotes</b> understates by negation: “<b>no me disgusta</b>” quietly means “I quite like it”. A <b>doble sentido</b> lets one utterance carry two readings at once, often for humour or tact — a phrase you can take innocently or knowingly. Reading both layers, and the tone that tips you off, is the essence of C2 comprehension.",
+        "ex": [
+          {
+            "es": "El plan <b>no está mal del todo</b>… tú sabrás.",
+            "en": "The plan isn't half bad… you know best.",
+            "note": "lítotes + a hint of reservation"
+          },
+          {
+            "es": "—¿Te gustó su discurso? —<b>Fue… muy largo.</b>",
+            "en": "—Did you like his speech? —It was… very long.",
+            "note": "understatement implying it was dull"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Sarcasm/irony inverts the words; tone and context are the cues, not the vocabulary.",
+      "Connotation ≠ denotation: flaco/esquelético, curioso/cotilla, ahorrador/tacaño reveal attitude.",
+      "Implicatura: ‘Hace frío aquí’ can be a request (‘shut the window’), not a fact.",
+      "Lítotes understates by negation: ‘no está mal’ / ‘no me disgusta’ = genuine approval."
+    ],
+    "mistakes": [
+      {
+        "w": "Calling someone ‘tacaño’ when you mean to praise their careful budgeting.",
+        "r": "Use ‘ahorrador’ for praise; ‘tacaño’ is an insult.",
+        "why": "They share a denotation but opposite connotations — one flatters, one condemns."
+      },
+      {
+        "w": "Answering ‘Hace frío aquí’ with only ‘Sí, un poco’ and doing nothing.",
+        "r": "Read the implicature and close the window (or offer to).",
+        "why": "Pragmatically it's often a polite request, not a comment on the temperature."
+      },
+      {
+        "w": "Taking ‘No me disgusta’ as lukewarm or negative.",
+        "r": "Read it as lítotes: ‘I actually like it quite a lot’.",
+        "why": "Negating ‘disgustar’ understates genuine approval; it's warmer than it sounds."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Con tono seco, alguien dice: “¡Qué bien, otra reunión!” Significa que…",
+      "prompt_en": "Deadpan, someone says “Oh great, another meeting!” It means…",
+      "options": [
+        { "id": "a", "text": "está harto de las reuniones (ironía)" },
+        { "id": "b", "text": "le encantan las reuniones" },
+        { "id": "c", "text": "no sabía de la reunión" },
+        { "id": "d", "text": "quiere convocar otra" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! El tono seco invierte el sentido → ironía.",
+      "no": "The flat tone flips the literal words: it's ironic — he's fed up with meetings."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¿Qué palabra elige quien quiere criticar a alguien por no gastar nunca?",
+      "prompt_en": "Which word does someone pick to criticize a person for never spending?",
+      "options": [
+        { "id": "a", "text": "tacaño" },
+        { "id": "b", "text": "ahorrador" },
+        { "id": "c", "text": "prudente" },
+        { "id": "d", "text": "generoso" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! La connotación negativa está en “tacaño”.",
+      "no": "For a negative judgment it's ‘tacaño’ (stingy); ‘ahorrador’ would praise the same behaviour."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"It's not that I dislike it; quite the opposite.\"",
+      "tokens": ["No", "es", "que", "me", "disguste", "sino", "todo", "lo", "contrario", "gusta", "porque"],
+      "answer": ["No", "es", "que", "me", "disguste", "sino", "todo", "lo", "contrario"],
+      "ok": "¡Perfecto! Lítotes: negar el disgusto para afirmar aprecio.",
+      "no": "“No es que me disguste, sino todo lo contrario” — understatement (lítotes) that actually signals approval."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "No es curioso, es un ___: se entera de la vida de todos.",
+      "prompt_en": "He's not inquisitive, he's a nosy gossip: he knows everyone's business.",
+      "accepted": ["cotilla"],
+      "ignore_accents": true,
+      "hint": "The disparaging word for a nosy busybody.",
+      "ok": "¡Bien! La connotación negativa es “cotilla”.",
+      "no": "The disparaging counterpart of ‘curioso’ is ‘cotilla’ (nosy gossip)."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each utterance to what it really implies.",
+      "pairs": [
+        ["Hace frío aquí.", "please close the window"],
+        ["Es tardísimo…", "we should get going"],
+        ["¿Tú no tenías examen?", "you should be studying"],
+        ["No está nada mal.", "it's actually very good"]
+      ],
+      "ok": "¡Excelente! Lees la intención, no solo las palabras.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "No es que me disguste, es que preferiría otra cosa.",
+      "accepted": ["no es que me disguste es que preferiria otra cosa"],
+      "ignore_accents": true,
+      "translation": "It's not that I dislike it, it's that I'd prefer something else.",
+      "ok": "¡Correcto! “No es que me disguste…” — lítotes cortés.",
+      "no": "It was: “No es que me disguste, es que preferiría otra cosa.” (polite understatement)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Working late at a friend's place, and it's getting cold 🪟",
+      "lines": [
+        {
+          "speaker": "Elena",
+          "es": "Uf, hace frío aquí, ¿no crees?",
+          "en": "Ugh, it's cold in here, don't you think?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Tienes razón, ahora mismo cierro la ventana." },
+        { "id": "b", "text": "Sí, en invierno siempre baja la temperatura." },
+        { "id": "c", "text": "Pues yo tengo bastante calor, la verdad." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Captaste la implicatura: era una petición.",
+      "no": "It's an implicature — a polite request to close the window — so the natural reply is to offer to close it."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "No es que me disguste, es todo lo contrario.",
+      "en": "It's not that I dislike it — quite the opposite.",
+      "ok": "¡Perfecto! Una lítotes muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “No es que me disguste, es todo lo contrario.”"
+    }
+  ],
+  "vocab": [
+    { "es": "el sarcasmo", "en": "sarcasm (biting verbal irony)" },
+    { "es": "la connotación", "en": "connotation (attitude beyond the literal sense)" },
+    { "es": "la implicatura", "en": "implicature (implied, unstated meaning)" },
+    { "es": "el doble sentido", "en": "double meaning" },
+    { "es": "tacaño", "en": "stingy (negative of ‘thrifty’)" },
+    { "es": "cotilla", "en": "nosy gossip (negative of ‘inquisitive’)" },
+    { "es": "no está mal", "en": "it's not bad (= it's actually good)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["el sarcasmo", "la connotación", "la implicatura", "el doble sentido", "no está mal"]
+  }
+}

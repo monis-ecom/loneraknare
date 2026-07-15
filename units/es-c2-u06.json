@@ -1,0 +1,260 @@
+{
+  "unit": {
+    "id": "es-c2-u06",
+    "title": "Queísmo, Dequeísmo & Leísmo",
+    "subtitle": "The errors even natives make — and the educated standard",
+    "level": "C2",
+    "order": 6,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Where even natives slip — and the rule that saves you",
+    "intro": "Some verbs govern <b>de que</b> (<b>acordarse de que</b>, <b>darse cuenta de que</b>, <b>estar seguro de que</b>), while others take a bare <b>que</b> (<b>pensar que</b>, <b>creer que</b>, <b>decir que</b>). Adding a stray <b>de</b> is <b>dequeísmo</b> (<b>pienso de que</b> ✗); dropping a needed one is <b>queísmo</b> (<b>me acuerdo que</b> ✗). A five-second test settles either case. We'll finish with the pronoun minefield: acceptable <b>leísmo de persona</b> (<b>le vi</b> ~ <b>lo vi</b>) versus the non-standard <b>laísmo</b> (<b>la dije</b> ✗ → <b>le dije</b>).",
+    "sections": [
+      {
+        "tag": "rige “de que”",
+        "heading": "Verbs that genuinely govern de que",
+        "body": "A verb or phrase built on the preposition <b>de</b> keeps that <b>de</b> before <b>que</b>: <b>acordarse DE</b>, <b>darse cuenta DE</b>, <b>alegrarse DE</b>, <b>estar seguro DE</b>, <b>el hecho DE que</b>. Dropping the <b>de</b> here is <b>queísmo</b>, a very common slip.",
+        "conj": [
+          ["acordarse de que", "to remember that"],
+          ["darse cuenta de que", "to realize that"],
+          ["alegrarse de que", "to be glad that"],
+          ["estar seguro de que", "to be sure that"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Me acuerdo de que</b> lo dijiste tú.",
+            "en": "I remember that you were the one who said it.",
+            "note": "acordarse DE → keep de"
+          },
+          {
+            "es": "<b>Me di cuenta de que</b> estaba solo.",
+            "en": "I realized that I was alone.",
+            "note": "darse cuenta DE que"
+          }
+        ]
+      },
+      {
+        "tag": "rige “que”",
+        "heading": "Verbs that take a bare que",
+        "body": "Verbs of thinking, believing and saying introduce their clause with a plain <b>que</b> — no preposition: <b>pensar que</b>, <b>creer que</b>, <b>decir que</b>, <b>opinar que</b>, <b>suponer que</b>. Sneaking in a <b>de</b> here is <b>dequeísmo</b>: <b>pienso de que</b> ✗.",
+        "conj": [
+          ["pensar que", "to think that"],
+          ["creer que", "to believe that"],
+          ["decir que", "to say that"],
+          ["opinar que", "to be of the opinion that"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Pienso que</b> tienes toda la razón.",
+            "en": "I think you're completely right.",
+            "note": "pensar que → no de"
+          },
+          {
+            "es": "El médico <b>dijo que</b> debía descansar.",
+            "en": "The doctor said I had to rest.",
+            "note": "decir que, never dijo de que"
+          }
+        ]
+      },
+      {
+        "tag": "el test",
+        "heading": "The ¿de qué? / ¿qué? test",
+        "body": "Turn the clause into a question. If the natural question is <b>¿De qué…?</b>, keep the <b>de</b>: <em>¿De qué te acuerdas?</em> → <b>me acuerdo DE que</b>. If it's plain <b>¿Qué…?</b>, use no preposition: <em>¿Qué piensas?</em> → <b>pienso que</b>. This one trick defuses both dequeísmo and queísmo.",
+        "conj": [
+          ["¿De qué te acuerdas?", "→ me acuerdo de que"],
+          ["¿De qué te alegras?", "→ me alegro de que"],
+          ["¿Qué piensas?", "→ pienso que"],
+          ["¿Qué dijo?", "→ dijo que"]
+        ],
+        "ex": [
+          {
+            "es": "¿De qué estás seguro? → <b>Estoy seguro de que</b> vendrá.",
+            "en": "What are you sure of? → I'm sure (that) he'll come.",
+            "note": "test gives 'de qué' → keep de"
+          },
+          {
+            "es": "¿Qué crees? → <b>Creo que</b> no.",
+            "en": "What do you think? → I think not.",
+            "note": "test gives 'qué' → no de"
+          }
+        ]
+      },
+      {
+        "tag": "leísmo / laísmo",
+        "heading": "Le vs lo/la: the pronoun standard",
+        "body": "For a <b>masculine person</b> as direct object, the RAE accepts <b>leísmo de persona</b>: <b>a Juan le vi</b> ~ <b>lo vi</b> are both fine. But <b>le</b> for a feminine person or for a thing is non-standard, and using <b>la/las</b> for an <b>indirect</b> object is <b>laísmo</b> — always wrong: an indirect object is <b>le</b>, so <b>le dije la verdad</b>, never <b>la dije</b>.",
+        "conj": [
+          ["masc. person DO (both OK)", "a Juan lo vi / le vi"],
+          ["fem. person DO (standard)", "a María la vi"],
+          ["indirect object (always le)", "le dije la verdad"],
+          ["laísmo (wrong)", "*la dije la verdad"]
+        ],
+        "ex": [
+          {
+            "es": "A tu hermano <b>le vi</b> ayer en el centro.",
+            "en": "I saw your brother downtown yesterday.",
+            "note": "accepted leísmo de persona (masc.)"
+          },
+          {
+            "es": "A tu hermana <b>le dije</b> la verdad.",
+            "en": "I told your sister the truth.",
+            "note": "indirect object → le, not la (no laísmo)"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "de que verbs: acordarse, darse cuenta, alegrarse, estar seguro, el hecho de que — keep the de.",
+      "Bare que verbs: pensar, creer, decir, opinar, suponer — no de (adding it = dequeísmo).",
+      "Test it: ¿De qué…? → keep de; ¿Qué…? → drop it.",
+      "Leísmo de persona (le vi ~ lo vi) is fine for a masculine person; but an indirect object is always le, never la (laísmo)."
+    ],
+    "mistakes": [
+      {
+        "w": "Me acuerdo que no viniste a la boda.",
+        "r": "Me acuerdo de que no viniste a la boda.",
+        "why": "Queísmo: acordarse governs de, so it must be “me acuerdo de que”."
+      },
+      {
+        "w": "Pienso de que es una mala idea.",
+        "r": "Pienso que es una mala idea.",
+        "why": "Dequeísmo: pensar takes a bare que; the de is intrusive."
+      },
+      {
+        "w": "La dije que llegaría tarde.",
+        "r": "Le dije que llegaría tarde.",
+        "why": "Laísmo: “decir algo a alguien” has an indirect object, so the pronoun is le, not la."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Me alegro ___ hayas venido a verme.",
+      "prompt_en": "I'm glad (that) you've come to see me.",
+      "options": [
+        { "id": "a", "text": "de que" },
+        { "id": "b", "text": "que" },
+        { "id": "c", "text": "de" },
+        { "id": "d", "text": "en que" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Alegrarse rige de → “me alegro de que”.",
+      "no": "Alegrarse governs de, so it's “me alegro de que”; dropping the de would be queísmo."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El médico dijo ___ debía descansar unos días.",
+      "prompt_en": "The doctor said I had to rest for a few days.",
+      "options": [
+        { "id": "a", "text": "que" },
+        { "id": "b", "text": "de que" },
+        { "id": "c", "text": "de" },
+        { "id": "d", "text": "a que" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Decir rige “que” a secas.",
+      "no": "Decir takes a bare que; adding de (“dijo de que”) is dequeísmo."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I realized that I was wrong.”",
+      "tokens": ["Me", "di", "cuenta", "de", "que", "estaba", "equivocado", "estoy", "equivocada"],
+      "answer": ["Me", "di", "cuenta", "de", "que", "estaba", "equivocado"],
+      "ok": "¡Perfecto! Darse cuenta DE que → conserva el “de”.",
+      "no": "“Me di cuenta de que estaba equivocado” — darse cuenta governs de, so keep it."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "A tu hermana ya ___ dije la verdad ayer.",
+      "prompt_en": "I already told your sister the truth yesterday.",
+      "accepted": ["le"],
+      "ignore_accents": true,
+      "hint": "Telling someone something = indirect object pronoun.",
+      "ok": "¡Bien! Complemento indirecto → le dije.",
+      "no": "“Decir algo a alguien” has an indirect object: “le dije”, not “la dije” (that would be laísmo)."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each verb to the complementizer it correctly governs.",
+      "pairs": [
+        ["acordarse", "de que"],
+        ["darse cuenta", "de que"],
+        ["pensar", "que"],
+        ["creer", "que"]
+      ],
+      "ok": "¡Excelente! Distingues “de que” de “que” sin dudar.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Estoy seguro de que no dijo eso.",
+      "accepted": ["estoy seguro de que no dijo eso"],
+      "ignore_accents": true,
+      "translation": "I'm sure he didn't say that.",
+      "ok": "¡Correcto! “Estoy seguro de que no dijo eso.”",
+      "no": "It was: “Estoy seguro de que no dijo eso.” (estar seguro DE que)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend checks whether you told Marta the news 🗓️",
+      "lines": [
+        {
+          "speaker": "Luis",
+          "es": "¿Le has contado a Marta lo del viaje?",
+          "en": "Have you told Marta about the trip?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Sí, ya le dije que salimos el lunes." },
+        { "id": "b", "text": "Sí, ya la dije que salimos el lunes." },
+        { "id": "c", "text": "Sí, ya le dije de que salimos el lunes." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Complemento indirecto le + decir que (sin “de”).",
+      "no": "You need the indirect object le (not la, that's laísmo) and a bare que (not “de que”, that's dequeísmo): “le dije que…”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Me acuerdo de que quedamos el jueves.",
+      "en": "I remember that we agreed on Thursday.",
+      "ok": "¡Perfecto! Acordarse de que, impecable.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Me acuerdo de que quedamos el jueves.”"
+    }
+  ],
+  "vocab": [
+    { "es": "acordarse de que", "en": "to remember that" },
+    { "es": "darse cuenta de que", "en": "to realize that" },
+    { "es": "estar seguro de que", "en": "to be sure that" },
+    { "es": "pensar que", "en": "to think that (no 'de')" },
+    { "es": "el dequeísmo", "en": "wrongly adding 'de' before que" },
+    { "es": "el queísmo", "en": "wrongly dropping 'de' before que" },
+    { "es": "le dije", "en": "I told him/her (indirect object)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["acordarse de que", "darse cuenta de que", "estar seguro de que", "pensar que", "le dije"]
+  }
+}

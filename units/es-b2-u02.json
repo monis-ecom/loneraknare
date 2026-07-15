@@ -1,0 +1,325 @@
+{
+  "unit": {
+    "id": "es-b2-u02",
+    "title": "Si Clauses: The Impossible Past",
+    "subtitle": "The third conditional — undoing what already happened",
+    "level": "B2",
+    "order": 2,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Rewriting a past that can never change",
+    "intro": "The <b>third conditional</b> talks about an <b>unreal past</b>: things that didn't happen, and the results they would have had. The recipe is fixed: <b>si + pluperfect subjunctive</b> (hubiera + participle) in the condition, and the <b>conditional perfect</b> (habría + participle) in the result. One iron rule sits underneath it all: the <b>si</b> half never takes a conditional.",
+    "sections": [
+      {
+        "tag": "estructura",
+        "heading": "si + hubiera + ..., + habría + ...",
+        "body": "The <b>si</b> clause uses the pluperfect subjunctive; the main clause uses the conditional perfect (habría, habrías, habría, habríamos, habríais, habrían + participle):",
+        "conj": [
+          [
+            "si-clause (condition)",
+            "si hubiera sabido"
+          ],
+          [
+            "main clause (result)",
+            "habría venido"
+          ],
+          [
+            "condition (tú)",
+            "si me lo hubieras dicho"
+          ],
+          [
+            "result (yo)",
+            "te habría ayudado"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Si hubiera sabido</b>, <b>habría venido</b>.",
+            "en": "If I had known, I would have come.",
+            "note": "the full pattern"
+          },
+          {
+            "es": "<b>Si me lo hubieras dicho</b>, <b>te habría ayudado</b>.",
+            "en": "If you had told me, I would have helped you.",
+            "note": "decir → dicho"
+          }
+        ]
+      },
+      {
+        "tag": "variantes",
+        "heading": "Two common variations",
+        "body": "First, the <b>-ra</b> form can replace <b>habría</b> in the result (…, hubiera venido). Second, <b>mixed conditionals</b> link a past condition to a <b>present</b> result — the main clause becomes the simple conditional:",
+        "ex": [
+          {
+            "es": "Si hubiera sabido, <b>hubiera venido</b>.",
+            "en": "If I had known, I would have come.",
+            "note": "hubiera can replace habría"
+          },
+          {
+            "es": "Si <b>hubiera estudiado</b>, ahora <b>tendría</b> un buen trabajo.",
+            "en": "If I had studied, I would now have a good job.",
+            "note": "mixed: past cause, present result"
+          }
+        ]
+      },
+      {
+        "tag": "regla",
+        "heading": "The iron rule + a shortcut",
+        "body": "<b>Never</b> put a conditional in the <b>si</b> clause: it's <b>si hubiera</b>, never <b>si habría</b> (and certainly not 'si hubría'). A neat shortcut for the condition is <b>de + haber + participle</b>, which replaces the whole 'si' clause:",
+        "ex": [
+          {
+            "es": "<b>De haberlo sabido</b>, habría venido.",
+            "en": "Had I known it, I would have come.",
+            "note": "= Si lo hubiera sabido"
+          },
+          {
+            "es": "Si <b>hubiera</b> podido, te habría llamado.",
+            "en": "If I had been able to, I would have called you.",
+            "note": "never 'si habría podido'"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Third conditional: si + pluperfect subjunctive, then conditional perfect (habría + participle).",
+      "Si hubiera sabido, habría venido.",
+      "The -ra form can replace habría: …, hubiera venido.",
+      "Never 'si habría' — the si clause always takes hubiera. Shortcut: De haberlo sabido…"
+    ],
+    "mistakes": [
+      {
+        "w": "Si habría sabido, habría venido.",
+        "r": "Si hubiera sabido, habría venido.",
+        "why": "The si clause never takes a conditional. Use the pluperfect subjunctive: si hubiera sabido."
+      },
+      {
+        "w": "Si me lo hubieras dicho, te ayudaba.",
+        "r": "Si me lo hubieras dicho, te habría ayudado.",
+        "why": "An unreal past result needs the conditional perfect (habría ayudado), not the imperfect."
+      },
+      {
+        "w": "Si hubiera estudiado, ahora tendría... si hubría estudiado.",
+        "r": "Si hubiera estudiado, ahora tendría un buen trabajo.",
+        "why": "There is no form 'hubría'. The condition is hubiera; a present result takes the simple conditional (tendría)."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Si ___ , habría venido. (saber, yo)",
+      "prompt_en": "If I had known, I would have come.",
+      "options": [
+        {
+          "id": "a",
+          "text": "hubiera sabido"
+        },
+        {
+          "id": "b",
+          "text": "habría sabido"
+        },
+        {
+          "id": "c",
+          "text": "sabría"
+        },
+        {
+          "id": "d",
+          "text": "había sabido"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! La cláusula 'si' lleva hubiera.",
+      "no": "The si clause never takes a conditional — use “hubiera sabido”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Si me lo hubieras dicho, te ___. (ayudar, yo)",
+      "prompt_en": "If you had told me, I would have helped you.",
+      "options": [
+        {
+          "id": "a",
+          "text": "habría ayudado"
+        },
+        {
+          "id": "b",
+          "text": "hubieras ayudado"
+        },
+        {
+          "id": "c",
+          "text": "ayudaría"
+        },
+        {
+          "id": "d",
+          "text": "ayudaba"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! El resultado → condicional compuesto: habría ayudado.",
+      "no": "The result of an unreal past takes the conditional perfect: “te habría ayudado”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “If I had studied, I would now have a good job.”",
+      "tokens": [
+        "Si",
+        "hubiera",
+        "estudiado,",
+        "ahora",
+        "tendría",
+        "un",
+        "buen",
+        "trabajo",
+        "habría"
+      ],
+      "answer": [
+        "Si",
+        "hubiera",
+        "estudiado,",
+        "ahora",
+        "tendría",
+        "un",
+        "buen",
+        "trabajo"
+      ],
+      "ok": "¡Perfecto! Condicional mixto: pasado + presente.",
+      "no": "“Si hubiera estudiado, ahora tendría un buen trabajo” — past cause, present result."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Si hubiera podido, te ___. (llamar, yo)",
+      "prompt_en": "If I had been able to, I would have called you.",
+      "accepted": [
+        "habria llamado",
+        "hubiera llamado"
+      ],
+      "ignore_accents": true,
+      "hint": "Conditional perfect (habría + participle) — or the -ra variant.",
+      "ok": "¡Bien! habría llamado (o hubiera llamado).",
+      "no": "The result is “habría llamado” (the -ra form “hubiera llamado” also works)."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each condition to its natural result.",
+      "pairs": [
+        [
+          "Si hubiera sabido,",
+          "habría venido."
+        ],
+        [
+          "Si me lo hubieras dicho,",
+          "te habría ayudado."
+        ],
+        [
+          "Si hubiéramos salido antes,",
+          "no habríamos perdido el tren."
+        ],
+        [
+          "Si hubiera estudiado,",
+          "ahora tendría trabajo."
+        ]
+      ],
+      "ok": "¡Excelente! Condición y resultado, bien emparejados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Si me lo hubieras dicho, te habría ayudado.",
+      "accepted": [
+        "si me lo hubieras dicho te habria ayudado"
+      ],
+      "ignore_accents": true,
+      "translation": "If you had told me, I would have helped you.",
+      "ok": "¡Correcto! “Si me lo hubieras dicho, te habría ayudado.”",
+      "no": "It was: “Si me lo hubieras dicho, te habría ayudado.” (If you had told me, I would have helped you.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A colleague explains why he missed a deadline 🕒",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "No sabía que la entrega era ayer. Nadie me avisó.",
+          "en": "I didn't know the deadline was yesterday. Nobody told me."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Si me lo hubieras preguntado, te lo habría dicho."
+        },
+        {
+          "id": "b",
+          "text": "Si me lo habrías preguntado, te lo habría dicho."
+        },
+        {
+          "id": "c",
+          "text": "Si me lo preguntabas, te lo diría."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! si hubieras + habría.",
+      "no": "The si clause takes hubieras, the result takes habría: “Si me lo hubieras preguntado, te lo habría dicho”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "De haberlo sabido, habría venido.",
+      "en": "Had I known it, I would have come.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “De haberlo sabido, habría venido.”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "si hubiera sabido",
+      "en": "if I had known"
+    },
+    {
+      "es": "habría venido",
+      "en": "(I) would have come"
+    },
+    {
+      "es": "si me lo hubieras dicho",
+      "en": "if you had told me"
+    },
+    {
+      "es": "te habría ayudado",
+      "en": "(I) would have helped you"
+    },
+    {
+      "es": "de haberlo sabido",
+      "en": "had I known it"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "si hubiera sabido",
+      "habría venido",
+      "si me lo hubieras dicho",
+      "te habría ayudado",
+      "de haberlo sabido"
+    ]
+  }
+}

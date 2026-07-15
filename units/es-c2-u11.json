@@ -1,0 +1,255 @@
+{
+  "unit": {
+    "id": "es-c2-u11",
+    "title": "Refranes & Proverbs",
+    "subtitle": "Reading the folk wisdom natives drop mid-sentence",
+    "level": "C2",
+    "order": 11,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The sayings that carry a whole argument in one line",
+    "intro": "A <b>refrán</b> is a fixed folk proverb — rhythmic, often rhymed, and never taken word-for-word. Educated speakers deploy them to clinch a point or soften advice in a single breath. At C2 you must grasp the <b>literal words</b>, the <b>figurative lesson</b>, and — crucially — <b>when</b> to drop one so it lands naturally rather than sounding like a textbook.",
+    "sections": [
+      {
+        "tag": "prudencia",
+        "heading": "Caution and the safe bet",
+        "body": "Several classic refranes counsel prudence. <b>Más vale pájaro en mano que ciento volando</b> — one bird in the hand beats a hundred flying — favours the sure thing. <b>En boca cerrada no entran moscas</b> — flies don't enter a closed mouth — advises silence to avoid trouble. Note the frozen syntax: you never conjugate or rearrange them.",
+        "conj": [
+          ["Más vale pájaro en mano que ciento volando", "a sure small gain beats a risky bigger one"],
+          ["En boca cerrada no entran moscas", "keep quiet and you stay out of trouble"],
+          ["Más vale tarde que nunca", "better late than never"]
+        ],
+        "ex": [
+          {
+            "es": "Acepta la oferta: <b>más vale pájaro en mano que ciento volando</b>.",
+            "en": "Take the offer: a bird in the hand is worth two in the bush.",
+            "note": "clinches a prudent choice"
+          },
+          {
+            "es": "No comentes nada en la reunión; <b>en boca cerrada no entran moscas</b>.",
+            "en": "Don't say a word in the meeting; silence keeps you safe.",
+            "note": "advising discretion"
+          }
+        ]
+      },
+      {
+        "tag": "gratitud y suerte",
+        "heading": "Gratitude and silver linings",
+        "body": "<b>A caballo regalado no le mires el diente</b> — don't inspect a gift horse's teeth — means don't criticize a gift. <b>No hay mal que por bien no venga</b> — there's no bad that doesn't come for some good — is the Spanish “every cloud has a silver lining”, said to comfort after a setback.",
+        "conj": [
+          ["A caballo regalado no le mires el diente", "don't find fault with a gift"],
+          ["No hay mal que por bien no venga", "every cloud has a silver lining"]
+        ],
+        "ex": [
+          {
+            "es": "El regalo es sencillo, pero <b>a caballo regalado no le mires el diente</b>.",
+            "en": "The gift is simple, but don't look a gift horse in the mouth.",
+            "note": "accepting graciously"
+          },
+          {
+            "es": "Perdí el vuelo y conocí a mi socio en la sala; <b>no hay mal que por bien no venga</b>.",
+            "en": "I missed the flight and met my partner in the lounge; every cloud has a silver lining.",
+            "note": "comfort after a setback"
+          }
+        ]
+      },
+      {
+        "tag": "esfuerzo y riesgo",
+        "heading": "Effort, timing and daring",
+        "body": "<b>A quien madruga, Dios le ayuda</b> — God helps the early riser — rewards diligence, like “the early bird catches the worm”. <b>El que no arriesga no gana</b> — who doesn't risk doesn't win — urges boldness. They pull in opposite directions, so you pick the one that fits your argument.",
+        "conj": [
+          ["A quien madruga, Dios le ayuda", "the early bird catches the worm"],
+          ["El que no arriesga no gana", "nothing ventured, nothing gained"]
+        ],
+        "ex": [
+          {
+            "es": "Empieza a las seis: <b>a quien madruga, Dios le ayuda</b>.",
+            "en": "Start at six: the early bird catches the worm.",
+            "note": "praising diligence"
+          },
+          {
+            "es": "Invierte en el proyecto; <b>el que no arriesga no gana</b>.",
+            "en": "Invest in the project; nothing ventured, nothing gained.",
+            "note": "encouraging a bold move"
+          }
+        ]
+      },
+      {
+        "tag": "compañías",
+        "heading": "Character and company",
+        "body": "<b>Dime con quién andas y te diré quién eres</b> — tell me who you walk with and I'll tell you who you are — judges a person by their company (“birds of a feather”). Use it to comment, often critically, on someone's associations. Like all refranes, it's delivered whole, as a knowing verdict.",
+        "ex": [
+          {
+            "es": "Se junta con estafadores… <b>dime con quién andas y te diré quién eres</b>.",
+            "en": "He hangs out with swindlers… you are the company you keep.",
+            "note": "a knowing, critical verdict"
+          },
+          {
+            "es": "<b>Más vale tarde que nunca</b>: al final entregó la tesis.",
+            "en": "Better late than never: he finally handed in the thesis.",
+            "note": "acknowledging a delayed success"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Refranes are frozen: never conjugate, translate word-for-word, or rearrange them.",
+      "Prudence: ‘más vale pájaro en mano…’ and ‘en boca cerrada…’ counsel the safe, quiet path.",
+      "Comfort/gratitude: ‘no hay mal que por bien no venga’ and ‘a caballo regalado…’.",
+      "Match the proverb to your argument — ‘a quien madruga…’ and ‘el que no arriesga…’ pull opposite ways."
+    ],
+    "mistakes": [
+      {
+        "w": "Más vale un pájaro en la mano que cien volando.",
+        "r": "Más vale pájaro en mano que ciento volando.",
+        "why": "The refrán is fixed: no article ‘un/la’, and it's ‘ciento’, not ‘cien’."
+      },
+      {
+        "w": "A caballo regalado no le mires los dientes.",
+        "r": "A caballo regalado no le mires el diente.",
+        "why": "The canonical form is singular: ‘el diente’, not ‘los dientes’."
+      },
+      {
+        "w": "Al que madruga, Dios lo ayuda.",
+        "r": "A quien madruga, Dios le ayuda.",
+        "why": "The set proverb keeps ‘a quien’ and the dative ‘le’: don't swap them for ‘al que … lo’."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Te ofrecen un puesto seguro pero modesto. Dirías: “___.”",
+      "prompt_en": "You're offered a safe but modest job. You'd say…",
+      "options": [
+        { "id": "a", "text": "Más vale pájaro en mano que ciento volando" },
+        { "id": "b", "text": "El que no arriesga no gana" },
+        { "id": "c", "text": "A caballo regalado no le mires el diente" },
+        { "id": "d", "text": "En boca cerrada no entran moscas" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Prefieres lo seguro → pájaro en mano.",
+      "no": "Choosing the safe, sure option is exactly ‘más vale pájaro en mano que ciento volando’."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Un amigo se lamenta de una desgracia que acabó abriéndole una puerta. Lo consuelas con: “___.”",
+      "prompt_en": "A friend laments a misfortune that ended up opening a door. You comfort him with…",
+      "options": [
+        { "id": "a", "text": "No hay mal que por bien no venga" },
+        { "id": "b", "text": "Dime con quién andas y te diré quién eres" },
+        { "id": "c", "text": "A quien madruga, Dios le ayuda" },
+        { "id": "d", "text": "Más vale tarde que nunca" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Consuelo tras un revés → no hay mal que por bien no venga.",
+      "no": "To comfort after a setback that turned out well, use ‘no hay mal que por bien no venga’."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"Tell me who you walk with and I'll tell you who you are.\"",
+      "tokens": ["Dime", "con", "quién", "andas", "y", "te", "diré", "quién", "eres", "sabré", "cómo"],
+      "answer": ["Dime", "con", "quién", "andas", "y", "te", "diré", "quién", "eres"],
+      "ok": "¡Perfecto! Un refrán sobre las compañías.",
+      "no": "“Dime con quién andas y te diré quién eres” — the fixed proverb about the company you keep."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "En boca ___ no entran moscas: mejor no digas nada.",
+      "prompt_en": "A closed mouth catches no flies: better say nothing.",
+      "accepted": ["cerrada"],
+      "ignore_accents": true,
+      "hint": "The mouth must be shut (feminine adjective).",
+      "ok": "¡Bien! En boca cerrada no entran moscas.",
+      "no": "The proverb is ‘en boca cerrada no entran moscas’ — the mouth is ‘cerrada’."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each refrán to its lesson.",
+      "pairs": [
+        ["A caballo regalado no le mires el diente", "don't criticize a gift"],
+        ["A quien madruga, Dios le ayuda", "diligence is rewarded"],
+        ["El que no arriesga no gana", "you must dare to win"],
+        ["Más vale tarde que nunca", "better late than never"]
+      ],
+      "ok": "¡Excelente! Refranes y su moraleja, dominados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "A quien madruga, Dios le ayuda.",
+      "accepted": ["a quien madruga dios le ayuda"],
+      "ignore_accents": true,
+      "translation": "The early bird catches the worm.",
+      "ok": "¡Correcto! “A quien madruga, Dios le ayuda.”",
+      "no": "It was: “A quien madruga, Dios le ayuda.” (the early bird catches the worm)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend hesitates to launch her business 🚀",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "Tengo la idea lista, pero me da miedo invertir mis ahorros.",
+          "en": "I've got the idea ready, but I'm scared to invest my savings."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Lánzate: el que no arriesga no gana." },
+        { "id": "b", "text": "Déjalo: en boca cerrada no entran moscas." },
+        { "id": "c", "text": "Tranquila: a caballo regalado no le mires el diente." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Para animar a arriesgarse, ese es el refrán.",
+      "no": "To encourage her to take the plunge, the fitting proverb is ‘el que no arriesga no gana’."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Más vale pájaro en mano que ciento volando.",
+      "en": "A bird in the hand is worth two in the bush.",
+      "ok": "¡Perfecto! Ritmo de refrán muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Más vale pájaro en mano que ciento volando.”"
+    }
+  ],
+  "vocab": [
+    { "es": "más vale pájaro en mano que ciento volando", "en": "a bird in the hand is worth two in the bush" },
+    { "es": "a caballo regalado no le mires el diente", "en": "don't look a gift horse in the mouth" },
+    { "es": "en boca cerrada no entran moscas", "en": "silence keeps you out of trouble" },
+    { "es": "no hay mal que por bien no venga", "en": "every cloud has a silver lining" },
+    { "es": "a quien madruga, Dios le ayuda", "en": "the early bird catches the worm" },
+    { "es": "el que no arriesga no gana", "en": "nothing ventured, nothing gained" },
+    { "es": "dime con quién andas y te diré quién eres", "en": "you are the company you keep" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "más vale pájaro en mano que ciento volando",
+      "a caballo regalado no le mires el diente",
+      "en boca cerrada no entran moscas",
+      "no hay mal que por bien no venga",
+      "a quien madruga, Dios le ayuda"
+    ]
+  }
+}

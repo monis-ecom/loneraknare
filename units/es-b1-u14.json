@@ -1,0 +1,348 @@
+{
+  "unit": {
+    "id": "es-b1-u14",
+    "title": "The Imperfect Subjunctive",
+    "subtitle": "Wishes, hypotheticals, and reported requests in the past",
+    "level": "B1",
+    "order": 14,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Build it from the preterite, not the infinitive",
+    "intro": "The <b>imperfect subjunctive</b> (imperfecto de subjuntivo) is the subjunctive for the <b>past</b> and for <b>hypotheticals</b>. Its secret is simple: don't build it from the infinitive — build it from the <b>third-person plural preterite</b>. Drop the <b>-ron</b> and add the endings. Because that preterite already carries every irregularity, this form handles even irregular verbs cleanly.",
+    "sections": [
+      {
+        "tag": "formación",
+        "heading": "3rd-person plural preterite − ron + ra endings",
+        "body": "Take the <b>ellos</b> preterite (hablaron, comieron, vivieron), remove <b>-ron</b>, and add these endings. The <b>nosotros</b> form takes a written accent:",
+        "conj": [
+          [
+            "yo",
+            "hablara"
+          ],
+          [
+            "tú",
+            "hablaras"
+          ],
+          [
+            "él/ella",
+            "hablara"
+          ],
+          [
+            "nosotros",
+            "habláramos"
+          ],
+          [
+            "vosotros",
+            "hablarais"
+          ],
+          [
+            "ellos",
+            "hablaran"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "comieron → <b>comiera</b>",
+            "en": "they ate → (that I) ate",
+            "note": "drop -ron, add -a"
+          },
+          {
+            "es": "vivieron → <b>viviera</b>",
+            "en": "they lived → (that I) lived",
+            "note": "same recipe for -er/-ir"
+          }
+        ]
+      },
+      {
+        "tag": "irregulares",
+        "heading": "Irregular verbs come along for free",
+        "body": "Because you start from the preterite, irregular stems are already baked in. Learn the <b>ellos</b> preterite and the subjunctive falls out automatically:",
+        "conj": [
+          [
+            "ser / ir (fueron)",
+            "fuera"
+          ],
+          [
+            "tener (tuvieron)",
+            "tuviera"
+          ],
+          [
+            "hacer (hicieron)",
+            "hiciera"
+          ],
+          [
+            "poder (pudieron)",
+            "pudiera"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "tuvieron → <b>tuviera</b>",
+            "en": "they had → (that I) had",
+            "note": "never build from 'tener'"
+          },
+          {
+            "es": "hicieron → <b>hiciera</b>",
+            "en": "they did → (that I) did",
+            "note": "irregular stem included"
+          }
+        ]
+      },
+      {
+        "tag": "usos",
+        "heading": "When you need it",
+        "body": "Use it after a <b>past-tense</b> main verb that triggers the subjunctive, and in <b>hypothetical</b> si-clauses. (An <b>-ase</b> form also exists — hablase — but <b>-ara</b> is the one to learn first.)",
+        "ex": [
+          {
+            "es": "Quería que <b>hablaras</b> con ella.",
+            "en": "I wanted you to talk to her.",
+            "note": "past trigger → -ara"
+          },
+          {
+            "es": "Si <b>tuviera</b> dinero, viajaría.",
+            "en": "If I had money, I would travel.",
+            "note": "hypothetical si-clause"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Build from the 3rd-person plural preterite: drop -ron, add -ra endings.",
+      "hablaron→hablara, comieron→comiera, vivieron→viviera.",
+      "Irregulars come from the preterite: fueron→fuera, tuvieron→tuviera, hicieron→hiciera.",
+      "Triggered by past-tense main verbs (Quería que...) and hypotheticals (Si tuviera...)."
+    ],
+    "mistakes": [
+      {
+        "w": "Quería que tenieras razón.",
+        "r": "Quería que tuvieras razón.",
+        "why": "Build from the preterite tuvieron, not from the infinitive tener: tuviera."
+      },
+      {
+        "w": "Si tenía dinero, viajaría.",
+        "r": "Si tuviera dinero, viajaría.",
+        "why": "A hypothetical si-clause needs the imperfect subjunctive, not the imperfect indicative."
+      },
+      {
+        "w": "Esperaba que fueras... hicieras... hazieras.",
+        "r": "Esperaba que hicieras algo.",
+        "why": "hacer comes from hicieron → hiciera; there is no z here."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Quería que ___ con ella. (hablar, tú)",
+      "prompt_en": "I wanted you to talk to her.",
+      "options": [
+        {
+          "id": "a",
+          "text": "hablaras"
+        },
+        {
+          "id": "b",
+          "text": "hablabas"
+        },
+        {
+          "id": "c",
+          "text": "hablarías"
+        },
+        {
+          "id": "d",
+          "text": "hables"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! hablaron → hablaras.",
+      "no": "A past trigger needs the imperfect subjunctive: “hablaras”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¿Cuál es el imperfecto de subjuntivo de TENER (yo)?",
+      "prompt_en": "Which is the imperfect subjunctive of 'tener' (yo)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "tuviera"
+        },
+        {
+          "id": "b",
+          "text": "teniera"
+        },
+        {
+          "id": "c",
+          "text": "tendría"
+        },
+        {
+          "id": "d",
+          "text": "tenía"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! tuvieron → tuviera.",
+      "no": "Build from the preterite tuvieron, not the infinitive: “tuviera”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “If I had money, I would travel.”",
+      "tokens": [
+        "Si",
+        "tuviera",
+        "dinero,",
+        "viajaría",
+        "tenía",
+        "viajara"
+      ],
+      "answer": [
+        "Si",
+        "tuviera",
+        "dinero,",
+        "viajaría"
+      ],
+      "ok": "¡Perfecto! Si + imperfecto de subjuntivo + condicional.",
+      "no": "“Si tuviera dinero, viajaría” — imperfect subjunctive, then conditional."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "hicieron → ___ (yo)",
+      "prompt_en": "Give the imperfect subjunctive (yo) of hacer.",
+      "accepted": [
+        "hiciera"
+      ],
+      "ignore_accents": true,
+      "hint": "Drop -ron from hicieron, add -a.",
+      "ok": "¡Bien! hicieron → hiciera.",
+      "no": "Drop -ron from hicieron and add -a: “hiciera”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each 3rd-person plural preterite to its imperfect subjunctive (yo).",
+      "pairs": [
+        [
+          "hablaron",
+          "hablara"
+        ],
+        [
+          "comieron",
+          "comiera"
+        ],
+        [
+          "fueron",
+          "fuera"
+        ],
+        [
+          "pudieron",
+          "pudiera"
+        ]
+      ],
+      "ok": "¡Excelente! Preterite in, subjunctive out.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Si tuviera tiempo, iría contigo.",
+      "accepted": [
+        "si tuviera tiempo iria contigo",
+        "si tuviera tiempo, iria contigo"
+      ],
+      "ignore_accents": true,
+      "translation": "If I had time, I would go with you.",
+      "ok": "¡Correcto! “Si tuviera tiempo, iría contigo.”",
+      "no": "It was: “Si tuviera tiempo, iría contigo.” (If I had time, I would go with you.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A teacher recalls what she asked of you 🏫",
+      "lines": [
+        {
+          "speaker": "Profesora",
+          "es": "Te pedí una cosa la semana pasada, ¿recuerdas?",
+          "en": "I asked you for one thing last week, remember?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, querías que estudiara más."
+        },
+        {
+          "id": "b",
+          "text": "Sí, querías que estudiar más."
+        },
+        {
+          "id": "c",
+          "text": "Sí, querías que estudiaba más."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Past trigger → estudiara.",
+      "no": "After a past trigger, use the imperfect subjunctive: “que estudiara más”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Si tuviera dinero, viajaría.",
+      "en": "If I had money, I would travel.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Si tuviera dinero, viajaría.”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "hablara",
+      "en": "(that I/he/she) spoke"
+    },
+    {
+      "es": "tuviera",
+      "en": "(that I/he/she) had"
+    },
+    {
+      "es": "fuera",
+      "en": "(that I/he/she) were / went"
+    },
+    {
+      "es": "hiciera",
+      "en": "(that I/he/she) did / made"
+    },
+    {
+      "es": "si tuviera",
+      "en": "if I had"
+    },
+    {
+      "es": "pudiera",
+      "en": "(that I/he/she) could"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "hablara",
+      "tuviera",
+      "fuera",
+      "hiciera",
+      "si tuviera"
+    ]
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "unit": {
+    "id": "es-c2-u10",
+    "title": "Rhetorical & Literary Devices",
+    "subtitle": "Metáfora, ironía, lítotes, metonimia and reading figurative Spanish",
+    "level": "C2",
+    "order": 10,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Naming the tricks a great writer plays",
+    "intro": "At C2 you don't just understand Spanish — you notice <b>how</b> it means. Literary and rhetorical figures bend words away from their literal sense: a <b>metáfora</b> equates two things, <b>lítotes</b> praises by denying the opposite, <b>metonimia</b> names the author for the work. Learn to spot and name each one, and you read the way an educated native reads: between the lines.",
+    "sections": [
+      {
+        "tag": "comparación",
+        "heading": "Metáfora vs símil",
+        "body": "A <b>símil</b> compares openly with <b>como</b> or <b>cual</b> (“tus ojos son <b>como</b> el mar”). A <b>metáfora</b> drops the link word and simply <b>identifies</b> one thing with another (“tus ojos <b>son</b> el mar”). The metaphor is bolder: it asserts an equivalence rather than a resemblance.",
+        "conj": [
+          ["símil", "explicit comparison with como/cual"],
+          ["metáfora", "implicit identity, no como"],
+          ["personificación", "a thing given human traits"]
+        ],
+        "ex": [
+          {
+            "es": "Sus palabras eran <b>puñales</b>.",
+            "en": "Her words were daggers.",
+            "note": "metáfora: no ‘como’, pure identity"
+          },
+          {
+            "es": "Duerme <b>como</b> un tronco.",
+            "en": "He sleeps like a log.",
+            "note": "símil: the ‘como’ marks it"
+          }
+        ]
+      },
+      {
+        "tag": "exageración e ironía",
+        "heading": "Hipérbole, ironía, lítotes",
+        "body": "<b>Hipérbole</b> exaggerates for effect (“te lo he dicho <b>mil veces</b>”). <b>Ironía</b> says the opposite of what is meant, cued by tone. <b>Lítotes</b> (understatement) affirms by negating the contrary: <b>no está mal</b> often means “it's excellent”, and <b>no es tonto</b> means “he's sharp”. To read them you must weigh tone against the literal words.",
+        "conj": [
+          ["hipérbole", "deliberate exaggeration"],
+          ["ironía", "means the opposite of the words"],
+          ["lítotes", "affirm by denying the opposite"],
+          ["eufemismo", "a softer word for a harsh thing"]
+        ],
+        "ex": [
+          {
+            "es": "El examen <b>no estuvo nada mal</b>.",
+            "en": "The exam wasn't bad at all. (= it went great)",
+            "note": "lítotes: praise through negation"
+          },
+          {
+            "es": "¡<b>Qué puntual</b>! — al que llega una hora tarde.",
+            "en": "How punctual! — to someone an hour late.",
+            "note": "ironía: opposite of the literal"
+          }
+        ]
+      },
+      {
+        "tag": "sustitución",
+        "heading": "Metonimia y personificación",
+        "body": "<b>Metonimia</b> names a thing by something closely linked to it: <b>leer a Cervantes</b> (his works), <b>ganó el oro</b> (the medal), <b>toda la ciudad lo sabe</b> (its people). <b>Personificación</b> lends human action to the inanimate: <b>la tarde agonizaba</b>. Both ask you to supply the real referent the word only points at.",
+        "conj": [
+          ["leer a Cervantes", "read his books (author → work)"],
+          ["se bebió dos copas", "drank the wine (container → content)"],
+          ["el laurel", "victory / glory (symbol → thing)"],
+          ["la ciudad entera", "its inhabitants (place → people)"]
+        ],
+        "ex": [
+          {
+            "es": "En casa <b>leemos mucho a García Márquez</b>.",
+            "en": "At home we read a lot of García Márquez.",
+            "note": "metonimia: author stands for works"
+          },
+          {
+            "es": "<b>El viento susurraba</b> entre los pinos.",
+            "en": "The wind whispered among the pines.",
+            "note": "personificación"
+          }
+        ]
+      },
+      {
+        "tag": "repetición y juego",
+        "heading": "Anáfora y retruécano",
+        "body": "<b>Anáfora</b> repeats the same word at the start of successive clauses to hammer a point (“<b>Aquí</b> vivió, <b>aquí</b> soñó, <b>aquí</b> murió”). A <b>retruécano</b> reverses the order of two ideas to flip the sense — the famous <b>“¿Siempre se ha de sentir lo que se dice? ¿Nunca se ha de decir lo que se siente?”</b> These are the flourishes of trained rhetoric.",
+        "ex": [
+          {
+            "es": "<b>Ni</b> están todos los que son, <b>ni</b> son todos los que están.",
+            "en": "Not all who are, are here; nor are all who are here, all there is.",
+            "note": "retruécano: the clauses mirror and invert"
+          },
+          {
+            "es": "<b>Temprano</b> madrugó la madrugada, <b>temprano</b> estás rondando.",
+            "en": "Early the dawn rose early…",
+            "note": "anáfora: repeated opening word"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Símil compares with como/cual; metáfora identifies with no link word.",
+      "Lítotes affirms by negation: ‘no está mal’ can mean ‘it's excellent’.",
+      "Metonimia names by association: ‘leer a Cervantes’ = read his works.",
+      "Anáfora repeats an opening word; retruécano inverts two clauses to flip the sense."
+    ],
+    "mistakes": [
+      {
+        "w": "Taking ‘no es tonto’ literally as ‘he is not stupid’ (neutral).",
+        "r": "Reading ‘no es tonto’ as lítotes = ‘he's actually very clever’.",
+        "why": "Understatement negates the opposite to intensify praise, not merely to deny."
+      },
+      {
+        "w": "Calling ‘tus ojos son como estrellas’ a metáfora.",
+        "r": "It's a símil — the ‘como’ makes the comparison explicit.",
+        "why": "A metáfora drops como and asserts identity; with como it is a símil."
+      },
+      {
+        "w": "Reading ‘se bebió toda la botella’ as literally eating glass.",
+        "r": "It's metonimia: the container (botella) stands for its contents (the wine).",
+        "why": "Metonymy names one thing by something adjacent to it."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "“Sus ojos eran dos luceros en la noche.” ¿Qué figura es?",
+      "prompt_en": "“Her eyes were two bright stars in the night.” Which device is it?",
+      "options": [
+        { "id": "a", "text": "metáfora" },
+        { "id": "b", "text": "símil" },
+        { "id": "c", "text": "lítotes" },
+        { "id": "d", "text": "metonimia" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Identifica sin “como” → metáfora.",
+      "no": "There is no ‘como’; the eyes are directly identified with stars → metáfora."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Tras un concierto genial, un crítico dice: “No está nada mal.” Interpretas que…",
+      "prompt_en": "After a superb concert a critic says “It's not bad at all.” You interpret that…",
+      "options": [
+        { "id": "a", "text": "le pareció excelente (lítotes)" },
+        { "id": "b", "text": "le pareció mediocre" },
+        { "id": "c", "text": "no le gustó nada" },
+        { "id": "d", "text": "no tiene opinión" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! La lítotes elogia negando lo contrario.",
+      "no": "This is lítotes: negating ‘malo’ actually intensifies the praise — it was excellent."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"At home we read a lot of Cervantes.\"",
+      "tokens": ["En", "casa", "leemos", "mucho", "a", "Cervantes", "libros", "los"],
+      "answer": ["En", "casa", "leemos", "mucho", "a", "Cervantes"],
+      "ok": "¡Perfecto! Metonimia: el autor por su obra.",
+      "no": "“En casa leemos mucho a Cervantes” — the author's name stands (metonymically) for his books."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Repetir “verde que te quiero verde” al inicio de cada verso es una ___.",
+      "prompt_en": "Repeating the same word at the start of each line is called (a)…",
+      "accepted": ["anafora", "anáfora"],
+      "ignore_accents": true,
+      "hint": "The device of repeating an opening word across clauses.",
+      "ok": "¡Bien! La repetición inicial es la anáfora.",
+      "no": "Repeating the opening word across lines is anáfora."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each device to its defining trait.",
+      "pairs": [
+        ["símil", "compares openly with ‘como’"],
+        ["hipérbole", "deliberate exaggeration"],
+        ["personificación", "human traits given to a thing"],
+        ["eufemismo", "a gentler word for a harsh idea"]
+      ],
+      "ok": "¡Excelente! Figuras retóricas dominadas.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "El tiempo devora hasta los recuerdos más queridos.",
+      "accepted": ["el tiempo devora hasta los recuerdos mas queridos"],
+      "ignore_accents": true,
+      "translation": "Time devours even the dearest memories.",
+      "ok": "¡Correcto! “El tiempo devora…” es una personificación.",
+      "no": "It was: “El tiempo devora hasta los recuerdos más queridos.” (time is personified)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "In a literature seminar, dissecting a poem 📖",
+      "lines": [
+        {
+          "speaker": "Profesora",
+          "es": "En “sus manos eran hielo”, ¿qué recurso identifica el poeta?",
+          "en": "In “her hands were ice”, what device does the poet use?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Es una metáfora: iguala las manos con el hielo sin “como”." },
+        { "id": "b", "text": "Es un símil, porque compara con la palabra “como”." },
+        { "id": "c", "text": "Es una hipérbole, porque exagera un número." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Sin nexo comparativo → metáfora.",
+      "no": "There's no ‘como’ and no exaggerated number; the direct identity makes it a metáfora."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Esa ironía esconde una crítica muy afilada.",
+      "en": "That irony hides a very sharp criticism.",
+      "ok": "¡Perfecto! Muy natural y culto.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Esa ironía esconde una crítica muy afilada.”"
+    }
+  ],
+  "vocab": [
+    { "es": "la metáfora", "en": "metaphor (identity without ‘como’)" },
+    { "es": "el símil", "en": "simile (comparison with ‘como’)" },
+    { "es": "la lítotes", "en": "litotes / understatement" },
+    { "es": "la metonimia", "en": "metonymy (naming by association)" },
+    { "es": "la personificación", "en": "personification" },
+    { "es": "la anáfora", "en": "anaphora (repeated opening word)" },
+    { "es": "el eufemismo", "en": "euphemism" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["la metáfora", "el símil", "la lítotes", "la metonimia", "la anáfora"]
+  }
+}

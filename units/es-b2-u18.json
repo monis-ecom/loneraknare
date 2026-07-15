@@ -1,0 +1,327 @@
+{
+  "unit": {
+    "id": "es-b2-u18",
+    "title": "B2 Review",
+    "subtitle": "Capstone: weave every B2 skill into natural speech",
+    "level": "B2",
+    "order": 18,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Everything you built at B2, working together",
+    "intro": "No new grammar today — this is your <b>B2 capstone</b>. You learned to reach into unreal pasts with the <b>pluperfect subjunctive</b> and <b>type-3 conditionals</b>, to keep tenses in agreement, to compare with <b>como si</b>, to shift focus with the <b>passive</b>, to express change with <b>verbs of transformation</b> and progress with <b>periphrases</b>, to guess with <b>probability</b> tenses, and to spotlight ideas with <b>cleft sentences</b>. Let's recap the highlights, then blend them.",
+    "sections": [
+      {
+        "tag": "pasado irreal",
+        "heading": "Unreal past: si type 3, pluperfect subjunctive, como si",
+        "body": "For regrets and impossible pasts, use <b>si + pluscuamperfecto de subjuntivo + condicional compuesto</b>. <b>Como si</b> always takes a past subjunctive:",
+        "ex": [
+          {
+            "es": "<b>Si hubiera sabido</b> la verdad, <b>habría actuado</b> distinto.",
+            "en": "If I had known the truth, I would have acted differently.",
+            "note": "si type 3: regret about the past"
+          },
+          {
+            "es": "Habla <b>como si</b> lo <b>supiera</b> todo.",
+            "en": "He talks as if he knew everything.",
+            "note": "como si + past subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "cambio y perífrasis",
+        "heading": "Change, passive & verbal periphrases",
+        "body": "<b>Verbs of change</b> (ponerse, volverse, hacerse, llegar a ser) replace 'to become'. The <b>passive</b> shifts focus to the action. <b>Periphrases</b> add nuance — <b>llevar + gerundio</b> (duration), <b>acabar de</b> (just did), <b>ir + gerundio</b> (gradual):",
+        "ex": [
+          {
+            "es": "<b>Se puso</b> nervioso al hablar.",
+            "en": "He got nervous when speaking.",
+            "note": "ponerse = sudden change"
+          },
+          {
+            "es": "El puente <b>fue construido</b> en 1920.",
+            "en": "The bridge was built in 1920.",
+            "note": "passive: focus on the action"
+          },
+          {
+            "es": "<b>Llevo</b> tres años <b>estudiando</b> español.",
+            "en": "I've been studying Spanish for three years.",
+            "note": "llevar + gerundio = ongoing duration"
+          }
+        ]
+      },
+      {
+        "tag": "conjetura y énfasis",
+        "heading": "Probability, connectors & emphasis",
+        "body": "Guess with the <b>future</b> (present conjecture) or <b>conditional</b> (past conjecture). Link ideas with advanced connectors like <b>no obstante</b>, and spotlight with <b>cleft</b> structures:",
+        "ex": [
+          {
+            "es": "<b>Serán</b> las diez; ya no hay nadie.",
+            "en": "It must be ten o'clock; there's no one left.",
+            "note": "future = present guess"
+          },
+          {
+            "es": "Estaba cansado; <b>no obstante</b>, terminó el trabajo.",
+            "en": "He was tired; nevertheless, he finished the work.",
+            "note": "no obstante = however"
+          },
+          {
+            "es": "<b>Lo que</b> me sorprendió <b>fue</b> su calma.",
+            "en": "What surprised me was his calm.",
+            "note": "cleft: lo que … fue …"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Regret about the past: Si hubiera sabido, habría actuado distinto (si type 3).",
+      "como si always takes the past subjunctive: como si lo supiera todo.",
+      "Change verbs: ponerse, volverse, hacerse, llegar a ser. Passive: fue construido.",
+      "Periphrases: llevar + gerundio (duration), acabar de (just), ir + gerundio (gradual).",
+      "Guess with future (serán las diez) / conditional; link with no obstante; spotlight with lo que … fue …"
+    ],
+    "mistakes": [
+      {
+        "w": "Si habría sabido, habría actuado distinto.",
+        "r": "Si hubiera sabido, habría actuado distinto.",
+        "why": "The si-clause of a type-3 conditional uses the pluperfect subjunctive (hubiera sabido), never the conditional."
+      },
+      {
+        "w": "Habla como si sabe todo.",
+        "r": "Habla como si supiera todo.",
+        "why": "como si always requires a past subjunctive: supiera, not the indicative sabe."
+      },
+      {
+        "w": "Estudio español desde hace tres años y todavía estudio.",
+        "r": "Llevo tres años estudiando español.",
+        "why": "For an ongoing duration, the natural periphrasis is llevar + time + gerundio."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Si ___ la verdad, habría actuado de otra manera.",
+      "prompt_en": "If I had known the truth, I would have acted differently.",
+      "options": [
+        {
+          "id": "a",
+          "text": "habría sabido"
+        },
+        {
+          "id": "b",
+          "text": "sabría"
+        },
+        {
+          "id": "c",
+          "text": "hubiera sabido"
+        },
+        {
+          "id": "d",
+          "text": "sabía"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Correcto! si tipo 3 → pluscuamperfecto de subjuntivo: hubiera sabido.",
+      "no": "A type-3 si-clause uses the pluperfect subjunctive: “Si hubiera sabido…”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ya no contesta el teléfono. ___ durmiendo.",
+      "prompt_en": "He's not answering the phone anymore. He's probably sleeping.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Está"
+        },
+        {
+          "id": "b",
+          "text": "Estará"
+        },
+        {
+          "id": "c",
+          "text": "Estaría"
+        },
+        {
+          "id": "d",
+          "text": "Estuvo"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! El futuro expresa conjetura en el presente: estará durmiendo.",
+      "no": "To guess about the present, use the future of probability: “Estará durmiendo”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “He talks as if he knew everything.”",
+      "tokens": [
+        "Habla",
+        "como",
+        "si",
+        "lo",
+        "supiera",
+        "todo",
+        "sabe",
+        "sabría"
+      ],
+      "answer": [
+        "Habla",
+        "como",
+        "si",
+        "lo",
+        "supiera",
+        "todo"
+      ],
+      "ok": "¡Perfecto! como si + imperfecto de subjuntivo.",
+      "no": "“Habla como si lo supiera todo” — como si always takes the past subjunctive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "___ tres años estudiando español. (I've been … for)",
+      "prompt_en": "I've been studying Spanish for three years.",
+      "accepted": [
+        "llevo"
+      ],
+      "ignore_accents": true,
+      "hint": "Periphrasis for ongoing duration: ___ + time + gerundio.",
+      "ok": "¡Bien! llevar + tiempo + gerundio = ongoing duration.",
+      "no": "Use the periphrasis: “Llevo tres años estudiando español.”"
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each B2 tool to its use.",
+      "pairs": [
+        [
+          "si hubiera sabido",
+          "regret about the past"
+        ],
+        [
+          "como si",
+          "as if (+ past subjunctive)"
+        ],
+        [
+          "fue construido",
+          "passive (focus on action)"
+        ],
+        [
+          "llevar + gerundio",
+          "ongoing duration"
+        ]
+      ],
+      "ok": "¡Excelente! Dominas todas tus herramientas de B2.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Se puso nervioso, como si nunca hubiera hablado en público.",
+      "accepted": [
+        "se puso nervioso como si nunca hubiera hablado en publico"
+      ],
+      "ignore_accents": true,
+      "translation": "He got nervous, as if he had never spoken in public.",
+      "ok": "¡Correcto! “Se puso nervioso, como si nunca hubiera hablado en público.”",
+      "no": "It was: “Se puso nervioso, como si nunca hubiera hablado en público.”"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend asks why you didn't get the flat you loved 🏠",
+      "lines": [
+        {
+          "speaker": "Rubén",
+          "es": "¿Y al final por qué no conseguiste el piso?",
+          "en": "So in the end, why didn't you get the flat?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Si hubiera llamado antes, lo habría conseguido. Otra persona lo reservaría por la mañana; lo que me faltó fue rapidez."
+        },
+        {
+          "id": "b",
+          "text": "Si habría llamado antes, lo habría conseguido. Otra persona lo reservó por la mañana; lo que me faltó es rapidez."
+        },
+        {
+          "id": "c",
+          "text": "Si llamaría antes, lo conseguiría. Otra persona lo reservará por la mañana; el que me faltó fue rapidez."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Lamentación (si hubiera… habría), conjetura pasada (reservaría) y énfasis con lo que … fue. ¡Todo el B2 junto!",
+      "no": "Combine a type-3 regret, a past guess, and a cleft: “Si hubiera llamado antes, lo habría conseguido. Otra persona lo reservaría por la mañana; lo que me faltó fue rapidez.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Si hubiera sabido que venías, habría preparado algo.",
+      "en": "If I had known you were coming, I would have prepared something.",
+      "ok": "¡Perfecto! Condicional de tipo 3, muy natural.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "si hubiera sabido",
+      "en": "if I had known (type-3 regret)"
+    },
+    {
+      "es": "como si",
+      "en": "as if (+ past subjunctive)"
+    },
+    {
+      "es": "ponerse",
+      "en": "to become / get (sudden change)"
+    },
+    {
+      "es": "llevar + gerundio",
+      "en": "to have been (doing) for a while"
+    },
+    {
+      "es": "no obstante",
+      "en": "nevertheless / however"
+    },
+    {
+      "es": "lo que",
+      "en": "what / the thing that"
+    },
+    {
+      "es": "habrá",
+      "en": "there must be (future of probability)"
+    },
+    {
+      "es": "echar de menos",
+      "en": "to miss (someone/something)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "si hubiera sabido",
+      "como si",
+      "ponerse",
+      "llevar + gerundio",
+      "no obstante",
+      "lo que"
+    ]
+  }
+}

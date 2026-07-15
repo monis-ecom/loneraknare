@@ -1,0 +1,64 @@
+{
+  "unit":{ "id":"es-a1-u01", "title":"Greetings", "subtitle":"Greetings and goodbyes", "level":"A1", "order":1, "xp_reward":20 },
+  "grammar":{
+    "title":"Open any conversation like a local",
+    "intro":"Spanish greets differently depending on the <b>time of day</b> and how well you know someone. Learn a handful of these and you can start almost any conversation with confidence.",
+    "sections":[
+      { "tag":"saludos", "heading":"Greetings by time of day",
+        "body":"<b>Hola</b> works any time. The rest depend on the clock — and notice they are <b>plural</b> (with -s), which is just how Spanish does it:",
+        "conj":[["Anytime","Hola"],["Morning","Buenos días"],["Afternoon","Buenas tardes"],["Evening / night","Buenas noches"]],
+        "ex":[{"es":"¡Hola! <b>Buenos días</b>.","en":"Hi! Good morning.","note":"before ~12:00"},{"es":"<b>Buenas tardes</b>, señora.","en":"Good afternoon, ma'am.","note":"~12:00–20:00"}] },
+      { "tag":"despedidas", "heading":"Saying goodbye",
+        "body":"A few ways to close a conversation:",
+        "conj":[["Bye","Adiós"],["See you later","Hasta luego"],["See you tomorrow","Hasta mañana"]],
+        "ex":[{"es":"<b>Adiós</b>, hasta mañana.","en":"Bye, see you tomorrow.","note":"leaving"}] },
+      { "tag":"cortesía", "heading":"How are you? + being polite",
+        "body":"Ask a friend with <b>¿Cómo estás?</b> Be more formal with <b>¿Cómo está?</b> And the essentials: <b>gracias</b> (thanks), <b>por favor</b> (please), <b>de nada</b> (you're welcome).",
+        "ex":[{"es":"— ¿Cómo estás? — <b>Muy bien</b>, gracias.","en":"— How are you? — Very well, thanks.","note":"informal"}] }
+    ],
+    "takeaways":["Buenos días = morning · buenas tardes = afternoon · buenas noches = evening AND night.","Greetings are plural: buenos días, not bueno día.","¿Cómo estás? for friends; ¿Cómo está? to be polite."],
+    "mistakes":[
+      {"w":"Buenos noches.","r":"Buenas noches.","why":"Noche is feminine, so use buenas — not buenos."},
+      {"w":"Bueno día.","r":"Buenos días.","why":"The greeting is always plural: buenos días."}
+    ]
+  },
+  "exercises":[
+    { "id":"ex1","type":"multiple_choice","xp":2,"prompt":"(9:00) ___, ¿cómo estás?","prompt_en":"(9:00 a.m.) Good morning, how are you?",
+      "options":[{"id":"a","text":"Buenos días"},{"id":"b","text":"Buenas tardes"},{"id":"c","text":"Buenas noches"},{"id":"d","text":"Hasta luego"}],"answer":"a",
+      "ok":"¡Correcto! Por la mañana → buenos días.","no":"9 a.m. is morning → “Buenos días”." },
+    { "id":"ex2","type":"match_pairs","xp":3,"prompt":"Match each Spanish phrase to its meaning.",
+      "pairs":[["Buenos días","Good morning"],["Buenas tardes","Good afternoon"],["Hasta mañana","See you tomorrow"],["De nada","You're welcome"]],
+      "ok":"¡Muy bien!","no":"" },
+    { "id":"ex3","type":"word_bank","xp":3,"prompt":"Build: \"Good morning, how are you?\"",
+      "tokens":["Buenas","Buenos","días,","noches","¿cómo","estás?","está?"],"answer":["Buenos","días,","¿cómo","estás?"],
+      "ok":"¡Perfecto! Buenos días + ¿cómo estás?","no":"“Buenos días, ¿cómo estás?” — morning + informal you." },
+    { "id":"ex4","type":"fill_blank","xp":2,"prompt":"(22:00) Buenas ___.","prompt_en":"(10 p.m.) Good night.",
+      "accepted":["noches"],"ignore_accents":true,"hint":"Night, feminine plural.","ok":"¡Bien! Buenas noches.","no":"At night → “noches”: Buenas noches." },
+    { "id":"ex5","type":"listening","xp":3,"prompt":"Type what you hear.","tts":"Hola, ¿cómo estás?",
+      "accepted":["hola como estas","hola, ¿como estas?"],"ignore_accents":true,"translation":"Hi, how are you?",
+      "ok":"¡Correcto! “Hola, ¿cómo estás?”","no":"It was: “Hola, ¿cómo estás?” (Hi, how are you?)" },
+    { "id":"ex6","type":"multiple_choice","xp":2,"prompt":"— Gracias.\n— ___","prompt_en":"— Thank you. — You're welcome.",
+      "options":[{"id":"a","text":"De nada"},{"id":"b","text":"Por favor"},{"id":"c","text":"Adiós"},{"id":"d","text":"Hola"}],"answer":"a",
+      "ok":"¡Exacto! “De nada” = you're welcome.","no":"“Gracias” → “De nada” (you're welcome)." },
+    { "id":"ex7","type":"dialogue","xp":3,"scenario":"Meeting someone in the morning ☀️",
+      "lines":[
+        {"speaker":"Ana","es":"¡Buenos días! ¿Cómo estás?","en":"Good morning! How are you?"},
+        {"speaker":"You","blank":true}
+      ],
+      "options":[{"id":"a","text":"Muy bien, gracias. ¿Y tú?"},{"id":"b","text":"Buenas noches."},{"id":"c","text":"Adiós, hasta luego."}],
+      "answer":"a",
+      "ok":"¡Perfecto! A warm, natural reply.","no":"The natural reply is “Muy bien, gracias. ¿Y tú?” (Very well, thanks. And you?)" },
+    { "id":"ex8","type":"speak","xp":3,"say":"Buenos días","en":"Good morning","ok":"¡Perfecto! Clear and natural.","no":"Almost — listen again and match the rhythm of “Buenos días.”" }
+  ],
+  "vocab":[
+    {"es":"hola","en":"hello"},
+    {"es":"buenos días","en":"good morning"},
+    {"es":"buenas tardes","en":"good afternoon"},
+    {"es":"buenas noches","en":"good evening / good night"},
+    {"es":"¿cómo estás?","en":"how are you?"},
+    {"es":"gracias","en":"thank you"},
+    {"es":"de nada","en":"you're welcome"},
+    {"es":"adiós","en":"goodbye"}
+  ],
+  "completion":{ "xp_on_complete":20, "adds_vocab_to_srs":["hola","buenos días","buenas tardes","buenas noches","gracias","adiós"] }
+}

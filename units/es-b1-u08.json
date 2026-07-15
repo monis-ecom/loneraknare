@@ -1,0 +1,317 @@
+{
+  "unit": {
+    "id": "es-b1-u08",
+    "title": "Reported speech",
+    "subtitle": "decir / preguntar que and the tense shifts of “he said that…”",
+    "level": "B1",
+    "order": 8,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Passing on what someone said",
+    "intro": "When you report someone's words in the past — “She <b>said that</b> she was tired” — Spanish <b>shifts the tense back</b>. Introduce statements with <b>decir que</b>, questions with <b>preguntar si</b>, and requests with <b>pedir que</b> + subjunctive. Learn the three main shifts and you can retell any conversation.",
+    "sections": [
+      {
+        "tag": "los cambios",
+        "heading": "The three tense shifts",
+        "body": "When the reporting verb is in the past (<b>dijo</b>), the reported verb steps back one tense:",
+        "conj": [
+          [
+            "present → imperfect",
+            "«Voy» → dijo que iba"
+          ],
+          [
+            "preterite → pluperfect",
+            "«Comí» → dijo que había comido"
+          ],
+          [
+            "future → conditional",
+            "«Iré» → dijo que iría"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "«Estoy cansado» → <b>Dijo que estaba</b> cansado.",
+            "en": "“I'm tired” → He said he was tired.",
+            "note": "present estoy → imperfect estaba"
+          },
+          {
+            "es": "«Iré mañana» → <b>Dijo que iría</b> mañana.",
+            "en": "“I'll go tomorrow” → He said he would go tomorrow.",
+            "note": "future iré → conditional iría"
+          }
+        ]
+      },
+      {
+        "tag": "preguntas",
+        "heading": "Reporting questions: preguntar si",
+        "body": "Yes/no questions become <b>preguntó si</b> (asked whether). Question words (qué, dónde…) stay, but the tense still shifts:",
+        "ex": [
+          {
+            "es": "«¿Vienes?» → Me <b>preguntó si</b> venía.",
+            "en": "“Are you coming?” → He asked me whether I was coming.",
+            "note": "¿…? → preguntó si + imperfect"
+          },
+          {
+            "es": "«¿Dónde vives?» → <b>Preguntó dónde</b> vivía.",
+            "en": "“Where do you live?” → She asked where I lived.",
+            "note": "keep dónde, shift to vivía"
+          }
+        ]
+      },
+      {
+        "tag": "peticiones",
+        "heading": "Reporting requests: pedir que + subjunctive",
+        "body": "A command or request becomes <b>pedir que</b> + the <b>imperfect subjunctive</b>:",
+        "ex": [
+          {
+            "es": "«Ayúdame» → Me <b>pidió que</b> le ayudara.",
+            "en": "“Help me” → He asked me to help him.",
+            "note": "pidió que + ayudara (subjunctive)"
+          },
+          {
+            "es": "«Espera» → Me <b>pidió que</b> esperara.",
+            "en": "“Wait” → She asked me to wait.",
+            "note": "request → subjunctive esperara"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Statements: decir que; questions: preguntar si; requests: pedir que + subjunctive.",
+      "present → imperfect, preterite → pluperfect, future → conditional.",
+      "«Voy» → Dijo que iba. «Iré» → Dijo que iría.",
+      "Reported yes/no questions use si: Me preguntó si venía."
+    ],
+    "mistakes": [
+      {
+        "w": "Dijo que voy al cine.",
+        "r": "Dijo que iba al cine.",
+        "why": "After a past reporting verb, the present voy shifts to the imperfect iba."
+      },
+      {
+        "w": "Dijo que comí antes.",
+        "r": "Dijo que había comido antes.",
+        "why": "A reported preterite shifts to the pluperfect: había comido."
+      },
+      {
+        "w": "Me pidió que le ayudo.",
+        "r": "Me pidió que le ayudara.",
+        "why": "After pedir que, use the subjunctive (ayudara), not the present indicative."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "«Voy al cine» → Dijo que ___ al cine.",
+      "prompt_en": "“I'm going to the cinema” → He said he was going to the cinema.",
+      "options": [
+        {
+          "id": "a",
+          "text": "iba"
+        },
+        {
+          "id": "b",
+          "text": "voy"
+        },
+        {
+          "id": "c",
+          "text": "iré"
+        },
+        {
+          "id": "d",
+          "text": "vaya"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! presente → imperfecto: iba.",
+      "no": "The present “voy” shifts to the imperfect: “Dijo que iba”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "«Iré mañana» → Dijo que ___ mañana.",
+      "prompt_en": "“I'll go tomorrow” → He said he would go tomorrow.",
+      "options": [
+        {
+          "id": "a",
+          "text": "iría"
+        },
+        {
+          "id": "b",
+          "text": "iré"
+        },
+        {
+          "id": "c",
+          "text": "iba"
+        },
+        {
+          "id": "d",
+          "text": "vaya"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! futuro → condicional: iría.",
+      "no": "The future “iré” shifts to the conditional: “Dijo que iría”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “He said that he was tired.”",
+      "tokens": [
+        "Dijo",
+        "que",
+        "estaba",
+        "cansado",
+        "está",
+        "estará"
+      ],
+      "answer": [
+        "Dijo",
+        "que",
+        "estaba",
+        "cansado"
+      ],
+      "ok": "¡Perfecto! presente está → imperfecto estaba.",
+      "no": "“Dijo que estaba cansado” — the present shifts to the imperfect."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "«Comí» → Dijo que ___ comido.",
+      "prompt_en": "“I ate” → He said he had eaten.",
+      "accepted": [
+        "había"
+      ],
+      "ignore_accents": true,
+      "hint": "Preterite shifts to the pluperfect: haber + comido.",
+      "ok": "¡Bien! pretérito → pluscuamperfecto: había comido.",
+      "no": "The preterite shifts to the pluperfect: “Dijo que había comido”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each direct quote to its reported form.",
+      "pairs": [
+        [
+          "«Voy»",
+          "Dijo que iba"
+        ],
+        [
+          "«Comí»",
+          "Dijo que había comido"
+        ],
+        [
+          "«Iré»",
+          "Dijo que iría"
+        ],
+        [
+          "«¿Vienes?»",
+          "Preguntó si venía"
+        ]
+      ],
+      "ok": "¡Excelente! Los cambios de tiempo están claros.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Dijo que estaba cansado.",
+      "accepted": [
+        "dijo que estaba cansado"
+      ],
+      "ignore_accents": true,
+      "translation": "He said he was tired.",
+      "ok": "¡Correcto! “Dijo que estaba cansado.”",
+      "no": "It was: “Dijo que estaba cansado.” (He said he was tired.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "You're relaying a message from Pablo 💬",
+      "lines": [
+        {
+          "speaker": "Ana",
+          "es": "¿Qué te dijo Pablo?",
+          "en": "What did Pablo tell you?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Me dijo que llegaría tarde."
+        },
+        {
+          "id": "b",
+          "text": "Me dijo que llegaré tarde."
+        },
+        {
+          "id": "c",
+          "text": "Me dice que llega tarde."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! futuro «llegaré» → condicional llegaría.",
+      "no": "His future “llegaré” shifts to the conditional after a past verb: “Me dijo que llegaría tarde”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Me preguntó si venía a la fiesta",
+      "en": "He asked me whether I was coming to the party",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “preguntó si venía”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "dijo que",
+      "en": "he/she said that"
+    },
+    {
+      "es": "preguntó si",
+      "en": "he/she asked whether"
+    },
+    {
+      "es": "me dijo que",
+      "en": "he/she told me that"
+    },
+    {
+      "es": "pidió que",
+      "en": "he/she asked (someone) to"
+    },
+    {
+      "es": "contó que",
+      "en": "he/she told (a story) that"
+    },
+    {
+      "es": "iría",
+      "en": "he/she would go"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "dijo que",
+      "preguntó si",
+      "me dijo que",
+      "pidió que",
+      "contó que"
+    ]
+  }
+}

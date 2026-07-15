@@ -1,0 +1,361 @@
+{
+  "unit": {
+    "id": "es-a1-u15",
+    "title": "Reflexive verbs",
+    "subtitle": "Talking about names and daily routines",
+    "level": "A1",
+    "order": 15,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "When the action comes back to you",
+    "intro": "Some Spanish verbs describe something you do <b>to yourself</b> — waking up, showering, getting up. These are <b>reflexive verbs</b>, and they carry a little pronoun (<b>me, te, se…</b>) that goes right <b>before</b> the conjugated verb. The very first one you already meet on day one: <b>me llamo</b> (my name is).",
+    "sections": [
+      {
+        "tag": "pronombres",
+        "heading": "The reflexive pronouns",
+        "body": "Every subject gets its own pronoun. It sits <b>before</b> the verb, which is conjugated as normal:",
+        "conj": [
+          [
+            "yo",
+            "me"
+          ],
+          [
+            "tú",
+            "te"
+          ],
+          [
+            "él/ella",
+            "se"
+          ],
+          [
+            "nosotros",
+            "nos"
+          ],
+          [
+            "vosotros",
+            "os"
+          ],
+          [
+            "ellos",
+            "se"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Me</b> llamo Ana.",
+            "en": "My name is Ana.",
+            "note": "literally: I call myself Ana"
+          },
+          {
+            "es": "¿Cómo <b>te</b> llamas?",
+            "en": "What's your name?",
+            "note": "tú → te"
+          }
+        ]
+      },
+      {
+        "tag": "llamarse",
+        "heading": "llamarse (to be called) — for names",
+        "body": "This is how Spanish says names: the verb <b>llamar</b> + the reflexive pronoun. Never drop the pronoun:",
+        "conj": [
+          [
+            "yo",
+            "me llamo"
+          ],
+          [
+            "tú",
+            "te llamas"
+          ],
+          [
+            "él/ella",
+            "se llama"
+          ],
+          [
+            "nosotros",
+            "nos llamamos"
+          ],
+          [
+            "vosotros",
+            "os llamáis"
+          ],
+          [
+            "ellos",
+            "se llaman"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Él <b>se llama</b> Carlos.",
+            "en": "His name is Carlos.",
+            "note": "él → se llama"
+          },
+          {
+            "es": "Nosotros <b>nos llamamos</b> García.",
+            "en": "Our surname is García.",
+            "note": "nosotros → nos"
+          }
+        ]
+      },
+      {
+        "tag": "rutina",
+        "heading": "Daily routine reflexives",
+        "body": "Use them for everyday actions. The verb still follows its normal -AR/-ER/-IR ending — just add the pronoun in front:",
+        "conj": [
+          [
+            "despertarse",
+            "me despierto"
+          ],
+          [
+            "levantarse",
+            "me levanto"
+          ],
+          [
+            "ducharse",
+            "me ducho"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Me levanto</b> a las siete.",
+            "en": "I get up at seven.",
+            "note": "levantarse + time"
+          },
+          {
+            "es": "Ella <b>se ducha</b> por la mañana.",
+            "en": "She showers in the morning.",
+            "note": "ella → se"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Reflexive pronouns go BEFORE the verb: me, te, se, nos, os, se.",
+      "For names, always use llamarse: Me llamo…, Te llamas…, Se llama…",
+      "The verb keeps its normal ending; you just add the pronoun."
+    ],
+    "mistakes": [
+      {
+        "w": "Yo llamo Ana.",
+        "r": "Me llamo Ana.",
+        "why": "Names need the reflexive pronoun: me llamo, not just llamo."
+      },
+      {
+        "w": "Se llamo Carlos.",
+        "r": "Se llama Carlos.",
+        "why": "With él/ella the ending is -a: se llama."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Hola, ___ llamo Ana.",
+      "prompt_en": "Hi, my name is Ana.",
+      "options": [
+        {
+          "id": "a",
+          "text": "me"
+        },
+        {
+          "id": "b",
+          "text": "te"
+        },
+        {
+          "id": "c",
+          "text": "se"
+        },
+        {
+          "id": "d",
+          "text": "nos"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! yo → me llamo.",
+      "no": "With yo the pronoun is “me” → me llamo."
+    },
+    {
+      "id": "ex2",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I get up at seven.”",
+      "tokens": [
+        "Me",
+        "levanto",
+        "a",
+        "las",
+        "siete",
+        "levanta",
+        "Te"
+      ],
+      "answer": [
+        "Me",
+        "levanto",
+        "a",
+        "las",
+        "siete"
+      ],
+      "ok": "¡Perfecto! Me levanto a las siete.",
+      "no": "yo → me levanto: “Me levanto a las siete.”"
+    },
+    {
+      "id": "ex3",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "¿Cómo ___ llamas?",
+      "prompt_en": "What's your name?",
+      "accepted": [
+        "te"
+      ],
+      "ignore_accents": true,
+      "hint": "tú-form reflexive pronoun.",
+      "ok": "¡Bien! tú → te llamas.",
+      "no": "With tú the pronoun is “te” → te llamas."
+    },
+    {
+      "id": "ex4",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each subject to the correct form of LLAMARSE.",
+      "pairs": [
+        [
+          "yo",
+          "me llamo"
+        ],
+        [
+          "tú",
+          "te llamas"
+        ],
+        [
+          "él",
+          "se llama"
+        ],
+        [
+          "nosotros",
+          "nos llamamos"
+        ]
+      ],
+      "ok": "¡Excelente! You've locked in llamarse.",
+      "no": ""
+    },
+    {
+      "id": "ex5",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Ella se ducha por la mañana.",
+      "accepted": [
+        "ella se ducha por la manana"
+      ],
+      "ignore_accents": true,
+      "translation": "She showers in the morning.",
+      "ok": "¡Correcto! “Ella se ducha por la mañana.”",
+      "no": "It was: “Ella se ducha por la mañana.” (She showers in the morning.)"
+    },
+    {
+      "id": "ex6",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Mi hermano ___ despierta a las ocho.",
+      "prompt_en": "My brother wakes up at eight.",
+      "options": [
+        {
+          "id": "a",
+          "text": "me"
+        },
+        {
+          "id": "b",
+          "text": "te"
+        },
+        {
+          "id": "c",
+          "text": "se"
+        },
+        {
+          "id": "d",
+          "text": "nos"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Sí! él → se despierta.",
+      "no": "With él/ella the pronoun is “se” → se despierta."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Meeting a new classmate 👋",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¡Hola! Me llamo Marta. ¿Y tú?",
+          "en": "Hi! My name is Marta. And you?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Me llamo David, mucho gusto."
+        },
+        {
+          "id": "b",
+          "text": "Se llama David."
+        },
+        {
+          "id": "c",
+          "text": "Yo llamo David."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Me llamo… is exactly right.",
+      "no": "To give your own name use “Me llamo David, mucho gusto.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "despertarse",
+      "en": "to wake up",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "llamarse",
+      "en": "to be called"
+    },
+    {
+      "es": "me llamo",
+      "en": "my name is"
+    },
+    {
+      "es": "levantarse",
+      "en": "to get up"
+    },
+    {
+      "es": "ducharse",
+      "en": "to shower"
+    },
+    {
+      "es": "despertarse",
+      "en": "to wake up"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "llamarse",
+      "me llamo",
+      "levantarse",
+      "ducharse",
+      "despertarse"
+    ]
+  }
+}

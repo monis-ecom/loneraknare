@@ -1,0 +1,353 @@
+{
+  "unit": {
+    "id": "es-a2-u03",
+    "title": "-ER / -IR preterite",
+    "subtitle": "The completed past of -er and -ir verbs: Anoche comí en casa",
+    "level": "A2",
+    "order": 3,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "One set of endings for two verb families",
+    "intro": "You've done the past of <b>-ar</b> verbs — now finish the job with <b>-er</b> and <b>-ir</b>. The great news: in the preterite they share <b>exactly the same endings</b>. Learn them once and you can say <i>comí</i>, <i>viví</i>, <i>escribí</i>, and <i>salí</i>. Keep an eye on the accents in <b>comí</b> and <b>comió</b> — they carry the stress.",
+    "sections": [
+      {
+        "tag": "terminaciones",
+        "heading": "The shared -er / -ir endings",
+        "body": "Drop the <b>-er</b> or <b>-ir</b> and add these endings. The accents on the <b>yo</b> and <b>él/ella</b> forms are essential — they mark the stress:",
+        "conj": [
+          [
+            "yo",
+            "comí"
+          ],
+          [
+            "tú",
+            "comiste"
+          ],
+          [
+            "él/ella",
+            "comió"
+          ],
+          [
+            "nosotros",
+            "comimos"
+          ],
+          [
+            "vosotros",
+            "comisteis"
+          ],
+          [
+            "ellos",
+            "comieron"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Anoche <b>comí</b> en casa.",
+            "en": "Last night I ate at home.",
+            "note": "yo → comí (accent!)"
+          },
+          {
+            "es": "Él <b>comió</b> pizza.",
+            "en": "He ate pizza.",
+            "note": "él/ella → comió"
+          }
+        ]
+      },
+      {
+        "tag": "ir-verbos",
+        "heading": "-IR verbs use the very same endings",
+        "body": "There's no separate set for <b>-ir</b> verbs in the preterite — <b>vivir</b>, <b>escribir</b>, and <b>salir</b> take the identical endings you just learned:",
+        "conj": [
+          [
+            "vivir → yo",
+            "viví"
+          ],
+          [
+            "escribir → yo",
+            "escribí"
+          ],
+          [
+            "salir → yo",
+            "salí"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Escribí</b> una carta anoche.",
+            "en": "I wrote a letter last night.",
+            "note": "escribir → escribí"
+          },
+          {
+            "es": "<b>Salí</b> con mis amigos.",
+            "en": "I went out with my friends.",
+            "note": "salir → salí"
+          }
+        ]
+      },
+      {
+        "tag": "acentos",
+        "heading": "The accent marks the person",
+        "body": "The accent tells you <b>who</b> and <b>when</b>. <b>Comí</b> is 'I ate', <b>comió</b> is 'he/she ate'. Say <b>come</b> with no accent and you're back in the present:",
+        "conj": [
+          [
+            "he/she eats (now)",
+            "come"
+          ],
+          [
+            "I ate",
+            "comí"
+          ],
+          [
+            "he/she ate",
+            "comió"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Yo <b>comí</b> a las dos.",
+            "en": "I ate at two.",
+            "note": "yo → comí"
+          },
+          {
+            "es": "Ella <b>comió</b> tarde.",
+            "en": "She ate late.",
+            "note": "él/ella → comió"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "-er/-ir preterite endings: -í, -iste, -ió, -imos, -isteis, -ieron.",
+      "-er and -ir verbs share the exact same endings: comí, viví, escribí, salí.",
+      "Use it for completed past actions: Anoche comí en casa.",
+      "Mind the accents: comí (I ate) vs comió (he/she ate) vs come (present)."
+    ],
+    "mistakes": [
+      {
+        "w": "Anoche yo comé en casa.",
+        "r": "Anoche yo comí en casa.",
+        "why": "The -er/-ir yo ending is -í, not -é: comí, not comé."
+      },
+      {
+        "w": "Ella comio tarde.",
+        "r": "Ella comió tarde.",
+        "why": "The él/ella form needs the accent: comió, not comio."
+      },
+      {
+        "w": "Anoche salió con mis amigos.",
+        "r": "Anoche salí con mis amigos.",
+        "why": "For 'I went out' use salí; salió is he/she went out."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Anoche yo ___ en casa.",
+      "prompt_en": "Last night I ate at home.",
+      "options": [
+        {
+          "id": "a",
+          "text": "comé"
+        },
+        {
+          "id": "b",
+          "text": "comí"
+        },
+        {
+          "id": "c",
+          "text": "comió"
+        },
+        {
+          "id": "d",
+          "text": "come"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! yo → comí.",
+      "no": "The -er/-ir yo ending is -í: “comí”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Él ___ pizza anoche.",
+      "prompt_en": "He ate pizza last night.",
+      "options": [
+        {
+          "id": "a",
+          "text": "comí"
+        },
+        {
+          "id": "b",
+          "text": "comió"
+        },
+        {
+          "id": "c",
+          "text": "comio"
+        },
+        {
+          "id": "d",
+          "text": "come"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! él/ella → comió.",
+      "no": "The él/ella form is “comió” — with the accent."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I wrote a letter last night.”",
+      "tokens": [
+        "Escribí",
+        "una",
+        "carta",
+        "anoche",
+        "escribió",
+        "comí"
+      ],
+      "answer": [
+        "Escribí",
+        "una",
+        "carta",
+        "anoche"
+      ],
+      "ok": "¡Perfecto! escribir → escribí.",
+      "no": "“Escribí una carta anoche.” — yo preterite of escribir is escribí."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Anoche ___ con mis amigos.",
+      "prompt_en": "Last night I went out with my friends.",
+      "accepted": [
+        "sali"
+      ],
+      "ignore_accents": true,
+      "hint": "yo form of salir in the preterite.",
+      "ok": "¡Bien! salir → salí.",
+      "no": "yo preterite of salir → “salí”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each subject to the correct preterite of COMER.",
+      "pairs": [
+        [
+          "yo",
+          "comí"
+        ],
+        [
+          "tú",
+          "comiste"
+        ],
+        [
+          "él/ella",
+          "comió"
+        ],
+        [
+          "ellos",
+          "comieron"
+        ]
+      ],
+      "ok": "¡Excelente! The -er/-ir preterite is yours.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Anoche bebí un café.",
+      "accepted": [
+        "anoche bebi un cafe"
+      ],
+      "ignore_accents": true,
+      "translation": "Last night I drank a coffee.",
+      "ok": "¡Correcto! “Anoche bebí un café.”",
+      "no": "It was: “Anoche bebí un café.” (Last night I drank a coffee.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend asks about last night 🌙",
+      "lines": [
+        {
+          "speaker": "Lucía",
+          "es": "¿Qué comiste anoche?",
+          "en": "What did you eat last night?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Comí pasta en casa."
+        },
+        {
+          "id": "b",
+          "text": "Comió pasta en casa."
+        },
+        {
+          "id": "c",
+          "text": "Comé pasta en casa."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! yo → comí.",
+      "no": "You need the yo form: “Comí pasta en casa.” (I ate pasta at home.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Anoche comí",
+      "en": "Last night I ate",
+      "ok": "¡Perfecto! Nice stress on comí.",
+      "no": "Almost — tap “Hear it”, then stress the final syllable: co-MÍ."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "anoche",
+      "en": "last night"
+    },
+    {
+      "es": "comí",
+      "en": "I ate"
+    },
+    {
+      "es": "escribí",
+      "en": "I wrote"
+    },
+    {
+      "es": "salí",
+      "en": "I went out"
+    },
+    {
+      "es": "bebí",
+      "en": "I drank"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "anoche",
+      "comí",
+      "escribí",
+      "salí",
+      "bebí"
+    ]
+  }
+}

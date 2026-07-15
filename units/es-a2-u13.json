@@ -1,0 +1,350 @@
+{
+  "unit": {
+    "id": "es-a2-u13",
+    "title": "The Conditional",
+    "subtitle": "Being polite and talking about hypotheticals",
+    "level": "A2",
+    "order": 13,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The 'would' tense: soften requests and imagine",
+    "intro": "The <b>conditional</b> is Spanish's version of English <b>“would”</b>. Use it to be polite (<b>Me gustaría un café</b>), to ask gently (<b>¿Podrías ayudarme?</b>), and to imagine (<b>Sería mejor</b>). The good news: it's built almost exactly like the future, and it shares the same irregular stems.",
+    "sections": [
+      {
+        "tag": "formación",
+        "heading": "One ending for all verbs",
+        "body": "Take the full <b>infinitive</b> and add the same endings to <b>-ar</b>, <b>-er</b>, and <b>-ir</b> verbs. Every ending carries an accent on the <b>í</b>:",
+        "conj": [
+          [
+            "yo",
+            "hablaría"
+          ],
+          [
+            "tú",
+            "hablarías"
+          ],
+          [
+            "él/ella",
+            "hablaría"
+          ],
+          [
+            "nosotros",
+            "hablaríamos"
+          ],
+          [
+            "vosotros",
+            "hablaríais"
+          ],
+          [
+            "ellos",
+            "hablarían"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Yo <b>comería</b> más, pero no tengo hambre.",
+            "en": "I would eat more, but I'm not hungry.",
+            "note": "comer → comería"
+          },
+          {
+            "es": "Nosotros <b>viviríamos</b> en España.",
+            "en": "We would live in Spain.",
+            "note": "vivir → viviríamos"
+          }
+        ]
+      },
+      {
+        "tag": "irregulares",
+        "heading": "Same irregular stems as the future",
+        "body": "A handful of verbs change their stem, but the endings stay identical. If you learned the future, you already know these:",
+        "conj": [
+          [
+            "tener",
+            "tendría"
+          ],
+          [
+            "hacer",
+            "haría"
+          ],
+          [
+            "poder",
+            "podría"
+          ],
+          [
+            "salir",
+            "saldría"
+          ],
+          [
+            "decir",
+            "diría"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Tendría</b> que preguntar a mi jefe.",
+            "en": "I would have to ask my boss.",
+            "note": "tener → tendr-"
+          },
+          {
+            "es": "¿<b>Podrías</b> abrir la ventana?",
+            "en": "Could you open the window?",
+            "note": "poder → podr-"
+          }
+        ]
+      },
+      {
+        "tag": "cortesía",
+        "heading": "Politeness and soft requests",
+        "body": "The conditional makes wishes and requests sound gentle and polite — much softer than the present tense:",
+        "ex": [
+          {
+            "es": "<b>Me gustaría</b> un café, por favor.",
+            "en": "I would like a coffee, please.",
+            "note": "softer than 'quiero'"
+          },
+          {
+            "es": "<b>Sería</b> mejor esperar.",
+            "en": "It would be better to wait.",
+            "note": "ser → sería"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Conditional = infinitive + ía, ías, ía, íamos, íais, ían.",
+      "Every form keeps the accent on the í: hablaría, comería.",
+      "Irregular stems match the future: tendría, haría, podría, saldría, diría.",
+      "Main uses: politeness (Me gustaría) and hypotheticals (Sería mejor)."
+    ],
+    "mistakes": [
+      {
+        "w": "Yo hablaria con él.",
+        "r": "Yo hablaría con él.",
+        "why": "Never drop the accent — the í always carries it: hablaría."
+      },
+      {
+        "w": "Yo poderia ayudar.",
+        "r": "Yo podría ayudar.",
+        "why": "Poder uses the irregular stem podr-, not the full infinitive."
+      },
+      {
+        "w": "Me gustar un café.",
+        "r": "Me gustaría un café.",
+        "why": "For a polite 'I would like', use the conditional gustaría."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ un café, por favor.",
+      "prompt_en": "I would like a coffee, please.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Me gustaría"
+        },
+        {
+          "id": "b",
+          "text": "Me gusta"
+        },
+        {
+          "id": "c",
+          "text": "Me gustaria"
+        },
+        {
+          "id": "d",
+          "text": "Me gustar"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Me gustaría = I would like.",
+      "no": "The polite form is “Me gustaría” — conditional, with the accent."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¿___ ayudarme con esto?",
+      "prompt_en": "Could you help me with this?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Poderías"
+        },
+        {
+          "id": "b",
+          "text": "Podrías"
+        },
+        {
+          "id": "c",
+          "text": "Podrias"
+        },
+        {
+          "id": "d",
+          "text": "Puedes"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! poder → podr- → podrías.",
+      "no": "Poder uses the stem podr-: “¿Podrías ayudarme?”"
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “It would be better to wait.”",
+      "tokens": [
+        "Sería",
+        "mejor",
+        "esperar",
+        "Sera",
+        "es",
+        "espero"
+      ],
+      "answer": [
+        "Sería",
+        "mejor",
+        "esperar"
+      ],
+      "ok": "¡Muy bien! ser → sería + infinitivo.",
+      "no": "“Sería mejor esperar” — conditional + infinitive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Yo en tu lugar ___ que hablar con ella. (tener)",
+      "prompt_en": "In your place, I would have to talk to her.",
+      "accepted": [
+        "tendría"
+      ],
+      "ignore_accents": true,
+      "hint": "Irregular stem: tendr- + ía.",
+      "ok": "¡Bien! tener → tendría.",
+      "no": "Tener is irregular: “tendría”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its conditional (yo) form.",
+      "pairs": [
+        [
+          "hacer",
+          "haría"
+        ],
+        [
+          "decir",
+          "diría"
+        ],
+        [
+          "salir",
+          "saldría"
+        ],
+        [
+          "querer",
+          "querría"
+        ]
+      ],
+      "ok": "¡Excelente! You've got the irregular stems.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Me gustaría viajar a México.",
+      "accepted": [
+        "me gustaria viajar a mexico"
+      ],
+      "ignore_accents": true,
+      "translation": "I would like to travel to Mexico.",
+      "ok": "¡Correcto! “Me gustaría viajar a México.”",
+      "no": "It was: “Me gustaría viajar a México.” (I would like to travel to Mexico.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Ordering politely at a café ☕",
+      "lines": [
+        {
+          "speaker": "Camarero",
+          "es": "Buenas tardes, ¿qué le pongo?",
+          "en": "Good afternoon, what can I get you?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Me gustaría un té, por favor."
+        },
+        {
+          "id": "b",
+          "text": "Quiero té ahora."
+        },
+        {
+          "id": "c",
+          "text": "Tengo un té."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Polite and natural with the conditional.",
+      "no": "The polite choice uses the conditional: “Me gustaría un té, por favor.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "¿Podrías ayudarme?",
+      "en": "Could you help me?",
+      "ok": "¡Perfecto! Clear and polite.",
+      "no": "Almost — tap “Hear it”, then match the sound of “¿Podrías ayudarme?”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "me gustaría",
+      "en": "I would like"
+    },
+    {
+      "es": "podría",
+      "en": "I/he/she could"
+    },
+    {
+      "es": "sería",
+      "en": "it would be"
+    },
+    {
+      "es": "tendría",
+      "en": "I/he/she would have"
+    },
+    {
+      "es": "querría",
+      "en": "I/he/she would want"
+    },
+    {
+      "es": "haría",
+      "en": "I/he/she would do"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "me gustaría",
+      "podría",
+      "sería",
+      "tendría",
+      "querría"
+    ]
+  }
+}

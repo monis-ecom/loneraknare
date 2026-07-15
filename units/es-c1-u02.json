@@ -1,0 +1,245 @@
+{
+  "unit": {
+    "id": "es-c1-u02",
+    "title": "Temporal Clauses: Indicative vs Subjunctive",
+    "subtitle": "cuando, en cuanto, hasta que and the pull of the future",
+    "level": "C1",
+    "order": 2,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "When ‘when’ hasn't happened yet",
+    "intro": "Temporal connectors like <b>cuando</b>, <b>en cuanto</b>, <b>hasta que</b> and <b>mientras</b> switch mood depending on <b>when</b> the action happens. If it's <b>habitual or already realized</b>, use the <b>indicative</b>: <b>Cuando llego a casa, ceno</b>. If it's <b>anticipated and not yet realized</b>, use the <b>subjunctive</b>: <b>Cuando llegues, llámame</b>. Getting this right is what separates a fluent speaker from a merely competent one.",
+    "sections": [
+      {
+        "tag": "regla",
+        "heading": "Realized → indicative; pending → subjunctive",
+        "body": "A single connector takes either mood. Ask: has the action <b>already happened</b> (or does it happen <b>habitually</b>)? Then <b>indicative</b>. Is it <b>still to come</b>, viewed from the moment of speaking? Then <b>subjunctive</b> — never the future tense inside the clause.",
+        "conj": [
+          ["habitual", "Cuando salgo, cierro con llave (indic.)"],
+          ["past fact", "Cuando salí, cerré con llave (indic.)"],
+          ["future / pending", "Cuando salga, cerraré con llave (subj.)"],
+          ["never", "Cuando saldré… ✗"]
+        ],
+        "ex": [
+          {
+            "es": "En cuanto <b>termino</b> de comer, friego los platos.",
+            "en": "As soon as I finish eating, I wash the dishes.",
+            "note": "habit → indicative"
+          },
+          {
+            "es": "En cuanto <b>termine</b> el informe, te lo mando.",
+            "en": "As soon as I finish the report, I'll send it to you.",
+            "note": "pending → subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "conectores",
+        "heading": "The temporal connectors",
+        "body": "These all follow the same rule. <b>Mientras</b> also means ‘as long as’ (condition) with the subjunctive. <b>Siempre que</b> is temporal (‘whenever’) with the indicative for habits, but conditional (‘provided that’) with the subjunctive.",
+        "conj": [
+          ["cuando", "when"],
+          ["en cuanto / tan pronto como", "as soon as"],
+          ["hasta que", "until"],
+          ["mientras", "while / as long as"],
+          ["una vez que", "once"],
+          ["después de que", "after"]
+        ],
+        "ex": [
+          {
+            "es": "No me iré hasta que me <b>digas</b> la verdad.",
+            "en": "I won't leave until you tell me the truth.",
+            "note": "hasta que + pending → subjunctive"
+          },
+          {
+            "es": "Una vez que lo <b>hayas</b> leído, hablamos.",
+            "en": "Once you've read it, we'll talk.",
+            "note": "anticipated completion → subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "matiz",
+        "heading": "‘antes de que’ vs ‘antes de’ + infinitive",
+        "body": "<b>Antes de que</b> <b>always</b> takes the subjunctive, regardless of time, because the second action is by definition not yet real. But when both actions share the <b>same subject</b>, Spanish prefers <b>antes de</b> + <b>infinitive</b>. The same goes for <b>después de</b>.",
+        "conj": [
+          ["different subjects", "antes de que + subjunctive"],
+          ["same subject", "antes de + infinitive"],
+          ["Antes de que llegues…", "you arrive"],
+          ["Antes de salir…", "(I) leave"]
+        ],
+        "ex": [
+          {
+            "es": "Recoge todo antes de que <b>vuelvan</b> tus padres.",
+            "en": "Tidy everything up before your parents get back.",
+            "note": "antes de que → always subjunctive"
+          },
+          {
+            "es": "Antes de <b>salir</b>, apagué las luces.",
+            "en": "Before leaving, I turned off the lights.",
+            "note": "same subject → infinitive"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Same connector, two moods: realized/habitual → indicative; pending/future → subjunctive.",
+      "Never put the future tense inside the temporal clause: Cuando llegues (not llegarás).",
+      "antes de que ALWAYS takes the subjunctive.",
+      "Same subject? Prefer antes de / después de + infinitive over the que clause."
+    ],
+    "mistakes": [
+      {
+        "w": "Cuando llegarás a Madrid, llámame.",
+        "r": "Cuando llegues a Madrid, llámame.",
+        "why": "A pending future action inside a temporal clause takes the subjunctive, not the future tense: llegues."
+      },
+      {
+        "w": "Te espero hasta que vienes.",
+        "r": "Te espero hasta que vengas.",
+        "why": "The arrival hasn't happened yet, so hasta que needs the subjunctive: vengas."
+      },
+      {
+        "w": "Llámame antes de que salgo de casa.",
+        "r": "Llámame antes de que salga de casa.",
+        "why": "antes de que always takes the subjunctive: salga, not salgo."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Te llamo en cuanto ___ a la oficina. (llegar, yo)",
+      "prompt_en": "I'll call you as soon as I get to the office.",
+      "options": [
+        { "id": "a", "text": "llegue" },
+        { "id": "b", "text": "llego" },
+        { "id": "c", "text": "llegaré" },
+        { "id": "d", "text": "llegara" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Acción futura pendiente → subjuntivo.",
+      "no": "The arrival is still to come, so the temporal clause takes the subjunctive: “llegue”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Todos los días, cuando ___ del trabajo, saco al perro.",
+      "prompt_en": "Every day, when I get home from work, I walk the dog.",
+      "options": [
+        { "id": "a", "text": "vuelva" },
+        { "id": "b", "text": "vuelvo" },
+        { "id": "c", "text": "volveré" },
+        { "id": "d", "text": "volviera" }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! Acción habitual → indicativo.",
+      "no": "This is a daily habit, so use the indicative: “vuelvo”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Tidy up before your parents get back.”",
+      "tokens": ["Recoge", "antes", "de", "que", "vuelvan", "tus", "padres", "vuelven"],
+      "answer": ["Recoge", "antes", "de", "que", "vuelvan", "tus", "padres"],
+      "ok": "¡Perfecto! antes de que → siempre subjuntivo: vuelvan.",
+      "no": "“Recoge antes de que vuelvan tus padres” — antes de que always takes the subjunctive vuelvan."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "No pienso moverme de aquí hasta que me lo ___. (explicar, tú)",
+      "prompt_en": "I don't intend to move from here until you explain it to me.",
+      "accepted": ["expliques"],
+      "ignore_accents": true,
+      "hint": "hasta que + an action still to come → subjunctive of explicar.",
+      "ok": "¡Bien! Acción no realizada → expliques.",
+      "no": "The explanation hasn't happened yet, so hasta que needs the subjunctive: “expliques”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each sentence half to its correct verb form.",
+      "pairs": [
+        ["Cuando era niño, cuando llovía…", "me quedaba en casa"],
+        ["Mañana, cuando llueva…", "me quedaré en casa"],
+        ["Avísame en cuanto…", "sepas algo"],
+        ["Siempre te avisa en cuanto…", "sabe algo"]
+      ],
+      "ok": "¡Excelente! Realizado o habitual → indicativo; pendiente → subjuntivo.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Una vez que hayas firmado, te enviaré el contrato.",
+      "accepted": ["una vez que hayas firmado te enviare el contrato"],
+      "ignore_accents": true,
+      "translation": "Once you've signed, I'll send you the contract.",
+      "ok": "¡Correcto! “Una vez que hayas firmado, te enviaré el contrato.”",
+      "no": "It was: “Una vez que hayas firmado, te enviaré el contrato.” (Once you've signed, I'll send you the contract.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Coordinating a delivery 📦",
+      "lines": [
+        {
+          "speaker": "Repartidor",
+          "es": "No estaré en casa toda la mañana. ¿Cómo quedamos con el paquete?",
+          "en": "I won't be home all morning. How shall we handle the parcel?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Déjelo con el portero en cuanto llegue el mensajero." },
+        { "id": "b", "text": "Déjelo con el portero en cuanto llega el mensajero." },
+        { "id": "c", "text": "Déjelo con el portero en cuanto llegará el mensajero." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Llegada futura → en cuanto + subjuntivo.",
+      "no": "The courier's arrival is still to come, so use the subjunctive: “en cuanto llegue”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Hablamos cuando tengas un momento.",
+      "en": "We'll talk when you have a moment.",
+      "ok": "¡Perfecto! Cuando + subjuntivo, natural y correcto.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Hablamos cuando tengas un momento.”"
+    }
+  ],
+  "vocab": [
+    { "es": "cuando llegues", "en": "when you arrive (future)" },
+    { "es": "en cuanto", "en": "as soon as" },
+    { "es": "tan pronto como", "en": "as soon as" },
+    { "es": "hasta que", "en": "until" },
+    { "es": "antes de que", "en": "before (+ subjunctive)" },
+    { "es": "una vez que", "en": "once" },
+    { "es": "mientras", "en": "while / as long as" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "cuando llegues",
+      "en cuanto",
+      "hasta que",
+      "antes de que",
+      "una vez que"
+    ]
+  }
+}

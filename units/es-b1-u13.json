@@ -1,0 +1,318 @@
+{
+  "unit": {
+    "id": "es-b1-u13",
+    "title": "Si Clauses (Real Conditions)",
+    "subtitle": "Talking about real, likely situations with 'if'",
+    "level": "B1",
+    "order": 13,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "If this happens, that follows: the first conditional",
+    "intro": "When a condition is <b>real and likely</b> — something that genuinely might happen — Spanish uses <b>si</b> + the <b>present indicative</b>. The result can be in the <b>present</b>, the <b>future</b>, or a <b>command</b>. The golden rule: after <b>si</b> for a real condition, <b>never</b> use the future. Say <b>Si tengo tiempo</b>, never <i>si tendré tiempo</i>.",
+    "sections": [
+      {
+        "tag": "estructura",
+        "heading": "si + present, then present / future / imperative",
+        "body": "The <b>si</b> clause states the condition in the <b>present indicative</b>. The result clause is flexible — pick the mood that fits your meaning:",
+        "conj": [
+          [
+            "habit / general truth",
+            "Si llueve, no salgo."
+          ],
+          [
+            "future consequence",
+            "Si estudias, aprobarás."
+          ],
+          [
+            "advice / command",
+            "Si llueve, no salgas."
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Si tengo</b> tiempo, <b>voy</b> al cine.",
+            "en": "If I have time, I go to the cinema.",
+            "note": "present + present"
+          },
+          {
+            "es": "<b>Si tengo</b> tiempo, <b>iré</b> al cine.",
+            "en": "If I have time, I'll go to the cinema.",
+            "note": "present + future"
+          }
+        ]
+      },
+      {
+        "tag": "regla",
+        "heading": "Never 'si + future'",
+        "body": "This is the mistake to avoid. Even when the result is clearly in the future, the <b>si</b> clause itself stays in the <b>present</b>. English lets you say “if I will have time”; Spanish does not:",
+        "ex": [
+          {
+            "es": "<b>Si estudias</b>, aprobarás el examen.",
+            "en": "If you study, you'll pass the exam.",
+            "note": "not 'si estudiarás'"
+          },
+          {
+            "es": "<b>Si llueve</b> mañana, nos quedamos en casa.",
+            "en": "If it rains tomorrow, we'll stay home.",
+            "note": "llueve, not 'lloverá'"
+          }
+        ]
+      },
+      {
+        "tag": "orden",
+        "heading": "Either order works",
+        "body": "You can lead with the <b>si</b> clause or the result. When <b>si</b> comes first, separate the two halves with a comma; when it comes second, no comma is needed:",
+        "ex": [
+          {
+            "es": "<b>Si llueve</b>, no salgas.",
+            "en": "If it rains, don't go out.",
+            "note": "si first → comma"
+          },
+          {
+            "es": "No salgas <b>si llueve</b>.",
+            "en": "Don't go out if it rains.",
+            "note": "si second → no comma"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Real conditions: si + present indicative.",
+      "Result can be present, future, or imperative: voy / iré / no salgas.",
+      "Never use the future after si: Si tengo (not 'si tendré').",
+      "Si-clause first → comma; result first → no comma."
+    ],
+    "mistakes": [
+      {
+        "w": "Si tendré tiempo, iré al cine.",
+        "r": "Si tengo tiempo, iré al cine.",
+        "why": "After si for a real condition, use the present, never the future."
+      },
+      {
+        "w": "Si estudiarás, aprobarás.",
+        "r": "Si estudias, aprobarás.",
+        "why": "The si clause stays in the present even when the result is future."
+      },
+      {
+        "w": "Si llueve no salgas.",
+        "r": "Si llueve, no salgas.",
+        "why": "When the si clause comes first, add a comma before the result."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Si ___ tiempo, iré al cine.",
+      "prompt_en": "If I have time, I'll go to the cinema.",
+      "options": [
+        {
+          "id": "a",
+          "text": "tengo"
+        },
+        {
+          "id": "b",
+          "text": "tendré"
+        },
+        {
+          "id": "c",
+          "text": "tendría"
+        },
+        {
+          "id": "d",
+          "text": "tener"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Después de si, presente: si tengo.",
+      "no": "After si for a real condition, use the present: “si tengo”, never the future."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Si estudias, ___ el examen.",
+      "prompt_en": "If you study, you'll pass the exam.",
+      "options": [
+        {
+          "id": "a",
+          "text": "aprobarás"
+        },
+        {
+          "id": "b",
+          "text": "apruebas"
+        },
+        {
+          "id": "c",
+          "text": "aprobaras"
+        },
+        {
+          "id": "d",
+          "text": "aprobar"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! si + presente, resultado en futuro: aprobarás.",
+      "no": "The result here is a future consequence: “aprobarás”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “If it rains, don't go out.”",
+      "tokens": [
+        "Si",
+        "llueve,",
+        "no",
+        "salgas",
+        "lloverá",
+        "sales"
+      ],
+      "answer": [
+        "Si",
+        "llueve,",
+        "no",
+        "salgas"
+      ],
+      "ok": "¡Perfecto! si + presente + imperativo negativo.",
+      "no": "“Si llueve, no salgas” — present after si, then a command."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Si ___ tiempo, voy al parque. (tener, yo)",
+      "prompt_en": "If I have time, I go to the park.",
+      "accepted": [
+        "tengo"
+      ],
+      "ignore_accents": true,
+      "hint": "Present indicative of tener, yo form. Never the future.",
+      "ok": "¡Bien! Si tengo tiempo — presente, no futuro.",
+      "no": "Use the present after si: “si tengo”, not 'si tendré'."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each si-condition to its natural result.",
+      "pairs": [
+        [
+          "Si estudias,",
+          "aprobarás"
+        ],
+        [
+          "Si llueve,",
+          "no salgas"
+        ],
+        [
+          "Si tengo tiempo,",
+          "iré al cine"
+        ],
+        [
+          "Si hace calor,",
+          "abro la ventana"
+        ]
+      ],
+      "ok": "¡Excelente! You've matched real conditions to their results.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Si llueve, no salgas.",
+      "accepted": [
+        "si llueve no salgas",
+        "si llueve, no salgas"
+      ],
+      "ignore_accents": true,
+      "translation": "If it rains, don't go out.",
+      "ok": "¡Correcto! “Si llueve, no salgas.”",
+      "no": "It was: “Si llueve, no salgas.” (If it rains, don't go out.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Making weekend plans with a friend 🎬",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Vamos al cine este fin de semana?",
+          "en": "Shall we go to the cinema this weekend?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Si tengo tiempo, iré contigo."
+        },
+        {
+          "id": "b",
+          "text": "Si tendré tiempo, iré contigo."
+        },
+        {
+          "id": "c",
+          "text": "Si tendría tiempo, iré contigo."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! si + presente: si tengo tiempo.",
+      "no": "Use the present after si: “Si tengo tiempo, iré contigo.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Si estudias, aprobarás.",
+      "en": "If you study, you'll pass.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Si estudias, aprobarás.”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "si",
+      "en": "if"
+    },
+    {
+      "es": "si tengo tiempo",
+      "en": "if I have time"
+    },
+    {
+      "es": "si llueve",
+      "en": "if it rains"
+    },
+    {
+      "es": "si estudias",
+      "en": "if you study"
+    },
+    {
+      "es": "entonces",
+      "en": "then"
+    },
+    {
+      "es": "aprobar",
+      "en": "to pass (an exam)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "si",
+      "si tengo tiempo",
+      "si llueve",
+      "si estudias",
+      "entonces"
+    ]
+  }
+}

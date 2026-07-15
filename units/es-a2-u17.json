@@ -1,0 +1,313 @@
+{
+  "unit": {
+    "id": "es-a2-u17",
+    "title": "Reflexives & daily life",
+    "subtitle": "Your routine: levantarse, acostarse, vestirse, and 'each other'",
+    "level": "A2",
+    "order": 17,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Verbs that point back at you",
+    "intro": "Your whole day is built on <b>reflexive verbs</b> — actions you do to <b>yourself</b>: you wake yourself up, wash yourself, dress yourself. In Spanish these carry a little pronoun (<b>me, te, se, nos</b>) that must never disappear. The infinitive ends in <b>-se</b>: <b>levantarse</b>, <b>acostarse</b>, <b>vestirse</b>.",
+    "sections": [
+      {
+        "tag": "la rutina",
+        "heading": "The daily routine",
+        "body": "Put <b>me</b> before the verb for “I”, <b>te</b> for “you”, <b>se</b> for “he/she”. Some of these also change their stem (acostarse → me <b>acuesto</b>, vestirse → me <b>visto</b>):",
+        "conj": [
+          ["levantarse", "me levanto"],
+          ["ducharse", "me ducho"],
+          ["vestirse", "me visto"],
+          ["acostarse", "me acuesto"],
+          ["sentirse", "me siento"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Me levanto</b> a las siete.",
+            "en": "I get up at seven.",
+            "note": "me + levanto"
+          },
+          {
+            "es": "<b>Me acuesto</b> a las once.",
+            "en": "I go to bed at eleven.",
+            "note": "o → ue: acuesto"
+          }
+        ]
+      },
+      {
+        "tag": "recíproco",
+        "heading": "Each other: nos vemos, se conocen",
+        "body": "With <b>nosotros</b> and <b>ellos</b>, the same pronoun can mean “<b>each other</b>”. <b>Nos vemos</b> = we see each other. <b>Se conocen</b> = they know each other.",
+        "ex": [
+          {
+            "es": "<b>Nos vemos</b> mañana.",
+            "en": "See you tomorrow. (We see each other.)",
+            "note": "nos = each other"
+          },
+          {
+            "es": "Ana y Luis <b>se conocen</b> bien.",
+            "en": "Ana and Luis know each other well.",
+            "note": "se = each other"
+          }
+        ]
+      },
+      {
+        "tag": "en pasado",
+        "heading": "Reflexives in the past",
+        "body": "In the preterite, keep the pronoun and change the ending: <b>me levanté</b>, <b>me acosté</b>, <b>me vestí</b>. The pronoun stays out front:",
+        "ex": [
+          {
+            "es": "Ayer <b>me levanté</b> tarde.",
+            "en": "Yesterday I got up late.",
+            "note": "past: me levanté"
+          },
+          {
+            "es": "Anoche <b>me acosté</b> a las doce.",
+            "en": "Last night I went to bed at twelve.",
+            "note": "past: me acosté"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Reflexive pronouns: me, te, se, nos — never drop them.",
+      "Routine verbs: levantarse, ducharse, vestirse, acostarse, sentirse.",
+      "Stem changes: me acuesto, me visto.",
+      "nos/se can mean 'each other': nos vemos, se conocen.",
+      "Past keeps the pronoun: me levanté, me acosté."
+    ],
+    "mistakes": [
+      {
+        "w": "Levanto a las siete.",
+        "r": "Me levanto a las siete.",
+        "why": "The reflexive pronoun 'me' is required — don't drop it."
+      },
+      {
+        "w": "Me acosto a las once.",
+        "r": "Me acuesto a las once.",
+        "why": "acostarse is stem-changing: o → ue, so me acuesto."
+      },
+      {
+        "w": "Te levanto tarde.",
+        "r": "Me levanto tarde.",
+        "why": "If it's about you, use 'me', not 'te'. Match the pronoun to the subject."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ a las siete de la mañana.",
+      "prompt_en": "I get up at seven in the morning.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Levanto"
+        },
+        {
+          "id": "b",
+          "text": "Me levanto"
+        },
+        {
+          "id": "c",
+          "text": "Te levanto"
+        },
+        {
+          "id": "d",
+          "text": "Se levanto"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! Reflexivo → me levanto.",
+      "no": "Use the reflexive pronoun: “Me levanto”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Yo ___ a las once.",
+      "prompt_en": "I go to bed at eleven.",
+      "options": [
+        {
+          "id": "a",
+          "text": "me acosto"
+        },
+        {
+          "id": "b",
+          "text": "me acuesto"
+        },
+        {
+          "id": "c",
+          "text": "acuesto"
+        },
+        {
+          "id": "d",
+          "text": "te acuestas"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! o → ue: me acuesto.",
+      "no": "acostarse changes o → ue: “me acuesto”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I shower and get dressed.”",
+      "tokens": [
+        "Me",
+        "ducho",
+        "y",
+        "me",
+        "visto",
+        "ducho",
+        "vesto"
+      ],
+      "answer": [
+        "Me",
+        "ducho",
+        "y",
+        "me",
+        "visto"
+      ],
+      "ok": "¡Perfecto! Me ducho y me visto.",
+      "no": "“Me ducho y me visto” — keep both 'me' pronouns; vestirse → visto."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "___ vemos mañana.",
+      "prompt_en": "See you tomorrow. (We see each other.)",
+      "accepted": [
+        "nos"
+      ],
+      "ignore_accents": true,
+      "hint": "The 'each other' pronoun for nosotros.",
+      "ok": "¡Bien! Nos vemos mañana.",
+      "no": "'Each other' for we → “nos”: Nos vemos mañana."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each reflexive verb to its meaning.",
+      "pairs": [
+        [
+          "me levanto",
+          "I get up"
+        ],
+        [
+          "me visto",
+          "I get dressed"
+        ],
+        [
+          "me siento",
+          "I feel"
+        ],
+        [
+          "nos vemos",
+          "we see each other"
+        ]
+      ],
+      "ok": "¡Excelente! Your routine is locked in.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Me acuesto muy tarde.",
+      "accepted": [
+        "me acuesto muy tarde"
+      ],
+      "ignore_accents": true,
+      "translation": "I go to bed very late.",
+      "ok": "¡Correcto! “Me acuesto muy tarde.”",
+      "no": "It was: “Me acuesto muy tarde.” (I go to bed very late.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A new coworker asks about your mornings ☕",
+      "lines": [
+        {
+          "speaker": "Pablo",
+          "es": "¿A qué hora te levantas?",
+          "en": "What time do you get up?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Me levanto a las seis y media."
+        },
+        {
+          "id": "b",
+          "text": "Levanto a las seis y media."
+        },
+        {
+          "id": "c",
+          "text": "Te levantas a las seis."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Reflexivo correcto: me levanto.",
+      "no": "Keep the reflexive 'me' and match yourself: “Me levanto a las seis y media.” (I get up at 6:30.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Me acuesto a las once.",
+      "en": "I go to bed at eleven.",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "me acuesto",
+      "en": "I go to bed"
+    },
+    {
+      "es": "me levanto",
+      "en": "I get up"
+    },
+    {
+      "es": "me visto",
+      "en": "I get dressed"
+    },
+    {
+      "es": "me siento",
+      "en": "I feel"
+    },
+    {
+      "es": "nos vemos",
+      "en": "we see each other / see you"
+    },
+    {
+      "es": "se conocen",
+      "en": "they know each other"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "me acuesto",
+      "me visto",
+      "me siento",
+      "nos vemos",
+      "se conocen"
+    ]
+  }
+}

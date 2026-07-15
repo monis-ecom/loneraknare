@@ -1,0 +1,392 @@
+{
+  "unit": {
+    "id": "es-a1-u08",
+    "title": "Time & days",
+    "subtitle": "Telling the time and the days of the week",
+    "level": "A1",
+    "order": 8,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Ask the time and plan your week",
+    "intro": "To tell the time in Spanish you reuse the numbers from the last unit plus a couple of small phrases. Then a quick set of weekday words lets you say <b>when</b> things happen.",
+    "sections": [
+      {
+        "tag": "la-hora",
+        "heading": "¿Qué hora es? — one o'clock is special",
+        "body": "Ask <b>¿Qué hora es?</b> (What time is it?). Use singular <b>Es la una</b> only for 1:00. For every other hour use plural <b>Son las</b> + the number.",
+        "conj": [
+          [
+            "1:00",
+            "Es la una"
+          ],
+          [
+            "2:00",
+            "Son las dos"
+          ],
+          [
+            "3:00",
+            "Son las tres"
+          ],
+          [
+            "5:00",
+            "Son las cinco"
+          ],
+          [
+            "10:00",
+            "Son las diez"
+          ],
+          [
+            "12:00",
+            "Son las doce"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "— ¿Qué hora es? — <b>Es la una</b>.",
+            "en": "— What time is it? — It's one o'clock.",
+            "note": "only 1:00 is singular"
+          },
+          {
+            "es": "<b>Son las tres</b>.",
+            "en": "It's three o'clock.",
+            "note": "plural for 2–12"
+          }
+        ]
+      },
+      {
+        "tag": "minutos",
+        "heading": "Minutes: y cuarto, y media, menos cuarto",
+        "body": "Add minutes with <b>y</b>. Handy shortcuts: <b>y cuarto</b> (:15), <b>y media</b> (:30), <b>menos cuarto</b> (:45).",
+        "conj": [
+          [
+            "2:10",
+            "Son las dos y diez"
+          ],
+          [
+            "4:15",
+            "Son las cuatro y cuarto"
+          ],
+          [
+            "6:30",
+            "Son las seis y media"
+          ],
+          [
+            "7:45",
+            "Son las ocho menos cuarto"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Son las seis y media</b>.",
+            "en": "It's half past six.",
+            "note": ":30 = y media"
+          },
+          {
+            "es": "<b>Es la una y cuarto</b>.",
+            "en": "It's a quarter past one.",
+            "note": "still singular at 1:00"
+          }
+        ]
+      },
+      {
+        "tag": "partes-del-dia",
+        "heading": "Morning, afternoon, night",
+        "body": "To say a.m./p.m., add <b>de la mañana</b> (morning), <b>de la tarde</b> (afternoon) or <b>de la noche</b> (night).",
+        "ex": [
+          {
+            "es": "Son las nueve <b>de la mañana</b>.",
+            "en": "It's nine in the morning.",
+            "note": "a.m."
+          },
+          {
+            "es": "Son las ocho <b>de la noche</b>.",
+            "en": "It's eight at night.",
+            "note": "p.m."
+          }
+        ]
+      },
+      {
+        "tag": "dias",
+        "heading": "Days of the week",
+        "body": "Days are masculine and written in <b>lowercase</b>. <b>el lunes</b> = on Monday; <b>los lunes</b> = on Mondays (every Monday).",
+        "conj": [
+          [
+            "Monday",
+            "lunes"
+          ],
+          [
+            "Tuesday",
+            "martes"
+          ],
+          [
+            "Wednesday",
+            "miércoles"
+          ],
+          [
+            "Thursday",
+            "jueves"
+          ],
+          [
+            "Friday",
+            "viernes"
+          ],
+          [
+            "Saturday / Sunday",
+            "sábado · domingo"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>El lunes</b> trabajo en casa.",
+            "en": "On Monday I work at home.",
+            "note": "el = one specific day"
+          },
+          {
+            "es": "<b>Los sábados</b> descanso.",
+            "en": "On Saturdays I rest.",
+            "note": "los = every week"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "1:00 is singular: Es la una. Everything else: Son las + number.",
+      "y cuarto = :15 · y media = :30 · menos cuarto = :45.",
+      "de la mañana / tarde / noche marks a.m. and p.m.",
+      "Days are lowercase; el lunes = on Monday, los lunes = on Mondays."
+    ],
+    "mistakes": [
+      {
+        "w": "Es las dos.",
+        "r": "Son las dos.",
+        "why": "Only 1:00 uses singular; 2–12 need plural “Son las”."
+      },
+      {
+        "w": "en lunes",
+        "r": "el lunes",
+        "why": "To say “on Monday”, use the article el, not en."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "(1:00) ¿Qué hora es? — ___",
+      "prompt_en": "It's one o'clock.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Son la una"
+        },
+        {
+          "id": "b",
+          "text": "Es la una"
+        },
+        {
+          "id": "c",
+          "text": "Son las una"
+        },
+        {
+          "id": "d",
+          "text": "Es las uno"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! Only 1:00 is singular: Es la una.",
+      "no": "1:00 is special and singular → “Es la una”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "(3:00) ¿Qué hora es? — ___",
+      "prompt_en": "It's three o'clock.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Es las tres"
+        },
+        {
+          "id": "b",
+          "text": "Es la tres"
+        },
+        {
+          "id": "c",
+          "text": "Son las tres"
+        },
+        {
+          "id": "d",
+          "text": "Son la tres"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Muy bien! 2–12 use plural: Son las tres.",
+      "no": "For any hour except 1:00, use “Son las” → “Son las tres”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"It's half past six.\" (6:30)",
+      "tokens": [
+        "Son",
+        "las",
+        "seis",
+        "y",
+        "media",
+        "cuarto",
+        "Es"
+      ],
+      "answer": [
+        "Son",
+        "las",
+        "seis",
+        "y",
+        "media"
+      ],
+      "ok": "¡Perfecto! 6:30 = Son las seis y media.",
+      "no": "“Son las seis y media” — y media = :30."
+    },
+    {
+      "id": "ex4",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each day to its English name.",
+      "pairs": [
+        [
+          "lunes",
+          "Monday"
+        ],
+        [
+          "miércoles",
+          "Wednesday"
+        ],
+        [
+          "viernes",
+          "Friday"
+        ],
+        [
+          "domingo",
+          "Sunday"
+        ]
+      ],
+      "ok": "¡Excelente! You know the week.",
+      "no": ""
+    },
+    {
+      "id": "ex5",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "___ lunes trabajo en casa.",
+      "prompt_en": "On Monday I work at home.",
+      "accepted": [
+        "el"
+      ],
+      "ignore_accents": true,
+      "hint": "“on Monday” uses an article, not “en”.",
+      "ok": "¡Bien! el lunes = on Monday.",
+      "no": "Use the article: “el lunes” = on Monday (not “en lunes”)."
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Son las cuatro y cuarto.",
+      "accepted": [
+        "son las cuatro y cuarto"
+      ],
+      "ignore_accents": true,
+      "translation": "It's a quarter past four (4:15).",
+      "ok": "¡Correcto! “Son las cuatro y cuarto.” (4:15)",
+      "no": "It was: “Son las cuatro y cuarto.” (4:15)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend asks for the time on the street ⏰",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "Perdona, ¿qué hora es?",
+          "en": "Excuse me, what time is it?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Son las diez y media."
+        },
+        {
+          "id": "b",
+          "text": "Es lunes."
+        },
+        {
+          "id": "c",
+          "text": "Tengo veinte años."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! A natural way to give the time.",
+      "no": "The natural reply is a time: “Son las diez y media.” (It's half past ten.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "¿qué hora es?",
+      "en": "what time is it?",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "hora",
+      "en": "hour / time"
+    },
+    {
+      "es": "¿qué hora es?",
+      "en": "what time is it?"
+    },
+    {
+      "es": "y media",
+      "en": "half past"
+    },
+    {
+      "es": "y cuarto",
+      "en": "quarter past"
+    },
+    {
+      "es": "lunes",
+      "en": "Monday"
+    },
+    {
+      "es": "sábado",
+      "en": "Saturday"
+    },
+    {
+      "es": "semana",
+      "en": "week"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "hora",
+      "y media",
+      "y cuarto",
+      "lunes",
+      "sábado",
+      "semana"
+    ]
+  }
+}

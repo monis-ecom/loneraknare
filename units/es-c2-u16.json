@@ -1,0 +1,255 @@
+{
+  "unit": {
+    "id": "es-c2-u16",
+    "title": "Correlatives & Fine-Grained Comparison",
+    "subtitle": "no solo… sino también, tanto… como, cuanto más…, and de vs que",
+    "level": "C2",
+    "order": 16,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Pairs that must travel together",
+    "intro": "At C2, coordination is a matter of precision. Spanish has <b>correlative</b> connectors that come in fixed pairs — <b>no solo… sino (también)</b>, <b>tanto… como</b>, <b>ni… ni</b>, <b>cuanto más… más</b> — where getting the second half wrong instantly marks a non-native. Add to that the razor-thin rule of <b>de</b> vs <b>que</b> in comparisons, and you have the machinery of truly educated Spanish.",
+    "sections": [
+      {
+        "tag": "no solo… sino",
+        "heading": "no solo… sino (que) también",
+        "body": "The counterpart of <b>no solo</b> is <b>sino</b>, never <b>pero</b>. Use plain <b>sino (también)</b> before a word or phrase, but <b>sino que</b> when a full clause with its own conjugated verb follows.",
+        "conj": [
+          ["before a phrase", "no solo… sino (también)"],
+          ["before a clause + verb", "no solo… sino que (además)"]
+        ],
+        "ex": [
+          {
+            "es": "<b>No solo</b> es brillante, <b>sino también</b> humilde.",
+            "en": "He's not only brilliant, but also humble.",
+            "note": "phrase → sino también"
+          },
+          {
+            "es": "<b>No solo</b> me mintió, <b>sino que</b> encima se rió.",
+            "en": "Not only did he lie to me, but on top of that he laughed.",
+            "note": "clause → sino que"
+          }
+        ]
+      },
+      {
+        "tag": "correlativos",
+        "heading": "tanto… como · ni… ni · ya… ya / bien… bien",
+        "body": "<b>Tanto… como</b> links two elements as equals (“both… and”); the verb agrees with the whole set. <b>Ni… ni</b> negates both. The literary pairs <b>ya… ya</b> and <b>bien… bien</b> mean “either… or / now… now” and belong to elevated register.",
+        "conj": [
+          ["both… and", "tanto… como"],
+          ["neither… nor", "ni… ni"],
+          ["either… or (literary)", "bien… bien / ya… ya"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Tanto</b> tú <b>como</b> yo lo sabíamos.",
+            "en": "Both you and I knew it.",
+            "note": "verb in plural: sabíamos"
+          },
+          {
+            "es": "Puedes pagarlo <b>bien</b> en efectivo, <b>bien</b> con tarjeta.",
+            "en": "You may pay either in cash or by card.",
+            "note": "literary “either… or”"
+          }
+        ]
+      },
+      {
+        "tag": "proporción y consecuencia",
+        "heading": "cuanto más… más · tal/tanto… que",
+        "body": "Proportional correlation uses <b>cuanto más/menos… (más/menos)</b> — both halves are obligatory. For result, <b>tal… que</b> (with a noun) and <b>tanto/tan… que</b> (with a verb or adjective) express “so… that”.",
+        "conj": [
+          ["the more… the less", "cuanto más… menos"],
+          ["such… that", "tal… que"],
+          ["so much… that", "tanto… que"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Cuanto más</b> lo pienso, <b>menos</b> lo entiendo.",
+            "en": "The more I think about it, the less I understand it.",
+            "note": "both halves required"
+          },
+          {
+            "es": "Era <b>tal</b> su enfado <b>que</b> no dijo palabra.",
+            "en": "Such was his anger that he didn't say a word.",
+            "note": "tal + noun → result"
+          }
+        ]
+      },
+      {
+        "tag": "de vs que",
+        "heading": "más/menos… de vs más/menos… que",
+        "body": "Use <b>que</b> to compare two different things (<i>más alto que su hermano</i>). Use <b>de</b> before a <b>number/quantity</b> (<i>más de cien</i>) and before a <b>clause of quantity</b>: <b>de lo que / de la que / de los que</b> (<i>más de lo que crees</i>). Mixing them up is the classic C2 slip.",
+        "conj": [
+          ["comparing two things", "más … que"],
+          ["before a number", "más de + número"],
+          ["before a quantity clause", "más de lo que…"]
+        ],
+        "ex": [
+          {
+            "es": "Es más difícil <b>de lo que</b> parece.",
+            "en": "It's harder than it looks.",
+            "note": "quantity clause → de lo que"
+          },
+          {
+            "es": "Vinieron más <b>de</b> cien personas, más <b>que</b> el año pasado.",
+            "en": "More than a hundred people came, more than last year.",
+            "note": "de + number · que + comparison"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "The partner of no solo is sino (sino que before a full clause) — never pero.",
+      "tanto… como and ni… ni are fixed pairs; the verb agrees with the whole set.",
+      "cuanto más… (más/menos)… needs both halves; tal/tanto… que expresses result.",
+      "que compares two things; de goes before a number or a quantity clause (de lo que)."
+    ],
+    "mistakes": [
+      {
+        "w": "No solo es listo, pero también trabajador.",
+        "r": "No solo es listo, sino también trabajador.",
+        "why": "The correlative of no solo is sino (también), not pero."
+      },
+      {
+        "w": "Es más difícil que lo que crees.",
+        "r": "Es más difícil de lo que crees.",
+        "why": "Before a quantity clause use de lo que, never que lo que."
+      },
+      {
+        "w": "Tengo más que veinte libros.",
+        "r": "Tengo más de veinte libros.",
+        "why": "Before a number, comparison uses de, not que."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "A la reunión vinieron más ___ cien personas.",
+      "prompt_en": "More than a hundred people came to the meeting.",
+      "options": [
+        { "id": "a", "text": "de" },
+        { "id": "b", "text": "que" },
+        { "id": "c", "text": "como" },
+        { "id": "d", "text": "tan" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Ante un número → más de.",
+      "no": "Before a number, comparison takes “de”: más de cien."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No solo me mintió, ___ encima se burló de mí.",
+      "prompt_en": "Not only did he lie to me, but on top of that he mocked me.",
+      "options": [
+        { "id": "a", "text": "sino que" },
+        { "id": "b", "text": "pero" },
+        { "id": "c", "text": "sino" },
+        { "id": "d", "text": "si no" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Ante una oración con verbo → sino que.",
+      "no": "A full clause with a conjugated verb follows, so use “sino que” (not pero, sino, or si no)."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “The more I think about it, the less I understand it.”",
+      "tokens": ["menos", "Cuanto", "lo", "pienso,", "más", "lo", "entiendo", "mientras", "cuánto"],
+      "answer": ["Cuanto", "más", "lo", "pienso,", "menos", "lo", "entiendo"],
+      "ok": "¡Perfecto! cuanto más… menos… con las dos mitades.",
+      "no": "“Cuanto más lo pienso, menos lo entiendo” — both halves of the correlation are obligatory."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "El examen fue más fácil ___ lo que esperábamos.",
+      "prompt_en": "The exam was easier than we expected.",
+      "accepted": ["de"],
+      "ignore_accents": true,
+      "hint": "Before a quantity clause (…lo que…), which particle?",
+      "ok": "¡Bien! Ante una cláusula de cantidad → de lo que.",
+      "no": "Before “lo que” expressing quantity, use “de”: más fácil de lo que esperábamos."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each correlative to its English meaning.",
+      "pairs": [
+        ["no solo… sino también", "not only… but also"],
+        ["tanto… como", "both… and"],
+        ["ni… ni", "neither… nor"],
+        ["cuanto más… más", "the more… the more"]
+      ],
+      "ok": "¡Excelente! Pares correlativos dominados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Tanto tú como yo lo sabíamos.",
+      "accepted": ["tanto tu como yo lo sabiamos"],
+      "ignore_accents": true,
+      "translation": "Both you and I knew it.",
+      "ok": "¡Correcto! “Tanto tú como yo lo sabíamos.”",
+      "no": "It was: “Tanto tú como yo lo sabíamos.” (the verb agrees in plural)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend asks whether you prefer the sea or the mountains 🏔️",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Qué prefieres, el mar o la montaña?",
+          "en": "Which do you prefer, the sea or the mountains?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Me gustan tanto el mar como la montaña." },
+        { "id": "b", "text": "Me gusta tanto el mar que la montaña." },
+        { "id": "c", "text": "Me gustan tanto el mar y la montaña." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! tanto… como enlaza los dos por igual.",
+      "no": "The pair is “tanto… como” (both… and): “Me gustan tanto el mar como la montaña.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Cuanto más lo pienso, menos lo entiendo.",
+      "en": "The more I think about it, the less I understand it.",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Cuanto más lo pienso, menos lo entiendo.”"
+    }
+  ],
+  "vocab": [
+    { "es": "no solo… sino también", "en": "not only… but also" },
+    { "es": "tanto… como", "en": "both… and" },
+    { "es": "ni… ni", "en": "neither… nor" },
+    { "es": "cuanto más… más", "en": "the more… the more" },
+    { "es": "tal… que", "en": "such… that (result)" },
+    { "es": "más de lo que", "en": "more than (before a clause)" },
+    { "es": "más de", "en": "more than (before a number)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["no solo… sino también", "tanto… como", "ni… ni", "cuanto más… más", "más de lo que"]
+  }
+}

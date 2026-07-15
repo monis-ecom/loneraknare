@@ -1,0 +1,377 @@
+{
+  "unit": {
+    "id": "es-a2-u04",
+    "title": "Irregular preterite",
+    "subtitle": "The most common irregular past-tense verbs",
+    "level": "A2",
+    "order": 4,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Past tense, but off the beaten path",
+    "intro": "You already know how to form the regular <b>preterite</b> (the finished past: <i>hablé, comí, viví</i>). But the verbs you'll use most — <b>ser, ir, estar, tener, hacer</b> — are irregular. The good news: they share one special set of endings and take <b>no accent marks</b>. Learn these five and you can talk about almost anything you did.",
+    "sections": [
+      {
+        "tag": "ser / ir",
+        "heading": "ser and ir: same forms, context decides",
+        "body": "Here's a Spanish gift: <b>ser</b> (to be) and <b>ir</b> (to go) share the <b>exact same</b> preterite. The sentence tells you which one it is:",
+        "conj": [
+          [
+            "yo",
+            "fui"
+          ],
+          [
+            "tú",
+            "fuiste"
+          ],
+          [
+            "él/ella",
+            "fue"
+          ],
+          [
+            "nosotros",
+            "fuimos"
+          ],
+          [
+            "vosotros",
+            "fuisteis"
+          ],
+          [
+            "ellos",
+            "fueron"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Fui</b> al cine ayer.",
+            "en": "I went to the cinema yesterday.",
+            "note": "here fui = ir (to go)"
+          },
+          {
+            "es": "La fiesta <b>fue</b> increíble.",
+            "en": "The party was incredible.",
+            "note": "here fue = ser (to be)"
+          }
+        ]
+      },
+      {
+        "tag": "estar / tener",
+        "heading": "estar and tener: the -uv- pattern",
+        "body": "Many irregulars use a special stem plus the endings <b>-e, -iste, -o, -imos, -isteis, -ieron</b> (no accents!). <b>Estar</b> → estuv-, <b>tener</b> → tuv-:",
+        "conj": [
+          [
+            "estar → yo",
+            "estuve"
+          ],
+          [
+            "estar → él/ella",
+            "estuvo"
+          ],
+          [
+            "tener → yo",
+            "tuve"
+          ],
+          [
+            "tener → él/ella",
+            "tuvo"
+          ],
+          [
+            "tener → nosotros",
+            "tuvimos"
+          ],
+          [
+            "tener → ellos",
+            "tuvieron"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Estuve</b> en casa toda la tarde.",
+            "en": "I was at home all afternoon.",
+            "note": "estar → estuve"
+          },
+          {
+            "es": "<b>Tuvimos</b> un problema.",
+            "en": "We had a problem.",
+            "note": "tener → tuvimos"
+          }
+        ]
+      },
+      {
+        "tag": "hacer / poder / poner",
+        "heading": "hacer, poder, poner",
+        "body": "Three more high-frequency irregulars. Note that <b>hacer</b> changes the <b>c</b> to <b>z</b> in the él/ella form (<b>hizo</b>) to keep the soft sound:",
+        "conj": [
+          [
+            "hacer → yo",
+            "hice"
+          ],
+          [
+            "hacer → tú",
+            "hiciste"
+          ],
+          [
+            "hacer → él/ella",
+            "hizo"
+          ],
+          [
+            "poder → yo",
+            "pude"
+          ],
+          [
+            "poner → yo",
+            "puse"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Ayer <b>hice</b> la cena.",
+            "en": "Yesterday I made dinner.",
+            "note": "hacer → hice (no accent)"
+          },
+          {
+            "es": "Ella <b>hizo</b> su tarea.",
+            "en": "She did her homework.",
+            "note": "él/ella → hizo, with z"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "ser and ir share one preterite: fui, fuiste, fue, fuimos, fuisteis, fueron.",
+      "estar → estuve, tener → tuve, poder → pude, poner → puse.",
+      "hacer → hice, hiciste, hizo (the c becomes z in hizo).",
+      "These irregular forms carry NO accent marks: fui, hice, tuve."
+    ],
+    "mistakes": [
+      {
+        "w": "Ayer hací la cena.",
+        "r": "Ayer hice la cena.",
+        "why": "Hacer is irregular here: the yo form is hice, not the regular 'hací'."
+      },
+      {
+        "w": "Fuí al cine.",
+        "r": "Fui al cine.",
+        "why": "Fui carries no accent — it's a one-syllable word."
+      },
+      {
+        "w": "Ella hació su tarea.",
+        "r": "Ella hizo su tarea.",
+        "why": "The él/ella form of hacer is hizo, with a z."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ayer yo ___ al mercado.",
+      "prompt_en": "Yesterday I went to the market.",
+      "options": [
+        {
+          "id": "a",
+          "text": "fui"
+        },
+        {
+          "id": "b",
+          "text": "fue"
+        },
+        {
+          "id": "c",
+          "text": "fuiste"
+        },
+        {
+          "id": "d",
+          "text": "fueron"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! yo → fui (ir).",
+      "no": "yo → “fui”. Same form for ser and ir."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ella ___ la cena anoche.",
+      "prompt_en": "She made dinner last night.",
+      "options": [
+        {
+          "id": "a",
+          "text": "hació"
+        },
+        {
+          "id": "b",
+          "text": "hizo"
+        },
+        {
+          "id": "c",
+          "text": "hace"
+        },
+        {
+          "id": "d",
+          "text": "hice"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! hacer → hizo (con z).",
+      "no": "The él/ella form of hacer is “hizo”, with a z."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I had a problem yesterday.”",
+      "tokens": [
+        "Tuve",
+        "un",
+        "problema",
+        "ayer",
+        "tení",
+        "hice"
+      ],
+      "answer": [
+        "Tuve",
+        "un",
+        "problema",
+        "ayer"
+      ],
+      "ok": "¡Perfecto! tener → tuve.",
+      "no": "“Tuve un problema ayer” — tener becomes tuve in the preterite."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Yo ___ en casa toda la tarde.",
+      "prompt_en": "I was at home all afternoon.",
+      "accepted": [
+        "estuve"
+      ],
+      "ignore_accents": true,
+      "hint": "estar, yo form, preterite.",
+      "ok": "¡Bien! estar → estuve.",
+      "no": "estar (yo) → “estuve”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its yo (I) preterite form.",
+      "pairs": [
+        [
+          "ir",
+          "fui"
+        ],
+        [
+          "hacer",
+          "hice"
+        ],
+        [
+          "tener",
+          "tuve"
+        ],
+        [
+          "poder",
+          "pude"
+        ]
+      ],
+      "ok": "¡Excelente! Los irregulares están claros.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Fui al cine ayer.",
+      "accepted": [
+        "fui al cine ayer"
+      ],
+      "ignore_accents": true,
+      "translation": "I went to the cinema yesterday.",
+      "ok": "¡Correcto! “Fui al cine ayer.”",
+      "no": "It was: “Fui al cine ayer.” (I went to the cinema yesterday.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A coworker asks about your weekend 🗓️",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Qué hiciste el fin de semana?",
+          "en": "What did you do on the weekend?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Fui a la playa con mi familia."
+        },
+        {
+          "id": "b",
+          "text": "Voy a la playa mañana."
+        },
+        {
+          "id": "c",
+          "text": "Tengo que ir a la playa."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Fui = el pasado de ir.",
+      "no": "She asked about the past, so use “Fui a la playa con mi familia.” (I went to the beach with my family.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Ayer hice la cena",
+      "en": "Yesterday I made dinner",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “hice”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "fui",
+      "en": "I went / I was"
+    },
+    {
+      "es": "hice",
+      "en": "I did / I made"
+    },
+    {
+      "es": "tuve",
+      "en": "I had"
+    },
+    {
+      "es": "estuve",
+      "en": "I was (location/state)"
+    },
+    {
+      "es": "fue",
+      "en": "it was / he-she went"
+    },
+    {
+      "es": "pude",
+      "en": "I could / I managed"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "fui",
+      "hice",
+      "tuve",
+      "estuve",
+      "fue"
+    ]
+  }
+}

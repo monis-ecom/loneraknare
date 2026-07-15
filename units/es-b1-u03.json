@@ -1,0 +1,310 @@
+{
+  "unit": {
+    "id": "es-b1-u03",
+    "title": "Subjunctive: impersonal expressions",
+    "subtitle": "It's important that…: es importante que, es necesario que, es mejor que",
+    "level": "B1",
+    "order": 3,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Es + adjective + que: judging, advising, guessing",
+    "intro": "One of the most useful subjunctive patterns is <b>es + [adjective] + que</b>. When you <b>judge</b>, <b>advise</b>, or state something is <b>possible</b> — important, necessary, better, likely — the verb after <b>que</b> flips to the <b>subjunctive</b>. But watch the twist at the end: expressions of plain <b>fact</b> keep the indicative.",
+    "sections": [
+      {
+        "tag": "el patrón",
+        "heading": "The pattern",
+        "body": "Start with <b>es</b> + an adjective of value or possibility, add <b>que</b>, then a <b>subjunctive</b> verb. It works for anyone — that's why it's called impersonal.",
+        "conj": [
+          ["It's important that…", "es importante que"],
+          ["It's necessary that…", "es necesario que"],
+          ["It's possible that…", "es posible que"],
+          ["It's better that…", "es mejor que"],
+          ["It's needed that…", "hace falta que"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Es importante que</b> estudies.",
+            "en": "It's important that you study.",
+            "note": "estudiar → estudie/estudies"
+          },
+          {
+            "es": "<b>Es mejor que</b> descanses.",
+            "en": "It's better that you rest.",
+            "note": "descansar → descanse/descanses"
+          }
+        ]
+      },
+      {
+        "tag": "consejo",
+        "heading": "A natural way to advise",
+        "body": "These expressions are how Spanish gives soft advice. <b>Es mejor que</b> and <b>hace falta que</b> let you suggest without ordering. Notice the irregulars slip right in:",
+        "ex": [
+          {
+            "es": "<b>Es necesario que</b> vayas al médico.",
+            "en": "It's necessary that you go to the doctor.",
+            "note": "ir → vaya/vayas"
+          },
+          {
+            "es": "<b>Hace falta que</b> hagas ejercicio.",
+            "en": "You need to do exercise.",
+            "note": "hacer → haga/hagas"
+          }
+        ]
+      },
+      {
+        "tag": "los hechos",
+        "heading": "The exception: facts keep the indicative",
+        "body": "Not every <b>es… que</b> takes the subjunctive. When the expression states a plain <b>fact</b> — <b>es verdad que</b>, <b>es evidente que</b>, <b>es cierto que</b> — the verb stays in the <b>indicative</b>.",
+        "ex": [
+          {
+            "es": "<b>Es verdad que</b> trabajas mucho.",
+            "en": "It's true that you work a lot.",
+            "note": "fact → indicative (trabajas)"
+          },
+          {
+            "es": "<b>Es evidente que</b> sabes la respuesta.",
+            "en": "It's obvious you know the answer.",
+            "note": "fact → indicative (sabes)"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Es + [value/possibility] + que → subjunctive: es importante que estudies.",
+      "Triggers: es importante/necesario/posible/mejor que, hace falta que.",
+      "Irregulars fit right in: vayas, hagas, sepas, esté, tenga.",
+      "Facts keep the indicative: es verdad/evidente/cierto que trabajas."
+    ],
+    "mistakes": [
+      {
+        "w": "Es importante que estudias.",
+        "r": "Es importante que estudies.",
+        "why": "A value judgment + que takes the subjunctive: estudies, not estudias."
+      },
+      {
+        "w": "Es necesario que vas al médico.",
+        "r": "Es necesario que vayas al médico.",
+        "why": "ir flips to the subjunctive here: vayas, not vas."
+      },
+      {
+        "w": "Es verdad que estudies mucho.",
+        "r": "Es verdad que estudias mucho.",
+        "why": "Es verdad que states a fact, so keep the indicative: estudias."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Es importante que tú ___ más.",
+      "prompt_en": "It's important that you study more.",
+      "options": [
+        {
+          "id": "a",
+          "text": "estudias"
+        },
+        {
+          "id": "b",
+          "text": "estudies"
+        },
+        {
+          "id": "c",
+          "text": "estudiar"
+        },
+        {
+          "id": "d",
+          "text": "estudio"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! Es importante que → estudies.",
+      "no": "A value judgment + que → subjunctive: “estudies”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Es verdad que Madrid ___ muy grande.",
+      "prompt_en": "It's true that Madrid is very big.",
+      "options": [
+        {
+          "id": "a",
+          "text": "es"
+        },
+        {
+          "id": "b",
+          "text": "sea"
+        },
+        {
+          "id": "c",
+          "text": "ser"
+        },
+        {
+          "id": "d",
+          "text": "sería"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Es verdad que → indicativo (es).",
+      "no": "Es verdad que states a fact → indicative: “es”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “It's better that you rest.”",
+      "tokens": [
+        "Es",
+        "mejor",
+        "que",
+        "descanses",
+        "descansas",
+        "descansar"
+      ],
+      "answer": [
+        "Es",
+        "mejor",
+        "que",
+        "descanses"
+      ],
+      "ok": "¡Perfecto! Es mejor que descanses — subjuntivo.",
+      "no": "“Es mejor que descanses” — descansar flips to descanses."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Es necesario que tú ___ a tiempo. (llegar)",
+      "prompt_en": "It's necessary that you arrive on time.",
+      "accepted": [
+        "llegues"
+      ],
+      "ignore_accents": true,
+      "hint": "llegar in the subjunctive: lle___.",
+      "ok": "¡Bien! Es necesario que llegues a tiempo.",
+      "no": "Es necesario que → subjunctive: “llegues”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its subjunctive (tú) form.",
+      "pairs": [
+        [
+          "estudiar",
+          "estudies"
+        ],
+        [
+          "descansar",
+          "descanses"
+        ],
+        [
+          "hacer",
+          "hagas"
+        ],
+        [
+          "ir",
+          "vayas"
+        ]
+      ],
+      "ok": "¡Excelente! You've got the pattern down.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Es posible que llueva mañana.",
+      "accepted": [
+        "es posible que llueva manana"
+      ],
+      "ignore_accents": true,
+      "translation": "It's possible it will rain tomorrow.",
+      "ok": "¡Correcto! “Es posible que llueva mañana.”",
+      "no": "It was: “Es posible que llueva mañana.” (It's possible it will rain tomorrow.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend is exhausted before work 😴",
+      "lines": [
+        {
+          "speaker": "Luis",
+          "es": "Estoy muy cansado y mañana trabajo.",
+          "en": "I'm very tired and I work tomorrow."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Es mejor que descanses ahora."
+        },
+        {
+          "id": "b",
+          "text": "Es mejor que descansas ahora."
+        },
+        {
+          "id": "c",
+          "text": "Es verdad que descanses."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Es mejor que + subjuntivo → descanses.",
+      "no": "After 'es mejor que' use the subjunctive: “Es mejor que descanses.” (It's better that you rest.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Es importante que estudies.",
+      "en": "It's important that you study.",
+      "ok": "¡Perfecto! Great pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "es importante que",
+      "en": "it's important that…"
+    },
+    {
+      "es": "es necesario que",
+      "en": "it's necessary that…"
+    },
+    {
+      "es": "es posible que",
+      "en": "it's possible that…"
+    },
+    {
+      "es": "es mejor que",
+      "en": "it's better that…"
+    },
+    {
+      "es": "hace falta que",
+      "en": "it's needed that…"
+    },
+    {
+      "es": "es verdad que",
+      "en": "it's true that… (+ indicative)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "es importante que",
+      "es necesario que",
+      "es posible que",
+      "es mejor que",
+      "hace falta que"
+    ]
+  }
+}

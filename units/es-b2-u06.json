@@ -1,0 +1,335 @@
+{
+  "unit": {
+    "id": "es-b2-u06",
+    "title": "Ojalá & Como Si",
+    "subtitle": "Wishing with ojalá and speaking hypothetically with como si",
+    "level": "B2",
+    "order": 6,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Two expressions that live entirely in the subjunctive",
+    "intro": "Some of the most expressive Spanish hides in two little words. <b>Ojalá</b> (“I hope / if only”) takes a different subjunctive tense depending on how likely the wish is — from a hopeful future to a past regret. <b>Como si</b> (“as if”) is even stricter: it <b>always</b> takes a past subjunctive, because it introduces a comparison that isn't true. Neither one ever accepts the indicative.",
+    "sections": [
+      {
+        "tag": "ojalá",
+        "heading": "Ojalá: three tenses, three feelings",
+        "body": "Choose the tense by how real the wish is. <b>Present subjunctive</b> for a hopeful future, <b>imperfect subjunctive</b> for a wish against present reality, <b>pluperfect subjunctive</b> for a regret about the past:",
+        "conj": [
+          [
+            "Hopeful future",
+            "Ojalá venga"
+          ],
+          [
+            "Wish (unreal now)",
+            "Ojalá viniera / pudiera"
+          ],
+          [
+            "Past regret",
+            "Ojalá hubiera venido"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Ojalá venga</b> mañana.",
+            "en": "I hope he comes tomorrow.",
+            "note": "possible → present subj."
+          },
+          {
+            "es": "<b>Ojalá pudiera</b> ayudarte.",
+            "en": "I wish I could help you.",
+            "note": "unreal now → imperfect subj."
+          }
+        ]
+      },
+      {
+        "tag": "regret",
+        "heading": "Ojalá for regret: the pluperfect subjunctive",
+        "body": "To wish the <b>past</b> had gone differently, use <b>ojalá</b> + <b>hubiera</b> + participle. This is pure regret — it can't be changed now:",
+        "ex": [
+          {
+            "es": "<b>Ojalá hubiera venido</b> a la fiesta.",
+            "en": "I wish he had come to the party.",
+            "note": "past regret → pluperfect subj."
+          },
+          {
+            "es": "<b>Ojalá</b> lo <b>hubiera sabido</b> antes.",
+            "en": "I wish I had known it earlier.",
+            "note": "too late now → pluperfect subj."
+          }
+        ]
+      },
+      {
+        "tag": "comosi",
+        "heading": "Como si: always past subjunctive",
+        "body": "<b>Como si</b> introduces something contrary to fact, so it takes the <b>imperfect subjunctive</b> (as if it were now) or the <b>pluperfect subjunctive</b> (as if it had happened). Never the present, never the indicative:",
+        "conj": [
+          [
+            "as if he were",
+            "como si fuera"
+          ],
+          [
+            "as if you were",
+            "como si fueras"
+          ],
+          [
+            "as if nothing (happened)",
+            "como si nada"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Habla <b>como si fuera</b> experto.",
+            "en": "He talks as if he were an expert.",
+            "note": "not true now → imperfect subj."
+          },
+          {
+            "es": "Me miró <b>como si</b> no me <b>hubiera visto</b> nunca.",
+            "en": "He looked at me as if he had never seen me.",
+            "note": "unreal past → pluperfect subj."
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Ojalá + present subjunctive = hopeful future: Ojalá venga.",
+      "Ojalá + imperfect subjunctive = wish against present reality: Ojalá viniera / pudiera.",
+      "Ojalá + pluperfect subjunctive = past regret: Ojalá hubiera venido.",
+      "Como si ALWAYS takes the imperfect or pluperfect subjunctive: como si fuera, como si hubiera visto."
+    ],
+    "mistakes": [
+      {
+        "w": "Habla como si es experto.",
+        "r": "Habla como si fuera experto.",
+        "why": "Como si never takes the present or indicative; it needs a past subjunctive: fuera."
+      },
+      {
+        "w": "Gastas como si eres rico.",
+        "r": "Gastas como si fueras rico.",
+        "why": "Como si always takes the imperfect subjunctive here: fueras."
+      },
+      {
+        "w": "Ojalá viene mañana.",
+        "r": "Ojalá venga mañana.",
+        "why": "Ojalá takes the subjunctive, never the indicative: venga."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Ojalá ___ mañana. (venir, él)",
+      "prompt_en": "I hope he comes tomorrow.",
+      "options": [
+        {
+          "id": "a",
+          "text": "venga"
+        },
+        {
+          "id": "b",
+          "text": "viene"
+        },
+        {
+          "id": "c",
+          "text": "vendrá"
+        },
+        {
+          "id": "d",
+          "text": "venía"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Ojalá + presente de subjuntivo.",
+      "no": "Ojalá takes the subjunctive; for a hopeful future use “venga”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Habla como si ___ experto. (ser, él)",
+      "prompt_en": "He talks as if he were an expert.",
+      "options": [
+        {
+          "id": "a",
+          "text": "fuera"
+        },
+        {
+          "id": "b",
+          "text": "es"
+        },
+        {
+          "id": "c",
+          "text": "sea"
+        },
+        {
+          "id": "d",
+          "text": "será"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Como si + imperfecto de subjuntivo.",
+      "no": "Como si always takes a past subjunctive: “fuera”, never “es” or “sea”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I wish he had come to the party.”",
+      "tokens": [
+        "Ojalá",
+        "hubiera",
+        "venido",
+        "a",
+        "la",
+        "fiesta",
+        "viniera",
+        "ha"
+      ],
+      "answer": [
+        "Ojalá",
+        "hubiera",
+        "venido",
+        "a",
+        "la",
+        "fiesta"
+      ],
+      "ok": "¡Perfecto! Ojalá + pluscuamperfecto de subjuntivo.",
+      "no": "“Ojalá hubiera venido a la fiesta” — a past regret needs the pluperfect subjunctive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Gastas como si ___ rico. (ser, tú)",
+      "prompt_en": "You spend as if you were rich.",
+      "accepted": [
+        "fueras"
+      ],
+      "ignore_accents": true,
+      "hint": "Como si + imperfect subjunctive of ser (tú).",
+      "ok": "¡Bien! Como si + imperfecto de subjuntivo → fueras.",
+      "no": "Como si takes the imperfect subjunctive: “fueras”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each expression to its meaning.",
+      "pairs": [
+        [
+          "ojalá venga",
+          "I hope he comes"
+        ],
+        [
+          "ojalá pudiera",
+          "I wish I could"
+        ],
+        [
+          "como si fuera",
+          "as if he were"
+        ],
+        [
+          "como si nada",
+          "as if nothing happened"
+        ]
+      ],
+      "ok": "¡Excelente! Ojalá y como si dominados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Ojalá pudiera ayudarte.",
+      "accepted": [
+        "ojala pudiera ayudarte"
+      ],
+      "ignore_accents": true,
+      "translation": "I wish I could help you.",
+      "ok": "¡Correcto! “Ojalá pudiera ayudarte.”",
+      "no": "It was: “Ojalá pudiera ayudarte.” (I wish I could help you.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Talking about a friend who acts arrogant 😒",
+      "lines": [
+        {
+          "speaker": "Sara",
+          "es": "¿Has visto cómo se comporta Luis?",
+          "en": "Have you seen how Luis behaves?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, actúa como si lo supiera todo."
+        },
+        {
+          "id": "b",
+          "text": "Sí, actúa como si lo sabe todo."
+        },
+        {
+          "id": "c",
+          "text": "Sí, actúa como si lo sepa todo."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Como si + imperfecto de subjuntivo → supiera.",
+      "no": "Como si needs a past subjunctive: “como si lo supiera todo”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Habla como si fuera experto.",
+      "en": "He talks as if he were an expert.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Habla como si fuera experto.”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "ojalá",
+      "en": "I hope / if only"
+    },
+    {
+      "es": "ojalá pudiera",
+      "en": "I wish I could"
+    },
+    {
+      "es": "como si",
+      "en": "as if"
+    },
+    {
+      "es": "como si fuera",
+      "en": "as if he/she/it were"
+    },
+    {
+      "es": "como si nada",
+      "en": "as if nothing (had happened)"
+    },
+    {
+      "es": "ojalá hubiera venido",
+      "en": "I wish he had come"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "ojalá",
+      "ojalá pudiera",
+      "como si",
+      "como si fuera",
+      "como si nada"
+    ]
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "unit": {
+    "id": "es-c1-u03",
+    "title": "Concessive Clauses",
+    "subtitle": "aunque, por más que and conceding what you don't know",
+    "level": "C1",
+    "order": 3,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "‘Even though’ vs ‘even if’ — the mood decides",
+    "intro": "Concessive clauses set up an obstacle that fails to stop the main action. With <b>aunque</b>, the mood is the whole message: <b>Aunque llueve, salgo</b> concedes a <b>real, known</b> fact (it IS raining), while <b>Aunque llueva, saldré</b> concedes a <b>hypothetical or immaterial</b> one (rain or not, I'm going). Choosing indicative or subjunctive is a genuinely C1 skill — it lets you signal exactly how committed you are to the fact.",
+    "sections": [
+      {
+        "tag": "aunque",
+        "heading": "aunque: fact (indicative) vs concession (subjunctive)",
+        "body": "Use the <b>indicative</b> when you present the obstacle as a <b>real, verified fact</b> (‘even though’). Use the <b>subjunctive</b> when it's <b>hypothetical, unknown, or you dismiss it as irrelevant</b> (‘even if’ / ‘regardless of whether’). The present subjunctive also downgrades a known fact to ‘granted, but it doesn't matter’.",
+        "conj": [
+          ["real, asserted fact", "Aunque llueve (indic.)"],
+          ["hypothetical / unknown", "Aunque llueva (subj.)"],
+          ["conceded but dismissed", "Aunque llueva, da igual (subj.)"],
+          ["‘even if’", "→ subjunctive"]
+        ],
+        "ex": [
+          {
+            "es": "Aunque <b>está</b> lloviendo, voy a salir a correr.",
+            "en": "Even though it's raining, I'm going out for a run.",
+            "note": "verified fact → indicative"
+          },
+          {
+            "es": "Aunque <b>llueva</b> mañana, saldré a correr.",
+            "en": "Even if it rains tomorrow, I'll go out for a run.",
+            "note": "hypothetical → subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "conectores",
+        "heading": "Other concessive connectors",
+        "body": "<b>A pesar de que</b> works like aunque (indicative for fact, subjunctive for hypothesis). <b>Por más/mucho que</b> normally takes the <b>subjunctive</b> when conceding an unknown intensity. <b>Aun cuando</b> is an emphatic ‘even if/though’. Don't confuse <b>aun</b> (even) with <b>aún</b> (still/yet).",
+        "conj": [
+          ["a pesar de que", "in spite of the fact that"],
+          ["por más/mucho que", "however much / no matter how much"],
+          ["aun cuando", "even if / even when"],
+          ["y eso que", "and that's despite (colloquial)"]
+        ],
+        "ex": [
+          {
+            "es": "Por más que lo <b>intentes</b>, no vas a convencerlo.",
+            "en": "However hard you try, you won't convince him.",
+            "note": "por más que + subjunctive"
+          },
+          {
+            "es": "A pesar de que <b>ganaba</b> bien, lo dejó todo.",
+            "en": "Despite the fact that he earned well, he gave it all up.",
+            "note": "real past fact → indicative"
+          }
+        ]
+      },
+      {
+        "tag": "registro",
+        "heading": "‘si bien’ and ‘y eso que’: always indicative",
+        "body": "Two connectors resist the subjunctive entirely. <b>Si bien</b> (‘although’, formal/written) introduces a <b>conceded real fact</b> and takes the <b>indicative</b>. <b>Y eso que</b> (‘and that's even though’, colloquial and often tacked on afterward) is also always <b>indicative</b>. Both concede something you fully accept as true.",
+        "conj": [
+          ["si bien", "formal, + indicative"],
+          ["y eso que", "colloquial, + indicative"]
+        ],
+        "ex": [
+          {
+            "es": "Si bien <b>reconozco</b> el error, no me arrepiento.",
+            "en": "While I acknowledge the mistake, I don't regret it.",
+            "note": "si bien → indicative"
+          },
+          {
+            "es": "Aprobó el examen, y eso que apenas <b>estudió</b>.",
+            "en": "He passed the exam — and that's despite hardly studying.",
+            "note": "y eso que → indicative"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "aunque + indicative = conceded real fact (‘even though’); + subjunctive = hypothetical or dismissed (‘even if’).",
+      "a pesar de que mirrors aunque; por más/mucho que usually takes the subjunctive.",
+      "si bien and y eso que are always indicative — they concede accepted facts.",
+      "aun (even) ≠ aún (still/yet): watch the accent."
+    ],
+    "mistakes": [
+      {
+        "w": "Aunque tenga mucho dinero, ahora mismo no puedo pagarte.",
+        "r": "Aunque tengo mucho dinero, ahora mismo no puedo pagarte.",
+        "why": "You're conceding a real, current fact (you do have money), so use the indicative tengo, not the hypothetical tenga."
+      },
+      {
+        "w": "Por más que lo intentas, no lo conseguirás.",
+        "r": "Por más que lo intentes, no lo conseguirás.",
+        "why": "por más que concedes an unknown future effort here, so it takes the subjunctive intentes."
+      },
+      {
+        "w": "Si bien sea caro, merece la pena.",
+        "r": "Si bien es caro, merece la pena.",
+        "why": "si bien concedes an accepted fact and always takes the indicative: es, not sea."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Aunque no lo ___ ahora, algún día me lo agradecerás. (entender, tú)",
+      "prompt_en": "Even though you may not understand it now, someday you'll thank me.",
+      "options": [
+        { "id": "a", "text": "entiendas" },
+        { "id": "b", "text": "entiendes" },
+        { "id": "c", "text": "entenderás" },
+        { "id": "d", "text": "entendieras" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Concesión matizada, no afirmada → subjuntivo.",
+      "no": "Here you concede it without asserting it as a plain fact, so the subjunctive fits: “entiendas”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Aunque ___ carísimo, al final me compré el coche.",
+      "prompt_en": "Even though it was really expensive, I ended up buying the car.",
+      "options": [
+        { "id": "a", "text": "fuera" },
+        { "id": "b", "text": "era" },
+        { "id": "c", "text": "sea" },
+        { "id": "d", "text": "haya sido" }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! Hecho real y pasado → indicativo.",
+      "no": "It's a real, verified past fact, so use the indicative: “era”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “However much you insist, I won't change my mind.”",
+      "tokens": ["Por", "más", "que", "insistas", "no", "cambiaré", "de", "idea", "insistes"],
+      "answer": ["Por", "más", "que", "insistas", "no", "cambiaré", "de", "idea"],
+      "ok": "¡Perfecto! por más que → subjuntivo: insistas.",
+      "no": "“Por más que insistas, no cambiaré de idea” — por más que takes the subjunctive insistas."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Si bien la novela ___ larga, se lee en dos días. (ser)",
+      "prompt_en": "Although the novel is long, you can read it in two days.",
+      "accepted": ["es"],
+      "ignore_accents": true,
+      "hint": "si bien concedes an accepted fact → indicative of ser.",
+      "ok": "¡Bien! si bien → indicativo: es.",
+      "no": "si bien always takes the indicative, so it's “es”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each connector to its behaviour.",
+      "pairs": [
+        ["aunque (hecho real)", "+ indicativo"],
+        ["aunque (hipótesis)", "+ subjuntivo"],
+        ["por más que", "+ subjuntivo"],
+        ["si bien", "siempre + indicativo"]
+      ],
+      "ok": "¡Excelente! Ya distingues concesión real de hipotética.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Aunque me lo pidas de rodillas, no pienso ceder.",
+      "accepted": ["aunque me lo pidas de rodillas no pienso ceder"],
+      "ignore_accents": true,
+      "translation": "Even if you beg me on your knees, I won't give in.",
+      "ok": "¡Correcto! “Aunque me lo pidas de rodillas, no pienso ceder.”",
+      "no": "It was: “Aunque me lo pidas de rodillas, no pienso ceder.” (Even if you beg me on your knees, I won't give in.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Debating a risky business move 📊",
+      "lines": [
+        {
+          "speaker": "Marcos",
+          "es": "El mercado está fatal. Quizá deberíamos posponer el lanzamiento.",
+          "en": "The market is terrible. Maybe we should postpone the launch."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Aunque el mercado esté mal, seguiremos adelante con el plan." },
+        { "id": "b", "text": "Aunque el mercado estará mal, seguiremos adelante con el plan." },
+        { "id": "c", "text": "Aunque el mercado sea mal, seguiremos adelante con el plan." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Concesión que restas importancia → subjuntivo estar.",
+      "no": "You're conceding it while dismissing its weight, and estar (not ser) describes a state: “Aunque el mercado esté mal”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Aunque cueste, lo terminaremos a tiempo.",
+      "en": "Even if it's hard, we'll finish it on time.",
+      "ok": "¡Perfecto! Concesión hipotética con subjuntivo, impecable.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Aunque cueste, lo terminaremos a tiempo.”"
+    }
+  ],
+  "vocab": [
+    { "es": "aunque llueva", "en": "even if it rains" },
+    { "es": "aunque llueve", "en": "even though it's raining" },
+    { "es": "a pesar de que", "en": "in spite of the fact that" },
+    { "es": "por más que", "en": "however much / no matter how much" },
+    { "es": "aun cuando", "en": "even if / even when" },
+    { "es": "si bien", "en": "although (formal, + indicative)" },
+    { "es": "y eso que", "en": "and that's even though (colloquial)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "aunque llueva",
+      "aunque llueve",
+      "a pesar de que",
+      "por más que",
+      "si bien"
+    ]
+  }
+}

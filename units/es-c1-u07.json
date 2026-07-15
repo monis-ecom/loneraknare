@@ -1,0 +1,289 @@
+{
+  "unit": {
+    "id": "es-c1-u07",
+    "title": "Argumentative Connectors",
+    "subtitle": "Formal connectors that signal contrast, concession, and consequence",
+    "level": "C1",
+    "order": 7,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Steer an argument like a native writer",
+    "intro": "At C1, what separates you from an intermediate speaker is <b>how you connect ideas</b> in formal, written, or argued Spanish. Words like <b>no obstante</b> (nevertheless), <b>por consiguiente</b> (therefore), and <b>ahora bien</b> (that said) each signal a precise logical relation and belong to an <b>elevated register</b>. One of them, <b>de ahí que</b>, even forces the <b>subjunctive</b>. Master these and your prose reads as native argumentation, not translation.",
+    "sections": [
+      {
+        "tag": "contraste",
+        "heading": "Contrast: no obstante, sin embargo, en cambio, por el contrario",
+        "body": "These flag that what follows <b>runs against</b> the previous idea. <b>Sin embargo</b> and <b>no obstante</b> are near-synonyms (nevertheless), the second being more formal. <b>En cambio</b> contrasts two subjects (by contrast), while <b>por el contrario</b> corrects with the opposite (on the contrary). Note the punctuation: sentence-initial they take a <b>comma</b>; mid-sentence they sit <b>between commas</b>.",
+        "conj": [
+          ["sin embargo", "nevertheless / however"],
+          ["no obstante", "nevertheless (more formal)"],
+          ["en cambio", "by contrast / on the other hand"],
+          ["por el contrario", "on the contrary"]
+        ],
+        "ex": [
+          {
+            "es": "El plan es ambicioso; <b>no obstante</b>, carece de financiación.",
+            "en": "The plan is ambitious; nevertheless, it lacks funding.",
+            "note": "formal contrast, semicolon + comma"
+          },
+          {
+            "es": "Él prefiere la cautela; ella, <b>por el contrario</b>, arriesga.",
+            "en": "He prefers caution; she, on the contrary, takes risks.",
+            "note": "opposite stance, between commas"
+          }
+        ]
+      },
+      {
+        "tag": "consecuencia",
+        "heading": "Consequence: por (lo) tanto, por consiguiente, por ende, así pues",
+        "body": "These draw a <b>conclusion</b> from what precedes (therefore, consequently). <b>Por lo tanto</b> is the everyday-formal choice; <b>por consiguiente</b> and <b>por ende</b> are markedly literary; <b>así pues</b> wraps up an argument (thus, so then). They introduce a result the reader should accept as following logically.",
+        "conj": [
+          ["por lo tanto", "therefore"],
+          ["por consiguiente", "consequently (formal)"],
+          ["por ende", "hence (literary)"],
+          ["así pues", "thus / so then"]
+        ],
+        "ex": [
+          {
+            "es": "Los datos son concluyentes; <b>por consiguiente</b>, revisaremos la política.",
+            "en": "The data are conclusive; consequently, we will revise the policy.",
+            "note": "logical result"
+          },
+          {
+            "es": "No hubo consenso; <b>así pues</b>, se aplazó la votación.",
+            "en": "There was no consensus; thus, the vote was postponed.",
+            "note": "wrapping up"
+          }
+        ]
+      },
+      {
+        "tag": "de ahí que",
+        "heading": "de ahí que + subjunctive",
+        "body": "<b>De ahí que</b> means 'which is why / hence' and, crucially, it <b>requires the subjunctive</b> because it presents the consequence as a derived conclusion rather than a plain fact. Say <b>de ahí que sea</b>, not <i>de ahí que es</i>. It is a hallmark of polished C1 writing.",
+        "conj": [
+          ["de ahí que sea", "which is why it is"],
+          ["de ahí que surja", "hence there arises"],
+          ["de ahí que tenga", "which is why it has"]
+        ],
+        "ex": [
+          {
+            "es": "El mercado es volátil; <b>de ahí que</b> los inversores <b>desconfíen</b>.",
+            "en": "The market is volatile; which is why investors are wary.",
+            "note": "de ahí que + subjunctive (desconfíen)"
+          },
+          {
+            "es": "Nunca documentó el proceso; <b>de ahí que</b> nadie lo <b>entienda</b>.",
+            "en": "He never documented the process; hence nobody understands it.",
+            "note": "entienda, not 'entiende'"
+          }
+        ]
+      },
+      {
+        "tag": "matiz",
+        "heading": "Concession & pivot: ahora bien, aun así",
+        "body": "<b>Ahora bien</b> introduces a <b>qualifying pivot</b> ('that said / now then') — you accept the prior point but add a caveat. <b>Aun así</b> means 'even so / and yet', conceding an obstacle and pressing on anyway. Do not confuse <b>aun así</b> (even so) with <i>aún</i> (still, with accent).",
+        "conj": [
+          ["ahora bien", "that said / however"],
+          ["aun así", "even so / and yet"]
+        ],
+        "ex": [
+          {
+            "es": "La propuesta es sólida. <b>Ahora bien</b>, conviene matizar sus costes.",
+            "en": "The proposal is sound. That said, its costs should be qualified.",
+            "note": "qualifying pivot"
+          },
+          {
+            "es": "Sabía que fracasaría; <b>aun así</b>, lo intentó.",
+            "en": "He knew he would fail; even so, he tried.",
+            "note": "concession, no accent on aun"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Contrast: no obstante / sin embargo (nevertheless), en cambio (by contrast), por el contrario (on the contrary).",
+      "Consequence: por lo tanto, por consiguiente, por ende, así pues (therefore / thus).",
+      "de ahí que ALWAYS takes the subjunctive: de ahí que sea, not 'de ahí que es'.",
+      "ahora bien = qualifying pivot; aun así = 'even so' (no accent on aun)."
+    ],
+    "mistakes": [
+      {
+        "w": "El clima cambia, de ahí que hace más calor.",
+        "r": "El clima cambia, de ahí que haga más calor.",
+        "why": "'De ahí que' triggers the subjunctive: haga, not the indicative hace."
+      },
+      {
+        "w": "Es caro. Sin embargo caro, lo compró.",
+        "r": "Es caro. Aun así, lo compró.",
+        "why": "For 'even so' after conceding an obstacle, use 'aun así', not a doubled 'sin embargo'."
+      },
+      {
+        "w": "Trabajó mucho, por lo tanto que aprobó.",
+        "r": "Trabajó mucho; por lo tanto, aprobó.",
+        "why": "'Por lo tanto' is not followed by 'que'; it introduces the clause directly after a comma."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "La teoría es elegante; ___, no resiste la prueba empírica.",
+      "prompt_en": "The theory is elegant; nevertheless, it does not withstand empirical testing.",
+      "options": [
+        { "id": "a", "text": "no obstante" },
+        { "id": "b", "text": "por lo tanto" },
+        { "id": "c", "text": "es decir" },
+        { "id": "d", "text": "de ahí que" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! 'No obstante' marca el contraste formal.",
+      "no": "The two clauses clash, so you need a contrast marker: 'no obstante' (nevertheless)."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El proceso nunca se documentó; de ahí que nadie lo ___.",
+      "prompt_en": "The process was never documented; which is why nobody understands it.",
+      "options": [
+        { "id": "a", "text": "entienda" },
+        { "id": "b", "text": "entiende" },
+        { "id": "c", "text": "entenderá" },
+        { "id": "d", "text": "entendía" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! 'De ahí que' exige subjuntivo: entienda.",
+      "no": "'De ahí que' forces the subjunctive: 'entienda', not the indicative 'entiende'."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"The evidence is conclusive; consequently, we will revise the policy.\"",
+      "tokens": [
+        "La",
+        "evidencia",
+        "es",
+        "concluyente;",
+        "por",
+        "consiguiente,",
+        "revisaremos",
+        "la",
+        "política",
+        "sin",
+        "embargo"
+      ],
+      "answer": [
+        "La",
+        "evidencia",
+        "es",
+        "concluyente;",
+        "por",
+        "consiguiente,",
+        "revisaremos",
+        "la",
+        "política"
+      ],
+      "ok": "¡Perfecto! 'Por consiguiente' introduce la consecuencia.",
+      "no": "For a conclusion you draw from the evidence, use 'por consiguiente' (consequently), not the contrast marker 'sin embargo'."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "La propuesta es sólida. ___, conviene matizar sus costes.",
+      "prompt_en": "The proposal is sound. That said, its costs should be qualified.",
+      "accepted": [
+        "ahora bien"
+      ],
+      "ignore_accents": true,
+      "hint": "A two-word pivot meaning 'that said / now then'.",
+      "ok": "¡Bien! 'Ahora bien' introduce el matiz.",
+      "no": "The qualifying pivot 'that said' is 'ahora bien'."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each connector to the logical relation it signals.",
+      "pairs": [
+        ["no obstante", "contrast (nevertheless)"],
+        ["por ende", "consequence (hence)"],
+        ["de ahí que", "consequence + subjunctive"],
+        ["ahora bien", "qualifying pivot (that said)"]
+      ],
+      "ok": "¡Excelente! Dominas la lógica de cada conector.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "No obstante, cabe señalar una excepción.",
+      "accepted": [
+        "no obstante cabe senalar una excepcion"
+      ],
+      "ignore_accents": true,
+      "translation": "Nevertheless, an exception should be noted.",
+      "ok": "¡Correcto! “No obstante, cabe señalar una excepción.”",
+      "no": "It was: “No obstante, cabe señalar una excepción.” (Nevertheless, an exception should be noted.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Defending a thesis before a committee 🎓",
+      "lines": [
+        {
+          "speaker": "Tribunal",
+          "es": "Su corpus es reducido. ¿No invalida eso sus conclusiones?",
+          "en": "Your corpus is small. Doesn't that invalidate your conclusions?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Es limitado; aun así, los patrones son estadísticamente significativos." },
+        { "id": "b", "text": "Sí, por lo tanto no sirve para nada, la verdad." },
+        { "id": "c", "text": "De ahí que es un corpus pequeño, no pasa nada." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! 'Aun así' concede el límite y sigue argumentando.",
+      "no": "Concede the objection yet press on with 'aun así' (even so); option c misuses 'de ahí que' with the indicative."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "El argumento es válido; por ende, lo acepto.",
+      "en": "The argument is valid; hence, I accept it.",
+      "ok": "¡Perfecto! Registro formal y natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “El argumento es válido; por ende, lo acepto.”"
+    }
+  ],
+  "vocab": [
+    { "es": "no obstante", "en": "nevertheless (formal)" },
+    { "es": "por consiguiente", "en": "consequently / therefore" },
+    { "es": "por ende", "en": "hence (literary)" },
+    { "es": "de ahí que", "en": "which is why (+ subjunctive)" },
+    { "es": "ahora bien", "en": "that said / however" },
+    { "es": "aun así", "en": "even so / and yet" },
+    { "es": "por el contrario", "en": "on the contrary" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "no obstante",
+      "por consiguiente",
+      "de ahí que",
+      "ahora bien",
+      "aun así"
+    ]
+  }
+}

@@ -1,0 +1,2575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0A0E1A" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Fluenta" />
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="apple-touch-icon" href="/icon-180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+<title>Fluenta — Learn Spanish</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0E1A; --bg2:#0E1526;
+    --surface:rgba(255,255,255,.05); --surface2:rgba(255,255,255,.08);
+    --line:rgba(255,255,255,.10); --line2:rgba(255,255,255,.18);
+    --cyan:#22D3EE; --cyan2:#38BDF8; --blue:#3B82F6; --violet:#8B5CF6;
+    --grad:linear-gradient(135deg,#22D3EE,#3B82F6);
+    --text:#EAF1FB; --muted:#95A3BC; --faint:#5E6E88;
+    --green:#34D399; --green-bg:rgba(52,211,153,.12);
+    --red:#FB7185; --red-bg:rgba(251,113,133,.12);
+    --amber:#FBBF24;
+    --font-head:"Space Grotesk",system-ui,sans-serif;
+    --radius:18px; --radius-sm:13px;
+    --glow:0 0 0 1px var(--line), 0 12px 30px -14px rgba(0,0,0,.7);
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;height:100%;}
+  body{
+    background: var(--bg);
+    color:var(--text); font-family:"DM Sans",system-ui,sans-serif; font-size:17px; line-height:1.5;
+    display:flex; justify-content:center; padding:0; min-height:100dvh;}
+  /* Ambient glow fixed to the viewport — scrolling never reveals a seam / page break. */
+  body::before{ content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(1100px 620px at 50% -10%, rgba(34,211,238,.12), transparent 60%),
+      radial-gradient(900px 520px at 100% 4%, rgba(139,92,246,.10), transparent 55%); }
+  #app{width:100%; max-width:480px; min-height:100dvh; position:relative; z-index:1; display:flex; flex-direction:column;}
+
+  .glass{background:var(--surface); border:1px solid var(--line); backdrop-filter:blur(8px);}
+  .topbar{display:flex; align-items:center; gap:12px; padding:calc(16px + env(safe-area-inset-top)) 20px 14px; position:sticky; top:0; z-index:5;
+    background:linear-gradient(var(--bg) 74%, rgba(10,14,26,0));}
+  .stat{display:flex; align-items:center; gap:6px; font-family:"DM Mono",monospace; font-size:15px; font-weight:500;}
+  .stat .glyph{font-size:17px; line-height:1;}
+  .stat.count{color:var(--muted); margin-left:auto;}
+  .progress{flex:1; height:10px; background:rgba(255,255,255,.07); border:1px solid var(--line); border-radius:99px; overflow:hidden;}
+  .progress > i{display:block; height:100%; width:0; background:var(--grad); border-radius:99px; box-shadow:0 0 12px rgba(34,211,238,.6); transition:width .45s cubic-bezier(.4,1.2,.5,1);}
+  .xbtn{border:none; background:none; color:var(--muted); font-size:24px; line-height:1; cursor:pointer; padding:0 4px; font-family:"DM Sans";}
+  .ibtn{border:1px solid var(--line); background:var(--surface); color:var(--cyan); width:30px; height:30px; border-radius:50%; font-size:15px; cursor:pointer; flex:none; display:grid; place-items:center;}
+
+  .screen{flex:1; padding:calc(8px + env(safe-area-inset-top)) 20px 28px; animation:rise .4s cubic-bezier(.2,.7,.3,1) both;}
+  .topbar + .screen{padding-top:8px;}   /* topbar already cleared the notch */
+  .screen.withnav{padding-bottom:96px;}
+  @keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:none;}}
+  .eyebrow{font-family:"DM Mono",monospace; text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--cyan); margin:0 0 10px;}
+  h1{font-family:var(--font-head); font-weight:700; font-size:30px; line-height:1.12; margin:0 0 8px; letter-spacing:-.02em; color:var(--text);}
+  h2{font-family:var(--font-head); font-weight:600; font-size:21px; margin:0 0 4px; color:var(--text);}
+  p{margin:0 0 14px;}
+
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--glow); padding:20px; margin-bottom:16px;}
+  .grammar-card{position:relative; overflow:hidden;}
+  .grammar-card::before{content:""; position:absolute; inset:0 0 auto 0; height:4px; background:var(--grad);}
+  .verb-tag{display:inline-block; font-family:"DM Mono",monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#04121b; background:var(--cyan); padding:4px 10px; border-radius:99px; margin-bottom:12px; font-weight:500;}
+  .verb-tag.estar{background:var(--violet); color:#fff;}
+  .conj{display:grid; grid-template-columns:1fr 1fr; gap:6px 12px; margin:14px 0; font-size:15px;}
+  .conj div{display:flex; justify-content:space-between; padding:8px 12px; background:rgba(255,255,255,.04); border:1px solid var(--line); border-radius:9px;}
+  .conj div span:first-child{color:var(--muted);}
+  .conj div span:last-child{font-weight:700; color:var(--cyan); font-family:"DM Mono",monospace;}
+  .verb-tag.estar ~ .conj div span:last-child{color:var(--violet);}
+  .ex{border-left:2px solid var(--line2); padding:2px 0 2px 12px; margin:10px 0;}
+  .ex b{font-weight:700; color:#fff;} .ex .en{color:var(--muted); font-size:14px;} .ex .note{font-family:"DM Mono",monospace; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--amber);}
+  .takeaway{display:flex; gap:10px; margin:9px 0; font-size:15px;} .takeaway .k{color:var(--cyan); font-weight:700;}
+  .mistake{background:var(--red-bg); border:1px solid rgba(251,113,133,.25); border-radius:10px; padding:11px 13px; margin:9px 0; font-size:14.5px;}
+  .mistake .w{color:var(--red); text-decoration:line-through;} .mistake .r{color:var(--green); font-weight:700;} .mistake .why{display:block; color:var(--muted); margin-top:3px; font-size:13px;}
+
+  .cta{display:block; width:100%; border:none; cursor:pointer; font-family:"DM Sans"; font-weight:700; font-size:17px; color:#04121b;
+    background:var(--grad); border-radius:var(--radius-sm); padding:16px; box-shadow:0 8px 24px -8px rgba(34,211,238,.55); transition:transform .06s, filter .1s; letter-spacing:.01em;}
+  .cta:active{transform:translateY(2px); filter:brightness(1.05);}
+  .cta[disabled]{opacity:.35; box-shadow:none; cursor:default; background:var(--surface2); color:var(--muted);}
+  .cta.ghost{background:var(--surface); color:var(--text); box-shadow:none; border:1px solid var(--line2);}
+  .cta.ok{background:linear-gradient(135deg,#34D399,#10B981); box-shadow:0 8px 24px -8px rgba(52,211,153,.5);}
+
+  .qtype{font-family:"DM Mono",monospace; text-transform:uppercase; letter-spacing:.14em; font-size:11px; color:var(--muted); margin-bottom:14px;}
+  .qtext{font-family:var(--font-head); font-size:24px; font-weight:600; line-height:1.3; margin-bottom:6px; color:#fff;}
+  .qhint{color:var(--muted); font-size:14px; margin-bottom:20px;}
+
+  .opt{display:flex; align-items:center; gap:12px; width:100%; text-align:left; cursor:pointer; background:var(--surface); border:1.5px solid var(--line); border-radius:var(--radius-sm); padding:15px 16px; margin-bottom:11px; font-size:17px; font-family:"DM Sans"; color:var(--text); transition:transform .05s, border-color .1s;}
+  .opt .key{font-family:"DM Mono",monospace; font-size:13px; color:var(--muted); border:1.5px solid var(--line2); border-radius:6px; width:26px; height:26px; display:grid; place-items:center; flex:none;}
+  .opt:active{transform:translateY(1px);}
+  .opt.sel{border-color:var(--cyan); background:rgba(34,211,238,.10);} .opt.sel .key{border-color:var(--cyan); color:var(--cyan);}
+  .opt.correct{border-color:var(--green); background:var(--green-bg);} .opt.correct .key{border-color:var(--green); color:var(--green);}
+  .opt.wrong{border-color:var(--red); background:var(--red-bg);} .opt.wrong .key{border-color:var(--red); color:var(--red);}
+
+  .answerline{min-height:56px; border-bottom:2px dashed var(--line2); display:flex; flex-wrap:wrap; gap:8px; padding:8px 2px 14px; margin-bottom:18px; align-content:flex-start;}
+  .bank{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:8px;}
+  .chip{font-family:"DM Sans"; font-size:16.5px; background:var(--surface2); border:1.5px solid var(--line2); border-radius:10px; padding:10px 14px; cursor:pointer; color:var(--text); transition:transform .05s;}
+  .chip:active{transform:translateY(1px);}
+  .chip.used{opacity:.25; pointer-events:none;}
+  .answerline .chip{border-color:var(--cyan); background:rgba(34,211,238,.12); color:var(--cyan);}
+
+  .field{width:100%; font-family:"DM Sans"; font-size:19px; padding:15px 16px; border:1.5px solid var(--line2); border-radius:var(--radius-sm); background:var(--surface); color:var(--text); margin-bottom:18px;}
+  .field::placeholder{color:var(--faint);}
+  .field:focus{outline:none; border-color:var(--cyan); box-shadow:0 0 0 3px rgba(34,211,238,.15);}
+
+  .playbtn{display:flex; align-items:center; justify-content:center; gap:12px; width:100%; cursor:pointer; margin-bottom:20px; background:var(--grad); color:#04121b; border:none; border-radius:var(--radius-sm); padding:22px; font-family:"DM Sans"; font-weight:700; font-size:17px; box-shadow:0 8px 24px -8px rgba(34,211,238,.5);}
+  .playbtn:active{transform:translateY(2px);} .playbtn .tri{font-size:22px;}
+  .replay{display:block; margin:-6px auto 18px; background:none; border:none; color:var(--cyan); font-family:"DM Mono",monospace; font-size:13px; cursor:pointer; text-transform:uppercase; letter-spacing:.1em;}
+
+  /* speak (pronunciation) exercise */
+  .mic-wrap{display:flex; flex-direction:column; align-items:center; gap:12px; margin-top:26px;}
+  .micbtn{width:96px; height:96px; border-radius:50%; border:none; cursor:pointer; background:var(--grad); color:#04121b; display:grid; place-items:center; box-shadow:0 10px 30px -8px rgba(34,211,238,.6); transition:transform .06s;}
+  .micbtn .mic-ic{font-size:38px; line-height:1;}
+  .micbtn:active{transform:scale(.96);}
+  .micbtn.rec{background:linear-gradient(135deg,#FB7185,#EF4444); animation:micpulse 1.2s infinite;}
+  @keyframes micpulse{0%{box-shadow:0 0 0 0 rgba(251,113,133,.5)} 70%{box-shadow:0 0 0 22px rgba(251,113,133,0)} 100%{box-shadow:0 0 0 0 rgba(251,113,133,0)}}
+  .mic-status{color:var(--muted); font-size:14px; margin:0; text-align:center;}
+
+  /* dialogue (conversation) exercise */
+  .dscn{font-family:"DM Mono",monospace; text-transform:uppercase; letter-spacing:.1em; font-size:12px; color:var(--amber); margin-bottom:14px;}
+  .dlg{display:flex; flex-direction:column; gap:10px; margin-bottom:18px;}
+  .dbub{max-width:84%; padding:11px 14px; border-radius:16px;}
+  .dbub .dsp{display:block; font-family:"DM Mono",monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:3px;}
+  .dbub .dtx{font-size:16px; color:var(--text);}
+  .dbub .den{display:block; font-size:12.5px; color:var(--muted); margin-top:3px;}
+  .dbub.them{align-self:flex-start; background:var(--surface); border:1px solid var(--line); border-bottom-left-radius:5px;}
+  .dbub.me{align-self:flex-end; background:rgba(34,211,238,.10); border:1px solid rgba(34,211,238,.28); border-bottom-right-radius:5px;}
+  .dbub.me .dsp{color:var(--cyan);}
+  .dbub.blank .dtx{color:var(--faint);}
+  .dsnd{border:none; background:none; cursor:pointer; font-size:14px; padding:0 0 0 4px;}
+  .dopts .opt .key{display:none;}
+  .match{display:grid; grid-template-columns:1fr 1fr; gap:11px;}
+  .mcol{display:flex; flex-direction:column; gap:11px;}
+  .mtile{cursor:pointer; background:var(--surface); border:1.5px solid var(--line); border-radius:var(--radius-sm); padding:15px 12px; text-align:center; font-size:17px; color:var(--text); transition:transform .05s;}
+  .mtile:active{transform:translateY(1px);}
+  .mtile.sel{border-color:var(--cyan); background:rgba(34,211,238,.10); color:var(--cyan);}
+  .mtile.done{border-color:var(--green); background:var(--green-bg); color:var(--green); opacity:.8; pointer-events:none;}
+  .mtile.miss{animation:shake .3s; border-color:var(--red);}
+  @keyframes shake{0%,100%{transform:none} 20%,60%{transform:translateX(-5px)} 40%,80%{transform:translateX(5px)}}
+
+  .feedback{position:sticky; bottom:0; padding:18px 20px calc(18px + env(safe-area-inset-bottom)); border-top-left-radius:20px; border-top-right-radius:20px; animation:rise .25s ease both; backdrop-filter:blur(10px);}
+  .feedback.correct{background:var(--green-bg); border-top:1px solid rgba(52,211,153,.4);}
+  .feedback.wrong{background:var(--red-bg); border-top:1px solid rgba(251,113,133,.4);}
+  .feedback .fh{display:flex; align-items:center; gap:8px; font-family:var(--font-head); font-weight:600; font-size:19px; margin-bottom:5px;}
+  .fb-luma{width:38px; height:38px; flex:none; filter:drop-shadow(0 2px 4px rgba(0,0,0,.4));}
+  .feedback.correct .fh{color:var(--green);} .feedback.wrong .fh{color:var(--red);}
+  .feedback .fb{font-size:14.5px; color:var(--text); margin-bottom:14px;}
+  .actionbar{padding:18px 20px calc(18px + env(safe-area-inset-bottom));}
+
+  /* home dashboard */
+  .dash{padding:6px 4px 4px;}
+  .dash-top{display:flex; align-items:center; gap:12px;}
+  .dash-greet{flex:1; min-width:0;}
+  .dash-luma{width:54px; height:auto; flex:none; animation:luma-float 3.2s ease-in-out infinite; filter:drop-shadow(0 5px 10px rgba(0,0,0,.45));}
+  .hi{font-family:var(--font-head); font-weight:700; font-size:20px; margin:0; color:#fff; line-height:1.15;}
+  .hi-sub{color:var(--muted); font-size:13.5px; margin:3px 0 0;}
+  /* mascot animations */
+  @keyframes luma-float{0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)}}
+  @keyframes luma-celebrate{0%{transform:scale(.6); opacity:0} 55%{transform:scale(1.06)} 100%{transform:scale(1); opacity:1}}
+  .luma-celebrate{position:relative; width:150px; margin:6px auto 16px;}
+  .luma-celebrate img{width:150px; height:auto; display:block; filter:drop-shadow(0 14px 30px rgba(0,0,0,.5)); animation:luma-celebrate .55s cubic-bezier(.2,1.5,.4,1) both, luma-float 3.2s ease-in-out .55s infinite;}
+  .luma-check{position:absolute; right:-4px; bottom:-4px; width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,#34D399,#10B981); color:#04121b; font-size:24px; font-weight:800; display:grid; place-items:center; box-shadow:0 6px 18px -4px rgba(52,211,153,.6);}
+  .lvring .lvr-n{font-family:var(--font-head); font-weight:700; font-size:22px; fill:#fff;}
+  .lvring .lvr-l{font-family:"DM Mono",monospace; font-size:8px; letter-spacing:.14em; fill:var(--muted);}
+  .chips{display:flex; gap:11px; margin-top:16px;}
+  .chip-stat{flex:1; display:flex; align-items:center; gap:10px; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:12px 14px;}
+  .chip-stat .cs-ic{font-size:20px;}
+  .chip-stat b{font-family:var(--font-head); font-weight:700; font-size:18px; display:block; line-height:1.1; color:#fff;}
+  .chip-stat span{font-size:12px; color:var(--muted);}
+
+  /* daily goal card (Step 3) */
+  .goal-card{display:flex; align-items:center; gap:13px; width:100%; text-align:left; cursor:pointer; margin-top:11px;
+    background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:12px 14px;}
+  .goal-card.met{border-color:rgba(52,211,153,.45); background:rgba(52,211,153,.07);}
+  .goal-card:active{transform:translateY(1px);}
+  .goal-ring{flex:none;}
+  .goal-ring .gr-track{fill:none; stroke:var(--line2); stroke-width:4;}
+  .goal-ring .gr-fill{fill:none; stroke:url(#gg); stroke:var(--cyan); stroke-width:4; stroke-linecap:round; transition:stroke-dashoffset .5s ease;}
+  .goal-ring .gr-fill.met{stroke:var(--green);}
+  .goal-ring .gr-emoji{font-size:15px;}
+  .goal-txt{flex:1; min-width:0;}
+  .goal-k{display:block; font-family:var(--font-head); font-weight:600; font-size:14px; color:#fff;}
+  .goal-v{display:block; font-size:12.5px; color:var(--muted); margin:1px 0 7px;}
+  .goal-bar{height:6px; border-radius:6px; background:var(--line2); overflow:hidden;}
+  .goal-bar i{display:block; height:100%; background:var(--grad); border-radius:6px; transition:width .5s ease;}
+  .goal-card.met .goal-bar i{background:var(--green);}
+  .freeze-pill{flex:none; align-self:flex-start; font-size:12.5px; font-weight:600; color:var(--text); background:rgba(96,165,250,.14); border:1px solid rgba(96,165,250,.3); border-radius:999px; padding:3px 9px;}
+  .goal-opts{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:6px;}
+  .goal-opt{display:flex; flex-direction:column; gap:2px; align-items:flex-start; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:11px 13px; cursor:pointer; color:var(--text);}
+  .goal-opt.on{border-color:var(--cyan); background:rgba(34,211,238,.1);}
+  .goal-opt b{font-family:var(--font-head); font-size:16px;}
+  .goal-opt span{font-size:12px; color:var(--muted);}
+  .streak-note{background:rgba(96,165,250,.1); border:1px solid rgba(96,165,250,.28); border-radius:12px; padding:11px 15px; font-size:14px; color:var(--text); margin-bottom:12px;}
+  .goal-hit{background:rgba(52,211,153,.1); border:1px solid rgba(52,211,153,.3); border-radius:12px; padding:11px 15px; font-size:14px; color:var(--text); margin-bottom:12px;}
+
+  /* achievements (Step 4) */
+  .ach-head{display:flex; align-items:baseline; justify-content:space-between;}
+  .ach-count{font-family:"DM Mono",monospace; font-size:13px; color:var(--cyan);}
+  .badges{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px;}
+  .badge{display:flex; flex-direction:column; align-items:center; gap:7px; padding:14px 8px; border-radius:14px; cursor:pointer;
+    background:var(--surface); border:1px solid var(--line); color:var(--text); text-align:center;}
+  .badge.got{background:linear-gradient(160deg,rgba(34,211,238,.12),rgba(139,92,246,.1)); border-color:rgba(34,211,238,.4);}
+  .badge.locked{opacity:.5;}
+  .badge:active{transform:translateY(1px);}
+  .badge-ic{font-size:28px; line-height:1;}
+  .badge.locked .badge-ic{filter:grayscale(1);}
+  .badge-t{font-size:11px; line-height:1.2; color:var(--muted);}
+  .badge.got .badge-t{color:var(--text);}
+  .ach-unlocks{display:flex; flex-direction:column; gap:8px; margin-bottom:12px;}
+  .ach-unlock{display:flex; align-items:center; gap:12px; background:linear-gradient(160deg,rgba(34,211,238,.14),rgba(139,92,246,.12)); border:1px solid rgba(34,211,238,.4); border-radius:12px; padding:11px 15px; text-align:left; animation:rise .4s ease both;}
+  .ach-unlock .au-ic{font-size:26px; line-height:1; flex:none;}
+  .ach-unlock .au-tx{display:flex; flex-direction:column;}
+  .ach-unlock .au-tx b{font-family:"DM Mono",monospace; text-transform:uppercase; letter-spacing:.1em; font-size:10px; color:var(--cyan);}
+  .ach-unlock .au-tx span{font-family:var(--font-head); font-size:15px; color:#fff;}
+
+  /* shared topbar back button + title (voice + dashboard) */
+  .iconbtn{width:34px; height:34px; flex:none; border:1px solid var(--line2); background:var(--surface); color:var(--text); border-radius:10px; font-size:18px; cursor:pointer; line-height:1;}
+  .iconbtn:active{transform:translateY(1px);}
+  .topbar-title{flex:1; text-align:center; font-family:var(--font-head); font-weight:600; font-size:16px;}
+
+  /* progress dashboard (Step 7) */
+  .dash-hero{display:flex; align-items:center; gap:16px; margin-top:6px;}
+  .dh-tx{display:flex; flex-direction:column;}
+  .dh-lv{font-family:var(--font-head); font-size:22px; font-weight:700;}
+  .dh-xp{font-size:13px; color:var(--muted); margin-top:2px;}
+  .d-sec{margin-top:22px;}
+  .d-head{display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px;}
+  .d-head h2{font-size:17px;}
+  .d-sub{font-family:"DM Mono",monospace; font-size:12px; color:var(--muted);}
+  .actchart{position:relative; display:flex; align-items:flex-end; gap:5px; height:104px; padding-top:4px;}
+  .actchart::before{content:""; position:absolute; left:0; right:0; bottom:calc(var(--goal,50%) * .84); height:1px; background:repeating-linear-gradient(90deg,rgba(52,211,153,.5) 0 6px,transparent 6px 12px);}
+  .ac-col{flex:1; display:flex; flex-direction:column; align-items:center; gap:5px; height:100%;}
+  .ac-bar{flex:1; width:100%; display:flex; align-items:flex-end; border-radius:6px; overflow:hidden;}
+  .ac-bar i{display:block; width:100%; background:var(--grad); border-radius:6px 6px 0 0; min-height:2px;}
+  .ac-d{font-size:10px; color:var(--faint);}
+  .dl-row{display:flex; align-items:center; gap:10px; margin-bottom:9px;}
+  .dl-k{width:26px; font-family:"DM Mono",monospace; font-size:12px; color:var(--cyan);}
+  .dl-bar{flex:1; height:8px; border-radius:8px; background:var(--line2); overflow:hidden;}
+  .dl-bar i{display:block; height:100%; background:var(--grad); border-radius:8px;}
+  .dl-n{width:44px; text-align:right; font-size:12px; color:var(--muted);}
+  .d-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:22px;}
+  .d-mini{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:14px 10px; text-align:center;}
+  .d-mini b{display:block; font-family:var(--font-head); font-size:22px; color:#fff; line-height:1;}
+  .d-mini span{font-size:11px; color:var(--muted); margin-top:5px; display:block;}
+  .seg{display:flex; height:12px; border-radius:6px; overflow:hidden; gap:2px;}
+  .seg i{display:block;}
+  .seg-nw{background:#3b4256;} .seg-le{background:#3B82F6;} .seg-yo{background:#22D3EE;} .seg-st{background:#34D399;}
+  .seg-key{display:flex; flex-wrap:wrap; gap:10px 16px; margin-top:10px; font-size:12px; color:var(--muted);}
+  .seg-key span{display:flex; align-items:center; gap:6px;}
+  .seg-key b{width:10px; height:10px; border-radius:3px; display:inline-block;}
+  .k-nw{background:#3b4256;} .k-le{background:#3B82F6;} .k-yo{background:#22D3EE;} .k-st{background:#34D399;}
+
+  /* weak-spots review card (Step 5) */
+  .weakspot-card{display:flex; align-items:center; gap:13px; width:100%; text-align:left; cursor:pointer; margin-top:14px;
+    background:linear-gradient(160deg,rgba(139,92,246,.14),rgba(34,211,238,.08)); border:1px solid rgba(139,92,246,.4); border-radius:16px; padding:15px 16px; color:var(--text);}
+  .weakspot-card:active{transform:translateY(1px);}
+  .weakspot-card .ws-ic{font-size:26px; flex:none;}
+  .weakspot-card .ws-tx{flex:1; display:flex; flex-direction:column;}
+  .weakspot-card .ws-tx b{font-family:var(--font-head); font-size:16px;}
+  .weakspot-card .ws-tx span{font-size:13px; color:var(--muted); margin-top:2px;}
+  .weakspot-card .ws-go{font-size:20px; color:var(--violet); flex:none;}
+
+  /* vocabulary browser (Step 8) */
+  .browse-link{display:block; width:100%; text-align:center; margin-top:14px; background:none; border:none; cursor:pointer; color:var(--cyan); font-family:"DM Sans"; font-size:14px; font-weight:600; padding:8px;}
+  .vchips{display:flex; gap:8px; overflow-x:auto; padding:4px 0 2px; margin-bottom:8px; -webkit-overflow-scrolling:touch;}
+  .vchip{flex:none; background:var(--surface); border:1px solid var(--line); color:var(--muted); border-radius:999px; padding:6px 13px; font-family:"DM Sans"; font-size:13px; cursor:pointer;}
+  .vchip.on{background:rgba(34,211,238,.14); border-color:var(--cyan); color:var(--cyan);}
+  .vcount{font-family:"DM Mono",monospace; font-size:12px; color:var(--faint); margin:2px 0 10px;}
+  .vlist{display:flex; flex-direction:column; gap:8px;}
+  .vrow{display:flex; align-items:center; gap:12px; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:11px 13px;}
+  .vrow-audio{flex:none; width:38px; height:38px; border-radius:50%; border:1px solid var(--line2); background:var(--bg2); color:var(--cyan); font-size:16px; cursor:pointer;}
+  .vrow-audio:active{transform:scale(.94);}
+  .vrow-tx{flex:1; min-width:0;}
+  .vrow-tx b{display:block; font-size:16px; color:#fff;}
+  .vrow-tx span{display:block; font-size:13px; color:var(--muted); margin-top:1px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .vstr{flex:none; font-family:"DM Mono",monospace; font-size:10px; text-transform:uppercase; letter-spacing:.08em; border:1px solid; border-radius:999px; padding:3px 8px; opacity:.9;}
+
+  /* grammar reference hub (Step 9) */
+  .ref-list{display:flex; flex-direction:column; gap:8px;}
+  .ref-chap{font-family:"DM Mono",monospace; text-transform:uppercase; letter-spacing:.1em; font-size:11px; color:var(--cyan); margin:16px 0 4px;}
+  .ref-row{display:flex; align-items:center; gap:12px; width:100%; text-align:left; cursor:pointer; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px 13px; color:var(--text);}
+  .ref-row:active{transform:translateY(1px);}
+  .ref-ic{font-size:22px; flex:none;}
+  .ref-tx{flex:1; min-width:0;}
+  .ref-tx b{display:block; font-size:15px;}
+  .ref-tx span{display:block; font-size:12.5px; color:var(--muted); margin-top:1px;}
+  .ref-go{color:var(--faint); font-size:18px; flex:none;}
+  .ref-done{color:var(--green); font-size:15px; flex:none; font-weight:700;}
+
+  /* listening comprehension (Step 6) */
+  .listen-card .ws-go{color:var(--cyan);}
+  .listen-stage{display:flex; flex-direction:column; align-items:center; gap:12px; margin:18px 0 20px;}
+  .listen-play{width:96px; height:96px; border-radius:50%; border:none; cursor:pointer; background:var(--grad); color:#04121b; font-size:34px; box-shadow:0 10px 30px -8px rgba(34,211,238,.6);}
+  .listen-play:active{transform:scale(.96);}
+  .listen-slow{background:var(--surface); border:1px solid var(--line2); color:var(--muted); border-radius:999px; padding:8px 16px; font-family:"DM Sans"; font-size:14px; cursor:pointer;}
+  .listen-answer{text-align:center; font-size:20px; color:#fff; margin-bottom:16px;}
+  .lopts{display:flex; flex-direction:column; gap:10px;}
+  .lopt{width:100%; text-align:left; background:var(--surface); border:1.5px solid var(--line2); color:var(--text); border-radius:12px; padding:14px 16px; font-family:"DM Sans"; font-size:16px; cursor:pointer;}
+  .lopt.sel{border-color:var(--cyan); background:rgba(34,211,238,.1);}
+  .lopt.correct{border-color:var(--green); background:rgba(52,211,153,.14); color:#fff;}
+  .lopt.wrong{border-color:var(--red); background:rgba(251,113,133,.14);}
+  .lopt:disabled{cursor:default;}
+
+  /* lesson studio (Step 10) */
+  .studio-list{display:flex; flex-direction:column; gap:9px;}
+  .studio-row{display:flex; align-items:stretch; gap:8px;}
+  .sr-play{flex:1; display:flex; align-items:center; gap:12px; text-align:left; cursor:pointer; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px 13px; color:var(--text);}
+  .sr-play:active{transform:translateY(1px);}
+  .sr-ic{width:34px; height:34px; flex:none; display:flex; align-items:center; justify-content:center; border-radius:50%; background:var(--grad); color:#04121b; font-size:15px;}
+  .sr-tx{min-width:0;} .sr-tx b{display:block; font-size:15px;} .sr-tx span{display:block; font-size:12px; color:var(--muted); margin-top:1px;}
+  .sr-del{flex:none; width:44px; border:1px solid var(--line); background:var(--surface); border-radius:12px; color:var(--muted); font-size:16px; cursor:pointer;}
+  .sr-audio{flex:none; width:44px; border:1px solid var(--line); background:var(--surface); border-radius:12px; color:var(--cyan); font-size:16px; cursor:pointer;}
+  .sr-audio:disabled{opacity:.6;}
+  .ed-row{display:flex; gap:8px; align-items:center; margin-bottom:9px;}
+  .ed-row .field{margin-bottom:0; flex:1; font-size:16px; padding:12px 13px;}
+  .ed-x{flex:none; width:38px; height:44px; border:1px solid var(--line); background:var(--surface); border-radius:10px; color:var(--muted); font-size:20px; cursor:pointer;}
+
+  /* push cron url (Step 2) */
+  .cron-url{font-family:"DM Mono",monospace; font-size:12px; color:var(--cyan); background:var(--bg2); border:1px solid var(--line2); border-radius:10px; padding:10px 12px; word-break:break-all; line-height:1.5;}
+
+  /* featured "continue" card */
+  .feat{display:flex; align-items:center; gap:14px; width:100%; text-align:left; cursor:pointer; margin:18px 0 4px;
+    background:linear-gradient(135deg, rgba(34,211,238,.14), rgba(59,130,246,.10)); border:1px solid rgba(34,211,238,.3);
+    border-radius:var(--radius); padding:16px; box-shadow:0 10px 30px -16px rgba(34,211,238,.6);}
+  .feat:active{transform:translateY(1px);}
+  .feat-ic{font-size:30px; width:52px; height:52px; border-radius:14px; background:var(--surface2); display:grid; place-items:center; flex:none;}
+  .feat-txt{flex:1; display:flex; flex-direction:column; gap:1px;}
+  .feat-k{font-family:"DM Mono",monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.14em; color:var(--cyan);}
+  .feat-t{font-family:var(--font-head); font-weight:600; font-size:18px; color:#fff;}
+  .feat-s{font-size:13px; color:var(--muted);}
+  .feat-arrow{font-size:20px; color:var(--cyan); flex:none;}
+
+  .path{display:flex; flex-direction:column; align-items:center; gap:20px; padding:18px 0 40px; position:relative;}
+  .node{display:flex; flex-direction:column; align-items:center; gap:8px; position:relative; z-index:1; transition:transform .45s cubic-bezier(.34,1.35,.5,1); will-change:transform;}
+  .path-mascot{position:absolute; top:4px; width:52px; height:auto; margin-left:-26px; pointer-events:none; user-select:none; z-index:0; opacity:.92; filter:drop-shadow(0 7px 12px rgba(0,0,0,.5)); animation:luma-float 4.8s ease-in-out infinite;}
+  @media (prefers-reduced-motion: reduce){ .path-mascot{animation:none;} }
+  .medallion{width:72px; height:72px; border-radius:20px; display:grid; place-items:center; font-size:29px; transform:rotate(45deg); border:1.5px solid var(--line); background:var(--surface);}
+  .medallion > span{transform:rotate(-45deg);}
+  .node.done .medallion{background:var(--grad); border-color:transparent; color:#04121b; cursor:pointer; box-shadow:0 8px 24px -10px rgba(34,211,238,.6);}
+  .node.active .medallion{background:rgba(34,211,238,.14); border-color:var(--cyan); color:var(--cyan); box-shadow:0 0 0 5px rgba(34,211,238,.14), 0 0 26px rgba(34,211,238,.5); cursor:pointer; animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 5px rgba(34,211,238,.12), 0 0 20px rgba(34,211,238,.35);} 50%{box-shadow:0 0 0 7px rgba(34,211,238,.16), 0 0 30px rgba(34,211,238,.6);}}
+  .node.locked .medallion, .node.soon .medallion{opacity:.4;}
+  .node .lbl{font-family:"DM Mono",monospace; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); text-align:center;}
+  .node.active .lbl{color:var(--cyan); font-weight:500;}
+  .connector{width:3px; height:26px; background:var(--line2); border-radius:2px;}
+  .connector.done{background:var(--cyan); box-shadow:0 0 8px rgba(34,211,238,.5);}
+  .chapter-head{display:flex; flex-direction:column; align-items:center; gap:8px; margin:28px 0 16px; text-align:center;}
+  .chapter-head:first-child{margin-top:6px;}
+  .ch-rule{display:flex; align-items:center; gap:12px; width:100%;}
+  .ch-rule::before,.ch-rule::after{content:""; flex:1; height:1px;}
+  .ch-rule::before{background:linear-gradient(90deg, transparent, var(--line2));}
+  .ch-rule::after{background:linear-gradient(90deg, var(--line2), transparent);}
+  .ch-badge{font-family:"DM Mono",monospace; text-transform:uppercase; letter-spacing:.14em; font-size:11px; color:var(--amber);
+    border:1px solid rgba(251,191,36,.35); background:rgba(251,191,36,.08); padding:5px 13px; border-radius:99px; white-space:nowrap;}
+  .chapter-head .ch-t{font-family:var(--font-head); font-weight:600; font-size:19px; color:var(--text);}
+
+  .completion{text-align:center; padding-top:20px;}
+  .seal{width:112px; height:112px; margin:8px auto 18px; border-radius:30px; transform:rotate(45deg); background:var(--grad); display:grid; place-items:center; box-shadow:0 0 0 6px rgba(34,211,238,.12), 0 16px 40px -12px rgba(34,211,238,.6); animation:pop .5s cubic-bezier(.2,1.5,.4,1) both;}
+  .seal > span{transform:rotate(-45deg); font-size:50px;}
+  @keyframes pop{from{transform:rotate(45deg) scale(.5); opacity:0;} to{transform:rotate(45deg) scale(1); opacity:1;}}
+  .tally{display:flex; justify-content:center; gap:11px; margin:22px 0;}
+  .tallycard{flex:1; max-width:130px; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:15px 8px;}
+  .tallycard .n{font-family:var(--font-head); font-weight:700; font-size:29px; line-height:1;}
+  .tallycard .l{font-family:"DM Mono",monospace; font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin-top:5px;}
+  .tallycard.xp .n{color:var(--cyan);} .tallycard.streak .n{color:var(--amber);} .tallycard.mastery .n{color:var(--green);}
+  .review-note{background:rgba(34,211,238,.08); border:1px solid var(--line); border-radius:12px; padding:13px 16px; font-size:14.5px; margin-bottom:20px; text-align:left; display:flex; gap:10px; color:var(--muted);}
+  .review-note b{color:var(--text);}
+
+  .center{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px 28px;}
+  .spinner{width:38px; height:38px; border:4px solid var(--line2); border-top-color:var(--cyan); border-radius:50%; animation:spin .8s linear infinite; margin-bottom:16px;}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  code{font-family:"DM Mono",monospace; background:var(--surface2); border:1px solid var(--line); border-radius:6px; padding:2px 7px; font-size:14px; color:var(--cyan);}
+
+  /* review */
+  .review-banner{display:flex; align-items:center; gap:12px; width:100%; text-align:left; cursor:pointer; margin-bottom:6px;
+    background:linear-gradient(135deg, rgba(139,92,246,.14), rgba(34,211,238,.08)); border:1px solid rgba(139,92,246,.32); border-radius:14px; padding:14px 16px; font-family:"DM Sans";}
+  .review-banner:active{transform:translateY(1px);}
+  .review-banner .rb-ic{font-size:22px; line-height:1; flex:none;}
+  .review-banner .rb-txt{flex:1; color:var(--text); font-size:15px;}
+  .review-banner .rb-txt b{font-family:"DM Mono",monospace; color:var(--violet);}
+  .review-banner .rb-go{flex:none; font-family:"DM Mono",monospace; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--violet); font-weight:500;}
+  .review-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--glow); padding:34px 20px; margin:10px 0 18px; text-align:center;}
+  .review-card .rv-label{font-family:"DM Mono",monospace; text-transform:uppercase; letter-spacing:.12em; font-size:11px; color:var(--muted); margin:0 0 14px;}
+  .review-card .rv-front{font-family:var(--font-head); font-weight:600; font-size:30px; line-height:1.2; color:#fff;}
+  .review-card .rv-back{font-family:var(--font-head); font-weight:700; font-size:32px; line-height:1.2; color:var(--cyan); display:flex; align-items:center; justify-content:center; gap:10px;}
+  .review-card.revealed{border-color:rgba(34,211,238,.32); background:rgba(34,211,238,.07);}
+  .rv-audio{border:none; background:none; cursor:pointer; font-size:22px; line-height:1; padding:0;}
+  .rv-hint{text-align:center; color:var(--muted); font-size:14px; margin:0 0 12px;}
+  .rates{display:grid; grid-template-columns:1fr 1fr; gap:11px;}
+  .rate{display:flex; flex-direction:column; align-items:center; gap:3px; cursor:pointer; border:1.5px solid var(--line); border-radius:var(--radius-sm);
+    background:var(--surface); padding:14px 10px; font-family:"DM Sans"; transition:transform .05s;}
+  .rate:active{transform:translateY(1px);}
+  .rate .rl{font-weight:700; font-size:16px;}
+  .rate .ri{font-family:"DM Mono",monospace; font-size:11.5px; color:var(--muted);}
+  .rate1{border-color:rgba(251,113,133,.4);} .rate1 .rl{color:var(--red);}
+  .rate2{border-color:rgba(251,191,36,.4);} .rate2 .rl{color:var(--amber);}
+  .rate3{border-color:rgba(56,189,248,.4);} .rate3 .rl{color:var(--cyan2);}
+  .rate4{border-color:rgba(52,211,153,.4);} .rate4 .rl{color:var(--green);}
+
+  /* profile */
+  .prow{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:18px 0;}
+  .pcard{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px 16px; text-align:center;}
+  .pcard b{font-family:var(--font-head); font-weight:700; font-size:26px; color:#fff; display:block;}
+  .pcard span{font-size:12.5px; color:var(--muted); margin-top:4px; display:block;}
+  .set-lbl{font-family:"DM Mono",monospace; text-transform:uppercase; letter-spacing:.12em; font-size:11px; color:var(--muted); margin:0 0 4px;}
+  .set-val{font-size:15px; color:var(--text); margin:0;}
+  .set-msg{font-size:13px; margin:8px 0 0; min-height:16px;}
+  .ga-prog{margin-top:12px;}
+  .ga-bar{height:8px; background:rgba(255,255,255,.08); border:1px solid var(--line); border-radius:99px; overflow:hidden;}
+  .ga-bar > i{display:block; height:100%; width:0; background:var(--grad); border-radius:99px; transition:width .3s;}
+
+  /* auth screen */
+  .authscreen{display:flex; flex-direction:column; justify-content:center; min-height:100dvh; padding:18px 22px 24px;}
+  .auth-brand{text-align:center; margin-bottom:18px;}
+  .auth-hero{width:70%; max-width:280px; height:auto; display:block; margin:0 auto -8px;
+    -webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 45%,#000 50%,transparent 80%);
+    mask-image:radial-gradient(ellipse 60% 60% at 50% 45%,#000 50%,transparent 80%);
+    filter:drop-shadow(0 0 30px rgba(52,211,153,.22)) drop-shadow(0 16px 42px rgba(34,211,238,.28));}
+  .auth-logo{font-family:var(--font-head); font-weight:700; font-size:40px; line-height:1.02; margin:4px 0 6px; letter-spacing:-.03em;
+    background:linear-gradient(180deg,#ffffff 0%,#bfe6ff 90%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;}
+  .auth-tag{color:var(--muted); font-size:15px; margin:0;}
+  .auth-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:18px 16px 20px; box-shadow:var(--glow);}
+  .authscreen .field{margin-bottom:0;}
+  /* icon input group */
+  .ig{position:relative; margin-bottom:12px;}
+  .ig .ico{position:absolute; left:15px; top:50%; transform:translateY(-50%); color:var(--cyan); display:grid; place-items:center; pointer-events:none;}
+  .ig .field{padding-left:46px;}
+  .ig .field.haspw{padding-right:48px;}
+  .ig .eye{position:absolute; right:8px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--faint); cursor:pointer; padding:8px; display:grid; place-items:center; border-radius:8px;}
+  .ig .eye:hover{color:var(--cyan);}
+  .ig .eye .e-off{display:none;}
+  .ig .eye.on .e-on{display:none;} .ig .eye.on .e-off{display:grid;}
+  .auth-forgot{display:block; margin:10px 2px 0 auto; background:none; border:none; cursor:pointer; color:var(--cyan2); font-family:"DM Sans"; font-weight:600; font-size:13.5px; text-align:right;}
+  .auth-err{color:var(--red); font-size:13.5px; min-height:18px; margin:8px 2px 4px; text-align:center;}
+  .authscreen .cta{margin-top:6px;}
+  .auth-or{display:flex; align-items:center; gap:14px; color:var(--faint); font-family:"DM Mono",monospace; font-size:12px; letter-spacing:.18em; margin:20px 4px;}
+  .auth-or::before,.auth-or::after{content:""; flex:1; height:1px; background:var(--line2);}
+  .auth-alt{display:flex; align-items:center; justify-content:center; gap:10px; width:100%; cursor:pointer; font-family:"DM Sans"; font-weight:700; font-size:16px; color:var(--text);
+    background:rgba(56,189,248,.05); border:1.5px solid rgba(56,189,248,.42); border-radius:var(--radius-sm); padding:15px; box-shadow:0 10px 34px -18px rgba(56,189,248,.7); transition:transform .06s, border-color .12s, background .12s;}
+  .auth-alt .ai{color:var(--cyan); display:grid; place-items:center;}
+  .auth-alt:hover{border-color:rgba(56,189,248,.7); background:rgba(56,189,248,.09);}
+  .auth-alt:active{transform:translateY(1px);}
+  .auth-foot{display:flex; align-items:center; justify-content:center; gap:8px; text-align:center; color:var(--faint); font-size:13px; margin-top:18px;}
+  .auth-foot .shield{color:var(--green); flex:none; display:grid; place-items:center;}
+
+  /* AI tutor chat — full-height column, input pinned to the bottom */
+  .tutor-screen{display:flex; flex-direction:column; height:100dvh; padding-top:calc(8px + env(safe-area-inset-top)); padding-bottom:0;}
+  .tlist{flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:12px; padding:6px 2px 10px; min-height:0;}
+  .tutor-intro{margin:auto; text-align:center; padding:16px 0;}
+  .tutor-owl{width:126px; height:auto; filter:drop-shadow(0 10px 22px rgba(0,0,0,.45)); margin-bottom:4px; animation:luma-float 3.4s ease-in-out infinite;}
+  .tchips{display:flex; flex-direction:column; gap:8px; max-width:320px; margin:0 auto;}
+  .tchip{background:var(--surface); border:1px solid var(--line); color:var(--text); border-radius:12px; padding:11px 14px; font-family:"DM Sans"; font-size:14px; cursor:pointer; text-align:left;}
+  .tchip:active{transform:translateY(1px);}
+  .lvl-chip{background:var(--surface); border:1px solid var(--line); color:var(--muted); border-radius:10px; padding:8px 13px; font-family:"DM Mono",monospace; font-size:13px; letter-spacing:.04em; cursor:pointer;}
+  .lvl-chip.on{background:rgba(34,211,238,.14); border-color:var(--cyan); color:var(--cyan);}
+  .tmsg{display:flex; gap:8px; align-items:flex-end;}
+  .tmsg.user{justify-content:flex-end;}
+  .tmsg .tav{width:34px; height:34px; object-fit:contain; flex:none; margin-bottom:-2px; filter:drop-shadow(0 3px 8px rgba(0,0,0,.45));}
+  .tbub{max-width:80%; padding:11px 14px; border-radius:16px; font-size:15px; line-height:1.45; white-space:pre-wrap;}
+  .tmsg.assistant .tbub{background:var(--surface); border:1px solid var(--line); border-bottom-left-radius:5px; color:var(--text);}
+  .tmsg.user .tbub{background:rgba(34,211,238,.12); border:1px solid rgba(34,211,238,.28); border-bottom-right-radius:5px; color:#fff;}
+  .tbub.pending{display:flex; gap:4px; align-items:center;}
+  .tdot{width:6px; height:6px; border-radius:50%; background:var(--muted); animation:tdot 1s infinite;}
+  .tdot:nth-child(2){animation-delay:.15s;} .tdot:nth-child(3){animation-delay:.3s;}
+  @keyframes tdot{0%,60%,100%{opacity:.25;} 30%{opacity:1;}}
+  .tinput{flex:none; display:flex; gap:8px; align-items:center; padding:10px 0 calc(84px + env(safe-area-inset-bottom)); background:var(--bg);}
+  .tinput .field{margin-bottom:0; flex:1; font-size:16px;}
+  .tsend{flex:none; width:46px; height:46px; border-radius:50%; border:none; cursor:pointer; background:var(--grad); color:#04121b; font-size:20px; font-weight:700; box-shadow:0 6px 18px -6px rgba(34,211,238,.6);}
+  .tsend:active{transform:translateY(2px);}
+
+  /* tutor header + voice launch */
+  .tutor-top{display:flex; align-items:center; justify-content:space-between; padding:2px 2px 8px;}
+  .tutor-top-title{font-family:var(--font-head); font-size:17px; font-weight:600;}
+  .voice-cta{border:1px solid var(--line2); background:var(--surface); color:var(--cyan); font-family:"DM Sans"; font-weight:600; font-size:13px; border-radius:999px; padding:7px 13px; cursor:pointer;}
+  .voice-cta:active{transform:translateY(1px);}
+  .tutor-top-actions{display:flex; align-items:center; gap:8px;}
+  .tutor-ibtn{position:relative; width:34px; height:34px; flex:none; border:1px solid var(--line2); background:var(--surface); color:var(--text); border-radius:10px; font-size:16px; cursor:pointer; line-height:1;}
+  .tutor-ibtn:active{transform:translateY(1px);}
+  .tutor-badge{position:absolute; top:-6px; right:-6px; min-width:16px; height:16px; padding:0 4px; border-radius:999px; background:var(--cyan); color:#001; font-size:10px; font-weight:700; line-height:16px; text-align:center;}
+
+  /* voice conversation screen */
+  .voice-screen{display:flex; flex-direction:column; padding-top:0;}
+  .voice-stage{display:flex; flex-direction:column; align-items:center; gap:14px; padding:14px 0 6px;}
+  .voice-orb{position:relative; width:150px; height:150px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    background:radial-gradient(circle at 50% 40%, rgba(34,211,238,.22), rgba(139,92,246,.10) 60%, transparent 72%);}
+  .voice-orb::before{content:""; position:absolute; inset:0; border-radius:50%; border:2px solid rgba(34,211,238,.35);}
+  .voice-orb .voice-luma{width:96px; height:96px; object-fit:contain; filter:drop-shadow(0 8px 20px rgba(0,0,0,.5)); position:relative; z-index:1;}
+  .voice-orb.connecting::before{animation:vpulse 1.1s ease-in-out infinite;}
+  .voice-orb.live::before{border-color:rgba(34,211,238,.6); box-shadow:0 0 0 6px rgba(34,211,238,.08);}
+  .voice-orb.speaking::before{border-color:rgba(139,92,246,.75); animation:vpulse .9s ease-in-out infinite;}
+  .voice-orb.speaking{background:radial-gradient(circle at 50% 40%, rgba(139,92,246,.30), rgba(34,211,238,.12) 60%, transparent 72%);}
+  @keyframes vpulse{0%,100%{transform:scale(1); opacity:.9;} 50%{transform:scale(1.09); opacity:.55;}}
+  .voice-status{font-family:"DM Sans"; font-size:14.5px; color:var(--muted); text-align:center; min-height:20px;}
+  .vturns{flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:10px; padding:8px 2px; min-height:26vh;}
+  .vturn{display:flex; flex-direction:column; gap:2px; max-width:88%;}
+  .vturn.user{align-self:flex-end; align-items:flex-end;}
+  .vturn.assistant{align-self:flex-start; align-items:flex-start;}
+  .vwho{font-family:"DM Mono",monospace; text-transform:uppercase; letter-spacing:.12em; font-size:10px; color:var(--faint);}
+  .vturn .vtxt{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:9px 13px; font-size:15px; line-height:1.4;}
+  .vturn.user .vtxt{background:var(--grad); color:#04121b; border:none;}
+  .voice-controls{padding:8px 0 calc(86px + env(safe-area-inset-bottom));}
+  .voice-start,.voice-end{width:100%; border:none; border-radius:14px; padding:15px; font-family:"DM Sans"; font-weight:700; font-size:16px; cursor:pointer;}
+  .voice-start{background:var(--grad); color:#04121b; box-shadow:0 8px 22px -8px rgba(34,211,238,.6);}
+  .voice-start:disabled{opacity:.6; cursor:default;}
+  .voice-end{background:rgba(239,68,68,.14); color:#fca5a5; border:1px solid rgba(239,68,68,.4);}
+  .voice-start:active,.voice-end:active{transform:translateY(1px);}
+
+  /* bottom nav */
+  .botnav{position:fixed; left:50%; transform:translateX(-50%); bottom:0; width:100%; max-width:480px; z-index:30;
+    display:flex; background:rgba(10,14,26,.85); backdrop-filter:blur(14px); border-top:1px solid var(--line);
+    padding:8px 8px calc(8px + env(safe-area-inset-bottom));}
+  .bn{flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; background:none; border:none; cursor:pointer;
+    font-family:"DM Sans"; font-size:11px; color:var(--faint); padding:6px 0;}
+  .bn .bni{font-size:20px; line-height:1;}
+  .bn .bni-img{width:26px; height:26px; object-fit:contain; margin:-3px 0; filter:grayscale(.2) opacity(.85);}
+  .bn.on .bni-img{filter:none; opacity:1;}
+  .bn.on{color:var(--cyan);}
+
+  /* info overlay */
+  .infobg{position:fixed; inset:0; z-index:60; background:rgba(4,8,16,.6); backdrop-filter:blur(3px); display:flex; align-items:flex-end; justify-content:center; animation:rise .2s ease both;}
+  .infopanel{width:100%; max-width:480px; background:var(--bg2); border:1px solid var(--line2); border-radius:20px 20px 0 0; padding:20px 20px calc(24px + env(safe-area-inset-bottom)); max-height:75vh; overflow:auto;}
+  .ip-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;}
+  .ip-head b{font-family:var(--font-head); font-size:19px;}
+  .ip-x{border:none; background:none; color:var(--muted); font-size:26px; cursor:pointer; line-height:1;}
+  .ip-sub{font-family:"DM Mono",monospace; text-transform:uppercase; letter-spacing:.14em; font-size:11px; color:var(--cyan); margin:10px 0 8px;}
+  .ip-body{font-size:15px;}
+
+  /* Ask Luma sheet */
+  .askbtn{font-size:17px;}
+  .ask-sentence{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:10px 13px; font-size:16px; margin:10px 0 12px;}
+  .askchips{display:flex; flex-direction:column; gap:8px; margin-bottom:12px;}
+  .askreply{display:flex; flex-direction:column; gap:10px; max-height:34vh; overflow-y:auto; margin-bottom:10px;}
+  .askreply:empty{margin:0;}
+  .ask-msg{display:flex; gap:8px; align-items:flex-start; max-width:92%;}
+  .ask-msg.user{align-self:flex-end; flex-direction:row-reverse;}
+  .ask-av{width:28px; height:28px; object-fit:contain; flex:none; filter:drop-shadow(0 2px 6px rgba(0,0,0,.4));}
+  .ask-bub{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:9px 13px; font-size:14.5px; line-height:1.45;}
+  .ask-msg.user .ask-bub{background:var(--grad); color:#04121b; border:none;}
+  .ask-bub.pending{display:flex; gap:4px; align-items:center;}
+  .askrow{display:flex; gap:8px; align-items:center;}
+  .askrow .field{margin-bottom:0; flex:1;}
+
+  /* install chip */
+  #installChip{position:fixed; left:50%; transform:translateX(-50%); bottom:calc(84px + env(safe-area-inset-bottom)); z-index:40;
+    width:calc(100% - 32px); max-width:448px; display:flex; align-items:center; gap:11px;
+    background:var(--bg2); border:1px solid var(--line2); border-radius:14px; padding:12px 12px 12px 14px;
+    box-shadow:0 12px 34px -10px rgba(0,0,0,.7); animation:rise .3s ease both; font-size:14.5px;}
+  #installChip .ic-owl{font-size:22px; line-height:1; flex:none;}
+  #installChip .ic-txt{flex:1; color:var(--text); line-height:1.3;}
+  #installChip .ic-add{flex:none; border:none; cursor:pointer; font-family:"DM Sans"; font-weight:700; font-size:14px;
+    color:#04121b; background:var(--grad); border-radius:9px; padding:9px 14px;}
+  #installChip .ic-x{flex:none; border:none; background:none; color:var(--muted); font-size:22px; line-height:1; cursor:pointer; padding:0 4px;}
+
+  @media (prefers-reduced-motion:reduce){*{animation:none !important; transition:none !important;}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+/* ================================================================
+   FLUENTA — Spanish learning PWA  ·  static core, $0 runtime
+   UI language: English.  Content being taught: Spanish.
+   Data: path.json + units/<id>.json (fetched on demand).
+   ================================================================ */
+
+/* ---- embedded fallback so the file demos without a server ---- */
+const FALLBACK = {
+  path: [
+    {"id":"es-a1-u03","title":"Ser vs. Estar","subtitle":"Two verbs for \"to be\"","icon":"⚖️","level":"A1","chapter":1,"chapter_title":"First steps","ready":true},
+    {"id":"es-a1-u04","title":"-AR verbs","subtitle":"Regular present tense","icon":"🗣️","level":"A1","chapter":1,"chapter_title":"First steps","ready":true}
+  ],
+  units: {
+    "es-a1-u03": {"unit":{"id":"es-a1-u03","title":"Ser vs. Estar","subtitle":"Two verbs for \"to be\"","level":"A1","xp_reward":20},
+      "grammar":{"title":"Why does Spanish have TWO words for \"to be\"?","intro":"English uses one verb for everything. Spanish splits it in two: <b>SER</b> = what something <b>is</b> (permanent). <b>ESTAR</b> = how or where it is <b>right now</b>.",
+        "sections":[{"tag":"ser","heading":"SER — permanent / identity","body":"Identity, origin, profession — things that don't change.","conj":[["yo","soy"],["tú","eres"],["él/ella","es"],["nosotros","somos"],["vosotros","sois"],["ellos","son"]],"ex":[{"es":"Yo <b>soy</b> de Suecia.","en":"I am from Sweden.","note":"origin"}]},
+          {"tag":"estar","heading":"ESTAR — temporary / location","body":"Feelings, conditions, and where things are. Hook: LoCo = Location + Condition.","conj":[["yo","estoy"],["tú","estás"],["él/ella","está"],["nosotros","estamos"],["vosotros","estáis"],["ellos","están"]],"ex":[{"es":"<b>Estamos</b> en casa.","en":"We are at home.","note":"location"}]}],
+        "takeaways":["SER = permanent identity.","ESTAR = temporary state + location.","Location ALWAYS uses estar."],
+        "mistakes":[{"w":"Yo soy en casa.","r":"Yo estoy en casa.","why":"Location always uses estar."}]},
+      "exercises":[
+        {"id":"e1","type":"multiple_choice","xp":2,"prompt":"El libro ___ sobre la mesa.","prompt_en":"The book ___ on the table.","options":[{"id":"a","text":"es"},{"id":"b","text":"está"},{"id":"c","text":"son"},{"id":"d","text":"soy"}],"answer":"b","ok":"Correct! Location uses estar.","no":"Location → estar: \"está\"."},
+        {"id":"e2","type":"word_bank","xp":3,"prompt":"Build: \"We are from Spain.\"","tokens":["España","somos","Nosotros","de","estamos","es"],"answer":["Nosotros","somos","de","España"],"ok":"Perfect! Origin → ser.","no":"Origin → ser: \"Nosotros somos de España.\""},
+        {"id":"e3","type":"fill_blank","xp":2,"prompt":"Ella ___ profesora.","prompt_en":"She ___ a teacher.","accepted":["es"],"ignore_accents":true,"hint":"Profession = identity.","ok":"Good! Profession → ser.","no":"Profession → ser → \"es\"."},
+        {"id":"e4","type":"match_pairs","xp":3,"prompt":"Match each subject to the correct form of ESTAR.","pairs":[["yo","estoy"],["tú","estás"],["ella","está"],["nosotros","estamos"]],"ok":"Excellent!","no":""},
+        {"id":"e5","type":"listening","xp":3,"prompt":"Type what you hear.","tts":"Estoy muy feliz hoy.","accepted":["estoy muy feliz hoy"],"ignore_accents":true,"translation":"I am very happy today.","ok":"Correct!","no":"It was: \"Estoy muy feliz hoy.\""}],
+      "vocab":[{"es":"ser","en":"to be (permanent)"},{"es":"estar","en":"to be (temporary / location)"}],
+      "completion":{"xp_on_complete":20,"adds_vocab_to_srs":["ser","estar","cansado","caliente","profesora"]}}
+  }
+};
+
+/* ---- persisted progress ---- */
+function loadProg(){ try{ const p=JSON.parse(localStorage.getItem('aprende_prog')||'null'); if(p&&p.completed) return p; }catch(e){} return {completed:[], xp:0, streak:0, lastDay:null, mastery:{}}; }
+function saveProg(){ try{ localStorage.setItem('aprende_prog', JSON.stringify(PROG)); }catch(e){} syncPush(); }
+const PROG = loadProg();
+if(!PROG.mastery) PROG.mastery={};
+/* daily goal + streak freeze (Step 3) */
+if(PROG.dailyGoal==null) PROG.dailyGoal=30;      // XP target per day
+if(PROG.freezes==null)   PROG.freezes=2;         // streak-freeze stock
+if(PROG.maxStreak==null) PROG.maxStreak=PROG.streak||0;  // best streak ever (Step 4)
+if(PROG.goalDays==null)  PROG.goalDays=0;        // days the daily goal was hit
+if(!PROG.earnedAch)      PROG.earnedAch=[];      // achievement ids already earned
+if(!PROG.activity)       PROG.activity={};       // date-string → XP earned that day (Step 7 dashboard)
+const GOAL_PRESETS=[{xp:15,l:'Casual'},{xp:30,l:'Regular'},{xp:50,l:'Serious'},{xp:100,l:'Intense'}];
+const MAX_FREEZES=3;
+function todayXP(){ const t=new Date().toDateString(); return (PROG.todayKey===t)?(PROG.todayXP||0):0; }
+function addTodayXP(n){ const t=new Date().toDateString(); if(PROG.todayKey!==t){ PROG.todayKey=t; PROG.todayXP=0; } PROG.todayXP=(PROG.todayXP||0)+n;
+  if(!PROG.activity) PROG.activity={}; PROG.activity[t]=(PROG.activity[t]||0)+n; }
+function goalPct(){ const g=PROG.dailyGoal||30; return Math.max(0,Math.min(100,Math.round(todayXP()/g*100))); }
+function goalMet(){ return todayXP() >= (PROG.dailyGoal||30); }
+
+/* ---- Achievements / badges (Step 4) ---- */
+let LAST_NEW_ACH = [];
+const ACHIEVEMENTS = [
+  {id:'first',    icon:'🌱', title:'First Steps',        desc:'Complete your very first lesson.',        test:c=>c.done>=1},
+  {id:'five',     icon:'🔥', title:'Getting Going',      desc:'Complete 5 lessons.',                     test:c=>c.done>=5},
+  {id:'ten',      icon:'⚡', title:'On a Roll',          desc:'Complete 10 lessons.',                    test:c=>c.done>=10},
+  {id:'half',     icon:'🧗', title:'Halfway There',      desc:'Complete 27 lessons.',                    test:c=>c.done>=27},
+  {id:'all',      icon:'👑', title:'Course Complete',    desc:'Complete all 54 lessons.',                test:c=>c.done>=54},
+  {id:'a1',       icon:'🥇', title:'A1 Graduate',        desc:'Finish every A1 lesson.',                 test:c=>c.tot.A1>0 && c.lvl.A1>=c.tot.A1},
+  {id:'a2',       icon:'🥈', title:'A2 Graduate',        desc:'Finish every A2 lesson.',                 test:c=>c.tot.A2>0 && c.lvl.A2>=c.tot.A2},
+  {id:'b1',       icon:'🏆', title:'B1 Graduate',        desc:'Finish every B1 lesson.',                 test:c=>c.tot.B1>0 && c.lvl.B1>=c.tot.B1},
+  {id:'xp100',    icon:'✨', title:'Rising Star',        desc:'Earn 100 XP.',                            test:c=>c.xp>=100},
+  {id:'xp500',    icon:'💫', title:'Word Collector',     desc:'Earn 500 XP.',                            test:c=>c.xp>=500},
+  {id:'xp1000',   icon:'🌟', title:'XP Master',          desc:'Earn 1,000 XP.',                          test:c=>c.xp>=1000},
+  {id:'streak3',  icon:'📅', title:'Three in a Row',     desc:'Reach a 3-day streak.',                   test:c=>c.maxStreak>=3},
+  {id:'streak7',  icon:'🗓️', title:'Week Warrior',       desc:'Reach a 7-day streak.',                   test:c=>c.maxStreak>=7},
+  {id:'streak30', icon:'🏅', title:'Unstoppable',        desc:'Reach a 30-day streak.',                  test:c=>c.maxStreak>=30},
+  {id:'perfect1', icon:'🎯', title:'Perfectionist',      desc:'Finish a lesson with 100% mastery.',      test:c=>c.perfect>=1},
+  {id:'perfect5', icon:'💎', title:'Flawless Five',      desc:'Ace 5 lessons at 100% mastery.',          test:c=>c.perfect>=5},
+  {id:'vocab50',  icon:'📚', title:'Vocabulary Builder', desc:'Collect 50 review words.',                test:c=>c.srs>=50},
+  {id:'vocab150', icon:'🧠', title:'Lexicon Legend',     desc:'Collect 150 review words.',               test:c=>c.srs>=150},
+  {id:'goal1',    icon:'☀️', title:'Goal Getter',        desc:'Hit your daily XP goal.',                 test:c=>c.goalDays>=1},
+  {id:'goal7',    icon:'🔆', title:'Daily Devotee',      desc:'Hit your daily goal 7 times.',            test:c=>c.goalDays>=7},
+];
+function achCtx(){
+  const lvl={A1:0,A2:0,B1:0}, tot={A1:0,A2:0,B1:0};
+  (PATH||[]).forEach(u=>{ if(tot[u.level]!=null){ tot[u.level]++; if(PROG.completed.includes(u.id)) lvl[u.level]++; } });
+  const perfect=Object.values(PROG.mastery||{}).filter(m=>m>=100).length;
+  return { done:PROG.completed.length, lvl, tot, perfect, srs:Object.keys(typeof SRS!=='undefined'?SRS:{}).length,
+           xp:PROG.xp||0, maxStreak:PROG.maxStreak||0, goalDays:PROG.goalDays||0 };
+}
+function earnedAchIds(){ const c=achCtx(); return ACHIEVEMENTS.filter(a=>a.test(c)).map(a=>a.id); }
+function checkNewAchievements(){
+  const now=earnedAchIds(); const prev=new Set(PROG.earnedAch||[]);
+  const fresh=ACHIEVEMENTS.filter(a=>now.includes(a.id) && !prev.has(a.id));
+  PROG.earnedAch=now;   // tests are monotonic, so this only ever grows
+  return fresh;
+}
+
+let PATH=[], CUR=null;
+let USER=null, AUTH_ON=false, AUTH_MODE='login';   // auth: filled by the login gate
+let TUTOR = (function(){ try{ return JSON.parse(localStorage.getItem('fluenta_tutor_cur')||'[]')||[]; }catch(e){ return []; } })();   // current Luma chat (kept across app opens)
+let TUTOR_SAVED = (function(){ try{ return JSON.parse(localStorage.getItem('fluenta_tutor_saved')||'[]')||[]; }catch(e){ return []; } })();   // archived chat + voice sessions
+let VIEW_SESSION = null;   // a saved session opened for review
+// Persist the live text chat so it survives closing the app.
+function saveTutorCur(){ try{ localStorage.setItem('fluenta_tutor_cur', JSON.stringify(TUTOR.filter(m=>!m.pending))); }catch(e){} }
+function saveTutorSaved(){ try{ localStorage.setItem('fluenta_tutor_saved', JSON.stringify(TUTOR_SAVED)); }catch(e){} syncPush(); }
+// A short, human title from the first user line in a conversation.
+function sessionTitle(msgs){ const first=(msgs||[]).find(m=>m.role==='user'); const t=(first&&first.content||'Conversation').trim().replace(/\s+/g,' '); return t.length>42?t.slice(0,42)+'…':t; }
+// Archive a finished conversation (text or voice) into the review list.
+function archiveSession(kind, msgs){
+  const clean=(msgs||[]).filter(m=>m && (m.content||m.text) && !m.pending)
+    .map(m=>({role:m.role, content:(m.content!=null?m.content:m.text)}));
+  if(clean.length<2) return false;   // nothing worth keeping
+  TUTOR_SAVED.unshift({ id:'s'+Date.now()+Math.floor(Math.random()*1000), ts:Date.now(), kind, title:sessionTitle(clean), messages:clean });
+  if(TUTOR_SAVED.length>60) TUTOR_SAVED.length=60;   // keep it tidy
+  saveTutorSaved();
+  return true;
+}
+// Start a fresh text chat, filing the current one away first.
+function newTutorChat(){ if(TUTOR.filter(m=>!m.pending).length) archiveSession('text', TUTOR); TUTOR=[]; saveTutorCur(); renderTutor(); }
+/* No hearts: we track mastery (correct / answered) instead — kind, not punitive. */
+const RUN = {i:0, correct:0, answered:0, gained:0, checked:false, buf:null, lastCorrect:false};
+const accuracy = ()=> RUN.answered ? Math.round(RUN.correct/RUN.answered*100) : 0;
+const app = document.getElementById('app');
+const total = ()=>CUR.exercises.length;
+
+/* ---- Resilient Luma artwork ----
+   If a mascot / welcome image fails to load (e.g. a stale or partial cache
+   entry after an app update), retry it ONCE with a cache-busting query so the
+   browser re-fetches a fresh copy; if it still fails, hide it cleanly instead
+   of leaving a broken-image “?” box. Runs in the capture phase because <img>
+   error events don't bubble. */
+window.addEventListener('error', function(e){
+  const t=e && e.target;
+  if(!t || t.tagName!=='IMG') return;
+  const src=t.getAttribute('src')||'';
+  if(!/mascot\/|luma-welcome/.test(src)) return;
+  if(!t.dataset.imgRetried){ t.dataset.imgRetried='1'; t.src=src.split('?')[0]+'?r='+Date.now(); }
+  else { t.style.visibility='hidden'; }
+}, true);
+
+/* ---- helpers ---- */
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function el(tag,cls,text){ const e=document.createElement(tag); if(cls)e.className=cls; if(text!=null)e.textContent=text; return e; }
+const strip = s => s.normalize('NFD').replace(/[̀-ͯ]/g,'');
+function norm(s,ia){ let t=(s||'').toLowerCase().trim().replace(/\s+/g,' ').replace(/[.,¡!¿?]/g,''); return ia?strip(t):t; }
+/* Audio: prefer real recorded MP3s (natural Mónica voice); fall back to
+   browser TTS only when a clip is missing. Manifest maps exact text → file. */
+let AUDIO={}, AUDIO_LC={}, AUDIO_V='', curAudio=null;
+async function loadAudio(){ try{ const r=await fetch('audio/manifest.json',{cache:'no-store'}); if(r.ok){ AUDIO=await r.json(); AUDIO_V=AUDIO['_v']||''; AUDIO_LC={}; for(const k in AUDIO){ if(k==='_v')continue; AUDIO_LC[k.toLowerCase()]=AUDIO[k]; } } }catch(e){} }
+function ttsSpeak(text,rate){ if(!('speechSynthesis'in window))return; speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(text); u.lang='es-ES'; u.rate=rate||.92; const v=speechSynthesis.getVoices().find(v=>/es(-|_)?(ES|MX|US|419)/i.test(v.lang))||speechSynthesis.getVoices().find(v=>/es/i.test(v.lang)); if(v)u.voice=v; speechSynthesis.speak(u); }
+function speak(text,rate){
+  const file=AUDIO[text] || AUDIO_LC[(text||'').toLowerCase()];
+  if(file){
+    try{ if(curAudio){ curAudio.pause(); } if('speechSynthesis'in window) speechSynthesis.cancel();
+      const a=new Audio('audio/'+file+(AUDIO_V?('?v='+AUDIO_V):'')); a.playbackRate=(rate&&rate<0.85)?0.72:1; curAudio=a;
+      a.play().catch(()=>ttsSpeak(text,rate)); return; }catch(e){}
+  }
+  ttsSpeak(text,rate);
+}
+/* Diagnostic: play a sample clip and report exactly what happens (used by the
+   "Test lesson audio" button in Settings). */
+async function testLessonAudio(){
+  const msg=document.getElementById('gaTestMsg'); if(!msg) return;
+  msg.style.color='var(--muted)'; msg.textContent='Testing…';
+  if(!AUDIO || Object.keys(AUDIO).filter(k=>k!=='_v').length===0){ await loadAudio(); }
+  const keys=Object.keys(AUDIO).filter(k=>k!=='_v');
+  const swOn = (navigator.serviceWorker && navigator.serviceWorker.controller) ? 'on' : 'off';
+  if(!keys.length){ msg.style.color='var(--red)'; msg.textContent='✗ Audio list didn’t load (0 clips). audio/manifest.json isn’t reachable. [SW '+swOn+']'; return; }
+  const text = keys.find(k=>/^hola|buenos d|gracias|hola/i.test(k)) || keys[0];
+  const file = AUDIO[text];
+  const url = 'audio/'+file+(AUDIO_V?('?v='+AUDIO_V):'');
+  let info='';
+  try{
+    const r=await fetch(url,{cache:'no-store'});
+    const blob=await r.blob();
+    info='HTTP '+r.status+' · '+(r.headers.get('content-type')||'?')+' · '+blob.size+'B';
+    if(!r.ok || blob.size<500){ msg.style.color='var(--red)'; msg.textContent='✗ Clip not served: '+info+'. The mp3 isn’t loading from the server/cache. ['+keys.length+' clips, SW '+swOn+']'; return; }
+  }catch(e){ msg.style.color='var(--red)'; msg.textContent='✗ Clip fetch failed: '+(e.message||e)+'. [SW '+swOn+']'; return; }
+  try{
+    const a=new Audio(url); let played=false;
+    a.onplaying=()=>{ played=true; msg.style.color='var(--green)'; msg.textContent='✓ Audio works! Playing “'+text+'”. ['+keys.length+' clips · '+info+' · SW '+swOn+']'; };
+    a.onerror=()=>{ msg.style.color='var(--red)'; msg.textContent='✗ The mp3 loaded ('+info+') but the player errored. Trying browser voice… ['+keys.length+' clips, SW '+swOn+']'; ttsSpeak(text); };
+    await a.play();
+    setTimeout(()=>{ if(!played){ msg.style.color='var(--amber)'; msg.textContent='Clip fetched OK ('+info+') and playback started. If you heard nothing, it’s your device volume/output — not the app. [SW '+swOn+']'; } }, 900);
+  }catch(e){ msg.style.color='var(--red)'; msg.textContent='✗ Playback blocked: '+(e.message||e)+'. Falling back to browser voice. ['+info+', SW '+swOn+']'; ttsSpeak(text); }
+}
+if('speechSynthesis'in window){ speechSynthesis.getVoices(); }
+function levelInfo(xp){ const level=Math.floor(xp/100)+1; const into=xp%100; return {level, into, toNext:100-into}; }
+
+/* ---- data loading ---- */
+async function loadPath(){ try{ const r=await fetch('path.json',{cache:'no-store'}); if(!r.ok)throw 0; return await r.json(); }catch(e){ return FALLBACK.path; } }
+async function loadUnit(id){ const cu=customById(id); if(cu) return cu; try{ const r=await fetch('units/'+id+'.json',{cache:'no-store'}); if(!r.ok)throw 0; return await r.json(); }catch(e){ if(FALLBACK.units[id]) return FALLBACK.units[id]; throw new Error('needserver'); } }
+
+/* ---- Lesson Studio storage (Step 10) ---- */
+let CUSTOM = (function(){ try{ return JSON.parse(localStorage.getItem('fluenta_custom')||'[]')||[]; }catch(e){ return []; } })();
+function saveCustom(){ try{ localStorage.setItem('fluenta_custom', JSON.stringify(CUSTOM)); }catch(e){} syncPush(); }
+function customById(id){ return CUSTOM.find(u=>u&&u.unit&&u.unit.id===id); }
+
+/* ---- unlock state machine ---- */
+function stateOf(i){
+  const u=PATH[i];
+  if(!u.ready) return 'soon';
+  if(PROG.completed.includes(u.id)) return 'done';
+  let prev=null; for(let j=i-1;j>=0;j--){ if(PATH[j].ready){ prev=PATH[j]; break; } }
+  if(!prev || PROG.completed.includes(prev.id)) return 'active';
+  return 'locked';
+}
+
+/* ---- streak (once per calendar day) with streak-freeze protection ---- */
+function bumpStreak(){
+  const todayStr=new Date().toDateString();
+  PROG._streakEvent=null;
+  if(PROG.lastDay===todayStr) return;                 // already counted today
+  const dn = s => Math.floor(new Date(s).getTime()/864e5);
+  const today = dn(todayStr);
+  const last  = PROG.lastDay ? dn(PROG.lastDay) : null;
+  if(last==null){ PROG.streak=1; PROG._streakEvent='start'; }
+  else {
+    const missed = (today - last) - 1;                // full days skipped
+    if(missed<=0){ PROG.streak=(PROG.streak||0)+1; PROG._streakEvent='up'; }
+    else if((PROG.freezes||0) >= missed){              // freeze bridges the gap
+      PROG.freezes-=missed; PROG.streak=(PROG.streak||0)+1; PROG._streakEvent='freeze'; PROG._streakFroze=missed;
+    } else { PROG.streak=1; PROG._streakEvent='reset'; }
+  }
+  PROG.lastDay=todayStr;
+  if(PROG.streak>(PROG.maxStreak||0)) PROG.maxStreak=PROG.streak;   // best-ever, for achievements
+  // weekly reward: earn a freeze every 7 days of streak (capped)
+  if(PROG.streak>0 && PROG.streak%7===0 && (PROG.freezes||0)<MAX_FREEZES){ PROG.freezes=(PROG.freezes||0)+1; PROG._streakEvent=(PROG._streakEvent||'up')+'+freezeEarned'; }
+}
+
+/* ================= SPACED REPETITION (FSRS-4.5) =================
+   Real scheduler: each vocab card tracks stability (S) + difficulty (D).
+   Grades: 1=Again 2=Hard 3=Good 4=Easy. Dates are integer day-numbers. */
+const FSRS = (function(){
+  const w = [0.4872,1.4003,3.7145,13.8206,5.1618,1.2298,0.8975,0.031,1.6474,0.1367,1.0461,2.1072,0.0793,0.3246,1.587,0.2272,2.8755];
+  const DECAY=-0.5, FACTOR=Math.pow(0.9,1/DECAY)-1, R_REQ=0.9, MIN_S=0.1, MIN_I=1, MAX_I=3650;
+  const clampD=d=>Math.min(10,Math.max(1,d));
+  const initD=g=>clampD(w[4]-(g-3)*w[5]);
+  const initS=g=>Math.max(MIN_S,w[g-1]);
+  const retr=(t,S)=>Math.pow(1+FACTOR*Math.max(0,t)/S,DECAY);
+  const interval=S=>Math.min(MAX_I,Math.max(MIN_I,Math.round(S/FACTOR*(Math.pow(R_REQ,1/DECAY)-1))));
+  const nextD=(D,g)=>{ const d1=D-w[6]*(g-3); return clampD(w[7]*initD(3)+(1-w[7])*d1); };
+  function nextS(S,D,R,g){
+    if(g===1){ const sf=w[11]*Math.pow(D,-w[12])*(Math.pow(S+1,w[13])-1)*Math.exp(w[14]*(1-R)); return Math.max(MIN_S,Math.min(sf,S)); }
+    const hard=g===2?w[15]:1, easy=g===4?w[16]:1;
+    const inc=Math.exp(w[8])*(11-D)*Math.pow(S,-w[9])*(Math.exp(w[10]*(1-R))-1)*hard*easy;
+    return Math.max(MIN_S,S*(1+inc));
+  }
+  function first(g){ const S=initS(g),D=initD(g); return {S,D,interval:interval(S)}; }
+  function review(card,g,elapsed){ const R=retr(elapsed,card.S); const S=nextS(card.S,card.D,R,g); return {S,D:nextD(card.D,g),interval:interval(S)}; }
+  return { first, review };
+})();
+
+const todayNum = ()=> Math.floor(Date.now()/864e5);
+function loadSRS(){ try{ const s=JSON.parse(localStorage.getItem('fluenta_srs')||'null'); if(s&&typeof s==='object') return s; }catch(e){} return {}; }
+function saveSRS(){ try{ localStorage.setItem('fluenta_srs', JSON.stringify(SRS)); }catch(e){} syncPush(); }
+const SRS = loadSRS();
+function cardId(unitId,es){ return unitId+'::'+es; }
+
+function seedVocab(unit){
+  const list = (unit.vocab && unit.vocab.length) ? unit.vocab
+             : ((unit.completion&&unit.completion.adds_vocab_to_srs)||[]).map(es=>({es,en:''}));
+  let added=0;
+  list.forEach(v=>{ const id=cardId(unit.unit.id,v.es); if(!SRS[id]){ SRS[id]={es:v.es,en:v.en||'',unit:unit.unit.id,S:null,D:null,due:todayNum(),last:null,reps:0,lapses:0}; added++; } });
+  if(added) saveSRS();
+  return added;
+}
+function dueCards(){ const t=todayNum(); return Object.keys(SRS).map(k=>SRS[k]).filter(c=>c.due<=t); }
+function previewInterval(card,g){
+  if(card.S==null) return FSRS.first(g).interval;
+  const elapsed=(card.last!=null)?(todayNum()-card.last):card.S;
+  return FSRS.review({S:card.S,D:card.D},g,elapsed).interval;
+}
+function gradeCard(card,g){
+  const t=todayNum();
+  const res = (card.S==null) ? FSRS.first(g)
+            : FSRS.review({S:card.S,D:card.D}, g, (card.last!=null)?(t-card.last):card.S);
+  card.S=res.S; card.D=res.D; card.last=t; card.due=t+res.interval;
+  card.reps=(card.reps||0)+1; if(g===1) card.lapses=(card.lapses||0)+1;
+  saveSRS(); return res.interval;
+}
+function fmtInterval(days){ if(days<=0) return 'soon'; if(days===1) return '1 day'; if(days<30) return days+' days'; if(days<365){ const m=Math.round(days/30); return m+(m===1?' month':' months'); } const y=Math.round(days/365); return y+(y===1?' year':' years'); }
+
+let RV=null; // active review session
+function startReview(){ const due=dueCards(); if(!due.length){ go('reviewhub'); return; } RV={ queue:due.slice(), reviewed:new Set(), total:due.length, revealed:false, mode:'due' }; go('repaso'); }
+
+/* ---- Weak spots (Step 5): drill the words you struggle with most ----
+   Scored from your own FSRS history: lapses (times forgotten), difficulty,
+   and low stability despite repeated reviews. Doesn't wait for cards to be
+   due — it targets what's actually shaky, and grading still feeds FSRS. */
+function cardWeakness(c){
+  const S=c.S, D=(c.D!=null?c.D:5), lap=c.lapses||0, reps=c.reps||0;
+  let s = lap*3 + (D-5)*0.6;
+  if(S!=null && reps>=2 && S<4) s += 2;   // reviewed a few times but still fragile
+  if(S!=null && S<2) s += 1;              // very short retention
+  return s;
+}
+function weakCards(limit){
+  limit=limit||15;
+  return Object.values(SRS)
+    .filter(c=>(c.reps||0)>0)
+    .map(c=>({c,s:cardWeakness(c)}))
+    .filter(x=>x.s>0.4)
+    .sort((a,b)=>b.s-a.s)
+    .slice(0,limit)
+    .map(x=>x.c);
+}
+function startWeakReview(){ const w=weakCards(15); if(!w.length){ go('reviewhub'); return; } RV={ queue:w.slice(), reviewed:new Set(), total:w.length, revealed:false, mode:'weak' }; go('repaso'); }
+
+/* ================= CLOUD SYNC (progress follows the account) =================
+   Progress + SRS save locally (offline-first) AND push to the server when
+   signed in. On entering the app we pull the server copy and MERGE it with
+   local so nothing is lost across devices. */
+let syncTimer=null, syncing=false;
+function syncPush(){ if(!AUTH_ON) return; clearTimeout(syncTimer); syncTimer=setTimeout(syncPushNow, 900); }
+async function syncPushNow(){ if(!AUTH_ON) return; try{ await fetch('api/progress_save.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({data:{prog:PROG,srs:SRS,custom:CUSTOM,tutor:TUTOR_SAVED}})}); }catch(e){} }
+function mergeProgress(server){
+  if(!server) return;
+  const sp=server.prog||{}, ss=server.srs||{};
+  PROG.xp=Math.max(PROG.xp||0, sp.xp||0);
+  const comp=new Set([...(PROG.completed||[]), ...(sp.completed||[])]); PROG.completed=[...comp];
+  PROG.mastery=PROG.mastery||{}; for(const k in (sp.mastery||{})) PROG.mastery[k]=Math.max(PROG.mastery[k]||0, sp.mastery[k]||0);
+  if(sp.lastDay && (!PROG.lastDay || new Date(sp.lastDay) > new Date(PROG.lastDay))){ PROG.streak=sp.streak||PROG.streak; PROG.lastDay=sp.lastDay; }
+  for(const id in ss){ const sc=ss[id], lc=SRS[id];
+    if(!lc){ SRS[id]=sc; }
+    else { const sL=sc.last||0, lL=lc.last||0; if(sL>lL || (sL===lL && (sc.reps||0)>(lc.reps||0))) SRS[id]=sc; }
+  }
+  // Studio lessons: union local + server by id so a device that lost its local
+  // copy (app update / reinstall) gets every lesson back from the account.
+  if(Array.isArray(server.custom)){
+    const byId={};
+    (CUSTOM||[]).forEach(u=>{ if(u&&u.unit&&u.unit.id) byId[u.unit.id]=u; });
+    server.custom.forEach(u=>{ if(u&&u.unit&&u.unit.id && !byId[u.unit.id]) byId[u.unit.id]=u; });
+    CUSTOM = Object.values(byId);
+    try{ localStorage.setItem('fluenta_custom', JSON.stringify(CUSTOM)); }catch(e){}
+  }
+  // Saved tutor conversations: union by id, newest first.
+  if(Array.isArray(server.tutor)){
+    const byId={};
+    server.tutor.forEach(s=>{ if(s&&s.id) byId[s.id]=s; });
+    (TUTOR_SAVED||[]).forEach(s=>{ if(s&&s.id) byId[s.id]=s; });
+    TUTOR_SAVED = Object.values(byId).sort((a,b)=>(b.ts||0)-(a.ts||0));
+    try{ localStorage.setItem('fluenta_tutor_saved', JSON.stringify(TUTOR_SAVED)); }catch(e){}
+  }
+  try{ localStorage.setItem('aprende_prog', JSON.stringify(PROG)); localStorage.setItem('fluenta_srs', JSON.stringify(SRS)); }catch(e){}
+}
+async function syncPull(){ if(!AUTH_ON || syncing) return; syncing=true;
+  try{ const r=await fetch('api/progress_get.php',{cache:'no-store'}); if(r.ok){ const j=await r.json(); mergeProgress(j.data); await syncPushNow(); } }catch(e){}
+  syncing=false;
+}
+
+/* ================= INFO OVERLAY ================= */
+function showInfo(title, bodyHTML){
+  const ov=el('div','infobg'); ov.id='infobg';
+  const panel=el('div','infopanel');
+  const head=el('div','ip-head'); head.appendChild(el('b',null,title));
+  const x=el('button','ip-x','×'); head.appendChild(x);
+  const body=el('div','ip-body'); body.innerHTML=bodyHTML;
+  panel.appendChild(head); panel.appendChild(body); ov.appendChild(panel); document.body.appendChild(ov);
+  const close=()=>ov.remove();
+  x.onclick=close; ov.onclick=e=>{ if(e.target===ov) close(); };
+}
+function showGrammarInfo(){
+  if(!CUR || !CUR.grammar) return;
+  const g=CUR.grammar;
+  const html = `<p class="ip-sub">The rule</p><p style="color:var(--muted);margin-bottom:6px">${g.intro}</p>`
+    + `<p class="ip-sub">Remember</p>` + g.takeaways.map(t=>`<div class="takeaway"><span class="k">→</span><span>${t}</span></div>`).join('');
+  showInfo(CUR.unit.title, html);
+}
+
+/* ---- In-lesson "Ask Luma": contextual help about the CURRENT exercise ---- */
+function exContext(){
+  const ex = (CUR && CUR.exercises) ? CUR.exercises[RUN.i] : null;
+  if(!ex) return { sentence:'', ctx:'' };
+  const strip = s => String(s||'').replace(/<[^>]+>/g,'').replace(/___/g,'____').trim();
+  const sentence = strip(ex.prompt || ex.say || ex.tts || '');
+  const en = strip(ex.prompt_en || ex.en || ex.translation || '');
+  let extra = '';
+  if(ex.type==='multiple_choice' || ex.type==='dialogue'){
+    const opts=(ex.options||[]).map(o=>o.text||o).join(' / ');
+    const ans=(ex.options||[]).find(o=>o.id===ex.answer); extra=`Options: ${opts}. Correct answer: ${ans?ans.text:ex.answer}.`;
+  } else if(ex.type==='word_bank'){ extra=`Correct order: ${(ex.answer||[]).join(' ')}.`; }
+  else if(ex.type==='fill_blank' || ex.type==='listening'){ extra=`Correct answer: ${(ex.accepted||[])[0]||''}.`; }
+  else if(ex.type==='match_pairs'){ extra=`Pairs: ${(ex.pairs||[]).map(p=>p[0]+' = '+p[1]).join(', ')}.`; }
+  else if(ex.type==='speak'){ extra=`Target phrase: ${strip(ex.say)}.`; }
+  const unit = CUR.unit ? CUR.unit.title : 'this lesson';
+  const ctx = `Context: I'm on lesson "${unit}". The exercise is: "${sentence}"${en?` (English: ${en})`:''}. ${extra}`.trim();
+  return { sentence, en, ctx };
+}
+let ASK = { hist:[], busy:false };
+function askLuma(){
+  const c = exContext();
+  ASK = { hist:[], busy:false, ctx:c.ctx };
+  const ov=el('div','infobg'); ov.id='askbg';
+  const panel=el('div','infopanel');
+  const head=el('div','ip-head'); head.appendChild(el('b',null,'Ask Luma'));
+  const x=el('button','ip-x','×'); head.appendChild(x); panel.appendChild(head);
+  if(c.sentence){ const s=el('div','ask-sentence'); s.textContent=c.sentence; panel.appendChild(s); }
+  const chipsWrap=el('div','askchips');
+  ['Why is this the answer?','Explain the grammar','Break it down word by word'].forEach(q=>{
+    const b=el('button','tchip',q); b.onclick=()=>askLumaSend(q); chipsWrap.appendChild(b);
+  });
+  panel.appendChild(chipsWrap);
+  const reply=el('div','askreply'); reply.id='askreply'; panel.appendChild(reply);
+  const row=el('div','askrow');
+  const inp=el('input','field'); inp.id='askin'; inp.placeholder='Ask about this exercise…'; inp.autocomplete='off';
+  const send=el('button','tsend','↑'); send.setAttribute('aria-label','Send');
+  inp.onkeydown=e=>{ if(e.key==='Enter'&&inp.value.trim()) askLumaSend(inp.value.trim()); };
+  send.onclick=()=>{ if(inp.value.trim()) askLumaSend(inp.value.trim()); };
+  row.appendChild(inp); row.appendChild(send); panel.appendChild(row);
+  ov.appendChild(panel); document.body.appendChild(ov);
+  const close=()=>ov.remove(); x.onclick=close; ov.onclick=e=>{ if(e.target===ov) close(); };
+  setTimeout(()=>inp.focus(),120);
+}
+function askRender(){
+  const box=document.getElementById('askreply'); if(!box) return;
+  box.innerHTML='';
+  ASK.hist.forEach(m=>{
+    const row=el('div','ask-msg '+m.role);
+    if(m.role==='assistant'){ const av=el('img','ask-av'); av.src='mascot/happy.png'; av.alt='Luma'; row.appendChild(av); }
+    const bub=el('div','ask-bub'+(m.pending?' pending':''));
+    if(m.pending) bub.innerHTML='<span class="tdot"></span><span class="tdot"></span><span class="tdot"></span>';
+    else bub.textContent=m.content;
+    row.appendChild(bub); box.appendChild(row);
+  });
+  box.scrollTop=box.scrollHeight;
+}
+async function askLumaSend(q){
+  if(ASK.busy) return;
+  if(!AUTH_ON){ ASK.hist.push({role:'assistant',content:'I’m offline — can’t reach the server. Connect via Profile → “Sign in to sync”. 🦉'}); askRender(); return; }
+  ASK.busy=true;
+  ASK.hist.push({role:'user',content:q});
+  ASK.hist.push({role:'assistant',content:'',pending:true});
+  askRender();
+  // First turn carries the exercise context; follow-ups keep the short thread.
+  const msgs=[];
+  const real=ASK.hist.filter(m=>!m.pending);
+  real.forEach((m,i)=>{
+    const content = (m.role==='user' && i===0 && ASK.ctx) ? (ASK.ctx+'\n\nMy question: '+m.content) : m.content;
+    msgs.push({role:m.role,content});
+  });
+  let reply;
+  try{
+    const r=await fetch('api/tutor.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:msgs})});
+    const raw=await r.text(); let j={}; try{ j=JSON.parse(raw); }catch(_){ throw new Error('bad_json_'+r.status); }
+    reply = j.reply || (j.error==='ai_not_configured'
+      ? 'I’m not switched on yet — add your OpenAI key in Settings and I’ll explain anything. 🦉'
+      : j.error==='not_authenticated' ? 'Please log in again so I can help. 🦉'
+      : j.error==='upstream_unreachable' ? 'I can’t reach OpenAI from the server right now — check the key and that the server allows outbound requests.'
+      : 'Sorry, I had trouble just now. Try again?');
+  }catch(e){ reply = /bad_json/.test(e.message) ? ('The server didn’t reply correctly ('+e.message.replace('bad_json_','HTTP ')+'). Make sure /api is deployed and PHP is on.') : 'I couldn’t reach the server. Try again in a moment.'; }
+  ASK.hist=ASK.hist.filter(m=>!m.pending);
+  ASK.hist.push({role:'assistant',content:reply});
+  ASK.busy=false; askRender();
+}
+
+/* ================= RENDER ROUTER ================= */
+function go(s){ if(SCREEN==='voice' && s!=='voice' && typeof voiceCleanup==='function'){ if(typeof voiceArchive==='function') voiceArchive(); voiceCleanup(); if(VOICE.state!=='error') VOICE.state='idle'; } SCREEN=s; window.scrollTo(0,0); render(); }
+let SCREEN='home';
+function render(){
+  if(SCREEN==='loading') return app.innerHTML=`<div class="center"><div class="spinner"></div><p class="qhint">Loading lesson…</p></div>`;
+  if(SCREEN==='needserver') return renderNeedServer();
+  if(SCREEN==='home') return renderHome();
+  if(SCREEN==='grammar') return renderGrammar();
+  if(SCREEN==='exercise') return renderExercise();
+  if(SCREEN==='complete') return renderComplete();
+  if(SCREEN==='repaso') return renderReview();
+  if(SCREEN==='reviewhub') return renderReviewHub();
+  if(SCREEN==='profile') return renderProfile();
+  if(SCREEN==='dashboard') return renderDashboard();
+  if(SCREEN==='vocab') return renderVocabBrowser();
+  if(SCREEN==='reference') return renderReference();
+  if(SCREEN==='refview') return renderRefView();
+  if(SCREEN==='listen') return renderListen();
+  if(SCREEN==='studio') return renderStudio();
+  if(SCREEN==='studioedit') return renderStudioEdit();
+  if(SCREEN==='tutor') return renderTutor();
+  if(SCREEN==='sessions') return renderSessions();
+  if(SCREEN==='sessionview') return renderSessionView();
+  if(SCREEN==='voice') return renderVoice();
+  if(SCREEN==='auth') return renderAuth();
+  if(SCREEN==='changepw') return renderChangePw();
+  if(SCREEN==='settings') return renderSettings();
+}
+
+/* ---- bottom nav ---- */
+function bottomNav(active){
+  const tabs=[['home','Learn','🧭'],['review','Review','🗂️'],['tutor','Tutor','img:mascot/talk.png'],['profile','Profile','👤']];
+  return `<nav class="botnav">${tabs.map(([k,l,ic])=>{
+    const icon = ic.startsWith('img:') ? `<img class="bni-img" src="${ic.slice(4)}" alt="" />` : `<span class="bni">${ic}</span>`;
+    return `<button class="bn ${active===k?'on':''}" data-nav="${k}">${icon}<span>${l}</span></button>`;
+  }).join('')}</nav>`;
+}
+function wireNav(){ document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>{ const k=b.dataset.nav; if(k==='home')go('home'); else if(k==='review')go('reviewhub'); else if(k==='tutor')go('tutor'); else if(k==='profile')go('profile'); }); }
+
+/* ---- level ring ---- */
+function levelRing(xp){ const {level,into}=levelInfo(xp); const r=34, C=2*Math.PI*r, off=C*(1-into/100);
+  return `<svg class="lvring" viewBox="0 0 84 84" width="84" height="84" style="flex:none">
+    <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+    <circle cx="42" cy="42" r="${r}" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="7"/>
+    <circle cx="42" cy="42" r="${r}" fill="none" stroke="url(#lg)" stroke-width="7" stroke-linecap="round" stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 42 42)"/>
+    <text x="42" y="40" text-anchor="middle" class="lvr-n">${level}</text>
+    <text x="42" y="54" text-anchor="middle" class="lvr-l">LEVEL</text>
+  </svg>`;
+}
+
+/* ---- HOME ---- */
+function renderHome(){
+  let html=''; let lastCh=null; let g=0; let mi=0;
+  // Rotating cast of Luma poses used to decorate the winding path (Duolingo-style).
+  const POSES=['p-teach','celebrate','p-hi','love','p-party','talk','p-proud','sleep','p-idea','p-excited','p-cheer','encourage','p-thumb'];
+  PATH.forEach((u,i)=>{
+    const st=stateOf(i);
+    if(u.chapter!==lastCh){
+      html += `<div class="chapter-head"><div class="ch-rule"><span class="ch-badge">Chapter ${u.chapter||1}</span></div><span class="ch-t">${esc(u.chapter_title||'')}</span></div>`;
+      lastCh=u.chapter;
+    }
+    // Serpentine horizontal offset — a gentle sine wave down the page.
+    const off=Math.round(Math.sin(g*0.72)*58);
+    // Drop a mascot beside every 4th node, tucked into the gutter opposite the bulge.
+    let mascot='';
+    if(g%4===2){
+      const pose=POSES[mi++ % POSES.length];
+      const pm = off>=0 ? -116 : 116;
+      mascot = `<img class="path-mascot" src="mascot/${pose}.png" alt="" aria-hidden="true" style="left:calc(50% + ${pm}px)">`;
+    }
+    const glyph = st==='done'?'✓' : st==='soon'?'·' : st==='locked'?'🔒' : u.icon;
+    const m = PROG.mastery[u.id];
+    const sub = st==='soon'?'Coming soon' : st==='locked'?'Locked'
+              : (st==='done' && m!=null)?('Mastery '+m+'%') : u.subtitle;
+    html += `<div class="node ${st}" data-i="${i}" data-id="${u.id}" data-st="${st}" style="transform:translateX(${off}px)">
+       ${mascot}
+       <div class="medallion"><span>${glyph}</span></div>
+       <div class="lbl">${esc(u.title)}<br><span style="opacity:.6;font-size:11px">${esc(sub)}</span></div></div>`;
+    g++;
+  });
+  const activeU = PATH.find((u,i)=>stateOf(i)==='active');
+  const feat = activeU ? `<button class="feat" id="featGo">
+     <div class="feat-ic">${activeU.icon}</div>
+     <div class="feat-txt"><span class="feat-k">Continue</span><span class="feat-t">${esc(activeU.title)}</span><span class="feat-s">${esc(activeU.subtitle)}</span></div>
+     <span class="feat-arrow">→</span></button>` : '';
+  const d=dueCards().length;
+  const banner = d>0 ? `<button class="review-banner" id="goReview"><span class="rb-ic">🗂️</span><span class="rb-txt"><b>${d}</b> ${d===1?'card':'cards'} to review</span><span class="rb-go">Review →</span></button>` : '';
+
+  app.innerHTML = `<div class="screen withnav">
+    <div class="dash">
+      <div class="dash-top">
+        <img class="dash-luma" src="mascot/wave.png" alt="Luma" />
+        <div class="dash-greet"><p class="hi">Welcome back${USER&&USER.name?', '+esc(USER.name):''} 👋</p><p class="hi-sub">Ready for today's Spanish?</p></div>
+        ${levelRing(PROG.xp)}
+      </div>
+      <div class="chips">
+        <div class="chip-stat"><span class="cs-ic">🔥</span><div><b>${PROG.streak}</b><span>day streak</span></div></div>
+        <div class="chip-stat"><span class="cs-ic">⚡</span><div><b>${PROG.xp}</b><span>XP</span></div></div>
+      </div>
+      ${goalCard()}
+    </div>
+    ${feat}
+    ${banner}
+    <div class="path">${html}</div>
+  </div>` + bottomNav('home');
+
+  document.querySelectorAll('.node').forEach(n=>{
+    const st=n.dataset.st;
+    if(st==='active'||st==='done') n.querySelector('.medallion').onclick=()=>openUnit(n.dataset.id);
+  });
+  const fg=document.getElementById('featGo'); if(fg&&activeU) fg.onclick=()=>openUnit(activeU.id);
+  const gr=document.getElementById('goReview'); if(gr) gr.onclick=startReview;
+  const ge=document.getElementById('goalEdit'); if(ge) ge.onclick=goalSheet;
+  wireNav();
+}
+/* ---- Daily goal card + streak-freeze (Step 3) ---- */
+function goalCard(){
+  const cur=todayXP(), goal=PROG.dailyGoal||30, pct=goalPct(), met=goalMet();
+  const R=20, C=2*Math.PI*R, off=C*(1-pct/100);
+  const ring=`<svg class="goal-ring" viewBox="0 0 48 48" width="48" height="48">
+      <circle cx="24" cy="24" r="${R}" class="gr-track"/>
+      <circle cx="24" cy="24" r="${R}" class="gr-fill ${met?'met':''}" stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 24 24)"/>
+      <text x="24" y="28" text-anchor="middle" class="gr-emoji">${met?'✓':'🎯'}</text>
+    </svg>`;
+  const freezePill=`<span class="freeze-pill" title="Streak freezes protect your streak on a missed day">❄️ ${PROG.freezes||0}</span>`;
+  return `<button class="goal-card${met?' met':''}" id="goalEdit" aria-label="Daily goal">
+      ${ring}
+      <div class="goal-txt">
+        <span class="goal-k">${met?'Daily goal reached! 🎉':'Daily goal'}</span>
+        <span class="goal-v">${cur} / ${goal} XP today</span>
+        <div class="goal-bar"><i style="width:${pct}%"></i></div>
+      </div>
+      ${freezePill}
+    </button>`;
+}
+function goalSheet(){
+  const html = `<p class="ip-sub">Set your daily XP goal</p>
+    <div class="goal-opts">${GOAL_PRESETS.map(p=>`<button class="goal-opt${(PROG.dailyGoal===p.xp)?' on':''}" data-xp="${p.xp}"><b>${p.xp} XP</b><span>${p.l}</span></button>`).join('')}</div>
+    <p class="ip-sub" style="margin-top:16px">Streak freeze ❄️</p>
+    <p class="ip-body" style="color:var(--muted)">You have <b>${PROG.freezes||0}</b> freeze${(PROG.freezes||0)===1?'':'s'}. If you miss a day, a freeze is used automatically to keep your streak alive. You earn one every 7-day streak (max ${MAX_FREEZES}).</p>`;
+  showInfo('Daily goal', html);
+  document.querySelectorAll('.goal-opt').forEach(b=>b.onclick=()=>{ setGoal(+b.dataset.xp); const ov=document.getElementById('infobg'); if(ov) ov.remove(); });
+}
+function setGoal(xp){ PROG.dailyGoal=xp; saveProg(); if(SCREEN==='home') renderHome(); }
+function streakNote(){
+  const e=PROG._streakEvent||'';
+  let msg='';
+  if(e.includes('freeze') && !e.startsWith('up')){ const n=PROG._streakFroze||1; msg=`❄️ Streak freeze used — your <b>${PROG.streak}-day</b> streak is safe. ${PROG.freezes||0} left.`; }
+  if(e.includes('freezeEarned')) msg=`❄️ +1 streak freeze earned — you now have <b>${PROG.freezes||0}</b>.`;
+  return msg?`<div class="streak-note">${msg}</div>`:'';
+}
+
+async function openUnit(id){
+  go('loading');
+  try{ CUR=await loadUnit(id); RUN.i=0; RUN.correct=0; RUN.answered=0; RUN.gained=0; RUN.checked=false; go('grammar'); }
+  catch(e){ go('needserver'); }
+}
+
+function renderNeedServer(){
+  app.innerHTML=`<div class="center">
+    <div style="font-size:40px;margin-bottom:12px">🗂️</div>
+    <h2>Serve the app over HTTP</h2>
+    <p class="qhint" style="max-width:34ch">This lesson lives in a separate file. Browsers block loading it from <code>file://</code>. Once it's on your subdomain it just works.</p>
+    <button class="cta ghost" style="max-width:220px;margin-top:18px" onclick="go('home')">← Back</button>
+  </div>`;
+}
+
+/* ---- GRAMMAR ---- */
+function renderGrammar(){
+  const g=CUR.grammar;
+  const section = s => `<div class="card grammar-card">
+      <span class="verb-tag ${s.tag==='estar'?'estar':''}">${esc(s.tag).toUpperCase()}</span>
+      <h2>${s.heading}</h2>
+      <p style="color:var(--muted);font-size:15px">${s.body}</p>
+      ${s.conj?`<div class="conj">${s.conj.map(c=>`<div><span>${esc(c[0])}</span><span>${esc(c[1])}</span></div>`).join('')}</div>`:''}
+      ${(s.ex||[]).map(e=>`<div class="ex"><div>${e.es}</div><span class="en">${esc(e.en)}</span> · <span class="note">${esc(e.note)}</span></div>`).join('')}
+    </div>`;
+  app.innerHTML=`
+  ${bar(0,true)}
+  <div class="screen">
+    <p class="eyebrow">Grammar · ${esc(CUR.unit.title)}</p>
+    <h1>${g.title}</h1>
+    <p style="color:var(--muted)">${g.intro}</p>
+    ${g.sections.map(section).join('')}
+    <div class="card"><p class="eyebrow" style="margin-bottom:12px">Remember this</p>
+      ${g.takeaways.map(t=>`<div class="takeaway"><span class="k">→</span><span>${t}</span></div>`).join('')}</div>
+    <div class="card" style="background:var(--red-bg);border-color:rgba(251,113,133,.28)"><p class="eyebrow" style="margin-bottom:12px;color:var(--red)">Common mistakes</p>
+      ${g.mistakes.map(m=>`<div class="mistake"><span class="w">${m.w}</span> → <span class="r">${m.r}</span><span class="why">${m.why}</span></div>`).join('')}</div>
+    <button class="cta" id="beginEx">Practice →</button>
+  </div>`;
+  wireBar(); document.getElementById('beginEx').onclick=()=>{ RUN.i=0; go('exercise'); };
+}
+
+function bar(idx,grammar){ const pct=grammar?0:Math.round((idx/total())*100);
+  const counter = grammar?'' : `<div class="stat count"><span class="glyph">◇</span>${idx+1}/${total()}</div>`;
+  const ask = grammar ? '' : `<button class="ibtn askbtn" data-ask aria-label="Ask Luma">🦉</button>`;
+  return `<div class="topbar"><button class="xbtn" data-close>×</button><div class="progress"><i style="width:${pct}%"></i></div>${ask}<button class="ibtn" data-info aria-label="Grammar tip">ⓘ</button>${counter}</div>`; }
+function wireBar(){
+  document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>{ if(confirm("Leave? You'll lose this session's progress.")) go('home'); });
+  document.querySelectorAll('[data-info]').forEach(b=>b.onclick=showGrammarInfo);
+  document.querySelectorAll('[data-ask]').forEach(b=>b.onclick=askLuma);
+}
+
+/* ---- EXERCISE ROUTER ---- */
+function renderExercise(){
+  const ex=CUR.exercises[RUN.i]; RUN.checked=false; RUN.buf=null;
+  const bodies={multiple_choice:mcBody,word_bank:wbBody,fill_blank:fbBody,match_pairs:mpBody,listening:lsBody,dialogue:dgBody,speak:spBody};
+  app.innerHTML=`${bar(RUN.i)}<div class="screen"><p class="qtype">${labelFor(ex.type)}</p>${bodies[ex.type](ex)}</div><div id="foot"></div>`;
+  wireBar();
+  ({multiple_choice:mcWire,word_bank:wbWire,fill_blank:fbWire,match_pairs:mpWire,listening:lsWire,dialogue:dgWire,speak:spWire})[ex.type](ex);
+}
+function labelFor(t){ return {multiple_choice:"Choose the correct answer",word_bank:"Put the words in order",fill_blank:"Fill in the blank",match_pairs:"Match the pairs",listening:"Listen & type",dialogue:"Complete the conversation",speak:"Say it out loud"}[t]; }
+function footCheck(on){ document.getElementById('foot').innerHTML=`<div class="actionbar"><button class="cta" id="check" ${on?'':'disabled'}>Check</button></div>`; }
+function enableCheck(on){ const b=document.getElementById('check'); if(b) b.disabled=!on; }
+
+/* 1. MULTIPLE CHOICE */
+function mcBody(ex){ return `<div class="qtext">${ex.prompt}</div><div class="qhint">${esc(ex.prompt_en||'')}</div><div id="opts">${ex.options.map(o=>`<button class="opt" data-id="${o.id}"><span class="key">${o.id.toUpperCase()}</span><span>${esc(o.text)}</span></button>`).join('')}</div>`; }
+function mcWire(ex){ footCheck(false);
+  document.querySelectorAll('#opts .opt').forEach(o=>o.onclick=()=>{ if(RUN.checked)return; document.querySelectorAll('#opts .opt').forEach(x=>x.classList.remove('sel')); o.classList.add('sel'); RUN.buf=o.dataset.id; enableCheck(true); });
+  document.getElementById('check').onclick=()=>{ const ok=RUN.buf===ex.answer; document.querySelectorAll('#opts .opt').forEach(x=>{ x.style.pointerEvents='none'; if(x.dataset.id===ex.answer)x.classList.add('correct'); else if(x.dataset.id===RUN.buf)x.classList.add('wrong'); }); showFeedback(ex,ok); };
+}
+/* 2. WORD BANK */
+function wbBody(ex){ return `<div class="qtext">${ex.prompt}</div><div class="answerline" id="ans"></div><div class="bank" id="bank">${ex.tokens.map((t,i)=>`<button class="chip" data-i="${i}">${esc(t)}</button>`).join('')}</div>`; }
+function wbWire(ex){ footCheck(false); RUN.buf=[]; const bank=document.getElementById('bank'),ans=document.getElementById('ans');
+  bank.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{ if(RUN.checked||c.classList.contains('used'))return; c.classList.add('used'); RUN.buf.push({i:c.dataset.i,t:c.textContent}); draw(); });
+  function draw(){ ans.innerHTML=RUN.buf.map((x,k)=>`<button class="chip" data-k="${k}">${esc(x.t)}</button>`).join(''); ans.querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{ if(RUN.checked)return; const r=RUN.buf.splice(+ch.dataset.k,1)[0]; bank.querySelector(`.chip[data-i="${r.i}"]`).classList.remove('used'); draw(); }); enableCheck(RUN.buf.length>0); }
+  document.getElementById('check').onclick=()=>showFeedback(ex, RUN.buf.map(x=>x.t).join(' ')===ex.answer.join(' '));
+}
+/* 3. FILL BLANK */
+function fbBody(ex){ return `<div class="qtext">${ex.prompt.replace('___','<span style="color:var(--cyan)">____</span>')}</div><div class="qhint">${esc(ex.prompt_en||'')} ${ex.hint?'· '+esc(ex.hint):''}</div><input class="field" id="fld" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="Type here…" />`; }
+function fbWire(ex){ footCheck(false); const f=document.getElementById('fld'); f.oninput=()=>enableCheck(f.value.trim().length>0); f.onkeydown=e=>{ if(e.key==='Enter'&&f.value.trim())document.getElementById('check').click(); };
+  document.getElementById('check').onclick=()=>{ f.disabled=true; showFeedback(ex, ex.accepted.some(a=>norm(a,ex.ignore_accents)===norm(f.value,ex.ignore_accents))); }; setTimeout(()=>f.focus(),120);
+}
+/* 4. MATCH PAIRS */
+function mpBody(ex){ const L=ex.pairs.map(p=>p[0]),R=ex.pairs.map(p=>p[1]).slice().sort(()=>Math.random()-.5);
+  return `<div class="qtext" style="font-size:20px">${ex.prompt}</div><div class="match" style="margin-top:18px"><div class="mcol">${L.map(l=>`<div class="mtile" data-side="L" data-v="${esc(l)}">${esc(l)}</div>`).join('')}</div><div class="mcol">${R.map(r=>`<div class="mtile" data-side="R" data-v="${esc(r)}">${esc(r)}</div>`).join('')}</div></div>`; }
+function mpWire(ex){ document.getElementById('foot').innerHTML=''; const map={}; ex.pairs.forEach(p=>map[p[0]]=p[1]); let pick=null,done=0;
+  document.querySelectorAll('.mtile').forEach(t=>t.onclick=()=>{ if(t.classList.contains('done'))return;
+    if(!pick){ pick=t; t.classList.add('sel'); return; }
+    if(t===pick){ t.classList.remove('sel'); pick=null; return; }
+    if(t.dataset.side===pick.dataset.side){ pick.classList.remove('sel'); pick=t; t.classList.add('sel'); return; }
+    const Lt=pick.dataset.side==='L'?pick:t, Rt=pick.dataset.side==='R'?pick:t;
+    if(map[Lt.dataset.v]===Rt.dataset.v){ Lt.classList.add('done'); Rt.classList.add('done'); Lt.classList.remove('sel'); Rt.classList.remove('sel'); pick=null; if(++done===ex.pairs.length) showFeedback(ex,true); }
+    else { Lt.classList.add('miss'); Rt.classList.add('miss'); setTimeout(()=>{ Lt.classList.remove('miss','sel'); Rt.classList.remove('miss','sel'); },320); pick=null; }
+  });
+}
+/* 5. LISTENING */
+function lsBody(ex){ return `<button class="playbtn" id="play"><span class="tri">▶</span> Play audio</button><button class="replay" id="replay">↻ Repeat · slower</button><input class="field" id="fld" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="Type what you hear…" /><p class="qhint" id="tr" style="visibility:hidden">${esc(ex.translation||'')}</p>`; }
+function lsWire(ex){ footCheck(false); document.getElementById('play').onclick=()=>speak(ex.tts); document.getElementById('replay').onclick=()=>speak(ex.tts,.6);
+  const f=document.getElementById('fld'); f.oninput=()=>enableCheck(f.value.trim().length>0); f.onkeydown=e=>{ if(e.key==='Enter'&&f.value.trim())document.getElementById('check').click(); };
+  document.getElementById('check').onclick=()=>{ f.disabled=true; document.getElementById('tr').style.visibility='visible'; showFeedback(ex, ex.accepted.some(a=>norm(a,ex.ignore_accents)===norm(f.value,ex.ignore_accents))); };
+  setTimeout(()=>speak(ex.tts),350);
+}
+
+/* 6. DIALOGUE (Babbel-style: pick the natural response in a real scene) */
+function dgBody(ex){
+  const bubbles = (ex.lines||[]).map(l=>{
+    const mine=/^(you|t[úu])$/i.test(l.speaker||'');
+    if(l.blank) return `<div class="dbub ${mine?'me':'them'} blank" id="dblank"><span class="dsp">${esc(l.speaker)}</span><span class="dtx">…</span></div>`;
+    return `<div class="dbub ${mine?'me':'them'}"><span class="dsp">${esc(l.speaker)}</span><span class="dtx">${esc(l.es)} <button class="dsnd" data-say="${esc(l.es)}" aria-label="Listen">🔊</button></span>${l.en?`<span class="den">${esc(l.en)}</span>`:''}</div>`;
+  }).join('');
+  return `<p class="dscn">${esc(ex.scenario||'')}</p><div class="dlg">${bubbles}</div>
+    <p class="qhint">Choose the natural reply:</p>
+    <div id="opts" class="dopts">${ex.options.map(o=>`<button class="opt" data-id="${o.id}"><span>${esc(o.text)}</span></button>`).join('')}</div>`;
+}
+function dgWire(ex){ footCheck(false);
+  const spoken=(ex.lines||[]).filter(l=>!l.blank && l.es);
+  setTimeout(()=>{ if(spoken[0]) speak(spoken[0].es); },350);
+  document.querySelectorAll('[data-say]').forEach(b=>b.onclick=()=>speak(b.dataset.say));
+  document.querySelectorAll('#opts .opt').forEach(o=>o.onclick=()=>{ if(RUN.checked)return;
+    document.querySelectorAll('#opts .opt').forEach(x=>x.classList.remove('sel')); o.classList.add('sel'); RUN.buf=o.dataset.id;
+    const chosen=ex.options.find(x=>x.id===o.dataset.id); const bl=document.getElementById('dblank'); if(bl&&chosen){ bl.querySelector('.dtx').textContent=chosen.text; }
+    enableCheck(true); });
+  document.getElementById('check').onclick=()=>{ const ok=RUN.buf===ex.answer;
+    document.querySelectorAll('#opts .opt').forEach(x=>{ x.style.pointerEvents='none'; if(x.dataset.id===ex.answer)x.classList.add('correct'); else if(x.dataset.id===RUN.buf)x.classList.add('wrong'); });
+    const bl=document.getElementById('dblank'), ans=ex.options.find(x=>x.id===ex.answer);
+    if(bl&&ans){ bl.querySelector('.dtx').textContent=ans.text; bl.classList.remove('blank'); if(ok) setTimeout(()=>speak(ans.text),250); }
+    showFeedback(ex,ok); };
+}
+
+/* 7. SPEAK (pronunciation practice) */
+function spBody(ex){ return `<div class="qtext">${esc(ex.say)}</div><div class="qhint">${esc(ex.en||'')}</div>
+  <button class="replay" id="hear">🔊 Hear it</button>
+  <div class="mic-wrap"><button class="micbtn" id="mic" aria-label="Record"><span class="mic-ic">🎤</span></button><p class="mic-status" id="micStatus">Tap the mic and say it</p></div>`; }
+function spWire(ex){
+  document.getElementById('foot').innerHTML=`<div class="actionbar"><button class="cta ghost" id="skip">Skip</button></div>`;
+  document.getElementById('skip').onclick=()=>{ const last=RUN.i===total()-1; if(last) finish(); else { RUN.i++; go('exercise'); } };
+  document.getElementById('hear').onclick=()=>speak(ex.say);
+  setTimeout(()=>speak(ex.say),350);
+  const mic=document.getElementById('mic'), status=document.getElementById('micStatus');
+  let rec=null, chunks=[], recording=false;
+  mic.onclick=async()=>{
+    if(recording){ recording=false; mic.classList.remove('rec'); status.textContent='Checking…'; try{rec.stop();}catch(e){} return; }
+    if(!navigator.mediaDevices||!window.MediaRecorder){ status.textContent='Recording isn’t supported here — tap Skip.'; return; }
+    try{
+      const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+      rec=new MediaRecorder(stream); chunks=[];
+      rec.ondataavailable=e=>{ if(e.data&&e.data.size) chunks.push(e.data); };
+      rec.onstop=async()=>{ stream.getTracks().forEach(t=>t.stop());
+        const blob=new Blob(chunks,{type:(rec&&rec.mimeType)||'audio/webm'});
+        const fd=new FormData(); fd.append('audio',blob,'speech');
+        try{
+          const r=await fetch('api/pronounce.php',{method:'POST',body:fd}); const j=await r.json();
+          if(j.transcript!=null){ gradePron(ex,j.transcript); }
+          else { mic.classList.remove('rec'); status.textContent = j.error==='ai_not_configured' ? 'Pronunciation needs the OpenAI key set in config.php.' : 'Couldn’t check that — tap the mic to try again.'; }
+        }catch(e){ mic.classList.remove('rec'); status.textContent='Network error — tap the mic to try again.'; }
+      };
+      rec.start(); recording=true; mic.classList.add('rec'); status.textContent='Listening… tap to stop';
+    }catch(e){ status.textContent='Microphone blocked. Allow it, or tap Skip.'; }
+  };
+}
+function gradePron(ex, transcript){
+  const t=norm(transcript,true), target=norm(ex.say,true);
+  const ok = t===target || (t && target && (t.includes(target)||target.includes(t)));
+  RUN.answered++; if(ok){ RUN.correct++; RUN.gained+=ex.xp; }
+  const heard = transcript ? ` <span style="color:var(--muted)">I heard: “${esc(transcript)}”</span>` : '';
+  renderFeedback(ok, (ok ? (ex.ok||'¡Perfecto! Great pronunciation.') : (ex.no||'Not quite — listen again and match the sound.')) + heard);
+}
+
+/* ---- FEEDBACK ---- */
+function renderFeedback(ok, msg){
+  RUN.checked=true; RUN.lastCorrect=ok;
+  const last=RUN.i===total()-1;
+  document.getElementById('foot').innerHTML=`<div class="feedback ${ok?'correct':'wrong'}"><div class="fh"><img class="fb-luma" src="mascot/${ok?'happy':'encourage'}.png" alt="" />${ok?'Correct!':'Not quite…'}</div><div class="fb">${msg}</div><button class="cta ${ok?'ok':''}" id="cont">${last?'Finish':'Continue'}</button></div>`;
+  document.getElementById('cont').onclick=()=>{ if(last) finish(); else { RUN.i++; go('exercise'); } };
+}
+function showFeedback(ex,ok){ RUN.answered++; if(ok){ RUN.gained+=ex.xp; RUN.correct++; } renderFeedback(ok, ok?ex.ok:ex.no); }
+
+/* ---- COMPLETE + unlock ---- */
+function finish(){ if(!PROG.completed.includes(CUR.unit.id)) PROG.completed.push(CUR.unit.id);
+  const earned = RUN.gained + (CUR.completion.xp_on_complete||0);
+  PROG.xp += earned; addTodayXP(earned);
+  PROG.mastery[CUR.unit.id]=Math.max(PROG.mastery[CUR.unit.id]||0, accuracy());
+  seedVocab(CUR);
+  bumpStreak();
+  if(goalMet() && PROG.lastGoalDay!==PROG.todayKey){ PROG.lastGoalDay=PROG.todayKey; PROG.goalDays=(PROG.goalDays||0)+1; }
+  LAST_NEW_ACH = checkNewAchievements();
+  saveProg(); go('complete'); }
+function renderComplete(){ const words=(CUR.vocab&&CUR.vocab.length)?CUR.vocab.map(v=>v.es):(CUR.completion.adds_vocab_to_srs||[]); const earned=RUN.gained+(CUR.completion.xp_on_complete||0);
+  app.innerHTML=`<div class="screen completion">
+    <p class="eyebrow" style="margin-top:14px">Lesson complete</p>
+    <div class="luma-celebrate"><img src="mascot/celebrate.png" alt="Luma celebrating" /><span class="luma-check">✓</span></div>
+    <h1 style="font-size:28px">Lesson mastered!</h1>
+    <p style="color:var(--muted)">${esc(CUR.unit.title)} · Level ${esc(CUR.unit.level)}</p>
+    <div class="tally">
+      <div class="tallycard xp"><div class="n" id="xpn">0</div><div class="l">XP earned</div></div>
+      <div class="tallycard mastery"><div class="n">${accuracy()}%</div><div class="l">Mastery</div></div>
+      <div class="tallycard streak"><div class="n">${PROG.streak}</div><div class="l">Streak 🔥</div></div></div>
+    ${streakNote()}
+    ${goalMet()?`<div class="goal-hit">🎯 Daily goal reached — <b>${todayXP()}/${PROG.dailyGoal} XP</b> today!</div>`:''}
+    ${(LAST_NEW_ACH&&LAST_NEW_ACH.length)?`<div class="ach-unlocks">${LAST_NEW_ACH.map(a=>`<div class="ach-unlock"><span class="au-ic">${a.icon}</span><div class="au-tx"><b>Achievement unlocked</b><span>${esc(a.title)}</span></div></div>`).join('')}</div>`:''}
+    <div class="review-note"><span>🗂️</span><span>Added to <b>spaced review</b>: ${words.map(w=>`<b>${esc(w)}</b>`).join(', ')}. They'll come back right before you'd forget them.</span></div>
+    <button class="cta" id="home">Back to path</button>
+    <button class="cta ghost" id="again" style="margin-top:12px">Repeat lesson</button></div>`;
+  let n=0; const t=setInterval(()=>{ n+=Math.max(1,Math.ceil(earned/20)); if(n>=earned){n=earned;clearInterval(t);} const e=document.getElementById('xpn'); if(e)e.textContent='+'+n; },40);
+  document.getElementById('home').onclick=()=>go('home');
+  document.getElementById('again').onclick=()=>{ RUN.i=0; RUN.correct=0; RUN.answered=0; RUN.gained=0; go('grammar'); };
+}
+
+/* ---- REVIEW HUB (bottom-nav tab) ---- */
+function renderReviewHub(){
+  const due=dueCards().length; const totalCards=Object.keys(SRS).length; const weak=weakCards(15).length;
+  app.innerHTML=`<div class="screen withnav">
+    <p class="eyebrow" style="margin-top:8px">Review</p>
+    <h1>Spaced review</h1>
+    <div class="review-card"><div class="rv-front" style="font-size:40px">🗂️</div>
+      <p class="rv-hint" style="margin-top:12px;font-size:15px">${due>0? `<b style="color:var(--violet)">${due}</b> ${due===1?'card':'cards'} ready to review right now` : `You're all caught up ✓`}</p></div>
+    ${due>0? `<button class="cta" id="startRev">Start review →</button>`
+           : `<p class="qhint" style="text-align:center">You have <b>${totalCards}</b> ${totalCards===1?'word':'words'} in your memory. Come back when they're due — the schedule brings them back at the perfect time.</p>`}
+    ${weak>0? `<button class="weakspot-card" id="startWeak">
+        <span class="ws-ic">🎯</span>
+        <span class="ws-tx"><b>Practice weak spots</b><span>${weak} tricky ${weak===1?'word':'words'} you keep missing</span></span>
+        <span class="ws-go">→</span></button>` : ''}
+    ${listenAvailable()? `<button class="weakspot-card listen-card" id="startListen">
+        <span class="ws-ic">🎧</span>
+        <span class="ws-tx"><b>Listening practice</b><span>Hear it in Spanish, pick the meaning</span></span>
+        <span class="ws-go">→</span></button>` : ''}
+    ${totalCards>0? `<button class="browse-link" id="toVocab">📖 Browse all ${totalCards} words →</button>` : ''}
+  </div>` + bottomNav('review');
+  const s=document.getElementById('startRev'); if(s) s.onclick=startReview;
+  const w=document.getElementById('startWeak'); if(w) w.onclick=startWeakReview;
+  const li=document.getElementById('startListen'); if(li) li.onclick=startListen;
+  const v=document.getElementById('toVocab'); if(v) v.onclick=()=>go('vocab');
+  wireNav();
+}
+
+/* ---- REPASO (spaced-repetition session) ---- */
+function reviewBar(){ const pct = RV.total? Math.round(RV.reviewed.size/RV.total*100):0;
+  return `<div class="topbar"><button class="xbtn" data-close-review>×</button><div class="progress"><i style="width:${pct}%"></i></div><div class="stat count"><span class="glyph">🗂️</span>${RV.queue.length}</div></div>`; }
+function renderReview(){
+  if(!RV || !RV.queue.length) return renderReviewDone();
+  const c = RV.queue[0];
+  if(!RV.revealed){
+    app.innerHTML = reviewBar() + `<div class="screen">
+      <p class="eyebrow">${RV.mode==='weak'?'Review · weak spots 🎯':'Review · recall'}</p>
+      <div class="review-card"><p class="rv-label">How do you say it in Spanish?</p>
+        <div class="rv-front">${esc(c.en||c.es)}</div></div>
+      <div class="actionbar"><button class="cta" id="reveal">Show answer</button></div></div>`;
+    document.querySelectorAll('[data-close-review]').forEach(b=>b.onclick=exitReview);
+    document.getElementById('reveal').onclick=()=>{ RV.revealed=true; speak(c.es); render(); };
+  } else {
+    const grades=[[1,'Again'],[2,'Hard'],[3,'Good'],[4,'Easy']];
+    const btns = grades.map(([g,lbl])=>`<button class="rate rate${g}" data-g="${g}"><span class="rl">${lbl}</span><span class="ri">${g===1?'soon':esc(fmtInterval(previewInterval(c,g)))}</span></button>`).join('');
+    app.innerHTML = reviewBar() + `<div class="screen">
+      <p class="eyebrow">${RV.mode==='weak'?'Review · weak spots 🎯':'Review · recall'}</p>
+      <div class="review-card revealed"><p class="rv-label">${esc(c.en||'')}</p>
+        <div class="rv-back">${esc(c.es)} <button class="rv-audio" id="rvAudio" aria-label="Listen">🔊</button></div></div>
+      <p class="rv-hint">How well did you remember?</p>
+      <div class="rates">${btns}</div></div>`;
+    document.querySelectorAll('[data-close-review]').forEach(b=>b.onclick=exitReview);
+    document.getElementById('rvAudio').onclick=()=>speak(c.es);
+    document.querySelectorAll('.rate').forEach(b=>b.onclick=()=>{
+      const g=+b.dataset.g; gradeCard(c,g); RV.reviewed.add(cardId(c.unit,c.es));
+      RV.queue.shift(); if(g===1) RV.queue.push(c);
+      RV.revealed=false; render();
+    });
+  }
+}
+function exitReview(){ if(confirm('Leave review? Your progress is saved.')){ RV=null; go('home'); } }
+function renderReviewDone(){
+  const n = RV? RV.reviewed.size : 0;
+  app.innerHTML = `<div class="screen completion">
+    <div class="seal"><span>🗂️</span></div>
+    <h1 style="font-size:26px">${RV&&RV.mode==='weak'?'Weak spots drilled!':'Review complete!'}</h1>
+    <p style="color:var(--muted)">${RV&&RV.mode==='weak'?`You drilled <b>${n}</b> tricky ${n===1?'word':'words'}. Keep it up — they'll stick soon.`:`You reviewed <b>${n}</b> ${n===1?'card':'cards'}. They'll come back right on time, before you'd forget them.`}</p>
+    <button class="cta" id="rvHome" style="margin-top:18px">Back to path</button></div>`;
+  document.getElementById('rvHome').onclick=()=>{ RV=null; go('home'); };
+}
+
+/* ---- VOCABULARY BROWSER (Step 8) ---- */
+function cardStrength(c){
+  const S=c.S, reps=c.reps||0;
+  if(S==null||reps===0) return {k:'nw',l:'New',c:'#8b93a7'};
+  if(S<7)  return {k:'le',l:'Learning',c:'#3B82F6'};
+  if(S<30) return {k:'yo',l:'Growing',c:'#22D3EE'};
+  return {k:'st',l:'Strong',c:'#34D399'};
+}
+let VFILTER = {q:'', s:'all'};
+function renderVocabBrowser(){
+  VFILTER = {q:'', s:'all'};
+  const cards=Object.values(SRS).sort((a,b)=>(a.es||'').localeCompare(b.es||'','es'));
+  const rows=cards.map(c=>{ const s=cardStrength(c);
+    return `<div class="vrow" data-es="${esc((c.es||'').toLowerCase())}" data-en="${esc((c.en||'').toLowerCase())}" data-s="${s.k}">
+      <button class="vrow-audio" data-say="${esc(c.es)}" aria-label="Listen to ${esc(c.es)}">🔊</button>
+      <div class="vrow-tx"><b>${esc(c.es)}</b><span>${esc(c.en||'')}</span></div>
+      <span class="vstr" style="color:${s.c};border-color:${s.c}">${s.l}</span></div>`;
+  }).join('');
+  const chips=[['all','All'],['nw','New'],['le','Learning'],['yo','Growing'],['st','Strong']]
+    .map(([k,l])=>`<button class="vchip${k==='all'?' on':''}" data-s="${k}">${l}</button>`).join('');
+  app.innerHTML=`<div class="screen withnav">
+    <div class="topbar" style="padding-left:0;padding-right:0"><button class="iconbtn" id="vbBack" aria-label="Back">←</button><span class="topbar-title">My words</span><span style="width:34px"></span></div>
+    <input class="field" id="vsearch" placeholder="Search Spanish or English…" autocomplete="off" autocapitalize="off" spellcheck="false" style="font-size:16px">
+    <div class="vchips">${chips}</div>
+    <p class="vcount" id="vcount">${cards.length} word${cards.length===1?'':'s'}</p>
+    <div class="vlist" id="vlist">${rows || '<p class="qhint" style="text-align:center;margin-top:30px">No words yet — finish a lesson to start your collection.</p>'}</div>
+  </div>` + bottomNav('review');
+  document.getElementById('vbBack').onclick=()=>go('reviewhub');
+  document.querySelectorAll('.vrow-audio').forEach(b=>b.onclick=()=>speak(b.dataset.say));
+  const search=document.getElementById('vsearch'); search.oninput=()=>{ VFILTER.q=search.value.trim().toLowerCase(); applyVFilter(); };
+  document.querySelectorAll('.vchip').forEach(ch=>ch.onclick=()=>{ VFILTER.s=ch.dataset.s; document.querySelectorAll('.vchip').forEach(x=>x.classList.toggle('on',x===ch)); applyVFilter(); });
+  wireNav();
+}
+function applyVFilter(){
+  const q=VFILTER.q, s=VFILTER.s; let shown=0;
+  document.querySelectorAll('#vlist .vrow').forEach(r=>{
+    const okS = s==='all' || r.dataset.s===s;
+    const okQ = !q || r.dataset.es.includes(q) || r.dataset.en.includes(q);
+    const vis = okS && okQ; r.style.display = vis?'':'none'; if(vis) shown++;
+  });
+  const cnt=document.getElementById('vcount'); if(cnt) cnt.textContent = shown+' word'+(shown===1?'':'s');
+}
+
+/* ---- LESSON STUDIO (Step 10): build your own lessons ---- */
+function renderStudio(){
+  const list = CUSTOM.length
+    ? CUSTOM.map(u=>{ const id=u.unit.id, done=PROG.completed.includes(id);
+        return `<div class="studio-row">
+          <button class="sr-play" data-id="${id}"><span class="sr-ic">${done?'✓':'▶'}</span>
+            <span class="sr-tx"><b>${esc(u.unit.title)}</b><span>${(u.vocab||[]).length} words · ${(u.exercises||[]).length} exercises</span></span></button>
+          <button class="sr-audio" data-id="${id}" aria-label="Generate audio" title="Generate real audio">🔊</button>
+          <button class="sr-del" data-id="${id}" aria-label="Delete">🗑</button></div>`; }).join('')
+    : `<p class="qhint" style="text-align:center;margin:24px 0">No custom lessons yet. Pick a real-life topic — “order food at a restaurant”, “visit a clinic” — and Luma writes a full lesson with grammar, exercises and audio.</p>`;
+  app.innerHTML=`<div class="screen withnav">
+    <div class="topbar" style="padding-left:0;padding-right:0"><button class="iconbtn" id="stBack" aria-label="Back">←</button><span class="topbar-title">Lesson studio</span><span style="width:34px"></span></div>
+    <button class="cta" id="stNew">+ Create a lesson</button>
+    <div class="studio-list" style="margin-top:16px">${list}</div>
+  </div>` + bottomNav('profile');
+  document.getElementById('stBack').onclick=()=>go('profile');
+  document.getElementById('stNew').onclick=()=>go('studioedit');
+  document.querySelectorAll('.sr-play').forEach(b=>b.onclick=()=>openUnit(b.dataset.id));
+  document.querySelectorAll('.sr-audio').forEach(b=>b.onclick=()=>studioGenAudio(b.dataset.id,b));
+  document.querySelectorAll('.sr-del').forEach(b=>b.onclick=()=>{
+    if(confirm('Delete this custom lesson? (Words already in your review deck stay.)')){ CUSTOM=CUSTOM.filter(u=>u.unit.id!==b.dataset.id); saveCustom(); renderStudio(); }
+  });
+  wireNav();
+}
+/* ---- AI topic-based lesson generator ---- */
+let STUDIO_LEVEL='A1';
+const STUDIO_LEVELS=['A1','A2','B1','B2','C1','C2'];
+const STUDIO_IDEAS=['Order food at a restaurant','Visit a doctor / clinic','Check into a hotel','Ask for directions','Shopping for clothes','At the airport','Making small talk','A job interview'];
+function renderStudioEdit(){
+  const ideas=STUDIO_IDEAS.map(t=>`<button class="tchip" data-t="${esc(t)}">${esc(t)}</button>`).join('');
+  const lvls=STUDIO_LEVELS.map(l=>`<button class="lvl-chip${l===STUDIO_LEVEL?' on':''}" data-l="${l}">${l}</button>`).join('');
+  const html=`<div class="screen withnav">
+    <div class="topbar" style="padding-left:0;padding-right:0"><button class="iconbtn" id="edBack" aria-label="Back">←</button><span class="topbar-title">New lesson</span><span style="width:34px"></span></div>
+    <div style="text-align:center;margin:4px 0 14px">
+      <img src="mascot/p-teach.png" alt="Luma" style="width:82px;height:auto;filter:drop-shadow(0 8px 16px rgba(0,0,0,.5))">
+      <h1 style="margin:6px 0 2px">What do you want to learn?</h1>
+      <p class="qhint" style="max-width:34ch;margin:0 auto">Describe a real-life situation. Luma writes a full lesson — grammar, exercises and audio.</p>
+    </div>
+    <input class="field" id="edTopic" placeholder="e.g. order food at a restaurant" style="font-size:16px" autocapitalize="sentences">
+    <div class="tchips" style="margin-top:10px">${ideas}</div>
+    <p class="eyebrow" style="margin:16px 0 8px">Level</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap">${lvls}</div>
+    <p class="set-msg" id="edMsg" style="margin-top:12px"></p>
+    <button class="cta" id="edGen" style="margin-top:8px">✨ Generate lesson with Luma</button>
+  </div>` + bottomNav('profile');
+  app.innerHTML = html;
+  document.getElementById('edBack').onclick=()=>go('studio');
+  document.querySelectorAll('.tchip').forEach(b=>b.onclick=()=>{ const t=document.getElementById('edTopic'); t.value=b.dataset.t; t.focus(); });
+  document.querySelectorAll('.lvl-chip').forEach(b=>b.onclick=()=>{ STUDIO_LEVEL=b.dataset.l; document.querySelectorAll('.lvl-chip').forEach(x=>x.classList.toggle('on',x.dataset.l===STUDIO_LEVEL)); });
+  document.getElementById('edGen').onclick=generateStudioLesson;
+  wireNav();
+}
+async function generateStudioLesson(){
+  const topic=(document.getElementById('edTopic').value||'').trim();
+  const msg=document.getElementById('edMsg');
+  if(!topic){ msg.style.color='var(--red)'; msg.textContent='Tell me what you want to learn.'; return; }
+  if(!AUTH_ON){ msg.style.color='var(--red)'; msg.textContent='Sign in first (Profile → “Sign in to sync”) so Luma can build lessons.'; return; }
+  const btn=document.getElementById('edGen'); const lbl=btn.textContent; btn.disabled=true; btn.textContent='🦉 Luma is writing…';
+  msg.style.color='var(--muted)'; msg.textContent='Writing your lesson — this can take up to a minute. Hang tight 🦉';
+  try{
+    const r=await fetch('api/studio_lesson.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic,level:STUDIO_LEVEL})});
+    const raw=await r.text(); let j={}; try{ j=JSON.parse(raw); }catch(_){ throw new Error('bad_json_'+r.status); }
+    if(!j.ok || !j.lesson){ throw new Error(j.error||'failed'); }
+    const unit=sanitizeCustomLesson(j.lesson, topic);
+    if(!unit){ msg.style.color='var(--red)'; msg.textContent='Luma’s draft came out malformed — tap Generate again or reword the topic.'; btn.disabled=false; btn.textContent=lbl; return; }
+    CUSTOM.push(unit); saveCustom();
+    genCustomAudio(unit);   // fire-and-forget: voice the new lesson so audio plays
+    go('studio');
+  }catch(e){
+    msg.style.color='var(--red)';
+    msg.textContent = /bad_json/.test(e.message) ? ('Server error ('+e.message.replace('bad_json_','HTTP ')+'). Make sure /api is deployed with PHP.')
+      : e.message==='ai_not_configured' ? 'Add your OpenAI key in Settings first, then try again.'
+      : e.message==='upstream_unreachable' ? 'Couldn’t reach OpenAI from the server — check the key.'
+      : e.message==='bad_lesson' ? 'Luma couldn’t shape that into a lesson — try rewording the topic.'
+      : 'Couldn’t generate the lesson. Please try again.';
+    btn.disabled=false; btn.textContent=lbl;
+  }
+}
+/* Validate + normalise the model's lesson so the engine can play it safely. */
+function sanitizeCustomLesson(L, topic){
+  if(!L || typeof L!=='object') return null;
+  const id='custom-'+Date.now();
+  const u=L.unit||{};
+  const title=(u.title||topic||'Custom lesson').toString().slice(0,60);
+  const okId=s=>typeof s==='string'&&s.length;
+  const exs=[];
+  (Array.isArray(L.exercises)?L.exercises:[]).forEach((ex,i)=>{
+    if(!ex||typeof ex!=='object'||!ex.type) return;
+    ex.id=ex.id||('e'+i); ex.xp=ex.xp||2;
+    if(ex.type==='multiple_choice'||ex.type==='dialogue'){
+      const opts=Array.isArray(ex.options)?ex.options.filter(o=>o&&okId(o.id)&&('text'in o)):[];
+      if(opts.length<2) return;
+      if(!opts.some(o=>o.id===ex.answer)) return;
+      ex.options=opts;
+      if(ex.type==='dialogue'){ if(!Array.isArray(ex.lines)||!ex.lines.some(l=>l&&l.blank)) return; }
+    } else if(ex.type==='word_bank'){
+      if(!Array.isArray(ex.tokens)||!Array.isArray(ex.answer)||!ex.answer.length) return;
+      if(!ex.answer.every(t=>ex.tokens.includes(t))) return;
+    } else if(ex.type==='fill_blank'){
+      if(!Array.isArray(ex.accepted)||!ex.accepted.length) return;
+    } else if(ex.type==='match_pairs'){
+      if(!Array.isArray(ex.pairs)||ex.pairs.length<3||!ex.pairs.every(p=>Array.isArray(p)&&p.length===2)) return;
+    } else if(ex.type==='listening'){
+      if(!ex.tts||!Array.isArray(ex.accepted)||!ex.accepted.length) return;
+    } else if(ex.type==='speak'){
+      if(!ex.say) return;
+    } else return;
+    exs.push(ex);
+  });
+  if(exs.length<4) return null;   // too broken to be a real lesson
+  const vocab=(Array.isArray(L.vocab)?L.vocab:[]).filter(v=>v&&v.es&&v.en).slice(0,10);
+  const ves=new Set(vocab.map(v=>v.es));
+  let srs=(L.completion&&Array.isArray(L.completion.adds_vocab_to_srs)?L.completion.adds_vocab_to_srs:[]).filter(s=>ves.has(s));
+  if(srs.length<Math.min(5,vocab.length)) srs=vocab.slice(0,5).map(v=>v.es);
+  const g=L.grammar||{};
+  return {
+    unit:{ id, title, subtitle:(u.subtitle||topic).toString().slice(0,60), level:(u.level||STUDIO_LEVEL), xp_reward:20, custom:true, topic },
+    grammar:{
+      title:g.title||title,
+      intro:g.intro||('Useful Spanish for: '+esc(topic)+'.'),
+      sections:Array.isArray(g.sections)&&g.sections.length?g.sections:[{tag:'',heading:'Key phrases',body:'Review these, then practice.',ex:vocab.slice(0,6).map(v=>({es:v.es,en:v.en,note:''}))}],
+      takeaways:Array.isArray(g.takeaways)?g.takeaways:vocab.slice(0,4).map(v=>`${v.es} — ${v.en}`),
+      mistakes:Array.isArray(g.mistakes)?g.mistakes:[]
+    },
+    exercises:exs,
+    vocab:vocab.length?vocab:[{es:title,en:topic}],
+    completion:{ xp_on_complete:20, adds_vocab_to_srs:srs }
+  };
+}
+/* Collect the spoken Spanish in a custom lesson and generate real TTS clips
+   for it (so speak() plays audio instead of falling back to robotic TTS). */
+/* All spoken Spanish in a lesson (vocab + listening + speak + dialogue). */
+function lessonSpokenStrings(unit){
+  const set=new Set();
+  (unit.vocab||[]).forEach(v=>v&&v.es&&set.add(v.es.trim()));
+  (unit.exercises||[]).forEach(ex=>{
+    if(ex.type==='listening'&&ex.tts) set.add(ex.tts.trim());
+    if(ex.type==='speak'&&ex.say) set.add(ex.say.trim());
+    if(ex.type==='dialogue'){ (ex.lines||[]).forEach(l=>{ if(l&&!l.blank&&l.es) set.add(l.es.trim()); }); (ex.options||[]).forEach(o=>{ if(o&&o.text) set.add(o.text.trim()); }); }
+  });
+  return [...set].filter(Boolean);
+}
+/* Generate real OpenAI audio for one custom lesson's phrases. Returns the
+   server result ({ok,generated,had,...} or {error}). */
+async function genCustomAudio(unit){
+  const strings=lessonSpokenStrings(unit);
+  if(!strings.length) return {ok:true,generated:0,had:0};
+  const voice=(document.getElementById('gaVoice')&&document.getElementById('gaVoice').value)||'coral';
+  try{
+    const r=await fetch('api/gen_audio_strings.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({strings,voice})});
+    const raw=await r.text(); let j={}; try{ j=JSON.parse(raw); }catch(_){ return {error:'bad_json_'+r.status}; }
+    await loadAudio();   // refresh manifest so the new clips play immediately
+    return j;
+  }catch(e){ return {error:'network'}; }
+}
+/* Per-lesson "🔊" button in the Studio: voice this lesson on demand. */
+async function studioGenAudio(id, btn){
+  const unit=customById(id); if(!unit) return;
+  if(!AUTH_ON){ alert('Sign in first (Profile → “Sign in to sync”) so Luma can voice your lesson.'); return; }
+  const orig=btn.textContent; btn.disabled=true; btn.textContent='⏳';
+  const res=await genCustomAudio(unit);
+  btn.disabled=false;
+  if(res && res.ok){ btn.textContent='✓'; setTimeout(()=>{ btn.textContent=orig; }, 2500);
+    if((res.generated||0)===0 && (res.had||0)>0){ /* already voiced */ } }
+  else { btn.textContent=orig;
+    alert(res && res.error==='ai_not_configured' ? 'Add your OpenAI key in Settings first, then try again.'
+      : res && /bad_json/.test(res.error||'') ? ('Server error ('+String(res.error).replace('bad_json_','HTTP ')+'). Is /api deployed?')
+      : 'Couldn’t generate audio — check your connection and that /api is reachable.'); }
+}
+
+/* ---- LISTENING COMPREHENSION (Step 6) ---- */
+let LS=null;
+function listenPool(){ return Object.values(SRS).filter(c=>c.en && c.es); }
+function listenAvailable(){ return listenPool().length>=4; }
+function buildListenQuiz(n){
+  const pool=listenPool(); if(pool.length<4) return [];
+  const pick=pool.slice().sort(()=>Math.random()-0.5).slice(0,Math.min(n,pool.length));
+  return pick.map(c=>{
+    const others=pool.filter(x=>x.en!==c.en).sort(()=>Math.random()-0.5).slice(0,3).map(x=>x.en);
+    const opts=[c.en,...others].sort(()=>Math.random()-0.5);
+    return { es:c.es, en:c.en, options:opts, answer:c.en };
+  });
+}
+function startListen(){ const q=buildListenQuiz(10); if(!q.length){ go('reviewhub'); return; } LS={ quiz:q, i:0, correct:0, picked:null, checked:false }; go('listen'); setTimeout(()=>{ const c=LS.quiz[0]; if(c) speak(c.es); }, 350); }
+function renderListen(){
+  if(!LS) return go('reviewhub');
+  if(LS.i>=LS.quiz.length) return renderListenDone();
+  const q=LS.quiz[LS.i]; const pct=Math.round(LS.i/LS.quiz.length*100);
+  const opts=q.options.map((o,k)=>{
+    let cls='lopt';
+    if(LS.checked){ if(o===q.answer) cls+=' correct'; else if(o===LS.picked) cls+=' wrong'; }
+    else if(o===LS.picked) cls+=' sel';
+    return `<button class="${cls}" data-o="${esc(o)}"${LS.checked?' disabled':''}>${esc(o)}</button>`;
+  }).join('');
+  app.innerHTML=`<div class="topbar"><button class="xbtn" id="lsClose">×</button><div class="progress"><i style="width:${pct}%"></i></div><div class="stat count"><span class="glyph">🎧</span>${LS.i+1}/${LS.quiz.length}</div></div>
+  <div class="screen">
+    <p class="qtype">What did you hear?</p>
+    <div class="listen-stage">
+      <button class="listen-play" id="lsPlay" aria-label="Play audio">▶</button>
+      <button class="listen-slow" id="lsSlow">↻ Slower</button>
+    </div>
+    ${LS.checked?`<div class="listen-answer"><b>${esc(q.es)}</b></div>`:''}
+    <div class="lopts">${opts}</div>
+  </div>
+  <div id="foot"></div>`;
+  document.getElementById('lsClose').onclick=()=>{ if(confirm('Leave listening practice?')){ LS=null; go('reviewhub'); } };
+  document.getElementById('lsPlay').onclick=()=>speak(q.es);
+  document.getElementById('lsSlow').onclick=()=>speak(q.es,.6);
+  if(!LS.checked){
+    document.querySelectorAll('.lopt').forEach(b=>b.onclick=()=>{
+      LS.picked=b.dataset.o; LS.checked=true;
+      if(LS.picked===q.answer) LS.correct++;
+      renderListen();
+    });
+  } else {
+    const ok=LS.picked===q.answer; const last=LS.i===LS.quiz.length-1;
+    document.getElementById('foot').innerHTML=`<div class="feedback ${ok?'correct':'wrong'}"><div class="fh"><img class="fb-luma" src="mascot/${ok?'happy':'encourage'}.png" alt="" />${ok?'Correct!':'Not quite…'}</div><div class="fb">${ok?'¡Bien! You understood it.':`It was “${esc(q.es)}” — ${esc(q.en)}.`}</div><button class="cta ${ok?'ok':''}" id="lsCont">${last?'Finish':'Continue'}</button></div>`;
+    document.getElementById('lsCont').onclick=()=>{ LS.i++; LS.picked=null; LS.checked=false; renderListen(); const nx=LS.quiz[LS.i]; if(nx) setTimeout(()=>speak(nx.es),300); };
+  }
+}
+function renderListenDone(){
+  const n=LS.correct, tot=LS.quiz.length; const pct=Math.round(n/tot*100);
+  app.innerHTML=`<div class="screen completion">
+    <div class="seal"><span>🎧</span></div>
+    <h1 style="font-size:26px">Listening done!</h1>
+    <p style="color:var(--muted)">You understood <b>${n}/${tot}</b> — ${pct}%. ${pct>=80?'Great ear! 👂':'Keep listening — it gets easier fast.'}</p>
+    <button class="cta" id="lsAgain" style="margin-top:18px">Practice again</button>
+    <button class="cta ghost" id="lsBack" style="margin-top:12px">Back to review</button></div>`;
+  document.getElementById('lsAgain').onclick=startListen;
+  document.getElementById('lsBack').onclick=()=>{ LS=null; go('reviewhub'); };
+}
+
+/* ---- GRAMMAR REFERENCE HUB (Step 9) ---- */
+let REF=null, REFILTER='';
+function renderReference(){
+  REFILTER='';
+  let html=''; let lastCh=null;
+  (PATH||[]).forEach((u,i)=>{
+    if(u.chapter!==lastCh){ html+=`<div class="ref-chap" data-ch="${u.chapter}">${esc(u.chapter_title||('Chapter '+u.chapter))} · ${esc(u.level)}</div>`; lastCh=u.chapter; }
+    const done=PROG.completed.includes(u.id);
+    html+=`<button class="ref-row" data-id="${u.id}" data-q="${esc((u.title+' '+(u.subtitle||'')).toLowerCase())}">
+      <span class="ref-ic">${u.icon||'📘'}</span>
+      <span class="ref-tx"><b>${esc(u.title)}</b><span>${esc(u.subtitle||'')}</span></span>
+      ${done?'<span class="ref-done">✓</span>':'<span class="ref-go">→</span>'}</button>`;
+  });
+  app.innerHTML=`<div class="screen withnav">
+    <div class="topbar" style="padding-left:0;padding-right:0"><button class="iconbtn" id="rfBack" aria-label="Back">←</button><span class="topbar-title">Grammar reference</span><span style="width:34px"></span></div>
+    <input class="field" id="rfsearch" placeholder="Search a topic…" autocomplete="off" autocapitalize="off" spellcheck="false" style="font-size:16px">
+    <div class="ref-list" id="rflist">${html}</div>
+  </div>` + bottomNav('profile');
+  document.getElementById('rfBack').onclick=()=>go('profile');
+  document.querySelectorAll('.ref-row').forEach(b=>b.onclick=()=>openReference(b.dataset.id));
+  const s=document.getElementById('rfsearch'); s.oninput=()=>{
+    const q=s.value.trim().toLowerCase();
+    document.querySelectorAll('#rflist .ref-row').forEach(r=>{ r.style.display=(!q||r.dataset.q.includes(q))?'':'none'; });
+    document.querySelectorAll('#rflist .ref-chap').forEach(c=>{ c.style.display=q?'none':''; });
+  };
+  wireNav();
+}
+async function openReference(id){
+  go('loading');
+  try{ REF=await loadUnit(id); go('refview'); }
+  catch(e){ REF=null; go('needserver'); }
+}
+function renderRefView(){
+  if(!REF||!REF.grammar){ return renderReference(); }
+  const g=REF.grammar;
+  const section = s => `<div class="card grammar-card">
+      ${s.tag?`<span class="verb-tag ${s.tag==='estar'?'estar':''}">${esc(s.tag).toUpperCase()}</span>`:''}
+      <h2>${s.heading}</h2>
+      <p style="color:var(--muted);font-size:15px">${s.body}</p>
+      ${s.conj?`<div class="conj">${s.conj.map(c=>`<div><span>${esc(c[0])}</span><span>${esc(c[1])}</span></div>`).join('')}</div>`:''}
+      ${(s.ex||[]).map(e=>`<div class="ex"><div>${e.es}</div><span class="en">${esc(e.en)}</span>${e.note?' · <span class="note">'+esc(e.note)+'</span>':''}</div>`).join('')}
+    </div>`;
+  app.innerHTML=`<div class="screen withnav">
+    <div class="topbar" style="padding-left:0;padding-right:0"><button class="iconbtn" id="rvBack2" aria-label="Back">←</button><span class="topbar-title">${esc(REF.unit.title)}</span><span style="width:34px"></span></div>
+    <p class="eyebrow">Grammar · Level ${esc(REF.unit.level)}</p>
+    <h1>${g.title}</h1>
+    <p style="color:var(--muted)">${g.intro}</p>
+    ${(g.sections||[]).map(section).join('')}
+    ${(g.takeaways&&g.takeaways.length)?`<div class="card"><p class="eyebrow" style="margin-bottom:12px">Remember this</p>${g.takeaways.map(t=>`<div class="takeaway"><span class="k">→</span><span>${t}</span></div>`).join('')}</div>`:''}
+    ${(g.mistakes&&g.mistakes.length)?`<div class="card" style="background:var(--red-bg);border-color:rgba(251,113,133,.28)"><p class="eyebrow" style="margin-bottom:12px;color:var(--red)">Common mistakes</p>${g.mistakes.map(m=>`<div class="mistake"><span class="w">${m.w}</span> → <span class="r">${m.r}</span><span class="why">${m.why}</span></div>`).join('')}</div>`:''}
+    <button class="cta" id="refPractice">Practice this lesson →</button>
+  </div>` + bottomNav('profile');
+  document.getElementById('rvBack2').onclick=()=>go('reference');
+  document.getElementById('refPractice').onclick=()=>openUnit(REF.unit.id);
+  wireNav();
+}
+
+/* ---- PROFILE (bottom-nav tab) ---- */
+function renderProfile(){
+  const {level}=levelInfo(PROG.xp);
+  const words=Object.keys(SRS).length; const done=PROG.completed.length;
+  const mv=Object.values(PROG.mastery); const avg=mv.length?Math.round(mv.reduce((a,b)=>a+b,0)/mv.length):0;
+  app.innerHTML=`<div class="screen withnav">
+    <p class="eyebrow" style="margin-top:8px">Profile</p>
+    <h1>Your progress</h1>
+    ${AUTH_ON?'':`<div style="margin:6px 0 14px;padding:12px 14px;border-radius:14px;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.32);color:var(--text);font-size:13px;line-height:1.55">⚠️ <b>Not connected to the server.</b> Your progress is saved on this device, but the AI&nbsp;Tutor, lesson audio, reminders and cloud sync all need a live connection to <code>/api</code>. Tap <b>“Sign in to sync”</b> below — if it can’t connect, the PHP backend on your host isn’t reachable.</div>`}
+    <div class="prow">
+      <div class="pcard"><b>${PROG.streak}</b><span>Day streak</span></div>
+      <div class="pcard"><b>${PROG.xp}</b><span>Total XP</span></div>
+      <div class="pcard"><b>${level}</b><span>Level</span></div>
+      <div class="pcard"><b>${words}</b><span>Words learned</span></div>
+      <div class="pcard"><b>${done}</b><span>Lessons done</span></div>
+      <div class="pcard"><b>${avg}%</b><span>Avg mastery</span></div>
+    </div>
+    <button class="cta" id="toDash" style="margin-top:18px">📊 Full progress dashboard</button>
+    <button class="cta ghost" id="toRef" style="margin-top:10px">📘 Grammar reference</button>
+    <button class="cta ghost" id="toStudio" style="margin-top:10px">🛠️ Lesson studio</button>
+    ${achievementsSection()}
+    <button class="cta ghost" id="toSettings" style="margin-top:18px">${AUTH_ON?'⚙ Settings':'🔑 Sign in to sync'}</button>
+  </div>` + bottomNav('profile');
+  const td=document.getElementById('toDash'); if(td) td.onclick=()=>go('dashboard');
+  const tr=document.getElementById('toRef'); if(tr) tr.onclick=()=>go('reference');
+  const ts=document.getElementById('toStudio'); if(ts) ts.onclick=()=>go('studio');
+  document.getElementById('toSettings').onclick=()=>{
+    if(AUTH_ON){ go('settings'); }
+    else { go('auth'); }   // let the user reach the login screen even in offline mode
+  };
+  document.querySelectorAll('.badge').forEach(b=>b.onclick=()=>{
+    const a=ACHIEVEMENTS.find(x=>x.id===b.dataset.id); if(!a) return;
+    const earned=(PROG.earnedAch||[]).includes(a.id);
+    showInfo(a.title, `<div style="text-align:center"><div style="font-size:52px;line-height:1;margin:6px 0 12px;${earned?'':'filter:grayscale(1);opacity:.5'}">${a.icon}</div><p class="ip-body">${esc(a.desc)}</p><p class="ip-sub" style="margin-top:12px">${earned?'Earned ✓':'Not earned yet'}</p></div>`);
+  });
+  wireNav();
+}
+function achievementsSection(){
+  const earned=new Set(earnedAchIds());   // recompute live (covers progress since last lesson)
+  if(PROG.earnedAch){ /* keep persisted union in sync */ earned.forEach(id=>{ if(!PROG.earnedAch.includes(id)) PROG.earnedAch.push(id); }); }
+  const n=ACHIEVEMENTS.filter(a=>earned.has(a.id)).length;
+  const tiles=ACHIEVEMENTS.map(a=>{
+    const got=earned.has(a.id);
+    return `<button class="badge ${got?'got':'locked'}" data-id="${a.id}" title="${esc(a.title)}"><span class="badge-ic">${got?a.icon:'🔒'}</span><span class="badge-t">${esc(a.title)}</span></button>`;
+  }).join('');
+  return `<div class="ach-head"><h2 style="font-size:18px;margin:22px 0 2px">Achievements</h2><span class="ach-count">${n} / ${ACHIEVEMENTS.length}</span></div>
+    <div class="badges">${tiles}</div>`;
+}
+
+/* ---- PROGRESS DASHBOARD (Step 7) ---- */
+function activityLast(n){
+  const out=[]; const now=new Date(); now.setHours(0,0,0,0);
+  for(let i=n-1;i>=0;i--){ const d=new Date(now.getTime()-i*864e5); const key=d.toDateString();
+    out.push({ d, key, xp:(PROG.activity&&PROG.activity[key])||0 }); }
+  return out;
+}
+function srsStrength(){
+  const cards=Object.values(typeof SRS!=='undefined'?SRS:{});
+  const b={ nw:0, learning:0, young:0, strong:0 };
+  cards.forEach(c=>{ const S=c.S; if(S==null||c.reps===0) b.nw++; else if(S<7) b.learning++; else if(S<30) b.young++; else b.strong++; });
+  return { total:cards.length, ...b };
+}
+function renderDashboard(){
+  const {level,into,toNext}=levelInfo(PROG.xp);
+  const act=activityLast(14);
+  const maxXp=Math.max(PROG.dailyGoal||30, ...act.map(a=>a.xp), 1);
+  const activeDays=act.filter(a=>a.xp>0).length;
+  const weekXp=act.slice(-7).reduce((s,a)=>s+a.xp,0);
+  // course progress by level
+  const lvl={A1:0,A2:0,B1:0}, tot={A1:0,A2:0,B1:0};
+  (PATH||[]).forEach(u=>{ if(tot[u.level]!=null){ tot[u.level]++; if(PROG.completed.includes(u.id)) lvl[u.level]++; } });
+  const done=PROG.completed.length, totalU=(PATH||[]).length||54;
+  const coursePct=Math.round(done/totalU*100);
+  // mastery
+  const mv=Object.values(PROG.mastery||{}); const avg=mv.length?Math.round(mv.reduce((a,b)=>a+b,0)/mv.length):0;
+  const perfect=mv.filter(m=>m>=100).length;
+  // srs
+  const st=srsStrength(); const due=dueCards().length;
+  const earnedN=earnedAchIds().length;
+
+  const bars = act.map(a=>{
+    const h=Math.round(a.xp/maxXp*100);
+    const wd=['S','M','T','W','T','F','S'][a.d.getDay()];
+    return `<div class="ac-col"><div class="ac-bar"><i style="height:${Math.max(a.xp>0?8:2,h)}%;${a.xp>0?'':'opacity:.25'}"></i></div><span class="ac-d">${wd}</span></div>`;
+  }).join('');
+  const goalLinePct = Math.round((PROG.dailyGoal||30)/maxXp*100);
+
+  const lvlRow=(k)=>{ const p=tot[k]?Math.round(lvl[k]/tot[k]*100):0; return `<div class="dl-row"><span class="dl-k">${k}</span><div class="dl-bar"><i style="width:${p}%"></i></div><span class="dl-n">${lvl[k]}/${tot[k]}</span></div>`; };
+
+  const strengthSeg = st.total ? `<div class="seg">
+      <i class="seg-nw" style="flex:${st.nw||0.0001}" title="New"></i>
+      <i class="seg-le" style="flex:${st.learning||0.0001}" title="Learning"></i>
+      <i class="seg-yo" style="flex:${st.young||0.0001}" title="Growing"></i>
+      <i class="seg-st" style="flex:${st.strong||0.0001}" title="Strong"></i>
+    </div>
+    <div class="seg-key"><span><b class="k-nw"></b>New ${st.nw}</span><span><b class="k-le"></b>Learning ${st.learning}</span><span><b class="k-yo"></b>Growing ${st.young}</span><span><b class="k-st"></b>Strong ${st.strong}</span></div>` : `<p class="qhint">Finish a lesson to start building your review deck.</p>`;
+
+  app.innerHTML=`<div class="screen withnav">
+    <div class="topbar" style="padding-left:0;padding-right:0"><button class="iconbtn" id="dbBack" aria-label="Back">←</button><span class="topbar-title">Progress</span><span style="width:34px"></span></div>
+
+    <div class="dash-hero card">
+      ${levelRing(PROG.xp)}
+      <div class="dh-tx"><span class="dh-lv">Level ${level}</span><span class="dh-xp">${PROG.xp} XP · ${toNext} to level ${level+1}</span></div>
+    </div>
+
+    <div class="d-sec"><div class="d-head"><h2>Activity</h2><span class="d-sub">${activeDays}/14 active days · ${weekXp} XP this week</span></div>
+      <div class="actchart" style="--goal:${goalLinePct}%">${bars}</div>
+    </div>
+
+    <div class="d-sec"><div class="d-head"><h2>Course progress</h2><span class="d-sub">${done}/${totalU} lessons · ${coursePct}%</span></div>
+      ${lvlRow('A1')}${lvlRow('A2')}${lvlRow('B1')}
+    </div>
+
+    <div class="d-grid">
+      <div class="d-mini"><b>${PROG.streak}</b><span>Current streak</span></div>
+      <div class="d-mini"><b>${PROG.maxStreak||0}</b><span>Best streak</span></div>
+      <div class="d-mini"><b>${avg}%</b><span>Avg mastery</span></div>
+      <div class="d-mini"><b>${perfect}</b><span>Perfect lessons</span></div>
+      <div class="d-mini"><b>${PROG.goalDays||0}</b><span>Goal days hit</span></div>
+      <div class="d-mini"><b>${earnedN}/${ACHIEVEMENTS.length}</b><span>Achievements</span></div>
+    </div>
+
+    <div class="d-sec"><div class="d-head"><h2>Vocabulary</h2><span class="d-sub">${st.total} words · ${due} due now</span></div>
+      ${strengthSeg}
+      ${due>0?`<button class="cta" id="dbReview" style="margin-top:14px">Review ${due} card${due===1?'':'s'} →</button>`:''}
+    </div>
+  </div>` + bottomNav('profile');
+
+  document.getElementById('dbBack').onclick=()=>go('profile');
+  const dr=document.getElementById('dbReview'); if(dr) dr.onclick=startReview;
+  wireNav();
+}
+
+/* ---- SETTINGS ---- */
+function renderSettings(){
+  const nameVal=(USER&&USER.name)?USER.name:'', uname=(USER&&USER.username)?USER.username:'';
+  app.innerHTML=`<div class="screen withnav">
+    <p class="eyebrow" style="margin-top:8px">Settings</p>
+    <h1>Account</h1>
+    <div class="card" style="margin-top:6px">
+      <p class="set-lbl">Username</p>
+      <p class="set-val">${esc(uname)}</p>
+      <p class="set-lbl" style="margin-top:16px">Display name</p>
+      <input class="field" id="stName" placeholder="Your name" value="${esc(nameVal)}" autocomplete="name" style="margin-bottom:10px">
+      <button class="cta" id="stSaveName">Save name</button>
+      <p class="set-msg" id="stNameMsg"></p>
+    </div>
+    <div class="card">
+      <p class="set-lbl">Change password</p>
+      <input class="field" id="stPw" type="password" placeholder="New password" autocomplete="new-password" style="margin:10px 0 10px">
+      <input class="field" id="stPw2" type="password" placeholder="Confirm new password" autocomplete="new-password" style="margin-bottom:10px">
+      <button class="cta ghost" id="stSavePw">Update password</button>
+      <p class="set-msg" id="stPwMsg"></p>
+    </div>
+    <div class="card">
+      <p class="set-lbl">OpenAI API key</p>
+      <p class="set-val" id="aiKeyStatus" style="font-size:13.5px">Checking…</p>
+      <input class="field" id="aiKey" type="password" placeholder="sk-…  (paste to set or rotate)" autocomplete="off" style="margin:10px 0 6px">
+      <p style="color:var(--faint);font-size:12px;margin:0 0 14px">Stored securely on your server — never shown again. Get one at platform.openai.com → API Keys.</p>
+      <p class="set-lbl">AI Tutor model</p>
+      <select class="field" id="aiChat" style="margin:6px 0 12px">
+        <option value="gpt-4o-mini">gpt-4o-mini — cheapest (recommended)</option>
+        <option value="gpt-4o">gpt-4o — smarter</option>
+        <option value="gpt-4.1-mini">gpt-4.1-mini</option>
+        <option value="gpt-5-mini">gpt-5-mini</option>
+        <option value="__custom__">Custom model…</option>
+      </select>
+      <input class="field aiCustom" id="aiChatCustom" placeholder="Type a model name, e.g. gpt-4.1" autocomplete="off" autocapitalize="off" spellcheck="false" style="display:none;margin:0 0 12px">
+      <p class="set-lbl">Voice model (text-to-speech)</p>
+      <select class="field" id="aiTts" style="margin:6px 0 12px">
+        <option value="gpt-4o-mini-tts">gpt-4o-mini-tts — natural (recommended)</option>
+        <option value="tts-1">tts-1 — cheapest</option>
+        <option value="tts-1-hd">tts-1-hd — highest quality</option>
+        <option value="__custom__">Custom model…</option>
+      </select>
+      <input class="field aiCustom" id="aiTtsCustom" placeholder="Type a voice model name" autocomplete="off" autocapitalize="off" spellcheck="false" style="display:none;margin:0 0 12px">
+      <p class="set-lbl">Pronunciation model (speech-to-text)</p>
+      <select class="field" id="aiStt" style="margin:6px 0 12px">
+        <option value="gpt-4o-mini-transcribe">gpt-4o-mini-transcribe (recommended)</option>
+        <option value="gpt-4o-transcribe">gpt-4o-transcribe — most accurate</option>
+        <option value="whisper-1">whisper-1 — cheapest</option>
+        <option value="__custom__">Custom model…</option>
+      </select>
+      <input class="field aiCustom" id="aiSttCustom" placeholder="Type a transcription model name" autocomplete="off" autocapitalize="off" spellcheck="false" style="display:none;margin:0 0 12px">
+      <button class="cta" id="aiSave">Save AI settings</button>
+      <p class="set-msg" id="aiMsg"></p>
+    </div>
+    <div class="card">
+      <p class="set-lbl">Lesson audio</p>
+      <p style="color:var(--muted);font-size:13px;margin:6px 0 10px">Voice new lessons with a natural OpenAI voice. This only generates clips you don’t already have — your existing audio is kept. Keep this screen open while it runs.</p>
+      <select class="field" id="gaVoice" style="margin-bottom:10px">
+        <option value="coral">Coral — warm &amp; friendly (recommended)</option>
+        <option value="nova">Nova — bright</option>
+        <option value="shimmer">Shimmer — soft</option>
+        <option value="sage">Sage — calm</option>
+        <option value="ballad">Ballad</option>
+        <option value="marin">Marin</option>
+      </select>
+      <button class="cta" id="gaGo">Generate new lesson audio</button>
+      <button class="cta ghost" id="gaAll" style="margin-top:10px">Regenerate all clips</button>
+      <p style="color:var(--faint);font-size:12px;margin-top:8px">“Regenerate all” re-voices the whole library (use it to switch voice). Otherwise stick to the top button — it’s faster and cheaper.</p>
+      <div class="ga-prog" id="gaProg" style="display:none"><div class="ga-bar"><i id="gaBar"></i></div><p class="set-msg" id="gaMsg"></p></div>
+      <hr style="border:none;border-top:1px solid var(--line);margin:14px 0">
+      <button class="cta ghost" id="gaTest">▶ Test lesson audio</button>
+      <p class="set-msg" id="gaTestMsg" style="margin-top:8px"></p>
+    </div>
+    <div class="card">
+      <p class="set-lbl">Daily reminders 🔔</p>
+      <p style="color:var(--muted);font-size:13px;margin:6px 0 12px">Get a gentle nudge to keep your streak. Works best when Fluenta is installed to your home screen.</p>
+      <button class="cta" id="pnToggle">Enable notifications</button>
+      <button class="cta ghost" id="pnTest" style="margin-top:10px;display:none">Send a test notification</button>
+      <p class="set-msg" id="pnMsg"></p>
+      <div id="pnCron" style="display:none;margin-top:14px">
+        <p class="set-lbl" style="font-size:13px">Automatic daily reminder</p>
+        <p style="color:var(--muted);font-size:12.5px;margin:6px 0 8px">To get a reminder every day (even when the app is closed), add ONE cron job in Hostinger → Advanced → Cron Jobs, set to once a day, running this URL:</p>
+        <div class="cron-url" id="pnCronUrl">…</div>
+        <button class="cta ghost" id="pnCopy" style="margin-top:8px">Copy URL</button>
+      </div>
+    </div>
+    <button class="cta ghost" id="stSignout" style="border-color:rgba(251,113,133,.4);color:var(--red)">Sign out</button>
+  </div>` + bottomNav('profile');
+  document.getElementById('stSaveName').onclick=saveName;
+  document.getElementById('stSavePw').onclick=savePw;
+  document.getElementById('gaGo').onclick=()=>genAudio(false);
+  document.getElementById('gaAll').onclick=()=>{ if(confirm('Re-voice the ENTIRE library? This deletes every existing clip and regenerates it (uses more of your OpenAI credit). Use this only to change the voice.')) genAudio(true); };
+  const gt=document.getElementById('gaTest'); if(gt) gt.onclick=testLessonAudio;
+  document.getElementById('aiSave').onclick=saveAiSettings;
+  document.getElementById('pnToggle').onclick=togglePush;
+  document.getElementById('pnTest').onclick=testPush;
+  document.getElementById('pnCopy').onclick=()=>{ const t=document.getElementById('pnCronUrl').textContent; navigator.clipboard&&navigator.clipboard.writeText(t); const b=document.getElementById('pnCopy'); b.textContent='Copied ✓'; setTimeout(()=>b.textContent='Copy URL',1500); };
+  document.getElementById('stSignout').onclick=async()=>{ try{ await fetch('api/logout.php',{method:'POST'}); }catch(e){} USER=null; go('auth'); };
+  wireNav();
+  loadAiSettings();
+  refreshPushUI();
+}
+/* ---- Web Push client (Step 2) ---- */
+function urlB64ToUint8(base64){ base64=String(base64||'').trim().replace(/\s+/g,''); const pad='='.repeat((4-base64.length%4)%4); const b=(base64+pad).replace(/-/g,'+').replace(/_/g,'/'); const raw=atob(b); return Uint8Array.from([...raw].map(c=>c.charCodeAt(0))); }
+function isStandalonePWA(){ return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone===true; }
+function pushSupported(){ return 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window; }
+async function currentPushSub(){ try{ const reg=await navigator.serviceWorker.ready; return await reg.pushManager.getSubscription(); }catch(e){ return null; } }
+async function refreshPushUI(){
+  const toggle=document.getElementById('pnToggle'), test=document.getElementById('pnTest'), cron=document.getElementById('pnCron'), msg=document.getElementById('pnMsg');
+  if(!toggle) return;
+  if(!pushSupported()){ toggle.disabled=true; toggle.textContent='Not supported on this browser'; msg.textContent='Tip: on iPhone, install Fluenta to your Home Screen first (Share → Add to Home Screen).'; return; }
+  const sub=await currentPushSub();
+  if(sub && Notification.permission==='granted'){
+    toggle.textContent='Turn off reminders'; test.style.display=''; cron.style.display=''; loadCronUrl();
+  } else { toggle.textContent='Enable notifications'; test.style.display='none'; cron.style.display='none'; }
+}
+async function togglePush(){
+  const msg=document.getElementById('pnMsg'); msg.style.color='var(--muted)'; msg.textContent='';
+  if(!pushSupported()){ return; }
+
+  // Already granted? Either turn OFF (if subscribed) or (re)subscribe silently.
+  if(Notification.permission==='granted'){
+    const existing=await currentPushSub();
+    if(existing){
+      try{ const ep=existing.endpoint; await existing.unsubscribe(); await fetch('api/push_unsubscribe.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({endpoint:ep})}); }catch(e){}
+      msg.style.color='var(--muted)'; msg.textContent='Reminders turned off.'; refreshPushUI(); return;
+    }
+    return enablePush(msg);
+  }
+
+  // Previously blocked — the browser won't re-prompt; the user must clear it in settings.
+  if(Notification.permission==='denied'){
+    msg.style.color='var(--red)'; msg.textContent='Notifications are blocked for this app. Turn them on in your device/browser Settings for Fluenta, then tap again.'; return;
+  }
+
+  // iOS/iPadOS only allow web push from a PWA installed to the Home Screen.
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform==='MacIntel' && navigator.maxTouchPoints>1);
+  if(isIOS && !isStandalonePWA()){ msg.style.color='var(--amber)'; msg.textContent='On iPhone/iPad, first add Fluenta to your Home Screen (tap Share → “Add to Home Screen”), then open it from there and enable reminders.'; return; }
+
+  // Ask for permission RIGHT NOW — this must be the first async call in the
+  // click handler. Safari/iOS only show the prompt when requestPermission() is
+  // reached directly from the user gesture; any earlier `await` silently drops
+  // it (which is why the browser prompt never appeared before).
+  let perm;
+  try{ perm = await Notification.requestPermission(); }
+  catch(e){ perm = Notification.permission; }
+  if(perm!=='granted'){
+    msg.style.color='var(--red)';
+    msg.textContent = perm==='denied'
+      ? 'Permission denied. Enable notifications for this app in your browser/device settings.'
+      : 'Notifications weren’t enabled — tap “Enable notifications” and choose Allow.';
+    refreshPushUI(); return;
+  }
+  return enablePush(msg);
+}
+// Registers this device with the server once notification permission is granted.
+async function enablePush(msg){
+  try{
+    const kr=await fetch('api/push_public_key.php',{cache:'no-store'});
+    let kj={}; try{ kj=await kr.json(); }catch(e){ throw new Error('the server didn’t return a valid key (HTTP '+kr.status+'). Make sure the app is deployed and /api runs PHP.'); }
+    const key=String(kj.key||'').trim().replace(/\s+/g,'');
+    if(!/^[A-Za-z0-9_-]{80,}$/.test(key)){ throw new Error(key?'the server sent a malformed key — reload and try again.':'the server didn’t return a key.'); }
+    const reg=await navigator.serviceWorker.ready;
+    let sub=await reg.pushManager.getSubscription();
+    if(!sub) sub=await reg.pushManager.subscribe({userVisibleOnly:true, applicationServerKey:urlB64ToUint8(key)});
+    const raw=sub.toJSON();
+    const r=await fetch('api/push_subscribe.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({endpoint:raw.endpoint,keys:raw.keys})});
+    const j=await r.json();
+    if(j.ok){ msg.style.color='var(--green)'; msg.textContent='Reminders on! Send a test to check. ✓'; }
+    else { msg.style.color='var(--red)'; msg.textContent='Saved on device but the server rejected it. Try again.'; }
+  }catch(e){ msg.style.color='var(--red)'; msg.textContent='Could not enable notifications: '+(e.message||'error'); }
+  refreshPushUI();
+}
+async function testPush(){
+  const msg=document.getElementById('pnMsg'); msg.style.color='var(--muted)'; msg.textContent='Sending…';
+  try{ const r=await fetch('api/push_test.php',{method:'POST'}); const j=await r.json();
+    if(j.ok){ msg.style.color='var(--green)'; msg.textContent='Sent! It should appear in a moment. 🔔'; }
+    else if(j.error==='no_subscriptions'){ msg.style.color='var(--red)'; msg.textContent='No device registered — enable notifications first.'; }
+    else { msg.style.color='var(--red)'; msg.textContent='Test failed'+(j.failed?(' ('+j.failed+' device).'):'.')+' Re-enable and try again.'; }
+  }catch(e){ msg.style.color='var(--red)'; msg.textContent='Could not reach the server.'; }
+}
+async function loadCronUrl(){
+  try{ const r=await fetch('api/push_cron_url.php'); const j=await r.json(); const el=document.getElementById('pnCronUrl'); if(el&&j.url) el.textContent=j.url; }catch(e){}
+}
+// Show/hide the "Custom model…" text box that pairs with a model dropdown.
+function aiCustomSync(selId){
+  const sel=document.getElementById(selId), inp=document.getElementById(selId+'Custom');
+  if(!sel||!inp) return;
+  const custom = sel.value==='__custom__';
+  inp.style.display = custom ? '' : 'none';
+  if(custom) inp.focus();
+}
+// Put a saved model into the UI: match a preset if one exists, otherwise drop
+// it into the Custom… text box so any model name round-trips.
+function aiSetModel(selId,val){
+  const sel=document.getElementById(selId), inp=document.getElementById(selId+'Custom');
+  if(!sel||!val) return;
+  const hasOpt=[...sel.options].some(o=>o.value===val);
+  if(hasOpt){ sel.value=val; if(inp){ inp.value=''; inp.style.display='none'; } }
+  else if(inp){ sel.value='__custom__'; inp.value=val; inp.style.display=''; }
+}
+// The effective model for a dropdown, honouring the Custom… text box.
+function aiGetModel(selId){
+  const sel=document.getElementById(selId), inp=document.getElementById(selId+'Custom');
+  return (sel && sel.value==='__custom__') ? ((inp&&inp.value||'').trim()) : (sel?sel.value:'');
+}
+async function loadAiSettings(){
+  ['aiChat','aiTts','aiStt'].forEach(id=>{ const s=document.getElementById(id); if(s) s.onchange=()=>aiCustomSync(id); });
+  try{
+    const r=await fetch('api/ai_settings_get.php',{cache:'no-store'}); const j=await r.json();
+    if(j.error) return;
+    const st=document.getElementById('aiKeyStatus'); if(st){ st.textContent=j.has_key?('Key set · '+j.key_hint):'No key set yet'; st.style.color=j.has_key?'var(--green)':'var(--muted)'; }
+    aiSetModel('aiChat',j.openai_model); aiSetModel('aiTts',j.tts_model); aiSetModel('aiStt',j.stt_model);
+  }catch(e){}
+}
+async function saveAiSettings(){
+  const msg=document.getElementById('aiMsg'); msg.textContent='';
+  const payload={ openai_model:aiGetModel('aiChat'), tts_model:aiGetModel('aiTts'), stt_model:aiGetModel('aiStt') };
+  if(!payload.openai_model||!payload.tts_model||!payload.stt_model){ msg.style.color='var(--red)'; msg.textContent='Type a model name in the Custom field, or pick one from the list.'; return; }
+  const key=(document.getElementById('aiKey').value||'').trim(); if(key) payload.openai_key=key;
+  const btn=document.getElementById('aiSave'); const lbl=btn.textContent; btn.disabled=true; btn.textContent='…';
+  try{
+    const r=await fetch('api/ai_settings_save.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}); const j=await r.json();
+    if(j.ok){ msg.style.color='var(--green)'; msg.textContent='Saved ✓'; document.getElementById('aiKey').value='';
+      const st=document.getElementById('aiKeyStatus'); st.textContent=j.has_key?('Key set · '+j.key_hint):'No key set yet'; st.style.color=j.has_key?'var(--green)':'var(--muted)'; }
+    else { msg.style.color='var(--red)'; msg.textContent = j.error==='bad_key'?'That doesn’t look like a valid key (starts with “sk-”).':'Could not save.'; }
+  }catch(e){ msg.style.color='var(--red)'; msg.textContent='Could not reach the server.'; }
+  btn.disabled=false; btn.textContent=lbl;
+}
+async function genAudio(reset){
+  const btnGo=document.getElementById('gaGo'), btnAll=document.getElementById('gaAll');
+  const prog=document.getElementById('gaProg'), bar=document.getElementById('gaBar'), msg=document.getElementById('gaMsg');
+  const voice=document.getElementById('gaVoice').value; const ver=String(Date.now());
+  btnGo.disabled=btnAll.disabled=true; prog.style.display='block'; bar.style.width='0%'; msg.style.color='var(--muted)';
+  msg.textContent = reset ? 'Preparing full rebuild…' : 'Checking what needs audio…';
+  let total=0, have=0, made=0, ok=true, first=true, stall=0;
+  while(true){
+    let j;
+    const payload={ count:8, voice, ver, reset:(reset&&first)?1:0 };
+    let r;
+    try{ r=await fetch('api/gen_audio.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}); }
+    catch(e){ msg.style.color='var(--red)'; msg.textContent='Network error — check your connection, then tap the button to resume.'; ok=false; break; }
+    const raw=await r.text();
+    try{ j=JSON.parse(raw); }
+    catch(e){ msg.style.color='var(--red)'; msg.textContent='Server error (HTTP '+r.status+') — the audio endpoint didn’t return valid data. Check that /api is deployed and PHP is enabled.'; ok=false; break; }
+    if(j.error){ msg.style.color='var(--red)'; msg.textContent = j.error==='ai_not_configured'?'Add your OpenAI key above first.':(j.error==='audio_not_writable'?'The server’s audio folder isn’t writable (chmod it to 755).':'Error: '+j.error); ok=false; break; }
+    first=false; total=j.total; have=j.have; made+=(j.generated||0);
+    bar.style.width=(total?Math.round(have/total*100):100)+'%';
+    if(j.remaining<=0) break;
+    if((j.generated||0)===0){ if(++stall>=1){ msg.style.color='var(--red)'; msg.textContent='Some clips failed to generate — check your OpenAI credit, then tap to retry.'; ok=false; break; } }
+    else stall=0;
+    msg.textContent='Generating… '+have+' / '+total+' clips';
+  }
+  if(ok){
+    // The server only knows built-in units/*.json — also voice any Studio
+    // (custom) lessons, which live in this browser's storage.
+    let customMade=0;
+    if(CUSTOM.length){
+      msg.style.color='var(--muted)'; msg.textContent='Voicing your studio lessons…';
+      for(const cu of CUSTOM){ const res=await genCustomAudio(cu); customMade += (res&&res.generated)||0; }
+    }
+    await loadAudio(); bar.style.width='100%'; msg.style.color='var(--green)';
+    const built = reset ? ('All '+total+' built-in clips regenerated')
+      : (made>0 ? ('Added '+made+' new clip'+(made===1?'':'s')) : 'Built-in lessons already voiced');
+    msg.textContent = built + (customMade>0 ? (' + '+customMade+' studio clip'+(customMade===1?'':'s')) : (CUSTOM.length?' · studio lessons already voiced':'')) + '. ✓';
+  }
+  btnGo.disabled=btnAll.disabled=false;
+}
+async function saveName(){
+  const name=(document.getElementById('stName').value||'').trim();
+  const msg=document.getElementById('stNameMsg'); msg.textContent='';
+  try{ const r=await fetch('api/update_profile.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name})}); const j=await r.json();
+    if(j.ok){ USER=j.user; msg.style.color='var(--green)'; msg.textContent='Saved ✓'; } else { msg.style.color='var(--red)'; msg.textContent='Could not save.'; }
+  }catch(e){ msg.style.color='var(--red)'; msg.textContent='Could not reach the server.'; }
+}
+async function savePw(){
+  const p1=document.getElementById('stPw').value||'', p2=document.getElementById('stPw2').value||'';
+  const msg=document.getElementById('stPwMsg'); msg.textContent='';
+  if(p1.length<6){ msg.style.color='var(--red)'; msg.textContent='At least 6 characters.'; return; }
+  if(p1!==p2){ msg.style.color='var(--red)'; msg.textContent="Passwords don't match."; return; }
+  try{ const r=await fetch('api/change_password.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:p1})}); const j=await r.json();
+    if(j.authenticated){ msg.style.color='var(--green)'; msg.textContent='Password updated ✓'; document.getElementById('stPw').value=''; document.getElementById('stPw2').value=''; }
+    else { msg.style.color='var(--red)'; msg.textContent=authErr(j.error); }
+  }catch(e){ msg.style.color='var(--red)'; msg.textContent='Could not reach the server.'; }
+}
+
+/* ---- AI TUTOR (Luma chat) ---- */
+function renderTutor(){
+  const body = TUTOR.length
+    ? TUTOR.map(m=>`<div class="tmsg ${m.role}">${m.role==='assistant'?'<img class="tav" src="mascot/happy.png" alt="Luma" />':''}<div class="tbub${m.pending?' pending':''}">${m.pending?'<span class="tdot"></span><span class="tdot"></span><span class="tdot"></span>':esc(m.content)}</div></div>`).join('')
+    : `<div class="tutor-intro">
+         <img class="tutor-owl" src="mascot/talk.png" alt="Luma" />
+         <h2>Ask Luma</h2>
+         <p class="qhint" style="max-width:30ch;margin:0 auto 16px">Your Spanish tutor. Ask about grammar, words, or “why is it like that?”</p>
+         <div class="tchips">${['Explain ser vs estar','How do I say “I’d like a coffee”?','When do I use por vs para?'].map(q=>`<button class="tchip" data-q="${esc(q)}">${esc(q)}</button>`).join('')}</div>
+       </div>`;
+  const hasChat = TUTOR.filter(m=>!m.pending).length>0;
+  const savedCount = TUTOR_SAVED.length;
+  app.innerHTML=`<div class="screen tutor-screen">
+    <div class="tutor-top">
+      <span class="tutor-top-title">Ask Luma</span>
+      <div class="tutor-top-actions">
+        <button class="tutor-ibtn" id="tHistory" aria-label="Saved conversations" title="Saved conversations">🕑${savedCount?`<span class="tutor-badge">${savedCount>99?'99+':savedCount}</span>`:''}</button>
+        ${hasChat?'<button class="tutor-ibtn" id="tNew" aria-label="New chat" title="New chat">＋</button>':''}
+        <button class="voice-cta" id="voicecta" aria-label="Voice chat with Luma">🎙️ Voice chat</button>
+      </div>
+    </div>
+    <div class="tlist" id="tlist">${body}</div>
+    <div class="tinput">
+      <input class="field" id="tin" placeholder="Ask Luma…" autocomplete="off" autocapitalize="sentences">
+      <button class="tsend" id="tsend" aria-label="Send">↑</button>
+    </div>
+  </div>` + bottomNav('tutor');
+  const list=document.getElementById('tlist'); if(list) list.scrollTop=list.scrollHeight;
+  const vc=document.getElementById('voicecta'); if(vc) vc.onclick=()=>go('voice');
+  const th=document.getElementById('tHistory'); if(th) th.onclick=()=>go('sessions');
+  const tn=document.getElementById('tNew'); if(tn) tn.onclick=newTutorChat;
+  document.querySelectorAll('.tchip').forEach(b=>b.onclick=()=>{ document.getElementById('tin').value=b.dataset.q; sendTutor(); });
+  document.getElementById('tsend').onclick=sendTutor;
+  const tin=document.getElementById('tin'); tin.onkeydown=e=>{ if(e.key==='Enter') sendTutor(); };
+  wireNav();
+}
+/* ---- Saved conversations (review past chats & voice sessions) ---- */
+function renderSessions(){
+  const list = TUTOR_SAVED.length
+    ? TUTOR_SAVED.map(s=>{
+        const d=new Date(s.ts||0);
+        const when=isNaN(d)?'':d.toLocaleDateString(undefined,{month:'short',day:'numeric'})+' · '+d.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'});
+        const icon=s.kind==='voice'?'🎙️':'💬';
+        const n=(s.messages||[]).length;
+        return `<div class="studio-row">
+          <button class="sr-play" data-id="${esc(s.id)}"><span class="sr-ic">${icon}</span>
+            <span class="sr-tx"><b>${esc(s.title||'Conversation')}</b><span>${when} · ${n} message${n===1?'':'s'}</span></span></button>
+          <button class="sr-del" data-id="${esc(s.id)}" aria-label="Delete">🗑</button></div>`;
+      }).join('')
+    : `<p class="qhint" style="text-align:center;margin:24px 0">No saved conversations yet. Your chats with Luma — typed and spoken — are saved here automatically so you can review them later.</p>`;
+  app.innerHTML=`<div class="screen withnav">
+    <div class="topbar" style="padding-left:0;padding-right:0"><button class="iconbtn" id="seBack" aria-label="Back">←</button><span class="topbar-title">Saved conversations</span><span style="width:34px"></span></div>
+    <div class="studio-list" style="margin-top:16px">${list}</div>
+  </div>` + bottomNav('tutor');
+  document.getElementById('seBack').onclick=()=>go('tutor');
+  document.querySelectorAll('.sr-play').forEach(b=>b.onclick=()=>{ VIEW_SESSION=TUTOR_SAVED.find(x=>x.id===b.dataset.id)||null; if(VIEW_SESSION) go('sessionview'); });
+  document.querySelectorAll('.sr-del').forEach(b=>b.onclick=()=>{
+    if(confirm('Delete this saved conversation?')){ TUTOR_SAVED=TUTOR_SAVED.filter(x=>x.id!==b.dataset.id); saveTutorSaved(); renderSessions(); }
+  });
+  wireNav();
+}
+function renderSessionView(){
+  const s=VIEW_SESSION; if(!s){ go('sessions'); return; }
+  const body=(s.messages||[]).map(m=>`<div class="tmsg ${m.role}">${m.role==='assistant'?'<img class="tav" src="mascot/happy.png" alt="Luma" />':''}<div class="tbub">${esc(m.content)}</div></div>`).join('');
+  const d=new Date(s.ts||0); const when=isNaN(d)?'':d.toLocaleString();
+  app.innerHTML=`<div class="screen tutor-screen">
+    <div class="topbar" style="padding-left:0;padding-right:0"><button class="iconbtn" id="svBack" aria-label="Back">←</button><span class="topbar-title">${s.kind==='voice'?'🎙️ ':'💬 '}Review</span><span style="width:34px"></span></div>
+    <p class="qhint" style="text-align:center;margin:2px 0 10px">${esc(when)}</p>
+    <div class="tlist" id="tlist" style="padding-bottom:20px">${body}</div>
+  </div>` + bottomNav('tutor');
+  document.getElementById('svBack').onclick=()=>go('sessions');
+  wireNav();
+}
+async function sendTutor(){
+  const inp=document.getElementById('tin'); const q=(inp.value||'').trim(); if(!q) return;
+  if(!AUTH_ON){ TUTOR.push({role:'assistant',content:'I can’t reach the server right now, so I’m offline. Your progress is safe on this device. Go to Profile → “Sign in to sync” to connect me. 🦉'}); renderTutor(); return; }
+  TUTOR.push({role:'user',content:q});
+  saveTutorCur();
+  TUTOR.push({role:'assistant',content:'',pending:true});
+  renderTutor();
+  const history = TUTOR.filter(m=>!m.pending).map(m=>({role:m.role,content:m.content}));
+  let reply;
+  try{
+    const r=await fetch('api/tutor.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history})});
+    const raw=await r.text(); let j={}; try{ j=JSON.parse(raw); }catch(_){ throw new Error('bad_json_'+r.status); }
+    reply = j.reply || (j.error==='ai_not_configured'
+      ? 'I’m not switched on yet — add your OpenAI key in Settings and I’ll be here. 🦉'
+      : j.error==='not_authenticated' ? 'Please log in again so I can help. 🦉'
+      : j.error==='upstream_unreachable' ? 'I can’t reach OpenAI from the server right now — check the key and that the server allows outbound requests.'
+      : 'Sorry, I had trouble answering just now. Please try again.');
+  }catch(e){ reply = /bad_json/.test(e.message) ? ('The server didn’t reply correctly ('+e.message.replace('bad_json_','HTTP ')+'). Make sure /api is deployed and PHP is enabled.') : 'I couldn’t reach the server. Please try again.'; }
+  TUTOR = TUTOR.filter(m=>!m.pending);
+  TUTOR.push({role:'assistant',content:reply});
+  saveTutorCur();
+  renderTutor();
+}
+
+/* ---- VOICE CONVERSATION (OpenAI Realtime, live WebRTC) ---- */
+const VOICE = { state:'idle', pc:null, dc:null, mic:null, audio:null, turns:[], speaking:false, msg:'', archived:false };
+
+function voiceStatus(){
+  if(VOICE.state==='connecting') return 'Connecting to Luma…';
+  if(VOICE.state==='error')      return VOICE.msg || 'Something went wrong.';
+  if(VOICE.state==='live')       return VOICE.speaking ? 'Luma is speaking…' : 'Listening… just talk';
+  return 'Tap to start talking with Luma';
+}
+function renderVoice(){
+  const live = VOICE.state==='live';
+  const connecting = VOICE.state==='connecting';
+  const turnsHtml = VOICE.turns.length
+    ? VOICE.turns.map(t=>`<div class="vturn ${t.role}"><span class="vwho">${t.role==='assistant'?'Luma':'You'}</span><span class="vtxt">${esc(t.text)}</span></div>`).join('')
+    : `<p class="qhint" style="text-align:center;max-width:32ch;margin:18px auto">Speak naturally in Spanish — Luma listens and replies out loud, keeping it short so you can practise a real conversation.</p>`;
+  const orbCls = 'voice-orb' + (live?' live':'') + (VOICE.speaking?' speaking':'') + (connecting?' connecting':'');
+  app.innerHTML=`<div class="screen withnav voice-screen">
+    <div class="topbar"><button class="iconbtn" id="vback" aria-label="Back">←</button><span class="topbar-title">Voice chat</span><span style="width:34px"></span></div>
+    <div class="voice-stage">
+      <div class="${orbCls}"><img src="mascot/talk.png" alt="Luma" class="voice-luma"/></div>
+      <p class="voice-status" id="vstatus">${esc(voiceStatus())}</p>
+    </div>
+    <div class="vturns" id="vturns">${turnsHtml}</div>
+    <div class="voice-controls">
+      ${live
+        ? `<button class="voice-end" id="vtoggle">End conversation</button>`
+        : `<button class="voice-start" id="vtoggle"${connecting?' disabled':''}>${connecting?'Connecting…':'🎙️ Start talking'}</button>`}
+    </div>
+  </div>` + bottomNav('tutor');
+  const back=document.getElementById('vback'); if(back) back.onclick=()=>{ voiceStop(); go('tutor'); };
+  const tg=document.getElementById('vtoggle'); if(tg) tg.onclick=()=> live ? voiceStop(true) : voiceStart();
+  const vt=document.getElementById('vturns'); if(vt) vt.scrollTop=vt.scrollHeight;
+  wireNav();
+}
+function voiceRefresh(){ if(SCREEN==='voice') renderVoice(); }
+
+async function voiceStart(){
+  if(!AUTH_ON){ VOICE.state='error'; VOICE.msg='Offline — can’t reach the server. Connect via Profile → “Sign in to sync”.'; voiceRefresh(); return; }
+  if(!(navigator.mediaDevices && window.RTCPeerConnection)){ VOICE.state='error'; VOICE.msg='This browser can’t do live voice. Try Chrome or Safari.'; voiceRefresh(); return; }
+  VOICE.state='connecting'; VOICE.turns=[]; VOICE.archived=false; VOICE.msg=''; voiceRefresh();
+  try{
+    const r = await fetch('api/realtime_session.php',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});
+    const s = await r.json();
+    if(!s || s.error){
+      VOICE.state='error';
+      VOICE.msg = s && s.error==='ai_not_configured'
+        ? 'Luma’s voice isn’t switched on yet — add your OpenAI key in Settings.'
+        : (s && s.error==='not_authenticated' ? 'Please log in again.' : 'Couldn’t start the voice session. Please try again.');
+      voiceRefresh(); return;
+    }
+    const pc = new RTCPeerConnection();
+    VOICE.pc = pc;
+    // Luma's voice comes back on this audio element.
+    const audio = new Audio(); audio.autoplay = true; VOICE.audio = audio;
+    pc.ontrack = e => { audio.srcObject = e.streams[0]; };
+    pc.onconnectionstatechange = () => {
+      if(['failed','disconnected','closed'].includes(pc.connectionState) && VOICE.state==='live'){ voiceStop(); }
+    };
+    // Send mic. Echo cancellation is essential: without it the phone's speaker
+    // playing Luma's voice leaks back into the mic, the model "hears itself",
+    // and it ends up asking AND answering its own questions.
+    const mic = await navigator.mediaDevices.getUserMedia({ audio:{ echoCancellation:true, noiseSuppression:true, autoGainControl:true } });
+    VOICE.mic = mic;
+    mic.getTracks().forEach(t=>pc.addTrack(t, mic));
+    // Events channel (transcripts, turn state).
+    const dc = pc.createDataChannel('oai-events'); VOICE.dc = dc;
+    dc.onopen = () => {
+      // Make sure the learner's speech is transcribed into the chat. Send the
+      // shape matching whichever API version minted this session (belt-and-
+      // suspenders — the server already requests transcription too).
+      try{
+        const stt = 'gpt-4o-mini-transcribe';
+        const upd = (s.mode==='ga')
+          ? { type:'session.update', session:{ audio:{ input:{ transcription:{ model:stt } } } } }
+          : { type:'session.update', session:{ input_audio_transcription:{ model:stt } } };
+        dc.send(JSON.stringify(upd));
+      }catch(e){}
+    };
+    dc.onmessage = ev => { try{ voiceEvent(JSON.parse(ev.data)); }catch(e){} };
+    // Offer → OpenAI → answer.
+    const offer = await pc.createOffer();
+    await pc.setLocalDescription(offer);
+    const sdpRes = await fetch(s.sdp_url, {
+      method:'POST', body: offer.sdp,
+      headers:{ 'Authorization':'Bearer '+s.token, 'Content-Type':'application/sdp' }
+    });
+    if(!sdpRes.ok){ throw new Error('sdp '+sdpRes.status); }
+    await pc.setRemoteDescription({ type:'answer', sdp: await sdpRes.text() });
+    VOICE.state='live'; voiceRefresh();
+  }catch(e){
+    VOICE.state='error'; VOICE.msg='Couldn’t connect the voice call. Check your connection and try again.';
+    voiceCleanup(); voiceRefresh();
+  }
+}
+function voiceEvent(m){
+  const t=m.type||'';
+  if(t==='input_audio_buffer.speech_started'){ VOICE.speaking=false; voiceStatusOnly(); return; }
+  if(t==='output_audio_buffer.started' || t==='response.output_audio.started'){ VOICE.speaking=true; voiceStatusOnly(); return; }
+  if(t==='output_audio_buffer.stopped' || t==='response.done'){ VOICE.speaking=false; voiceStatusOnly(); return; }
+  // Learner's words — stream them in as they're transcribed, then finalise.
+  if(t==='conversation.item.input_audio_transcription.delta'){
+    const d=m.delta||''; if(!d) return;
+    const last=VOICE.turns[VOICE.turns.length-1];
+    if(last && last.role==='user' && last.streaming){ last.text+=d; }
+    else { VOICE.turns.push({role:'user',text:d,streaming:true}); }
+    voiceRefresh(); return;
+  }
+  if(t==='conversation.item.input_audio_transcription.completed'){
+    const txt=(m.transcript||'').trim();
+    const last=VOICE.turns[VOICE.turns.length-1];
+    if(last && last.role==='user' && last.streaming){ last.streaming=false; if(txt) last.text=txt; }
+    else if(txt){ VOICE.turns.push({role:'user',text:txt}); }
+    voiceRefresh(); return;
+  }
+  // Luma's words (streamed).
+  if(t==='response.audio_transcript.delta' || t==='response.output_audio_transcript.delta'){
+    const d=m.delta||''; if(!d) return;
+    const last=VOICE.turns[VOICE.turns.length-1];
+    if(last && last.role==='assistant' && last.streaming){ last.text+=d; }
+    else { VOICE.turns.push({role:'assistant',text:d,streaming:true}); }
+    voiceRefresh(); return;
+  }
+  if(t==='response.audio_transcript.done' || t==='response.output_audio_transcript.done'){
+    const last=VOICE.turns[VOICE.turns.length-1]; if(last&&last.streaming){ last.streaming=false; if(m.transcript) last.text=m.transcript.trim(); } voiceRefresh(); return;
+  }
+}
+function voiceStatusOnly(){ const el=document.getElementById('vstatus'); if(el) el.textContent=voiceStatus(); const orb=document.querySelector('.voice-orb'); if(orb) orb.classList.toggle('speaking', !!VOICE.speaking); }
+function voiceCleanup(){
+  try{ if(VOICE.dc) VOICE.dc.close(); }catch(e){}
+  try{ if(VOICE.mic) VOICE.mic.getTracks().forEach(t=>t.stop()); }catch(e){}
+  try{ if(VOICE.pc) VOICE.pc.close(); }catch(e){}
+  if(VOICE.audio){ try{ VOICE.audio.srcObject=null; }catch(e){} }
+  VOICE.pc=VOICE.dc=VOICE.mic=VOICE.audio=null; VOICE.speaking=false;
+}
+// File the spoken conversation away for later review (once per conversation —
+// the transcript stays on screen so it isn't saved twice).
+function voiceArchive(){
+  try{
+    if(VOICE.turns && VOICE.turns.length && !VOICE.archived){ archiveSession('voice', VOICE.turns.map(t=>({role:t.role, content:t.text}))); VOICE.archived=true; }
+  }catch(e){}
+}
+function voiceStop(rerender){ voiceArchive(); voiceCleanup(); if(VOICE.state!=='error') VOICE.state='idle'; if(rerender) voiceRefresh(); }
+
+/* ---- AUTH SCREEN (branded login / register) ---- */
+function authErr(code){ return {invalid_username:'Username must be 2–40 characters (letters, numbers, . _ - @).',weak_password:'Password must be at least 6 characters.',username_taken:'That username is taken — try another or log in.',invalid_credentials:'Wrong username or password.',db_unavailable:'The server database isn\'t set up yet.',reused_default:'Please choose a password different from the default one.',method_not_allowed:'Something went wrong. Try again.'}[code]||'Something went wrong. Try again.'; }
+function renderChangePw(){
+  app.innerHTML=`<div class="screen authscreen">
+    <div class="auth-brand">
+      <img class="auth-hero" src="luma-welcome.png" width="384" height="480" alt="Luma the owl" />
+      <h1 class="auth-logo">Set your password</h1>
+      <p class="auth-tag">You're on a temporary password — choose your own to continue.</p>
+    </div>
+    <div class="auth-card">
+      <input class="field" id="cpNew" type="password" placeholder="New password" autocomplete="new-password">
+      <input class="field" id="cpNew2" type="password" placeholder="Confirm new password" autocomplete="new-password">
+      <p class="auth-err" id="cpErr"></p>
+      <button class="cta" id="cpGo">Save password</button>
+    </div>
+    <p class="auth-foot">This keeps your account secure. You can't skip this step.</p>
+  </div>`;
+  document.getElementById('cpGo').onclick=submitChangePw;
+  document.querySelectorAll('.authscreen .field').forEach(f=>f.onkeydown=e=>{ if(e.key==='Enter') submitChangePw(); });
+}
+async function submitChangePw(){
+  const p1=document.getElementById('cpNew').value||'', p2=document.getElementById('cpNew2').value||'';
+  const err=document.getElementById('cpErr'); err.textContent='';
+  if(p1.length<6){ err.textContent='Password must be at least 6 characters.'; return; }
+  if(p1!==p2){ err.textContent='The passwords don\'t match.'; return; }
+  const btn=document.getElementById('cpGo'); const lbl=btn.textContent; btn.disabled=true; btn.textContent='…';
+  try{
+    const r=await fetch('api/change_password.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:p1})});
+    const j=await r.json();
+    if(j.authenticated && !j.must_change){ USER=j.user; enterApp(); return; }
+    err.textContent=authErr(j.error);
+  }catch(e){ err.textContent='Could not reach the server. Please try again.'; }
+  btn.disabled=false; btn.textContent=lbl;
+}
+const ICO={
+  mail:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3 6.5 9 6 9-6"/></svg>`,
+  lock:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10" rx="2.5"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg>`,
+  person:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>`,
+  personPlus:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M18 8v6M15 11h6"/></svg>`,
+  eyeOpen:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="2.6"/></svg>`,
+  eyeOff:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 6.2A9.6 9.6 0 0 1 12 5.5c6.4 0 10 6.5 10 6.5a15.8 15.8 0 0 1-3.4 4.1"/><path d="M6.5 7.9A15.8 15.8 0 0 0 2 12s3.6 6.5 10 6.5a9.7 9.7 0 0 0 3.7-.7"/><path d="M9.6 9.6a3 3 0 0 0 4.2 4.2"/></svg>`,
+  shield:`<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3Z"/><path d="m8.8 12 2.2 2.2 4.2-4.3"/></svg>`
+};
+function renderAuth(){
+  const isReg=AUTH_MODE==='register';
+  app.innerHTML=`<div class="screen authscreen">
+    <div class="auth-brand">
+      <img class="auth-hero" src="luma-welcome.png" width="384" height="480" alt="Luma the owl" />
+      <h1 class="auth-logo">${isReg?'Create account':'Welcome back'}</h1>
+      <p class="auth-tag">${isReg?'Start your Spanish journey with Luma.':'Log in to continue your language journey.'}</p>
+    </div>
+    <div class="auth-card">
+      <div class="ig"><span class="ico">${ICO.person}</span><input class="field" id="auUser" type="text" placeholder="Username" autocomplete="username" autocapitalize="off" spellcheck="false"></div>
+      <div class="ig"><span class="ico">${ICO.lock}</span><input class="field haspw" id="auPass" type="password" placeholder="Password" autocomplete="${isReg?'new-password':'current-password'}"><button type="button" class="eye" id="auEye" aria-label="Show password"><span class="e-on">${ICO.eyeOpen}</span><span class="e-off">${ICO.eyeOff}</span></button></div>
+      ${isReg?'':`<button type="button" class="auth-forgot" id="auForgot">Forgot password?</button>`}
+      <p class="auth-err" id="auErr"></p>
+      <button class="cta" id="auGo">${isReg?'Create account':'Log in'}</button>
+    </div>
+    <div class="auth-or">OR</div>
+    <button class="auth-alt" data-mode="${isReg?'login':'register'}">
+      <span class="ai">${isReg?ICO.person:ICO.personPlus}</span>${isReg?'Log in':'Create account'}
+    </button>
+    <p class="auth-foot"><span class="shield">${ICO.shield}</span>Safe. Secure. Your progress is always saved.</p>
+  </div>`;
+  document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{ AUTH_MODE=b.dataset.mode; renderAuth(); });
+  document.getElementById('auGo').onclick=submitAuth;
+  const pw=document.getElementById('auPass'), eye=document.getElementById('auEye');
+  eye.onclick=()=>{ const show=pw.type==='password'; pw.type=show?'text':'password'; eye.classList.toggle('on',show); eye.setAttribute('aria-label',show?'Hide password':'Show password'); };
+  const forgot=document.getElementById('auForgot');
+  if(forgot) forgot.onclick=()=>{ const e=document.getElementById('auErr'); e.style.color='var(--muted)'; e.textContent='Password reset is coming soon — reach us at hi@fluenta.app.'; };
+  document.querySelectorAll('.authscreen .field').forEach(f=>f.onkeydown=e=>{ if(e.key==='Enter') submitAuth(); });
+}
+async function submitAuth(){
+  const isReg=AUTH_MODE==='register';
+  const username=(document.getElementById('auUser').value||'').trim();
+  const password=document.getElementById('auPass').value||'';
+  const errEl=document.getElementById('auErr'); errEl.textContent=''; errEl.style.color='';
+  if(!username||!password){ errEl.textContent='Please enter your username and password.'; return; }
+  const btn=document.getElementById('auGo'); const lbl=btn.textContent; btn.disabled=true; btn.textContent='…';
+  try{
+    const r=await fetch('api/'+(isReg?'register':'login')+'.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username,password})});
+    const j=await r.json();
+    if(j.authenticated){ USER=j.user; AUTH_ON=true; if(j.must_change){ go('changepw'); return; } enterApp(); return; }
+    errEl.textContent=authErr(j.error);
+  }catch(e){ errEl.textContent='Could not reach the server. Please try again.'; }
+  btn.disabled=false; btn.textContent=lbl;
+}
+
+/* ---- auth gate + boot ---- */
+async function checkAuth(){
+  try{
+    const r=await fetch('api/me.php',{cache:'no-store'});
+    const ct=r.headers.get('content-type')||'';
+    if(!ct.includes('application/json')) return 'disabled';   // no PHP backend (got HTML/404/raw source) → don't gate
+    const j=await r.json();
+    // Only gate on a clean auth answer. Any error (e.g. DB not configured
+    // yet) → treat as disabled so the app is never locked behind a broken
+    // backend; the gate activates automatically once config.php is set.
+    if(!j || typeof j.authenticated!=='boolean') return 'disabled';
+    AUTH_ON=true;
+    if(j.authenticated){ USER=j.user; return j.must_change ? 'change' : 'ok'; }
+    return 'login';
+  }catch(e){ return 'disabled'; }   // backend unreachable → don't lock the learner out
+}
+async function enterApp(){ go('loading'); await syncPull(); PATH=await loadPath(); if(!PATH){ PATH=FALLBACK.path; } go('home'); }
+(async ()=>{ go('loading'); loadAudio();
+  const st=await checkAuth();
+  if(st==='login'){ go('auth'); return; }
+  if(st==='change'){ go('changepw'); return; }
+  enterApp();
+})();
+
+/* ================= PWA: offline + install ================= */
+if('serviceWorker' in navigator){
+  window.addEventListener('load', ()=>{
+    if(!('serviceWorker'in navigator)) return;
+    // Reload once when a new service worker takes control, so a fresh deploy's
+    // fetch/push logic applies immediately (fixes "stuck on old SW" on PWAs).
+    let refreshing=false;
+    navigator.serviceWorker.addEventListener('controllerchange', ()=>{ if(refreshing)return; refreshing=true; location.reload(); });
+    navigator.serviceWorker.register('sw.js').then(reg=>{ try{ reg.update(); }catch(e){} }).catch(()=>{});
+  });
+}
+let DEFERRED_INSTALL=null;
+const INSTALL_DISMISSED='fluenta_install_dismissed';
+function showInstallChip(){
+  if(document.getElementById('installChip')) return;
+  if(localStorage.getItem(INSTALL_DISMISSED)==='1') return;
+  const chip=el('div'); chip.id='installChip';
+  chip.appendChild(el('span','ic-owl','🦉'));
+  chip.appendChild(el('span','ic-txt','Install Fluenta on your home screen'));
+  const add=el('button','ic-add','Install'); add.id='icAdd';
+  const x=el('button','ic-x','×'); x.id='icX'; x.setAttribute('aria-label','Dismiss');
+  chip.appendChild(add); chip.appendChild(x);
+  document.body.appendChild(chip);
+  add.onclick=async()=>{ if(!DEFERRED_INSTALL) return; DEFERRED_INSTALL.prompt(); try{ await DEFERRED_INSTALL.userChoice; }catch(e){} DEFERRED_INSTALL=null; chip.remove(); };
+  x.onclick=()=>{ localStorage.setItem(INSTALL_DISMISSED,'1'); chip.remove(); };
+}
+window.addEventListener('beforeinstallprompt', (e)=>{ e.preventDefault(); DEFERRED_INSTALL=e; showInstallChip(); });
+window.addEventListener('appinstalled', ()=>{ const c=document.getElementById('installChip'); if(c)c.remove(); DEFERRED_INSTALL=null; });
+</script>
+</body>
+</html>

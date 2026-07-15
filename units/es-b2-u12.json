@@ -1,0 +1,380 @@
+{
+  "unit": {
+    "id": "es-b2-u12",
+    "title": "Ser/estar & adjective nuance",
+    "subtitle": "Tricky ser vs estar, plus adjectives that change meaning by position",
+    "level": "B2",
+    "order": 12,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "When word choice and word order change the meaning",
+    "intro": "At B2, small choices carry big meaning. First, a recap of <b>ser</b> vs <b>estar</b> in tricky cases. Then the elegant part: some adjectives <b>change meaning depending on whether they go before or after the noun</b> — <b>un gran hombre</b> (a great man) is not <b>un hombre grande</b> (a big man). Get this and you sound genuinely fluent.",
+    "sections": [
+      {
+        "tag": "ser / estar",
+        "heading": "ser vs estar in tricky cases",
+        "body": "<b>Ser</b> = identity, essence, defining traits. <b>Estar</b> = state, condition, result. The same adjective can flip meaning:",
+        "conj": [
+          [
+            "es aburrido",
+            "he is boring"
+          ],
+          [
+            "está aburrido",
+            "he is bored"
+          ],
+          [
+            "es listo",
+            "he is clever"
+          ],
+          [
+            "está listo",
+            "he is ready"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "La sopa <b>es</b> rica.",
+            "en": "The soup is delicious (by nature).",
+            "note": "ser = defining quality"
+          },
+          {
+            "es": "La sopa <b>está</b> rica hoy.",
+            "en": "The soup tastes great today.",
+            "note": "estar = state / how it seems now"
+          }
+        ]
+      },
+      {
+        "tag": "posición",
+        "heading": "Adjectives that change meaning by position",
+        "body": "Before the noun many adjectives turn <b>figurative or emotional</b>; after the noun they stay <b>literal</b>:",
+        "conj": [
+          [
+            "un gran hombre",
+            "a great man"
+          ],
+          [
+            "un hombre grande",
+            "a big man"
+          ],
+          [
+            "un viejo amigo",
+            "a long-standing friend"
+          ],
+          [
+            "un amigo viejo",
+            "an elderly friend"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Es <b>un pobre hombre</b>: nadie lo escucha.",
+            "en": "He's an unfortunate man: no one listens to him.",
+            "note": "before → unfortunate"
+          },
+          {
+            "es": "Es <b>un hombre pobre</b>: no tiene dinero.",
+            "en": "He's a poor man: he has no money.",
+            "note": "after → not rich"
+          }
+        ]
+      },
+      {
+        "tag": "más matices",
+        "heading": "cierto · mismo · único · nuevo",
+        "body": "These four also shift with position:",
+        "conj": [
+          [
+            "cierto rumor / rumor cierto",
+            "a certain rumour / a true rumour"
+          ],
+          [
+            "el mismo día / el día mismo",
+            "the same day / the very day"
+          ],
+          [
+            "un único hijo / un hijo único",
+            "only one son / an only child"
+          ],
+          [
+            "un nuevo coche / un coche nuevo",
+            "another car / a brand-new car"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Tengo <b>un nuevo</b> coche, pero es de segunda mano.",
+            "en": "I have another car, but it's second-hand.",
+            "note": "before → another / different"
+          },
+          {
+            "es": "Tengo un coche <b>nuevo</b>, recién comprado.",
+            "en": "I have a brand-new car, just bought.",
+            "note": "after → brand-new"
+          }
+        ]
+      },
+      {
+        "tag": "apócope",
+        "heading": "Apocope: buen, mal, gran",
+        "body": "Before a singular noun, <b>bueno/malo</b> drop the <b>-o</b> and <b>grande</b> becomes <b>gran</b>:",
+        "ex": [
+          {
+            "es": "Es <b>un buen médico</b>.",
+            "en": "He's a good doctor.",
+            "note": "bueno → buen before masc. sing."
+          },
+          {
+            "es": "Fue <b>un gran día</b> y una <b>gran</b> fiesta.",
+            "en": "It was a great day and a great party.",
+            "note": "grande → gran before any sing. noun"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "ser = essence/identity; estar = state/condition. Same adjective can flip: es listo (clever) vs está listo (ready).",
+      "un gran hombre (great) vs un hombre grande (big); un viejo amigo (long-standing) vs un amigo viejo (elderly).",
+      "un pobre hombre (unfortunate) vs un hombre pobre (not rich); cierto/mismo/único/nuevo also shift by position.",
+      "Apocope before a singular noun: bueno→buen, malo→mal, grande→gran."
+    ],
+    "mistakes": [
+      {
+        "w": "Es un grande hombre.",
+        "r": "Es un gran hombre.",
+        "why": "Before a singular noun grande apocopates to gran. (And 'gran hombre' = great, not big.)"
+      },
+      {
+        "w": "Es un bueno médico.",
+        "r": "Es un buen médico.",
+        "why": "Bueno drops the -o before a masculine singular noun: buen médico."
+      },
+      {
+        "w": "Quiero decir que es mi amigo viejo de la infancia.",
+        "r": "Quiero decir que es mi viejo amigo de la infancia.",
+        "why": "For 'long-standing friend' put viejo before the noun; 'amigo viejo' means elderly."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Nelson Mandela fue ___ (a great man).",
+      "prompt_en": "Nelson Mandela was a great man.",
+      "options": [
+        {
+          "id": "a",
+          "text": "un gran hombre"
+        },
+        {
+          "id": "b",
+          "text": "un hombre grande"
+        },
+        {
+          "id": "c",
+          "text": "un grande hombre"
+        },
+        {
+          "id": "d",
+          "text": "un hombre gran"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! “Great” → gran + antes del nombre.",
+      "no": "“Great” goes before the noun and apocopates: un gran hombre."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El café ya está frío, pero la tarta ___ muy rica.",
+      "prompt_en": "The coffee is cold now, but the cake tastes great.",
+      "options": [
+        {
+          "id": "a",
+          "text": "está"
+        },
+        {
+          "id": "b",
+          "text": "es"
+        },
+        {
+          "id": "c",
+          "text": "son"
+        },
+        {
+          "id": "d",
+          "text": "sea"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Sabor percibido ahora → estar rica.",
+      "no": "For how it tastes right now (a state), use estar: “está muy rica”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “He's a long-standing friend from my childhood.”",
+      "tokens": [
+        "Es",
+        "un",
+        "viejo",
+        "amigo",
+        "de",
+        "la",
+        "infancia",
+        "grande"
+      ],
+      "answer": [
+        "Es",
+        "un",
+        "viejo",
+        "amigo",
+        "de",
+        "la",
+        "infancia"
+      ],
+      "ok": "¡Perfecto! “long-standing” → viejo antes del nombre.",
+      "no": "For a long-standing friend, put viejo before: “un viejo amigo”."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Marta es una ___ médica; sus pacientes la adoran.",
+      "prompt_en": "Marta is a good doctor; her patients adore her.",
+      "accepted": [
+        "buena"
+      ],
+      "ignore_accents": true,
+      "hint": "Feminine, so no apocope here.",
+      "ok": "¡Bien! Ante nombre femenino → buena (sin apócope).",
+      "no": "Before a feminine noun there's no apocope: “una buena médica”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each phrase to its meaning.",
+      "pairs": [
+        [
+          "un pobre hombre",
+          "an unfortunate man"
+        ],
+        [
+          "un hombre pobre",
+          "a man without money"
+        ],
+        [
+          "un viejo amigo",
+          "a long-standing friend"
+        ],
+        [
+          "un amigo viejo",
+          "an elderly friend"
+        ]
+      ],
+      "ok": "¡Excelente! La posición cambia el sentido.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Fue un gran día para todos.",
+      "accepted": [
+        "fue un gran dia para todos",
+        "fue un gran día para todos"
+      ],
+      "ignore_accents": true,
+      "translation": "It was a great day for everyone.",
+      "ok": "¡Correcto! “Fue un gran día para todos.”",
+      "no": "It was: “Fue un gran día para todos.” (It was a great day for everyone.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Talking about a new colleague at lunch 🍽️",
+      "lines": [
+        {
+          "speaker": "Rosa",
+          "es": "¿Qué te parece el nuevo jefe?",
+          "en": "What do you think of the new boss?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Es un gran jefe: escucha a todo el equipo."
+        },
+        {
+          "id": "b",
+          "text": "Es un jefe grande: escucha a todo el equipo."
+        },
+        {
+          "id": "c",
+          "text": "Es un grande jefe: escucha a todo el equipo."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! “great boss” → un gran jefe.",
+      "no": "For “a great boss” use gran before the noun: “un gran jefe”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Es un viejo amigo, pero un buen médico",
+      "en": "He's a long-standing friend, but a good doctor",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Es un viejo amigo, pero un buen médico”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "un gran hombre",
+      "en": "a great man"
+    },
+    {
+      "es": "un viejo amigo",
+      "en": "a long-standing friend"
+    },
+    {
+      "es": "un pobre hombre",
+      "en": "an unfortunate man"
+    },
+    {
+      "es": "cierto",
+      "en": "a certain / true (by position)"
+    },
+    {
+      "es": "mismo",
+      "en": "same / very (by position)"
+    },
+    {
+      "es": "un buen médico",
+      "en": "a good doctor"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "un gran hombre",
+      "un viejo amigo",
+      "un pobre hombre",
+      "cierto",
+      "mismo"
+    ]
+  }
+}

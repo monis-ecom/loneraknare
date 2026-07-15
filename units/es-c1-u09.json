@@ -1,0 +1,294 @@
+{
+  "unit": {
+    "id": "es-c1-u09",
+    "title": "Formal & Literary Register",
+    "subtitle": "Elevating your Spanish for emails, essays, and formal speech",
+    "level": "C1",
+    "order": 9,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Know when — and how — to elevate your Spanish",
+    "intro": "At C1 you must <b>shift register on demand</b>. In a formal email, essay, or address you swap everyday verbs for elevated ones (<b>comenzar</b> for empezar, <b>adquirir</b> for comprar, <b>solicitar</b> for pedir), you deploy set courtesy formulas (<b>le ruego que</b>, <b>quedo a la espera de</b>), and you even use the <b>future or conditional</b> to hedge a conjecture politely. The skill is not just knowing these forms — it's sensing <b>when</b> the situation calls for them and dropping the colloquialisms.",
+    "sections": [
+      {
+        "tag": "léxico",
+        "heading": "Elevated verbs replace everyday ones",
+        "body": "Formal Spanish prefers a more precise, latinate verb. In an essay or professional email, choose the left-hand column. Using the colloquial version in a formal register reads as careless; using the formal one in a chat with friends reads as stiff — register is about <b>fit</b>.",
+        "conj": [
+          ["comenzar / iniciar", "empezar (to begin)"],
+          ["adquirir", "comprar (to buy / acquire)"],
+          ["solicitar", "pedir (to request)"],
+          ["mostrar / exponer", "enseñar (to show)"],
+          ["precisar", "necesitar (to need)"]
+        ],
+        "ex": [
+          {
+            "es": "La empresa <b>adquirió</b> una nueva sede.",
+            "en": "The company acquired a new headquarters.",
+            "note": "adquirir > comprar in formal prose"
+          },
+          {
+            "es": "Le <b>solicito</b> que revise el expediente.",
+            "en": "I request that you review the file.",
+            "note": "solicitar > pedir"
+          }
+        ]
+      },
+      {
+        "tag": "fórmulas",
+        "heading": "Formulaic courtesy phrases",
+        "body": "Formal correspondence runs on fixed phrases. <b>Le ruego que</b> (+ subjunctive) softens a request; <b>quedo a la espera de</b> closes a letter awaiting a reply; <b>agradezco de antemano</b> thanks in advance; <b>en lo que respecta a</b> frames a topic; <b>cabe destacar/señalar que</b> foregrounds a key point in an essay. Note <b>le ruego que</b> takes the <b>subjunctive</b>: le ruego que <b>disculpe</b>.",
+        "conj": [
+          ["le ruego que…", "I kindly ask that you…"],
+          ["quedo a la espera de", "I look forward to / await"],
+          ["agradezco de antemano", "I thank you in advance"],
+          ["en lo que respecta a", "with regard to"],
+          ["cabe destacar que", "it is worth noting that"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Le ruego que</b> me <b>disculpe</b> por la demora.",
+            "en": "I kindly ask you to excuse the delay.",
+            "note": "le ruego que + subjunctive"
+          },
+          {
+            "es": "<b>Quedo a la espera de</b> su respuesta.",
+            "en": "I look forward to your reply.",
+            "note": "standard formal sign-off"
+          }
+        ]
+      },
+      {
+        "tag": "conjetura",
+        "heading": "Future & conditional of probability",
+        "body": "Spanish uses the <b>future</b> to conjecture about the <b>present</b> ('it must be / probably is') and the <b>conditional</b> to conjecture about the <b>past</b> ('it must have been / probably was'). In formal registers this is an elegant way to <b>hedge</b> without adding 'probablemente'. <b>Serán las cinco</b> = it's probably five; <b>Serían las cinco</b> = it was probably five.",
+        "conj": [
+          ["Serán las cinco", "It's probably five (now)"],
+          ["Tendrá razón", "He's probably right"],
+          ["Serían las cinco", "It was probably five (then)"],
+          ["Habría unos cien", "There were probably a hundred"]
+        ],
+        "ex": [
+          {
+            "es": "No contesta; <b>estará</b> reunido.",
+            "en": "He isn't answering; he must be in a meeting.",
+            "note": "future = present conjecture"
+          },
+          {
+            "es": "Al acto <b>asistirían</b> unas mil personas.",
+            "en": "Some thousand people probably attended the event.",
+            "note": "conditional = past conjecture"
+          }
+        ]
+      },
+      {
+        "tag": "registro",
+        "heading": "When to elevate — and what to drop",
+        "body": "Elevate for <b>formal emails, essays, applications, and public speech</b>; stay colloquial with friends. When elevating, <b>drop</b> fillers and slang: replace <i>o sea</i> with <b>es decir</b>, <i>un montón de</i> with <b>numerosos</b>, <i>vale</i> with <b>de acuerdo</b>, and address the reader as <b>usted</b>. The goal is a consistent tone, not a single fancy word dropped into casual text.",
+        "conj": [
+          ["numerosos / múltiples", "un montón de (lots of)"],
+          ["de acuerdo / conforme", "vale (okay)"],
+          ["no obstante", "pero (but)"]
+        ],
+        "ex": [
+          {
+            "es": "Se recibieron <b>numerosas</b> solicitudes este trimestre.",
+            "en": "Numerous applications were received this quarter.",
+            "note": "numerosas > 'un montón de'"
+          },
+          {
+            "es": "Estoy <b>de acuerdo</b> con lo expuesto.",
+            "en": "I agree with what has been set out.",
+            "note": "de acuerdo > 'vale' in formal speech"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Elevated verbs: comenzar, adquirir, solicitar, mostrar/exponer, precisar.",
+      "Formal formulas: le ruego que (+ subj.), quedo a la espera de, cabe destacar que.",
+      "Future = present conjecture (Serán las cinco); conditional = past conjecture (Serían las cinco).",
+      "Elevating means dropping slang: es decir not 'o sea', de acuerdo not 'vale', usted not tú."
+    ],
+    "mistakes": [
+      {
+        "w": "Le ruego que revisa el expediente.",
+        "r": "Le ruego que revise el expediente.",
+        "why": "'Le ruego que' triggers the subjunctive: revise, not the indicative revisa."
+      },
+      {
+        "w": "Estimado cliente: vale, un montón de gracias.",
+        "r": "Estimado cliente: de acuerdo, muchas gracias.",
+        "why": "In a formal email, drop colloquialisms like 'vale' and 'un montón de'; use 'de acuerdo' and 'muchas'."
+      },
+      {
+        "w": "Probablemente serán las cinco probablemente.",
+        "r": "Serán las cinco.",
+        "why": "The future of probability already means 'probably'; adding 'probablemente' is redundant."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Le ruego que me ___ por la demora en la respuesta.",
+      "prompt_en": "I kindly ask you to excuse me for the delay in replying.",
+      "options": [
+        { "id": "a", "text": "disculpe" },
+        { "id": "b", "text": "disculpa" },
+        { "id": "c", "text": "disculpará" },
+        { "id": "d", "text": "disculpar" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! 'Le ruego que' exige subjuntivo: disculpe.",
+      "no": "'Le ruego que' triggers the subjunctive: 'disculpe', not the indicative 'disculpa'."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "En el informe: la empresa ___ una nueva sede en Madrid.",
+      "prompt_en": "In the report: the company acquired new headquarters in Madrid.",
+      "options": [
+        { "id": "a", "text": "adquirió" },
+        { "id": "b", "text": "se pilló" },
+        { "id": "c", "text": "compró un montón de" },
+        { "id": "d", "text": "cogió" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! 'Adquirir' es el registro formal de 'comprar'.",
+      "no": "In formal prose, the elevated verb is 'adquirió'; the others are colloquial."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"I look forward to your reply. I thank you in advance.\"",
+      "tokens": [
+        "Quedo",
+        "a",
+        "la",
+        "espera",
+        "de",
+        "su",
+        "respuesta.",
+        "Agradezco",
+        "de",
+        "antemano.",
+        "vale"
+      ],
+      "answer": [
+        "Quedo",
+        "a",
+        "la",
+        "espera",
+        "de",
+        "su",
+        "respuesta.",
+        "Agradezco",
+        "de",
+        "antemano."
+      ],
+      "ok": "¡Perfecto! Fórmulas de cierre impecables.",
+      "no": "Use the formal sign-off 'Quedo a la espera de su respuesta. Agradezco de antemano.' — the colloquial 'vale' has no place here."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "No contesta el teléfono; ___ reunido en este momento. (estar, conjetura)",
+      "prompt_en": "He isn't answering the phone; he must be in a meeting right now.",
+      "accepted": [
+        "estará"
+      ],
+      "ignore_accents": true,
+      "hint": "Future of 'estar' used to conjecture about the present.",
+      "ok": "¡Bien! El futuro de conjetura: estará.",
+      "no": "To conjecture about the present, use the future of probability: 'estará' (he must be)."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each colloquial word to its formal equivalent.",
+      "pairs": [
+        ["empezar", "comenzar"],
+        ["pedir", "solicitar"],
+        ["necesitar", "precisar"],
+        ["un montón de", "numerosos"]
+      ],
+      "ok": "¡Excelente! Sabes subir de registro.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Cabe destacar que la propuesta resultó viable.",
+      "accepted": [
+        "cabe destacar que la propuesta resulto viable"
+      ],
+      "ignore_accents": true,
+      "translation": "It is worth noting that the proposal proved viable.",
+      "ok": "¡Correcto! “Cabe destacar que la propuesta resultó viable.”",
+      "no": "It was: “Cabe destacar que la propuesta resultó viable.” (It is worth noting that the proposal proved viable.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Replying to a client's formal complaint email ✉️",
+      "lines": [
+        {
+          "speaker": "Cliente",
+          "es": "Llevo dos semanas sin recibir el pedido. Necesito una solución.",
+          "en": "I've gone two weeks without receiving the order. I need a solution."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Le ruego que disculpe la demora; en breve le enviaremos una compensación." },
+        { "id": "b", "text": "Vale, tranqui, ya te lo mando cuando pueda, ¿okey?" },
+        { "id": "c", "text": "Le ruego que disculpa el retraso, un montón de gracias." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Registro formal y subjuntivo correctos.",
+      "no": "Keep it formal and grammatical: option b is slang; option c uses the indicative 'disculpa' after 'le ruego que'."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Quedo a la espera de su respuesta.",
+      "en": "I look forward to your reply.",
+      "ok": "¡Perfecto! Un cierre formal impecable.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Quedo a la espera de su respuesta.”"
+    }
+  ],
+  "vocab": [
+    { "es": "adquirir", "en": "to acquire / buy (formal)" },
+    { "es": "solicitar", "en": "to request (formal)" },
+    { "es": "le ruego que", "en": "I kindly ask that you (+ subjunctive)" },
+    { "es": "quedo a la espera de", "en": "I look forward to / await" },
+    { "es": "cabe destacar que", "en": "it is worth noting that" },
+    { "es": "en lo que respecta a", "en": "with regard to" },
+    { "es": "serán las cinco", "en": "it's probably five (conjecture)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "adquirir",
+      "solicitar",
+      "le ruego que",
+      "quedo a la espera de",
+      "cabe destacar que"
+    ]
+  }
+}

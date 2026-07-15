@@ -1,0 +1,315 @@
+{
+  "unit": {
+    "id": "es-a2-u09",
+    "title": "Direct object pronouns",
+    "subtitle": "lo, la, los, las — say it without repeating it",
+    "level": "A2",
+    "order": 9,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Stop repeating the noun: lo, la, los, las",
+    "intro": "Once you've named something, you don't repeat it — you replace it with a <b>direct object pronoun</b>: <b>lo, la, los, las</b> (it / them). They agree in <b>gender and number</b> with the noun they stand for, and they usually go <b>before</b> the conjugated verb.",
+    "sections": [
+      {
+        "tag": "formas",
+        "heading": "The four pronouns",
+        "body": "Pick the pronoun that matches the noun's gender and number:",
+        "conj": [
+          ["it (masc.)", "lo"],
+          ["it (fem.)", "la"],
+          ["them (masc.)", "los"],
+          ["them (fem.)", "las"]
+        ],
+        "ex": [
+          {
+            "es": "¿Ves <b>el libro</b>? Sí, <b>lo</b> veo.",
+            "en": "Do you see the book? Yes, I see it.",
+            "note": "libro is masc. → lo"
+          },
+          {
+            "es": "¿Tienes <b>las llaves</b>? Sí, <b>las</b> tengo.",
+            "en": "Do you have the keys? Yes, I have them.",
+            "note": "llaves is fem. plural → las"
+          }
+        ]
+      },
+      {
+        "tag": "posicion",
+        "heading": "Placement: before the verb",
+        "body": "With a single conjugated verb, the pronoun goes <b>right before</b> it — never after:",
+        "ex": [
+          {
+            "es": "— ¿Compras el pan? — Sí, <b>lo compro</b>.",
+            "en": "— Are you buying the bread? — Yes, I'm buying it.",
+            "note": "lo + compro"
+          },
+          {
+            "es": "No <b>la</b> conozco.",
+            "en": "I don't know her.",
+            "note": "pronoun after 'no', before verb"
+          }
+        ]
+      },
+      {
+        "tag": "infinitivo",
+        "heading": "With an infinitive: two options",
+        "body": "When there's an infinitive (like after <b>voy a</b> or <b>quiero</b>), you can <b>attach</b> the pronoun to it — or move it before the first verb. Both are correct:",
+        "conj": [
+          ["I'm going to see it", "Voy a verlo"],
+          ["I'm going to see it (alt.)", "Lo voy a ver"]
+        ],
+        "ex": [
+          {
+            "es": "Quiero <b>comprarlo</b>. / <b>Lo</b> quiero comprar.",
+            "en": "I want to buy it.",
+            "note": "attach OR move before"
+          },
+          {
+            "es": "Voy a <b>verla</b> mañana.",
+            "en": "I'm going to see her tomorrow.",
+            "note": "ver + la = verla"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "lo/la/los/las replace the direct object (the thing acted on).",
+      "They agree in gender and number with the noun replaced.",
+      "Before a conjugated verb: Lo veo. No la conozco.",
+      "With an infinitive: attach (verlo) or move before (Lo voy a ver).",
+      "¿Ves el libro? — Sí, lo veo."
+    ],
+    "mistakes": [
+      {
+        "w": "¿El libro? Sí, la veo.",
+        "r": "¿El libro? Sí, lo veo.",
+        "why": "libro is masculine, so the pronoun is lo, not la."
+      },
+      {
+        "w": "Veo lo.",
+        "r": "Lo veo.",
+        "why": "With a conjugated verb the pronoun goes before it: Lo veo."
+      },
+      {
+        "w": "Voy a lo ver.",
+        "r": "Voy a verlo. / Lo voy a ver.",
+        "why": "Attach to the infinitive (verlo) or move before 'voy'."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¿Ves el libro? Sí, ___ veo.",
+      "prompt_en": "Do you see the book? Yes, I see it.",
+      "options": [
+        {
+          "id": "a",
+          "text": "lo"
+        },
+        {
+          "id": "b",
+          "text": "la"
+        },
+        {
+          "id": "c",
+          "text": "los"
+        },
+        {
+          "id": "d",
+          "text": "las"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! libro es masculino → lo.",
+      "no": "'libro' is masculine singular → “lo veo”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¿Tienes las llaves? Sí, ___ tengo.",
+      "prompt_en": "Do you have the keys? Yes, I have them.",
+      "options": [
+        {
+          "id": "a",
+          "text": "lo"
+        },
+        {
+          "id": "b",
+          "text": "la"
+        },
+        {
+          "id": "c",
+          "text": "los"
+        },
+        {
+          "id": "d",
+          "text": "las"
+        }
+      ],
+      "answer": "d",
+      "ok": "¡Exacto! llaves es femenino plural → las.",
+      "no": "'llaves' is feminine plural → “las tengo”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I'm going to see it tomorrow.” (el partido)",
+      "tokens": [
+        "Voy",
+        "a",
+        "verlo",
+        "mañana",
+        "lo",
+        "ver",
+        "la"
+      ],
+      "answer": [
+        "Voy",
+        "a",
+        "verlo",
+        "mañana"
+      ],
+      "ok": "¡Perfecto! ver + lo = verlo.",
+      "no": "Attach the pronoun to the infinitive: “Voy a verlo mañana.”"
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "¿Compras el pan? Sí, ___ compro.",
+      "prompt_en": "Are you buying the bread? Yes, I'm buying it.",
+      "accepted": [
+        "lo"
+      ],
+      "ignore_accents": true,
+      "hint": "'pan' is masculine singular.",
+      "ok": "¡Bien! pan → lo compro.",
+      "no": "'pan' is masculine → “lo compro”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each noun to the pronoun that replaces it.",
+      "pairs": [
+        [
+          "el coche",
+          "lo"
+        ],
+        [
+          "la casa",
+          "la"
+        ],
+        [
+          "los zapatos",
+          "los"
+        ],
+        [
+          "las flores",
+          "las"
+        ]
+      ],
+      "ok": "¡Excelente! Gender and number matched.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "No la conozco.",
+      "accepted": [
+        "no la conozco"
+      ],
+      "ignore_accents": true,
+      "translation": "I don't know her.",
+      "ok": "¡Correcto! “No la conozco.”",
+      "no": "It was: “No la conozco.” (I don't know her.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend asks about the new movie 🎬",
+      "lines": [
+        {
+          "speaker": "Sofía",
+          "es": "¿Vas a ver la película nueva?",
+          "en": "Are you going to watch the new movie?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, voy a verla el sábado."
+        },
+        {
+          "id": "b",
+          "text": "Sí, voy a verlo el sábado."
+        },
+        {
+          "id": "c",
+          "text": "Sí, voy a la ver el sábado."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! película es femenino → verla.",
+      "no": "'película' is feminine → “verla”: “Sí, voy a verla el sábado.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Lo veo",
+      "en": "I see it",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "lo",
+      "en": "it / him (masc.)"
+    },
+    {
+      "es": "la",
+      "en": "it / her (fem.)"
+    },
+    {
+      "es": "los",
+      "en": "them (masc.)"
+    },
+    {
+      "es": "las",
+      "en": "them (fem.)"
+    },
+    {
+      "es": "verlo",
+      "en": "to see it"
+    },
+    {
+      "es": "conocer",
+      "en": "to know (a person)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "lo",
+      "la",
+      "los",
+      "las",
+      "verlo"
+    ]
+  }
+}

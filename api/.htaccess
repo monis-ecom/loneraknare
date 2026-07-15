@@ -1,0 +1,8 @@
+# Protect sensitive files from being downloaded over the web.
+# (PHP still reads them from disk — this only blocks direct HTTP access.)
+<FilesMatch "\.(sqlite|sqlite3|db|local\.php)$">
+  Require all denied
+</FilesMatch>
+<Files "config.php">
+  Require all denied
+</Files>

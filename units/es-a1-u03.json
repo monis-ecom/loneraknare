@@ -1,0 +1,309 @@
+{
+  "unit": {
+    "id": "es-a1-u03",
+    "title": "Ser vs. Estar",
+    "subtitle": "Two verbs for “to be” — and when to use each",
+    "level": "A1",
+    "order": 3,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Why does Spanish have TWO words for “to be”?",
+    "intro": "English uses one verb for everything. Spanish splits it in two. The rule of thumb: <b>SER</b> = what something <b>is</b> (permanent). <b>ESTAR</b> = how or where something is <b>right now</b> (temporary + location).",
+    "sections": [
+      {
+        "tag": "ser",
+        "heading": "SER — permanent / identity",
+        "body": "Identity, origin, profession, nationality — things that don’t change.",
+        "conj": [
+          [
+            "yo",
+            "soy"
+          ],
+          [
+            "tú",
+            "eres"
+          ],
+          [
+            "él/ella",
+            "es"
+          ],
+          [
+            "nosotros",
+            "somos"
+          ],
+          [
+            "vosotros",
+            "sois"
+          ],
+          [
+            "ellos",
+            "son"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Yo <b>soy</b> de Suecia.",
+            "en": "I am from Sweden.",
+            "note": "origin"
+          },
+          {
+            "es": "Ella <b>es</b> profesora.",
+            "en": "She is a teacher.",
+            "note": "profession"
+          }
+        ]
+      },
+      {
+        "tag": "estar",
+        "heading": "ESTAR — temporary / location",
+        "body": "Feelings, temporary conditions, and where something is. Memory hook: <b>LoCo</b> = Location + Condition → estar.",
+        "conj": [
+          [
+            "yo",
+            "estoy"
+          ],
+          [
+            "tú",
+            "estás"
+          ],
+          [
+            "él/ella",
+            "está"
+          ],
+          [
+            "nosotros",
+            "estamos"
+          ],
+          [
+            "vosotros",
+            "estáis"
+          ],
+          [
+            "ellos",
+            "están"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Estoy</b> cansado.",
+            "en": "I am tired.",
+            "note": "feeling"
+          },
+          {
+            "es": "<b>Estamos</b> en casa.",
+            "en": "We are at home.",
+            "note": "location"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "SER = permanent identity (who/what something is).",
+      "ESTAR = temporary state + location (how/where it is now).",
+      "Location ALWAYS uses estar — even “Madrid está en España.”"
+    ],
+    "mistakes": [
+      {
+        "w": "Yo soy en casa.",
+        "r": "Yo estoy en casa.",
+        "why": "Location always uses estar, never ser."
+      },
+      {
+        "w": "Ella está profesora.",
+        "r": "Ella es profesora.",
+        "why": "Profession is identity → ser."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El libro ___ sobre la mesa.",
+      "prompt_en": "The book ___ on the table.",
+      "options": [
+        {
+          "id": "a",
+          "text": "es"
+        },
+        {
+          "id": "b",
+          "text": "está"
+        },
+        {
+          "id": "c",
+          "text": "son"
+        },
+        {
+          "id": "d",
+          "text": "soy"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! Location always uses estar.",
+      "no": "Location → estar: “El libro está sobre la mesa.”"
+    },
+    {
+      "id": "ex2",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “We are from Spain.”",
+      "tokens": [
+        "España",
+        "somos",
+        "Nosotros",
+        "de",
+        "estamos",
+        "es"
+      ],
+      "answer": [
+        "Nosotros",
+        "somos",
+        "de",
+        "España"
+      ],
+      "ok": "¡Perfecto! Origin uses ser → somos.",
+      "no": "Origin is identity → ser: “Nosotros somos de España.”"
+    },
+    {
+      "id": "ex3",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Ella ___ profesora.",
+      "prompt_en": "She ___ a teacher.",
+      "accepted": [
+        "es"
+      ],
+      "ignore_accents": true,
+      "hint": "Profession = identity.",
+      "ok": "¡Bien! Profession → ser.",
+      "no": "Profession is identity → ser → “es”."
+    },
+    {
+      "id": "ex4",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each subject to the correct form of ESTAR.",
+      "pairs": [
+        [
+          "yo",
+          "estoy"
+        ],
+        [
+          "tú",
+          "estás"
+        ],
+        [
+          "ella",
+          "está"
+        ],
+        [
+          "nosotros",
+          "estamos"
+        ]
+      ],
+      "ok": "¡Excelente! You’ve got the estar conjugation.",
+      "no": ""
+    },
+    {
+      "id": "ex5",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Estoy muy feliz hoy.",
+      "accepted": [
+        "estoy muy feliz hoy"
+      ],
+      "ignore_accents": true,
+      "translation": "I am very happy today.",
+      "ok": "¡Correcto! “Estoy muy feliz hoy.”",
+      "no": "It was: “Estoy muy feliz hoy.” (I am very happy today.)"
+    },
+    {
+      "id": "dlg1",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "You introduce your friend Ana.",
+      "lines": [
+        {
+          "speaker": "Luis",
+          "es": "¿Quién es ella?",
+          "en": "Who is she?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        },
+        {
+          "speaker": "Luis",
+          "es": "¡Mucho gusto!",
+          "en": "Nice to meet you!"
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Ella es Ana. Es de México."
+        },
+        {
+          "id": "b",
+          "text": "Ella está Ana. Está de México."
+        },
+        {
+          "id": "c",
+          "text": "Ella es Ana. Está de México."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Bien! Identidad y origen → ser.",
+      "no": "Identity and origin use ser: «Es Ana. Es de México.»"
+    },
+    {
+      "id": "ex6",
+      "type": "speak",
+      "xp": 3,
+      "say": "Estoy cansado",
+      "en": "I am tired",
+      "ok": "¡Muy bien! Nice pronunciation.",
+      "no": "Almost — say it slowly: es-TOY can-SA-do."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "ser",
+      "en": "to be (permanent)"
+    },
+    {
+      "es": "estar",
+      "en": "to be (temporary / location)"
+    },
+    {
+      "es": "soy",
+      "en": "I am (ser)"
+    },
+    {
+      "es": "estoy",
+      "en": "I am (estar)"
+    },
+    {
+      "es": "cansado",
+      "en": "tired"
+    },
+    {
+      "es": "profesora",
+      "en": "teacher (fem.)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "ser",
+      "estar",
+      "cansado",
+      "caliente",
+      "profesora"
+    ]
+  }
+}

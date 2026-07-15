@@ -1,0 +1,317 @@
+{
+  "unit": {
+    "id": "es-a1-u06",
+    "title": "Gustar",
+    "subtitle": "Saying what you like — me gusta, te gusta",
+    "level": "A1",
+    "order": 6,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The verb that works backwards",
+    "intro": "“Me gusta el café” isn't literally “I like the coffee.” It means <b>“coffee is pleasing to me.”</b> Spanish flips it: the thing you like is the subject, and <b>you</b> are along for the ride (me, te, le…). Two forms cover almost everything.",
+    "sections": [
+      {
+        "tag": "mecanismo",
+        "heading": "Start with who likes it",
+        "body": "Put an indirect pronoun first — it means “to me / to you / to him…” — then the gustar form, then the thing:",
+        "conj": [
+          [
+            "to me",
+            "me"
+          ],
+          [
+            "to you",
+            "te"
+          ],
+          [
+            "to him/her",
+            "le"
+          ],
+          [
+            "to us",
+            "nos"
+          ],
+          [
+            "to you all",
+            "os"
+          ],
+          [
+            "to them",
+            "les"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Me</b> gusta el café.",
+            "en": "I like coffee. (lit. coffee is pleasing to me)",
+            "note": "me = to me"
+          }
+        ]
+      },
+      {
+        "tag": "gusta",
+        "heading": "gusta vs. gustan",
+        "body": "Use <b>gusta</b> for one thing or an action. Use <b>gustan</b> for several things:",
+        "conj": [
+          [
+            "one thing",
+            "gusta"
+          ],
+          [
+            "an action",
+            "gusta"
+          ],
+          [
+            "several things",
+            "gustan"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Me <b>gusta</b> la música.",
+            "en": "I like music.",
+            "note": "one thing → gusta"
+          },
+          {
+            "es": "Me <b>gustan</b> los gatos.",
+            "en": "I like cats.",
+            "note": "plural → gustan"
+          },
+          {
+            "es": "Me <b>gusta</b> bailar.",
+            "en": "I like to dance.",
+            "note": "action → gusta"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "gustar = “to be pleasing” — the thing you like is the subject.",
+      "me · te · le · nos · os · les say WHO likes it.",
+      "gusta = one thing or an action · gustan = several things."
+    ],
+    "mistakes": [
+      {
+        "w": "Yo gusto el café.",
+        "r": "Me gusta el café.",
+        "why": "Don't conjugate gustar like a normal verb — use me + gusta."
+      },
+      {
+        "w": "Me gustan la música.",
+        "r": "Me gusta la música.",
+        "why": "One thing (la música) → gusta, not gustan."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Me ___ los gatos.",
+      "prompt_en": "I like cats.",
+      "options": [
+        {
+          "id": "a",
+          "text": "gustan"
+        },
+        {
+          "id": "b",
+          "text": "gusta"
+        },
+        {
+          "id": "c",
+          "text": "gusto"
+        },
+        {
+          "id": "d",
+          "text": "gustas"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Plural (los gatos) → gustan.",
+      "no": "Several things → “gustan”."
+    },
+    {
+      "id": "ex2",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"I like coffee.\"",
+      "tokens": [
+        "Me",
+        "Yo",
+        "gusta",
+        "gustan",
+        "el",
+        "café",
+        "gusto"
+      ],
+      "answer": [
+        "Me",
+        "gusta",
+        "el",
+        "café"
+      ],
+      "ok": "¡Perfecto! Me + gusta + one thing.",
+      "no": "“Me gusta el café.” — start with “me”, use gusta for one thing."
+    },
+    {
+      "id": "ex3",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Me ___ bailar.",
+      "prompt_en": "I like to dance.",
+      "accepted": [
+        "gusta"
+      ],
+      "ignore_accents": true,
+      "hint": "An action → gusta.",
+      "ok": "¡Bien! An action → gusta.",
+      "no": "An action (bailar) → “gusta”."
+    },
+    {
+      "id": "ex4",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each pronoun to its meaning.",
+      "pairs": [
+        [
+          "me",
+          "to me"
+        ],
+        [
+          "te",
+          "to you"
+        ],
+        [
+          "nos",
+          "to us"
+        ],
+        [
+          "les",
+          "to them"
+        ]
+      ],
+      "ok": "¡Muy bien!",
+      "no": ""
+    },
+    {
+      "id": "ex5",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Me gustan los libros.",
+      "accepted": [
+        "me gustan los libros"
+      ],
+      "ignore_accents": true,
+      "translation": "I like books.",
+      "ok": "¡Correcto! “Me gustan los libros.”",
+      "no": "It was: “Me gustan los libros.” (I like books.)"
+    },
+    {
+      "id": "ex6",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¿Te ___ la música?",
+      "prompt_en": "Do you like music?",
+      "options": [
+        {
+          "id": "a",
+          "text": "gusta"
+        },
+        {
+          "id": "b",
+          "text": "gustan"
+        },
+        {
+          "id": "c",
+          "text": "gustas"
+        },
+        {
+          "id": "d",
+          "text": "gusto"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Sí! One thing (la música) → gusta.",
+      "no": "One thing → “gusta”: ¿Te gusta la música?"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Chatting about music 🎵",
+      "lines": [
+        {
+          "speaker": "Luis",
+          "es": "¿Te gusta la música?",
+          "en": "Do you like music?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, me gusta mucho."
+        },
+        {
+          "id": "b",
+          "text": "Sí, me gustan mucho."
+        },
+        {
+          "id": "c",
+          "text": "Sí, yo gusto la música."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! One thing → me gusta.",
+      "no": "One thing → “Sí, me gusta mucho.” (gusta, singular — and never “yo gusto”)."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "me gustan",
+      "en": "I like (several things)",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "gustar",
+      "en": "to like (to be pleasing)"
+    },
+    {
+      "es": "me gusta",
+      "en": "I like (one thing)"
+    },
+    {
+      "es": "te gusta",
+      "en": "you like (one thing)"
+    },
+    {
+      "es": "me gustan",
+      "en": "I like (several things)"
+    },
+    {
+      "es": "bailar",
+      "en": "to dance"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "gustar",
+      "me gusta",
+      "te gusta",
+      "gustan",
+      "bailar"
+    ]
+  }
+}

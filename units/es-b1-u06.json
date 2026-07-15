@@ -1,0 +1,323 @@
+{
+  "unit": {
+    "id": "es-b1-u06",
+    "title": "Present perfect subjunctive",
+    "subtitle": "haya hablado: subjunctive for completed actions",
+    "level": "B1",
+    "order": 6,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The subjunctive for things already done",
+    "intro": "You already trigger the subjunctive after wishes, emotions, and doubt: <b>me alegro de que…</b>, <b>espero que…</b>, <b>ojalá…</b>. But what if the action is already <b>completed</b>? For that, Spanish uses the <b>present perfect subjunctive</b>: <b>haya</b> + past participle. So “I'm glad you came” becomes <b>Me alegro de que hayas venido</b> — the coming already happened, but the emotion still forces the subjunctive.",
+    "sections": [
+      {
+        "tag": "la forma",
+        "heading": "haya + past participle",
+        "body": "Take the subjunctive of <b>haber</b> and add the participle (the <b>-ado / -ido</b> form). It's the mirror of the normal perfect (he hablado → haya hablado):",
+        "conj": [
+          ["que yo", "haya hablado"],
+          ["que tú", "hayas hablado"],
+          ["que él/ella", "haya hablado"],
+          ["que nosotros", "hayamos hablado"],
+          ["que vosotros", "hayáis hablado"],
+          ["que ellos", "hayan hablado"]
+        ],
+        "ex": [
+          {
+            "es": "Me alegro de que <b>hayas hablado</b> con ella.",
+            "en": "I'm glad you've spoken with her.",
+            "note": "hayas + hablado"
+          },
+          {
+            "es": "Espero que <b>hayan llegado</b> bien.",
+            "en": "I hope they've arrived safely.",
+            "note": "hayan + llegado"
+          }
+        ]
+      },
+      {
+        "tag": "el uso",
+        "heading": "When to use it",
+        "body": "Use it when a subjunctive trigger (emotion, hope, doubt) refers to something <b>already finished</b>. Compare present vs. perfect: <b>Espero que llegue</b> (I hope he arrives) vs. <b>Espero que haya llegado</b> (I hope he has arrived).",
+        "ex": [
+          {
+            "es": "<b>Ojalá</b> ya <b>haya terminado</b>.",
+            "en": "Hopefully it has already finished.",
+            "note": "completed → haya terminado"
+          },
+          {
+            "es": "No creo que <b>hayan venido</b>.",
+            "en": "I don't think they've come.",
+            "note": "doubt + completed → hayan venido"
+          }
+        ]
+      },
+      {
+        "tag": "irregulares",
+        "heading": "Irregular participles",
+        "body": "A handful of participles are irregular — the same ones as always. They pair with <b>haya</b> just like the regular ones:",
+        "conj": [
+          ["hacer", "hecho"],
+          ["ver", "visto"],
+          ["decir", "dicho"],
+          ["escribir", "escrito"],
+          ["volver", "vuelto"],
+          ["poner", "puesto"]
+        ],
+        "ex": [
+          {
+            "es": "Me alegro de que <b>hayas hecho</b> la tarea.",
+            "en": "I'm glad you've done the homework.",
+            "note": "hacer → hecho"
+          },
+          {
+            "es": "Es raro que no lo <b>haya visto</b>.",
+            "en": "It's strange that he hasn't seen it.",
+            "note": "ver → visto"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Present perfect subjunctive = haya + past participle.",
+      "Forms: haya, hayas, haya, hayamos, hayáis, hayan.",
+      "Use it for completed actions in subjunctive contexts: Me alegro de que hayas venido.",
+      "Irregular participles stay irregular: hecho, visto, dicho, escrito, vuelto, puesto."
+    ],
+    "mistakes": [
+      {
+        "w": "Me alegro de que has venido.",
+        "r": "Me alegro de que hayas venido.",
+        "why": "After an emotion trigger, use the subjunctive haber: hayas, not has."
+      },
+      {
+        "w": "Espero que haya llegado él ya. → Espero que has llegado.",
+        "r": "Espero que haya llegado.",
+        "why": "Keep the subjunctive form haya, not the indicative has, after 'espero que'."
+      },
+      {
+        "w": "Me alegro de que hayas hacido la tarea.",
+        "r": "Me alegro de que hayas hecho la tarea.",
+        "why": "The participle of hacer is irregular: hecho, not hacido."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Me alegro de que tú ___ venido.",
+      "prompt_en": "I'm glad you've come.",
+      "options": [
+        {
+          "id": "a",
+          "text": "has"
+        },
+        {
+          "id": "b",
+          "text": "hayas"
+        },
+        {
+          "id": "c",
+          "text": "haya"
+        },
+        {
+          "id": "d",
+          "text": "habías"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! tú → hayas venido.",
+      "no": "After 'me alegro de que', use the subjunctive: “hayas venido”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Espero que ellos ___ llegado bien.",
+      "prompt_en": "I hope they've arrived safely.",
+      "options": [
+        {
+          "id": "a",
+          "text": "han"
+        },
+        {
+          "id": "b",
+          "text": "hayan"
+        },
+        {
+          "id": "c",
+          "text": "hayas"
+        },
+        {
+          "id": "d",
+          "text": "haya"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! ellos → hayan llegado.",
+      "no": "ellos takes “hayan”: espero que hayan llegado."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I'm glad you've done the homework.”",
+      "tokens": [
+        "Me",
+        "alegro",
+        "de",
+        "que",
+        "hayas",
+        "hecho",
+        "la",
+        "tarea",
+        "has",
+        "hacido"
+      ],
+      "answer": [
+        "Me",
+        "alegro",
+        "de",
+        "que",
+        "hayas",
+        "hecho",
+        "la",
+        "tarea"
+      ],
+      "ok": "¡Perfecto! hayas + hecho (irregular).",
+      "no": "“Me alegro de que hayas hecho la tarea” — subjunctive + irregular participle hecho."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Ojalá ya ___ terminado. (haber, él)",
+      "prompt_en": "Hopefully it has already finished.",
+      "accepted": [
+        "haya"
+      ],
+      "ignore_accents": true,
+      "hint": "subjunctive of haber, él form: ha___.",
+      "ok": "¡Bien! Ojalá haya terminado.",
+      "no": "Ojalá + subjunctive perfect → “haya terminado”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its past participle.",
+      "pairs": [
+        [
+          "hacer",
+          "hecho"
+        ],
+        [
+          "ver",
+          "visto"
+        ],
+        [
+          "decir",
+          "dicho"
+        ],
+        [
+          "escribir",
+          "escrito"
+        ]
+      ],
+      "ok": "¡Excelente! You know the irregular participles.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Me alegro de que hayas venido.",
+      "accepted": [
+        "me alegro de que hayas venido"
+      ],
+      "ignore_accents": true,
+      "translation": "I'm glad you've come.",
+      "ok": "¡Correcto! “Me alegro de que hayas venido.”",
+      "no": "It was: “Me alegro de que hayas venido.” (I'm glad you've come.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend finally made it to your party 🎉",
+      "lines": [
+        {
+          "speaker": "Elena",
+          "es": "¡Al final pude llegar a tu fiesta!",
+          "en": "In the end I managed to get to your party!"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "¡Me alegro de que hayas venido!"
+        },
+        {
+          "id": "b",
+          "text": "¡Me alegro de que has venido!"
+        },
+        {
+          "id": "c",
+          "text": "¡Espero que vienes pronto!"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Emoción + acción terminada → hayas venido.",
+      "no": "Use the perfect subjunctive: “¡Me alegro de que hayas venido!” (I'm glad you've come!)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Espero que haya llegado.",
+      "en": "I hope he has arrived.",
+      "ok": "¡Perfecto! Great pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "haya hecho",
+      "en": "(that) I/he has done"
+    },
+    {
+      "es": "hayas venido",
+      "en": "(that) you have come"
+    },
+    {
+      "es": "me alegro de que hayas",
+      "en": "I'm glad that you have…"
+    },
+    {
+      "es": "espero que haya",
+      "en": "I hope that he/she has…"
+    },
+    {
+      "es": "ojalá haya",
+      "en": "hopefully he/she has…"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "haya hecho",
+      "hayas venido",
+      "me alegro de que hayas",
+      "espero que haya",
+      "ojalá haya"
+    ]
+  }
+}

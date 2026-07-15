@@ -1,0 +1,354 @@
+{
+  "unit": {
+    "id": "es-b2-u05",
+    "title": "Subjunctive with Advanced Conjunctions",
+    "subtitle": "Conjunctions that always take the subjunctive, plus future time clauses",
+    "level": "B2",
+    "order": 5,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Some conjunctions never let you use the indicative",
+    "intro": "A handful of conjunctions are <b>hard-wired</b> to the subjunctive: they point to a purpose, a condition, or something not yet real, so the indicative simply never follows them. A second group — the <b>time</b> conjunctions like <b>cuando</b> and <b>en cuanto</b> — flip to the subjunctive only when the action is still in the <b>future</b>. Master both and your subjunctive will finally sound automatic.",
+    "sections": [
+      {
+        "tag": "siempre",
+        "heading": "Conjunctions that ALWAYS take the subjunctive",
+        "body": "These express purpose or condition about something unrealised, so they <b>always</b> trigger the subjunctive. Learn them as a fixed set — no exceptions:",
+        "conj": [
+          [
+            "so that (purpose)",
+            "para que / a fin de que"
+          ],
+          [
+            "provided that",
+            "con tal de que"
+          ],
+          [
+            "unless",
+            "a menos que"
+          ],
+          [
+            "in case",
+            "en caso de que"
+          ],
+          [
+            "without",
+            "sin que"
+          ],
+          [
+            "before",
+            "antes de que"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Lo haré <b>con tal de que</b> me <b>ayudes</b>.",
+            "en": "I'll do it provided that you help me.",
+            "note": "con tal de que → subjunctive"
+          },
+          {
+            "es": "Te llamo <b>antes de que</b> te <b>vayas</b>.",
+            "en": "I'll call you before you leave.",
+            "note": "antes de que → always subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "condición",
+        "heading": "Purpose and condition in action",
+        "body": "Notice how each conjunction frames something that <b>hasn't happened yet</b> — a goal, a proviso, a precaution. That unreality is exactly why the subjunctive appears:",
+        "ex": [
+          {
+            "es": "<b>En caso de que</b> <b>llueva</b>, quédate en casa.",
+            "en": "In case it rains, stay home.",
+            "note": "precaution → subjunctive"
+          },
+          {
+            "es": "Salió <b>sin que</b> nadie lo <b>viera</b>.",
+            "en": "He left without anyone seeing him.",
+            "note": "sin que → subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "tiempo",
+        "heading": "Time conjunctions: subjunctive for the future",
+        "body": "<b>Cuando, en cuanto, tan pronto como, hasta que, mientras</b> take the <b>indicative</b> for habits or the past, but the <b>subjunctive</b> when the action is still <b>ahead of you</b>:",
+        "conj": [
+          [
+            "when (future)",
+            "cuando llegue"
+          ],
+          [
+            "as soon as (future)",
+            "en cuanto llegue"
+          ],
+          [
+            "as soon as (future)",
+            "tan pronto como llegue"
+          ],
+          [
+            "until (future)",
+            "hasta que termine"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Te llamo <b>en cuanto llegue</b>.",
+            "en": "I'll call you as soon as I arrive.",
+            "note": "future → subjunctive"
+          },
+          {
+            "es": "Espera <b>hasta que termine</b>.",
+            "en": "Wait until I finish.",
+            "note": "future → subjunctive"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Always subjunctive: a fin de que, con tal de que, a menos que, en caso de que, sin que, antes de que, para que.",
+      "Time conjunctions (cuando, en cuanto, tan pronto como, hasta que, mientras) → subjunctive for a future action.",
+      "Same time words + a habit or the past → indicative: Cuando llego, como. / Cuando llegué, comí.",
+      "Lo haré con tal de que me ayudes; En caso de que llueva, quédate."
+    ],
+    "mistakes": [
+      {
+        "w": "Te llamo en cuanto llego.",
+        "r": "Te llamo en cuanto llegue.",
+        "why": "The arrival is still in the future, so the time clause needs the subjunctive: llegue."
+      },
+      {
+        "w": "Lo haré con tal de que me ayudas.",
+        "r": "Lo haré con tal de que me ayudes.",
+        "why": "Con tal de que always takes the subjunctive: ayudes."
+      },
+      {
+        "w": "En caso de que llueve, quédate.",
+        "r": "En caso de que llueva, quédate.",
+        "why": "En caso de que always takes the subjunctive: llueva."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Lo haré con tal de que me ___. (ayudar, tú)",
+      "prompt_en": "I'll do it provided that you help me.",
+      "options": [
+        {
+          "id": "a",
+          "text": "ayudes"
+        },
+        {
+          "id": "b",
+          "text": "ayudas"
+        },
+        {
+          "id": "c",
+          "text": "ayudarás"
+        },
+        {
+          "id": "d",
+          "text": "ayudabas"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Con tal de que → subjuntivo.",
+      "no": "Con tal de que always takes the subjunctive: “ayudes”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Te llamo en cuanto ___. (llegar, yo)",
+      "prompt_en": "I'll call you as soon as I arrive.",
+      "options": [
+        {
+          "id": "a",
+          "text": "llegue"
+        },
+        {
+          "id": "b",
+          "text": "llego"
+        },
+        {
+          "id": "c",
+          "text": "llegaré"
+        },
+        {
+          "id": "d",
+          "text": "llegaba"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Acción futura → subjuntivo.",
+      "no": "The arrival is still in the future, so use the subjunctive: “llegue”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “In case it rains, stay home.”",
+      "tokens": [
+        "En",
+        "caso",
+        "de",
+        "que",
+        "llueva,",
+        "quédate",
+        "en",
+        "casa",
+        "llueve,"
+      ],
+      "answer": [
+        "En",
+        "caso",
+        "de",
+        "que",
+        "llueva,",
+        "quédate",
+        "en",
+        "casa"
+      ],
+      "ok": "¡Perfecto! En caso de que + subjuntivo.",
+      "no": "“En caso de que llueva, quédate en casa” — this conjunction needs the subjunctive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Espera hasta que yo ___. (terminar)",
+      "prompt_en": "Wait until I finish.",
+      "accepted": [
+        "termine"
+      ],
+      "ignore_accents": true,
+      "hint": "Future action after 'hasta que' → subjunctive.",
+      "ok": "¡Bien! Hasta que + subjuntivo → termine.",
+      "no": "The action is still ahead, so use the subjunctive: “termine”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each conjunction to its meaning.",
+      "pairs": [
+        [
+          "a fin de que",
+          "so that"
+        ],
+        [
+          "con tal de que",
+          "provided that"
+        ],
+        [
+          "en caso de que",
+          "in case"
+        ],
+        [
+          "a menos que",
+          "unless"
+        ]
+      ],
+      "ok": "¡Excelente! Conjunciones de subjuntivo dominadas.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "No iré a menos que vengas conmigo.",
+      "accepted": [
+        "no ire a menos que vengas conmigo"
+      ],
+      "ignore_accents": true,
+      "translation": "I won't go unless you come with me.",
+      "ok": "¡Correcto! “No iré a menos que vengas conmigo.”",
+      "no": "It was: “No iré a menos que vengas conmigo.” (I won't go unless you come with me.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Making plans with a friend for tonight 🌙",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "¿A qué hora nos vemos?",
+          "en": "What time shall we meet?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Te aviso tan pronto como salga del trabajo."
+        },
+        {
+          "id": "b",
+          "text": "Te aviso tan pronto como salgo del trabajo."
+        },
+        {
+          "id": "c",
+          "text": "Te aviso tan pronto como saldré del trabajo."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Acción futura → salga.",
+      "no": "Leaving work is still in the future, so use the subjunctive: “tan pronto como salga”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Te llamo en cuanto llegue.",
+      "en": "I'll call you as soon as I arrive.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Te llamo en cuanto llegue.”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "a fin de que",
+      "en": "so that / in order that"
+    },
+    {
+      "es": "con tal de que",
+      "en": "provided that"
+    },
+    {
+      "es": "en caso de que",
+      "en": "in case"
+    },
+    {
+      "es": "tan pronto como",
+      "en": "as soon as"
+    },
+    {
+      "es": "a menos que",
+      "en": "unless"
+    },
+    {
+      "es": "antes de que",
+      "en": "before"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "a fin de que",
+      "con tal de que",
+      "en caso de que",
+      "tan pronto como",
+      "a menos que"
+    ]
+  }
+}

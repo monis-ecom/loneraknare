@@ -1,0 +1,320 @@
+{
+  "unit": {
+    "id": "es-a1-u02",
+    "title": "Articles",
+    "subtitle": "el · la · los · las (and un / una)",
+    "level": "A1",
+    "order": 2,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Every noun has a gender — and “the” has to match",
+    "intro": "In Spanish every noun is either <b>masculine</b> or <b>feminine</b>, and the word for “the” changes to match — with a separate plural form too. A handy rule of thumb: nouns ending in <b>-o</b> are usually masculine, <b>-a</b> usually feminine.",
+    "sections": [
+      {
+        "tag": "definido",
+        "heading": "“The” — the definite article",
+        "body": "Four words, all meaning “the”. Match the noun's gender and number:",
+        "conj": [
+          [
+            "masculine · singular",
+            "el"
+          ],
+          [
+            "feminine · singular",
+            "la"
+          ],
+          [
+            "masculine · plural",
+            "los"
+          ],
+          [
+            "feminine · plural",
+            "las"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>el</b> libro / <b>los</b> libros",
+            "en": "the book / the books",
+            "note": "masculine"
+          },
+          {
+            "es": "<b>la</b> mesa / <b>las</b> mesas",
+            "en": "the table / the tables",
+            "note": "feminine"
+          }
+        ]
+      },
+      {
+        "tag": "indefinido",
+        "heading": "“A” and “some” — the indefinite article",
+        "body": "Same idea, for “a / an” and “some”:",
+        "conj": [
+          [
+            "a (m)",
+            "un"
+          ],
+          [
+            "a (f)",
+            "una"
+          ],
+          [
+            "some (m)",
+            "unos"
+          ],
+          [
+            "some (f)",
+            "unas"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>un</b> perro, <b>una</b> silla",
+            "en": "a dog, a chair",
+            "note": "one of something"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "el · la · los · las all mean “the” — match gender AND number.",
+      "-o is usually masculine (el), -a usually feminine (la).",
+      "un / una = a · unos / unas = some."
+    ],
+    "mistakes": [
+      {
+        "w": "el casa",
+        "r": "la casa",
+        "why": "Casa ends in -a and is feminine → la casa."
+      },
+      {
+        "w": "la problema",
+        "r": "el problema",
+        "why": "A few -a words are masculine: el problema, el día, el mapa. Learn these as exceptions."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El plural de “la casa” es ___.",
+      "prompt_en": "The plural of “the house” is ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "las casas"
+        },
+        {
+          "id": "b",
+          "text": "los casas"
+        },
+        {
+          "id": "c",
+          "text": "la casas"
+        },
+        {
+          "id": "d",
+          "text": "las casa"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Feminine plural → las casas.",
+      "no": "Feminine + plural → “las casas”."
+    },
+    {
+      "id": "ex2",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each noun to its correct “the”.",
+      "pairs": [
+        [
+          "perro",
+          "el"
+        ],
+        [
+          "silla",
+          "la"
+        ],
+        [
+          "libros",
+          "los"
+        ],
+        [
+          "mesas",
+          "las"
+        ]
+      ],
+      "ok": "¡Muy bien!",
+      "no": ""
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"the books and the tables\"",
+      "tokens": [
+        "Los",
+        "Las",
+        "libros",
+        "El",
+        "y",
+        "las",
+        "mesas",
+        "mesa"
+      ],
+      "answer": [
+        "Los",
+        "libros",
+        "y",
+        "las",
+        "mesas"
+      ],
+      "ok": "¡Perfecto! los (m. pl.) + las (f. pl.).",
+      "no": "“Los libros y las mesas.” — match each noun's gender."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "___ problema (masculino).",
+      "prompt_en": "the problem (it's masculine!)",
+      "accepted": [
+        "el"
+      ],
+      "ignore_accents": true,
+      "hint": "A tricky one — problema is masculine.",
+      "ok": "¡Bien! El problema.",
+      "no": "Problema is masculine → “el”."
+    },
+    {
+      "id": "ex5",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "el gato y la mesa",
+      "accepted": [
+        "el gato y la mesa"
+      ],
+      "ignore_accents": true,
+      "translation": "the cat and the table",
+      "ok": "¡Correcto! “el gato y la mesa”.",
+      "no": "It was: “el gato y la mesa” (the cat and the table)."
+    },
+    {
+      "id": "ex6",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "“A chair” = ___ silla.",
+      "prompt_en": "a chair",
+      "options": [
+        {
+          "id": "a",
+          "text": "una"
+        },
+        {
+          "id": "b",
+          "text": "un"
+        },
+        {
+          "id": "c",
+          "text": "unas"
+        },
+        {
+          "id": "d",
+          "text": "unos"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Sí! Silla es femenina → una.",
+      "no": "Silla is feminine and singular → “una”."
+    },
+    {
+      "id": "dlg1",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A classmate points at your things.",
+      "lines": [
+        {
+          "speaker": "Marco",
+          "es": "¡Hola! ¿Es el libro de español?",
+          "en": "Hi! Is that the Spanish book?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        },
+        {
+          "speaker": "Marco",
+          "es": "¡Gracias!",
+          "en": "Thanks!"
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, es el libro."
+        },
+        {
+          "id": "b",
+          "text": "Sí, es la libro."
+        },
+        {
+          "id": "c",
+          "text": "Sí, es los libros."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! «Libro» es masculino singular → el libro.",
+      "no": "«Libro» is masculine singular → el libro."
+    },
+    {
+      "id": "ex7",
+      "type": "speak",
+      "xp": 3,
+      "say": "los",
+      "en": "the (masc. pl.)",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "el",
+      "en": "the (masc. sing.)"
+    },
+    {
+      "es": "la",
+      "en": "the (fem. sing.)"
+    },
+    {
+      "es": "los",
+      "en": "the (masc. pl.)"
+    },
+    {
+      "es": "las",
+      "en": "the (fem. pl.)"
+    },
+    {
+      "es": "un",
+      "en": "a (masc.)"
+    },
+    {
+      "es": "una",
+      "en": "a (fem.)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "el",
+      "la",
+      "los",
+      "las",
+      "un",
+      "una"
+    ]
+  }
+}

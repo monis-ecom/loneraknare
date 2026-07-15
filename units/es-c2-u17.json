@@ -1,0 +1,257 @@
+{
+  "unit": {
+    "id": "es-c2-u17",
+    "title": "Collocations & the Mot Juste",
+    "subtitle": "entablar, zanjar, sopesar, surtir efecto and choosing the exact verb",
+    "level": "C2",
+    "order": 17,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The word that only fits one way",
+    "intro": "What separates a fluent speaker from a native one is often the <b>collocation</b> — the fixed partnership between a verb and its noun. You don't <i>make</i> a conversation, you <b>entablar</b> one; panic doesn't <i>appear</i>, it <b>cunde</b>. Choosing the <b>mot juste</b> among near-synonyms (realizar / hacer / efectuar) is the final polish of C2 lexis.",
+    "sections": [
+      {
+        "tag": "verbo + sustantivo",
+        "heading": "High-register verb + noun pairings",
+        "body": "Certain nouns demand a specific verb. <b>Entablar</b> goes with <b>conversación / amistad / negociaciones</b>; <b>zanjar</b> with <b>una discusión / un asunto</b>; <b>sopesar</b> with <b>las opciones / los pros y los contras</b>; <b>subsanar</b> with <b>un error / una deficiencia</b>.",
+        "conj": [
+          ["entablar", "conversación, amistad, negociaciones"],
+          ["zanjar", "una discusión, un asunto"],
+          ["sopesar", "las opciones, los riesgos"],
+          ["subsanar", "un error, una carencia"]
+        ],
+        "ex": [
+          {
+            "es": "Nada más sentarnos, <b>entablamos</b> una animada conversación.",
+            "en": "As soon as we sat down, we struck up a lively conversation.",
+            "note": "entablar, not hacer/establecer"
+          },
+          {
+            "es": "Conviene <b>sopesar</b> los pros y los contras.",
+            "en": "It's advisable to weigh up the pros and cons.",
+            "note": "sopesar = weigh mentally"
+          }
+        ]
+      },
+      {
+        "tag": "colocaciones fijas",
+        "heading": "cundir el pánico · surtir efecto · apremiar",
+        "body": "Some collocations are almost idioms. Panic <b>cunde</b> (spreads); a treatment <b>surte efecto</b> (takes effect); when time is short, <b>el tiempo apremia</b> (presses). <b>Acuciar</b> and <b>apremiar</b> both mean to press/urge, in formal register.",
+        "conj": [
+          ["cundir", "el pánico, el desánimo"],
+          ["surtir efecto", "to take effect"],
+          ["apremiar / acuciar", "to press, to be urgent"]
+        ],
+        "ex": [
+          {
+            "es": "Al oír la alarma, <b>cundió el pánico</b> entre los presentes.",
+            "en": "On hearing the alarm, panic spread among those present.",
+            "note": "pánico + cundir"
+          },
+          {
+            "es": "El tratamiento tardó unos días en <b>surtir efecto</b>.",
+            "en": "The treatment took a few days to take effect.",
+            "note": "surtir, not hacer efecto"
+          }
+        ]
+      },
+      {
+        "tag": "acatar · granjearse",
+        "heading": "Winning regard and following orders",
+        "body": "<b>Acatar</b> means to obey/abide by <b>una orden, las normas, una sentencia</b> (stronger and more formal than obedecer). <b>Granjearse</b> is reflexive: to earn for oneself <b>el respeto, la simpatía, la confianza</b> of others.",
+        "conj": [
+          ["acatar", "una orden, las normas, la ley"],
+          ["granjearse", "el respeto, la simpatía, la enemistad"]
+        ],
+        "ex": [
+          {
+            "es": "Todos debemos <b>acatar</b> las normas, nos gusten o no.",
+            "en": "We must all abide by the rules, whether we like them or not.",
+            "note": "acatar normas"
+          },
+          {
+            "es": "Con su honradez <b>se granjeó</b> el respeto de todos.",
+            "en": "With his honesty he earned everyone's respect.",
+            "note": "granjearse el respeto"
+          }
+        ]
+      },
+      {
+        "tag": "el verbo exacto",
+        "heading": "realizar / hacer / efectuar · conseguir / lograr / alcanzar",
+        "body": "Near-synonyms split by register and partner. <b>Efectuar</b> un pago/una operación (formal); <b>realizar</b> un estudio/un sueño; <b>hacer</b> is the neutral default. For achievement: <b>alcanzar</b> una meta/un acuerdo, <b>lograr</b> + infinitive (managed to), <b>conseguir</b> the everyday option.",
+        "conj": [
+          ["efectuar", "un pago, una transacción (formal)"],
+          ["realizar", "un estudio, un sueño, una tarea"],
+          ["alcanzar", "una meta, un acuerdo, un objetivo"],
+          ["lograr", "+ infinitivo (managed to…)"]
+        ],
+        "ex": [
+          {
+            "es": "El banco <b>efectuó</b> el pago sin demora.",
+            "en": "The bank made the payment without delay.",
+            "note": "efectuar = formal 'make'"
+          },
+          {
+            "es": "Tras años de esfuerzo, <b>alcanzaron</b> un acuerdo.",
+            "en": "After years of effort, they reached an agreement.",
+            "note": "alcanzar un acuerdo"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "You entablar a conversation, zanjar a dispute, sopesar the options, subsanar an error.",
+      "Fixed collocations: cundir el pánico, surtir efecto, el tiempo apremia.",
+      "acatar (órdenes/normas) and granjearse (respeto/simpatía) are the precise verbs.",
+      "Pick by partner: efectuar un pago, realizar un sueño, alcanzar una meta, lograr + infinitive."
+    ],
+    "mistakes": [
+      {
+        "w": "Nada más vernos, hicimos una conversación.",
+        "r": "Nada más vernos, entablamos una conversación.",
+        "why": "The natural collocation is entablar una conversación, not hacer."
+      },
+      {
+        "w": "La medida no hizo efecto.",
+        "r": "La medida no surtió efecto.",
+        "why": "The fixed collocation is surtir efecto."
+      },
+      {
+        "w": "Se difundió el pánico entre la gente.",
+        "r": "Cundió el pánico entre la gente.",
+        "why": "Pánico partners with cundir; difundirse sounds off here."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Nada más conocernos, ___ una animada conversación.",
+      "prompt_en": "The moment we met, we struck up a lively conversation.",
+      "options": [
+        { "id": "a", "text": "entablamos" },
+        { "id": "b", "text": "hicimos" },
+        { "id": "c", "text": "establecimos" },
+        { "id": "d", "text": "fundamos" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! entablar una conversación.",
+      "no": "The verb that collocates with conversación is “entablar”, not hacer/establecer/fundar."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El nuevo tratamiento tardó unos días en ___ efecto.",
+      "prompt_en": "The new treatment took a few days to take effect.",
+      "options": [
+        { "id": "a", "text": "surtir" },
+        { "id": "b", "text": "hacer" },
+        { "id": "c", "text": "dar" },
+        { "id": "d", "text": "tener" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! surtir efecto es la colocación fija.",
+      "no": "The fixed collocation is “surtir efecto”, not hacer/dar/tener efecto."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “We must weigh all the options before deciding.”",
+      "tokens": ["Debemos", "sopesar", "todas", "las", "opciones", "antes", "de", "decidir", "pesar", "pensar"],
+      "answer": ["Debemos", "sopesar", "todas", "las", "opciones", "antes", "de", "decidir"],
+      "ok": "¡Perfecto! sopesar las opciones.",
+      "no": "“Debemos sopesar todas las opciones antes de decidir” — sopesar, not pesar/pensar."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Con su honestidad, se ___ el respeto de todos. (granjearse)",
+      "prompt_en": "With his honesty, he earned everyone's respect.",
+      "accepted": ["granjeó"],
+      "ignore_accents": true,
+      "hint": "The verb meaning to win/earn (someone's regard) for oneself.",
+      "ok": "¡Bien! se granjeó el respeto.",
+      "no": "The precise verb is “granjearse”: se granjeó el respeto."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each verb to the noun it collocates with.",
+      "pairs": [
+        ["zanjar", "una discusión"],
+        ["acatar", "una orden"],
+        ["subsanar", "un error"],
+        ["cundir", "el pánico"]
+      ],
+      "ok": "¡Excelente! Colocaciones de nivel nativo.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "El pánico cundió entre los presentes.",
+      "accepted": ["el panico cundio entre los presentes"],
+      "ignore_accents": true,
+      "translation": "Panic spread among those present.",
+      "ok": "¡Correcto! “El pánico cundió entre los presentes.”",
+      "no": "It was: “El pánico cundió entre los presentes.” (cundir, the mot juste for pánico)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A director wants to end a drawn-out debate 📋",
+      "lines": [
+        {
+          "speaker": "Director",
+          "es": "Este debate no puede alargarse más.",
+          "en": "This debate can't drag on any longer."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Estoy de acuerdo; zanjemos la discusión de una vez." },
+        { "id": "b", "text": "Estoy de acuerdo; sopesemos la discusión de una vez." },
+        { "id": "c", "text": "Estoy de acuerdo; acatemos la discusión de una vez." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! zanjar una discusión = to settle it.",
+      "no": "To settle a dispute you “zanjar” it — sopesar (weigh) and acatar (obey) don't fit here."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Conviene sopesar los pros y los contras.",
+      "en": "It's advisable to weigh up the pros and cons.",
+      "ok": "¡Perfecto! Muy idiomático.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Conviene sopesar los pros y los contras.”"
+    }
+  ],
+  "vocab": [
+    { "es": "entablar una conversación", "en": "to strike up a conversation" },
+    { "es": "zanjar una discusión", "en": "to settle a dispute" },
+    { "es": "sopesar las opciones", "en": "to weigh up the options" },
+    { "es": "surtir efecto", "en": "to take effect" },
+    { "es": "cundir el pánico", "en": "for panic to spread" },
+    { "es": "granjearse el respeto", "en": "to earn (someone's) respect" },
+    { "es": "subsanar un error", "en": "to rectify an error" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["entablar una conversación", "zanjar una discusión", "sopesar las opciones", "surtir efecto", "granjearse el respeto"]
+  }
+}

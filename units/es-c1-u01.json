@@ -1,0 +1,237 @@
+{
+  "unit": {
+    "id": "es-c1-u01",
+    "title": "Subjunctive in Relative Clauses",
+    "subtitle": "Indicative for the known, subjunctive for the unknown",
+    "level": "C1",
+    "order": 1,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Does the person exist? Let the verb tell us",
+    "intro": "In a <b>relative (adjective) clause</b>, the mood of the verb reveals whether the antecedent is <b>real and identified</b> or merely <b>hypothetical, sought, or nonexistent</b>. Compare <b>Busco a alguien que hable ruso</b> (I'm looking for someone — anyone — who speaks Russian) with <b>Conozco a alguien que habla ruso</b> (I know a specific person who does). The difference is entirely in the mood, and it's one of the surest signs of a near-native speaker.",
+    "sections": [
+      {
+        "tag": "contraste",
+        "heading": "Known antecedent → indicative; unknown → subjunctive",
+        "body": "If the referent is <b>specific and known to exist</b>, use the <b>indicative</b>. If it's <b>indefinite, hypothetical, or still being searched for</b>, use the <b>subjunctive</b>. The article often signals it: <b>el/la/los/las</b> tends toward the known, <b>un/una/algún</b> toward the unknown.",
+        "conj": [
+          ["known / specific", "indicative"],
+          ["sought / unknown", "subjunctive"],
+          ["Conozco a un médico que habla…", "→ habla (indic.)"],
+          ["Busco un médico que hable…", "→ hable (subj.)"]
+        ],
+        "ex": [
+          {
+            "es": "Tengo una asistente que <b>sabe</b> chino.",
+            "en": "I have an assistant who knows Chinese.",
+            "note": "she exists → indicative"
+          },
+          {
+            "es": "Necesito una asistente que <b>sepa</b> chino.",
+            "en": "I need an assistant who knows Chinese.",
+            "note": "not found yet → subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "negación",
+        "heading": "Negative or nonexistent antecedents",
+        "body": "When the antecedent is <b>denied or nonexistent</b> — <b>no hay nadie que…</b>, <b>no conozco a nadie que…</b>, <b>no existe…</b> — the subjunctive is obligatory. Note the loss of the personal <b>a</b> with an unknown or negated human referent (<b>Busco alguien / No hay nadie</b>).",
+        "ex": [
+          {
+            "es": "No hay nadie que <b>sepa</b> tanto como ella.",
+            "en": "There's no one who knows as much as she does.",
+            "note": "nonexistent → subjunctive"
+          },
+          {
+            "es": "No conozco a nadie que <b>haya</b> leído todo Cervantes.",
+            "en": "I don't know anyone who has read all of Cervantes.",
+            "note": "denied existence → subjunctive"
+          }
+        ]
+      },
+      {
+        "tag": "interrogación",
+        "heading": "Questions, ‘el que / quien’ and open conditions",
+        "body": "In <b>yes/no questions</b> about existence (<b>¿Hay algún… que…?</b>) the referent is unconfirmed, so use the subjunctive. The same logic drives <b>el que</b>, <b>quien</b> and <b>lo que</b> when they point to an as-yet-unidentified person or thing.",
+        "conj": [
+          ["¿Hay alguien que…?", "que sepa (subj.)"],
+          ["El que quiera venir…", "quiera (subj.)"],
+          ["Quien lo encuentre…", "encuentre (subj.)"],
+          ["Haz lo que te parezca…", "parezca (subj.)"]
+        ],
+        "ex": [
+          {
+            "es": "¿Hay algún vuelo que <b>salga</b> antes de las seis?",
+            "en": "Is there any flight that leaves before six?",
+            "note": "unconfirmed → subjunctive"
+          },
+          {
+            "es": "El que <b>llegue</b> primero que reserve la mesa.",
+            "en": "Whoever arrives first should book the table.",
+            "note": "unidentified person → subjunctive"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Known, specific antecedent → indicative; indefinite or hypothetical → subjunctive.",
+      "Negated or nonexistent antecedents (no hay nadie que…) always take the subjunctive.",
+      "Questions about existence (¿Hay algún… que…?) use the subjunctive.",
+      "el que / quien / lo que + subjunctive when the referent is not yet identified."
+    ],
+    "mistakes": [
+      {
+        "w": "Busco a una secretaria que habla alemán.",
+        "r": "Busco una secretaria que hable alemán.",
+        "why": "The secretary isn't found yet, so the relative clause needs the subjunctive (hable), and you drop the personal a with an unknown referent."
+      },
+      {
+        "w": "No hay nadie que sabe la respuesta.",
+        "r": "No hay nadie que sepa la respuesta.",
+        "why": "A nonexistent antecedent (no hay nadie) forces the subjunctive: sepa, not sabe."
+      },
+      {
+        "w": "¿Conoces a alguien que puede ayudarme?",
+        "r": "¿Conoces a alguien que pueda ayudarme?",
+        "why": "The person's existence is unconfirmed in the question, so use the subjunctive pueda."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Busco un piso que ___ terraza.",
+      "prompt_en": "I'm looking for a flat that has a terrace.",
+      "options": [
+        { "id": "a", "text": "tenga" },
+        { "id": "b", "text": "tiene" },
+        { "id": "c", "text": "tendría" },
+        { "id": "d", "text": "tener" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! El piso aún no existe para ti → subjuntivo.",
+      "no": "The flat isn't found yet, so the relative clause takes the subjunctive: “tenga”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Vivo en un piso que ___ una terraza enorme.",
+      "prompt_en": "I live in a flat that has a huge terrace.",
+      "options": [
+        { "id": "a", "text": "tenga" },
+        { "id": "b", "text": "tiene" },
+        { "id": "c", "text": "haya tenido" },
+        { "id": "d", "text": "tuviera" }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! El piso es real y conocido → indicativo.",
+      "no": "This flat is real and specific, so use the indicative: “tiene”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “There's no one who understands me.”",
+      "tokens": ["No", "hay", "nadie", "que", "me", "entienda", "entiende", "comprender"],
+      "answer": ["No", "hay", "nadie", "que", "me", "entienda"],
+      "ok": "¡Perfecto! Antecedente inexistente → entienda.",
+      "no": "“No hay nadie que me entienda” — a nonexistent antecedent needs the subjunctive entienda."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "¿Hay alguien aquí que ___ hablar francés? (saber)",
+      "prompt_en": "Is there anyone here who can speak French?",
+      "accepted": ["sepa"],
+      "ignore_accents": true,
+      "hint": "Existence is unconfirmed in a question → subjunctive of saber.",
+      "ok": "¡Bien! Pregunta sobre existencia → sepa.",
+      "no": "The question queries an unconfirmed referent, so use the subjunctive: “sepa”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each opening to the correct verb form.",
+      "pairs": [
+        ["Conozco a alguien que…", "trabaja aquí"],
+        ["Busco a alguien que…", "trabaje aquí"],
+        ["No hay nadie que…", "trabaje gratis"],
+        ["Tengo un colega que…", "trabaja de noche"]
+      ],
+      "ok": "¡Excelente! Conocido → indicativo; buscado o inexistente → subjuntivo.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Necesito un abogado que entienda de fiscalidad.",
+      "accepted": ["necesito un abogado que entienda de fiscalidad"],
+      "ignore_accents": true,
+      "translation": "I need a lawyer who understands taxation.",
+      "ok": "¡Correcto! “Necesito un abogado que entienda de fiscalidad.”",
+      "no": "It was: “Necesito un abogado que entienda de fiscalidad.” (I need a lawyer who understands taxation.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Hiring for a startup 💼",
+      "lines": [
+        {
+          "speaker": "Elena",
+          "es": "Para el puesto necesitamos a alguien especial. ¿Tienes a alguien en mente?",
+          "en": "For the role we need someone special. Do you have anyone in mind?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Buscamos a alguien que domine tres idiomas y sepa negociar." },
+        { "id": "b", "text": "Buscamos a alguien que domina tres idiomas y sabe negociar." },
+        { "id": "c", "text": "Buscamos a alguien que dominara tres idiomas y supiera negociar." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Perfil aún sin encontrar → presente de subjuntivo.",
+      "no": "You're describing an as-yet-unfound profile in the present, so use the present subjunctive: “que domine… y sepa…”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "No conozco a nadie que hable tan rápido.",
+      "en": "I don't know anyone who speaks that fast.",
+      "ok": "¡Perfecto! Antecedente negado, subjuntivo impecable.",
+      "no": "Almost — tap “Hear it”, then match the sound of “No conozco a nadie que hable tan rápido.”"
+    }
+  ],
+  "vocab": [
+    { "es": "busco a alguien que", "en": "I'm looking for someone who" },
+    { "es": "no hay nadie que", "en": "there's no one who" },
+    { "es": "conozco a alguien que", "en": "I know someone who" },
+    { "es": "¿hay algún… que…?", "en": "is there any… that…?" },
+    { "es": "el que quiera", "en": "whoever wants (to)" },
+    { "es": "un antecedente", "en": "an antecedent (referent)" },
+    { "es": "no conozco a nadie que", "en": "I don't know anyone who" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "busco a alguien que",
+      "no hay nadie que",
+      "conozco a alguien que",
+      "¿hay algún… que…?",
+      "el que quiera"
+    ]
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "unit": {
+    "id": "es-b2-u08",
+    "title": "Verbs of change (to become)",
+    "subtitle": "ponerse, volverse, hacerse, llegar a ser, convertirse, quedarse",
+    "level": "B2",
+    "order": 8,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Six ways to say 'to become'",
+    "intro": "English has one word — <b>become</b>. Spanish has a whole family, and each one carries a different flavour of change: sudden or gradual, temporary or lasting, willed or suffered. Pick the wrong one and it sounds off. The good news: once you feel the difference between them, they click into place.",
+    "sections": [
+      {
+        "tag": "ponerse / volverse",
+        "heading": "ponerse vs volverse + adjective",
+        "body": "<b>Ponerse</b> + adjective is a <b>temporary, often emotional or physical</b> change — you turn red, nervous, sad, and then it passes. <b>Volverse</b> + adjective is <b>involuntary and lasting</b> — a deeper shift in the person.",
+        "conj": [
+          [
+            "got nervous",
+            "se puso nervioso"
+          ],
+          [
+            "turned red",
+            "se puso rojo"
+          ],
+          [
+            "went mad (lasting)",
+            "se volvió loco"
+          ],
+          [
+            "became distrustful",
+            "se volvió desconfiado"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Me <b>puse nervioso</b> antes del examen.",
+            "en": "I got nervous before the exam.",
+            "note": "ponerse — passing emotion"
+          },
+          {
+            "es": "Con los años <b>se volvió</b> muy desconfiado.",
+            "en": "Over the years he became very distrustful.",
+            "note": "volverse — lasting change"
+          }
+        ]
+      },
+      {
+        "tag": "hacerse / llegar a ser",
+        "heading": "hacerse and llegar a ser: effort over time",
+        "body": "<b>Hacerse</b> + noun/adjective is a <b>gradual</b> change often tied to <b>effort, profession or ideology</b>. <b>Llegar a ser</b> stresses <b>reaching</b> something important after a process.",
+        "conj": [
+          [
+            "became a doctor",
+            "se hizo médico"
+          ],
+          [
+            "got rich",
+            "se hizo rico"
+          ],
+          [
+            "became Buddhist",
+            "se hizo budista"
+          ],
+          [
+            "became president",
+            "llegó a ser presidente"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Estudió mucho y <b>se hizo médico</b>.",
+            "en": "He studied hard and became a doctor.",
+            "note": "hacerse — effort / profession"
+          },
+          {
+            "es": "Con el tiempo <b>llegó a ser</b> presidente.",
+            "en": "In time he became president.",
+            "note": "llegar a ser — reached after effort"
+          }
+        ]
+      },
+      {
+        "tag": "convertirse / quedarse",
+        "heading": "convertirse en and quedarse",
+        "body": "<b>Convertirse en</b> + noun is a real <b>transformation</b> into something else. <b>Quedarse</b> + adjective is the <b>state you're left in</b> as a result — very often a loss.",
+        "conj": [
+          [
+            "became a star",
+            "se convirtió en una estrella"
+          ],
+          [
+            "went blind",
+            "se quedó ciego"
+          ],
+          [
+            "was left alone",
+            "se quedó solo"
+          ],
+          [
+            "lost his job",
+            "se quedó sin trabajo"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Se convirtió en</b> una estrella del cine.",
+            "en": "She became a film star.",
+            "note": "convertirse en — transformation"
+          },
+          {
+            "es": "Tras el accidente <b>se quedó</b> ciego.",
+            "en": "After the accident he went blind.",
+            "note": "quedarse — the resulting state (a loss)"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "ponerse + adj = temporary/emotional (se puso triste, rojo, nervioso).",
+      "volverse + adj = involuntary, lasting (se volvió loco, desconfiado).",
+      "hacerse + noun/adj = gradual, effort/ideology (se hizo médico, rico, budista); llegar a ser = reach after effort.",
+      "convertirse en + noun = transformation; quedarse + adj = the state you're left in, often a loss (se quedó ciego, solo, sin trabajo)."
+    ],
+    "mistakes": [
+      {
+        "w": "Se puso médico.",
+        "r": "Se hizo médico.",
+        "why": "A profession reached through effort uses hacerse, not ponerse."
+      },
+      {
+        "w": "Me hice nervioso antes del examen.",
+        "r": "Me puse nervioso antes del examen.",
+        "why": "A passing emotion uses ponerse, not hacerse."
+      },
+      {
+        "w": "Se convirtió ciego.",
+        "r": "Se quedó ciego.",
+        "why": "A resulting state (a loss) uses quedarse; convertirse needs 'en' + a noun."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Cuando vio la sangre, ___ pálido.",
+      "prompt_en": "When he saw the blood, he turned pale.",
+      "options": [
+        {
+          "id": "a",
+          "text": "se puso"
+        },
+        {
+          "id": "b",
+          "text": "se hizo"
+        },
+        {
+          "id": "c",
+          "text": "llegó a ser"
+        },
+        {
+          "id": "d",
+          "text": "se convirtió"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Cambio físico y pasajero → ponerse.",
+      "no": "A sudden, passing physical change → “se puso pálido”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Estudió durante años y ___ abogado.",
+      "prompt_en": "He studied for years and became a lawyer.",
+      "options": [
+        {
+          "id": "a",
+          "text": "se puso"
+        },
+        {
+          "id": "b",
+          "text": "se quedó"
+        },
+        {
+          "id": "c",
+          "text": "se hizo"
+        },
+        {
+          "id": "d",
+          "text": "se volvió"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Exacto! Profesión con esfuerzo → hacerse.",
+      "no": "A profession reached through effort → “se hizo abogado”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “She became a film star.”",
+      "tokens": [
+        "Se",
+        "convirtió",
+        "en",
+        "una",
+        "estrella",
+        "del",
+        "cine",
+        "puso",
+        "quedó"
+      ],
+      "answer": [
+        "Se",
+        "convirtió",
+        "en",
+        "una",
+        "estrella",
+        "del",
+        "cine"
+      ],
+      "ok": "¡Perfecto! Transformación → convertirse en.",
+      "no": "A transformation into a noun → “Se convirtió en una estrella del cine”."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Tras la crisis, muchos ___ sin trabajo. (quedarse, ellos)",
+      "prompt_en": "After the crisis, many were left without work.",
+      "accepted": [
+        "se quedaron"
+      ],
+      "ignore_accents": true,
+      "hint": "quedarse — the state you're left in; subject is 'muchos' (they)",
+      "ok": "¡Bien! Estado que queda tras algo → quedarse.",
+      "no": "The state left after an event → “se quedaron sin trabajo”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each 'become' verb to its typical use.",
+      "pairs": [
+        [
+          "ponerse",
+          "temporary emotion"
+        ],
+        [
+          "volverse",
+          "lasting, involuntary"
+        ],
+        [
+          "hacerse",
+          "effort / profession"
+        ],
+        [
+          "quedarse",
+          "state left, often a loss"
+        ]
+      ],
+      "ok": "¡Excelente! You've got the whole family sorted.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Con el tiempo se volvió muy desconfiado.",
+      "accepted": [
+        "con el tiempo se volvio muy desconfiado"
+      ],
+      "ignore_accents": true,
+      "translation": "Over time he became very distrustful.",
+      "ok": "¡Correcto! “Con el tiempo se volvió muy desconfiado.”",
+      "no": "It was: “Con el tiempo se volvió muy desconfiado.” (Over time he became very distrustful.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Talking about a nervous moment 😰",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "¿Qué tal la entrevista de trabajo?",
+          "en": "How was the job interview?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Bien, aunque al principio me puse muy nervioso."
+        },
+        {
+          "id": "b",
+          "text": "Bien, aunque al principio me hice muy nervioso."
+        },
+        {
+          "id": "c",
+          "text": "Bien, aunque al principio me quedé nervioso."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Emoción pasajera → ponerse nervioso.",
+      "no": "A passing emotion → “me puse muy nervioso”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Se hizo médico después de muchos años",
+      "en": "He became a doctor after many years",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "ponerse",
+      "en": "to become (temporary/emotional)"
+    },
+    {
+      "es": "volverse",
+      "en": "to become (lasting, involuntary)"
+    },
+    {
+      "es": "hacerse",
+      "en": "to become (gradual, through effort)"
+    },
+    {
+      "es": "convertirse en",
+      "en": "to turn into / transform into"
+    },
+    {
+      "es": "quedarse",
+      "en": "to be left / end up (a state)"
+    },
+    {
+      "es": "llegar a ser",
+      "en": "to become (reach after effort)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "ponerse",
+      "volverse",
+      "hacerse",
+      "convertirse en",
+      "quedarse"
+    ]
+  }
+}

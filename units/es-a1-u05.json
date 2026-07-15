@@ -1,0 +1,368 @@
+{
+  "unit": {
+    "id": "es-a1-u05",
+    "title": "-ER / -IR verbs",
+    "subtitle": "Regular -ER and -IR verbs in the present",
+    "level": "A1",
+    "order": 5,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Two more patterns — and they're almost the same",
+    "intro": "You already know -AR verbs. <b>-ER</b> and <b>-IR</b> verbs work exactly the same way: drop the ending, add a new one. The best part — the -ER and -IR endings are <b>identical</b> except for the nosotros and vosotros forms.",
+    "sections": [
+      {
+        "tag": "comer",
+        "heading": "-ER verbs: comer (to eat)",
+        "body": "Stem <b>com-</b> plus the -ER endings:",
+        "conj": [
+          [
+            "yo",
+            "como"
+          ],
+          [
+            "tú",
+            "comes"
+          ],
+          [
+            "él/ella",
+            "come"
+          ],
+          [
+            "nosotros",
+            "comemos"
+          ],
+          [
+            "vosotros",
+            "coméis"
+          ],
+          [
+            "ellos",
+            "comen"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Yo <b>como</b> pan.",
+            "en": "I eat bread.",
+            "note": "yo → -o"
+          },
+          {
+            "es": "Nosotros <b>bebemos</b> agua.",
+            "en": "We drink water.",
+            "note": "nosotros → -emos"
+          }
+        ]
+      },
+      {
+        "tag": "vivir",
+        "heading": "-IR verbs: vivir (to live)",
+        "body": "Stem <b>viv-</b> plus the -IR endings:",
+        "conj": [
+          [
+            "yo",
+            "vivo"
+          ],
+          [
+            "tú",
+            "vives"
+          ],
+          [
+            "él/ella",
+            "vive"
+          ],
+          [
+            "nosotros",
+            "vivimos"
+          ],
+          [
+            "vosotros",
+            "vivís"
+          ],
+          [
+            "ellos",
+            "viven"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Ella <b>vive</b> en Madrid.",
+            "en": "She lives in Madrid.",
+            "note": "ella → -e"
+          },
+          {
+            "es": "<b>Escribimos</b> un correo.",
+            "en": "We write an email.",
+            "note": "nosotros → -imos"
+          }
+        ]
+      },
+      {
+        "tag": "regla",
+        "heading": "The only difference",
+        "body": "-ER and -IR share -o, -es, -e, -en. They differ <b>only</b> in nosotros and vosotros:",
+        "conj": [
+          [
+            "nosotros · -ER",
+            "-emos"
+          ],
+          [
+            "nosotros · -IR",
+            "-imos"
+          ],
+          [
+            "vosotros · -ER",
+            "-éis"
+          ],
+          [
+            "vosotros · -IR",
+            "-ís"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "comemos vs. vivimos",
+            "en": "we eat vs. we live",
+            "note": "the tricky spot"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "-ER: -o, -es, -e, -emos, -éis, -en.",
+      "-IR: -o, -es, -e, -imos, -ís, -en.",
+      "They only differ in the nosotros/vosotros forms."
+    ],
+    "mistakes": [
+      {
+        "w": "Nosotros vivemos en Madrid.",
+        "r": "Nosotros vivimos en Madrid.",
+        "why": "-IR nosotros is -imos, not -emos: vivimos."
+      },
+      {
+        "w": "Ella vivo aquí.",
+        "r": "Ella vive aquí.",
+        "why": "él/ella takes -e: vive."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Yo ___ pan.",
+      "prompt_en": "I eat bread.",
+      "options": [
+        {
+          "id": "a",
+          "text": "como"
+        },
+        {
+          "id": "b",
+          "text": "comes"
+        },
+        {
+          "id": "c",
+          "text": "come"
+        },
+        {
+          "id": "d",
+          "text": "comen"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! yo → -o → como.",
+      "no": "yo takes -o → “como”."
+    },
+    {
+      "id": "ex2",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"We live in Madrid.\"",
+      "tokens": [
+        "Nosotros",
+        "vivemos",
+        "vivimos",
+        "en",
+        "Madrid",
+        "viven"
+      ],
+      "answer": [
+        "Nosotros",
+        "vivimos",
+        "en",
+        "Madrid"
+      ],
+      "ok": "¡Perfecto! -IR nosotros → -imos → vivimos.",
+      "no": "nosotros + -IR → -imos: “Nosotros vivimos en Madrid.”"
+    },
+    {
+      "id": "ex3",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Ella ___ un libro.",
+      "prompt_en": "She reads a book.",
+      "accepted": [
+        "lee"
+      ],
+      "ignore_accents": true,
+      "hint": "leer, ella-form (-ER).",
+      "ok": "¡Bien! ella → -e → lee.",
+      "no": "leer, ella → -e → “lee”."
+    },
+    {
+      "id": "ex4",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each subject to the correct form of BEBER.",
+      "pairs": [
+        [
+          "yo",
+          "bebo"
+        ],
+        [
+          "tú",
+          "bebes"
+        ],
+        [
+          "nosotros",
+          "bebemos"
+        ],
+        [
+          "ellos",
+          "beben"
+        ]
+      ],
+      "ok": "¡Excelente! The -ER pattern is locked in.",
+      "no": ""
+    },
+    {
+      "id": "ex5",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Nosotros escribimos un correo.",
+      "accepted": [
+        "nosotros escribimos un correo"
+      ],
+      "ignore_accents": true,
+      "translation": "We write an email.",
+      "ok": "¡Correcto! “Nosotros escribimos un correo.”",
+      "no": "It was: “Nosotros escribimos un correo.” (We write an email.)"
+    },
+    {
+      "id": "ex6",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Nosotros ___ en España.",
+      "prompt_en": "We live in Spain.",
+      "options": [
+        {
+          "id": "a",
+          "text": "vivimos"
+        },
+        {
+          "id": "b",
+          "text": "vivemos"
+        },
+        {
+          "id": "c",
+          "text": "viven"
+        },
+        {
+          "id": "d",
+          "text": "vivo"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Sí! -IR nosotros → -imos → vivimos.",
+      "no": "-IR nosotros is -imos → “vivimos”."
+    },
+    {
+      "id": "dlg1",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "At lunch, a friend asks about you.",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "¿Dónde vives?",
+          "en": "Where do you live?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        },
+        {
+          "speaker": "Diego",
+          "es": "¡Qué bien!",
+          "en": "Nice!"
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Vivo en Madrid y como en casa."
+        },
+        {
+          "id": "b",
+          "text": "Vives en Madrid y comes en casa."
+        },
+        {
+          "id": "c",
+          "text": "Vivir en Madrid y comer en casa."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Bien! Con «yo»: vivir→vivo, comer→como.",
+      "no": "For «yo»: vivir→vivo, comer→como."
+    },
+    {
+      "id": "ex7",
+      "type": "speak",
+      "xp": 3,
+      "say": "escribir",
+      "en": "to write",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "comer",
+      "en": "to eat"
+    },
+    {
+      "es": "beber",
+      "en": "to drink"
+    },
+    {
+      "es": "vivir",
+      "en": "to live"
+    },
+    {
+      "es": "escribir",
+      "en": "to write"
+    },
+    {
+      "es": "leer",
+      "en": "to read"
+    },
+    {
+      "es": "abrir",
+      "en": "to open"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "comer",
+      "beber",
+      "vivir",
+      "escribir",
+      "leer",
+      "abrir"
+    ]
+  }
+}

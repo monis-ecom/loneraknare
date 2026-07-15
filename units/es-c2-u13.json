@@ -1,0 +1,262 @@
+{
+  "unit": {
+    "id": "es-c2-u13",
+    "title": "Word Formation & Derivation",
+    "subtitle": "Prefixes, suffixes and the cultismo/patrimonial split",
+    "level": "C2",
+    "order": 13,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Build and decode any word like a native",
+    "intro": "At C2 you stop looking words up and start <b>deriving</b> them. Spanish is astonishingly regular: strip a prefix like <b>des-</b> or <b>re-</b>, recognise a suffix like <b>-ción</b> or <b>-miento</b>, and an unfamiliar word becomes transparent. Master the machinery and you can both <b>decode</b> a word you have never seen and <b>coin</b> one that sounds native.",
+    "sections": [
+      {
+        "tag": "prefijos",
+        "heading": "Prefixes: negation, repetition, excess",
+        "body": "The most productive prefixes cluster by meaning. Negation: <b>des-</b> (deshacer), <b>in-/im-/i-</b> (inútil, imposible, ilegal) — note the assimilation to <b>im-</b> before p/b and <b>i-</b> before l/r. Repetition or intensity: <b>re-</b> (rehacer, requetebueno). Excess: <b>sobre-/super-</b> (sobrevalorar, superpoblado). Position and opposition: <b>pre-, pos(t)-, anti-, contra-, sub-, entre-</b>.",
+        "conj": [
+          ["des- (reversal)", "hacer → deshacer"],
+          ["in-/im-/i- (negation)", "útil → inútil, posible → imposible, legal → ilegal"],
+          ["re- (again/intensity)", "hacer → rehacer"],
+          ["sobre-/super- (excess)", "valorar → sobrevalorar"],
+          ["anti-/contra- (against)", "cuerpo → anticuerpo, decir → contradecir"]
+        ],
+        "ex": [
+          {
+            "es": "No conviene <b>sobrevalorar</b> el primer borrador.",
+            "en": "It's unwise to overvalue the first draft.",
+            "note": "sobre- = excess"
+          },
+          {
+            "es": "Tuvo que <b>rehacer</b> el informe de cero.",
+            "en": "He had to redo the report from scratch.",
+            "note": "re- = again"
+          }
+        ]
+      },
+      {
+        "tag": "sufijos",
+        "heading": "Suffixes: turning verbs and adjectives into nouns",
+        "body": "Suffixes carry the grammatical weight. Actions become nouns with <b>-ción/-sión</b> (crear → creación) or <b>-miento</b> (crecer → crecimiento). Qualities become abstract nouns with <b>-dad/-tad</b> (feliz → felicidad, leal → lealtad), <b>-ez/-eza</b> (rígido → rigidez, bello → belleza) and <b>-ura</b> (dulce → dulzura). And people become agents with <b>-dor/-dora</b> (jugar → jugador).",
+        "conj": [
+          ["-ción / -sión", "acción, decisión"],
+          ["-miento", "crecer → crecimiento"],
+          ["-dad / -tad", "felicidad, libertad"],
+          ["-ez / -eza", "rigidez, pobreza"],
+          ["-ura / -aje / -azgo / -ismo", "dulzura, aterrizaje, liderazgo, realismo"]
+        ],
+        "ex": [
+          {
+            "es": "El <b>crecimiento</b> sostenido exige paciencia.",
+            "en": "Sustained growth demands patience.",
+            "note": "crecer + -miento"
+          },
+          {
+            "es": "Su <b>liderazgo</b> transformó la empresa.",
+            "en": "Her leadership transformed the company.",
+            "note": "líder + -azgo"
+          }
+        ]
+      },
+      {
+        "tag": "productividad",
+        "heading": "Chaining affixes to coin words",
+        "body": "Real fluency is combining pieces. From <b>feliz</b> you get <b>felicidad</b>, and adding negation gives <b>infelicidad</b>. From <b>hacer</b> you reach <b>deshacer</b>, <b>rehacer</b> and the noun <b>deshacerse de</b>. The suffix <b>-mente</b> then turns adjectives into adverbs, always attaching to the <b>feminine</b> form: rápida → <b>rápidamente</b>.",
+        "conj": [
+          ["feliz → felicidad → infelicidad", "happy → happiness → unhappiness"],
+          ["hacer → deshacer → rehacer", "do → undo → redo"],
+          ["nacional → internacional", "national → international"],
+          ["rápida → rápidamente", "quick → quickly"]
+        ],
+        "ex": [
+          {
+            "es": "La <b>imprevisibilidad</b> del mercado lo asusta.",
+            "en": "The unpredictability of the market scares him.",
+            "note": "im- + prever + -ible + -dad"
+          },
+          {
+            "es": "Actuó <b>irresponsablemente</b> y lo sabe.",
+            "en": "He acted irresponsibly and he knows it.",
+            "note": "i(r)- + responsable + -mente"
+          }
+        ]
+      },
+      {
+        "tag": "cultismo",
+        "heading": "Cultismo vs patrimonial: the learned doublets",
+        "body": "Many Latin roots entered Spanish <b>twice</b>: once through centuries of popular speech (the <b>voz patrimonial</b>, worn down by sound change) and once borrowed straight from Latin by scholars (the <b>cultismo</b>, closer to the original). This is why <b>colocar</b> and <b>colgar</b> both come from <i>collocare</i>, and <b>cátedra</b> and <b>cadera</b> both from <i>cathedra</i>. The cultismo usually sounds more formal or technical.",
+        "conj": [
+          ["collocare", "colgar (patrimonial) / colocar (culto)"],
+          ["cathedra", "cadera (patrimonial) / cátedra (culto)"],
+          ["clavem", "llave (patrimonial) / clave (culto)"],
+          ["operam", "obra (patrimonial) / ópera (culto)"]
+        ],
+        "ex": [
+          {
+            "es": "Prefiere <b>colocar</b> los libros; yo solo los <b>cuelgo</b> del clavo.",
+            "en": "He prefers to arrange the books; I just hang them on the nail.",
+            "note": "same Latin root, two words"
+          },
+          {
+            "es": "Ganó la <b>cátedra</b> tras años de esfuerzo.",
+            "en": "She won the professorship after years of effort.",
+            "note": "cultismo = formal register"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "des-/in-(im-/i-) negate; re- repeats or intensifies; sobre-/super- mark excess.",
+      "in- assimilates: im- before p/b (imposible), i- before l/r (ilegal, irreal).",
+      "-ción/-sión and -miento nominalise verbs; -dad/-tad, -ez/-eza, -ura nominalise adjectives.",
+      "Cultismo/patrimonial doublets (colocar/colgar, cátedra/cadera) share one Latin root; the cultismo is more formal."
+    ],
+    "mistakes": [
+      {
+        "w": "Es inposible terminarlo hoy.",
+        "r": "Es imposible terminarlo hoy.",
+        "why": "in- assimilates to im- before p and b: imposible, not inposible."
+      },
+      {
+        "w": "Actuó rápidomente.",
+        "r": "Actuó rápidamente.",
+        "why": "-mente attaches to the feminine adjective: rápida → rápidamente."
+      },
+      {
+        "w": "Admiro su liderato en el equipo.",
+        "r": "Admiro su liderazgo en el equipo.",
+        "why": "The productive noun from líder is liderazgo (with -azgo), not the calqued 'liderato' in this sense."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Antes de firmar, no conviene ___ el riesgo real del proyecto.",
+      "prompt_en": "Before signing, it's unwise to underestimate the project's real risk.",
+      "options": [
+        { "id": "a", "text": "infravalorar" },
+        { "id": "b", "text": "invalorar" },
+        { "id": "c", "text": "desvalorar" },
+        { "id": "d", "text": "revalorar" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! infra- (por debajo) + valorar = infravalorar.",
+      "no": "To under-value is “infravalorar” (infra- = below), not invalorar."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Su respuesta fue totalmente ___; nadie la esperaba.",
+      "prompt_en": "His answer was completely unpredictable; nobody expected it.",
+      "options": [
+        { "id": "a", "text": "imprevisible" },
+        { "id": "b", "text": "inprevisible" },
+        { "id": "c", "text": "desprevisible" },
+        { "id": "d", "text": "irprevisible" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Ante p → im-: imprevisible.",
+      "no": "Before p the prefix becomes im-: “imprevisible”, not inprevisible."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"The company's sustained growth surprised everyone.\"",
+      "tokens": ["El", "crecimiento", "sostenido", "de", "la", "empresa", "sorprendió", "a", "todos", "crecimento", "creciendo"],
+      "answer": ["El", "crecimiento", "sostenido", "de", "la", "empresa", "sorprendió", "a", "todos"],
+      "ok": "¡Perfecto! crecer + -miento → crecimiento.",
+      "no": "The noun is “crecimiento” (crecer + -miento) — mind the i before -miento."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "El error era grave, así que tuvo que ___ todo el documento. (hacer, otra vez)",
+      "prompt_en": "The mistake was serious, so he had to redo the whole document.",
+      "accepted": ["rehacer"],
+      "ignore_accents": true,
+      "hint": "Prefix for 'again' + hacer.",
+      "ok": "¡Bien! re- + hacer = rehacer.",
+      "no": "To do again is “rehacer” (re- + hacer)."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each base word to its correct derived noun.",
+      "pairs": [
+        ["feliz", "felicidad"],
+        ["bello", "belleza"],
+        ["dulce", "dulzura"],
+        ["líder", "liderazgo"]
+      ],
+      "ok": "¡Excelente! Dominas los sufijos abstractos.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Colocar y colgar vienen de la misma raíz latina.",
+      "accepted": ["colocar y colgar vienen de la misma raiz latina"],
+      "ignore_accents": true,
+      "translation": "Colocar and colgar come from the same Latin root.",
+      "ok": "¡Correcto! Un doblete culto/patrimonial.",
+      "no": "It was: “Colocar y colgar vienen de la misma raíz latina.” (a learned/inherited doublet)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Two editors discuss why one word sounds more formal 📚",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Por qué “cátedra” suena tan culto y “cadera” tan cotidiano, si vienen de lo mismo?",
+          "en": "Why does “cátedra” sound so learned and “cadera” so everyday, if they come from the same word?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Porque “cadera” es la voz patrimonial, gastada por el uso, y “cátedra” es el cultismo tomado directamente del latín." },
+        { "id": "b", "text": "Porque “cátedra” es más nueva y alguien la inventó en el siglo pasado." },
+        { "id": "c", "text": "Porque en realidad no tienen nada que ver: son raíces distintas por casualidad parecidas." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Esa es exactamente la distinción culto/patrimonial.",
+      "no": "The formal one is the cultismo taken straight from Latin; the everyday one is the worn-down voz patrimonial — option a."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Tuvo que rehacer el informe porque lo había sobrevalorado.",
+      "en": "He had to redo the report because he had overvalued it.",
+      "ok": "¡Perfecto! re- y sobre- bien encadenados.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Tuvo que rehacer el informe porque lo había sobrevalorado.”"
+    }
+  ],
+  "vocab": [
+    { "es": "deshacer", "en": "to undo (des- + hacer)" },
+    { "es": "rehacer", "en": "to redo (re- + hacer)" },
+    { "es": "sobrevalorar", "en": "to overvalue (sobre- + valorar)" },
+    { "es": "crecimiento", "en": "growth (crecer + -miento)" },
+    { "es": "liderazgo", "en": "leadership (líder + -azgo)" },
+    { "es": "cultismo", "en": "learned word borrowed straight from Latin" },
+    { "es": "voz patrimonial", "en": "inherited word worn down by popular speech" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["deshacer", "rehacer", "sobrevalorar", "crecimiento", "cultismo"]
+  }
+}

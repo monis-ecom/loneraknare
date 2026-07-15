@@ -1,0 +1,336 @@
+{
+  "unit": {
+    "id": "es-a2-u06",
+    "title": "Preterite vs imperfect",
+    "subtitle": "Choosing the right past tense: the moment vs the backdrop",
+    "level": "A2",
+    "order": 6,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Two pasts, one story",
+    "intro": "Spanish has two past tenses and they do different jobs. The <b>preterite</b> reports a <b>completed</b> action — something that happened and finished. The <b>imperfect</b> paints the <b>background</b>: descriptions, habits, and actions in progress. The magic is how they work <b>together</b>: the imperfect sets the scene, and the preterite is what suddenly happens.",
+    "sections": [
+      {
+        "tag": "pretérito",
+        "heading": "Preterite = a finished moment",
+        "body": "Use the <b>preterite</b> for a single, completed action — with a clear start or end. It's the verb that moves the story forward:",
+        "conj": [
+          [
+            "yesterday",
+            "ayer"
+          ],
+          [
+            "suddenly",
+            "de repente"
+          ],
+          [
+            "last night",
+            "anoche"
+          ],
+          [
+            "one day",
+            "un día"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Ayer</b> comí en un restaurante.",
+            "en": "Yesterday I ate at a restaurant.",
+            "note": "one finished action"
+          },
+          {
+            "es": "<b>De repente</b>, sonó el teléfono.",
+            "en": "Suddenly, the phone rang.",
+            "note": "de repente → preterite"
+          }
+        ]
+      },
+      {
+        "tag": "imperfecto",
+        "heading": "Imperfect = the ongoing backdrop",
+        "body": "Use the <b>imperfect</b> for descriptions, habits, and actions in progress — no clear end point. Cue words like <b>mientras</b> and <b>siempre</b> point here:",
+        "conj": [
+          [
+            "while",
+            "mientras"
+          ],
+          [
+            "always",
+            "siempre"
+          ],
+          [
+            "every day",
+            "todos los días"
+          ],
+          [
+            "usually",
+            "normalmente"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Mientras</b> comía, escuchaba música.",
+            "en": "While I ate, I listened to music.",
+            "note": "two ongoing actions"
+          },
+          {
+            "es": "De niño <b>siempre</b> jugaba fuera.",
+            "en": "As a child I always played outside.",
+            "note": "a habit → imperfect"
+          }
+        ]
+      },
+      {
+        "tag": "juntos",
+        "heading": "The two together: interruption",
+        "body": "Very often one sentence uses <b>both</b>: the imperfect gives the ongoing background, and the preterite is the action that <b>interrupts</b> it. English does this with “was …-ing … when …”:",
+        "ex": [
+          {
+            "es": "<b>Comía</b> cuando <b>llamaste</b>.",
+            "en": "I was eating when you called.",
+            "note": "background (imperfect) + interruption (preterite)"
+          },
+          {
+            "es": "<b>Dormía</b> cuando <b>sonó</b> la alarma.",
+            "en": "I was sleeping when the alarm went off.",
+            "note": "ongoing + sudden event"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Preterite = a completed, finished action; imperfect = background, description, habit.",
+      "Cues for preterite: de repente, ayer, anoche, un día.",
+      "Cues for imperfect: mientras, siempre, todos los días, normalmente.",
+      "Together: imperfect (was …-ing) + preterite interruption. “Comía cuando llamaste.”"
+    ],
+    "mistakes": [
+      {
+        "w": "La casa fue grande y bonita.",
+        "r": "La casa era grande y bonita.",
+        "why": "A description of how something was uses the imperfect: era, not the preterite fue."
+      },
+      {
+        "w": "Ayer comía en un restaurante nuevo.",
+        "r": "Ayer comí en un restaurante nuevo.",
+        "why": "'Ayer' points to one finished action, so use the preterite: comí."
+      },
+      {
+        "w": "Dormía cuando sonaba la alarma.",
+        "r": "Dormía cuando sonó la alarma.",
+        "why": "The interrupting event is a single finished action → preterite: sonó."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "De repente, ___ el teléfono.",
+      "prompt_en": "Suddenly, the phone rang.",
+      "options": [
+        {
+          "id": "a",
+          "text": "sonó"
+        },
+        {
+          "id": "b",
+          "text": "sonaba"
+        },
+        {
+          "id": "c",
+          "text": "suena"
+        },
+        {
+          "id": "d",
+          "text": "sonará"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! “De repente” → pretérito (sonó).",
+      "no": "“De repente” signals a sudden finished action → preterite: “sonó”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "La casa ___ grande y bonita.",
+      "prompt_en": "The house was big and pretty.",
+      "options": [
+        {
+          "id": "a",
+          "text": "era"
+        },
+        {
+          "id": "b",
+          "text": "fue"
+        },
+        {
+          "id": "c",
+          "text": "estuvo"
+        },
+        {
+          "id": "d",
+          "text": "es"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Descripción → imperfecto (era).",
+      "no": "A description of how it was uses the imperfect: “era”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I was eating when you called.”",
+      "tokens": [
+        "Comía",
+        "cuando",
+        "llamaste",
+        "comí",
+        "llamabas"
+      ],
+      "answer": [
+        "Comía",
+        "cuando",
+        "llamaste"
+      ],
+      "ok": "¡Perfecto! Fondo (comía) + interrupción (llamaste).",
+      "no": "“Comía cuando llamaste” — imperfect background + preterite interruption."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Mientras yo ___, escuchaba música.",
+      "prompt_en": "While I cooked, I listened to music.",
+      "accepted": [
+        "cocinaba"
+      ],
+      "ignore_accents": true,
+      "hint": "cocinar, imperfect — 'mientras' means ongoing.",
+      "ok": "¡Bien! “Mientras” → imperfecto (cocinaba).",
+      "no": "“Mientras” signals an ongoing action → imperfect: “cocinaba”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each cue word to the tense it signals.",
+      "pairs": [
+        [
+          "de repente",
+          "pretérito"
+        ],
+        [
+          "ayer",
+          "pretérito"
+        ],
+        [
+          "mientras",
+          "imperfecto"
+        ],
+        [
+          "siempre",
+          "imperfecto"
+        ]
+      ],
+      "ok": "¡Excelente! Las pistas están claras.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Dormía cuando sonó la alarma.",
+      "accepted": [
+        "dormia cuando sono la alarma"
+      ],
+      "ignore_accents": true,
+      "translation": "I was sleeping when the alarm went off.",
+      "ok": "¡Correcto! “Dormía cuando sonó la alarma.”",
+      "no": "It was: “Dormía cuando sonó la alarma.” (I was sleeping when the alarm went off.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Explaining why you missed a call 📞",
+      "lines": [
+        {
+          "speaker": "Sofía",
+          "es": "Te llamé anoche, ¿por qué no contestaste?",
+          "en": "I called you last night, why didn't you answer?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Lo siento, dormía cuando llamaste."
+        },
+        {
+          "id": "b",
+          "text": "Lo siento, dormí cuando llamabas."
+        },
+        {
+          "id": "c",
+          "text": "Lo siento, duermo cuando llamas."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Fondo (dormía) + interrupción (llamaste).",
+      "no": "Background + interruption: “dormía cuando llamaste” (I was sleeping when you called)."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Comía cuando llamaste",
+      "en": "I was eating when you called",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the two verbs: “comía” and “llamaste”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "mientras",
+      "en": "while"
+    },
+    {
+      "es": "cuando",
+      "en": "when"
+    },
+    {
+      "es": "de repente",
+      "en": "suddenly"
+    },
+    {
+      "es": "mientras tanto",
+      "en": "meanwhile"
+    },
+    {
+      "es": "anoche",
+      "en": "last night"
+    },
+    {
+      "es": "todos los días",
+      "en": "every day"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "mientras",
+      "cuando",
+      "de repente",
+      "mientras tanto"
+    ]
+  }
+}

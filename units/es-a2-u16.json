@@ -1,0 +1,310 @@
+{
+  "unit": {
+    "id": "es-a2-u16",
+    "title": "Subjunctive — first steps",
+    "subtitle": "Wishes and hopes: quiero que, espero que, ojalá",
+    "level": "A2",
+    "order": 16,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "When one person wants what another should do",
+    "intro": "Until now your verbs have stated <b>facts</b>. But when you <b>wish, hope, or wait for</b> someone else to do something, Spanish switches to a different mood: the <b>subjunctive</b>. Don't panic — we only need it in three tiny openers here: <b>quiero que…</b> (I want that…), <b>espero que…</b> (I hope that…), and <b>ojalá (que)…</b> (hopefully…). After these, the verb's vowel <b>flips</b>.",
+    "sections": [
+      {
+        "tag": "la idea",
+        "heading": "Why the verb changes",
+        "body": "Compare: <b>Hablo</b> español (fact — I speak). But <b>Quiero que hables</b> español (a wish — I want YOU to). The second subject is different from the first, and it's only a wish, so the verb moves to the subjunctive. The trigger is always the little word <b>que</b> after wanting or hoping.",
+        "ex": [
+          {
+            "es": "Yo hablo, pero <b>quiero que</b> tú <b>hables</b>.",
+            "en": "I speak, but I want you to speak.",
+            "note": "two subjects: yo → tú"
+          }
+        ]
+      },
+      {
+        "tag": "la regla",
+        "heading": "The vowel flip",
+        "body": "The rule is beautifully simple. <b>-AR</b> verbs take an <b>-e</b>. <b>-ER</b> and <b>-IR</b> verbs take an <b>-a</b>. Opposite of normal:",
+        "conj": [
+          ["hablar → que yo", "hable"],
+          ["hablar → que tú", "hables"],
+          ["hablar → que él", "hable"],
+          ["comer → que yo", "coma"],
+          ["comer → que tú", "comas"],
+          ["vivir → que él", "viva"]
+        ],
+        "ex": [
+          {
+            "es": "Espero que <b>comas</b> bien.",
+            "en": "I hope you eat well.",
+            "note": "comer → coma/comas"
+          },
+          {
+            "es": "Quiero que <b>hables</b> con ella.",
+            "en": "I want you to speak with her.",
+            "note": "hablar → hable/hables"
+          }
+        ]
+      },
+      {
+        "tag": "ojalá",
+        "heading": "Ojalá — the hope word",
+        "body": "<b>Ojalá</b> (from Arabic, “God willing”) means <b>hopefully / I hope</b>. It's always followed by the subjunctive, with or without <b>que</b>. A couple of common irregulars: <b>venir → venga</b>, <b>llover → llueva</b>.",
+        "ex": [
+          {
+            "es": "<b>Ojalá</b> llueva mañana.",
+            "en": "Hopefully it rains tomorrow.",
+            "note": "llover → llueva"
+          },
+          {
+            "es": "<b>Espero que</b> vengas a la fiesta.",
+            "en": "I hope you come to the party.",
+            "note": "venir → venga/vengas"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "After quiero que / espero que / ojalá, use the subjunctive.",
+      "The vowel flips: -AR → -e (hable), -ER/-IR → -a (coma, viva).",
+      "You need it when the second subject is different: quiero que tú hables.",
+      "Ojalá always takes the subjunctive: ojalá llueva, ojalá vengas."
+    ],
+    "mistakes": [
+      {
+        "w": "Quiero que hablas español.",
+        "r": "Quiero que hables español.",
+        "why": "After 'quiero que' use the subjunctive (hables), not the indicative (hablas)."
+      },
+      {
+        "w": "Espero que comes bien.",
+        "r": "Espero que comas bien.",
+        "why": "comer flips to -a in the subjunctive: comas, not comes."
+      },
+      {
+        "w": "Ojalá viene mañana.",
+        "r": "Ojalá venga mañana.",
+        "why": "Ojalá always takes the subjunctive: venga, not viene."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Quiero que tú ___ español.",
+      "prompt_en": "I want you to speak Spanish.",
+      "options": [
+        {
+          "id": "a",
+          "text": "hablas"
+        },
+        {
+          "id": "b",
+          "text": "hables"
+        },
+        {
+          "id": "c",
+          "text": "hablar"
+        },
+        {
+          "id": "d",
+          "text": "hablo"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! Quiero que → hables.",
+      "no": "After 'quiero que', the verb flips: “hables” (subjunctive)."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Espero que tú ___ bien.",
+      "prompt_en": "I hope you eat well.",
+      "options": [
+        {
+          "id": "a",
+          "text": "comes"
+        },
+        {
+          "id": "b",
+          "text": "comas"
+        },
+        {
+          "id": "c",
+          "text": "comer"
+        },
+        {
+          "id": "d",
+          "text": "como"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! comer → comas.",
+      "no": "-ER verbs take -a: “comas”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I hope you come to the party.”",
+      "tokens": [
+        "Espero",
+        "que",
+        "vengas",
+        "a",
+        "la",
+        "fiesta",
+        "vienes",
+        "venir"
+      ],
+      "answer": [
+        "Espero",
+        "que",
+        "vengas",
+        "a",
+        "la",
+        "fiesta"
+      ],
+      "ok": "¡Perfecto! Espero que vengas — subjuntivo.",
+      "no": "“Espero que vengas a la fiesta” — venir flips to vengas."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Ojalá ___ mañana. (llover)",
+      "prompt_en": "Hopefully it rains tomorrow.",
+      "accepted": [
+        "llueva"
+      ],
+      "ignore_accents": true,
+      "hint": "llover in the subjunctive: llue___.",
+      "ok": "¡Bien! Ojalá llueva.",
+      "no": "Ojalá + subjunctive → “llueva”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its subjunctive (yo/tú) form.",
+      "pairs": [
+        [
+          "hablar",
+          "hables"
+        ],
+        [
+          "comer",
+          "comas"
+        ],
+        [
+          "vivir",
+          "vivas"
+        ],
+        [
+          "venir",
+          "vengas"
+        ]
+      ],
+      "ok": "¡Excelente! You've got the vowel flip.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Espero que vengas mañana.",
+      "accepted": [
+        "espero que vengas manana"
+      ],
+      "ignore_accents": true,
+      "translation": "I hope you come tomorrow.",
+      "ok": "¡Correcto! “Espero que vengas mañana.”",
+      "no": "It was: “Espero que vengas mañana.” (I hope you come tomorrow.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend is nervous before an exam 📚",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "Mañana tengo un examen difícil.",
+          "en": "Tomorrow I have a hard exam."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "¡Espero que tengas suerte!"
+        },
+        {
+          "id": "b",
+          "text": "Espero que tienes suerte."
+        },
+        {
+          "id": "c",
+          "text": "Quiero que hablas más."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Espero que + subjuntivo → tengas.",
+      "no": "After 'espero que' use the subjunctive: “Espero que tengas suerte.” (I hope you're lucky!)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Quiero que hables español.",
+      "en": "I want you to speak Spanish.",
+      "ok": "¡Perfecto! Great pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "quiero que",
+      "en": "I want (that)…"
+    },
+    {
+      "es": "espero que",
+      "en": "I hope (that)…"
+    },
+    {
+      "es": "ojalá",
+      "en": "hopefully / I hope"
+    },
+    {
+      "es": "que hables",
+      "en": "that you speak"
+    },
+    {
+      "es": "que vengas",
+      "en": "that you come"
+    },
+    {
+      "es": "que comas",
+      "en": "that you eat"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "quiero que",
+      "espero que",
+      "ojalá",
+      "que hables",
+      "que vengas"
+    ]
+  }
+}

@@ -1,0 +1,376 @@
+{
+  "unit": {
+    "id": "es-a2-u12",
+    "title": "Future tense",
+    "subtitle": "The futuro simple: hablaré, comeré, viviré",
+    "level": "A2",
+    "order": 12,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Talking about tomorrow",
+    "intro": "The <b>futuro simple</b> is one of the easiest tenses in Spanish: take the <b>whole infinitive</b> and add one set of endings — the <b>same endings for -ar, -er and -ir verbs</b>. <i>Mañana hablaré con ella</i> (Tomorrow I'll talk to her). Watch the accents, and learn a handful of irregular stems.",
+    "sections": [
+      {
+        "tag": "formación",
+        "heading": "Infinitive + endings",
+        "body": "Keep the full infinitive and add: <b>-é, -ás, -á, -emos, -éis, -án</b>. No dropping the -ar/-er/-ir — the ending sticks straight onto it:",
+        "conj": [
+          [
+            "yo",
+            "hablaré"
+          ],
+          [
+            "tú",
+            "hablarás"
+          ],
+          [
+            "él/ella",
+            "hablará"
+          ],
+          [
+            "nosotros",
+            "hablaremos"
+          ],
+          [
+            "vosotros",
+            "hablaréis"
+          ],
+          [
+            "ellos",
+            "hablarán"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Mañana <b>hablaré</b> con ella.",
+            "en": "Tomorrow I'll talk to her.",
+            "note": "hablar + é"
+          },
+          {
+            "es": "<b>Comeremos</b> a las ocho.",
+            "en": "We'll eat at eight.",
+            "note": "comer + emos"
+          }
+        ]
+      },
+      {
+        "tag": "acentos",
+        "heading": "Mind the accent",
+        "body": "Every form except <b>nosotros</b> carries a written accent. Forgetting it changes the meaning — <b>hablare</b> (no accent) is a different, rare form, while <b>hablaré</b> is \"I will speak\".",
+        "ex": [
+          {
+            "es": "<b>Viviré</b> en Madrid.",
+            "en": "I'll live in Madrid.",
+            "note": "accent on the é"
+          },
+          {
+            "es": "Ellos <b>comprarán</b> la casa.",
+            "en": "They'll buy the house.",
+            "note": "accent on the á"
+          }
+        ]
+      },
+      {
+        "tag": "irregulares",
+        "heading": "Irregular stems (same endings!)",
+        "body": "A few common verbs change the <b>stem</b>, but the endings stay identical. Learn the stem and you know all six forms:",
+        "conj": [
+          [
+            "tener",
+            "tendré"
+          ],
+          [
+            "hacer",
+            "haré"
+          ],
+          [
+            "poder",
+            "podré"
+          ],
+          [
+            "salir",
+            "saldré"
+          ],
+          [
+            "venir",
+            "vendré"
+          ],
+          [
+            "poner",
+            "pondré"
+          ],
+          [
+            "decir",
+            "diré"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Tendré</b> tiempo mañana.",
+            "en": "I'll have time tomorrow.",
+            "note": "tener → tendr-"
+          },
+          {
+            "es": "<b>Haré</b> la cena esta noche.",
+            "en": "I'll make dinner tonight.",
+            "note": "hacer → har-"
+          }
+        ]
+      },
+      {
+        "tag": "tiempo",
+        "heading": "Time markers",
+        "body": "The future often pairs with words that point ahead: <b>mañana</b> (tomorrow), <b>la próxima semana</b> (next week), <b>el año que viene</b> (next year).",
+        "ex": [
+          {
+            "es": "<b>La próxima semana</b> viajaré a Roma.",
+            "en": "Next week I'll travel to Rome.",
+            "note": "la próxima semana"
+          },
+          {
+            "es": "<b>Mañana</b> saldremos temprano.",
+            "en": "Tomorrow we'll leave early.",
+            "note": "salir → saldr-"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Future = full infinitive + é, ás, á, emos, éis, án (same for all verbs).",
+      "Every form except nosotros has a written accent: hablaré, hablarás, hablará, hablaréis, hablarán.",
+      "Irregular stems keep the same endings: tendré, haré, podré, saldré, vendré, pondré, diré.",
+      "Pair it with mañana, la próxima semana, el año que viene."
+    ],
+    "mistakes": [
+      {
+        "w": "Mañana hablare con ella.",
+        "r": "Mañana hablaré con ella.",
+        "why": "The yo form needs the accent: hablaré, not hablare."
+      },
+      {
+        "w": "Mañana teneré tiempo.",
+        "r": "Mañana tendré tiempo.",
+        "why": "tener has an irregular stem: tendré, not 'teneré'."
+      },
+      {
+        "w": "Comerémos a las ocho.",
+        "r": "Comeremos a las ocho.",
+        "why": "The nosotros form has no accent: comeremos."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Mañana ___ con ella.",
+      "prompt_en": "Tomorrow I'll talk to her.",
+      "options": [
+        {
+          "id": "a",
+          "text": "hablaré"
+        },
+        {
+          "id": "b",
+          "text": "hablaba"
+        },
+        {
+          "id": "c",
+          "text": "hablo"
+        },
+        {
+          "id": "d",
+          "text": "hablé"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Futuro: hablar + é.",
+      "no": "Future of hablar (yo) → “hablaré”, with the accent."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Mañana yo ___ tiempo.",
+      "prompt_en": "Tomorrow I'll have time.",
+      "options": [
+        {
+          "id": "a",
+          "text": "teneré"
+        },
+        {
+          "id": "b",
+          "text": "tendré"
+        },
+        {
+          "id": "c",
+          "text": "tendrá"
+        },
+        {
+          "id": "d",
+          "text": "tenré"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! Tener → tendré.",
+      "no": "tener has an irregular stem → “tendré” (yo)."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Next week I'll travel to Rome.”",
+      "tokens": [
+        "La",
+        "próxima",
+        "semana",
+        "viajaré",
+        "a",
+        "Roma",
+        "viajé",
+        "viajo"
+      ],
+      "answer": [
+        "La",
+        "próxima",
+        "semana",
+        "viajaré",
+        "a",
+        "Roma"
+      ],
+      "ok": "¡Perfecto! Futuro: viajar + é.",
+      "no": "“La próxima semana viajaré a Roma” — future of viajar."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Esta noche yo ___ la cena. (hacer)",
+      "prompt_en": "Tonight I'll make dinner.",
+      "accepted": [
+        "haré"
+      ],
+      "ignore_accents": true,
+      "hint": "hacer has an irregular future stem: har-.",
+      "ok": "¡Bien! Hacer → haré.",
+      "no": "hacer → “haré” (yo), irregular stem har-."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each infinitive to its future 'yo' form.",
+      "pairs": [
+        [
+          "tener",
+          "tendré"
+        ],
+        [
+          "hacer",
+          "haré"
+        ],
+        [
+          "poder",
+          "podré"
+        ],
+        [
+          "salir",
+          "saldré"
+        ]
+      ],
+      "ok": "¡Excelente! You've mastered the irregular stems.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Mañana hablaré con ella.",
+      "accepted": [
+        "manana hablare con ella"
+      ],
+      "ignore_accents": true,
+      "translation": "Tomorrow I'll talk to her.",
+      "ok": "¡Correcto! “Mañana hablaré con ella.”",
+      "no": "It was: “Mañana hablaré con ella.” (Tomorrow I'll talk to her.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Making plans for next week 📅",
+      "lines": [
+        {
+          "speaker": "Sofía",
+          "es": "¿Qué harás la próxima semana?",
+          "en": "What will you do next week?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Viajaré a Barcelona."
+        },
+        {
+          "id": "b",
+          "text": "Viajare a Barcelona."
+        },
+        {
+          "id": "c",
+          "text": "Viajé a Barcelona."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Futuro con acento: viajaré.",
+      "no": "Future needs the accent → “Viajaré a Barcelona”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Mañana tendré tiempo",
+      "en": "Tomorrow I'll have time",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "mañana",
+      "en": "tomorrow"
+    },
+    {
+      "es": "la próxima semana",
+      "en": "next week"
+    },
+    {
+      "es": "hablaré",
+      "en": "I will speak"
+    },
+    {
+      "es": "tendré",
+      "en": "I will have"
+    },
+    {
+      "es": "haré",
+      "en": "I will do/make"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "mañana",
+      "la próxima semana",
+      "hablaré",
+      "tendré",
+      "haré"
+    ]
+  }
+}

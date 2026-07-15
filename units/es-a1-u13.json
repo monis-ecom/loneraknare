@@ -1,0 +1,376 @@
+{
+  "unit": {
+    "id": "es-a1-u13",
+    "title": "Tener (to have)",
+    "subtitle": "The verb tener: age, feelings, and obligations",
+    "level": "A1",
+    "order": 13,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "One verb for having, feeling, and must-doing",
+    "intro": "<b>Tener</b> means “to have”, but Spanish uses it far beyond possession. It tells your <b>age</b>, how you <b>feel</b> (hungry, cold, sleepy), and what you <b>have to do</b>. It’s irregular, so it’s worth memorising — you’ll use it every day.",
+    "sections": [
+      {
+        "tag": "conjugación",
+        "heading": "tener, conjugated",
+        "body": "Notice two twists: the <b>yo</b> form adds a <b>g</b> (tengo), and the <b>e</b> changes to <b>ie</b> in most forms:",
+        "conj": [
+          [
+            "yo",
+            "tengo"
+          ],
+          [
+            "tú",
+            "tienes"
+          ],
+          [
+            "él/ella",
+            "tiene"
+          ],
+          [
+            "nosotros",
+            "tenemos"
+          ],
+          [
+            "vosotros",
+            "tenéis"
+          ],
+          [
+            "ellos",
+            "tienen"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Yo <b>tengo</b> un hermano.",
+            "en": "I have a brother.",
+            "note": "yo → tengo"
+          },
+          {
+            "es": "Nosotros <b>tenemos</b> tiempo.",
+            "en": "We have time.",
+            "note": "nosotros keeps the e"
+          }
+        ]
+      },
+      {
+        "tag": "edad",
+        "heading": "Your age: tener + [number] + años",
+        "body": "To say your age, Spanish uses <b>tener</b>, not <b>ser</b>. Literally: “I have 25 years.”",
+        "ex": [
+          {
+            "es": "<b>Tengo</b> 25 <b>años</b>.",
+            "en": "I am 25 years old.",
+            "note": "never 'soy 25'"
+          },
+          {
+            "es": "Mi madre <b>tiene</b> 50 años.",
+            "en": "My mother is 50 years old.",
+            "note": "tiene + años"
+          }
+        ]
+      },
+      {
+        "tag": "sensaciones",
+        "heading": "Feelings: tener + noun",
+        "body": "Many feelings use <b>tener</b> + a noun, where English uses “to be”:",
+        "conj": [
+          [
+            "hungry",
+            "tener hambre"
+          ],
+          [
+            "thirsty",
+            "tener sed"
+          ],
+          [
+            "cold",
+            "tener frío"
+          ],
+          [
+            "hot",
+            "tener calor"
+          ],
+          [
+            "sleepy",
+            "tener sueño"
+          ],
+          [
+            "in a hurry",
+            "tener prisa"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Tengo hambre</b> y <b>sed</b>.",
+            "en": "I'm hungry and thirsty.",
+            "note": "literally 'I have hunger'"
+          },
+          {
+            "es": "Ella <b>tiene prisa</b>.",
+            "en": "She's in a hurry.",
+            "note": "tiene + prisa"
+          }
+        ]
+      },
+      {
+        "tag": "obligación",
+        "heading": "Obligation: tener que + infinitive",
+        "body": "To say you <b>have to</b> do something, use <b>tener que</b> + the infinitive (the -ar/-er/-ir form). Keep the second verb in the infinitive:",
+        "ex": [
+          {
+            "es": "<b>Tengo que estudiar</b>.",
+            "en": "I have to study.",
+            "note": "que + infinitive"
+          },
+          {
+            "es": "<b>Tenemos que trabajar</b> hoy.",
+            "en": "We have to work today.",
+            "note": "never 'tenemos que trabajamos'"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "tener: tengo, tienes, tiene, tenemos, tenéis, tienen.",
+      "Age uses tener, not ser: Tengo 25 años.",
+      "Feelings: tener hambre / sed / frío / calor / sueño / prisa.",
+      "tener que + infinitive = to have to do something."
+    ],
+    "mistakes": [
+      {
+        "w": "Yo teno un perro.",
+        "r": "Yo tengo un perro.",
+        "why": "The yo form adds a g: tengo, not teno."
+      },
+      {
+        "w": "Soy 25 años.",
+        "r": "Tengo 25 años.",
+        "why": "Age uses tener, not ser."
+      },
+      {
+        "w": "Tengo que estudio.",
+        "r": "Tengo que estudiar.",
+        "why": "After 'tener que', use the infinitive, not a conjugated verb."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Yo ___ dos hermanos.",
+      "prompt_en": "I have two brothers.",
+      "options": [
+        {
+          "id": "a",
+          "text": "tengo"
+        },
+        {
+          "id": "b",
+          "text": "tienes"
+        },
+        {
+          "id": "c",
+          "text": "tiene"
+        },
+        {
+          "id": "d",
+          "text": "tenemos"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! yo → tengo.",
+      "no": "yo → “tengo” (with the extra g)."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Mi padre ___ 50 años.",
+      "prompt_en": "My father is 50 years old.",
+      "options": [
+        {
+          "id": "a",
+          "text": "es"
+        },
+        {
+          "id": "b",
+          "text": "tiene"
+        },
+        {
+          "id": "c",
+          "text": "está"
+        },
+        {
+          "id": "d",
+          "text": "tienen"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! La edad usa tener → tiene.",
+      "no": "Age uses tener: “Mi padre tiene 50 años”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I have to study today.”",
+      "tokens": [
+        "Tengo",
+        "que",
+        "estudiar",
+        "hoy",
+        "estudio",
+        "tienes"
+      ],
+      "answer": [
+        "Tengo",
+        "que",
+        "estudiar",
+        "hoy"
+      ],
+      "ok": "¡Perfecto! tener que + infinitivo → tengo que estudiar.",
+      "no": "“Tengo que estudiar hoy” — use the infinitive after 'que'."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Tengo ___. ¿Comemos?",
+      "prompt_en": "I'm hungry. Shall we eat?",
+      "accepted": [
+        "hambre"
+      ],
+      "ignore_accents": true,
+      "hint": "The feeling of needing food.",
+      "ok": "¡Bien! Tengo hambre = I'm hungry.",
+      "no": "Being hungry → “tengo hambre”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each subject to the correct form of TENER.",
+      "pairs": [
+        [
+          "yo",
+          "tengo"
+        ],
+        [
+          "tú",
+          "tienes"
+        ],
+        [
+          "nosotros",
+          "tenemos"
+        ],
+        [
+          "ellos",
+          "tienen"
+        ]
+      ],
+      "ok": "¡Excelente! You’ve got tener locked in.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Tengo mucha sed.",
+      "accepted": [
+        "tengo mucha sed"
+      ],
+      "ignore_accents": true,
+      "translation": "I'm very thirsty.",
+      "ok": "¡Correcto! “Tengo mucha sed.”",
+      "no": "It was: “Tengo mucha sed.” (I'm very thirsty.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend asks your age 🎂",
+      "lines": [
+        {
+          "speaker": "Luis",
+          "es": "¿Cuántos años tienes?",
+          "en": "How old are you?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Tengo veinte años."
+        },
+        {
+          "id": "b",
+          "text": "Soy veinte años."
+        },
+        {
+          "id": "c",
+          "text": "Tengo prisa."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! La edad usa tener.",
+      "no": "Age uses tener: “Tengo veinte años.” (I'm twenty years old.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "tener prisa",
+      "en": "to be in a hurry",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "tener",
+      "en": "to have"
+    },
+    {
+      "es": "tengo",
+      "en": "I have"
+    },
+    {
+      "es": "años",
+      "en": "years (old)"
+    },
+    {
+      "es": "hambre",
+      "en": "hunger"
+    },
+    {
+      "es": "tener sed",
+      "en": "to be thirsty"
+    },
+    {
+      "es": "tener prisa",
+      "en": "to be in a hurry"
+    },
+    {
+      "es": "tener que",
+      "en": "to have to"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "tener",
+      "tengo",
+      "años",
+      "hambre",
+      "tener que"
+    ]
+  }
+}

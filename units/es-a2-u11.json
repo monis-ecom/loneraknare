@@ -1,0 +1,353 @@
+{
+  "unit": {
+    "id": "es-a2-u11",
+    "title": "Por vs para",
+    "subtitle": "Two words for 'for' — and when to use each",
+    "level": "A2",
+    "order": 11,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The famous por / para split",
+    "intro": "English has one word — <b>for</b> — where Spanish has two: <b>por</b> and <b>para</b>. The quick rule: <b>para</b> looks <b>forward</b> to a purpose, goal, or destination; <b>por</b> looks <b>back</b> to a cause, or covers exchange, duration, and movement through. Learn the buckets and it clicks.",
+    "sections": [
+      {
+        "tag": "para",
+        "heading": "PARA = purpose, goal, destination",
+        "body": "Use <b>para</b> for the aim or endpoint: <b>in order to</b>, a <b>destination</b>, a <b>deadline</b>, or a <b>recipient</b>.",
+        "conj": [
+          [
+            "purpose",
+            "para aprender"
+          ],
+          [
+            "destination",
+            "para Madrid"
+          ],
+          [
+            "deadline",
+            "para el lunes"
+          ],
+          [
+            "recipient",
+            "para ti"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Estudio <b>para aprender</b>.",
+            "en": "I study (in order) to learn.",
+            "note": "para + infinitive = purpose"
+          },
+          {
+            "es": "Este regalo es <b>para ti</b>.",
+            "en": "This gift is for you.",
+            "note": "recipient"
+          }
+        ]
+      },
+      {
+        "tag": "por",
+        "heading": "POR = cause, exchange, duration, through",
+        "body": "Use <b>por</b> for the reason behind something, a <b>price/exchange</b>, a <b>length of time</b>, or <b>movement through</b> a place.",
+        "conj": [
+          [
+            "reason/cause",
+            "por el tráfico"
+          ],
+          [
+            "exchange/price",
+            "por 10 euros"
+          ],
+          [
+            "duration",
+            "por dos horas"
+          ],
+          [
+            "through",
+            "por el parque"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Llego tarde <b>por el tráfico</b>.",
+            "en": "I'm late because of the traffic.",
+            "note": "cause"
+          },
+          {
+            "es": "Lo compré <b>por 10 euros</b>.",
+            "en": "I bought it for 10 euros.",
+            "note": "price/exchange"
+          }
+        ]
+      },
+      {
+        "tag": "gracias",
+        "heading": "Thanks and set phrases",
+        "body": "Saying thanks uses <b>por</b>, because you're thanking for a <b>cause</b>. And <b>por favor</b> is fixed — just memorise it.",
+        "ex": [
+          {
+            "es": "<b>Gracias por</b> tu ayuda.",
+            "en": "Thanks for your help.",
+            "note": "gracias por = thanks for"
+          },
+          {
+            "es": "Un café, <b>por favor</b>.",
+            "en": "A coffee, please.",
+            "note": "fixed phrase"
+          }
+        ]
+      },
+      {
+        "tag": "contraste",
+        "heading": "Purpose vs cause — the tricky pair",
+        "body": "The classic mix-up: <b>para</b> = the goal you're aiming at; <b>por</b> = the reason that made it happen. Compare them side by side.",
+        "ex": [
+          {
+            "es": "Estudio <b>para</b> el examen.",
+            "en": "I study for the exam. (goal)",
+            "note": "para = purpose"
+          },
+          {
+            "es": "Estudio <b>por</b> mis padres.",
+            "en": "I study because of / for the sake of my parents.",
+            "note": "por = cause/motive"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "PARA = purpose (para aprender), destination (para Madrid), deadline (para el lunes), recipient (para ti).",
+      "POR = cause (por el tráfico), exchange (por 10 euros), duration (por dos horas), through (por el parque).",
+      "Thanks uses por: Gracias por tu ayuda.",
+      "para + infinitive = in order to.",
+      "por favor is a fixed phrase."
+    ],
+    "mistakes": [
+      {
+        "w": "Estudio para el tráfico.",
+        "r": "Llego tarde por el tráfico.",
+        "why": "Traffic is a cause, not a goal → por, not para."
+      },
+      {
+        "w": "Gracias para tu ayuda.",
+        "r": "Gracias por tu ayuda.",
+        "why": "Thanking is about a cause → gracias por."
+      },
+      {
+        "w": "Este regalo es por ti.",
+        "r": "Este regalo es para ti.",
+        "why": "You are the recipient/destination of the gift → para."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Estudio ___ aprender español.",
+      "prompt_en": "I study (in order) to learn Spanish.",
+      "options": [
+        {
+          "id": "a",
+          "text": "para"
+        },
+        {
+          "id": "b",
+          "text": "por"
+        },
+        {
+          "id": "c",
+          "text": "por el"
+        },
+        {
+          "id": "d",
+          "text": "para el"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Propósito → para.",
+      "no": "Purpose (in order to) → “para aprender”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Llego tarde ___ el tráfico.",
+      "prompt_en": "I'm late because of the traffic.",
+      "options": [
+        {
+          "id": "a",
+          "text": "para"
+        },
+        {
+          "id": "b",
+          "text": "por"
+        },
+        {
+          "id": "c",
+          "text": "para el"
+        },
+        {
+          "id": "d",
+          "text": "de"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! Causa → por.",
+      "no": "Traffic is the cause → “por el tráfico”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Thanks for your help.”",
+      "tokens": [
+        "Gracias",
+        "por",
+        "tu",
+        "ayuda",
+        "para",
+        "tus"
+      ],
+      "answer": [
+        "Gracias",
+        "por",
+        "tu",
+        "ayuda"
+      ],
+      "ok": "¡Perfecto! Gracias por = thanks for.",
+      "no": "“Gracias por tu ayuda” — thanking uses por."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Este regalo es ___ ti.",
+      "prompt_en": "This gift is for you.",
+      "accepted": [
+        "para"
+      ],
+      "ignore_accents": true,
+      "hint": "You are the recipient.",
+      "ok": "¡Bien! El destinatario → para ti.",
+      "no": "Recipient → “para”: Este regalo es para ti."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each phrase to its function.",
+      "pairs": [
+        [
+          "para Madrid",
+          "destination"
+        ],
+        [
+          "por dos horas",
+          "duration"
+        ],
+        [
+          "para el lunes",
+          "deadline"
+        ],
+        [
+          "por 10 euros",
+          "price"
+        ]
+      ],
+      "ok": "¡Excelente! You've sorted the buckets.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Gracias por tu ayuda.",
+      "accepted": [
+        "gracias por tu ayuda"
+      ],
+      "ignore_accents": true,
+      "translation": "Thanks for your help.",
+      "ok": "¡Correcto! “Gracias por tu ayuda.”",
+      "no": "It was: “Gracias por tu ayuda.” (Thanks for your help.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Explaining why you're studying so hard 📚",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "¿Por qué estudias tanto?",
+          "en": "Why do you study so much?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Estudio para aprobar el examen."
+        },
+        {
+          "id": "b",
+          "text": "Estudio por aprobar el examen."
+        },
+        {
+          "id": "c",
+          "text": "Estudio para el tráfico."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! El objetivo → para.",
+      "no": "Your goal is to pass → “para aprobar el examen”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Gracias por tu ayuda",
+      "en": "Thanks for your help",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "por",
+      "en": "for / because of / through"
+    },
+    {
+      "es": "para",
+      "en": "for / in order to / toward"
+    },
+    {
+      "es": "para + infinitivo",
+      "en": "in order to (do)"
+    },
+    {
+      "es": "por favor",
+      "en": "please"
+    },
+    {
+      "es": "gracias por",
+      "en": "thanks for"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "por",
+      "para",
+      "para + infinitivo",
+      "por favor",
+      "gracias por"
+    ]
+  }
+}

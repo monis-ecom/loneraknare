@@ -1,0 +1,326 @@
+{
+  "unit": {
+    "id": "es-b2-u17",
+    "title": "Emphasis & cleft sentences",
+    "subtitle": "Highlight exactly what matters like a native speaker",
+    "level": "B2",
+    "order": 17,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Put the spotlight where you want it",
+    "intro": "Native speakers rarely say things flatly — they <b>frame</b> one idea as the important one. Spanish has elegant tools for this: the neuter <b>lo</b> to turn adjectives into concepts, <b>nominalization</b> to avoid repeating a noun, and <b>cleft sentences</b> that split a phrase to spotlight one part. Master these and your Spanish stops sounding like a translation.",
+    "sections": [
+      {
+        "tag": "lo + adjetivo",
+        "heading": "lo + adjective/adverb = 'the … thing' / 'how …'",
+        "body": "Put <b>lo</b> before an adjective or adverb to talk about the quality as an abstract idea. It also builds exclamations of degree with <b>lo … que</b>:",
+        "ex": [
+          {
+            "es": "<b>Lo difícil</b> es empezar.",
+            "en": "The hard part is starting.",
+            "note": "lo + adjective = the … thing"
+          },
+          {
+            "es": "<b>Lo bueno</b> es que llegaste a tiempo.",
+            "en": "The good thing is that you arrived on time.",
+            "note": "lo bueno es que…"
+          },
+          {
+            "es": "No sabes <b>lo cansado que</b> estoy.",
+            "en": "You have no idea how tired I am.",
+            "note": "lo + adj + que = how …"
+          }
+        ]
+      },
+      {
+        "tag": "nominalización",
+        "heading": "Nominalization: el/la/los/las + de/que",
+        "body": "To avoid repeating a noun, keep the article and add <b>de</b> (whose one) or <b>que</b> (the one that). The article agrees with the omitted noun:",
+        "ex": [
+          {
+            "es": "Mi coche y <b>el de</b> Juan.",
+            "en": "My car and Juan's (one).",
+            "note": "el de = the one belonging to"
+          },
+          {
+            "es": "<b>La que</b> compré ayer es mejor.",
+            "en": "The one (that) I bought yesterday is better.",
+            "note": "la que agrees with a feminine noun"
+          },
+          {
+            "es": "De todas las opciones, prefiero <b>las que</b> son gratis.",
+            "en": "Of all the options, I prefer the ones that are free.",
+            "note": "plural: las que"
+          }
+        ]
+      },
+      {
+        "tag": "oraciones enfáticas",
+        "heading": "Cleft sentences: ser … el/la/los que · fue … cuando/donde/quien",
+        "body": "Split the sentence around <b>ser</b> to spotlight one element. Use <b>lo que</b> for a whole idea, and <b>quien/cuando/donde</b> to match a person, time, or place. Watch the <b>agreement</b>: with a person after a preposition, use <b>quien</b>:",
+        "ex": [
+          {
+            "es": "<b>Lo que necesito es</b> tiempo.",
+            "en": "What I need is time.",
+            "note": "lo que … es … (a whole idea)"
+          },
+          {
+            "es": "<b>Fue</b> entonces <b>cuando</b> lo entendí.",
+            "en": "It was then that I understood it.",
+            "note": "time → fue … cuando"
+          },
+          {
+            "es": "<b>Es a ti a quien</b> busco.",
+            "en": "It's you (whom) I'm looking for.",
+            "note": "person + preposition → a quien"
+          },
+          {
+            "es": "<b>Fue María quien</b> lo hizo.",
+            "en": "It was María who did it.",
+            "note": "person as subject → quien"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "lo + adjective = 'the … thing': lo difícil, lo bueno. lo + adj + que = 'how …': lo cansado que estoy.",
+      "Nominalize to avoid repeating a noun: el de Juan (Juan's one), la que compré (the one I bought).",
+      "Cleft with a whole idea: Lo que necesito es tiempo.",
+      "Cleft for time/place/person: fue entonces cuando…, es aquí donde…, fue María quien…",
+      "Keep agreement in clefts: Es a ti a quien busco (preposition 'a' repeated + quien)."
+    ],
+    "mistakes": [
+      {
+        "w": "Es a ti que busco.",
+        "r": "Es a ti a quien busco.",
+        "why": "In a cleft with a person after a preposition, repeat the preposition and use quien: a ti a quien."
+      },
+      {
+        "w": "El que compré ayer es la mejor bici.",
+        "r": "La que compré ayer es la mejor bici.",
+        "why": "The nominalized article must agree with the omitted noun (la bici) → la que, not el que."
+      },
+      {
+        "w": "Fue entonces que lo entendí.",
+        "r": "Fue entonces cuando lo entendí.",
+        "why": "When you spotlight a time, the standard connector is cuando, not que."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ difícil es empezar; después todo fluye.",
+      "prompt_en": "The hard part is starting; after that everything flows.",
+      "options": [
+        {
+          "id": "a",
+          "text": "El"
+        },
+        {
+          "id": "b",
+          "text": "Lo"
+        },
+        {
+          "id": "c",
+          "text": "La"
+        },
+        {
+          "id": "d",
+          "text": "Los"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Correcto! lo + adjetivo = 'the … thing': lo difícil.",
+      "no": "Use the neuter “lo” + adjective for an abstract idea: “Lo difícil es empezar.”"
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Es a ti ___ busco, no a tu hermano.",
+      "prompt_en": "It's you I'm looking for, not your brother.",
+      "options": [
+        {
+          "id": "a",
+          "text": "que"
+        },
+        {
+          "id": "b",
+          "text": "quien"
+        },
+        {
+          "id": "c",
+          "text": "a quien"
+        },
+        {
+          "id": "d",
+          "text": "el que"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Exacto! Persona + preposición → se repite la 'a': a ti a quien.",
+      "no": "With a person after a preposition, repeat it and use quien: “Es a ti a quien busco.”"
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “What I need is time.”",
+      "tokens": [
+        "Lo",
+        "que",
+        "necesito",
+        "es",
+        "tiempo",
+        "El",
+        "necesita"
+      ],
+      "answer": [
+        "Lo",
+        "que",
+        "necesito",
+        "es",
+        "tiempo"
+      ],
+      "ok": "¡Perfecto! Estructura enfática: Lo que … es …",
+      "no": "“Lo que necesito es tiempo” — the cleft frames the whole idea with lo que … es."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Mi coche es viejo, pero ___ de Juan es nuevo. (the one)",
+      "prompt_en": "My car is old, but Juan's is new.",
+      "accepted": [
+        "el"
+      ],
+      "ignore_accents": true,
+      "hint": "Nominalize the masculine 'coche' with an article + de.",
+      "ok": "¡Bien! el de Juan = Juan's (one).",
+      "no": "Nominalize with the article agreeing with 'coche' (masculine): “el de Juan”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each emphatic tool to what it spotlights.",
+      "pairs": [
+        [
+          "lo bueno es que",
+          "the good thing (an idea)"
+        ],
+        [
+          "fue entonces cuando",
+          "a moment in time"
+        ],
+        [
+          "fue María quien",
+          "the person (who)"
+        ],
+        [
+          "la que compré",
+          "the one (nominalization)"
+        ]
+      ],
+      "ok": "¡Excelente! Sabes dónde poner el foco.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "No sabes lo cansado que estoy hoy.",
+      "accepted": [
+        "no sabes lo cansado que estoy hoy"
+      ],
+      "ignore_accents": true,
+      "translation": "You have no idea how tired I am today.",
+      "ok": "¡Correcto! “No sabes lo cansado que estoy hoy.”",
+      "no": "It was: “No sabes lo cansado que estoy hoy.” (You have no idea how tired I am today.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend congratulates you and asks what really made the difference 🎯",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¡Enhorabuena por el ascenso! ¿Qué crees que fue decisivo?",
+          "en": "Congrats on the promotion! What do you think was decisive?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Lo que marcó la diferencia fue la constancia; fue entonces cuando todo cambió."
+        },
+        {
+          "id": "b",
+          "text": "El que marcó la diferencia fue la constancia; fue entonces que todo cambió."
+        },
+        {
+          "id": "c",
+          "text": "Lo que marcó la diferencia es la constancia; fue allí quien todo cambió."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Lo que … fue … (idea) + fue entonces cuando … (tiempo). Énfasis impecable.",
+      "no": "Use lo que for a whole idea and cuando for a time: “Lo que marcó la diferencia fue la constancia; fue entonces cuando todo cambió.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Fue María quien lo hizo, no yo.",
+      "en": "It was María who did it, not me.",
+      "ok": "¡Perfecto! Oración enfática muy natural.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "lo bueno",
+      "en": "the good thing"
+    },
+    {
+      "es": "lo que",
+      "en": "what / the thing that"
+    },
+    {
+      "es": "lo importante",
+      "en": "the important thing"
+    },
+    {
+      "es": "fue... cuando",
+      "en": "it was … that (time)"
+    },
+    {
+      "es": "es... quien",
+      "en": "it is … who (person)"
+    },
+    {
+      "es": "el de",
+      "en": "the one belonging to"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "lo bueno",
+      "lo que",
+      "lo importante",
+      "fue... cuando",
+      "es... quien"
+    ]
+  }
+}

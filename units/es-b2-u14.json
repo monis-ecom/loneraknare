@@ -1,0 +1,338 @@
+{
+  "unit": {
+    "id": "es-b2-u14",
+    "title": "Probability & conjecture",
+    "subtitle": "Guessing with the future and conditional — no “quizás” required",
+    "level": "B2",
+    "order": 14,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Guess like a native — without saying “maybe”",
+    "intro": "Spanish makes an elegant move English can't: it uses the <b>future tense to guess about the present</b> and the <b>conditional to guess about the past</b>. «Serán las tres» doesn't mean “they will be three” — it means <b>“it must be about three.”</b> Add <b>deber de</b> + infinitive for suppositions and you can express probability without a single “quizás”.",
+    "sections": [
+      {
+        "tag": "futuro de probabilidad",
+        "heading": "Future = a guess about NOW",
+        "body": "The simple future can express a guess about the present — “must be / probably is”:",
+        "ex": [
+          {
+            "es": "<b>Serán</b> las tres.",
+            "en": "It must be about three o'clock.",
+            "note": "not a prediction — a guess about now"
+          },
+          {
+            "es": "<b>Estará</b> en casa.",
+            "en": "He's probably at home.",
+            "note": "estará = 'he must be' now"
+          }
+        ]
+      },
+      {
+        "tag": "condicional de probabilidad",
+        "heading": "Conditional = a guess about the PAST",
+        "body": "The conditional expresses a guess about a past situation — “must have been / probably was”:",
+        "ex": [
+          {
+            "es": "<b>Serían</b> las tres cuando llegó.",
+            "en": "It must have been about three when he arrived.",
+            "note": "guess about a past moment"
+          },
+          {
+            "es": "<b>Tendría</b> unos cuarenta años.",
+            "en": "He was probably around forty.",
+            "note": "tendría = 'he must have been'"
+          }
+        ]
+      },
+      {
+        "tag": "futuro perfecto",
+        "heading": "Future perfect = a guess about the recent past",
+        "body": "Use the <b>future perfect</b> (habré/habrá + participle) to guess about something that has just happened:",
+        "ex": [
+          {
+            "es": "<b>Habrá salido</b> ya.",
+            "en": "He must have left already.",
+            "note": "guess about a completed recent action"
+          },
+          {
+            "es": "No contesta; <b>se habrá dormido</b>.",
+            "en": "She's not answering; she's probably fallen asleep.",
+            "note": "se habrá dormido = 'she must have fallen asleep'"
+          }
+        ]
+      },
+      {
+        "tag": "deber de / a lo mejor",
+        "heading": "deber de + inf, and a lo mejor vs quizá",
+        "body": "<b>Deber de</b> + infinitive = supposition (must be). Careful: <b>deber</b> + infinitive (no <b>de</b>) = obligation. <b>A lo mejor</b> takes the <b>indicative</b>; <b>quizá(s) / tal vez</b> usually take the <b>subjunctive</b>:",
+        "conj": [
+          [
+            "supposition",
+            "Debe de estar cansado (he must be tired)"
+          ],
+          [
+            "obligation",
+            "Debe estar aquí a las ocho (he must be here at 8)"
+          ],
+          [
+            "a lo mejor + indicative",
+            "A lo mejor viene"
+          ],
+          [
+            "quizá(s) + subjunctive",
+            "Quizá venga"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Debe de estar</b> cansado.",
+            "en": "He must be tired.",
+            "note": "deber de = supposition"
+          },
+          {
+            "es": "<b>A lo mejor</b> viene esta tarde.",
+            "en": "Maybe he's coming this afternoon.",
+            "note": "a lo mejor + indicative (viene)"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Future of probability = guess about NOW: Serán las tres = It must be about three.",
+      "Conditional of probability = guess about the PAST: Serían las tres cuando llegó.",
+      "Future perfect = guess about the recent past: Habrá salido = He must have left.",
+      "deber de + inf = supposition; deber + inf = obligation. a lo mejor + indicative; quizá(s) + subjunctive."
+    ],
+    "mistakes": [
+      {
+        "w": "Debe de venir a las ocho en punto (it's his duty).",
+        "r": "Debe venir a las ocho en punto.",
+        "why": "For obligation use deber + infinitive; deber de is only for supposition."
+      },
+      {
+        "w": "A lo mejor venga mañana.",
+        "r": "A lo mejor viene mañana.",
+        "why": "A lo mejor takes the indicative (viene), not the subjunctive."
+      },
+      {
+        "w": "Son las tres, supongo. (as a guess about now, plainly)",
+        "r": "Serán las tres.",
+        "why": "To guess about the present, Spanish naturally uses the future: serán."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No sé la hora exacta. ___ las tres (guess about now).",
+      "prompt_en": "I don't know the exact time. It must be about three.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Serán"
+        },
+        {
+          "id": "b",
+          "text": "Son"
+        },
+        {
+          "id": "c",
+          "text": "Serían"
+        },
+        {
+          "id": "d",
+          "text": "Sean"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! futuro de probabilidad: serán = must be now.",
+      "no": "A guess about now uses the future: “Serán las tres”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ las tres cuando llegó (guess about the past).",
+      "prompt_en": "It must have been about three when he arrived.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Serían"
+        },
+        {
+          "id": "b",
+          "text": "Serán"
+        },
+        {
+          "id": "c",
+          "text": "Eran"
+        },
+        {
+          "id": "d",
+          "text": "Fueran"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! condicional de probabilidad: serían.",
+      "no": "A guess about the past uses the conditional: “Serían las tres cuando llegó”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “He must have left already.”",
+      "tokens": [
+        "Habrá",
+        "salido",
+        "ya",
+        "Habría",
+        "salir",
+        "saldrá"
+      ],
+      "answer": [
+        "Habrá",
+        "salido",
+        "ya"
+      ],
+      "ok": "¡Perfecto! futuro perfecto de probabilidad: habrá salido.",
+      "no": "“Habrá salido ya” — the future perfect guesses about the recent past."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Trabaja doce horas al día. Debe ___ estar agotado.",
+      "prompt_en": "He works twelve hours a day. He must be exhausted.",
+      "accepted": [
+        "de"
+      ],
+      "ignore_accents": true,
+      "hint": "Supposition (not obligation) needs deber + this little word + infinitive.",
+      "ok": "¡Bien! deber de + infinitivo = suposición.",
+      "no": "Supposition uses “deber de estar”: he must be exhausted."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each Spanish guess to its English meaning.",
+      "pairs": [
+        [
+          "Estará en casa",
+          "He's probably home now"
+        ],
+        [
+          "Tendría cuarenta años",
+          "He was probably forty"
+        ],
+        [
+          "Habrá salido",
+          "He must have left"
+        ],
+        [
+          "Debe de estar cansado",
+          "He must be tired"
+        ]
+      ],
+      "ok": "¡Excelente! Distingues presente, pasado y suposición.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "No contesta; se habrá dormido.",
+      "accepted": [
+        "no contesta se habra dormido",
+        "no contesta; se habra dormido"
+      ],
+      "ignore_accents": true,
+      "translation": "She's not answering; she's probably fallen asleep.",
+      "ok": "¡Correcto! “No contesta; se habrá dormido.”",
+      "no": "It was: “No contesta; se habrá dormido.” (She must have fallen asleep.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Wondering why a friend hasn't shown up ⏰",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "Ya son las nueve y Ana no llega. ¿Qué le habrá pasado?",
+          "en": "It's already nine and Ana isn't here. What could have happened to her?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Se habrá quedado en el trabajo."
+        },
+        {
+          "id": "b",
+          "text": "Se ha quedar en el trabajo."
+        },
+        {
+          "id": "c",
+          "text": "Quizá se queda en el trabajo, seguro."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! futuro perfecto = conjetura sobre el pasado reciente.",
+      "no": "To guess about what just happened, use the future perfect: “Se habrá quedado en el trabajo”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Debe de estar cansado; serán ya las diez",
+      "en": "He must be tired; it must be about ten already",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “debe de estar… serán ya”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "será",
+      "en": "it must be (a guess about now)"
+    },
+    {
+      "es": "estará",
+      "en": "he/she is probably (there)"
+    },
+    {
+      "es": "habrá salido",
+      "en": "he/she must have left"
+    },
+    {
+      "es": "deber de",
+      "en": "must (supposition)"
+    },
+    {
+      "es": "a lo mejor",
+      "en": "maybe (+ indicative)"
+    },
+    {
+      "es": "quizá",
+      "en": "perhaps (+ subjunctive)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "será",
+      "estará",
+      "habrá salido",
+      "deber de",
+      "a lo mejor"
+    ]
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "unit": {
+    "id": "es-b2-u10",
+    "title": "Advanced relative clauses",
+    "subtitle": "el que, el cual, lo que / lo cual, cuyo and quien: precise, elegant linking",
+    "level": "B2",
+    "order": 10,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Relatives that sharpen and formalise your Spanish",
+    "intro": "You already know <b>que</b>. At B2 you gain precision: <b>el que / la que</b> for “the one(s) that”, the formal <b>el cual</b> after prepositions, <b>lo que</b> vs <b>lo cual</b> for whole ideas, <b>cuyo</b> for “whose”, and <b>quien(es)</b> for people. These let you write with the polish of an educated native.",
+    "sections": [
+      {
+        "tag": "el que",
+        "heading": "el que / la que / los que / las que — “the one(s) that/who”",
+        "body": "Use these to point at a specific member of a group, often as the subject of a sentence. They agree in gender and number:",
+        "conj": [
+          [
+            "the one that (m)",
+            "el que"
+          ],
+          [
+            "the one that (f)",
+            "la que"
+          ],
+          [
+            "the ones that (m)",
+            "los que"
+          ],
+          [
+            "the ones that (f)",
+            "las que"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Los que</b> estudian aprueban.",
+            "en": "Those who study pass.",
+            "note": "los que = the ones who"
+          },
+          {
+            "es": "<b>La que</b> llegó tarde es mi jefa.",
+            "en": "The one who arrived late is my boss.",
+            "note": "agrees: la que (fem.)"
+          }
+        ]
+      },
+      {
+        "tag": "el cual",
+        "heading": "el cual / la cual — formal, especially after prepositions",
+        "body": "<b>El cual / la cual / los cuales / las cuales</b> is more formal and is preferred after longer prepositions (en, por, sobre, sin, para). Common in writing:",
+        "ex": [
+          {
+            "es": "La casa <b>en la cual</b> vivo es antigua.",
+            "en": "The house in which I live is old.",
+            "note": "prep + el/la cual"
+          },
+          {
+            "es": "El motivo <b>por el cual</b> vine es claro.",
+            "en": "The reason for which I came is clear.",
+            "note": "por el cual = for which"
+          }
+        ]
+      },
+      {
+        "tag": "lo que / lo cual",
+        "heading": "lo que vs lo cual — referring to a whole idea",
+        "body": "Both mean “which” about an entire idea. <b>Lo que</b> introduces (defining, no comma): what/that which. <b>Lo cual</b> comments on the previous clause after a comma:",
+        "ex": [
+          {
+            "es": "<b>Lo que</b> dices es cierto.",
+            "en": "What you say is true.",
+            "note": "lo que = the thing that"
+          },
+          {
+            "es": "Llegó tarde, <b>lo cual</b> me molestó.",
+            "en": "He arrived late, which annoyed me.",
+            "note": "after a comma → lo cual"
+          }
+        ]
+      },
+      {
+        "tag": "cuyo / quien",
+        "heading": "cuyo for “whose” · quien(es) for people",
+        "body": "<b>Cuyo/a/os/as</b> means “whose” and agrees with the thing possessed, not the owner. <b>Quien/quienes</b> is a formal relative for people, common after prepositions and between commas:",
+        "ex": [
+          {
+            "es": "El escritor <b>cuyas</b> novelas leo es español.",
+            "en": "The writer whose novels I read is Spanish.",
+            "note": "cuyas agrees with novelas (fem. pl.)"
+          },
+          {
+            "es": "Los vecinos, <b>quienes</b> son amables, me ayudaron.",
+            "en": "The neighbours, who are kind, helped me.",
+            "note": "quienes for people, between commas"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "el que / la que / los que / las que = “the one(s) that/who”, and agree in gender and number.",
+      "el cual / la cual is more formal, especially after prepositions: en la cual, por el cual.",
+      "lo que introduces (defining); lo cual comments after a comma on a whole idea.",
+      "cuyo (whose) agrees with the thing owned; quien(es) is a formal relative for people."
+    ],
+    "mistakes": [
+      {
+        "w": "El motivo por que vine es claro.",
+        "r": "El motivo por el cual vine es claro.",
+        "why": "After a preposition in formal register, use el cual: por el cual, not bare 'que'."
+      },
+      {
+        "w": "Llegó tarde, lo que me molestó.",
+        "r": "Llegó tarde, lo cual me molestó.",
+        "why": "To comment on a whole previous clause after a comma, use lo cual, not lo que."
+      },
+      {
+        "w": "El escritor cuyo novelas leo.",
+        "r": "El escritor cuyas novelas leo.",
+        "why": "Cuyo agrees with the thing possessed (novelas, fem. pl.) → cuyas."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ estudian aprueban el examen.",
+      "prompt_en": "Those who study pass the exam.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Los que"
+        },
+        {
+          "id": "b",
+          "text": "Lo cual"
+        },
+        {
+          "id": "c",
+          "text": "Cuyos"
+        },
+        {
+          "id": "d",
+          "text": "El cual"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! “The ones who” → los que.",
+      "no": "For “those who / the ones who” use “los que”: Los que estudian aprueban."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El motivo por ___ vine es personal.",
+      "prompt_en": "The reason for which I came is personal.",
+      "options": [
+        {
+          "id": "a",
+          "text": "el cual"
+        },
+        {
+          "id": "b",
+          "text": "lo que"
+        },
+        {
+          "id": "c",
+          "text": "cuyo"
+        },
+        {
+          "id": "d",
+          "text": "quienes"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Tras preposición y formal → por el cual.",
+      "no": "After a preposition in formal register use el cual: “por el cual”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “He arrived late, which annoyed me.”",
+      "tokens": [
+        "Llegó",
+        "tarde,",
+        "lo",
+        "cual",
+        "me",
+        "molestó",
+        "que",
+        "quien"
+      ],
+      "answer": [
+        "Llegó",
+        "tarde,",
+        "lo",
+        "cual",
+        "me",
+        "molestó"
+      ],
+      "ok": "¡Perfecto! Comentario tras coma → lo cual.",
+      "no": "“Llegó tarde, lo cual me molestó” — comment on the whole idea with lo cual."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "El escritor ___ novelas leo es español.",
+      "prompt_en": "The writer whose novels I read is Spanish.",
+      "accepted": [
+        "cuyas"
+      ],
+      "ignore_accents": true,
+      "hint": "“whose” — agrees with novelas (feminine plural).",
+      "ok": "¡Bien! cuyas concuerda con novelas.",
+      "no": "Cuyo agrees with the thing owned (novelas, fem. pl.): “cuyas novelas”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each relative to its use.",
+      "pairs": [
+        [
+          "los que",
+          "the ones who"
+        ],
+        [
+          "el cual",
+          "formal, after prep."
+        ],
+        [
+          "lo cual",
+          "which (after comma)"
+        ],
+        [
+          "cuyo",
+          "whose"
+        ]
+      ],
+      "ok": "¡Excelente! Los relativos avanzados están claros.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Lo que dices es cierto.",
+      "accepted": [
+        "lo que dices es cierto"
+      ],
+      "ignore_accents": true,
+      "translation": "What you say is true.",
+      "ok": "¡Correcto! “Lo que dices es cierto.”",
+      "no": "It was: “Lo que dices es cierto.” (What you say is true.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Explaining a formal complaint at the office 🏢",
+      "lines": [
+        {
+          "speaker": "Director",
+          "es": "¿Cuál es la razón de su queja?",
+          "en": "What is the reason for your complaint?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "El motivo por el cual escribo es el retraso constante."
+        },
+        {
+          "id": "b",
+          "text": "El motivo por lo que escribo es el retraso constante."
+        },
+        {
+          "id": "c",
+          "text": "El motivo cuyo escribo es el retraso constante."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Registro formal tras preposición → por el cual.",
+      "no": "In formal register, after a preposition use el cual: “por el cual escribo”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Los que estudian aprueban",
+      "en": "Those who study pass",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Los que estudian aprueban”."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "el que",
+      "en": "the one that / who"
+    },
+    {
+      "es": "el cual",
+      "en": "which (formal, after prep.)"
+    },
+    {
+      "es": "lo cual",
+      "en": "which (about a whole idea)"
+    },
+    {
+      "es": "cuyo",
+      "en": "whose"
+    },
+    {
+      "es": "quienes",
+      "en": "who (plural, people)"
+    },
+    {
+      "es": "lo que",
+      "en": "what / that which"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "el que",
+      "el cual",
+      "lo cual",
+      "cuyo",
+      "quienes"
+    ]
+  }
+}

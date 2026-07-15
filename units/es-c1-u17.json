@@ -1,0 +1,270 @@
+{
+  "unit": {
+    "id": "es-c1-u17",
+    "title": "The Exact Right Word",
+    "subtitle": "Near-synonyms, collocations and false friends",
+    "level": "C1",
+    "order": 17,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Precision: choosing the word that fits",
+    "intro": "At C1 the grammar is largely settled; what separates you from a native is <b>lexical precision</b>. Spanish splits meanings English merges (<b>saber</b> vs <b>conocer</b>, <b>pedir</b> vs <b>preguntar</b>), fixes certain noun+verb <b>collocations</b> (you <b>tomas</b> a decision, you don't 'haces' it), and hides <b>false friends</b> (<b>actual</b> means <i>current</i>, not <i>actual</i>). This unit trains you to pick the word context and register actually demand.",
+    "sections": [
+      {
+        "tag": "matices",
+        "heading": "Near-synonyms English merges",
+        "body": "These pairs collapse into one English verb but stay distinct in Spanish. Master the boundary: <b>saber</b> a fact/skill vs <b>conocer</b> a person/place; <b>pedir</b> = request a thing vs <b>preguntar</b> = ask a question; <b>llevar</b> (take away from here) vs <b>traer</b> (bring towards here):",
+        "conj": [
+          ["saber", "to know a fact / how to"],
+          ["conocer", "to be acquainted with (person/place)"],
+          ["pedir", "to ask for / request"],
+          ["preguntar", "to ask (a question)"],
+          ["llevar", "to take (away from speaker)"],
+          ["traer", "to bring (towards speaker)"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Conozco</b> Madrid, pero no <b>sé</b> llegar a tu barrio.",
+            "en": "I know Madrid, but I don't know how to get to your neighbourhood.",
+            "note": "conocer un lugar · saber + infinitivo (a skill)"
+          },
+          {
+            "es": "Me <b>preguntó</b> la hora y luego me <b>pidió</b> un favor.",
+            "en": "She asked me the time and then asked me for a favour.",
+            "note": "preguntar = pose a question · pedir = request something"
+          }
+        ]
+      },
+      {
+        "tag": "colocaciones",
+        "heading": "Collocations: the verb the noun expects",
+        "body": "Natives pair certain nouns with a fixed verb. Translating word-for-word from English produces odd Spanish. You <b>tomas</b> a decision (not 'haces'), <b>cometes</b> a mistake (not 'haces'), and <b>prestas</b> attention (not 'pagas'). Also weigh <b>hacer</b> (to do/make, general) vs <b>realizar</b> (to carry out, formal):",
+        "conj": [
+          ["tomar una decisión", "to make a decision"],
+          ["cometer un error", "to make a mistake"],
+          ["prestar atención", "to pay attention"],
+          ["hacer caso (a alguien)", "to heed / take notice"],
+          ["realizar un estudio", "to carry out a study (formal)"]
+        ],
+        "ex": [
+          {
+            "es": "Antes de <b>tomar una decisión</b>, <b>presta atención</b> a los detalles.",
+            "en": "Before making a decision, pay attention to the details.",
+            "note": "tomar una decisión · prestar atención (fixed pairings)"
+          },
+          {
+            "es": "El equipo <b>realizó</b> un estudio riguroso y no <b>cometió</b> ni un error.",
+            "en": "The team carried out a rigorous study and didn't make a single mistake.",
+            "note": "realizar (formal) · cometer un error, not 'hacer'"
+          }
+        ]
+      },
+      {
+        "tag": "falsos amigos",
+        "heading": "False friends that trip up C1 speakers",
+        "body": "These look English but mean something else. Using them literally is a classic advanced slip. Learn the real Spanish meaning — and the word English speakers <i>really</i> wanted:",
+        "conj": [
+          ["actual", "current (not 'actual' → real/verdadero)"],
+          ["asistir a", "to attend (not 'assist' → ayudar)"],
+          ["éxito", "success (not 'exit' → salida)"],
+          ["sensible", "sensitive (not 'sensible' → sensato)"],
+          ["constipado", "having a cold (not 'constipated' → estreñido)"],
+          ["embarazada", "pregnant (not 'embarrassed' → avergonzada)"]
+        ],
+        "ex": [
+          {
+            "es": "En la situación <b>actual</b>, asistí a la reunión aunque estaba <b>constipado</b>.",
+            "en": "In the current situation, I attended the meeting even though I had a cold.",
+            "note": "actual = current · asistir a = attend · constipado = with a cold"
+          },
+          {
+            "es": "Es una persona muy <b>sensible</b>; el <b>éxito</b> no le ha cambiado.",
+            "en": "She's a very sensitive person; success hasn't changed her.",
+            "note": "sensible = sensitive · éxito = success"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "saber a fact/skill vs conocer a person/place; pedir = request vs preguntar = ask a question.",
+      "Collocations are fixed: tomar una decisión, cometer un error, prestar atención, hacer caso.",
+      "hacer = do/make (general); realizar = carry out (formal register).",
+      "False friends: actual = current, asistir = attend, éxito = success, sensible = sensitive, constipado = with a cold."
+    ],
+    "mistakes": [
+      {
+        "w": "Hice una decisión importante.",
+        "r": "Tomé una decisión importante.",
+        "why": "The collocation is tomar una decisión, not 'hacer una decisión' (an anglicism)."
+      },
+      {
+        "w": "Le pregunté un vaso de agua.",
+        "r": "Le pedí un vaso de agua.",
+        "why": "Requesting a thing is pedir; preguntar is only for asking questions."
+      },
+      {
+        "w": "Estoy muy embarazada por lo que dije.",
+        "r": "Estoy muy avergonzada por lo que dije.",
+        "why": "embarazada means pregnant; ‘embarrassed’ is avergonzada — a classic false friend."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No ___ a nadie en esta ciudad todavía.",
+      "prompt_en": "I don't know anyone in this city yet.",
+      "options": [
+        { "id": "a", "text": "conozco" },
+        { "id": "b", "text": "sé" },
+        { "id": "c", "text": "pregunto" },
+        { "id": "d", "text": "realizo" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! conocer a una persona.",
+      "no": "Being acquainted with people uses conocer, not saber: “No conozco a nadie…”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Antes de invertir, conviene ___ una decisión meditada.",
+      "prompt_en": "Before investing, it's advisable to make a considered decision.",
+      "options": [
+        { "id": "a", "text": "tomar" },
+        { "id": "b", "text": "hacer" },
+        { "id": "c", "text": "cometer" },
+        { "id": "d", "text": "prestar" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! tomar una decisión.",
+      "no": "The fixed collocation is tomar una decisión — ‘hacer una decisión’ is an anglicism."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “She attended the meeting even though she had a cold.”",
+      "tokens": [
+        "Asistió",
+        "a",
+        "la",
+        "reunión",
+        "aunque",
+        "estaba",
+        "constipada",
+        "asió",
+        "embarazada"
+      ],
+      "answer": [
+        "Asistió",
+        "a",
+        "la",
+        "reunión",
+        "aunque",
+        "estaba",
+        "constipada"
+      ],
+      "ok": "¡Perfecto! asistir a = attend · constipada = with a cold.",
+      "no": "“Asistió a la reunión aunque estaba constipada” — asistir a = attend, constipada = with a cold (not embarazada)."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "El camarero se acercó y le ___ la cuenta.",
+      "prompt_en": "The waiter came over and asked him for the bill.",
+      "accepted": [
+        "pidió"
+      ],
+      "ignore_accents": true,
+      "hint": "To request a thing (not to pose a question).",
+      "ok": "¡Bien! pedir = to request something.",
+      "no": "Requesting a thing → pedir: “le pidió la cuenta”. (preguntar is only for questions.)"
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each false friend to its true Spanish meaning.",
+      "pairs": [
+        ["actual", "current"],
+        ["éxito", "success"],
+        ["sensible", "sensitive"],
+        ["constipado", "having a cold"]
+      ],
+      "ok": "¡Excelente! Los falsos amigos, desenmascarados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Presta atención a lo que voy a decirte.",
+      "accepted": [
+        "presta atencion a lo que voy a decirte"
+      ],
+      "ignore_accents": true,
+      "translation": "Pay attention to what I'm going to tell you.",
+      "ok": "¡Correcto! “Presta atención a lo que voy a decirte.”",
+      "no": "It was: “Presta atención a lo que voy a decirte.” (prestar atención = to pay attention)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend praises how well your new venture is going 🚀",
+      "lines": [
+        {
+          "speaker": "Rodrigo",
+          "es": "He oído que tu proyecto va viento en popa. ¡Enhorabuena!",
+          "en": "I've heard your project is going great. Congratulations!"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Gracias, la verdad es que ha sido todo un éxito." },
+        { "id": "b", "text": "Gracias, la verdad es que ha sido toda una salida." },
+        { "id": "c", "text": "Gracias, la verdad es que estoy muy embarazado." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! éxito = success.",
+      "no": "‘Success’ is éxito (not salida = exit, nor embarazado = pregnant)."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "No sé conducir, pero conozco la ruta.",
+      "en": "I don't know how to drive, but I know the route.",
+      "ok": "¡Perfecto! saber (skill) vs conocer (place), bien diferenciados.",
+      "no": "Almost — tap “Hear it”, then match the sound of “No sé conducir, pero conozco la ruta.”"
+    }
+  ],
+  "vocab": [
+    { "es": "saber", "en": "to know a fact / how to" },
+    { "es": "conocer", "en": "to know / be acquainted with" },
+    { "es": "tomar una decisión", "en": "to make a decision" },
+    { "es": "cometer un error", "en": "to make a mistake" },
+    { "es": "prestar atención", "en": "to pay attention" },
+    { "es": "actual", "en": "current (false friend)" },
+    { "es": "asistir a", "en": "to attend" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "saber",
+      "conocer",
+      "tomar una decisión",
+      "cometer un error",
+      "asistir a"
+    ]
+  }
+}

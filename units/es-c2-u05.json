@@ -1,0 +1,257 @@
+{
+  "unit": {
+    "id": "es-c2-u05",
+    "title": "Voice & Impersonality",
+    "subtitle": "Choosing the natural way to background the agent",
+    "level": "C2",
+    "order": 5,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Six ways to hide who did it — and when each sounds native",
+    "intro": "Spanish has a whole toolkit for pushing the agent into the shadows, and mastery is knowing <b>which one a native would actually pick</b>. The <b>ser</b>-passive (<b>fue construido</b>) is formal and mostly written; <b>estar</b> + participle (<b>está construido</b>) names a result state; the everyday spoken defaults are the <b>pasiva refleja</b> (<b>se construyeron casas</b>), <b>impersonal se</b> (<b>se trabaja mucho</b>), the <b>third-person plural</b> (<b>dicen que…</b>, <b>llaman a la puerta</b>), and generic <b>uno / tú</b> (<b>uno nunca sabe</b>). Pick wrong and you sound translated; pick right and you sound born to it.",
+    "sections": [
+      {
+        "tag": "pasiva perifrástica",
+        "heading": "Ser + participle: the formal passive",
+        "body": "<b>Ser</b> + participle (agreeing in gender and number) is the true passive, with the agent optionally named by <b>por</b>: <b>la ley fue aprobada por el Congreso</b>. It belongs to <b>written and journalistic</b> register; in ordinary speech it usually sounds stilted, and Spanish reaches for <b>se</b> instead.",
+        "conj": [
+          ["event, formal/written", "el puente fue construido en 1920"],
+          ["agent with por", "la ley fue aprobada por el Congreso"],
+          ["natural spoken equivalent", "se construyó el puente / se aprobó la ley"]
+        ],
+        "ex": [
+          {
+            "es": "El acueducto <b>fue construido</b> por los romanos.",
+            "en": "The aqueduct was built by the Romans.",
+            "note": "formal/written passive with agent"
+          },
+          {
+            "es": "La propuesta <b>fue rechazada</b> en la votación.",
+            "en": "The proposal was rejected in the vote.",
+            "note": "journalistic register"
+          }
+        ]
+      },
+      {
+        "tag": "estar + participio",
+        "heading": "Estar + participle: the result state",
+        "body": "Do not confuse the passive with <b>estar</b> + participle, which describes the <b>state that results</b> from an action, not the action itself. <b>La puerta fue cerrada</b> reports an event; <b>la puerta está cerrada</b> simply tells you it is now closed. For habitual actions use <b>se</b>: <b>la tienda se cierra los domingos</b>.",
+        "conj": [
+          ["action (event)", "la puerta fue cerrada"],
+          ["result state", "la puerta está cerrada"],
+          ["habitual action", "la tienda se cierra los domingos"]
+        ],
+        "ex": [
+          {
+            "es": "El informe ya <b>está terminado</b>.",
+            "en": "The report is already finished.",
+            "note": "state, not the act of finishing"
+          },
+          {
+            "es": "La tienda <b>está cerrada</b> los domingos.",
+            "en": "The shop is closed on Sundays.",
+            "note": "resulting state → estar"
+          }
+        ]
+      },
+      {
+        "tag": "se: pasiva refleja / impersonal",
+        "heading": "The everyday defaults: se",
+        "body": "In speech, Spanish overwhelmingly prefers <b>se</b>. The <b>pasiva refleja</b> agrees with its subject (<b>se construyeron casas</b>, <b>se necesitan camareros</b>); the <b>impersonal se</b> has no subject and stays singular (<b>se trabaja mucho</b>, <b>se vive bien</b>). This is why <b>se habla español</b> sounds native while <b>el español es hablado</b> sounds like a textbook.",
+        "conj": [
+          ["passive-reflexive (agrees)", "se necesitan camareros"],
+          ["impersonal (3sg, no subject)", "aquí se trabaja mucho"],
+          ["natural vs stilted", "se habla español / *el español es hablado"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Se construyeron</b> miles de viviendas en aquella época.",
+            "en": "Thousands of homes were built in that era.",
+            "note": "pasiva refleja → agrees with viviendas"
+          },
+          {
+            "es": "En esta empresa <b>se trabaja</b> demasiado.",
+            "en": "In this company people work too much.",
+            "note": "impersonal → singular"
+          }
+        ]
+      },
+      {
+        "tag": "impersonal: ellos / uno",
+        "heading": "Third-person plural and generic uno / tú",
+        "body": "When the agent is unknown or irrelevant, natives simply use the <b>third-person plural</b>: <b>dicen que…</b> (they say…), <b>llaman a la puerta</b> (someone's knocking), <b>me han robado el móvil</b> (my phone's been stolen). To generalise from personal experience, use impersonal <b>uno</b> or colloquial <b>tú</b>: <b>uno nunca sabe</b>, <b>cuando eres jefe, te respetan más</b>.",
+        "conj": [
+          ["they say / it's said", "dicen que va a llover"],
+          ["someone's knocking", "llaman a la puerta"],
+          ["generic uno (formal)", "uno nunca sabe"],
+          ["generic tú (colloquial)", "te respetan más"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Llaman</b> a la puerta; ¿esperas a alguien?",
+            "en": "Someone's knocking; are you expecting anyone?",
+            "note": "3rd-plural impersonal"
+          },
+          {
+            "es": "En la vida <b>uno nunca sabe</b> lo que va a pasar.",
+            "en": "In life one never knows what's going to happen.",
+            "note": "generic uno"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Ser + participle = formal/written passive; agent with por. Rare and stilted in speech.",
+      "Estar + participle = the result state, not an action (está cerrada ≠ fue cerrada).",
+      "Everyday default: se — pasiva refleja agrees (se necesitan), impersonal stays singular (se trabaja).",
+      "Unknown agent → 3rd-person plural (dicen que, llaman); generalising → uno / tú."
+    ],
+    "mistakes": [
+      {
+        "w": "El español es hablado en muchos países.",
+        "r": "Se habla español en muchos países.",
+        "why": "The ser-passive is grammatical but stilted here; the natural spoken choice is the pasiva refleja se habla."
+      },
+      {
+        "w": "Se vende coches de segunda mano.",
+        "r": "Se venden coches de segunda mano.",
+        "why": "The passive-reflexive agrees with its plural subject (coches): se venden, not se vende."
+      },
+      {
+        "w": "La tienda es cerrada los domingos.",
+        "r": "La tienda está cerrada los domingos.",
+        "why": "For a habitual closure you want a state (está cerrada) or an action (se cierra), not the event passive es cerrada."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "— ¿Y aquí qué idioma se usa? — Aquí ___ español.",
+      "prompt_en": "— And what language is used here? — Spanish is spoken here.",
+      "options": [
+        { "id": "a", "text": "se habla" },
+        { "id": "b", "text": "es hablado" },
+        { "id": "c", "text": "está hablado" },
+        { "id": "d", "text": "habla" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Lo natural es la pasiva refleja → se habla.",
+      "no": "In speech the native choice is “se habla español”; “es hablado” sounds like a textbook and “está hablado” is a wrong state."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Se ___ camareros con experiencia para el verano.",
+      "prompt_en": "Experienced waiters are needed for the summer.",
+      "options": [
+        { "id": "a", "text": "necesitan" },
+        { "id": "b", "text": "necesita" },
+        { "id": "c", "text": "necesitó" },
+        { "id": "d", "text": "es necesitado" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Pasiva refleja: concuerda con “camareros” → necesitan.",
+      "no": "The passive-reflexive agrees with its plural subject camareros: “se necesitan camareros”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “The bridge was built in 1920.”",
+      "tokens": ["El", "puente", "fue", "construido", "en", "1920", "construida", "es"],
+      "answer": ["El", "puente", "fue", "construido", "en", "1920"],
+      "ok": "¡Perfecto! Pasiva perifrástica, concordancia masculina → construido.",
+      "no": "“El puente fue construido en 1920” — the participle agrees with masculine puente (construido), and the event needs fue."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "La tienda ___ cerrada los domingos; nunca abre ese día.",
+      "prompt_en": "The shop is closed on Sundays; it never opens that day.",
+      "accepted": ["está"],
+      "ignore_accents": true,
+      "hint": "You want the resulting state, not an event → estar + participle.",
+      "ok": "¡Bien! Estado resultante → está cerrada.",
+      "no": "A resulting state uses estar: “la tienda está cerrada”, not “es cerrada”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each construction to the register/value it fits.",
+      "pairs": [
+        ["Fue inaugurado por el alcalde", "formal written passive (ser)"],
+        ["Ya está terminado", "result state (estar)"],
+        ["Se venden pisos", "passive-reflexive"],
+        ["Llaman a la puerta", "impersonal 'they'"]
+      ],
+      "ok": "¡Excelente! Sabes qué voz suena natural en cada caso.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Se construyeron miles de viviendas durante aquella década.",
+      "accepted": ["se construyeron miles de viviendas durante aquella decada"],
+      "ignore_accents": true,
+      "translation": "Thousands of homes were built during that decade.",
+      "ok": "¡Correcto! “Se construyeron miles de viviendas durante aquella década.”",
+      "no": "It was: “Se construyeron miles de viviendas durante aquella década.” (pasiva refleja, plural agreement)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "You hear a noise while chatting at home 🔔",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "¿Qué ha sido ese ruido?",
+          "en": "What was that noise?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Nada, llaman a la puerta." },
+        { "id": "b", "text": "Nada, alguien es llamado a la puerta." },
+        { "id": "c", "text": "Nada, la puerta está siendo llamada." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! El impersonal de tercera persona: “llaman a la puerta”.",
+      "no": "Native Spanish uses the third-person plural: “llaman a la puerta”, not a laboured passive."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Aquí se vive bien y se trabaja poco.",
+      "en": "Here people live well and work little.",
+      "ok": "¡Perfecto! Impersonal con se, muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Aquí se vive bien y se trabaja poco.”"
+    }
+  ],
+  "vocab": [
+    { "es": "fue construido", "en": "was built (formal passive)" },
+    { "es": "está cerrada", "en": "is closed (result state)" },
+    { "es": "se construyeron casas", "en": "houses were built (passive-reflexive)" },
+    { "es": "se trabaja mucho", "en": "people work a lot (impersonal se)" },
+    { "es": "dicen que", "en": "they say that (impersonal)" },
+    { "es": "llaman a la puerta", "en": "someone's knocking (impersonal)" },
+    { "es": "uno nunca sabe", "en": "one never knows (generic uno)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["fue construido", "está cerrada", "se construyeron casas", "se trabaja mucho", "llaman a la puerta"]
+  }
+}

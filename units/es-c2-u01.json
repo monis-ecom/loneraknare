@@ -1,0 +1,258 @@
+{
+  "unit": {
+    "id": "es-c2-u01",
+    "title": "Subjunctive Without a Trigger",
+    "subtitle": "Quizá, ojalá, que + subjunctive and other independent-clause moods",
+    "level": "C2",
+    "order": 1,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The subjunctive that stands on its own",
+    "intro": "By C2 you know the subjunctive follows triggers like <b>quiero que</b> or <b>dudo que</b>. But educated Spanish also uses it in <b>independent, main clauses</b> — with no subordinating verb at all. Here the mood itself carries the meaning: it signals your <b>attitude</b>, turning a bare statement into doubt, a wish, or a command. Choosing <b>venga</b> over <b>viene</b> is a deliberate act of style.",
+    "sections": [
+      {
+        "tag": "duda",
+        "heading": "Quizá(s) / tal vez / acaso: indicative vs. subjunctive",
+        "body": "Doubt adverbs — <b>quizá(s)</b>, <b>tal vez</b>, <b>acaso</b>, <b>posiblemente</b>, <b>probablemente</b> — let you pick the mood, and the choice is meaningful: the <b>subjunctive</b> marks the event as more remote or hypothetical, the <b>indicative</b> treats it as more likely or asserted. Note the split: this only works when the adverb <b>precedes</b> the verb. If it comes after (<b>viene quizá</b>), only the indicative is possible.",
+        "conj": [
+          ["Quizá viene", "Maybe he's coming (I lean toward yes)"],
+          ["Quizá venga", "Maybe he'll come (more doubtful)"],
+          ["Viene, quizá", "indicative only (adverb after verb)"],
+          ["Igual / a lo mejor viene", "colloquial: indicative only"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Tal vez tenga</b> razón, aunque lo dudo.",
+            "en": "Maybe he's right, though I doubt it.",
+            "note": "subjunctive → more doubt"
+          },
+          {
+            "es": "<b>Probablemente llega</b> sobre las ocho.",
+            "en": "He'll probably arrive around eight.",
+            "note": "indicative → higher likelihood"
+          }
+        ]
+      },
+      {
+        "tag": "deseo",
+        "heading": "Ojalá: present vs. imperfect subjunctive",
+        "body": "<b>Ojalá</b> (from Arabic “would to God”) takes only the subjunctive, never a que before it is required. The tense changes the meaning: <b>present subjunctive</b> = a hope you consider possible; <b>imperfect subjunctive</b> = a wish you see as unlikely or contrary to fact.",
+        "conj": [
+          ["Ojalá venga", "I hope he comes (feasible)"],
+          ["Ojalá viniera", "If only he'd come (unlikely / wistful)"],
+          ["Ojalá hubiera venido", "If only he had come (impossible now)"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Ojalá apruebe</b> el examen mañana.",
+            "en": "I hope I pass the exam tomorrow.",
+            "note": "present subj. → real hope"
+          },
+          {
+            "es": "<b>Ojalá pudiera</b> ayudarte, pero no depende de mí.",
+            "en": "I wish I could help you, but it's not up to me.",
+            "note": "imperfect subj. → unlikely"
+          }
+        ]
+      },
+      {
+        "tag": "mandato",
+        "heading": "Que + subjunctive as a standalone wish or order",
+        "body": "A clause opening with <b>que</b> + subjunctive, with no main verb, works as an independent <b>wish</b>, <b>third-person command</b>, or blessing. It reads as if an implicit <b>espero / quiero</b> had been dropped. This is how natives toss out good wishes and delegate tasks.",
+        "conj": [
+          ["¡Que te vaya bien!", "May it go well for you!"],
+          ["¡Que aproveche!", "Enjoy your meal!"],
+          ["Que lo hagan ellos", "Let them do it"],
+          ["Que descanses", "Sleep well / rest well"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Que tengas</b> un buen viaje.",
+            "en": "Have a good trip.",
+            "note": "independent wish → subj."
+          },
+          {
+            "es": "Yo no pienso ir; <b>que vayan</b> ellos.",
+            "en": "I'm not going; let them go.",
+            "note": "third-person command"
+          }
+        ]
+      },
+      {
+        "tag": "anhelo",
+        "heading": "Quién + imperfect subjunctive: the wistful wish",
+        "body": "<b>Quién</b> followed by the <b>imperfect subjunctive</b> expresses a longing the speaker knows is out of reach — “if only I could…”. It always refers to the speaker despite the third-person form, and it is emphatic and literary in flavour.",
+        "conj": [
+          ["¡Quién pudiera!", "If only I could!"],
+          ["¡Quién lo supiera!", "If only I knew!"],
+          ["¡Quién fuera joven otra vez!", "Oh to be young again!"]
+        ],
+        "ex": [
+          {
+            "es": "<b>¡Quién tuviera</b> veinte años otra vez!",
+            "en": "If only I were twenty again!",
+            "note": "speaker's unreachable wish"
+          },
+          {
+            "es": "<b>¡Quién pudiera</b> vivir sin trabajar!",
+            "en": "If only one could live without working!",
+            "note": "imperfect subj., not pueda"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Quizá/tal vez + subjunctive = more doubt; + indicative = more likely. After the verb, indicative only.",
+      "Ojalá + present subj. = a real hope; + imperfect subj. = an unlikely or impossible wish.",
+      "Que + subjunctive alone = an independent wish or third-person command (¡Que te vaya bien!).",
+      "Quién + imperfect subjunctive = a wistful, unreachable wish about oneself (¡Quién pudiera!)."
+    ],
+    "mistakes": [
+      {
+        "w": "Ojalá que venga mañana… ojalá venga ayer.",
+        "r": "Ojalá viniera / hubiera venido.",
+        "why": "A wish about the past or the unlikely needs the imperfect or pluperfect subjunctive, never the present."
+      },
+      {
+        "w": "¡Quién puede vivir así!",
+        "r": "¡Quién pudiera vivir así!",
+        "why": "The wistful ‘quién’ wish requires the imperfect subjunctive (pudiera), not the indicative."
+      },
+      {
+        "w": "Que te va bien.",
+        "r": "Que te vaya bien.",
+        "why": "An independent wish with ‘que’ takes the subjunctive: vaya, not va."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Tal vez ___ razón, pero sinceramente lo dudo mucho.",
+      "prompt_en": "Maybe he's right, but honestly I doubt it very much.",
+      "options": [
+        { "id": "a", "text": "tenga" },
+        { "id": "b", "text": "tiene" },
+        { "id": "c", "text": "tendrá" },
+        { "id": "d", "text": "tener" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! La duda marcada pide subjuntivo: tenga.",
+      "no": "Because the speaker stresses the doubt (“lo dudo”), the subjunctive fits: tal vez tenga."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ pudiera ayudarte, pero la decisión no depende de mí.",
+      "prompt_en": "I wish I could help you, but the decision isn't up to me.",
+      "options": [
+        { "id": "a", "text": "Ojalá" },
+        { "id": "b", "text": "Quizá" },
+        { "id": "c", "text": "Acaso" },
+        { "id": "d", "text": "A lo mejor" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Ojalá + imperfecto de subjuntivo = deseo poco probable.",
+      "no": "The unlikely wish “I wish I could” is Ojalá pudiera; the other adverbs don't express that longing."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I'm not going; let them do it.”",
+      "tokens": ["Yo", "no", "voy;", "que", "lo", "hagan", "ellos", "hacen", "harán"],
+      "answer": ["Yo", "no", "voy;", "que", "lo", "hagan", "ellos"],
+      "ok": "¡Perfecto! Que + subjuntivo = mandato de tercera persona.",
+      "no": "The standalone “let them” command uses the subjunctive: que lo hagan ellos, not hacen."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "¡___ pudiera empezar de cero otra vez! (quién)",
+      "prompt_en": "If only I could start over from scratch!",
+      "accepted": ["quién", "quien"],
+      "ignore_accents": true,
+      "hint": "The wistful wish about oneself starts with this interrogative word.",
+      "ok": "¡Bien! ¡Quién pudiera! es el deseo anhelante.",
+      "no": "The longing “if only I could” opens with Quién + imperfect subjunctive: ¡Quién pudiera!"
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each independent-clause expression to its meaning.",
+      "pairs": [
+        ["¡Que aproveche!", "Enjoy your meal!"],
+        ["Ojalá viniera", "If only he'd come (unlikely)"],
+        ["Quizá venga", "Maybe he'll come (doubtful)"],
+        ["¡Quién pudiera!", "If only I could!"]
+      ],
+      "ok": "¡Excelente! El modo por sí solo transmite la actitud.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Ojalá apruebe el examen mañana.",
+      "accepted": ["ojala apruebe el examen manana"],
+      "ignore_accents": true,
+      "translation": "I hope I pass the exam tomorrow.",
+      "ok": "¡Correcto! “Ojalá apruebe el examen mañana.”",
+      "no": "It was: “Ojalá apruebe el examen mañana.” (present subjunctive → a real hope)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend is leaving on a long trip ✈️",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "es": "Me voy tres meses a Argentina. ¡Deséame suerte!",
+          "en": "I'm off to Argentina for three months. Wish me luck!"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "¡Que te vaya muy bien y que disfrutes!" },
+        { "id": "b", "text": "¡Que te va muy bien y que disfrutas!" },
+        { "id": "c", "text": "Ojalá te fue muy bien." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Deseo independiente con que + subjuntivo.",
+      "no": "An independent good wish uses que + subjunctive: “¡Que te vaya bien y que disfrutes!”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "¡Quién pudiera vivir sin trabajar!",
+      "en": "If only one could live without working!",
+      "ok": "¡Perfecto! Muy expresivo y natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “¡Quién pudiera vivir sin trabajar!”"
+    }
+  ],
+  "vocab": [
+    { "es": "quizá venga", "en": "maybe he'll come (doubtful, subjunctive)" },
+    { "es": "tal vez", "en": "perhaps (mood optional)" },
+    { "es": "ojalá viniera", "en": "if only he'd come (unlikely wish)" },
+    { "es": "que te vaya bien", "en": "may it go well for you" },
+    { "es": "¡que aproveche!", "en": "enjoy your meal!" },
+    { "es": "que lo hagan ellos", "en": "let them do it" },
+    { "es": "¡quién pudiera!", "en": "if only I could!" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["quizá venga", "ojalá viniera", "que te vaya bien", "que lo hagan ellos", "¡quién pudiera!"]
+  }
+}

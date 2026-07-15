@@ -1,0 +1,286 @@
+{
+  "unit": {
+    "id": "es-c1-u08",
+    "title": "Reformulation & Cohesion",
+    "subtitle": "Connectors that restate, specify, summarize, and digress",
+    "level": "C1",
+    "order": 8,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Restate and wrap up like a native",
+    "intro": "A C1 speaker rarely says something once. You <b>reformulate</b> to clarify (<b>es decir</b>, <b>o sea</b>), you <b>specify</b> (<b>a saber</b>), you <b>rephrase</b> (<b>dicho de otro modo</b>), and you <b>close</b> with a summary (<b>en definitiva</b>, <b>en suma</b>). You can even <b>step aside</b> for a moment (<b>por cierto</b>). These cohesion markers let you structure an idea across several turns instead of dumping it all at once.",
+    "sections": [
+      {
+        "tag": "reformulación",
+        "heading": "Restating: es decir, o sea, esto es",
+        "body": "These introduce an <b>equivalent, clearer</b> version of what you just said ('that is / in other words'). <b>Es decir</b> is neutral and works in speech and writing; <b>esto es</b> is more formal/written; <b>o sea</b> is colloquial and very frequent in speech. They are always followed by a <b>comma</b>.",
+        "conj": [
+          ["es decir", "that is / i.e."],
+          ["o sea", "in other words (colloquial)"],
+          ["esto es", "that is (formal)"]
+        ],
+        "ex": [
+          {
+            "es": "Llegó tarde, <b>es decir</b>, perdió el turno.",
+            "en": "He arrived late, that is, he lost his slot.",
+            "note": "restates the consequence"
+          },
+          {
+            "es": "Es autodidacta, <b>o sea</b>, aprendió solo.",
+            "en": "He's self-taught, in other words, he learned on his own.",
+            "note": "colloquial reformulation"
+          }
+        ]
+      },
+      {
+        "tag": "especificación",
+        "heading": "Specifying: a saber, en otras palabras, dicho de otro modo",
+        "body": "Use <b>a saber</b> to <b>introduce a list or precise detail</b> ('namely'). Use <b>en otras palabras</b> or <b>dicho de otro modo / de otra manera</b> to <b>rephrase</b> a difficult idea in a fresh way ('put another way'). These signal that clarity, not new information, is coming.",
+        "conj": [
+          ["a saber", "namely"],
+          ["en otras palabras", "in other words"],
+          ["dicho de otro modo", "put another way"]
+        ],
+        "ex": [
+          {
+            "es": "Faltan tres requisitos, <b>a saber</b>: firma, sello y fecha.",
+            "en": "Three requirements are missing, namely: signature, stamp and date.",
+            "note": "a saber introduces the list"
+          },
+          {
+            "es": "No es rentable; <b>dicho de otro modo</b>, perdemos dinero.",
+            "en": "It isn't profitable; put another way, we're losing money.",
+            "note": "rephrases more bluntly"
+          }
+        ]
+      },
+      {
+        "tag": "recapitulación",
+        "heading": "Summing up: en definitiva, en suma, en resumidas cuentas, en resumen",
+        "body": "These <b>close and condense</b> an argument. <b>En resumen</b> and <b>en suma</b> announce a summary ('in short'); <b>en definitiva</b> delivers the <b>final verdict</b> ('ultimately / when all's said and done'); <b>en resumidas cuentas</b> is the idiomatic 'to cut a long story short'. They cue the listener that the conclusion has arrived.",
+        "conj": [
+          ["en resumen", "in short / to sum up"],
+          ["en suma", "in sum"],
+          ["en definitiva", "ultimately / in the end"],
+          ["en resumidas cuentas", "to cut a long story short"]
+        ],
+        "ex": [
+          {
+            "es": "<b>En definitiva</b>, la reforma no convence a nadie.",
+            "en": "Ultimately, the reform convinces no one.",
+            "note": "final verdict"
+          },
+          {
+            "es": "<b>En resumidas cuentas</b>, salió más caro de lo previsto.",
+            "en": "To cut a long story short, it turned out pricier than expected.",
+            "note": "idiomatic wrap-up"
+          }
+        ]
+      },
+      {
+        "tag": "digresión",
+        "heading": "Stepping aside: por cierto, a propósito",
+        "body": "Both introduce a <b>digression</b> — a related aside or a change of subject ('by the way'). <b>Por cierto</b> is the everyday marker; <b>a propósito</b> often introduces something the current topic <b>reminded</b> you of. Don't confuse the discourse marker <b>por cierto</b> (by the way) with the adjective phrase <i>por cierto</i> meaning 'for certain'.",
+        "conj": [
+          ["por cierto", "by the way"],
+          ["a propósito", "by the way / speaking of which"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Por cierto</b>, ¿enviaste el informe que te pedí?",
+            "en": "By the way, did you send the report I asked for?",
+            "note": "introduces an aside"
+          },
+          {
+            "es": "<b>A propósito</b> de plazos, el tuyo vence mañana.",
+            "en": "Speaking of deadlines, yours is due tomorrow.",
+            "note": "a propósito de + topic"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Restate: es decir / o sea / esto es (that is, in other words).",
+      "Specify: a saber (namely), en otras palabras, dicho de otro modo (put another way).",
+      "Sum up: en resumen / en suma (in short), en definitiva (ultimately), en resumidas cuentas.",
+      "Digress: por cierto / a propósito (by the way)."
+    ],
+    "mistakes": [
+      {
+        "w": "Es autodidacta, es que aprendió solo.",
+        "r": "Es autodidacta, es decir, aprendió solo.",
+        "why": "To reformulate ('that is'), use 'es decir'; 'es que' means 'the thing is' and gives a reason, not a restatement."
+      },
+      {
+        "w": "En resumen de todo, fracasó.",
+        "r": "En resumen, fracasó.",
+        "why": "'En resumen' stands alone before a comma; don't append 'de todo' to it."
+      },
+      {
+        "w": "Por cierto de los plazos, el tuyo vence mañana.",
+        "r": "A propósito de los plazos, el tuyo vence mañana.",
+        "why": "To link a digression to a topic use 'a propósito de'; 'por cierto' does not take 'de + topic'."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No es rentable; ___, estamos perdiendo dinero.",
+      "prompt_en": "It isn't profitable; put another way, we're losing money.",
+      "options": [
+        { "id": "a", "text": "dicho de otro modo" },
+        { "id": "b", "text": "por el contrario" },
+        { "id": "c", "text": "por consiguiente" },
+        { "id": "d", "text": "aun así" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Reformulas la misma idea con otras palabras.",
+      "no": "You're rephrasing the same idea, so use 'dicho de otro modo' (put another way), not a contrast or consequence marker."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Faltan tres documentos, ___: el contrato, la factura y el recibo.",
+      "prompt_en": "Three documents are missing, namely: the contract, the invoice and the receipt.",
+      "options": [
+        { "id": "a", "text": "a saber" },
+        { "id": "b", "text": "o sea" },
+        { "id": "c", "text": "en definitiva" },
+        { "id": "d", "text": "por cierto" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! 'A saber' introduce la enumeración.",
+      "no": "To introduce a precise list use 'a saber' (namely)."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"Ultimately, the reform convinces no one.\"",
+      "tokens": [
+        "En",
+        "definitiva,",
+        "la",
+        "reforma",
+        "no",
+        "convence",
+        "a",
+        "nadie",
+        "en",
+        "cambio"
+      ],
+      "answer": [
+        "En",
+        "definitiva,",
+        "la",
+        "reforma",
+        "no",
+        "convence",
+        "a",
+        "nadie"
+      ],
+      "ok": "¡Perfecto! 'En definitiva' cierra con el veredicto.",
+      "no": "For a final verdict use 'en definitiva' (ultimately), not the contrast marker 'en cambio'."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "___, ¿enviaste el informe que te pedí ayer?",
+      "prompt_en": "By the way, did you send the report I asked you for yesterday?",
+      "accepted": [
+        "por cierto"
+      ],
+      "ignore_accents": true,
+      "hint": "A two-word marker that introduces an aside: 'by the way'.",
+      "ok": "¡Bien! 'Por cierto' introduce la digresión.",
+      "no": "The everyday 'by the way' marker is 'por cierto'."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each connector to its discourse function.",
+      "pairs": [
+        ["es decir", "restate / clarify"],
+        ["a saber", "specify (namely)"],
+        ["en resumidas cuentas", "sum up"],
+        ["a propósito", "digress"]
+      ],
+      "ok": "¡Excelente! Cada marcador en su sitio.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "En resumidas cuentas, salió más caro de lo previsto.",
+      "accepted": [
+        "en resumidas cuentas salio mas caro de lo previsto"
+      ],
+      "ignore_accents": true,
+      "translation": "To cut a long story short, it turned out pricier than expected.",
+      "ok": "¡Correcto! “En resumidas cuentas, salió más caro de lo previsto.”",
+      "no": "It was: “En resumidas cuentas, salió más caro de lo previsto.” (To cut a long story short, it turned out pricier than expected.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Wrapping up a long project meeting 🗂️",
+      "lines": [
+        {
+          "speaker": "Directora",
+          "es": "Hemos revisado presupuesto, plazos y riesgos. ¿Alguna conclusión?",
+          "en": "We've reviewed budget, timelines and risks. Any conclusion?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "En suma, el proyecto es viable si ajustamos el calendario." },
+        { "id": "b", "text": "Por el contrario, hemos revisado presupuesto, plazos y riesgos." },
+        { "id": "c", "text": "A saber, no tengo ninguna conclusión que darte hoy." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! 'En suma' condensa y cierra el análisis.",
+      "no": "You're asked to conclude, so open with a summary marker: 'en suma' (in sum)."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Es decir, conviene replantear el enfoque.",
+      "en": "That is, it's worth rethinking the approach.",
+      "ok": "¡Perfecto! Reformulación clara y natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Es decir, conviene replantear el enfoque.”"
+    }
+  ],
+  "vocab": [
+    { "es": "es decir", "en": "that is / in other words" },
+    { "es": "o sea", "en": "in other words (colloquial)" },
+    { "es": "a saber", "en": "namely" },
+    { "es": "dicho de otro modo", "en": "put another way" },
+    { "es": "en definitiva", "en": "ultimately / in the end" },
+    { "es": "en resumidas cuentas", "en": "to cut a long story short" },
+    { "es": "por cierto", "en": "by the way" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "es decir",
+      "a saber",
+      "dicho de otro modo",
+      "en definitiva",
+      "por cierto"
+    ]
+  }
+}

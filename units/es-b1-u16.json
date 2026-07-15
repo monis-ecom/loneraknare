@@ -1,0 +1,360 @@
+{
+  "unit": {
+    "id": "es-b1-u16",
+    "title": "Future perfect & conditional perfect",
+    "subtitle": "\"Will have done\" and \"would have done\"",
+    "level": "B1",
+    "order": 16,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Talking about actions that will (or would) have finished",
+    "intro": "Two compound tenses let you look at completed actions from a distance. The <b>future perfect</b> (<b>habré</b> + participle) says what <b>will have happened</b> by a certain point — or guesses about the recent past. The <b>conditional perfect</b> (<b>habría</b> + participle) says what <b>would have happened</b> in another version of events. Both just need the right form of <b>haber</b> plus a past participle.",
+    "sections": [
+      {
+        "tag": "futuro perfecto",
+        "heading": "Future perfect: habré + participle",
+        "body": "Use it for something that <b>will already be finished</b> by a future moment. Conjugate <b>haber</b> in the future and add the participle:",
+        "conj": [
+          [
+            "yo",
+            "habré hecho"
+          ],
+          [
+            "tú",
+            "habrás hecho"
+          ],
+          [
+            "él/ella",
+            "habrá hecho"
+          ],
+          [
+            "nosotros",
+            "habremos hecho"
+          ],
+          [
+            "vosotros",
+            "habréis hecho"
+          ],
+          [
+            "ellos",
+            "habrán hecho"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Para mañana <b>habré terminado</b> el informe.",
+            "en": "By tomorrow I will have finished the report.",
+            "note": "finished before a future point"
+          },
+          {
+            "es": "<b>Para entonces</b> ya <b>habremos llegado</b>.",
+            "en": "By then we will have already arrived.",
+            "note": "para entonces = by then"
+          }
+        ]
+      },
+      {
+        "tag": "probabilidad",
+        "heading": "Guessing about the recent past",
+        "body": "The future perfect also expresses a <b>guess</b> about something that just happened — English uses \"must have\":",
+        "ex": [
+          {
+            "es": "<b>Habrá salido</b> ya; no contesta.",
+            "en": "He must have already left; he isn't answering.",
+            "note": "habrá salido = he must have left"
+          },
+          {
+            "es": "¿Dónde está? <b>Se habrá olvidado</b> de la cita.",
+            "en": "Where is he? He must have forgotten the appointment.",
+            "note": "probability, not certainty"
+          }
+        ]
+      },
+      {
+        "tag": "condicional perfecto",
+        "heading": "Conditional perfect: habría + participle",
+        "body": "Use it for what <b>would have happened</b> — often a regret or a hypothetical about the past. Conjugate <b>haber</b> in the conditional and add the participle:",
+        "conj": [
+          [
+            "yo",
+            "habría ido"
+          ],
+          [
+            "tú",
+            "habrías ido"
+          ],
+          [
+            "él/ella",
+            "habría ido"
+          ],
+          [
+            "nosotros",
+            "habríamos ido"
+          ],
+          [
+            "vosotros",
+            "habríais ido"
+          ],
+          [
+            "ellos",
+            "habrían ido"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Yo que tú, <b>habría estudiado</b> más.",
+            "en": "If I were you, I would have studied more.",
+            "note": "advice about the past"
+          },
+          {
+            "es": "<b>Habría sido</b> mejor esperar.",
+            "en": "It would have been better to wait.",
+            "note": "habría sido = would have been"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Future perfect = habré/habrás/habrá… + participle: 'will have done'.",
+      "It also guesses about the recent past: Habrá salido = He must have left.",
+      "Conditional perfect = habría/habrías/habría… + participle: 'would have done'.",
+      "Common participles: hecho, visto, dicho, ido, sido.",
+      "Handy time markers: para mañana, para entonces."
+    ],
+    "mistakes": [
+      {
+        "w": "Para mañana habría terminado el informe.",
+        "r": "Para mañana habré terminado el informe.",
+        "why": "A real future deadline needs the future auxiliary (habré), not the conditional (habría)."
+      },
+      {
+        "w": "Yo que tú, habría estudiar más.",
+        "r": "Yo que tú, habría estudiado más.",
+        "why": "After haber you need the participle (estudiado), not the infinitive."
+      },
+      {
+        "w": "Habrá salido ya; no ha contestado, así que ha ido seguro.",
+        "r": "Habrá salido ya; no contesta.",
+        "why": "The future perfect already carries the 'must have' guess — don't add 'seguro' as if it were certain."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Para mañana ya ___ el informe.",
+      "prompt_en": "By tomorrow I will have finished the report.",
+      "options": [
+        {
+          "id": "a",
+          "text": "habré terminado"
+        },
+        {
+          "id": "b",
+          "text": "habría terminado"
+        },
+        {
+          "id": "c",
+          "text": "he terminado"
+        },
+        {
+          "id": "d",
+          "text": "terminaré"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Un plazo futuro → futuro perfecto: habré terminado.",
+      "no": "A future deadline uses the future perfect: “habré terminado”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No contesta el teléfono. ___ ya.",
+      "prompt_en": "He isn't answering the phone. He must have left already.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Habría salido"
+        },
+        {
+          "id": "b",
+          "text": "Habrá salido"
+        },
+        {
+          "id": "c",
+          "text": "Ha salido seguro"
+        },
+        {
+          "id": "d",
+          "text": "Saldrá"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! El futuro perfecto expresa una suposición: habrá salido.",
+      "no": "A guess about the recent past uses the future perfect: “Habrá salido”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I would have gone to the party.”",
+      "tokens": [
+        "Yo",
+        "habría",
+        "ido",
+        "a",
+        "la",
+        "fiesta",
+        "habré",
+        "ir"
+      ],
+      "answer": [
+        "Yo",
+        "habría",
+        "ido",
+        "a",
+        "la",
+        "fiesta"
+      ],
+      "ok": "¡Perfecto! habría + participio → habría ido.",
+      "no": "“Yo habría ido a la fiesta” — conditional perfect: habría + participle."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Habría ___ mejor esperar un poco. (to be)",
+      "prompt_en": "It would have been better to wait a little.",
+      "accepted": [
+        "sido"
+      ],
+      "ignore_accents": true,
+      "hint": "Past participle of ser.",
+      "ok": "¡Bien! Habría sido mejor esperar.",
+      "no": "The participle of ser is “sido”: habría sido mejor."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each form to its meaning.",
+      "pairs": [
+        [
+          "habré hecho",
+          "I will have done"
+        ],
+        [
+          "habrá salido",
+          "he must have left"
+        ],
+        [
+          "habría ido",
+          "I would have gone"
+        ],
+        [
+          "para entonces",
+          "by then"
+        ]
+      ],
+      "ok": "¡Excelente! Tienes claras las dos formas.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Para el lunes habré leído el libro.",
+      "accepted": [
+        "para el lunes habre leido el libro"
+      ],
+      "ignore_accents": true,
+      "translation": "By Monday I will have read the book.",
+      "ok": "¡Correcto! “Para el lunes habré leído el libro.”",
+      "no": "It was: “Para el lunes habré leído el libro.” (By Monday I will have read the book.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend regrets missing an exam 📚",
+      "lines": [
+        {
+          "speaker": "Marcos",
+          "es": "Suspendí el examen. No estudié nada.",
+          "en": "I failed the exam. I didn't study at all."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Yo que tú, habría estudiado la noche antes."
+        },
+        {
+          "id": "b",
+          "text": "Yo que tú, habré estudiado la noche antes."
+        },
+        {
+          "id": "c",
+          "text": "Yo que tú, habría estudiar la noche antes."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Consejo sobre el pasado → condicional perfecto: habría estudiado.",
+      "no": "Advice about the past uses the conditional perfect: “habría estudiado”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Para entonces ya habré terminado.",
+      "en": "By then I will have already finished.",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "habré hecho",
+      "en": "I will have done"
+    },
+    {
+      "es": "habrá salido",
+      "en": "he must have left / will have left"
+    },
+    {
+      "es": "habría ido",
+      "en": "I would have gone"
+    },
+    {
+      "es": "para entonces",
+      "en": "by then"
+    },
+    {
+      "es": "habría sido",
+      "en": "it would have been"
+    },
+    {
+      "es": "para mañana",
+      "en": "by tomorrow"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "habré hecho",
+      "habrá salido",
+      "habría ido",
+      "para entonces",
+      "habría sido"
+    ]
+  }
+}

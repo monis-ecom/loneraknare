@@ -1,0 +1,260 @@
+{
+  "unit": {
+    "id": "es-c2-u04",
+    "title": "The Many Values of “se”",
+    "subtitle": "Reflexive, reciprocal, impersonal, passive, accidental and emphatic se",
+    "level": "C2",
+    "order": 4,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "One little word, six different jobs",
+    "intro": "The particle <b>se</b> is the busiest word in Spanish. The same three letters mark a <b>reflexive</b> action (<b>se lava</b>), a <b>reciprocal</b> one (<b>se abrazan</b>), an <b>impersonal</b> statement (<b>se vive bien aquí</b>), a <b>passive-reflexive</b> (<b>se venden pisos</b>), an <b>accidental</b> mishap that quietly deflects blame (<b>se me cayó</b>), and an <b>emphatic</b> flourish of totality (<b>se comió toda la tarta</b>). Telling them apart — and building the accidental one correctly — is a hallmark of near-native control.",
+    "sections": [
+      {
+        "tag": "reflexivo / recíproco",
+        "heading": "Reflexive vs reciprocal se",
+        "body": "With a <b>reflexive</b> se the subject acts on itself (<b>se lava</b> = washes himself). With a <b>reciprocal</b> se two or more subjects act on each other (<b>se abrazan</b> = they hug one another). Only context or a tag like <b>el uno al otro</b> / <b>a sí mismo</b> disambiguates them.",
+        "conj": [
+          ["reflexive (self)", "se lava las manos"],
+          ["reciprocal (each other)", "se abrazan al verse"],
+          ["force reciprocal", "se ayudan el uno al otro"],
+          ["force reflexive", "se habla a sí mismo"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Se lava</b> las manos antes de comer.",
+            "en": "He washes his hands before eating.",
+            "note": "acts on himself → reflexive"
+          },
+          {
+            "es": "Los viejos amigos <b>se abrazaron</b> al reencontrarse.",
+            "en": "The old friends hugged (each other) when they met again.",
+            "note": "mutual action → reciprocal"
+          }
+        ]
+      },
+      {
+        "tag": "impersonal / pasiva refleja",
+        "heading": "Impersonal se vs passive-reflexive se",
+        "body": "<b>Impersonal se</b> hides a generic “one / people” and the verb stays in the <b>singular</b> (<b>se vive bien aquí</b>). The <b>pasiva refleja</b> looks identical but has a real grammatical subject, so the verb <b>agrees</b> with it (<b>se venden pisos</b>, plural). Rule of thumb: if there is a noun that could be the thing acted upon, make the verb agree with it.",
+        "conj": [
+          ["impersonal (no subject → 3sg)", "aquí se trabaja mucho"],
+          ["passive-reflexive (agrees)", "se venden pisos"],
+          ["singular subject → 3sg", "se alquila un piso"],
+          ["plural subject → 3pl", "se alquilan pisos"]
+        ],
+        "ex": [
+          {
+            "es": "En este pueblo <b>se vive</b> de maravilla.",
+            "en": "In this town people live wonderfully.",
+            "note": "no subject → singular"
+          },
+          {
+            "es": "<b>Se venden</b> pisos en el centro.",
+            "en": "Flats are for sale downtown.",
+            "note": "pisos is subject → plural agreement"
+          }
+        ]
+      },
+      {
+        "tag": "se accidental",
+        "heading": "The accidental se: “it happened to me”",
+        "body": "To present a mishap as beyond your control, Spanish uses <b>se</b> + an <b>indirect-object pronoun</b> (me/te/le/nos/os/les) + a verb that <b>agrees with the thing</b>, not with you: <b>se me cayó el vaso</b> (the glass fell on me), <b>se le rompió</b> (it broke on him). If the thing is plural, the verb goes plural too: <b>se me olvidaron las llaves</b>. This structure elegantly shifts the blame off the person.",
+        "conj": [
+          ["I dropped it", "se me cayó (el vaso)"],
+          ["I forgot them", "se me olvidaron (las llaves)"],
+          ["it broke on him", "se le rompió (el móvil)"],
+          ["we ran out of it", "se nos acabó (el pan)"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Se me cayó</b> el vaso y se hizo añicos.",
+            "en": "I dropped the glass and it shattered.",
+            "note": "verb agrees with vaso, not with me"
+          },
+          {
+            "es": "<b>Se me olvidaron</b> las llaves dentro del coche.",
+            "en": "I forgot the keys inside the car.",
+            "note": "llaves is plural → olvidaron"
+          }
+        ]
+      },
+      {
+        "tag": "se aspectual / enfático",
+        "heading": "The emphatic dative se: totality",
+        "body": "An optional <b>dative se</b> can be added to certain transitive verbs to stress that the action was carried out <b>completely</b> or with relish: <b>se comió toda la tarta</b> (he polished off the whole cake), <b>se lo sabe todo</b> (he knows it all), <b>se leyó el libro entero</b>. The subject is still the doer; the se just adds emphasis and a sense of consumption/totality.",
+        "conj": [
+          ["ate it all up", "se comió toda la tarta"],
+          ["knows it all", "se lo sabe todo"],
+          ["read the whole thing", "se leyó el libro entero"],
+          ["drank the lot", "se bebió toda la botella"]
+        ],
+        "ex": [
+          {
+            "es": "No dejó ni un trozo: <b>se comió</b> toda la tarta él solo.",
+            "en": "He didn't leave a single piece: he ate the whole cake by himself.",
+            "note": "se stresses totality/consumption"
+          },
+          {
+            "es": "Ese niño <b>se lo sabe</b> todo.",
+            "en": "That kid knows absolutely everything.",
+            "note": "emphatic dative → total mastery"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Reflexive = acts on self (se lava); reciprocal = on each other (se abrazan).",
+      "Impersonal se keeps the verb singular; pasiva refleja agrees with its subject (se venden pisos).",
+      "Accidental se: se + me/te/le… + verb agreeing with the thing (se me cayó / se me olvidaron).",
+      "Emphatic dative se adds totality: se comió toda la tarta, se lo sabe todo."
+    ],
+    "mistakes": [
+      {
+        "w": "Se me olvidé las llaves.",
+        "r": "Se me olvidaron las llaves.",
+        "why": "In the accidental se the verb agrees with the thing (llaves), not with you: olvidaron, never olvidé."
+      },
+      {
+        "w": "Ayer caí el vaso al suelo.",
+        "r": "Ayer se me cayó el vaso al suelo.",
+        "why": "For an accidental drop, Spanish uses se + me + a verb agreeing with the object, not a plain transitive caí."
+      },
+      {
+        "w": "Se vende pisos en el centro.",
+        "r": "Se venden pisos en el centro.",
+        "why": "The passive-reflexive must agree with its plural subject: se venden pisos, not se vende pisos."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "A Marta ___ las llaves dentro del coche.",
+      "prompt_en": "Marta accidentally left the keys inside the car.",
+      "options": [
+        { "id": "a", "text": "se le olvidaron" },
+        { "id": "b", "text": "se le olvidó" },
+        { "id": "c", "text": "le olvidó" },
+        { "id": "d", "text": "se les olvidaron" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! El verbo concuerda con “las llaves” → olvidaron.",
+      "no": "The accidental se agrees with the thing (las llaves, plural) and uses le for one person: se le olvidaron."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "No dejó ni una miga: ___ toda la tarta él solo.",
+      "prompt_en": "He didn't leave a single crumb: he devoured the whole cake by himself.",
+      "options": [
+        { "id": "a", "text": "se comió" },
+        { "id": "b", "text": "se comieron" },
+        { "id": "c", "text": "se le comió" },
+        { "id": "d", "text": "comieron" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! El se enfático subraya la totalidad → se comió.",
+      "no": "One subject (él) devouring the lot takes the emphatic dative se: se comió toda la tarta."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I dropped the glass (it slipped from me).”",
+      "tokens": ["Se", "me", "cayó", "el", "vaso", "cayeron", "le"],
+      "answer": ["Se", "me", "cayó", "el", "vaso"],
+      "ok": "¡Perfecto! se + me + cayó (concuerda con el vaso).",
+      "no": "Accidental se: “Se me cayó el vaso” — singular vaso → cayó, and me for the affected person."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "En la costa ___ construyeron cientos de casas en los años sesenta.",
+      "prompt_en": "On the coast, hundreds of houses were built in the sixties.",
+      "accepted": ["se"],
+      "ignore_accents": true,
+      "hint": "Passive-reflexive: the particle + a verb agreeing with the plural subject.",
+      "ok": "¡Bien! Pasiva refleja → se construyeron.",
+      "no": "Houses were built = passive-reflexive: “se construyeron cientos de casas”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each sentence to the value of “se” it uses.",
+      "pairs": [
+        ["Se lava las manos", "reflexive"],
+        ["Se saludaron con un abrazo", "reciprocal"],
+        ["Se me olvidó la cita", "accidental se"],
+        ["Aquí se trabaja mucho", "impersonal se"]
+      ],
+      "ok": "¡Excelente! Distingues los valores de “se” a la perfección.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Se me cayeron todos los papeles al suelo.",
+      "accepted": ["se me cayeron todos los papeles al suelo"],
+      "ignore_accents": true,
+      "translation": "I dropped all the papers on the floor.",
+      "ok": "¡Correcto! “Se me cayeron todos los papeles al suelo.”",
+      "no": "It was: “Se me cayeron todos los papeles al suelo.” (plural papeles → cayeron)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Your boss asks why the report isn't ready 📄",
+      "lines": [
+        {
+          "speaker": "Ana",
+          "es": "¿Por qué no trajiste el informe a la reunión?",
+          "en": "Why didn't you bring the report to the meeting?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Lo siento, se me olvidó por completo." },
+        { "id": "b", "text": "Lo siento, se me olvidé por completo." },
+        { "id": "c", "text": "Lo siento, me se olvidó por completo." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Accidental se: se me olvidó (deflecta la culpa con naturalidad).",
+      "no": "Accidental se needs a 3rd-person verb and the order se me: “se me olvidó”, not olvidé nor “me se”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Se me olvidaron las llaves otra vez.",
+      "en": "I forgot the keys again.",
+      "ok": "¡Perfecto! Muy natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Se me olvidaron las llaves otra vez.”"
+    }
+  ],
+  "vocab": [
+    { "es": "se lava las manos", "en": "he washes his hands (reflexive)" },
+    { "es": "se abrazan", "en": "they hug each other (reciprocal)" },
+    { "es": "se vive bien aquí", "en": "one lives well here (impersonal)" },
+    { "es": "se venden pisos", "en": "flats are for sale (passive-reflexive)" },
+    { "es": "se me cayó", "en": "I dropped it (accidental se)" },
+    { "es": "se me olvidó", "en": "I forgot (accidental se)" },
+    { "es": "se comió toda la tarta", "en": "he ate the whole cake (emphatic se)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["se venden pisos", "se me cayó", "se me olvidó", "se comió toda la tarta", "se vive bien aquí"]
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "unit": {
+    "id": "es-a1-u04",
+    "title": "-AR verbs",
+    "subtitle": "Regular -AR verbs in the present tense",
+    "level": "A1",
+    "order": 4,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "One pattern unlocks hundreds of verbs",
+    "intro": "Most Spanish verbs end in <b>-ar</b> (hablar, trabajar, estudiar). To use them, drop the <b>-ar</b> and add an ending that matches who’s doing the action. Learn this once and it works for <b>every</b> regular -AR verb.",
+    "sections": [
+      {
+        "tag": "regla",
+        "heading": "The endings",
+        "body": "Take the stem (hablar → <b>habl-</b>) and add:",
+        "conj": [
+          [
+            "yo",
+            "-o"
+          ],
+          [
+            "tú",
+            "-as"
+          ],
+          [
+            "él/ella",
+            "-a"
+          ],
+          [
+            "nosotros",
+            "-amos"
+          ],
+          [
+            "vosotros",
+            "-áis"
+          ],
+          [
+            "ellos",
+            "-an"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Estas terminaciones son <b>iguales</b> para todos los verbos -AR.",
+            "en": "These endings are the same for every -AR verb.",
+            "note": "the whole trick"
+          }
+        ]
+      },
+      {
+        "tag": "hablar",
+        "heading": "hablar (to speak) in action",
+        "body": "Same stem, six endings:",
+        "conj": [
+          [
+            "yo",
+            "hablo"
+          ],
+          [
+            "tú",
+            "hablas"
+          ],
+          [
+            "él/ella",
+            "habla"
+          ],
+          [
+            "nosotros",
+            "hablamos"
+          ],
+          [
+            "vosotros",
+            "habláis"
+          ],
+          [
+            "ellos",
+            "hablan"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Yo <b>hablo</b> español.",
+            "en": "I speak Spanish.",
+            "note": "yo → -o"
+          },
+          {
+            "es": "Nosotros <b>trabajamos</b> en Madrid.",
+            "en": "We work in Madrid.",
+            "note": "nosotros → -amos"
+          },
+          {
+            "es": "Ella <b>estudia</b> mucho.",
+            "en": "She studies a lot.",
+            "note": "ella → -a"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Drop -ar, then add: -o, -as, -a, -amos, -áis, -an.",
+      "The endings are identical for every regular -AR verb.",
+      "Pronouns (yo, tú…) are optional — the ending already says who."
+    ],
+    "mistakes": [
+      {
+        "w": "Yo hablar español.",
+        "r": "Yo hablo español.",
+        "why": "Conjugate the verb — never leave it as the infinitive."
+      },
+      {
+        "w": "Nosotros hablan.",
+        "r": "Nosotros hablamos.",
+        "why": "nosotros → -amos, not -an."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Yo ___ español.",
+      "prompt_en": "I speak Spanish.",
+      "options": [
+        {
+          "id": "a",
+          "text": "hablo"
+        },
+        {
+          "id": "b",
+          "text": "hablas"
+        },
+        {
+          "id": "c",
+          "text": "habla"
+        },
+        {
+          "id": "d",
+          "text": "hablan"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! yo → -o → hablo.",
+      "no": "yo takes -o → “hablo”."
+    },
+    {
+      "id": "ex2",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “We work in Madrid.”",
+      "tokens": [
+        "trabajan",
+        "Nosotros",
+        "en",
+        "trabajamos",
+        "Madrid",
+        "trabajo"
+      ],
+      "answer": [
+        "Nosotros",
+        "trabajamos",
+        "en",
+        "Madrid"
+      ],
+      "ok": "¡Perfecto! nosotros → -amos → trabajamos.",
+      "no": "nosotros → -amos: “Nosotros trabajamos en Madrid.”"
+    },
+    {
+      "id": "ex3",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Ella ___ en la universidad.",
+      "prompt_en": "She studies at the university.",
+      "accepted": [
+        "estudia"
+      ],
+      "ignore_accents": true,
+      "hint": "estudiar, ella-form.",
+      "ok": "¡Bien! ella → -a → estudia.",
+      "no": "ella → -a → “estudia”."
+    },
+    {
+      "id": "ex4",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each subject to the correct form of HABLAR.",
+      "pairs": [
+        [
+          "yo",
+          "hablo"
+        ],
+        [
+          "tú",
+          "hablas"
+        ],
+        [
+          "nosotros",
+          "hablamos"
+        ],
+        [
+          "ellos",
+          "hablan"
+        ]
+      ],
+      "ok": "¡Excelente! You’ve locked in the -AR pattern.",
+      "no": ""
+    },
+    {
+      "id": "ex5",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Yo cocino todos los días.",
+      "accepted": [
+        "yo cocino todos los dias"
+      ],
+      "ignore_accents": true,
+      "translation": "I cook every day.",
+      "ok": "¡Correcto! “Yo cocino todos los días.”",
+      "no": "It was: “Yo cocino todos los días.” (I cook every day.)"
+    },
+    {
+      "id": "ex6",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¿Tú ___ música?",
+      "prompt_en": "Do you listen to music?",
+      "options": [
+        {
+          "id": "a",
+          "text": "escucho"
+        },
+        {
+          "id": "b",
+          "text": "escuchas"
+        },
+        {
+          "id": "c",
+          "text": "escucha"
+        },
+        {
+          "id": "d",
+          "text": "escuchan"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Sí! tú → -as → escuchas.",
+      "no": "tú → -as → “escuchas”."
+    },
+    {
+      "id": "dlg1",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend asks what you do.",
+      "lines": [
+        {
+          "speaker": "Sofía",
+          "es": "¿Qué estudias?",
+          "en": "What do you study?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        },
+        {
+          "speaker": "Sofía",
+          "es": "¡Qué interesante!",
+          "en": "How interesting!"
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Estudio español y trabajo mucho."
+        },
+        {
+          "id": "b",
+          "text": "Estudias español y trabajas mucho."
+        },
+        {
+          "id": "c",
+          "text": "Estudiar español y trabajar mucho."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Con «yo», los verbos -AR terminan en -o: estudio, trabajo.",
+      "no": "For «yo», -AR verbs end in -o: estudio, trabajo."
+    },
+    {
+      "id": "ex7",
+      "type": "speak",
+      "xp": 3,
+      "say": "trabajar",
+      "en": "to work",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "hablar",
+      "en": "to speak"
+    },
+    {
+      "es": "trabajar",
+      "en": "to work"
+    },
+    {
+      "es": "estudiar",
+      "en": "to study"
+    },
+    {
+      "es": "cocinar",
+      "en": "to cook"
+    },
+    {
+      "es": "escuchar",
+      "en": "to listen"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "hablar",
+      "trabajar",
+      "estudiar",
+      "cocinar",
+      "escuchar"
+    ]
+  }
+}

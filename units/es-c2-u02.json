@@ -1,0 +1,235 @@
+{
+  "unit": {
+    "id": "es-c2-u02",
+    "title": "The Literary -ra Form",
+    "subtitle": "Quisiera, the journalistic pluperfect, and hubiera ↔ habría",
+    "level": "C2",
+    "order": 2,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "When -ra isn't really the subjunctive",
+    "intro": "The <b>-ra</b> imperfect subjunctive (<b>hablara</b>, <b>tuviera</b>, <b>fuera</b>) started life as a Latin <b>pluperfect indicative</b>, and that origin still surfaces in educated, literary and press Spanish. At C2 you must <b>recognise</b> three uses where <b>-ra</b> stands in for other tenses: a courteous conditional, a journalistic pluperfect, and a swap with <b>habría</b> in unreal conditionals. Reading these is a matter of <b>register</b>, not of the ordinary subjunctive.",
+    "sections": [
+      {
+        "tag": "cortesía",
+        "heading": "Softened conditional: quisiera, debiera, pudiera",
+        "body": "With <b>querer</b>, <b>deber</b> and <b>poder</b>, the <b>-ra</b> form replaces the conditional (<b>querría</b>, <b>debería</b>, <b>podría</b>) to sound more <b>courteous</b> and tentative. <b>Quisiera</b> is markedly more polite than <b>quiero</b>; <b>debieras</b> softens a reproach; <b>pudiera(s)</b> hedges a request. This is standard formal usage, not archaism.",
+        "conj": [
+          ["Quisiera = querría", "I would like (very polite)"],
+          ["Debieras = deberías", "you really ought to"],
+          ["Pudiera = podría", "could / might (tentative)"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Quisiera</b> pedirle un favor, si no es molestia.",
+            "en": "I'd like to ask you a favour, if it's no trouble.",
+            "note": "quisiera = querría, more courteous"
+          },
+          {
+            "es": "<b>Debieras</b> habérmelo dicho antes.",
+            "en": "You really ought to have told me sooner.",
+            "note": "softened reproach = deberías"
+          }
+        ]
+      },
+      {
+        "tag": "prensa",
+        "heading": "The journalistic / literary pluperfect",
+        "body": "In news writing and literary prose, <b>-ra</b> replaces the <b>pluperfect indicative</b> (<b>había + participio</b>), almost always inside a relative clause introduced by <b>que</b>, <b>donde</b>, <b>quien</b>, <b>como</b>. <b>El jugador que marcara el gol</b> means <b>que había marcado</b>, not a subjunctive. It sounds elevated and is typical of sports and obituary style.",
+        "conj": [
+          ["que marcara = que había marcado", "who had scored"],
+          ["donde naciera = donde había nacido", "where he had been born"],
+          ["como prometiera = como había prometido", "as he had promised"]
+        ],
+        "ex": [
+          {
+            "es": "El jugador que <b>marcara</b> el gol decisivo se retiró ayer.",
+            "en": "The player who had scored the decisive goal retired yesterday.",
+            "note": "marcara = había marcado (press)"
+          },
+          {
+            "es": "Regresó a la ciudad donde <b>naciera</b> medio siglo antes.",
+            "en": "He returned to the city where he had been born half a century earlier.",
+            "note": "naciera = había nacido (literary)"
+          }
+        ]
+      },
+      {
+        "tag": "condicional",
+        "heading": "Hubiera ↔ habría in the apodosis",
+        "body": "In a past unreal conditional, the result clause (apodosis) may take either <b>habría</b> + participio or, interchangeably, <b>hubiera</b> + participio. <b>Si lo hubiera sabido, habría venido</b> and <b>…hubiera venido</b> are both correct and current. The <b>hubiese</b> variant is fine in the if-clause but is avoided in the apodosis by careful writers.",
+        "conj": [
+          ["si + hubiera/hubiese sabido", "if I had known (protasis)"],
+          ["habría venido", "I would have come (standard apodosis)"],
+          ["hubiera venido", "I would have come (accepted variant)"],
+          ["hubiese venido (apodosis)", "avoided by careful writers"]
+        ],
+        "ex": [
+          {
+            "es": "Si lo <b>hubiera</b> sabido, <b>hubiera</b> venido enseguida.",
+            "en": "If I had known, I would have come at once.",
+            "note": "hubiera in both clauses: accepted"
+          },
+          {
+            "es": "Si me lo <b>hubieras</b> dicho, te <b>habría</b> ayudado.",
+            "en": "If you had told me, I would have helped you.",
+            "note": "the -se form is avoided in the result clause"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Quisiera / debieras / pudiera = a more courteous querría / deberías / podría — pure formal register.",
+      "In press and literature, -ra in a relative clause (que marcara) = the pluperfect había marcado, not a subjunctive.",
+      "In past unreal conditionals, the apodosis allows both habría venido and hubiera venido.",
+      "Recognising these is about register: formal courtesy, journalistic style, and literary flavour."
+    ],
+    "mistakes": [
+      {
+        "w": "El equipo que ganara la liga… (meaning: as a wish)",
+        "r": "El equipo que ganara la liga = que había ganado.",
+        "why": "In press style this -ra is a pluperfect indicative, not a subjunctive wish — misreading it inverts the meaning."
+      },
+      {
+        "w": "Si lo hubiese sabido, hubiese venido.",
+        "r": "Si lo hubiese sabido, habría/hubiera venido.",
+        "why": "The -se form is fine in the if-clause but careful usage avoids it in the result clause; use habría or hubiera there."
+      },
+      {
+        "w": "Quiero pedirle un favor. (in a very formal request)",
+        "r": "Quisiera pedirle un favor.",
+        "why": "In courteous register the -ra form quisiera is expected; the bare quiero sounds blunt."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ pedirle un favor, si no es demasiada molestia.",
+      "prompt_en": "I'd like to ask you a favour, if it's not too much trouble.",
+      "options": [
+        { "id": "a", "text": "Quisiera" },
+        { "id": "b", "text": "Quiero" },
+        { "id": "c", "text": "Querré" },
+        { "id": "d", "text": "Quise" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Quisiera = querría, el registro más cortés.",
+      "no": "In this courteous register the -ra form is expected: Quisiera pedirle un favor."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "En la crónica: “El delantero que ___ el gol de la final se retira.” El sentido es que…",
+      "prompt_en": "In the sports report: “The striker who ___ the final's goal is retiring.” It means…",
+      "options": [
+        { "id": "a", "text": "marcara → había marcado" },
+        { "id": "b", "text": "marcara → marcaría (condicional)" },
+        { "id": "c", "text": "marcara → marque (deseo)" },
+        { "id": "d", "text": "marcara → marcaba (imperfecto)" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! El -ra periodístico equivale al pluscuamperfecto.",
+      "no": "In press style, this -ra is a literary pluperfect: que marcara = que había marcado."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “You really ought to have told me sooner.”",
+      "tokens": ["Debieras", "habérmelo", "dicho", "antes", "deberías", "dices"],
+      "answer": ["Debieras", "habérmelo", "dicho", "antes"],
+      "ok": "¡Perfecto! Debieras = deberías, con matiz atenuado.",
+      "no": "The softened reproach uses debieras: “Debieras habérmelo dicho antes.”"
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Regresó a la ciudad donde ___ medio siglo antes. (nacer, -ra literario = había nacido)",
+      "prompt_en": "He returned to the city where he had been born half a century earlier.",
+      "accepted": ["naciera"],
+      "ignore_accents": true,
+      "hint": "Literary -ra form of nacer standing for 'había nacido'.",
+      "ok": "¡Bien! naciera = había nacido (uso literario).",
+      "no": "The literary pluperfect here is naciera (= había nacido): donde naciera medio siglo antes."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each -ra form to what it really stands for.",
+      "pairs": [
+        ["quisiera", "querría (polite conditional)"],
+        ["que marcara", "que había marcado (pluperfect)"],
+        ["pudiera", "podría (tentative)"],
+        ["hubiera venido", "habría venido (apodosis)"]
+      ],
+      "ok": "¡Excelente! Reconoces el registro detrás de cada -ra.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Si lo hubiera sabido, habría venido enseguida.",
+      "accepted": ["si lo hubiera sabido habria venido enseguida"],
+      "ignore_accents": true,
+      "translation": "If I had known, I would have come at once.",
+      "ok": "¡Correcto! “Si lo hubiera sabido, habría venido enseguida.”",
+      "no": "It was: “Si lo hubiera sabido, habría venido enseguida.”"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "At a formal office, requesting an appointment 🏛️",
+      "lines": [
+        {
+          "speaker": "Recepcionista",
+          "es": "Buenos días, ¿en qué puedo ayudarle?",
+          "en": "Good morning, how may I help you?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Quisiera concertar una cita con el director, si fuera posible." },
+        { "id": "b", "text": "Quiero una cita con el director ya." },
+        { "id": "c", "text": "Quisiese una cita, si puede ser." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Quisiera + si fuera posible: cortesía impecable.",
+      "no": "The courteous register calls for “Quisiera concertar una cita…, si fuera posible.” (not the blunt quiero, nor quisiese here)."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Quisiera pedirle un favor, si no es molestia.",
+      "en": "I'd like to ask you a favour, if it's no trouble.",
+      "ok": "¡Perfecto! Suena cortés y natural.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Quisiera pedirle un favor, si no es molestia.”"
+    }
+  ],
+  "vocab": [
+    { "es": "quisiera", "en": "I would like (courteous, = querría)" },
+    { "es": "debieras", "en": "you really ought to (= deberías)" },
+    { "es": "pudiera", "en": "could / might (tentative, = podría)" },
+    { "es": "que naciera", "en": "who had been born (literary = había nacido)" },
+    { "es": "donde naciera", "en": "where he had been born (literary pluperfect)" },
+    { "es": "hubiera venido", "en": "I would have come (apodosis variant of habría)" },
+    { "es": "si lo hubiera sabido", "en": "if I had known" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["quisiera", "debieras", "pudiera", "donde naciera", "hubiera venido"]
+  }
+}

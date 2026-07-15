@@ -1,0 +1,359 @@
+{
+  "unit": {
+    "id": "es-a1-u18",
+    "title": "A1 Review",
+    "subtitle": "Bring it all together — a capstone review of A1",
+    "level": "A1",
+    "order": 18,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "You’ve built a real foundation",
+    "intro": "This is your capstone. No new grammar here — just a warm recap of the whole A1 journey. You can now greet people, describe things with <b>ser</b> and <b>estar</b>, conjugate regular verbs, say what you <b>like</b> and <b>have</b>, talk about the future with <b>ir a</b>, count, tell time, and ask real questions. Let’s mix it all together.",
+    "sections": [
+      {
+        "tag": "identidad",
+        "heading": "ser vs estar",
+        "body": "<b>Ser</b> = who/what something is (identity, origin, permanent traits). <b>Estar</b> = how/where it is (location, feelings, states):",
+        "conj": [
+          [
+            "origin / trait",
+            "ser"
+          ],
+          [
+            "location / feeling",
+            "estar"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Yo <b>soy</b> de España.",
+            "en": "I am from Spain.",
+            "note": "origin → ser"
+          },
+          {
+            "es": "El libro <b>está</b> en la mesa.",
+            "en": "The book is on the table.",
+            "note": "location → estar"
+          }
+        ]
+      },
+      {
+        "tag": "verbos",
+        "heading": "Present tense + gustar + tener",
+        "body": "Regular verbs follow steady endings; <b>gustar</b> flips the order; <b>tener</b> is your everyday “have”:",
+        "conj": [
+          [
+            "-AR (hablar)",
+            "hablo, hablas, habla…"
+          ],
+          [
+            "-ER (comer)",
+            "como, comes, come…"
+          ],
+          [
+            "-IR (vivir)",
+            "vivo, vives, vive…"
+          ],
+          [
+            "like",
+            "me gusta / me gustan"
+          ],
+          [
+            "have",
+            "tengo, tienes, tiene…"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Me gusta</b> el café.",
+            "en": "I like coffee.",
+            "note": "gustar: the thing is the subject"
+          },
+          {
+            "es": "<b>Tengo</b> dos hermanos.",
+            "en": "I have two brothers.",
+            "note": "tener for possession"
+          }
+        ]
+      },
+      {
+        "tag": "planes",
+        "heading": "The future, numbers & questions",
+        "body": "<b>Ir + a + infinitive</b> = going to do something. Add numbers, time, and question words to round it off:",
+        "conj": [
+          [
+            "going to",
+            "voy a + infinitive"
+          ],
+          [
+            "how much / many",
+            "¿cuánto?"
+          ],
+          [
+            "where",
+            "¿dónde?"
+          ],
+          [
+            "what",
+            "¿qué?"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "<b>Voy a</b> estudiar mañana.",
+            "en": "I am going to study tomorrow.",
+            "note": "ir a + infinitive"
+          },
+          {
+            "es": "¿<b>Dónde</b> está el baño?",
+            "en": "Where is the bathroom?",
+            "note": "question word + estar"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "ser = identity/origin; estar = location/feelings.",
+      "Regular verbs: -o, -as/-es, -a/-e… — the endings tell you who.",
+      "gustar flips: me gusta (one thing) / me gustan (several).",
+      "tener for having; ir a + infinitive for plans.",
+      "Question words open the door: qué, dónde, cuánto, cómo."
+    ],
+    "mistakes": [
+      {
+        "w": "El libro es en la mesa.",
+        "r": "El libro está en la mesa.",
+        "why": "Location always uses estar, not ser."
+      },
+      {
+        "w": "Yo gusto el café.",
+        "r": "Me gusta el café.",
+        "why": "gustar flips: the coffee “pleases me” → me gusta el café."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "El restaurante ___ cerca de la casa.",
+      "prompt_en": "The restaurant is near the house.",
+      "options": [
+        {
+          "id": "a",
+          "text": "está"
+        },
+        {
+          "id": "b",
+          "text": "es"
+        },
+        {
+          "id": "c",
+          "text": "hay"
+        },
+        {
+          "id": "d",
+          "text": "son"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Location → estar.",
+      "no": "Location uses estar → “El restaurante está cerca”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "A mí ___ los perros.",
+      "prompt_en": "I like dogs.",
+      "options": [
+        {
+          "id": "a",
+          "text": "me gustan"
+        },
+        {
+          "id": "b",
+          "text": "me gusta"
+        },
+        {
+          "id": "c",
+          "text": "gusto"
+        },
+        {
+          "id": "d",
+          "text": "gustas"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Sí! Plural “perros” → me gustan.",
+      "no": "“los perros” is plural → “me gustan los perros”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I am going to study tomorrow.”",
+      "tokens": [
+        "Voy",
+        "a",
+        "estudiar",
+        "mañana",
+        "voy",
+        "comer"
+      ],
+      "answer": [
+        "Voy",
+        "a",
+        "estudiar",
+        "mañana"
+      ],
+      "ok": "¡Perfecto! ir a + infinitive = a plan.",
+      "no": "“Voy a estudiar mañana.” — voy + a + infinitive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Yo ___ dos hermanos.",
+      "prompt_en": "I have two brothers.",
+      "accepted": [
+        "tengo"
+      ],
+      "ignore_accents": true,
+      "hint": "tener, yo-form.",
+      "ok": "¡Bien! yo → tengo.",
+      "no": "tener, yo-form → “tengo”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each Spanish word to its meaning.",
+      "pairs": [
+        [
+          "¿dónde?",
+          "where?"
+        ],
+        [
+          "número",
+          "number"
+        ],
+        [
+          "familia",
+          "family"
+        ],
+        [
+          "comer",
+          "to eat"
+        ]
+      ],
+      "ok": "¡Excelente! A1 vocabulary locked in.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "¿Cuántos años tienes?",
+      "accepted": [
+        "cuantos anos tienes",
+        "¿cuantos anos tienes?"
+      ],
+      "ignore_accents": true,
+      "translation": "How old are you?",
+      "ok": "¡Correcto! “¿Cuántos años tienes?”",
+      "no": "It was: “¿Cuántos años tienes?” (How old are you?)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "You meet a new classmate at a café ☕",
+      "lines": [
+        {
+          "speaker": "Diego",
+          "es": "¡Hola! ¿De dónde eres?",
+          "en": "Hi! Where are you from?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Soy de México. ¿Y a ti te gusta el café?"
+        },
+        {
+          "id": "b",
+          "text": "Estoy de México."
+        },
+        {
+          "id": "c",
+          "text": "Tengo de México."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Greeting + origin (ser) + a question with gustar.",
+      "no": "Origin uses ser → “Soy de México. ¿Y a ti te gusta el café?”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "familia",
+      "en": "family",
+      "ok": "¡Perfecto! Nice pronunciation.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "ser",
+      "en": "to be (identity/origin)"
+    },
+    {
+      "es": "estar",
+      "en": "to be (location/state)"
+    },
+    {
+      "es": "tener",
+      "en": "to have"
+    },
+    {
+      "es": "gustar",
+      "en": "to like"
+    },
+    {
+      "es": "hay",
+      "en": "there is / there are"
+    },
+    {
+      "es": "ir",
+      "en": "to go"
+    },
+    {
+      "es": "número",
+      "en": "number"
+    },
+    {
+      "es": "familia",
+      "en": "family"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "ser",
+      "estar",
+      "tener",
+      "gustar",
+      "hay",
+      "ir"
+    ]
+  }
+}

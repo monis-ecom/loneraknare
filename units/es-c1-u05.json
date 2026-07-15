@@ -1,0 +1,231 @@
+{
+  "unit": {
+    "id": "es-c1-u05",
+    "title": "Sequence of Tenses",
+    "subtitle": "Correlación temporal: matching the subjunctive to the main clause",
+    "level": "C1",
+    "order": 5,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Choosing the right subjunctive tense",
+    "intro": "Once a verb triggers the subjunctive, you still have to pick <b>which</b> subjunctive. That choice is governed by the <b>tense of the main clause</b> and by <b>timing</b> — whether the subordinate action is simultaneous with, or prior to, the main one. This is the <b>correlación temporal</b>, and getting it right is what separates B2 from C1.",
+    "sections": [
+      {
+        "tag": "presente",
+        "heading": "Present / future main → present subjunctive",
+        "body": "If the main verb is in the <b>present</b>, <b>future</b> or is an imperative, a simultaneous or later action takes the <b>present subjunctive</b>. If the subordinate action is already <b>completed</b>, switch to the <b>perfect subjunctive</b> (haya + participle).",
+        "conj": [
+          ["Quiero que…", "vengas (presente subj.)"],
+          ["Te pediré que…", "vengas (presente subj.)"],
+          ["Espero que (ya)…", "hayas venido (perfecto subj.)"],
+          ["Dudo que (todavía)…", "hayan llegado (perfecto subj.)"]
+        ],
+        "ex": [
+          {
+            "es": "Quiero que <b>vengas</b> a la reunión.",
+            "en": "I want you to come to the meeting.",
+            "note": "present main → present subj."
+          },
+          {
+            "es": "Me alegra que ya <b>hayas terminado</b>.",
+            "en": "I'm glad you've already finished.",
+            "note": "completed action → perfect subj."
+          }
+        ]
+      },
+      {
+        "tag": "pasado",
+        "heading": "Past / conditional main → imperfect subjunctive",
+        "body": "If the main verb is in the <b>imperfect</b>, <b>preterite</b>, <b>conditional</b> or pluperfect, a simultaneous or later action takes the <b>imperfect subjunctive</b> (viniera / viniese). If it's <b>prior</b> to the main clause, use the <b>pluperfect subjunctive</b> (hubiera venido).",
+        "conj": [
+          ["Quería que…", "vinieras (imperfecto subj.)"],
+          ["Te pedí que…", "vinieras (imperfecto subj.)"],
+          ["Me gustaría que…", "vinieras (imperfecto subj.)"],
+          ["No creía que (antes)…", "hubieras venido (pluscuamperf. subj.)"]
+        ],
+        "ex": [
+          {
+            "es": "Quería que <b>vinieras</b> conmigo.",
+            "en": "I wanted you to come with me.",
+            "note": "past main → imperfect subj."
+          },
+          {
+            "es": "No creía que <b>hubieras venido</b> ya.",
+            "en": "I didn't think you had already come.",
+            "note": "prior action → pluperfect subj."
+          }
+        ]
+      },
+      {
+        "tag": "lógica",
+        "heading": "Simultaneity vs anteriority",
+        "body": "The rule of thumb: keep the <b>simple</b> subjunctive (present or imperfect) for actions <b>at the same time or later</b>, and use a <b>compound</b> subjunctive (perfect or pluperfect) for actions that happened <b>before</b> the main clause. Anchor the tense to the main clause, then adjust for timing.",
+        "ex": [
+          {
+            "es": "Espero que <b>llames</b> mañana.",
+            "en": "I hope you'll call tomorrow.",
+            "note": "later → simple present subj."
+          },
+          {
+            "es": "Esperaba que <b>hubieras llamado</b> antes.",
+            "en": "I was hoping you had called earlier.",
+            "note": "earlier → pluperfect subj."
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Present/future main clause → present subjunctive (or perfect subjunctive if already completed).",
+      "Past/conditional main clause → imperfect subjunctive (or pluperfect subjunctive if prior).",
+      "Simultaneous or later = simple subjunctive; earlier = compound subjunctive.",
+      "Quiero que vengas ↔ Quería que vinieras: the main tense drags the subordinate one back."
+    ],
+    "mistakes": [
+      {
+        "w": "Quería que vengas conmigo.",
+        "r": "Quería que vinieras conmigo.",
+        "why": "A past main clause (quería) requires the imperfect subjunctive, not the present."
+      },
+      {
+        "w": "Me pidió que llegue temprano.",
+        "r": "Me pidió que llegara temprano.",
+        "why": "pidió is past, so the subordinate verb must be imperfect subjunctive: llegara."
+      },
+      {
+        "w": "Me alegra que vinieras ayer.",
+        "r": "Me alegra que hayas venido ayer.",
+        "why": "With a present main clause, a completed past action takes the perfect subjunctive."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Quería que ___ conmigo a la reunión.",
+      "prompt_en": "I wanted you to come with me to the meeting.",
+      "options": [
+        { "id": "a", "text": "vinieras" },
+        { "id": "b", "text": "vengas" },
+        { "id": "c", "text": "vienes" },
+        { "id": "d", "text": "hayas venido" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! quería (pasado) → imperfecto de subjuntivo: vinieras.",
+      "no": "A past main clause (quería) pulls the subjunctive back to the imperfect: vinieras."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Me sorprende que todavía no ___ nada al respecto.",
+      "prompt_en": "I'm surprised they haven't said anything about it yet.",
+      "options": [
+        { "id": "a", "text": "hayan dicho" },
+        { "id": "b", "text": "digan" },
+        { "id": "c", "text": "dijeran" },
+        { "id": "d", "text": "han dicho" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Presente + acción ya completada → perfecto de subjuntivo.",
+      "no": "Present main clause + a completed action → perfect subjunctive: hayan dicho."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I asked them to arrive on time.”",
+      "tokens": ["Les", "pedí", "que", "llegaran", "a", "tiempo", "lleguen", "llegan"],
+      "answer": ["Les", "pedí", "que", "llegaran", "a", "tiempo"],
+      "ok": "¡Perfecto! pedí (pasado) → llegaran.",
+      "no": "“Les pedí que llegaran a tiempo” — the past main verb needs the imperfect subjunctive."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Dudo que ellos ya ___ la noticia. (recibir)",
+      "prompt_en": "I doubt they've already received the news.",
+      "accepted": ["hayan recibido"],
+      "ignore_accents": true,
+      "hint": "Present main clause + an already-completed action → perfect subjunctive.",
+      "ok": "¡Bien! presente + ya → perfecto de subjuntivo: hayan recibido.",
+      "no": "It's “hayan recibido”: a present main clause with a completed action takes the perfect subjunctive."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each main clause to the subjunctive tense it requires.",
+      "pairs": [
+        ["Quiero que…", "presente de subjuntivo"],
+        ["Quería que…", "imperfecto de subjuntivo"],
+        ["Me alegra que ayer…", "perfecto de subjuntivo"],
+        ["No creía que antes…", "pluscuamperfecto de subjuntivo"]
+      ],
+      "ok": "¡Excelente! La correlación temporal, dominada.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Esperaba que me llamaras anoche.",
+      "accepted": ["esperaba que me llamaras anoche"],
+      "ignore_accents": true,
+      "translation": "I was hoping you would call me last night.",
+      "ok": "¡Correcto! “Esperaba que me llamaras anoche.”",
+      "no": "It was: “Esperaba que me llamaras anoche.” (esperaba → llamaras)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend admits she left you waiting 🚉",
+      "lines": [
+        {
+          "speaker": "Laura",
+          "es": "Al final no te esperé en la estación, lo siento.",
+          "en": "In the end I didn't wait for you at the station, sorry."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Pues me habría gustado que me avisaras." },
+        { "id": "b", "text": "Pues me habría gustado que me avises." },
+        { "id": "c", "text": "Pues me habría gustado que me avisabas." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! condicional → imperfecto de subjuntivo: avisaras.",
+      "no": "“Me habría gustado” (conditional) demands the imperfect subjunctive: que me avisaras."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Quería que vinieras a la reunión.",
+      "en": "I wanted you to come to the meeting.",
+      "ok": "¡Perfecto! Correlación impecable.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Quería que vinieras a la reunión.”"
+    }
+  ],
+  "vocab": [
+    { "es": "correlación temporal", "en": "sequence of tenses" },
+    { "es": "quiero que vengas", "en": "I want you to come" },
+    { "es": "quería que vinieras", "en": "I wanted you to come" },
+    { "es": "espero que hayas llegado", "en": "I hope you've arrived" },
+    { "es": "no creía que hubieras venido", "en": "I didn't think you had come" },
+    { "es": "me pidió que viniera", "en": "he/she asked me to come" },
+    { "es": "anterioridad", "en": "anteriority (a prior action)" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["correlación temporal", "quiero que vengas", "quería que vinieras", "espero que hayas llegado", "me pidió que viniera"]
+  }
+}

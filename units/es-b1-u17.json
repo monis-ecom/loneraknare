@@ -1,0 +1,343 @@
+{
+  "unit": {
+    "id": "es-b1-u17",
+    "title": "Connectors & discourse",
+    "subtitle": "Linking words that make you sound fluent",
+    "level": "B1",
+    "order": 17,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Glue your ideas together like a native",
+    "intro": "The gap between \"I know words\" and \"I sound fluent\" is often just <b>connectors</b> — the little words that link ideas: <b>however</b>, <b>therefore</b>, <b>although</b>, <b>besides</b>. Learn a handful and your speech stops sounding like a list and starts sounding like a conversation.",
+    "sections": [
+      {
+        "tag": "contraste",
+        "heading": "Contrast: sin embargo, en cambio, aunque",
+        "body": "These signal that something goes <b>against</b> what came before. <b>Sin embargo</b> = however; <b>en cambio</b> = on the other hand; <b>aunque</b> = although:",
+        "conj": [
+          [
+            "however",
+            "sin embargo"
+          ],
+          [
+            "on the other hand",
+            "en cambio"
+          ],
+          [
+            "although",
+            "aunque"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Estudié mucho; <b>sin embargo</b>, no aprobé.",
+            "en": "I studied a lot; however, I didn't pass.",
+            "note": "unexpected result"
+          },
+          {
+            "es": "Yo prefiero el mar; ella, <b>en cambio</b>, la montaña.",
+            "en": "I prefer the sea; she, on the other hand, the mountains.",
+            "note": "contrasting two views"
+          }
+        ]
+      },
+      {
+        "tag": "consecuencia",
+        "heading": "Result: por lo tanto, así que, por eso",
+        "body": "These introduce a <b>consequence</b> — the \"so\" or \"therefore\" of your sentence. <b>Por lo tanto</b> is a touch more formal; <b>así que</b> and <b>por eso</b> are everyday:",
+        "conj": [
+          [
+            "therefore",
+            "por lo tanto"
+          ],
+          [
+            "so",
+            "así que"
+          ],
+          [
+            "that's why",
+            "por eso"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Llueve, <b>así que</b> nos quedamos en casa.",
+            "en": "It's raining, so we're staying home.",
+            "note": "everyday 'so'"
+          },
+          {
+            "es": "No había entradas; <b>por lo tanto</b>, cambiamos de plan.",
+            "en": "There were no tickets; therefore, we changed plans.",
+            "note": "formal 'therefore'"
+          }
+        ]
+      },
+      {
+        "tag": "causa y adición",
+        "heading": "Cause & adding: ya que, además",
+        "body": "<b>Ya que</b> / <b>puesto que</b> give a <b>reason</b> (since, because). <b>Además</b> <b>adds</b> a point (besides, also). Careful too: <b>pero</b> = but; <b>sino</b> = but rather (after a negative):",
+        "ex": [
+          {
+            "es": "<b>Ya que</b> estás aquí, ayúdame.",
+            "en": "Since you're here, help me.",
+            "note": "ya que = since / given that"
+          },
+          {
+            "es": "Es barato y, <b>además</b>, muy bueno.",
+            "en": "It's cheap and, besides, very good.",
+            "note": "además adds a point"
+          },
+          {
+            "es": "No es azul, <b>sino</b> verde.",
+            "en": "It isn't blue, but rather green.",
+            "note": "sino after a negative"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Contrast: sin embargo (however), en cambio (on the other hand), aunque (although).",
+      "Result: por lo tanto / así que (so, therefore), por eso (that's why).",
+      "Cause: ya que / puesto que (since, because). Add: además (besides).",
+      "pero = but; sino = but rather, and only after a negative.",
+      "aunque + indicative = a real fact; aunque + subjunctive = a possibility."
+    ],
+    "mistakes": [
+      {
+        "w": "No es café, pero té.",
+        "r": "No es café, sino té.",
+        "why": "After a negative, 'but rather' is sino, not pero."
+      },
+      {
+        "w": "Aunque llueve mañana, saldremos.",
+        "r": "Aunque llueva mañana, saldremos.",
+        "why": "For a future possibility, aunque takes the subjunctive: aunque llueva."
+      },
+      {
+        "w": "Estudié mucho, sin embargo no aprobé sin pausa.",
+        "r": "Estudié mucho; sin embargo, no aprobé.",
+        "why": "Sin embargo starts a new clause — set it off with a semicolon/comma, don't run it on."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Estudié mucho; ___, no aprobé.",
+      "prompt_en": "I studied a lot; however, I didn't pass.",
+      "options": [
+        {
+          "id": "a",
+          "text": "sin embargo"
+        },
+        {
+          "id": "b",
+          "text": "por lo tanto"
+        },
+        {
+          "id": "c",
+          "text": "además"
+        },
+        {
+          "id": "d",
+          "text": "ya que"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Un resultado inesperado → sin embargo.",
+      "no": "An unexpected result needs 'however': “sin embargo”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Llueve, ___ nos quedamos en casa.",
+      "prompt_en": "It's raining, so we're staying home.",
+      "options": [
+        {
+          "id": "a",
+          "text": "sin embargo"
+        },
+        {
+          "id": "b",
+          "text": "así que"
+        },
+        {
+          "id": "c",
+          "text": "aunque"
+        },
+        {
+          "id": "d",
+          "text": "en cambio"
+        }
+      ],
+      "answer": "b",
+      "ok": "¡Exacto! Una consecuencia → así que.",
+      "no": "A consequence ('so') uses “así que”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Since you're here, help me.”",
+      "tokens": [
+        "Ya",
+        "que",
+        "estás",
+        "aquí,",
+        "ayúdame",
+        "además",
+        "aunque"
+      ],
+      "answer": [
+        "Ya",
+        "que",
+        "estás",
+        "aquí,",
+        "ayúdame"
+      ],
+      "ok": "¡Perfecto! ya que = since / given that.",
+      "no": "“Ya que estás aquí, ayúdame” — ya que gives the reason."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "No es azul, ___ verde.",
+      "prompt_en": "It isn't blue, but rather green.",
+      "accepted": [
+        "sino"
+      ],
+      "ignore_accents": true,
+      "hint": "'But rather', used after a negative — not 'pero'.",
+      "ok": "¡Bien! Tras una negación → sino.",
+      "no": "After a negative, 'but rather' is “sino”: no es azul, sino verde."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each connector to its meaning.",
+      "pairs": [
+        [
+          "sin embargo",
+          "however"
+        ],
+        [
+          "por lo tanto",
+          "therefore"
+        ],
+        [
+          "aunque",
+          "although"
+        ],
+        [
+          "además",
+          "besides / also"
+        ]
+      ],
+      "ok": "¡Excelente! Tus conectores están listos.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Hacía frío; por eso, cerré la ventana.",
+      "accepted": [
+        "hacia frio por eso cerre la ventana"
+      ],
+      "ignore_accents": true,
+      "translation": "It was cold; that's why I closed the window.",
+      "ok": "¡Correcto! “Hacía frío; por eso, cerré la ventana.”",
+      "no": "It was: “Hacía frío; por eso, cerré la ventana.” (It was cold; that's why I closed the window.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Debating weekend plans with a friend 🗓️",
+      "lines": [
+        {
+          "speaker": "Sara",
+          "es": "El plan al aire libre suena bien, pero dicen que va a llover.",
+          "en": "The outdoor plan sounds good, but they say it's going to rain."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Aunque llueva, podemos ir; y además, llevo paraguas."
+        },
+        {
+          "id": "b",
+          "text": "Aunque llueve, podemos ir; y sin embargo, llevo paraguas."
+        },
+        {
+          "id": "c",
+          "text": "Por lo tanto llueva, podemos ir; y ya que, llevo paraguas."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! aunque + subjuntivo (posibilidad) y además para añadir. ¡Muy fluido!",
+      "no": "A future possibility takes aunque + subjunctive, and 'besides' is además: “Aunque llueva, podemos ir; y además, llevo paraguas.”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Estaba cansado; sin embargo, salí a correr.",
+      "en": "I was tired; however, I went out for a run.",
+      "ok": "¡Perfecto! Suena muy natural.",
+      "no": "Almost — tap “Hear it”, then match the sound."
+    }
+  ],
+  "vocab": [
+    {
+      "es": "sin embargo",
+      "en": "however"
+    },
+    {
+      "es": "por lo tanto",
+      "en": "therefore"
+    },
+    {
+      "es": "aunque",
+      "en": "although / even if"
+    },
+    {
+      "es": "ya que",
+      "en": "since / because"
+    },
+    {
+      "es": "además",
+      "en": "besides / also"
+    },
+    {
+      "es": "en cambio",
+      "en": "on the other hand"
+    },
+    {
+      "es": "por eso",
+      "en": "that's why"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "sin embargo",
+      "por lo tanto",
+      "aunque",
+      "ya que",
+      "además"
+    ]
+  }
+}

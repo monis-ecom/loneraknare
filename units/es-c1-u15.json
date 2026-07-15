@@ -1,0 +1,237 @@
+{
+  "unit": {
+    "id": "es-c1-u15",
+    "title": "Everyday idioms (modismos)",
+    "subtitle": "High-frequency idioms a near-native must recognise",
+    "level": "C1",
+    "order": 15,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The idioms that make you sound native",
+    "intro": "Spanish conversation runs on <b>modismos</b> — fixed idioms whose meaning you cannot deduce word by word. <b>Echar de menos</b> isn't ‘to throw less’, it's ‘to miss’; <b>costar un ojo de la cara</b> isn't about eyes, it's ‘to cost a fortune’. Recognising and using these naturally is what separates a fluent C1 speaker from a merely correct one.",
+    "sections": [
+      {
+        "tag": "sentimientos",
+        "heading": "Feelings and reactions",
+        "body": "These four are everywhere in everyday speech. Note that <b>echar de menos</b> keeps the <b>de</b>, and <b>dar igual</b> / <b>dar lo mismo</b> are interchangeable ways to say ‘it doesn't matter to me’:",
+        "conj": [
+          ["echar de menos", "to miss (someone/something)"],
+          ["dar igual / dar lo mismo", "to not matter, to not care"],
+          ["menos mal que", "thank goodness that"],
+          ["no tener ni idea", "to have no clue"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Echo de menos</b> a mi familia.",
+            "en": "I miss my family.",
+            "note": "echar de menos + a + person"
+          },
+          {
+            "es": "—¿Té o café? —Me <b>da igual</b>.",
+            "en": "—Tea or coffee? —I don't mind either way.",
+            "note": "me da igual = I don't care"
+          }
+        ]
+      },
+      {
+        "tag": "con el cuerpo",
+        "heading": "Idioms with body parts",
+        "body": "A whole family of idioms is built on body parts. Learn them as fixed blocks — the article and prepositions don't change (un ojo <b>de la</b> cara, <b>el</b> pelo, <b>la</b> pata):",
+        "conj": [
+          ["costar un ojo de la cara", "to cost a fortune"],
+          ["tomar el pelo", "to pull someone's leg"],
+          ["meter la pata", "to put one's foot in it"],
+          ["estar hecho polvo", "to be worn out"]
+        ],
+        "ex": [
+          {
+            "es": "Ese reloj <b>cuesta un ojo de la cara</b>.",
+            "en": "That watch costs a fortune.",
+            "note": "= extremely expensive"
+          },
+          {
+            "es": "Perdona, creo que <b>metí la pata</b>.",
+            "en": "Sorry, I think I put my foot in it.",
+            "note": "= said/did the wrong thing"
+          }
+        ]
+      },
+      {
+        "tag": "tiempo y azar",
+        "heading": "Time, chance and probability",
+        "body": "Watch the grammar here: <b>a lo mejor</b> means ‘maybe’ but is followed by the <b>indicative</b> (a lo mejor <b>viene</b>), unlike quizás/tal vez, which allow the subjunctive. <b>Por si acaso</b> = just in case; <b>de repente / de golpe</b> = suddenly:",
+        "conj": [
+          ["a lo mejor", "maybe (+ indicative)"],
+          ["por si acaso", "just in case"],
+          ["de repente / de golpe", "suddenly, all at once"],
+          ["dar la lata", "to pester, to be a nuisance"]
+        ],
+        "ex": [
+          {
+            "es": "<b>A lo mejor</b> <b>viene</b> mañana, no estoy seguro.",
+            "en": "Maybe he'll come tomorrow, I'm not sure.",
+            "note": "a lo mejor + indicative (viene), never subjunctive"
+          },
+          {
+            "es": "Llévate el paraguas, <b>por si acaso</b>.",
+            "en": "Take the umbrella, just in case.",
+            "note": "por si acaso = just in case"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "echar de menos = to miss; dar igual / dar lo mismo = it doesn't matter to you.",
+      "estar hecho polvo = worn out; costar un ojo de la cara = to cost a fortune.",
+      "tomar el pelo = to pull someone's leg; meter la pata = to put your foot in it; dar la lata = to pester.",
+      "a lo mejor takes the INDICATIVE (a lo mejor viene), unlike quizás/tal vez."
+    ],
+    "mistakes": [
+      {
+        "w": "Te echo menos.",
+        "r": "Te echo de menos.",
+        "why": "The idiom is echar DE menos; don't drop the de."
+      },
+      {
+        "w": "A lo mejor venga mañana.",
+        "r": "A lo mejor viene mañana.",
+        "why": "a lo mejor is followed by the indicative (viene), not the subjunctive."
+      },
+      {
+        "w": "Ese reloj cuesta un ojo de cara.",
+        "r": "Ese reloj cuesta un ojo de la cara.",
+        "why": "The fixed idiom keeps the article: un ojo de la cara."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Desde que se mudó a Madrid, lo ___ muchísimo.",
+      "prompt_en": "Since he moved to Madrid, I miss him a lot.",
+      "options": [
+        { "id": "a", "text": "echo de menos" },
+        { "id": "b", "text": "echo menos" },
+        { "id": "c", "text": "tomo el pelo" },
+        { "id": "d", "text": "meto la pata" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Echar de menos = to miss.",
+      "no": "‘To miss’ is echar de menos (with de), not echar menos."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___ viene mañana, pero no estoy nada seguro.",
+      "prompt_en": "Maybe he's coming tomorrow, but I'm not at all sure.",
+      "options": [
+        { "id": "a", "text": "A lo mejor" },
+        { "id": "b", "text": "Ojalá" },
+        { "id": "c", "text": "Menos mal que" },
+        { "id": "d", "text": "Por si acaso" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! A lo mejor + indicativo (viene).",
+      "no": "‘Maybe’ + indicative here is a lo mejor; ojalá would force the subjunctive."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “That car costs a fortune.”",
+      "tokens": ["Ese", "coche", "cuesta", "un", "ojo", "de", "la", "cara", "vale"],
+      "answer": ["Ese", "coche", "cuesta", "un", "ojo", "de", "la", "cara"],
+      "ok": "¡Perfecto! Costar un ojo de la cara = to cost a fortune.",
+      "no": "The idiom is “cuesta un ojo de la cara” — keep the article la."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Llévate una chaqueta, ___ acaso refresca por la noche.",
+      "prompt_en": "Take a jacket, just in case it gets chilly at night.",
+      "accepted": ["por si"],
+      "ignore_accents": true,
+      "hint": "‘Just in case’ = ___ acaso.",
+      "ok": "¡Bien! Por si acaso = just in case.",
+      "no": "‘Just in case’ is por si acaso → the missing chunk is “por si”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each idiom to its meaning.",
+      "pairs": [
+        ["estar hecho polvo", "to be exhausted"],
+        ["meter la pata", "to mess up"],
+        ["tomar el pelo", "to pull someone's leg"],
+        ["dar la lata", "to pester"]
+      ],
+      "ok": "¡Excelente! Los modismos, dominados.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Menos mal que trajiste el paraguas.",
+      "accepted": ["menos mal que trajiste el paraguas"],
+      "ignore_accents": true,
+      "translation": "Thank goodness you brought the umbrella.",
+      "ok": "¡Correcto! “Menos mal que trajiste el paraguas.”",
+      "no": "It was: “Menos mal que trajiste el paraguas.” (thank goodness that…)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A friend swears she's just won the lottery 🎰",
+      "lines": [
+        {
+          "speaker": "Ana",
+          "es": "¡Que he ganado la lotería! ¿No me crees?",
+          "en": "I've won the lottery! Don't you believe me?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "Venga ya, ¿me estás tomando el pelo?" },
+        { "id": "b", "text": "Venga ya, ¿me estás dando la lata?" },
+        { "id": "c", "text": "Venga ya, ¿te echo de menos?" }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Tomar el pelo = to pull someone's leg.",
+      "no": "For ‘are you kidding me?’ use tomar el pelo: “¿me estás tomando el pelo?”"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Estoy hecho polvo, me voy a dormir.",
+      "en": "I'm exhausted, I'm going to sleep.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Estoy hecho polvo, me voy a dormir.”"
+    }
+  ],
+  "vocab": [
+    { "es": "echar de menos", "en": "to miss (someone/something)" },
+    { "es": "dar igual", "en": "to not matter, to not care" },
+    { "es": "estar hecho polvo", "en": "to be exhausted / worn out" },
+    { "es": "costar un ojo de la cara", "en": "to cost a fortune" },
+    { "es": "tomar el pelo", "en": "to pull someone's leg" },
+    { "es": "meter la pata", "en": "to put one's foot in it, to mess up" },
+    { "es": "no tener ni idea", "en": "to have no clue" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["echar de menos", "dar igual", "estar hecho polvo", "costar un ojo de la cara", "tomar el pelo"]
+  }
+}

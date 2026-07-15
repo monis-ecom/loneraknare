@@ -1,0 +1,260 @@
+{
+  "unit": {
+    "id": "es-c2-u14",
+    "title": "Latinisms & Learned Expressions",
+    "subtitle": "A priori, grosso modo, motu proprio and the traps around them",
+    "level": "C2",
+    "order": 14,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The Latin that educated Spanish still speaks",
+    "intro": "Formal and written Spanish is threaded with untranslated <b>latinismos</b> — <b>a priori</b>, <b>grosso modo</b>, <b>statu quo</b>, <b>motu proprio</b>. Used well they sound precise and cultured; used wrong they instantly betray you. The traps are almost always the same: an intruding preposition (<b>a</b> grosso modo ✗) or a mangled vowel (de motu <b>propio</b> ✗). This unit fixes the form and the meaning of each.",
+    "sections": [
+      {
+        "tag": "razonamiento",
+        "heading": "Reasoning: a priori, a posteriori, per se, ipso facto",
+        "body": "<b>A priori</b> means “beforehand, without checking the facts”; <b>a posteriori</b>, “after the fact, from experience”. <b>Per se</b> means “in itself, by its very nature”. <b>Ipso facto</b> means “immediately, right then and there”. These carry <b>no</b> extra preposition beyond the ones shown.",
+        "conj": [
+          ["a priori", "beforehand / on the face of it"],
+          ["a posteriori", "after the fact / with hindsight"],
+          ["per se", "in itself, by its nature"],
+          ["ipso facto", "immediately, on the spot"]
+        ],
+        "ex": [
+          {
+            "es": "<b>A priori</b>, la idea parece sensata, pero habría que probarla.",
+            "en": "On the face of it, the idea seems sensible, but it would need testing.",
+            "note": "judgment before the evidence"
+          },
+          {
+            "es": "El dinero no da la felicidad <b>per se</b>.",
+            "en": "Money doesn't bring happiness in itself.",
+            "note": "'by its very nature'"
+          }
+        ]
+      },
+      {
+        "tag": "aproximación",
+        "heading": "Manner and place: grosso modo, in situ, motu proprio",
+        "body": "<b>Grosso modo</b> means “roughly, broadly speaking” — and takes <b>no</b> “a” before it. <b>In situ</b> means “on site, in the original place”. <b>Motu proprio</b> means “of one's own accord”; the second word is <b>proprio</b> (with the extra r) and it is never preceded by “de”.",
+        "conj": [
+          ["grosso modo", "roughly, broadly (NO 'a')"],
+          ["in situ", "on site, in place"],
+          ["motu proprio", "of one's own accord (NOT 'de motu propio')"],
+          ["ad hoc", "for this specific purpose"]
+        ],
+        "ex": [
+          {
+            "es": "<b>Grosso modo</b>, el proyecto costará unos dos millones.",
+            "en": "Roughly speaking, the project will cost about two million.",
+            "note": "no 'a' — never 'a grosso modo'"
+          },
+          {
+            "es": "Se disculpó <b>motu proprio</b>, sin que nadie se lo pidiera.",
+            "en": "He apologised of his own accord, without anyone asking.",
+            "note": "proprio, and no 'de'"
+          }
+        ]
+      },
+      {
+        "tag": "estados",
+        "heading": "States and conditions: statu quo, de facto, sine qua non",
+        "body": "<b>Statu quo</b> (the current state of affairs) is written <b>statu</b>, not “status”, in this fixed phrase. <b>De facto</b> means “in practice, whether official or not”, opposed to <b>de iure/de jure</b> (“by law”). A <b>condición sine qua non</b> is an absolutely essential requirement — one without which nothing else holds.",
+        "conj": [
+          ["statu quo", "the existing state of affairs"],
+          ["de facto", "in practice / in fact"],
+          ["de iure (de jure)", "by law / officially"],
+          ["sine qua non", "indispensable, essential condition"]
+        ],
+        "ex": [
+          {
+            "es": "Nadie quiere alterar el <b>statu quo</b> antes de las elecciones.",
+            "en": "Nobody wants to disturb the status quo before the elections.",
+            "note": "statu, not 'status', in this phrase"
+          },
+          {
+            "es": "La confianza es una condición <b>sine qua non</b> del acuerdo.",
+            "en": "Trust is a sine qua non for the agreement.",
+            "note": "an indispensable requirement"
+          }
+        ]
+      },
+      {
+        "tag": "otros",
+        "heading": "Handy extras: alter ego, modus operandi, in extremis, viceversa",
+        "body": "<b>Alter ego</b> is a second self or trusted stand-in. <b>Modus operandi</b> is a characteristic way of doing things. <b>In extremis</b> means “at the last moment / in a desperate situation”. <b>Viceversa</b> means “the other way round” and, unlike the others, is written as one fully Spanish word.",
+        "conj": [
+          ["alter ego", "second self / trusted alter"],
+          ["modus operandi", "way of operating"],
+          ["in extremis", "at the very last moment"],
+          ["viceversa", "and vice versa (one word)"]
+        ],
+        "ex": [
+          {
+            "es": "El detective reconoció enseguida su <b>modus operandi</b>.",
+            "en": "The detective recognised his modus operandi at once.",
+            "note": "characteristic method"
+          },
+          {
+            "es": "Aprobó el examen <b>in extremis</b>, con el tiempo justo.",
+            "en": "She passed the exam at the very last minute, with no time to spare.",
+            "note": "'at the last moment'"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "grosso modo and motu proprio take NO preposition: never 'a grosso modo', never 'de motu propio'.",
+      "It is motu proprio (with the r), not 'motu propio'.",
+      "In the fixed phrase it's statu quo, not 'status quo'.",
+      "per se = in itself; a priori = beforehand; a posteriori = after the fact; ipso facto = immediately."
+    ],
+    "mistakes": [
+      {
+        "w": "A grosso modo, serán unos cien.",
+        "r": "Grosso modo, serán unos cien.",
+        "why": "Grosso modo never takes 'a' — the Latin ablative already carries the meaning."
+      },
+      {
+        "w": "Renunció de motu propio.",
+        "r": "Renunció motu proprio.",
+        "why": "No 'de', and the correct form is 'proprio' (with the extra r), not 'propio'."
+      },
+      {
+        "w": "No hay que cambiar el status quo.",
+        "r": "No hay que cambiar el statu quo.",
+        "why": "In this Latin phrase the word is 'statu' (ablative), not the English 'status'."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "___, el plan parece viable, aunque aún no lo hemos analizado a fondo.",
+      "prompt_en": "On the face of it, the plan seems viable, though we haven't analysed it in depth yet.",
+      "options": [
+        { "id": "a", "text": "A priori" },
+        { "id": "b", "text": "A posteriori" },
+        { "id": "c", "text": "Ipso facto" },
+        { "id": "d", "text": "Per se" }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Un juicio previo a los datos → a priori.",
+      "no": "A judgment made before examining the evidence is “a priori”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Elige la forma correcta: “Lo calculé ___, sin entrar en detalles.”",
+      "prompt_en": "Choose the correct form: “I estimated it roughly, without going into detail.”",
+      "options": [
+        { "id": "a", "text": "grosso modo" },
+        { "id": "b", "text": "a grosso modo" },
+        { "id": "c", "text": "en grosso modo" },
+        { "id": "d", "text": "de grosso modo" }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Sin preposición: grosso modo.",
+      "no": "It's simply “grosso modo”, with no preposition — never 'a grosso modo'."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: \"He resigned of his own accord.\"",
+      "tokens": ["Renunció", "motu", "proprio", "propio", "de", "sua"],
+      "answer": ["Renunció", "motu", "proprio"],
+      "ok": "¡Perfecto! motu proprio, sin 'de' y con la r.",
+      "no": "It's “motu proprio” — no 'de', and 'proprio' with the extra r."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "La honestidad es una condición ___ para cualquier pacto duradero.",
+      "prompt_en": "Honesty is a sine qua non for any lasting agreement.",
+      "accepted": ["sine qua non"],
+      "ignore_accents": true,
+      "hint": "Latin for an absolutely indispensable condition.",
+      "ok": "¡Bien! Una condición sine qua non.",
+      "no": "An indispensable requirement is a condición “sine qua non”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each Latinism to its meaning.",
+      "pairs": [
+        ["per se", "in itself"],
+        ["in situ", "on site"],
+        ["ipso facto", "immediately"],
+        ["de facto", "in practice"]
+      ],
+      "ok": "¡Excelente! Latinismos bajo control.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Nadie quería alterar el statu quo antes de las elecciones.",
+      "accepted": ["nadie queria alterar el statu quo antes de las elecciones"],
+      "ignore_accents": true,
+      "translation": "Nobody wanted to disturb the status quo before the elections.",
+      "ok": "¡Correcto! statu quo, no 'status quo'.",
+      "no": "It was: “Nadie quería alterar el statu quo antes de las elecciones.” (statu, not status)."
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A junior colleague proofreads your report and hesitates over a phrase ✍️",
+      "lines": [
+        {
+          "speaker": "Dani",
+          "es": "Aquí has puesto “se disculpó motu proprio”. ¿No sería “de motu propio”?",
+          "en": "Here you wrote “se disculpó motu proprio”. Shouldn't it be “de motu propio”?"
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        { "id": "a", "text": "No, es “motu proprio”: sin “de” y con la segunda r. “De motu propio” es un error muy extendido." },
+        { "id": "b", "text": "Tienes razón, lo correcto es “de motu propio”; lo cambio ahora mismo." },
+        { "id": "c", "text": "Da igual, las dos formas se aceptan por igual en un texto formal." }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! motu proprio, sin 'de' y con la r doble.",
+      "no": "The correct form is “motu proprio” (no 'de', with the extra r) — option a corrects it."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Grosso modo, el dinero no da la felicidad per se.",
+      "en": "Roughly speaking, money doesn't bring happiness in itself.",
+      "ok": "¡Perfecto! Dos latinismos muy naturales.",
+      "no": "Almost — tap “Hear it”, then match the rhythm of “Grosso modo, el dinero no da la felicidad per se.”"
+    }
+  ],
+  "vocab": [
+    { "es": "a priori", "en": "beforehand, on the face of it" },
+    { "es": "grosso modo", "en": "roughly, broadly speaking" },
+    { "es": "motu proprio", "en": "of one's own accord" },
+    { "es": "statu quo", "en": "the existing state of affairs" },
+    { "es": "per se", "en": "in itself, by its nature" },
+    { "es": "sine qua non", "en": "indispensable condition" },
+    { "es": "modus operandi", "en": "characteristic way of operating" }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": ["a priori", "grosso modo", "motu proprio", "statu quo", "per se"]
+  }
+}

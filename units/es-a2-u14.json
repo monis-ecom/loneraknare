@@ -1,0 +1,359 @@
+{
+  "unit": {
+    "id": "es-a2-u14",
+    "title": "Commands (affirmative tú)",
+    "subtitle": "Telling a friend to do something",
+    "level": "A2",
+    "order": 14,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "Give an order to someone you know",
+    "intro": "When you tell a friend or family member <b>to do</b> something — <b>“Come here!”</b>, <b>“Speak slower!”</b> — you use the affirmative <b>tú</b> command. For most verbs it's a form you already recognise, and there are just eight irregulars to memorise.",
+    "sections": [
+      {
+        "tag": "regulares",
+        "heading": "The regular command = the él/ella present",
+        "body": "For regular verbs, the tú command is identical to the <b>he/she</b> form of the present tense. Just drop the final <b>-s</b> from the tú form:",
+        "conj": [
+          [
+            "hablar",
+            "habla"
+          ],
+          [
+            "comer",
+            "come"
+          ],
+          [
+            "escribir",
+            "escribe"
+          ],
+          [
+            "abrir",
+            "abre"
+          ],
+          [
+            "leer",
+            "lee"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "¡<b>Habla</b> más despacio!",
+            "en": "Speak slower!",
+            "note": "hablar → habla"
+          },
+          {
+            "es": "<b>Come</b> la verdura, por favor.",
+            "en": "Eat the vegetables, please.",
+            "note": "comer → come"
+          }
+        ]
+      },
+      {
+        "tag": "irregulares",
+        "heading": "The eight irregulars",
+        "body": "These common verbs have short, unique command forms. They're worth memorising as a set — you'll hear them constantly:",
+        "conj": [
+          [
+            "decir",
+            "di"
+          ],
+          [
+            "hacer",
+            "haz"
+          ],
+          [
+            "ir",
+            "ve"
+          ],
+          [
+            "poner",
+            "pon"
+          ],
+          [
+            "salir",
+            "sal"
+          ],
+          [
+            "ser",
+            "sé"
+          ],
+          [
+            "tener",
+            "ten"
+          ],
+          [
+            "venir",
+            "ven"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "¡<b>Ven</b> aquí!",
+            "en": "Come here!",
+            "note": "venir → ven"
+          },
+          {
+            "es": "<b>Haz</b> la tarea ahora.",
+            "en": "Do the homework now.",
+            "note": "hacer → haz"
+          }
+        ]
+      },
+      {
+        "tag": "uso",
+        "heading": "Everyday orders and directions",
+        "body": "Use these to give instructions, directions, and friendly encouragement. A single word often does the whole job:",
+        "ex": [
+          {
+            "es": "<b>Mira</b> esto, es increíble.",
+            "en": "Look at this, it's amazing.",
+            "note": "mirar → mira"
+          },
+          {
+            "es": "<b>Ten</b> paciencia, por favor.",
+            "en": "Be patient, please.",
+            "note": "tener → ten"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Regular tú command = the él/ella present form: habla, come, escribe.",
+      "Eight irregulars: di, haz, ve, pon, sal, sé, ten, ven.",
+      "Never use the infinitive as a command (not 'hablar', but 'habla').",
+      "One word is often a full order: ¡Ven! ¡Mira! ¡Haz!"
+    ],
+    "mistakes": [
+      {
+        "w": "¡Hablar más despacio!",
+        "r": "¡Habla más despacio!",
+        "why": "Don't use the infinitive as a command — use the él/ella form: habla."
+      },
+      {
+        "w": "¡Hace la tarea!",
+        "r": "¡Haz la tarea!",
+        "why": "Hacer is irregular: the command is haz, not hace."
+      },
+      {
+        "w": "¡Vene aquí!",
+        "r": "¡Ven aquí!",
+        "why": "Venir is irregular: the command is simply ven."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¡___ más despacio, por favor!",
+      "prompt_en": "Speak slower, please!",
+      "options": [
+        {
+          "id": "a",
+          "text": "Habla"
+        },
+        {
+          "id": "b",
+          "text": "Hablar"
+        },
+        {
+          "id": "c",
+          "text": "Hablas"
+        },
+        {
+          "id": "d",
+          "text": "Hablo"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! hablar → habla.",
+      "no": "The command drops the -s: “Habla”, not hablas or hablar."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "¡___ aquí, por favor!",
+      "prompt_en": "Come here, please!",
+      "options": [
+        {
+          "id": "a",
+          "text": "Viene"
+        },
+        {
+          "id": "b",
+          "text": "Venir"
+        },
+        {
+          "id": "c",
+          "text": "Ven"
+        },
+        {
+          "id": "d",
+          "text": "Vienes"
+        }
+      ],
+      "answer": "c",
+      "ok": "¡Exacto! venir → ven.",
+      "no": "Venir is irregular: the command is “ven”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “Do the homework now.”",
+      "tokens": [
+        "Haz",
+        "la",
+        "tarea",
+        "ahora",
+        "Hace",
+        "Hacer"
+      ],
+      "answer": [
+        "Haz",
+        "la",
+        "tarea",
+        "ahora"
+      ],
+      "ok": "¡Perfecto! hacer → haz.",
+      "no": "“Haz la tarea ahora” — hacer's command is haz."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "___ la verdura, es buena para ti. (comer)",
+      "prompt_en": "Eat the vegetables, it's good for you.",
+      "accepted": [
+        "come"
+      ],
+      "ignore_accents": true,
+      "hint": "Regular command = the él/ella present form.",
+      "ok": "¡Bien! comer → come.",
+      "no": "The command is “come” (the él/ella form)."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each verb to its tú command.",
+      "pairs": [
+        [
+          "decir",
+          "di"
+        ],
+        [
+          "poner",
+          "pon"
+        ],
+        [
+          "salir",
+          "sal"
+        ],
+        [
+          "ir",
+          "ve"
+        ]
+      ],
+      "ok": "¡Excelente! The irregulars are locked in.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Mira esto, por favor.",
+      "accepted": [
+        "mira esto por favor"
+      ],
+      "ignore_accents": true,
+      "translation": "Look at this, please.",
+      "ok": "¡Correcto! “Mira esto, por favor.”",
+      "no": "It was: “Mira esto, por favor.” (Look at this, please.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "Your friend can't hear you 📢",
+      "lines": [
+        {
+          "speaker": "Marco",
+          "es": "Perdona, no te oigo bien.",
+          "en": "Sorry, I can't hear you well."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Ven aquí y escucha."
+        },
+        {
+          "id": "b",
+          "text": "Venir aquí y escuchar."
+        },
+        {
+          "id": "c",
+          "text": "Vienes aquí y escuchas."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Two clean commands: ven + escucha.",
+      "no": "Use command forms: “Ven aquí y escucha.” (Come here and listen.)"
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "¡Ven aquí!",
+      "en": "Come here!",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “¡Ven aquí!”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "habla",
+      "en": "speak! (tú)"
+    },
+    {
+      "es": "come",
+      "en": "eat! (tú)"
+    },
+    {
+      "es": "ven",
+      "en": "come! (tú)"
+    },
+    {
+      "es": "haz",
+      "en": "do / make! (tú)"
+    },
+    {
+      "es": "mira",
+      "en": "look! (tú)"
+    },
+    {
+      "es": "ten",
+      "en": "have / hold! (tú)"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "habla",
+      "come",
+      "ven",
+      "haz",
+      "mira"
+    ]
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "unit": {
+    "id": "es-b2-u03",
+    "title": "Sequence of Tenses",
+    "subtitle": "Matching the subjunctive to your main verb",
+    "level": "B2",
+    "order": 3,
+    "xp_reward": 20
+  },
+  "grammar": {
+    "title": "The main verb decides which subjunctive you use",
+    "intro": "Once a verb triggers the subjunctive, you still have to pick the <b>right tense</b>. Spanish settles this with the <b>correlación de tiempos</b> (sequence of tenses): the <b>tense of the main verb</b> tells you whether to reach for a <b>present-side</b> or a <b>past-side</b> subjunctive. Get the pairing right and everything else falls into place.",
+    "sections": [
+      {
+        "tag": "presente",
+        "heading": "Present / future / command → present-side subjunctive",
+        "body": "If the main verb is <b>present</b>, <b>future</b>, or a <b>command</b>, use the <b>present subjunctive</b> (simultaneous/future action) or the <b>present-perfect subjunctive</b> (already completed):",
+        "conj": [
+          [
+            "main verb",
+            "subjunctive"
+          ],
+          [
+            "Quiero que…",
+            "…estudies"
+          ],
+          [
+            "Espero que…",
+            "…vengas"
+          ],
+          [
+            "Espero que… (done)",
+            "…hayas venido"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Espero que <b>vengas</b> mañana.",
+            "en": "I hope you come tomorrow.",
+            "note": "present → present subjunctive"
+          },
+          {
+            "es": "Espero que <b>hayas venido</b> temprano.",
+            "en": "I hope you have come early.",
+            "note": "present → present-perfect subj."
+          }
+        ]
+      },
+      {
+        "tag": "pasado",
+        "heading": "Past / conditional → past-side subjunctive",
+        "body": "If the main verb is <b>past</b> (preterite, imperfect) or <b>conditional</b>, use the <b>imperfect subjunctive</b> (simultaneous/later) or the <b>pluperfect subjunctive</b> (already completed):",
+        "conj": [
+          [
+            "main verb",
+            "subjunctive"
+          ],
+          [
+            "Quería que…",
+            "…estudiaras"
+          ],
+          [
+            "Esperaba que…",
+            "…vinieras"
+          ],
+          [
+            "Esperaba que… (done)",
+            "…hubieras venido"
+          ]
+        ],
+        "ex": [
+          {
+            "es": "Esperaba que <b>vinieras</b>.",
+            "en": "I was hoping you would come.",
+            "note": "past → imperfect subjunctive"
+          },
+          {
+            "es": "Me gustaría que <b>vinieras</b>.",
+            "en": "I would like you to come.",
+            "note": "conditional → imperfect subj."
+          }
+        ]
+      },
+      {
+        "tag": "contraste",
+        "heading": "Same verb, shifted in time",
+        "body": "The cleanest way to feel the rule is to shift one sentence from present to past. The trigger verb stays the same; both halves slide back together:",
+        "ex": [
+          {
+            "es": "Dudo que <b>sea</b> verdad. → Dudaba que <b>fuera</b> verdad.",
+            "en": "I doubt it's true. → I doubted it was true.",
+            "note": "sea → fuera"
+          },
+          {
+            "es": "Quiero que <b>estudies</b>. → Quería que <b>estudiaras</b>.",
+            "en": "I want you to study. → I wanted you to study.",
+            "note": "estudies → estudiaras"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Present / future / command main verb → present or present-perfect subjunctive.",
+      "Past / conditional main verb → imperfect or pluperfect subjunctive.",
+      "Quiero que estudies vs. Quería que estudiaras.",
+      "Conditional counts as past-side: Me gustaría que vinieras."
+    ],
+    "mistakes": [
+      {
+        "w": "Quería que estudies más.",
+        "r": "Quería que estudiaras más.",
+        "why": "A past main verb (quería) needs a past-side subjunctive: estudiaras, not estudies."
+      },
+      {
+        "w": "Me gustaría que vengas.",
+        "r": "Me gustaría que vinieras.",
+        "why": "The conditional (me gustaría) is past-side, so it takes the imperfect subjunctive: vinieras."
+      },
+      {
+        "w": "Dudaba que sea verdad.",
+        "r": "Dudaba que fuera verdad.",
+        "why": "After the imperfect dudaba, use the imperfect subjunctive fuera, not the present sea."
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Quería que ___ más. (estudiar, tú)",
+      "prompt_en": "I wanted you to study more.",
+      "options": [
+        {
+          "id": "a",
+          "text": "estudiaras"
+        },
+        {
+          "id": "b",
+          "text": "estudies"
+        },
+        {
+          "id": "c",
+          "text": "estudiabas"
+        },
+        {
+          "id": "d",
+          "text": "estudiarías"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Correcto! Verbo en pasado → subjuntivo pasado.",
+      "no": "A past main verb (quería) needs the imperfect subjunctive: “estudiaras”."
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "xp": 2,
+      "prompt": "Espero que ___ mañana. (venir, tú)",
+      "prompt_en": "I hope you come tomorrow.",
+      "options": [
+        {
+          "id": "a",
+          "text": "vengas"
+        },
+        {
+          "id": "b",
+          "text": "vinieras"
+        },
+        {
+          "id": "c",
+          "text": "vienes"
+        },
+        {
+          "id": "d",
+          "text": "vendrías"
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Exacto! Verbo en presente → subjuntivo presente.",
+      "no": "A present main verb (espero) takes the present subjunctive: “vengas”."
+    },
+    {
+      "id": "ex3",
+      "type": "word_bank",
+      "xp": 3,
+      "prompt": "Build: “I would like you to come with me.”",
+      "tokens": [
+        "Me",
+        "gustaría",
+        "que",
+        "vinieras",
+        "conmigo",
+        "vengas",
+        "venir"
+      ],
+      "answer": [
+        "Me",
+        "gustaría",
+        "que",
+        "vinieras",
+        "conmigo"
+      ],
+      "ok": "¡Perfecto! El condicional pide subjuntivo pasado.",
+      "no": "“Me gustaría que vinieras conmigo” — the conditional is past-side, so use vinieras."
+    },
+    {
+      "id": "ex4",
+      "type": "fill_blank",
+      "xp": 2,
+      "prompt": "Dudaba que ___ verdad. (ser)",
+      "prompt_en": "I doubted it was true.",
+      "accepted": [
+        "fuera",
+        "fuese"
+      ],
+      "ignore_accents": true,
+      "hint": "Past main verb → imperfect subjunctive of ser.",
+      "ok": "¡Bien! Dudaba → fuera.",
+      "no": "After the past 'dudaba', use the imperfect subjunctive: “fuera”."
+    },
+    {
+      "id": "ex5",
+      "type": "match_pairs",
+      "xp": 3,
+      "prompt": "Match each main verb to the subjunctive tense it triggers.",
+      "pairs": [
+        [
+          "Quiero que…",
+          "estudies"
+        ],
+        [
+          "Quería que…",
+          "estudiaras"
+        ],
+        [
+          "Espero que… (ya)",
+          "hayas venido"
+        ],
+        [
+          "Esperaba que… (ya)",
+          "hubieras venido"
+        ]
+      ],
+      "ok": "¡Excelente! La correlación de tiempos, dominada.",
+      "no": ""
+    },
+    {
+      "id": "ex6",
+      "type": "listening",
+      "xp": 3,
+      "prompt": "Type what you hear.",
+      "tts": "Quería que estudiaras más.",
+      "accepted": [
+        "queria que estudiaras mas"
+      ],
+      "ignore_accents": true,
+      "translation": "I wanted you to study more.",
+      "ok": "¡Correcto! “Quería que estudiaras más.”",
+      "no": "It was: “Quería que estudiaras más.” (I wanted you to study more.)"
+    },
+    {
+      "id": "ex7",
+      "type": "dialogue",
+      "xp": 3,
+      "scenario": "A manager recalls last month's request 📋",
+      "lines": [
+        {
+          "speaker": "Jefe",
+          "es": "El mes pasado te pedí un cambio en el informe.",
+          "en": "Last month I asked you for a change in the report."
+        },
+        {
+          "speaker": "You",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Sí, quería que añadiera los gráficos."
+        },
+        {
+          "id": "b",
+          "text": "Sí, quería que añada los gráficos."
+        },
+        {
+          "id": "c",
+          "text": "Sí, quería que añado los gráficos."
+        }
+      ],
+      "answer": "a",
+      "ok": "¡Perfecto! Pasado → subjuntivo pasado (añadiera).",
+      "no": "A past main verb (quería) needs the imperfect subjunctive: “que añadiera”."
+    },
+    {
+      "id": "ex8",
+      "type": "speak",
+      "xp": 3,
+      "say": "Me gustaría que vinieras conmigo.",
+      "en": "I would like you to come with me.",
+      "ok": "¡Perfecto! Clear and natural.",
+      "no": "Almost — tap “Hear it”, then match the sound of “Me gustaría que vinieras conmigo.”"
+    }
+  ],
+  "vocab": [
+    {
+      "es": "quería que",
+      "en": "I wanted (someone) to"
+    },
+    {
+      "es": "esperaba que",
+      "en": "I was hoping that"
+    },
+    {
+      "es": "me gustaría que",
+      "en": "I would like (someone) to"
+    },
+    {
+      "es": "dudaba que",
+      "en": "I doubted that"
+    },
+    {
+      "es": "no creía que",
+      "en": "I didn't believe that"
+    }
+  ],
+  "completion": {
+    "xp_on_complete": 20,
+    "adds_vocab_to_srs": [
+      "quería que",
+      "esperaba que",
+      "me gustaría que",
+      "dudaba que",
+      "no creía que"
+    ]
+  }
+}
