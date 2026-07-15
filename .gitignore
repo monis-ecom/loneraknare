@@ -1,0 +1,4 @@
+# Build artifacts
+fluenta-deploy-*.zip
+*.zip
+node_modules/
