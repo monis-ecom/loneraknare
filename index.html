@@ -1972,7 +1972,7 @@ function renderSettings(){
       <button class="cta" id="gaGo">Generate new lesson audio</button>
       <button class="cta ghost" id="gaAll" style="margin-top:10px">Regenerate all clips</button>
       <p style="color:var(--faint);font-size:12px;margin-top:8px">“Regenerate all” re-voices the whole library (use it to switch voice). Otherwise stick to the top button — it’s faster and cheaper.</p>
-      <div class="ga-prog" id="gaProg" style="display:none"><div class="ga-bar"><i id="gaBar"></i></div><p class="set-msg" id="gaMsg"></p></div>
+      <div class="ga-prog" id="gaProg" style="display:none"><div class="ga-bar"><i id="gaBar"></i></div><p class="set-msg" id="gaMsg"></p><button class="cta ghost" id="gaStop" style="margin-top:10px;border-color:rgba(251,113,133,.4);color:var(--red);display:none">■ Stop generating</button></div>
       <hr style="border:none;border-top:1px solid var(--line);margin:14px 0">
       <button class="cta ghost" id="gaTest">▶ Test lesson audio</button>
       <p class="set-msg" id="gaTestMsg" style="margin-top:8px"></p>
@@ -1996,6 +1996,7 @@ function renderSettings(){
   document.getElementById('stSavePw').onclick=savePw;
   document.getElementById('gaGo').onclick=()=>genAudio(false);
   document.getElementById('gaAll').onclick=()=>{ if(confirm('Re-voice the ENTIRE library? This deletes every existing clip and regenerates it (uses more of your OpenAI credit). Use this only to change the voice.')) genAudio(true); };
+  const gaStop=document.getElementById('gaStop'); if(gaStop) gaStop.onclick=()=>{ GEN_AUDIO_CANCEL=true; gaStop.disabled=true; gaStop.textContent='Stopping…'; };
   const gt=document.getElementById('gaTest'); if(gt) gt.onclick=testLessonAudio;
   document.getElementById('aiSave').onclick=saveAiSettings;
   document.getElementById('pnToggle').onclick=togglePush;
@@ -2133,14 +2134,19 @@ async function saveAiSettings(){
   }catch(e){ msg.style.color='var(--red)'; msg.textContent='Could not reach the server.'; }
   btn.disabled=false; btn.textContent=lbl;
 }
+let GEN_AUDIO_CANCEL=false;
 async function genAudio(reset){
   const btnGo=document.getElementById('gaGo'), btnAll=document.getElementById('gaAll');
   const prog=document.getElementById('gaProg'), bar=document.getElementById('gaBar'), msg=document.getElementById('gaMsg');
+  const stop=document.getElementById('gaStop');
   const voice=document.getElementById('gaVoice').value; const ver=String(Date.now());
+  GEN_AUDIO_CANCEL=false;
   btnGo.disabled=btnAll.disabled=true; prog.style.display='block'; bar.style.width='0%'; msg.style.color='var(--muted)';
+  if(stop){ stop.style.display=''; stop.disabled=false; stop.textContent='■ Stop generating'; }
   msg.textContent = reset ? 'Preparing full rebuild…' : 'Checking what needs audio…';
   let total=0, have=0, made=0, ok=true, first=true, stall=0;
   while(true){
+    if(GEN_AUDIO_CANCEL){ msg.style.color='var(--amber)'; msg.textContent='Stopped'+(made>0?(' — '+made+' new clip'+(made===1?'':'s')+' saved.'):'.')+' Tap “Generate new lesson audio” to resume where it left off.'; ok=false; break; }
     let j;
     const payload={ count:8, voice, ver, reset:(reset&&first)?1:0 };
     let r;
@@ -2171,6 +2177,8 @@ async function genAudio(reset){
     msg.textContent = built + (customMade>0 ? (' + '+customMade+' studio clip'+(customMade===1?'':'s')) : (CUSTOM.length?' · studio lessons already voiced':'')) + '. ✓';
   }
   btnGo.disabled=btnAll.disabled=false;
+  if(stop){ stop.style.display='none'; stop.disabled=false; stop.textContent='■ Stop generating'; }
+  GEN_AUDIO_CANCEL=false;
 }
 async function saveName(){
   const name=(document.getElementById('stName').value||'').trim();
