@@ -1,0 +1,9 @@
+# Block direct browser access to sensitive files (Apache / LiteSpeed — Hostinger).
+# Secrets primarily live in config.php, which PHP never serves as source on ANY
+# web server (Apache or Nginx). This is defence-in-depth on top of that.
+<FilesMatch "^(config\.php|config\.example\.php|config\.json|nordic_sessions\.json|nordic_meta_actions\.json|push_subs\.json)$">
+  Require all denied
+</FilesMatch>
+
+# Never list directory contents
+Options -Indexes
