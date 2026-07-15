@@ -2860,6 +2860,9 @@ body::before {
   let adEditId      = 0;     // 0 = creating new; >0 = editing existing
   let metaPeriod    = ['today','yesterday','7d','14d','30d','mtd'].includes(DEFAULT_PERIOD) ? DEFAULT_PERIOD : 'today';
   let metaRows      = [];
+  let metaConfigured = null;   // null = unknown, true/false once settings load
+  let metaSyncing    = false;  // guard against overlapping auto-syncs
+  let lastMetaSyncAt = 0;      // throttle auto-syncs (ms epoch)
 
   // Phase 4: advanced views state
   let trendData    = null;
@@ -3729,6 +3732,7 @@ body::before {
     $('meta-cron-quick').value = meta.cron_url_quick || '';
     $('meta-cron-nightly').value = meta.cron_url_nightly || '';
     $('meta-cron-weekly').value = meta.cron_url_weekly || '';
+    metaConfigured = meta.configured === true;
     $('meta-status').textContent = meta.configured ? 'Konfigurerad' : 'Ej konfigurerad';
     $('meta-account-label').textContent = meta.ad_account_node || '—';
     const last = meta.last_sync || {};
@@ -3826,6 +3830,8 @@ body::before {
     const label = btn ? btn.querySelector('span') : null;
     if (btn) { btn.disabled = true; btn.classList.add('syncing'); }
     if (label) label.textContent = 'Syncar…';
+    metaSyncing = true; lastMetaSyncAt = Date.now();
+    $('refresh-btn').classList.add('spinning');
     try {
       const range = periodDateRange(currentPeriod);
       const data = await apiCall('meta-sync', { method: 'POST', body: { mode: 'range', date_from: range.from, date_to: range.to } });
@@ -3836,14 +3842,47 @@ body::before {
     } finally {
       if (btn) { btn.disabled = false; btn.classList.remove('syncing'); }
       if (label) label.textContent = 'Synca nu';
+      metaSyncing = false;
+      lastMetaSyncAt = Date.now();
+      $('refresh-btn').classList.remove('spinning');
       // The sync mirrors Meta spend into ad-spend; reload the KPIs AFTER it so ROAS/net/ad-spend match.
-      await loadPeriod(currentPeriod, { force: true });   // this also refreshes the Meta table + log
+      await loadPeriod(currentPeriod, { force: true, _fromSync: true });   // this also refreshes the Meta table + log
     }
   }
 
   // Top-row "refresh everything": sync Meta first, THEN reload (so ad spend reflects the sync).
   function refreshAll() {
     syncMetaDashboard(true);
+  }
+
+  // Automatic, lightweight Meta sync for the period currently on screen. This is what
+  // keeps ad spend correct without a separate sync step: pick a period → its exact date
+  // range is pulled from Meta and mirrored into ad-spend, then the KPIs reload.
+  // "light" = spend only (skips the slow per-ad status/budget refresh); the manual
+  // top-row refresh button still does a full sync including statuses and budgets.
+  async function autoSyncPeriod() {
+    if (metaConfigured === false) return;          // Meta not set up — nothing to sync
+    if (metaSyncing) return;                         // a sync is already running
+    if (Date.now() - lastMetaSyncAt < 20000) return; // throttle: at most once / 20s
+    metaSyncing = true;
+    lastMetaSyncAt = Date.now();
+    const period = currentPeriod;
+    if ($('refresh-btn')) $('refresh-btn').classList.add('spinning');
+    try {
+      const range = periodDateRange(period);
+      await apiCall('meta-sync', { method: 'POST', body: { mode: 'range', date_from: range.from, date_to: range.to, light: true } });
+      if (currentPeriod === period) await loadPeriod(period, { force: true, _fromSync: true });
+    } catch (e) {
+      // Silent — Meta may be unconfigured or briefly unavailable; the manual sync surfaces errors.
+    } finally {
+      metaSyncing = false;
+      if ($('refresh-btn')) $('refresh-btn').classList.remove('spinning');
+    }
+  }
+
+  // Load a period, then bring its Meta spend up to date in the background.
+  function selectPeriod(period) {
+    loadPeriod(period).then(() => autoSyncPeriod());
   }
 
   function renderMetaPeriodState() {
@@ -4706,7 +4745,7 @@ body::before {
     if (from > to)    { err.textContent = 'Startdatum måste vara före slutdatum'; return; }
     err.textContent = '';
     $('daterange-modal-overlay').classList.remove('show');
-    loadPeriod(`custom:${from}:${to}`);
+    selectPeriod(`custom:${from}:${to}`);
   }
 
   // ═══════════════════ EVENTS ═══════════════════
@@ -4722,7 +4761,7 @@ body::before {
       openDateRangePicker();
       return;
     }
-    if (b.dataset.period !== currentPeriod) loadPeriod(b.dataset.period);
+    if (b.dataset.period !== currentPeriod) selectPeriod(b.dataset.period);
   });
 
   // Custom date range modal events
@@ -6060,6 +6099,7 @@ body::before {
       const ok = await checkAuth();
       if (ok) {
         await loadPeriod(DEFAULT_PERIOD);
+        autoSyncPeriod();   // bring the opening period's Meta spend up to date
         loadTrend();
         loadAndRenderProjections();
       }

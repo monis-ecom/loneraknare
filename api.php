@@ -1532,7 +1532,7 @@ function meta_fetch_insights($from, $to) {
     $url = profit_meta_build_insights_url($cfg['account_id'], $cfg['access_token'], $from, $to, $cfg['api_version']);
     $all = [];
     $guard = 0;
-    while ($url && $guard < 20) {
+    while ($url && $guard < 100) {   // raised from 20 so long ranges are never truncated
         $data = meta_graph_request($url, 'GET', [], $cfg);
         foreach (($data['data'] ?? []) as $row) $all[] = $row;
         $url = $data['paging']['next'] ?? '';
@@ -1662,7 +1662,7 @@ function meta_mirror_adspend(array $rows) {
     db()->exec("DELETE FROM profit_cache");
 }
 
-function run_meta_sync($mode = 'quick', $from = '', $to = '', $trigger = 'manual') {
+function run_meta_sync($mode = 'quick', $from = '', $to = '', $trigger = 'manual', $refreshEntities = true) {
     if ($from === '' || $to === '') {
         [$from, $to] = profit_meta_sync_window($mode ?: 'quick');
     }
@@ -1670,7 +1670,10 @@ function run_meta_sync($mode = 'quick', $from = '', $to = '', $trigger = 'manual
     $cfg = meta_private_config();
     $rows = profit_meta_normalize_insights($raw, $cfg['account_id']);
     $result = meta_upsert_insights($rows);
-    $entities = meta_refresh_entities_from_rows($rows);
+    // Entity refresh (statuses + budgets) is one Graph call per ad/adset/campaign and
+    // is the slow part of a sync. It's only needed for the pause/budget controls, not
+    // for spend accuracy — so a "light" sync (used for automatic period syncs) skips it.
+    $entities = $refreshEntities ? meta_refresh_entities_from_rows($rows) : 0;
     $payload = [
         'mode' => $mode,
         'trigger' => $trigger,
@@ -2469,7 +2472,8 @@ try {
             $mode = (string)($body['mode'] ?? 'quick');
             $from = trim((string)($body['date_from'] ?? ''));
             $to   = trim((string)($body['date_to'] ?? ''));
-            respond(['ok' => true, 'sync' => run_meta_sync($mode, $from, $to, 'manual'), 'meta' => meta_settings_public(true)]);
+            $light = !empty($body['light']);   // light = spend only, skip entity status/budget refresh
+            respond(['ok' => true, 'sync' => run_meta_sync($mode, $from, $to, 'manual', !$light), 'meta' => meta_settings_public(true)]);
 
         case 'meta-cron':
             if ($method !== 'GET') { http_response_code(405); respond(['error' => 'GET required']); }

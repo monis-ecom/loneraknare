@@ -91,6 +91,7 @@ function profit_meta_build_insights_url($accountId, $token, $from, $to, $apiVers
     $params = array(
         'level' => 'ad',
         'time_increment' => 1,
+        'limit' => 500,   // large page size so multi-week ranges need far fewer pages
         'fields' => implode(',', profit_meta_insights_fields()),
         'time_range' => json_encode(array(
             'since' => date('Y-m-d', strtotime($from)),

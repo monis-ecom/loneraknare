@@ -2,7 +2,7 @@
   "name": "Profit Tracker",
   "short_name": "Profit",
   "description": "Nordic Trend vinstöversikt — omsättning, ordrar, marginal",
-  "version": "2.11.6",
+  "version": "2.11.7",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
