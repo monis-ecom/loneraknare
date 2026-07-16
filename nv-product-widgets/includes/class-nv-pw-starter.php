@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) exit;
 final class NV_PW_Starter {
     /** Live PadelFlex™ product page — the buy CTAs on the starter point here.
      * Change this one line to repoint every CTA (or edit them per-widget in Elementor). */
-    const PADELFLEX_URL = 'https://nordiskavaruhuset.se/product/padelflex/';
+    const PADELFLEX_URL = 'https://shopnordictrend.com/product/padelflex/';
 
     public static function init(): void {
         add_action('admin_menu', [__CLASS__, 'add_menu']);

@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: AS Product Widgets
- * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.62 wires the PadelFlex™ Landing Page starter CTAs to the live product page (nordiskavaruhuset.se/product/padelflex/). One-click starter under Tools → NV Starter Templates builds the full 10-section Swedish page with editorial mixed headlines.
- * Version: 1.7.62
+ * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.63 points the PadelFlex™ Landing Page starter CTAs to the live product page (shopnordictrend.com/product/padelflex/). One-click starter under Tools → NV Starter Templates builds the full 10-section Swedish page with editorial mixed headlines.
+ * Version: 1.7.63
  * Author: Alpha Studio
  * Text Domain: nv-product-widgets
  * Requires Plugins: elementor, woocommerce
@@ -13,7 +13,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('NV_PW_VERSION', '1.7.62');
+define('NV_PW_VERSION', '1.7.63');
 define('NV_PW_FILE', __FILE__);
 define('NV_PW_DIR', plugin_dir_path(__FILE__));
 define('NV_PW_URL', plugin_dir_url(__FILE__));
