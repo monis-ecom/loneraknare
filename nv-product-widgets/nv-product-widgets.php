@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: AS Product Widgets
- * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.65 adds full typography controls (font family + size + weight) and colors to the Stats Counter widget — button, subtext and guarantee line are now adjustable (the button font size was previously fixed), plus button padding v1.7.64 fixes fonts falling back on the live frontend vs the Elementor editor: the brand webfonts (incl. Newsreader) now load as a proper enqueued stylesheet instead of a CSS @import, so they survive CSS combining/minification. radius. One-click starter under Tools → NV Starter Templates builds the full 10-section Swedish page with editorial mixed headlines.
+ * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.65 adds full typography controls (font family + size + weight), colors, and button padding/radius to the Stats Counter widget — its button, subtext and guarantee line are now fully adjustable (the button font size was previously fixed). Includes the earlier webfont-loading fix and the one-click PadelFlex Landing Page starter (Tools → NV Starter Templates).
  * Version: 1.7.65
  * Author: Alpha Studio
  * Text Domain: nv-product-widgets
