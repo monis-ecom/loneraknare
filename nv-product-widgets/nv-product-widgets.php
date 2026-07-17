@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: AS Product Widgets
- * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.64 fixes fonts falling back on the live frontend vs the Elementor editor: the brand webfonts (incl. Newsreader) now load as a proper enqueued stylesheet instead of a CSS @import, so they survive CSS combining/minification. One-click starter under Tools → NV Starter Templates builds the full 10-section Swedish page with editorial mixed headlines.
- * Version: 1.7.64
+ * Description: Lightweight Elementor widgets for WooCommerce product pages. Built for Nordiska Varuhuset. v1.7.65 adds full typography controls (font family + size + weight) and colors to the Stats Counter widget — button, subtext and guarantee line are now adjustable (the button font size was previously fixed), plus button padding v1.7.64 fixes fonts falling back on the live frontend vs the Elementor editor: the brand webfonts (incl. Newsreader) now load as a proper enqueued stylesheet instead of a CSS @import, so they survive CSS combining/minification. radius. One-click starter under Tools → NV Starter Templates builds the full 10-section Swedish page with editorial mixed headlines.
+ * Version: 1.7.65
  * Author: Alpha Studio
  * Text Domain: nv-product-widgets
  * Requires Plugins: elementor, woocommerce
@@ -13,7 +13,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('NV_PW_VERSION', '1.7.64');
+define('NV_PW_VERSION', '1.7.65');
 define('NV_PW_FILE', __FILE__);
 define('NV_PW_DIR', plugin_dir_path(__FILE__));
 define('NV_PW_URL', plugin_dir_url(__FILE__));

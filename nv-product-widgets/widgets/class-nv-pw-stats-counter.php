@@ -145,6 +145,11 @@ class NV_PW_Stats_Counter extends \Elementor\Widget_Base {
             'default' => '#8A93A3',
             'selectors' => ['{{WRAPPER}} .nv-pw-stc__subtext' => 'color: {{VALUE}};'],
         ]);
+        $this->add_group_control(\Elementor\Group_Control_Typography::get_type(), [
+            'name' => 'subtext_typography',
+            'selector' => '{{WRAPPER}} .nv-pw-stc__subtext',
+        ]);
+        $this->add_control('button_heading', ['label' => __('Button', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::HEADING, 'separator' => 'before']);
         $this->add_control('button_bg', [
             'label' => __('Button background', 'nv-product-widgets'),
             'type' => \Elementor\Controls_Manager::COLOR,
@@ -156,6 +161,33 @@ class NV_PW_Stats_Counter extends \Elementor\Widget_Base {
             'type' => \Elementor\Controls_Manager::COLOR,
             'default' => '#FFFFFF',
             'selectors' => ['{{WRAPPER}} .nv-pw-stc__btn' => 'color: {{VALUE}};'],
+        ]);
+        $this->add_group_control(\Elementor\Group_Control_Typography::get_type(), [
+            'name' => 'button_typography',
+            'selector' => '{{WRAPPER}} .nv-pw-stc__btn',
+        ]);
+        $this->add_responsive_control('button_padding', [
+            'label' => __('Button padding', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+            'size_units' => ['px', 'em', '%'],
+            'selectors' => ['{{WRAPPER}} .nv-pw-stc__btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'],
+        ]);
+        $this->add_control('button_radius', [
+            'label' => __('Button radius', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'range' => ['px' => ['min' => 0, 'max' => 48]],
+            'selectors' => ['{{WRAPPER}} .nv-pw-stc__btn' => 'border-radius: {{SIZE}}{{UNIT}};'],
+        ]);
+        $this->add_control('guarantee_heading', ['label' => __('Guarantee line', 'nv-product-widgets'), 'type' => \Elementor\Controls_Manager::HEADING, 'separator' => 'before']);
+        $this->add_control('guarantee_color', [
+            'label' => __('Guarantee color', 'nv-product-widgets'),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'default' => '#8A93A3',
+            'selectors' => ['{{WRAPPER}} .nv-pw-stc__guarantee' => 'color: {{VALUE}};'],
+        ]);
+        $this->add_group_control(\Elementor\Group_Control_Typography::get_type(), [
+            'name' => 'guarantee_typography',
+            'selector' => '{{WRAPPER}} .nv-pw-stc__guarantee',
         ]);
         $this->end_controls_section();
     }
