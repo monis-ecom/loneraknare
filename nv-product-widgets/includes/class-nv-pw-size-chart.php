@@ -103,10 +103,11 @@ final class NV_PW_Size_Chart {
             return;
         }
 
+        if (class_exists('NV_PW_Loader')) NV_PW_Loader::register_fonts();
         wp_enqueue_style(
             'nv-product-widgets',
             NV_PW_URL . 'assets/css/nv-product-widgets.css',
-            [],
+            ['nv-pw-fonts'],
             NV_PW_VERSION
         );
 

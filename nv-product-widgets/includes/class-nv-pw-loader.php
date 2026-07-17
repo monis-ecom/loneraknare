@@ -234,8 +234,30 @@ final class NV_PW_Loader {
         $widgets_manager->register(new NV_PW_Email_Popup());
     }
 
+    /**
+     * Register the brand webfonts as their own top-level stylesheet. Loading them
+     * as a real enqueued <link> (rather than a CSS @import inside the main
+     * stylesheet) keeps the fonts working on the live frontend even when a
+     * caching / CSS-optimisation plugin combines or minifies stylesheets — a
+     * combined file whose @import isn't the first rule is invalid and gets
+     * dropped by the browser, which is why headlines fell back to a system font
+     * on the frontend while rendering correctly in the Elementor editor.
+     */
+    public static function register_fonts(): void {
+        if (!wp_style_is('nv-pw-fonts', 'registered')) {
+            wp_register_style(
+                'nv-pw-fonts',
+                'https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@700;800&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&display=swap',
+                [],
+                null
+            );
+        }
+        wp_enqueue_style('nv-pw-fonts');
+    }
+
     public function enqueue_styles(): void {
-        wp_enqueue_style('nv-product-widgets', NV_PW_URL . 'assets/css/nv-product-widgets.css', [], NV_PW_VERSION);
+        self::register_fonts();
+        wp_enqueue_style('nv-product-widgets', NV_PW_URL . 'assets/css/nv-product-widgets.css', ['nv-pw-fonts'], NV_PW_VERSION);
     }
 
     public function register_scripts(): void {
