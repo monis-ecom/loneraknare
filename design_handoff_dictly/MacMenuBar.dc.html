@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>@keyframes mbPulse{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes mbWave{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}</style></helmet>
+<div style="position:relative;width:1280px;font-family:'Albert Sans',sans-serif;color:#F1F3EC;z-index:5">
+<div style="height:28px;background:rgba(255,255,255,0.06);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);display:flex;align-items:center;gap:20px;padding:0 14px;box-sizing:border-box">
+<div style="width:12px;height:13px;border-radius:5px 5px 4px 4px;background:rgba(241,243,236,0.75)"></div>
+<div style="font:600 13px/1 'Albert Sans',sans-serif">{{ appName }}</div>
+<div style="display:flex;gap:17px;font:400 13px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.75)"><span>File</span><span>Edit</span><span>View</span><span>Window</span><span>Help</span></div>
+<div style="flex:1"></div>
+<div style="display:flex;align-items:center;gap:14px">
+<sc-if value="{{ dotRec }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;align-items:center;gap:7px">
+<div style="display:flex;gap:2px;align-items:center;height:12px"><span style="width:2px;height:6px;background:#BFF54A;animation:mbWave .9s ease-in-out infinite"></span><span style="width:2px;height:11px;background:#BFF54A;animation:mbWave .9s .12s ease-in-out infinite"></span><span style="width:2px;height:8px;background:#BFF54A;animation:mbWave .9s .24s ease-in-out infinite"></span><span style="width:2px;height:12px;background:#BFF54A;animation:mbWave .9s .36s ease-in-out infinite"></span></div>
+<div style="font:600 12px/1 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums;color:#BFF54A">{{ timer }}</div>
+</div>
+</sc-if>
+<sc-if value="{{ dotIdle }}" hint-placeholder-val="{{ true }}">
+<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(241,243,236,0.75)" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><line x1="12" y1="18" x2="12" y2="21"></line></svg>
+</sc-if>
+<sc-if value="{{ dotWarn }}" hint-placeholder-val="{{ false }}">
+<div style="width:8px;height:8px;border-radius:50%;background:#FF9F45"></div>
+</sc-if>
+<div style="display:flex;gap:3px;align-items:flex-end;height:11px"><span style="width:2px;height:4px;background:rgba(241,243,236,0.75)"></span><span style="width:2px;height:6px;background:rgba(241,243,236,0.75)"></span><span style="width:2px;height:9px;background:rgba(241,243,236,0.75)"></span><span style="width:2px;height:11px;background:rgba(241,243,236,0.75)"></span></div>
+<div style="width:22px;height:11px;border-radius:3px;border:1px solid rgba(241,243,236,0.6);padding:1.5px;box-sizing:border-box"><div style="width:70%;height:100%;border-radius:1.5px;background:rgba(241,243,236,0.85)"></div></div>
+<div style="font:400 13px/1 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums">Tue 9:41</div>
+</div>
+</div>
+
+<sc-if value="{{ hasPanel }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:34px;right:76px;width:328px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.10);box-shadow:0 26px 70px rgba(0,0,0,0.7);padding:8px;box-sizing:border-box;display:flex;flex-direction:column;gap:2px">
+
+<sc-if value="{{ panelIdle }}" hint-placeholder-val="{{ true }}">
+<div style="padding:11px 12px 12px;display:flex;flex-direction:column;gap:4px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Ready</div>
+<div style="font:400 12.5px/1.4 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.60)">whisper-large-v3-turbo → gpt-oss-120b</div>
+</div>
+<div style="height:1px;background:rgba(255,255,255,0.08);margin:2px 0"></div>
+<div style="min-height:36px;border-radius:8px;background:rgba(191,245,74,0.12);display:flex;align-items:center;gap:10px;padding:0 12px"><div style="flex:1;font:600 13.5px/1 'Albert Sans',sans-serif;color:#BFF54A">Start dictation</div><div style="font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(191,245,74,0.7)">fn</div></div>
+<div style="min-height:36px;display:flex;align-items:center;gap:10px;padding:0 12px"><div style="flex:1;font:400 13.5px/1 'Albert Sans',sans-serif">Dictate to clipboard</div><div style="font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">⌥fn</div></div>
+<div style="height:1px;background:rgba(255,255,255,0.08);margin:2px 0"></div>
+<div style="min-height:36px;display:flex;align-items:center;padding:0 12px;font:400 13.5px/1 'Albert Sans',sans-serif">History…</div>
+<div style="min-height:36px;display:flex;align-items:center;gap:10px;padding:0 12px"><div style="flex:1;font:400 13.5px/1 'Albert Sans',sans-serif">Providers &amp; models</div><svg width="6" height="11" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg></div>
+<div style="min-height:36px;display:flex;align-items:center;gap:10px;padding:0 12px"><div style="flex:1;font:400 13.5px/1 'Albert Sans',sans-serif">Settings…</div><div style="font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">⌘,</div></div>
+<div style="height:1px;background:rgba(255,255,255,0.08);margin:2px 0"></div>
+<div style="min-height:36px;display:flex;align-items:center;gap:10px;padding:0 12px"><div style="flex:1;font:400 13.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Quit Dictly</div><div style="font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">⌘Q</div></div>
+</sc-if>
+
+<sc-if value="{{ panelRec }}" hint-placeholder-val="{{ false }}">
+<div style="padding:12px 12px 14px;display:flex;flex-direction:column;gap:11px">
+<div style="display:flex;align-items:center;gap:11px">
+<div style="width:40px;height:40px;border-radius:50%;background:#BFF54A;display:grid;place-items:center;flex:none"><div style="width:13px;height:13px;border-radius:4px;background:#0A0B0A"></div></div>
+<div style="flex:1;display:flex;align-items:center;gap:2.5px;height:28px"><span style="width:3px;height:10px;border-radius:2px;background:#BFF54A;animation:mbWave .9s ease-in-out infinite"></span><span style="width:3px;height:20px;border-radius:2px;background:#BFF54A;animation:mbWave .9s .08s ease-in-out infinite"></span><span style="width:3px;height:28px;border-radius:2px;background:#BFF54A;animation:mbWave .9s .16s ease-in-out infinite"></span><span style="width:3px;height:14px;border-radius:2px;background:#BFF54A;animation:mbWave .9s .24s ease-in-out infinite"></span><span style="width:3px;height:24px;border-radius:2px;background:#BFF54A;animation:mbWave .9s .32s ease-in-out infinite"></span><span style="width:3px;height:12px;border-radius:2px;background:#BFF54A;animation:mbWave .9s .4s ease-in-out infinite"></span><span style="width:3px;height:26px;border-radius:2px;background:#BFF54A;animation:mbWave .9s .48s ease-in-out infinite"></span><span style="width:3px;height:18px;border-radius:2px;background:#BFF54A;animation:mbWave .9s .56s ease-in-out infinite"></span><span style="width:3px;height:30px;border-radius:2px;background:#BFF54A;animation:mbWave .9s .64s ease-in-out infinite"></span><span style="width:3px;height:15px;border-radius:2px;background:#BFF54A;animation:mbWave .9s .72s ease-in-out infinite"></span><span style="width:3px;height:22px;border-radius:2px;background:#BFF54A;animation:mbWave .9s .8s ease-in-out infinite"></span><span style="width:3px;height:11px;border-radius:2px;background:#BFF54A;animation:mbWave .9s .88s ease-in-out infinite"></span></div>
+<div style="font:400 13px/1 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums;flex:none">{{ timer }}</div>
+</div>
+<div style="font:400 12.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Listening. Take your time — release fn when you're done.</div>
+</div>
+<div style="height:1px;background:rgba(255,255,255,0.08);margin:2px 0"></div>
+<div style="min-height:36px;display:flex;align-items:center;gap:10px;padding:0 12px"><div style="flex:1;font:400 13.5px/1 'Albert Sans',sans-serif">Stop and insert</div><div style="font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">fn</div></div>
+<div style="min-height:36px;display:flex;align-items:center;gap:10px;padding:0 12px"><div style="flex:1;font:400 13.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Cancel</div><div style="font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">esc</div></div>
+</sc-if>
+
+<sc-if value="{{ panelResult }}" hint-placeholder-val="{{ false }}">
+<div style="padding:11px 12px 12px;display:flex;flex-direction:column;gap:8px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Last dictation</div>
+<div style="font:400 13.5px/1.5 'Albert Sans',sans-serif;color:#F1F3EC">Running about ten minutes late — start without me and I'll catch up.</div>
+<div style="font:400 11.5px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">0:09 spoken · 1.1 s to clean · Groq → Cerebras</div>
+</div>
+<div style="height:1px;background:rgba(255,255,255,0.08);margin:2px 0"></div>
+<div style="min-height:36px;border-radius:8px;background:rgba(191,245,74,0.12);display:flex;align-items:center;gap:10px;padding:0 12px"><div style="flex:1;font:600 13.5px/1 'Albert Sans',sans-serif;color:#BFF54A">Insert at cursor</div><div style="font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(191,245,74,0.7)">⏎</div></div>
+<div style="min-height:36px;display:flex;align-items:center;gap:10px;padding:0 12px"><div style="flex:1;font:400 13.5px/1 'Albert Sans',sans-serif">Copy</div><div style="font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">⌘C</div></div>
+<div style="min-height:36px;display:flex;align-items:center;padding:0 12px;font:400 13.5px/1 'Albert Sans',sans-serif">See what you said</div>
+<div style="min-height:36px;display:flex;align-items:center;padding:0 12px;font:400 13.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Redo the cleanup</div>
+</sc-if>
+
+<sc-if value="{{ panelFail }}" hint-placeholder-val="{{ false }}">
+<div style="padding:11px 12px 12px;display:flex;flex-direction:column;gap:7px">
+<div style="display:flex;align-items:center;gap:8px"><div style="width:7px;height:7px;border-radius:50%;background:#FF9F45"></div><div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF9F45">Needs attention</div></div>
+<div style="font:400 13.5px/1.5 'Albert Sans',sans-serif">Groq didn't answer. Your audio is saved.</div>
+<div style="font:400 11.5px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">0:09 of speech · held on this Mac</div>
+</div>
+<div style="height:1px;background:rgba(255,255,255,0.08);margin:2px 0"></div>
+<div style="min-height:36px;border-radius:8px;background:rgba(191,245,74,0.12);display:flex;align-items:center;padding:0 12px;font:600 13.5px/1 'Albert Sans',sans-serif;color:#BFF54A">Retry with Groq</div>
+<div style="min-height:36px;display:flex;align-items:center;padding:0 12px;font:400 13.5px/1 'Albert Sans',sans-serif">Use fallback (OpenAI)</div>
+<div style="min-height:36px;display:flex;align-items:center;padding:0 12px;font:400 13.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Discard the recording</div>
+</sc-if>
+
+</div>
+</sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:420},&quot;appName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Finder&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;dot&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;idle&quot;,&quot;recording&quot;,&quot;warn&quot;],&quot;default&quot;:&quot;idle&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;panel&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;none&quot;,&quot;idle&quot;,&quot;recording&quot;,&quot;result&quot;,&quot;failed&quot;],&quot;default&quot;:&quot;none&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;timer&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;0:07&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props.panel || 'none';
+    const d = this.props.dot || 'idle';
+    return {
+      appName: this.props.appName || 'Finder',
+      timer: this.props.timer || '0:07',
+      dotIdle: d === 'idle',
+      dotRec: d === 'recording',
+      dotWarn: d === 'warn',
+      hasPanel: p !== 'none',
+      panelIdle: p === 'idle',
+      panelRec: p === 'recording',
+      panelResult: p === 'result',
+      panelFail: p === 'failed'
+    };
+  }
+}
+
+</script>
+</body>
+</html>

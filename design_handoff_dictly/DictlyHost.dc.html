@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</helmet>
+<div style="height:482px;width:402px;box-sizing:border-box;background:#050505;display:flex;flex-direction:column;font-family:'Albert Sans',sans-serif;color:#F1F3EC;padding-top:56px;overflow:hidden">
+
+<sc-if value="{{ isMsg }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;align-items:center;gap:10px;padding:6px 16px 12px;border-bottom:1px solid rgba(255,255,255,0.06)">
+<svg width="9" height="16" viewBox="0 0 12 20" fill="none" stroke="rgba(241,243,236,0.60)" stroke-width="2.2" stroke-linecap="round"><path d="M10 2L2 10l8 8"></path></svg>
+<div style="width:28px;height:28px;border-radius:50%;background:#1F1F1F"></div>
+<div style="font:600 15px/1.2 'Albert Sans',sans-serif">Sam</div>
+<div style="flex:1"></div>
+<div style="font:400 12px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Messages</div>
+</div>
+<div style="flex:1;min-height:0;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;padding:14px 16px">
+<div style="align-self:flex-start;max-width:74%;background:#151515;border-radius:18px 18px 18px 6px;padding:10px 14px;font:400 15px/1.4 'Albert Sans',sans-serif">Are you coming to the 3 o'clock?</div>
+<div style="align-self:flex-end;max-width:74%;background:#242424;border-radius:18px 18px 6px 18px;padding:10px 14px;font:400 15px/1.4 'Albert Sans',sans-serif">Yeah, just finishing something</div>
+<div style="align-self:flex-start;max-width:74%;background:#151515;border-radius:18px 18px 18px 6px;padding:10px 14px;font:400 15px/1.4 'Albert Sans',sans-serif">Cool, we'll hold the room</div>
+</div>
+<div style="display:flex;align-items:flex-end;gap:10px;padding:8px 16px 12px">
+<div style="width:32px;height:32px;border-radius:50%;background:#151515;display:grid;place-items:center;flex:none;font:400 18px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">+</div>
+<div style="flex:1;min-height:34px;border-radius:18px;border:1px solid rgba(255,255,255,0.12);padding:8px 14px;font:400 15px/1.4 'Albert Sans',sans-serif;white-space:pre-line">
+<sc-if value="{{ hasText }}" hint-placeholder-val="{{ false }}"><span style="color:#F1F3EC">{{ text }}</span></sc-if>
+<sc-if value="{{ noText }}" hint-placeholder-val="{{ true }}"><span style="color:rgba(241,243,236,0.30)">iMessage</span></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isSlack }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;align-items:center;gap:8px;padding:6px 16px 12px;border-bottom:1px solid rgba(255,255,255,0.06)">
+<div style="font:600 15px/1.2 'Albert Sans',sans-serif">#design-review</div>
+<div style="flex:1"></div>
+<div style="font:400 12px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Slack</div>
+</div>
+<div style="flex:1;min-height:0;display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:14px 16px">
+<div style="display:flex;gap:10px">
+<div style="width:30px;height:30px;border-radius:8px;background:#1F1F1F;flex:none"></div>
+<div style="display:flex;flex-direction:column;gap:3px">
+<div style="font:600 13px/1.2 'Albert Sans',sans-serif">Priya <span style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">10:12</span></div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.80)">Sprint board is groomed. Who's picking up the API tickets?</div>
+</div>
+</div>
+<div style="display:flex;gap:10px">
+<div style="width:30px;height:30px;border-radius:8px;background:#1F1F1F;flex:none"></div>
+<div style="display:flex;flex-direction:column;gap:3px">
+<div style="font:600 13px/1.2 'Albert Sans',sans-serif">Tom <span style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">10:14</span></div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.80)">Not me this week, I'm on the migration</div>
+</div>
+</div>
+</div>
+<div style="padding:8px 16px 12px">
+<div style="min-height:40px;border-radius:12px;border:1px solid rgba(255,255,255,0.12);padding:10px 14px;font:400 15px/1.4 'Albert Sans',sans-serif;white-space:pre-line">
+<sc-if value="{{ hasText }}" hint-placeholder-val="{{ false }}"><span style="color:#F1F3EC">{{ text }}</span></sc-if>
+<sc-if value="{{ noText }}" hint-placeholder-val="{{ true }}"><span style="color:rgba(241,243,236,0.30)">Message #design-review</span></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isGmail }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;align-items:center;gap:14px;padding:6px 16px 12px;border-bottom:1px solid rgba(255,255,255,0.06)">
+<svg width="15" height="15" viewBox="0 0 24 24" stroke="rgba(241,243,236,0.60)" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>
+<div style="font:600 15px/1.2 'Albert Sans',sans-serif">New message</div>
+<div style="flex:1"></div>
+<div style="font:400 12px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Gmail</div>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="display:flex;gap:10px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.06);font:400 14px/1.4 'Albert Sans',sans-serif"><span style="color:rgba(241,243,236,0.36);width:52px">To</span><span>sarah@studio.co</span></div>
+<div style="display:flex;gap:10px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.06);font:400 14px/1.4 'Albert Sans',sans-serif"><span style="color:rgba(241,243,236,0.36);width:52px">Subject</span><span>Launch update</span></div>
+</div>
+<div style="flex:1;min-height:0;padding:14px 16px;font:400 15px/1.5 'Albert Sans',sans-serif;white-space:pre-line;overflow:hidden">
+<sc-if value="{{ hasText }}" hint-placeholder-val="{{ false }}"><span style="color:#F1F3EC">{{ text }}</span></sc-if>
+<sc-if value="{{ noText }}" hint-placeholder-val="{{ true }}"><span style="color:rgba(241,243,236,0.30)">Compose email</span></sc-if>
+</div>
+</sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:402,&quot;height&quot;:482},&quot;app&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;messages&quot;,&quot;slack&quot;,&quot;gmail&quot;],&quot;default&quot;:&quot;messages&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;text&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const app = this.props.app || 'messages';
+    const t = this.props.text || '';
+    return {
+      isMsg: app === 'messages',
+      isSlack: app === 'slack',
+      isGmail: app === 'gmail',
+      text: t,
+      hasText: !!t,
+      noText: !t
+    };
+  }
+}
+
+</script>
+</body>
+</html>

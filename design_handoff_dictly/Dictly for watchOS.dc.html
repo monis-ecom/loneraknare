@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#141414}body{margin:0;background:#141414;font-family:'Albert Sans',system-ui,sans-serif}a{color:#BFF54A}a:hover{color:#A8DE35}</style></helmet>
+
+<div style="padding:44px 48px 18px;display:flex;flex-direction:column;gap:6px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Dictly</div>
+<div style="font:600 30px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em;color:#F1F3EC">watchOS — 13 artboards</div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);max-width:680px">Apple Watch Ultra 2, 49 mm · 410 × 502 screen, drawn at device pixels. There's no cursor on a watch, so the wrist captures and hands off — the Action button starts it, the Mac receives it.</div>
+</div>
+
+<section style="padding:34px 48px 40px;border-top:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:22px;background:#141414;min-width:max-content">
+<div style="display:flex;flex-direction:column;gap:5px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Row 1</div>
+<div style="font:600 22px/1.2 'Albert Sans',sans-serif;color:#F1F3EC">Dictate from the wrist</div>
+<div style="font:400 13px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">One thumb, no reading. Press, speak, press again — the result goes where you're working.</div>
+</div>
+<div style="display:flex;gap:34px;align-items:flex-start">
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.1 Idle</div>
+<dc-import name="WatchScreen" screen="idle" hint-size="492px,604px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.2 Recording</div>
+<dc-import name="WatchScreen" screen="recording" glow="{{ glow }}" hint-size="492px,604px"></dc-import>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:492px">Glow at 18% max — a watch is 30 cm from your eyes, so lime blooms harder here than anywhere.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.3 Processing</div>
+<dc-import name="WatchScreen" screen="processing" hint-size="492px,604px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.4 Result</div>
+<dc-import name="WatchScreen" screen="result" hint-size="492px,604px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.5 Sent</div>
+<dc-import name="WatchScreen" screen="sent" hint-size="492px,604px"></dc-import>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:492px">Double haptic tick on hand-off. The screen can go dark straight after — the wrist already told you.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.6 Provider failed</div>
+<dc-import name="WatchScreen" screen="failed" hint-size="492px,604px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.7 Off-grid — on device</div>
+<dc-import name="WatchScreen" screen="offline" hint-size="492px,604px"></dc-import>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:492px">Cool blue, the on-device colour from the iOS system — never lime, so you can tell at a glance.</div>
+</sc-if>
+</div>
+
+</div>
+</section>
+
+<section style="padding:34px 48px 60px;border-top:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:22px;background:#141414;min-width:max-content">
+<div style="display:flex;flex-direction:column;gap:5px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Row 2</div>
+<div style="font:600 22px/1.2 'Albert Sans',sans-serif;color:#F1F3EC">Getting in, and glances</div>
+<div style="font:400 13px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Complication, Action button, notification, and the short settings the watch is allowed to own.</div>
+</div>
+<div style="display:flex;gap:34px;align-items:flex-start">
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.1 Watch face complication</div>
+<dc-import name="WatchScreen" screen="face" hint-size="492px,604px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.2 Action button</div>
+<dc-import name="WatchScreen" screen="action" hint-size="492px,604px"></dc-import>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:492px">The Ultra's orange Action button is hardware, not our accent — the app never borrows that orange.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.3 Notification</div>
+<dc-import name="WatchScreen" screen="notif" hint-size="492px,604px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.4 Recent dictations</div>
+<dc-import name="WatchScreen" screen="history" hint-size="492px,604px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.5 Tone — crown scroll</div>
+<dc-import name="WatchScreen" screen="tone" hint-size="492px,604px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.6 Settings</div>
+<dc-import name="WatchScreen" screen="settings" hint-size="492px,604px"></dc-import>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:492px">No provider editing, no keys, no URLs on the watch — four rows and a pointer to the phone.</div>
+</sc-if>
+</div>
+
+</div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAnnotations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sheet&quot;},&quot;watchGlow&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;full&quot;,&quot;half&quot;],&quot;default&quot;:&quot;full&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Recording&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      notes: this.props.showAnnotations ?? true,
+      glow: this.props.watchGlow || 'full'
+    };
+  }
+}
+
+</script>
+</body>
+</html>

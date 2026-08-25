@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#141414}body{margin:0;background:#141414;font-family:'Albert Sans',system-ui,sans-serif}a{color:#BFF54A}a:hover{color:#A8DE35}</style></helmet>
+
+<div style="padding:44px 48px 18px;display:flex;flex-direction:column;gap:6px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Dictly</div>
+<div style="font:600 30px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em;color:#F1F3EC">macOS — 21 artboards</div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);max-width:660px">Menu bar app, no Dock icon, no accounts. The custom keyboard becomes a held fn key and a floating panel at the bottom of the screen. Same lime-on-black system as iOS.</div>
+</div>
+
+<section style="padding:34px 48px 40px;border-top:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:22px;background:#141414;min-width:max-content">
+<div style="display:flex;flex-direction:column;gap:5px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Row 1</div>
+<div style="font:600 22px/1.2 'Albert Sans',sans-serif;color:#F1F3EC">Dictation in place</div>
+<div style="font:400 13px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Hold fn in whatever app you're already in. The panel floats bottom centre and never takes focus.</div>
+</div>
+<div style="display:flex;gap:40px;align-items:flex-start">
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.1 Panel idle — code editor</div>
+<div style="width:1280px;height:800px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(120% 90% at 50% 0%,#17181B 0%,#0B0B0C 62%);box-shadow:0 30px 90px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<dc-import name="MacMenuBar" app-name="Xcode" dot="idle" hint-size="1280px,28px"></dc-import>
+<div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding-top:54px"><dc-import name="MacHostWindow" app="code" hint-size="900px,520px"></dc-import></div>
+<div style="position:absolute;left:50%;bottom:44px;transform:translateX(-50%)"><dc-import name="MacHud" mode="idle" idle-hint="{{ idleHint }}" hint-size="540px,110px"></dc-import></div>
+</div>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:1280px">Panel fades up over 120 ms and never steals key focus — the caret stays where it was.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.2 Panel recording — Slack</div>
+<div style="width:1280px;height:800px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(120% 90% at 50% 0%,#17181B 0%,#0B0B0C 62%);box-shadow:0 30px 90px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<dc-import name="MacMenuBar" app-name="Slack" dot="recording" timer="0:07" hint-size="1280px,28px"></dc-import>
+<div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding-top:54px"><dc-import name="MacHostWindow" app="slack" hint-size="900px,520px"></dc-import></div>
+<div style="position:absolute;left:50%;bottom:44px;transform:translateX(-50%)"><dc-import name="MacHud" mode="recording" glow="{{ glow }}" timer="0:07" hint-size="540px,110px"></dc-import></div>
+</div>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:1280px">Lime glow breathes 18% → 0. The menu bar mirrors it with a small waveform and the same timer. No red anywhere.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.3 Panel processing — Mail</div>
+<div style="width:1280px;height:800px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(120% 90% at 50% 0%,#17181B 0%,#0B0B0C 62%);box-shadow:0 30px 90px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<dc-import name="MacMenuBar" app-name="Mail" dot="idle" hint-size="1280px,28px"></dc-import>
+<div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding-top:54px"><dc-import name="MacHostWindow" app="mail" hint-size="900px,520px"></dc-import></div>
+<div style="position:absolute;left:50%;bottom:44px;transform:translateX(-50%)"><dc-import name="MacHud" mode="processing" hint-size="540px,110px"></dc-import></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.4 Inserted at the cursor — Messages</div>
+<div style="width:1280px;height:800px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(120% 90% at 50% 0%,#17181B 0%,#0B0B0C 62%);box-shadow:0 30px 90px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<dc-import name="MacMenuBar" app-name="Messages" dot="idle" hint-size="1280px,28px"></dc-import>
+<div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding-top:54px"><dc-import name="MacHostWindow" app="messages" text="Running about ten minutes late — start without me and I'll catch up." hint-size="900px,520px"></dc-import></div>
+<div style="position:absolute;left:50%;bottom:44px;transform:translateX(-50%)"><dc-import name="MacHud" mode="inserted" took="1.1 s" hint-size="540px,110px"></dc-import></div>
+</div>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:1280px">Panel holds four seconds after the insert, then fades. ⌘Z undoes the whole insertion as one edit.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.5 Double-tap ⌘ — centred panel, Notes</div>
+<div style="width:1280px;height:800px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(120% 90% at 50% 0%,#17181B 0%,#0B0B0C 62%);box-shadow:0 30px 90px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<dc-import name="MacMenuBar" app-name="Notes" dot="recording" timer="0:04" hint-size="1280px,28px"></dc-import>
+<div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding-top:54px"><dc-import name="MacHostWindow" app="notes" hint-size="900px,520px"></dc-import></div>
+<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)"><dc-import name="MacHud" mode="recording" glow="{{ glow }}" timer="0:04" hint-size="540px,110px"></dc-import></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.6 Quiet mode — no panel, Terminal</div>
+<div style="width:1280px;height:800px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(120% 90% at 50% 0%,#17181B 0%,#0B0B0C 62%);box-shadow:0 30px 90px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<dc-import name="MacMenuBar" app-name="Terminal" dot="recording" timer="0:03" hint-size="1280px,28px"></dc-import>
+<div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding-top:54px"><dc-import name="MacHostWindow" app="terminal" hint-size="900px,520px"></dc-import></div>
+</div>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:1280px">For screen sharing and demos: the only signal is the lime waveform in the menu bar. Text still lands at the cursor.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.7 Panel expanded — browser field</div>
+<div style="width:1280px;height:800px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(120% 90% at 50% 0%,#17181B 0%,#0B0B0C 62%);box-shadow:0 30px 90px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<dc-import name="MacMenuBar" app-name="Safari" dot="idle" hint-size="1280px,28px"></dc-import>
+<div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding-top:54px"><dc-import name="MacHostWindow" app="browser" hint-size="900px,520px"></dc-import></div>
+<div style="position:absolute;left:50%;bottom:44px;transform:translateX(-50%)"><dc-import name="MacHud" mode="expanded" idle-line="Ready when you are." idle-hint="Tone follows the app you're in — Code here" hint-size="540px,400px"></dc-import></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section style="padding:34px 48px 40px;border-top:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:22px;background:#141414;min-width:max-content">
+<div style="display:flex;flex-direction:column;gap:5px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Row 2</div>
+<div style="font:600 22px/1.2 'Albert Sans',sans-serif;color:#F1F3EC">Menu bar &amp; first run</div>
+<div style="font:400 13px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">The whole app lives up here. Two windows exist only for setup.</div>
+</div>
+<div style="display:flex;gap:40px;align-items:flex-start">
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.1 Menu — idle</div>
+<div style="width:1280px;height:800px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(120% 90% at 50% 0%,#17181B 0%,#0B0B0C 62%);box-shadow:0 30px 90px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<dc-import name="MacMenuBar" app-name="Notes" dot="idle" panel="idle" hint-size="1280px,28px"></dc-import>
+<div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding-top:54px"><dc-import name="MacHostWindow" app="notes" hint-size="900px,520px"></dc-import></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.2 Menu — recording</div>
+<div style="width:1280px;height:800px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(120% 90% at 50% 0%,#17181B 0%,#0B0B0C 62%);box-shadow:0 30px 90px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<dc-import name="MacMenuBar" app-name="Notes" dot="recording" panel="recording" timer="0:07" hint-size="1280px,28px"></dc-import>
+<div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding-top:54px"><dc-import name="MacHostWindow" app="notes" hint-size="900px,520px"></dc-import></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.3 Menu — last dictation</div>
+<div style="width:1280px;height:800px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(120% 90% at 50% 0%,#17181B 0%,#0B0B0C 62%);box-shadow:0 30px 90px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<dc-import name="MacMenuBar" app-name="Messages" dot="idle" panel="result" hint-size="1280px,28px"></dc-import>
+<div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding-top:54px"><dc-import name="MacHostWindow" app="messages" hint-size="900px,520px"></dc-import></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.4 Menu — provider failed</div>
+<div style="width:1280px;height:800px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(120% 90% at 50% 0%,#17181B 0%,#0B0B0C 62%);box-shadow:0 30px 90px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<dc-import name="MacMenuBar" app-name="Slack" dot="warn" panel="failed" hint-size="1280px,28px"></dc-import>
+<div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding-top:54px"><dc-import name="MacHostWindow" app="slack" hint-size="900px,520px"></dc-import></div>
+<div style="position:absolute;left:50%;bottom:44px;transform:translateX(-50%)"><dc-import name="MacHud" mode="failed" hint-size="540px,110px"></dc-import></div>
+</div>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:1280px">Orange, never red — red next to lime vibrates. Retry is lime because it's the one thing to do next.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.5 First launch — no Dock icon</div>
+<div style="width:760px;height:520px;box-sizing:border-box;border-radius:12px;overflow:hidden;background:#000000;border:1px solid rgba(255,255,255,0.10);box-shadow:0 30px 80px rgba(0,0,0,0.7);display:flex;flex-direction:column;color:#F1F3EC">
+<div style="height:40px;flex:none;background:#111111;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;padding:0 14px">
+<x-import component-from-global-scope="MacTrafficLights" from="./macos-window.jsx" hint-size="52px,14px"></x-import>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;padding:0 60px 20px;text-align:center">
+<div style="width:88px;height:88px;border-radius:50%;background:#BFF54A;display:grid;place-items:center">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0A0B0A" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><line x1="12" y1="18" x2="12" y2="21"></line></svg>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;max-width:420px">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Just start talking.</div>
+<div style="font:400 16px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);text-wrap:pretty">I'll turn it into clean text, wherever your cursor is. Messy is fine.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;width:300px">
+<div style="height:48px;border-radius:12px;border:1px solid rgba(255,255,255,0.14);color:#F1F3EC;font:600 15px/1 'Albert Sans',sans-serif;display:flex;align-items:center;justify-content:center">Set it up — about a minute</div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Dictly has no Dock icon and no windows of its own. It waits in the menu bar.</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.6 Permissions — three switches, one screen</div>
+<div style="width:760px;height:660px;box-sizing:border-box;border-radius:12px;overflow:hidden;background:#000000;border:1px solid rgba(255,255,255,0.10);box-shadow:0 30px 80px rgba(0,0,0,0.7);display:flex;flex-direction:column;color:#F1F3EC">
+<div style="height:40px;flex:none;background:#111111;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;padding:0 14px">
+<x-import component-from-global-scope="MacTrafficLights" from="./macos-window.jsx" hint-size="52px,14px"></x-import>
+</div>
+<div style="flex:1;min-height:0;padding:26px 30px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:600 26px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Three permissions</div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">macOS asks once each. You'll never see this screen again.</div>
+</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;overflow:hidden;flex:none">
+<div style="min-height:78px;display:flex;align-items:center;gap:13px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.09)">
+<div style="width:7px;height:7px;border-radius:50%;background:#BFF54A;flex:none"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 15px/1.4 'Albert Sans',sans-serif">Microphone</div><div style="font:400 12.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">To hear you. Audio goes to the provider you chose, nowhere else.</div></div>
+<div style="font:600 13px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Granted</div>
+</div>
+<div style="min-height:78px;display:flex;align-items:center;gap:13px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.09)">
+<div style="width:7px;height:7px;border-radius:50%;background:#BFF54A;flex:none"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 15px/1.4 'Albert Sans',sans-serif">Accessibility</div><div style="font:400 12.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">To type the finished text where your cursor is.</div></div>
+<div style="font:600 13px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Granted</div>
+</div>
+<div style="min-height:78px;display:flex;align-items:center;gap:13px;padding:12px 16px">
+<div style="width:7px;height:7px;border-radius:50%;background:#FF9F45;flex:none"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 15px/1.4 'Albert Sans',sans-serif">Input Monitoring</div><div style="font:400 12.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">To notice the fn key being held. Nothing else is read.</div></div>
+<div style="height:36px;border-radius:10px;background:#BFF54A;color:#0A0B0A;font:600 13px/1 'Albert Sans',sans-serif;display:flex;align-items:center;padding:0 15px">Open Settings</div>
+</div>
+</div>
+<div style="display:flex;gap:16px">
+<div style="flex:1;display:flex;flex-direction:column;gap:7px"><div style="font:600 12px/1.3 'Albert Sans',sans-serif">What Dictly does with this</div><div style="font:400 12.5px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);text-wrap:pretty">Listens while you hold fn. Sends that audio to your provider. Types the result back.</div></div>
+<div style="width:1px;background:rgba(255,255,255,0.08)"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:7px"><div style="font:600 12px/1.3 'Albert Sans',sans-serif">What it never does</div><div style="font:400 12.5px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);text-wrap:pretty">Log your keystrokes. Read your screen. Send anything to a Dictly server — there isn't one.</div></div>
+</div>
+<div style="flex:1"></div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Dictly re-checks by itself. Come back to this window when the switch is on.</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section style="padding:34px 48px 60px;border-top:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:22px;background:#141414;min-width:max-content">
+<div style="display:flex;flex-direction:column;gap:5px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Row 3</div>
+<div style="font:600 22px/1.2 'Albert Sans',sans-serif;color:#F1F3EC">Settings window</div>
+<div style="font:400 13px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Sidebar and panes. Deliberately plain — no account section, nothing to subscribe to.</div>
+</div>
+<div style="display:flex;gap:40px;align-items:flex-start">
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">3.1 Providers &amp; models</div>
+<dc-import name="MacSettingsWindow" pane="providers" height="800" hint-size="980px,800px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">3.2 Add provider — sheet</div>
+<dc-import name="MacSettingsWindow" pane="providers" sheet="add" height="800" hint-size="980px,800px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">3.3 Model picker</div>
+<dc-import name="MacSettingsWindow" pane="models" height="660" hint-size="980px,660px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">3.4 General — shortcut &amp; trigger</div>
+<dc-import name="MacSettingsWindow" pane="general" height="800" hint-size="980px,800px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">3.5 Privacy &amp; lock</div>
+<dc-import name="MacSettingsWindow" pane="privacy" height="740" hint-size="980px,740px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">3.6 Usage</div>
+<dc-import name="MacSettingsWindow" pane="usage" height="580" hint-size="980px,580px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">3.7 History</div>
+<dc-import name="MacSettingsWindow" pane="history" height="800" hint-size="980px,800px"></dc-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">3.8 Dictionary</div>
+<dc-import name="MacSettingsWindow" pane="dictionary" height="500" hint-size="980px,500px"></dc-import>
+</div>
+
+</div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAnnotations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sheet&quot;},&quot;hudGlow&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;full&quot;,&quot;half&quot;],&quot;default&quot;:&quot;full&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Panel&quot;},&quot;idleHint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Hold fn · release when you're done&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Panel&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      notes: this.props.showAnnotations ?? true,
+      glow: this.props.hudGlow || 'full',
+      idleHint: this.props.idleHint || 'Hold fn · release when you\u2019re done'
+    };
+  }
+}
+
+</script>
+</body>
+</html>

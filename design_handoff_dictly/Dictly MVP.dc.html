@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#141414}body{margin:0;background:#141414;font-family:'Albert Sans',system-ui,sans-serif}a{color:#BFF54A}a:hover{color:#A8DE35}
+@keyframes dmBar{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
+@keyframes dmDot{0%,100%{opacity:.25}50%{opacity:1}}</style></helmet>
+
+<div style="padding:44px 48px 18px;display:flex;flex-direction:column;gap:6px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Dictly</div>
+<div style="font:600 30px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em;color:#F1F3EC">MVP — 24 artboards</div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);max-width:620px">Private, provider-agnostic, dark only. No accounts, no server, no paywall. iPhone 16 Pro · iOS 26.</div>
+</div>
+
+<section style="padding:34px 48px 40px;border-top:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:22px;background:#141414;min-width:max-content">
+<div style="display:flex;flex-direction:column;gap:5px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Row 1</div>
+<div style="font:600 22px/1.2 'Albert Sans',sans-serif;color:#F1F3EC">Setup, providers &amp; lock</div>
+<div style="font:400 13px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">One-time and functional. Done once, then never again.</div>
+</div>
+<div style="display:flex;gap:34px;align-items:flex-start">
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.1 App lock — waiting</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;align-items:center;padding:58px 20px 44px;overflow:hidden">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:24px;border:3px solid #BFF54A;position:relative">
+<div style="position:absolute;left:22px;top:26px;width:7px;height:7px;border-radius:50%;background:#BFF54A"></div>
+<div style="position:absolute;right:22px;top:26px;width:7px;height:7px;border-radius:50%;background:#BFF54A"></div>
+<div style="position:absolute;left:50%;top:38px;transform:translateX(-50%);width:3px;height:15px;border-radius:2px;background:#BFF54A"></div>
+<div style="position:absolute;left:50%;bottom:17px;transform:translateX(-50%);width:26px;height:3px;border-radius:2px;background:#BFF54A"></div>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Dictly</div>
+<div style="font:400 16px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Unlocked with Face ID.</div>
+</div>
+</div>
+<div style="font:400 15px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);padding-bottom:14px">Use passcode</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.1 App lock — not recognised</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;align-items:center;padding:58px 20px 44px;overflow:hidden">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:24px;border:3px solid rgba(241,243,236,0.36);position:relative">
+<div style="position:absolute;left:22px;top:26px;width:7px;height:7px;border-radius:50%;background:rgba(241,243,236,0.36)"></div>
+<div style="position:absolute;right:22px;top:26px;width:7px;height:7px;border-radius:50%;background:rgba(241,243,236,0.36)"></div>
+<div style="position:absolute;left:50%;top:38px;transform:translateX(-50%);width:3px;height:15px;border-radius:2px;background:rgba(241,243,236,0.36)"></div>
+<div style="position:absolute;left:50%;bottom:17px;transform:translateX(-50%);width:26px;height:3px;border-radius:2px;background:rgba(241,243,236,0.36)"></div>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;max-width:270px">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Dictly</div>
+<div style="font:400 16px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);text-wrap:pretty">Didn't recognise you. Try again or use your passcode.</div>
+</div>
+</div>
+<div style="width:100%;display:flex;flex-direction:column;align-items:center;gap:16px;padding-bottom:14px">
+<div style="width:100%;height:52px;border-radius:12px;border:1px solid #BFF54A;color:#BFF54A;font:600 16px/1 'Albert Sans',sans-serif;display:flex;align-items:center;justify-content:center">Try Face ID again</div>
+<div style="font:400 15px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Use passcode</div>
+</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.2 Providers list</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:18px;padding:58px 20px 40px;overflow:hidden">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em;padding-top:4px">Providers</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Transcribe with</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px">
+<div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0">
+<div style="font:400 16px/1.4 'Albert Sans',sans-serif">Groq</div>
+<div style="font:400 12px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36)">whisper-large-v3-turbo</div>
+</div>
+<div style="border-radius:22px;padding:6px 11px;background:#BFF54A;color:#0A0B0A;font:600 12px/1 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums">210 ms</div>
+<svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Clean up with</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px">
+<div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0">
+<div style="font:400 16px/1.4 'Albert Sans',sans-serif">Cerebras</div>
+<div style="font:400 12px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36)">gpt-oss-120b</div>
+</div>
+<div style="border-radius:22px;padding:6px 11px;background:#161616;color:rgba(241,243,236,0.60);font:600 12px/1 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums">520 ms</div>
+<svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;flex:1;min-height:0">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">My providers</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden">
+<div style="min-height:64px;display:flex;align-items:center;gap:11px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="width:7px;height:7px;border-radius:50%;background:#BFF54A;flex:none"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0">
+<div style="font:400 16px/1.3 'Albert Sans',sans-serif">Groq</div>
+<div style="font:400 11.5px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">api.groq.com/openai/v1</div>
+</div>
+<div style="border-radius:22px;padding:5px 10px;background:#161616;color:rgba(241,243,236,0.60);font:600 11px/1 'Albert Sans',sans-serif">both</div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:11px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="width:7px;height:7px;border-radius:50%;background:#BFF54A;flex:none"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0">
+<div style="font:400 16px/1.3 'Albert Sans',sans-serif">OpenAI</div>
+<div style="font:400 11.5px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">api.openai.com/v1</div>
+</div>
+<div style="border-radius:22px;padding:5px 10px;background:#161616;color:rgba(241,243,236,0.60);font:600 11px/1 'Albert Sans',sans-serif">both</div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:11px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="width:7px;height:7px;border-radius:50%;background:#BFF54A;flex:none"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0">
+<div style="font:400 16px/1.3 'Albert Sans',sans-serif">Cerebras</div>
+<div style="font:400 11.5px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">api.cerebras.ai/v1</div>
+</div>
+<div style="border-radius:22px;padding:5px 10px;background:#161616;color:rgba(241,243,236,0.60);font:600 11px/1 'Albert Sans',sans-serif">text</div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:11px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="width:7px;height:7px;border-radius:50%;background:#BFF54A;flex:none"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0">
+<div style="font:400 16px/1.3 'Albert Sans',sans-serif">Deepgram</div>
+<div style="font:400 11.5px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">api.deepgram.com/v1</div>
+</div>
+<div style="border-radius:22px;padding:5px 10px;background:#161616;color:rgba(241,243,236,0.60);font:600 11px/1 'Albert Sans',sans-serif">speech</div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:11px;padding:10px 14px">
+<div style="width:7px;height:7px;border-radius:50%;background:#FF9F45;flex:none"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0">
+<div style="font:400 16px/1.3 'Albert Sans',sans-serif">Ollama — local</div>
+<div style="font:400 11.5px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">192.168.1.24:11434/v1</div>
+</div>
+<div style="border-radius:22px;padding:5px 10px;background:#161616;color:rgba(241,243,236,0.60);font:600 11px/1 'Albert Sans',sans-serif">text</div>
+</div>
+</div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);padding:2px 2px 0">Tap a row to edit. Swipe to delete. Orange means it didn't answer the last check.</div>
+</div>
+<div style="height:52px;border-radius:12px;border:1px solid #BFF54A;color:#BFF54A;font:600 16px/1 'Albert Sans',sans-serif;display:flex;align-items:center;justify-content:center;flex:none">Add provider</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.3 Add provider — pick a preset</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:14px;padding:58px 20px 40px;overflow:hidden">
+<div style="display:flex;align-items:center;gap:14px;min-height:32px">
+<svg width="10" height="17" viewBox="0 0 12 20" fill="none" stroke="rgba(241,243,236,0.60)" stroke-width="2.2" stroke-linecap="round"><path d="M10 2L2 10l8 8"></path></svg>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Step 1 of 2</div>
+</div>
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Pick a provider</div>
+<div style="height:42px;border-radius:12px;background:#161616;display:flex;align-items:center;gap:9px;padding:0 13px;flex:none">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="16" y1="16" x2="21" y2="21" stroke-linecap="round"></line></svg>
+<div style="font:400 15px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Search providers</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:9px">
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">Groq</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">speech + text</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">OpenAI</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">speech + text</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">Cerebras</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">text</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">OpenRouter</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">text</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">Anthropic</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">text</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">Google Gemini</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">text</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">Mistral</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">speech + text</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">Together</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">text</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">Fireworks</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">speech + text</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">DeepInfra</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">speech + text</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">Deepgram</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">speech</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">ElevenLabs</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">speech</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">Ollama — local</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">text</div></div>
+<div style="height:60px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">LM Studio — local</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">text</div></div>
+<div style="grid-column:1/-1;height:60px;border-radius:14px;background:#161616;border:1px dashed rgba(255,255,255,0.18);padding:0 13px;display:flex;flex-direction:column;justify-content:center;gap:3px"><div style="font:600 15px/1.2 'Albert Sans',sans-serif">Custom</div><div style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">any OpenAI-compatible endpoint</div></div>
+</div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Picking one prefills its base URL on the next screen.</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.4 Add provider — testing</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:16px;padding:58px 20px 40px;overflow:hidden">
+<div style="display:flex;align-items:center;gap:14px;min-height:32px">
+<svg width="10" height="17" viewBox="0 0 12 20" fill="none" stroke="rgba(241,243,236,0.60)" stroke-width="2.2" stroke-linecap="round"><path d="M10 2L2 10l8 8"></path></svg>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Step 2 of 2</div>
+</div>
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Groq</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Display name</div>
+<div style="height:50px;border-radius:12px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;padding:0 14px;font:400 16px/1 'Albert Sans',sans-serif">Groq</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Base URL</div>
+<div style="height:50px;border-radius:12px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;padding:0 14px;font:400 13.5px/1 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.80)">https://api.groq.com/openai/v1</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">API key</div>
+<div style="height:50px;border-radius:12px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;gap:10px;padding:0 14px">
+<div style="flex:1;font:400 16px/1 'Albert Sans',sans-serif;letter-spacing:.12em;color:rgba(241,243,236,0.60)">••••••••••••••••</div>
+<div style="font:600 13px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Paste</div>
+</div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Stored in the Keychain, shared with the keyboard.</div>
+</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden">
+<div style="min-height:64px;display:flex;align-items:center;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Use for transcription</div>
+<div style="width:50px;height:30px;border-radius:15px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box"><div style="width:24px;height:24px;border-radius:50%;background:#000000"></div></div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;padding:0 14px">
+<div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Use for cleanup</div>
+<div style="width:50px;height:30px;border-radius:15px;background:#161616;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;padding:0 3px;box-sizing:border-box"><div style="width:24px;height:24px;border-radius:50%;background:rgba(241,243,236,0.36)"></div></div>
+</div>
+</div>
+</div>
+<div style="flex:1"></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="min-height:52px;border-radius:14px;background:#161616;display:flex;align-items:center;gap:11px;padding:0 16px">
+<div style="display:flex;gap:5px"><span style="width:6px;height:6px;border-radius:50%;background:rgba(241,243,236,0.60);animation:dmDot 1.2s ease-in-out infinite"></span><span style="width:6px;height:6px;border-radius:50%;background:rgba(241,243,236,0.60);animation:dmDot 1.2s .2s ease-in-out infinite"></span><span style="width:6px;height:6px;border-radius:50%;background:rgba(241,243,236,0.60);animation:dmDot 1.2s .4s ease-in-out infinite"></span></div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Testing the connection…</div>
+</div>
+<div style="height:52px;border-radius:12px;background:#BFF54A;color:#0A0B0A;font:600 16px/1 'Albert Sans',sans-serif;display:flex;align-items:center;justify-content:center">Test connection</div>
+</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.4 Add provider — connected</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:16px;padding:58px 20px 40px;overflow:hidden">
+<div style="display:flex;align-items:center;gap:14px;min-height:32px">
+<svg width="10" height="17" viewBox="0 0 12 20" fill="none" stroke="rgba(241,243,236,0.60)" stroke-width="2.2" stroke-linecap="round"><path d="M10 2L2 10l8 8"></path></svg>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Step 2 of 2</div>
+</div>
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Groq</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Display name</div>
+<div style="height:50px;border-radius:12px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;padding:0 14px;font:400 16px/1 'Albert Sans',sans-serif">Groq</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Base URL</div>
+<div style="height:50px;border-radius:12px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;padding:0 14px;font:400 13.5px/1 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.80)">https://api.groq.com/openai/v1</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">API key</div>
+<div style="height:50px;border-radius:12px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;gap:10px;padding:0 14px">
+<div style="flex:1;font:400 16px/1 'Albert Sans',sans-serif;letter-spacing:.12em;color:rgba(241,243,236,0.60)">••••••••••••••••</div>
+<div style="font:600 13px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Paste</div>
+</div>
+</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden">
+<div style="min-height:64px;display:flex;align-items:center;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Use for transcription</div>
+<div style="width:50px;height:30px;border-radius:15px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box"><div style="width:24px;height:24px;border-radius:50%;background:#000000"></div></div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;padding:0 14px">
+<div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Use for cleanup</div>
+<div style="width:50px;height:30px;border-radius:15px;background:#161616;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;padding:0 3px;box-sizing:border-box"><div style="width:24px;height:24px;border-radius:50%;background:rgba(241,243,236,0.36)"></div></div>
+</div>
+</div>
+</div>
+<div style="flex:1"></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="min-height:52px;border-radius:14px;background:rgba(191,245,74,0.12);display:flex;align-items:center;gap:11px;padding:0 16px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BFF54A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 7"></path></svg>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:#BFF54A;font-variant-numeric:tabular-nums">Connected · 8 models found · 190 ms</div>
+</div>
+<div style="height:52px;border-radius:12px;border:1px solid rgba(255,255,255,0.12);color:#F1F3EC;font:600 16px/1 'Albert Sans',sans-serif;display:flex;align-items:center;justify-content:center">Save provider</div>
+</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.4 Add provider — failed</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:16px;padding:58px 20px 40px;overflow:hidden">
+<div style="display:flex;align-items:center;gap:14px;min-height:32px">
+<svg width="10" height="17" viewBox="0 0 12 20" fill="none" stroke="rgba(241,243,236,0.60)" stroke-width="2.2" stroke-linecap="round"><path d="M10 2L2 10l8 8"></path></svg>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Step 2 of 2</div>
+</div>
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Custom</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Display name</div>
+<div style="height:50px;border-radius:12px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;padding:0 14px;font:400 16px/1 'Albert Sans',sans-serif">Home box</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Base URL</div>
+<div style="height:50px;border-radius:12px;background:#0C0C0C;border:1px solid #FF9F45;display:flex;align-items:center;padding:0 14px;font:400 13.5px/1 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.80)">http://192.168.1.31:8080/v1</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">API key</div>
+<div style="height:50px;border-radius:12px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;gap:10px;padding:0 14px">
+<div style="flex:1;font:400 16px/1 'Albert Sans',sans-serif;letter-spacing:.12em;color:rgba(241,243,236,0.60)">••••••••</div>
+<div style="font:600 13px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Paste</div>
+</div>
+</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden">
+<div style="min-height:64px;display:flex;align-items:center;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Use for transcription</div>
+<div style="width:50px;height:30px;border-radius:15px;background:#161616;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;padding:0 3px;box-sizing:border-box"><div style="width:24px;height:24px;border-radius:50%;background:rgba(241,243,236,0.36)"></div></div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;padding:0 14px">
+<div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Use for cleanup</div>
+<div style="width:50px;height:30px;border-radius:15px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box"><div style="width:24px;height:24px;border-radius:50%;background:#000000"></div></div>
+</div>
+</div>
+</div>
+<div style="flex:1"></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="border-radius:14px;background:rgba(255,159,69,0.12);display:flex;align-items:flex-start;gap:11px;padding:14px 16px">
+<div style="width:7px;height:7px;border-radius:50%;background:#FF9F45;margin-top:6px;flex:none"></div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:#FF9F45;text-wrap:pretty">Couldn't reach that URL. Check the address and your key.</div>
+</div>
+<div style="height:52px;border-radius:12px;background:#BFF54A;color:#0A0B0A;font:600 16px/1 'Albert Sans',sans-serif;display:flex;align-items:center;justify-content:center">Test connection</div>
+</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.5 Model picker</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:14px;padding:58px 20px 40px;overflow:hidden">
+<div style="display:flex;align-items:center;gap:14px;min-height:32px">
+<svg width="10" height="17" viewBox="0 0 12 20" fill="none" stroke="rgba(241,243,236,0.60)" stroke-width="2.2" stroke-linecap="round"><path d="M10 2L2 10l8 8"></path></svg>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Groq</div>
+</div>
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Transcription model</div>
+<div style="height:42px;border-radius:12px;background:#161616;display:flex;align-items:center;gap:9px;padding:0 13px;flex:none">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="16" y1="16" x2="21" y2="21" stroke-linecap="round"></line></svg>
+<div style="font:400 15px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Search 8 models</div>
+</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden">
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;display:flex;flex-direction:column;gap:4px;min-width:0"><div style="font:400 14px/1.3 ui-monospace,Menlo,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">whisper-large-v3-turbo</div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">210 ms measured</div></div>
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFF54A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 7"></path></svg>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;display:flex;flex-direction:column;gap:4px;min-width:0"><div style="font:400 14px/1.3 ui-monospace,Menlo,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">distil-whisper-large-v3-en</div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">160 ms measured</div></div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;display:flex;flex-direction:column;gap:4px;min-width:0"><div style="font:400 14px/1.3 ui-monospace,Menlo,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">whisper-large-v3</div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">480 ms measured</div></div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;display:flex;flex-direction:column;gap:4px;min-width:0"><div style="font:400 14px/1.3 ui-monospace,Menlo,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">whisper-large-v3-fr</div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">not measured yet</div></div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:10px 14px">
+<div style="flex:1;display:flex;flex-direction:column;gap:4px;min-width:0"><div style="font:400 14px/1.3 ui-monospace,Menlo,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">whisper-tiny</div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">90 ms measured</div></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Fallback</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px">
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 16px/1.4 'Albert Sans',sans-serif">None</div><div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Used if the first one fails or times out</div></div>
+<svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg>
+</div>
+</div>
+<div style="flex:1"></div>
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Type a model ID manually</div>
+<div style="height:50px;border-radius:12px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;padding:0 14px;font:400 13.5px/1 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36)">provider/model-name</div>
+</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.6 Enable keyboard</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:18px;padding:58px 20px 40px;overflow:hidden">
+<div style="display:flex;flex-direction:column;gap:8px;padding-top:4px">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Turn on the keyboard</div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Two switches in iOS Settings. You'll only do this once.</div>
+</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:11px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Step one · add it</div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;font:400 13.5px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">
+<span style="background:#161616;border-radius:8px;padding:5px 9px;color:#F1F3EC">Settings</span><span>›</span>
+<span style="background:#161616;border-radius:8px;padding:5px 9px;color:#F1F3EC">General</span><span>›</span>
+<span style="background:#161616;border-radius:8px;padding:5px 9px;color:#F1F3EC">Keyboard</span><span>›</span>
+<span style="background:#161616;border-radius:8px;padding:5px 9px;color:#F1F3EC">Keyboards</span><span>›</span>
+<span style="background:#161616;border-radius:8px;padding:5px 9px;color:#F1F3EC">Add New Keyboard</span><span>›</span>
+<span style="background:#161616;border-radius:8px;padding:5px 9px;color:#F1F3EC">Dictly</span>
+</div>
+</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:13px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Step two · allow full access</div>
+<div style="min-height:52px;background:#161616;border-radius:12px;display:flex;align-items:center;gap:12px;padding:0 14px">
+<div style="flex:1;font:400 15px/1.4 'Albert Sans',sans-serif">Allow Full Access</div>
+<div style="width:50px;height:30px;border-radius:15px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box;flex:none"><div style="width:24px;height:24px;border-radius:50%;background:#000000"></div></div>
+</div>
+<div style="display:flex;gap:14px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">What this lets Dictly do</div>
+<div style="font:400 13px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);text-wrap:pretty">Send your voice to the provider you chose. Remember the words in your dictionary.</div>
+</div>
+<div style="width:1px;background:rgba(255,255,255,0.08)"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">What it never does</div>
+<div style="font:400 13px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);text-wrap:pretty">Read what you type on the normal keyboard. See passwords. Track you.</div>
+</div>
+</div>
+</div>
+<div style="flex:1"></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Come back here when both switches are on. Dictly checks by itself.</div>
+<div style="height:52px;border-radius:12px;background:#BFF54A;color:#0A0B0A;font:600 16px/1 'Albert Sans',sans-serif;display:flex;align-items:center;justify-content:center">Open Settings</div>
+</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.7a Mic check</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:18px;padding:58px 20px 40px;overflow:hidden">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em;padding-top:4px">Mic check</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px">
+<div style="font:400 16px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Say something — anything.</div>
+<div style="width:100%;display:flex;align-items:center;gap:4px;height:44px">
+<span style="flex:1;height:26px;border-radius:2px;background:#BFF54A;animation:dmBar 1s ease-in-out infinite"></span><span style="flex:1;height:38px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .07s ease-in-out infinite"></span><span style="flex:1;height:18px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .14s ease-in-out infinite"></span><span style="flex:1;height:44px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .21s ease-in-out infinite"></span><span style="flex:1;height:30px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .28s ease-in-out infinite"></span><span style="flex:1;height:22px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .35s ease-in-out infinite"></span><span style="flex:1;height:36px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .42s ease-in-out infinite"></span><span style="flex:1;height:14px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .49s ease-in-out infinite"></span><span style="flex:1;height:28px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .56s ease-in-out infinite"></span><span style="flex:1;height:40px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .63s ease-in-out infinite"></span><span style="flex:1;height:20px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .7s ease-in-out infinite"></span><span style="flex:1;height:32px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .77s ease-in-out infinite"></span><span style="flex:1;height:24px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .84s ease-in-out infinite"></span><span style="flex:1;height:16px;border-radius:2px;background:#BFF54A;animation:dmBar 1s .91s ease-in-out infinite"></span>
+</div>
+<div style="display:flex;align-items:center;gap:10px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BFF54A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 7"></path></svg>
+<div style="font:600 20px/1.3 'Albert Sans',sans-serif">That's perfect.</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Nothing is recorded here. This only checks the level.</div>
+<div style="height:52px;border-radius:12px;border:1px solid rgba(255,255,255,0.12);color:#F1F3EC;font:600 16px/1 'Albert Sans',sans-serif;display:flex;align-items:center;justify-content:center">Continue</div>
+</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.7a Mic check — iOS permission</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:18px;padding:58px 20px 40px;overflow:hidden;position:relative">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em;padding-top:4px;opacity:.4">Mic check</div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:.4">
+<div style="font:400 16px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Say something — anything.</div>
+<div style="width:100%;display:flex;align-items:center;gap:4px;height:44px">
+<span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span><span style="flex:1;height:10px;border-radius:2px;background:rgba(241,243,236,0.16)"></span>
+</div>
+</div>
+<div style="position:absolute;inset:0;background:rgba(0,0,0,0.74);display:grid;place-items:center">
+<div style="width:272px;border-radius:14px;background:#161616;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,0.6)">
+<div style="padding:20px 18px 16px;display:flex;flex-direction:column;gap:7px;text-align:center">
+<div style="font:600 16px/1.3 'Albert Sans',sans-serif">“Dictly” Would Like to Access the Microphone</div>
+<div style="font:400 13px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);text-wrap:pretty">Your voice goes to the provider you picked, and nowhere else.</div>
+</div>
+<div style="height:1px;background:rgba(255,255,255,0.10)"></div>
+<div style="display:flex">
+<div style="flex:1;height:44px;display:grid;place-items:center;font:400 16px/1 'Albert Sans',sans-serif;color:#6AA8FF">Don't Allow</div>
+<div style="width:1px;background:rgba(255,255,255,0.10)"></div>
+<div style="flex:1;height:44px;display:grid;place-items:center;font:600 16px/1 'Albert Sans',sans-serif;color:#6AA8FF">Allow</div>
+</div>
+</div>
+</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">1.7b Privacy &amp; lock</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:18px;padding:58px 20px 40px;overflow:hidden">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em;padding-top:4px">Privacy &amp; lock</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden">
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Require Face ID to open Dictly</div>
+<div style="width:50px;height:30px;border-radius:15px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box;flex:none"><div style="width:24px;height:24px;border-radius:50%;background:#000000"></div></div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Lock after</div>
+<div style="font:400 16px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Immediately</div>
+<svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Hide contents in app switcher</div>
+<div style="width:50px;height:30px;border-radius:15px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box;flex:none"><div style="width:24px;height:24px;border-radius:50%;background:#000000"></div></div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px">
+<div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Require Face ID to show API keys</div>
+<div style="width:50px;height:30px;border-radius:15px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box;flex:none"><div style="width:24px;height:24px;border-radius:50%;background:#000000"></div></div>
+</div>
+</div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);text-wrap:pretty">The keyboard never asks for Face ID — that would slow down every dictation.</div>
+<div style="display:flex;flex-direction:column;gap:8px;padding-top:4px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Lock after</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden">
+<div style="min-height:52px;display:flex;align-items:center;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)"><div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Immediately</div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#BFF54A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 7"></path></svg></div>
+<div style="min-height:52px;display:flex;align-items:center;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08);font:400 16px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">After 1 minute</div>
+<div style="min-height:52px;display:flex;align-items:center;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08);font:400 16px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">After 5 minutes</div>
+<div style="min-height:52px;display:flex;align-items:center;padding:0 14px;font:400 16px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">After 15 minutes</div>
+</div>
+</div>
+</div>
+</x-import>
+</div>
+
+</div>
+</section>
+
+<section style="padding:34px 48px 40px;border-top:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:22px;background:#141414;min-width:max-content">
+<div style="display:flex;flex-direction:column;gap:5px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Row 2</div>
+<div style="font:600 22px/1.2 'Albert Sans',sans-serif;color:#F1F3EC">The keyboard</div>
+<div style="font:400 13px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Globe key, speak, clean text at the cursor. Every board sits in a real host app.</div>
+</div>
+<div style="display:flex;gap:34px;align-items:flex-start">
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.1 Keyboard — idle · Messages</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;background:#000000;display:flex;flex-direction:column">
+<dc-import name="DictlyHost" app="messages" hint-size="402px,482px"></dc-import>
+<dc-import name="DictlyKeyboard" mode="idle" talk-hint="{{ hint }}" lang="{{ lang }}" hint-size="402px,392px"></dc-import>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.2a Keyboard — recording · lime glow</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;background:#000000;display:flex;flex-direction:column">
+<dc-import name="DictlyHost" app="messages" hint-size="402px,482px"></dc-import>
+<dc-import name="DictlyKeyboard" mode="recording" glow="full" timer="0:07" lang="{{ lang }}" hint-size="402px,392px"></dc-import>
+</div>
+</x-import>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:402px">Motion: glow ring breathes from 18% to 0 over 2.4s. Haptic tick on stop.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.2b Keyboard — recording · cool-blue ring</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;background:#000000;display:flex;flex-direction:column">
+<dc-import name="DictlyHost" app="messages" hint-size="402px,482px"></dc-import>
+<dc-import name="DictlyKeyboard" mode="recording" glow="blue" timer="0:07" lang="{{ lang }}" hint-size="402px,392px"></dc-import>
+</div>
+</x-import>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:402px">Static 1.5px #6AA8FF ring. No bloom — reads calmer, less alive.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.2c Keyboard — recording · glow at half</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;background:#000000;display:flex;flex-direction:column">
+<dc-import name="DictlyHost" app="messages" hint-size="402px,482px"></dc-import>
+<dc-import name="DictlyKeyboard" mode="recording" glow="half" timer="0:07" lang="{{ lang }}" hint-size="402px,392px"></dc-import>
+</div>
+</x-import>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:402px">Same motion, 9% peak. My pick — the timer carries the signal.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.3 Keyboard — processing</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;background:#000000;display:flex;flex-direction:column">
+<dc-import name="DictlyHost" app="messages" hint-size="402px,482px"></dc-import>
+<dc-import name="DictlyKeyboard" mode="processing" lang="{{ lang }}" hint-size="402px,392px"></dc-import>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.4 Keyboard — inserted · Messages</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;background:#000000;display:flex;flex-direction:column">
+<dc-import name="DictlyHost" app="messages" text="Running about ten minutes late — start without me and I'll catch up." hint-size="402px,482px"></dc-import>
+<dc-import name="DictlyKeyboard" mode="inserted" lang="{{ lang }}" hint-size="402px,392px"></dc-import>
+</div>
+</x-import>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:402px">Haptic tick on insert. Result bar fades after four seconds.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.5 Keyboard — inserted · Slack</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;background:#000000;display:flex;flex-direction:column">
+<dc-import name="DictlyHost" app="slack" text="yeah I'll take the API tickets — can we push standup to 10:30" hint-size="402px,482px"></dc-import>
+<dc-import name="DictlyKeyboard" mode="inserted" lang="{{ lang }}" hint-size="402px,392px"></dc-import>
+</div>
+</x-import>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:402px">Casual host, casual output: lower case start, no trailing period.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.6 Keyboard — inserted · Gmail</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;background:#000000;display:flex;flex-direction:column">
+<dc-import name="DictlyHost" app="gmail" text="Hi Sarah,
+
+We're still on track for the 15th. Two things I need from you this week: final copy for the landing page, and a yes or no on the pricing banner.
+
+Thanks,
+Maya" hint-size="402px,482px"></dc-import>
+<dc-import name="DictlyKeyboard" mode="inserted" lang="{{ lang }}" hint-size="402px,392px"></dc-import>
+</div>
+</x-import>
+<sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+<div style="font:400 11.5px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:402px">Email host: greeting, paragraph break, sign-off. Same spoken input, different shape.</div>
+</sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">2.7 Keyboard — expanded panel</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;background:#000000;display:flex;flex-direction:column">
+<dc-import name="DictlyHost" app="messages" hint-size="402px,482px"></dc-import>
+<dc-import name="DictlyKeyboard" mode="panel" lang="{{ lang }}" hint-size="402px,392px"></dc-import>
+</div>
+</x-import>
+</div>
+
+</div>
+</section>
+
+<section style="padding:34px 48px 60px;border-top:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:22px;background:#141414;min-width:max-content">
+<div style="display:flex;flex-direction:column;gap:5px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Row 3</div>
+<div style="font:600 22px/1.2 'Albert Sans',sans-serif;color:#F1F3EC">Edge cases &amp; settings</div>
+<div style="font:400 13px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">What happens when a provider goes quiet, and where the plain stuff lives.</div>
+</div>
+<div style="display:flex;gap:34px;align-items:flex-start">
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">3.1 Provider failed mid-dictation</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;background:#000000;display:flex;flex-direction:column">
+<dc-import name="DictlyHost" app="messages" hint-size="402px,482px"></dc-import>
+<div style="height:392px;box-sizing:border-box;background:#0C0C0C;border-top:1px solid rgba(255,255,255,0.08);padding:16px 20px 40px;display:flex;flex-direction:column;gap:16px;font-family:'Albert Sans',sans-serif;color:#F1F3EC">
+<div style="display:flex;align-items:center;gap:10px">
+<div style="width:7px;height:7px;border-radius:50%;background:#FF9F45"></div>
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF9F45">Needs attention</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font:600 22px/1.25 'Albert Sans',sans-serif;letter-spacing:-.01em;text-wrap:pretty">Groq didn't answer. Your audio is saved.</div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);font-variant-numeric:tabular-nums">0:09 of speech · 1.4 MB held on device</div>
+</div>
+<div style="flex:1"></div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="height:52px;border-radius:12px;background:#BFF54A;color:#0A0B0A;font:600 16px/1 'Albert Sans',sans-serif;display:flex;align-items:center;justify-content:center">Retry</div>
+<div style="height:52px;border-radius:12px;border:1px solid rgba(255,255,255,0.14);color:#F1F3EC;font:600 16px/1 'Albert Sans',sans-serif;display:flex;align-items:center;justify-content:center">Use fallback (OpenAI)</div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);text-align:center">Discard the recording</div>
+</div>
+</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">3.2 Settings root</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:18px;padding:58px 20px 40px;overflow:hidden">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em;padding-top:4px">Settings</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden">
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 16px/1.4 'Albert Sans',sans-serif">Providers &amp; models</div><div style="font:400 12px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36)">groq → cerebras</div></div>
+<svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:11px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="width:7px;height:7px;border-radius:50%;background:#BFF54A;flex:none"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 16px/1.4 'Albert Sans',sans-serif">Keyboard</div><div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Enabled · Full Access on</div></div>
+<svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)"><div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Dictation</div><div style="font:400 15px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Tap</div><svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg></div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)"><div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Languages</div><div style="font:400 15px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">English, Svenska</div><svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg></div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)"><div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Dictionary</div><div style="font:400 15px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);font-variant-numeric:tabular-nums">34 words</div><svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg></div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)"><div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">History</div><svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg></div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.08)"><div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Privacy &amp; lock</div><svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg></div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px"><div style="flex:1;font:400 16px/1.4 'Albert Sans',sans-serif">Usage</div><div style="font:400 15px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);font-variant-numeric:tabular-nums">$1.39</div><svg width="7" height="13" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg></div>
+</div>
+<div style="flex:1"></div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Dictly 1.0 · built for one phone. No account, nothing to cancel.</div>
+</div>
+</x-import>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:9px;flex:none">
+<div style="font:600 12px/1.3 'Albert Sans',sans-serif;color:#F1F3EC">3.3 Usage</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+<div style="height:874px;box-sizing:border-box;background:#000000;font-family:'Albert Sans',sans-serif;color:#F1F3EC;display:flex;flex-direction:column;gap:18px;padding:58px 20px 40px;overflow:hidden">
+<div style="display:flex;flex-direction:column;gap:6px;padding-top:4px">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Usage</div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">August 1–25 · estimated from published prices</div>
+</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden">
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 16px/1.4 'Albert Sans',sans-serif">Groq</div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">42 min audio · 218 dictations</div></div>
+<div style="font:600 16px/1.4 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums">$0.86</div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 16px/1.4 'Albert Sans',sans-serif">Cerebras</div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">1.24M tokens · 214 cleanups</div></div>
+<div style="font:600 16px/1.4 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums">$0.42</div>
+</div>
+<div style="min-height:64px;display:flex;align-items:center;gap:12px;padding:12px 14px">
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 16px/1.4 'Albert Sans',sans-serif">OpenAI <span style="color:rgba(241,243,236,0.36)">fallback</span></div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">3 min audio · 4 dictations</div></div>
+<div style="font:600 16px/1.4 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums">$0.11</div>
+</div>
+</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:14px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">By week</div>
+<div style="display:flex;align-items:flex-end;gap:12px;height:120px">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:100%;height:58px;border-radius:6px;background:#161616"></div><div style="font:400 11px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">w31</div></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:100%;height:82px;border-radius:6px;background:#161616"></div><div style="font:400 11px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">w32</div></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:100%;height:46px;border-radius:6px;background:#161616"></div><div style="font:400 11px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">w33</div></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:100%;height:96px;border-radius:6px;background:#BFF54A"></div><div style="font:400 11px/1 'Albert Sans',sans-serif;color:#F1F3EC;font-variant-numeric:tabular-nums">w34</div></div>
+</div>
+</div>
+<div style="display:flex;align-items:baseline;justify-content:space-between;padding:0 2px">
+<div style="font:400 16px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Total this month</div>
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em;font-variant-numeric:tabular-nums">$1.39</div>
+</div>
+<div style="flex:1"></div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Estimates, not invoices. Your provider's bill is the truth.</div>
+</div>
+</x-import>
+</div>
+
+</div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAnnotations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sheet&quot;},&quot;micTapMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Tap&quot;,&quot;Hold&quot;],&quot;default&quot;:&quot;Tap&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Keyboard&quot;},&quot;langChip&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;English (US)&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Keyboard&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const mode = this.props.micTapMode || 'Tap';
+    return {
+      notes: this.props.showAnnotations ?? true,
+      hint: mode === 'Hold' ? 'hold to talk' : 'tap to talk',
+      lang: this.props.langChip || 'English (US)'
+    };
+  }
+}
+
+</script>
+</body>
+</html>

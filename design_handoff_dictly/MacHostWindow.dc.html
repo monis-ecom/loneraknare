@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</helmet>
+<div style="width:900px;height:520px;box-sizing:border-box;border-radius:12px;overflow:hidden;background:#0C0C0C;border:1px solid rgba(255,255,255,0.10);box-shadow:0 30px 80px rgba(0,0,0,0.65);display:flex;flex-direction:column;font-family:'Albert Sans',sans-serif;color:#F1F3EC">
+<div style="height:40px;flex:none;background:#111111;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;gap:14px;padding:0 14px">
+<x-import component-from-global-scope="MacTrafficLights" from="./macos-window.jsx" hint-size="52px,14px"></x-import>
+<div style="flex:1;text-align:center;font:600 13px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">{{ winTitle }}</div>
+<div style="width:52px"></div>
+</div>
+
+<sc-if value="{{ isCode }}" hint-placeholder-val="{{ true }}">
+<div style="flex:1;min-height:0;display:flex">
+<div style="width:190px;background:#0A0A0A;border-right:1px solid rgba(255,255,255,0.07);padding:14px 12px;display:flex;flex-direction:column;gap:9px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,243,236,0.36)">dictly-mac</div>
+<div style="font:400 12.5px/1.6 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.60)">AppDelegate.swift<br>HotkeyMonitor.swift<br>DictationHUD.swift<br>ProviderClient.swift<br>Keychain.swift</div>
+</div>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;padding:16px 20px 0;font:400 12.5px/1.9 ui-monospace,Menlo,monospace">
+<div style="display:flex;gap:16px"><span style="width:22px;text-align:right;color:rgba(241,243,236,0.24);flex:none">18</span><span style="color:rgba(241,243,236,0.36)">// MARK: - Hotkey</span></div>
+<div style="display:flex;gap:16px"><span style="width:22px;text-align:right;color:rgba(241,243,236,0.24);flex:none">19</span><span><span style="color:#6AA8FF">func</span> startDictation(trigger: Trigger) {</span></div>
+<div style="display:flex;gap:16px"><span style="width:22px;text-align:right;color:rgba(241,243,236,0.24);flex:none">20</span><span style="white-space:pre">    guard state == .idle <span style="color:#6AA8FF">else</span> { <span style="color:#6AA8FF">return</span> }</span></div>
+<div style="display:flex;gap:16px"><span style="width:22px;text-align:right;color:rgba(241,243,236,0.24);flex:none">21</span><span style="white-space:pre">    hud.present(at: .bottomCenter)</span></div>
+<div style="display:flex;gap:16px"><span style="width:22px;text-align:right;color:rgba(241,243,236,0.24);flex:none">22</span><span style="white-space:pre">    recorder.start()</span></div>
+<div style="display:flex;gap:16px"><span style="width:22px;text-align:right;color:rgba(241,243,236,0.24);flex:none">23</span><span>}</span></div>
+<sc-if value="{{ hasText }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;gap:16px"><span style="width:22px;text-align:right;color:rgba(241,243,236,0.24);flex:none">24</span><span style="color:rgba(241,243,236,0.36)">// {{ text }}</span></div>
+</sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isSlack }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;min-height:0;display:flex">
+<div style="width:200px;background:#0A0A0A;border-right:1px solid rgba(255,255,255,0.07);padding:14px 12px;display:flex;flex-direction:column;gap:8px;font:400 13.5px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,243,236,0.36);padding-bottom:4px">Channels</div>
+<div style="color:#F1F3EC;background:#161616;border-radius:8px;padding:5px 9px"># design-review</div>
+<div style="padding:5px 9px"># engineering</div>
+<div style="padding:5px 9px"># standup</div>
+</div>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;padding:16px 20px 16px">
+<div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:16px">
+<div style="display:flex;gap:11px"><div style="width:30px;height:30px;border-radius:8px;background:#1F1F1F;flex:none"></div><div style="display:flex;flex-direction:column;gap:3px"><div style="font:600 13px/1.2 'Albert Sans',sans-serif">Priya <span style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">10:12</span></div><div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.80)">Sprint board is groomed. Who's picking up the API tickets?</div></div></div>
+<div style="display:flex;gap:11px"><div style="width:30px;height:30px;border-radius:8px;background:#1F1F1F;flex:none"></div><div style="display:flex;flex-direction:column;gap:3px"><div style="font:600 13px/1.2 'Albert Sans',sans-serif">Tom <span style="font:400 11px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">10:14</span></div><div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.80)">Not me this week, I'm on the migration</div></div></div>
+</div>
+<div style="min-height:44px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);padding:12px 14px;font:400 14.5px/1.45 'Albert Sans',sans-serif;white-space:pre-line;margin-top:14px">
+<sc-if value="{{ hasText }}" hint-placeholder-val="{{ false }}"><span style="color:#F1F3EC">{{ text }}</span></sc-if>
+<sc-if value="{{ noText }}" hint-placeholder-val="{{ true }}"><span style="color:rgba(241,243,236,0.30)">Message #design-review</span></sc-if>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isMail }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;min-height:0;display:flex;flex-direction:column">
+<div style="display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,0.07)">
+<div style="font:600 14px/1.2 'Albert Sans',sans-serif">New Message</div><div style="flex:1"></div>
+<div style="border-radius:8px;padding:7px 13px;background:#161616;font:600 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Send</div>
+</div>
+<div style="display:flex;gap:12px;padding:13px 20px;border-bottom:1px solid rgba(255,255,255,0.07);font:400 14px/1.4 'Albert Sans',sans-serif"><span style="color:rgba(241,243,236,0.36);width:60px">To</span><span>sarah@studio.co</span></div>
+<div style="display:flex;gap:12px;padding:13px 20px;border-bottom:1px solid rgba(255,255,255,0.07);font:400 14px/1.4 'Albert Sans',sans-serif"><span style="color:rgba(241,243,236,0.36);width:60px">Subject</span><span>Launch update</span></div>
+<div style="flex:1;min-height:0;padding:18px 20px;font:400 15px/1.6 'Albert Sans',sans-serif;white-space:pre-line;overflow:hidden">
+<sc-if value="{{ hasText }}" hint-placeholder-val="{{ false }}"><span style="color:#F1F3EC">{{ text }}</span></sc-if>
+<sc-if value="{{ noText }}" hint-placeholder-val="{{ true }}"><span style="color:rgba(241,243,236,0.30)">Write your message</span></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isMessages }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;min-height:0;display:flex">
+<div style="width:220px;background:#0A0A0A;border-right:1px solid rgba(255,255,255,0.07);padding:12px;display:flex;flex-direction:column;gap:6px">
+<div style="background:#161616;border-radius:10px;padding:10px 11px;display:flex;gap:10px;align-items:center"><div style="width:30px;height:30px;border-radius:50%;background:#1F1F1F"></div><div style="display:flex;flex-direction:column;gap:2px;min-width:0"><div style="font:600 13px/1.2 'Albert Sans',sans-serif">Sam</div><div style="font:400 11.5px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">we'll hold the room</div></div></div>
+<div style="border-radius:10px;padding:10px 11px;display:flex;gap:10px;align-items:center"><div style="width:30px;height:30px;border-radius:50%;background:#161616"></div><div style="display:flex;flex-direction:column;gap:2px;min-width:0"><div style="font:400 13px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Maya</div><div style="font:400 11.5px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">tomorrow works</div></div></div>
+</div>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;padding:16px 20px">
+<div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:9px">
+<div style="align-self:flex-start;max-width:64%;background:#151515;border-radius:16px 16px 16px 5px;padding:10px 14px;font:400 14.5px/1.45 'Albert Sans',sans-serif">Are you coming to the 3 o'clock?</div>
+<div style="align-self:flex-end;max-width:64%;background:#242424;border-radius:16px 16px 5px 16px;padding:10px 14px;font:400 14.5px/1.45 'Albert Sans',sans-serif">Yeah, just finishing something</div>
+</div>
+<div style="min-height:38px;border-radius:19px;border:1px solid rgba(255,255,255,0.12);padding:9px 14px;font:400 14.5px/1.45 'Albert Sans',sans-serif;white-space:pre-line;margin-top:14px">
+<sc-if value="{{ hasText }}" hint-placeholder-val="{{ false }}"><span style="color:#F1F3EC">{{ text }}</span></sc-if>
+<sc-if value="{{ noText }}" hint-placeholder-val="{{ true }}"><span style="color:rgba(241,243,236,0.30)">iMessage</span></sc-if>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isNotes }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;min-height:0;display:flex">
+<div style="width:210px;background:#0A0A0A;border-right:1px solid rgba(255,255,255,0.07);padding:12px;display:flex;flex-direction:column;gap:8px">
+<div style="background:#161616;border-radius:10px;padding:11px;display:flex;flex-direction:column;gap:3px"><div style="font:600 13px/1.2 'Albert Sans',sans-serif">Product notes</div><div style="font:400 11.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Today · 9:41</div></div>
+<div style="padding:11px;display:flex;flex-direction:column;gap:3px"><div style="font:400 13px/1.2 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Groceries</div><div style="font:400 11.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Yesterday</div></div>
+</div>
+<div style="flex:1;min-width:0;padding:22px 26px;display:flex;flex-direction:column;gap:14px">
+<div style="font:600 22px/1.2 'Albert Sans',sans-serif;letter-spacing:-.01em">Product notes</div>
+<div style="flex:1;font:400 15px/1.65 'Albert Sans',sans-serif;white-space:pre-line">
+<sc-if value="{{ hasText }}" hint-placeholder-val="{{ false }}"><span style="color:#F1F3EC">{{ text }}</span></sc-if>
+<sc-if value="{{ noText }}" hint-placeholder-val="{{ true }}"><span style="color:rgba(241,243,236,0.30)">Start typing</span></sc-if>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isTerminal }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;min-height:0;padding:18px 20px;font:400 13px/1.8 ui-monospace,Menlo,monospace;white-space:pre-wrap;background:#050505">
+<span style="color:#BFF54A">➜</span> <span style="color:rgba(241,243,236,0.60)">dictly-mac</span> git status
+On branch hud-rework
+nothing to commit, working tree clean
+<span style="color:#BFF54A">➜</span> <span style="color:rgba(241,243,236,0.60)">dictly-mac</span> <sc-if value="{{ hasText }}" hint-placeholder-val="{{ false }}">{{ text }}</sc-if><span style="color:rgba(241,243,236,0.36)">▌</span>
+</div>
+</sc-if>
+
+<sc-if value="{{ isBrowser }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;min-height:0;display:flex;flex-direction:column">
+<div style="display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid rgba(255,255,255,0.07)">
+<div style="flex:1;height:32px;border-radius:16px;background:#161616;display:flex;align-items:center;padding:0 14px;font:400 12.5px/1 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.60)">github.com/dictly/mac/issues/41</div>
+</div>
+<div style="flex:1;min-height:0;padding:20px 24px;display:flex;flex-direction:column;gap:14px">
+<div style="font:600 19px/1.3 'Albert Sans',sans-serif">HUD should follow the active display</div>
+<div style="font:400 14px/1.6 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);max-width:520px">On a two-monitor setup the panel always opens on the built-in screen. It should open where the text cursor is.</div>
+<div style="min-height:110px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);padding:13px 15px;font:400 14.5px/1.55 'Albert Sans',sans-serif;white-space:pre-line;background:#0A0A0A">
+<sc-if value="{{ hasText }}" hint-placeholder-val="{{ false }}"><span style="color:#F1F3EC">{{ text }}</span></sc-if>
+<sc-if value="{{ noText }}" hint-placeholder-val="{{ true }}"><span style="color:rgba(241,243,236,0.30)">Leave a comment</span></sc-if>
+</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:900,&quot;height&quot;:520},&quot;app&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;code&quot;,&quot;slack&quot;,&quot;mail&quot;,&quot;messages&quot;,&quot;notes&quot;,&quot;terminal&quot;,&quot;browser&quot;],&quot;default&quot;:&quot;code&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;text&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const app = this.props.app || 'code';
+    const t = this.props.text || '';
+    const titles = {
+      code: 'HotkeyMonitor.swift — dictly-mac',
+      slack: 'Slack — Nordic Studio',
+      mail: 'Mail',
+      messages: 'Messages',
+      notes: 'Notes',
+      terminal: 'dictly-mac — zsh',
+      browser: 'HUD should follow the active display'
+    };
+    return {
+      isCode: app === 'code', isSlack: app === 'slack', isMail: app === 'mail',
+      isMessages: app === 'messages', isNotes: app === 'notes',
+      isTerminal: app === 'terminal', isBrowser: app === 'browser',
+      winTitle: titles[app] || '', text: t, hasText: !!t, noText: !t
+    };
+  }
+}
+
+</script>
+</body>
+</html>

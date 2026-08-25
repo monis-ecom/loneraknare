@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>@keyframes msDot{0%,100%{opacity:.25}50%{opacity:1}}</style></helmet>
+<div style="width:980px;height:{{ winH }};box-sizing:border-box;border-radius:12px;overflow:hidden;background:#000000;border:1px solid rgba(255,255,255,0.10);box-shadow:0 30px 80px rgba(0,0,0,0.7);display:flex;flex-direction:column;font-family:'Albert Sans',sans-serif;color:#F1F3EC;position:relative">
+<div style="height:40px;flex:none;background:#111111;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;gap:14px;padding:0 14px">
+<x-import component-from-global-scope="MacTrafficLights" from="./macos-window.jsx" hint-size="52px,14px"></x-import>
+<div style="flex:1;text-align:center;font:600 13px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">{{ winTitle }}</div>
+<div style="width:52px"></div>
+</div>
+<div style="flex:1;min-height:0;display:flex">
+
+<div style="width:226px;flex:none;background:#0A0A0A;border-right:1px solid rgba(255,255,255,0.07);padding:12px 10px;display:flex;flex-direction:column;gap:3px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(241,243,236,0.36);padding:6px 10px 8px">Dictly</div>
+<div style="min-height:34px;border-radius:8px;display:flex;align-items:center;padding:0 10px;font:400 13.5px/1 'Albert Sans',sans-serif;background:{{ selProviders }};color:{{ colProviders }}">Providers &amp; models</div>
+<div style="min-height:34px;border-radius:8px;display:flex;align-items:center;padding:0 10px;font:400 13.5px/1 'Albert Sans',sans-serif;background:{{ selGeneral }};color:{{ colGeneral }}">General</div>
+<div style="min-height:34px;border-radius:8px;display:flex;align-items:center;padding:0 10px;font:400 13.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Dictation</div>
+<div style="min-height:34px;border-radius:8px;display:flex;align-items:center;padding:0 10px;font:400 13.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Languages</div>
+<div style="min-height:34px;border-radius:8px;display:flex;align-items:center;padding:0 10px;font:400 13.5px/1 'Albert Sans',sans-serif;background:{{ selDictionary }};color:{{ colDictionary }}">Dictionary</div>
+<div style="min-height:34px;border-radius:8px;display:flex;align-items:center;padding:0 10px;font:400 13.5px/1 'Albert Sans',sans-serif;background:{{ selHistory }};color:{{ colHistory }}">History</div>
+<div style="min-height:34px;border-radius:8px;display:flex;align-items:center;padding:0 10px;font:400 13.5px/1 'Albert Sans',sans-serif;background:{{ selPrivacy }};color:{{ colPrivacy }}">Privacy &amp; lock</div>
+<div style="min-height:34px;border-radius:8px;display:flex;align-items:center;padding:0 10px;font:400 13.5px/1 'Albert Sans',sans-serif;background:{{ selUsage }};color:{{ colUsage }}">Usage</div>
+<div style="flex:1"></div>
+<div style="padding:10px;font:400 11.5px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Dictly 1.0 · runs on this Mac only. No account, nothing to cancel.</div>
+</div>
+
+<div style="flex:1;min-width:0;padding:26px 28px;overflow:hidden;display:flex;flex-direction:column;gap:20px">
+
+<sc-if value="{{ isProviders }}" hint-placeholder-val="{{ true }}">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Providers &amp; models</div>
+<div style="display:flex;gap:18px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#BFF54A">Transcribe with</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px">
+<div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0"><div style="font:400 15px/1.4 'Albert Sans',sans-serif">Groq</div><div style="font:400 12px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">whisper-large-v3-turbo</div></div>
+<div style="border-radius:22px;padding:6px 11px;background:#BFF54A;color:#0A0B0A;font:600 12px/1 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums">210 ms</div>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Clean up with</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;min-height:64px;display:flex;align-items:center;gap:12px;padding:0 14px">
+<div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0"><div style="font:400 15px/1.4 'Albert Sans',sans-serif">Cerebras</div><div style="font:400 12px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">gpt-oss-120b</div></div>
+<div style="border-radius:22px;padding:6px 11px;background:#161616;color:rgba(241,243,236,0.60);font:600 12px/1 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums">520 ms</div>
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px;flex:1;min-height:0">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">My providers</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;overflow:hidden;flex:none">
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:7px;height:7px;border-radius:50%;background:#BFF54A"></div><div style="width:150px;font:400 14.5px/1.3 'Albert Sans',sans-serif">Groq</div><div style="flex:1;font:400 12px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36)">https://api.groq.com/openai/v1</div><div style="border-radius:22px;padding:5px 10px;background:#161616;color:rgba(241,243,236,0.60);font:600 11px/1 'Albert Sans',sans-serif">both</div></div>
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:7px;height:7px;border-radius:50%;background:#BFF54A"></div><div style="width:150px;font:400 14.5px/1.3 'Albert Sans',sans-serif">OpenAI</div><div style="flex:1;font:400 12px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36)">https://api.openai.com/v1</div><div style="border-radius:22px;padding:5px 10px;background:#161616;color:rgba(241,243,236,0.60);font:600 11px/1 'Albert Sans',sans-serif">both</div></div>
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:7px;height:7px;border-radius:50%;background:#BFF54A"></div><div style="width:150px;font:400 14.5px/1.3 'Albert Sans',sans-serif">Cerebras</div><div style="flex:1;font:400 12px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36)">https://api.cerebras.ai/v1</div><div style="border-radius:22px;padding:5px 10px;background:#161616;color:rgba(241,243,236,0.60);font:600 11px/1 'Albert Sans',sans-serif">text</div></div>
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:7px;height:7px;border-radius:50%;background:#BFF54A"></div><div style="width:150px;font:400 14.5px/1.3 'Albert Sans',sans-serif">Deepgram</div><div style="flex:1;font:400 12px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36)">https://api.deepgram.com/v1</div><div style="border-radius:22px;padding:5px 10px;background:#161616;color:rgba(241,243,236,0.60);font:600 11px/1 'Albert Sans',sans-serif">speech</div></div>
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:8px 14px"><div style="width:7px;height:7px;border-radius:50%;background:#FF9F45"></div><div style="width:150px;font:400 14.5px/1.3 'Albert Sans',sans-serif">Ollama — local</div><div style="flex:1;font:400 12px/1.3 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36)">http://192.168.1.24:11434/v1</div><div style="border-radius:22px;padding:5px 10px;background:#161616;color:rgba(241,243,236,0.60);font:600 11px/1 'Albert Sans',sans-serif">text</div></div>
+</div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Double-click a row to edit. Orange means it didn't answer the last check.</div>
+</div>
+<div style="display:flex;gap:10px">
+<div style="height:38px;border-radius:10px;border:1px solid #BFF54A;color:#BFF54A;font:600 13.5px/1 'Albert Sans',sans-serif;display:flex;align-items:center;padding:0 16px">Add provider</div>
+<div style="height:38px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);color:rgba(241,243,236,0.60);font:600 13.5px/1 'Albert Sans',sans-serif;display:flex;align-items:center;padding:0 16px">Test all</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isModels }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Transcription model</div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Fetched from Groq. Latency is what Dictly measured on this Mac.</div>
+</div>
+<div style="height:38px;border-radius:10px;background:#161616;display:flex;align-items:center;gap:9px;padding:0 13px;flex:none;max-width:320px">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="16" y1="16" x2="21" y2="21" stroke-linecap="round"></line></svg>
+<div style="font:400 14px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Search 8 models</div>
+</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;overflow:hidden;flex:none">
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="flex:1;font:400 13.5px/1.3 ui-monospace,Menlo,monospace">whisper-large-v3-turbo</div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);font-variant-numeric:tabular-nums">210 ms</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BFF54A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 7"></path></svg></div>
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="flex:1;font:400 13.5px/1.3 ui-monospace,Menlo,monospace">distil-whisper-large-v3-en</div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);font-variant-numeric:tabular-nums">160 ms</div><div style="width:16px"></div></div>
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="flex:1;font:400 13.5px/1.3 ui-monospace,Menlo,monospace">whisper-large-v3</div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);font-variant-numeric:tabular-nums">480 ms</div><div style="width:16px"></div></div>
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:8px 14px"><div style="flex:1;font:400 13.5px/1.3 ui-monospace,Menlo,monospace">whisper-tiny</div><div style="font:400 12px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60);font-variant-numeric:tabular-nums">90 ms</div><div style="width:16px"></div></div>
+</div>
+<div style="display:flex;gap:18px;align-items:flex-start">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Fallback</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;min-height:56px;display:flex;align-items:center;gap:12px;padding:0 14px"><div style="flex:1;display:flex;flex-direction:column;gap:2px"><div style="font:400 14.5px/1.3 'Albert Sans',sans-serif">None</div><div style="font:400 11.5px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Used if the first one fails or times out</div></div><svg width="6" height="11" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Type a model ID manually</div>
+<div style="height:56px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);display:flex;align-items:center;padding:0 14px;font:400 13px/1 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.36)">provider/model-name</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isGeneral }}" hint-placeholder-val="{{ false }}">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">General</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Shortcut</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;min-height:64px;display:flex;align-items:center;gap:14px;padding:0 14px">
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 15px/1.4 'Albert Sans',sans-serif">Start dictation</div><div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Held, not tapped — release to finish</div></div>
+<div style="border-radius:10px;background:#161616;border:1px solid rgba(255,255,255,0.12);padding:9px 14px;font:600 13px/1 'Albert Sans',sans-serif">hold fn</div>
+<div style="height:34px;border-radius:9px;border:1px solid rgba(255,255,255,0.14);color:rgba(241,243,236,0.60);font:600 12.5px/1 'Albert Sans',sans-serif;display:flex;align-items:center;padding:0 13px">Change</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">How dictation starts</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;overflow:hidden;flex:none">
+<div style="min-height:56px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:16px;height:16px;border-radius:50%;border:1.5px solid #BFF54A;display:grid;place-items:center;flex:none"><div style="width:8px;height:8px;border-radius:50%;background:#BFF54A"></div></div><div style="flex:1;display:flex;flex-direction:column;gap:2px"><div style="font:400 14.5px/1.3 'Albert Sans',sans-serif">Hold fn — panel appears while you speak</div></div></div>
+<div style="min-height:56px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:16px;height:16px;border-radius:50%;border:1.5px solid rgba(241,243,236,0.36);flex:none"></div><div style="flex:1;font:400 14.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Click the menu bar icon</div></div>
+<div style="min-height:56px;display:flex;align-items:center;gap:12px;padding:8px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:16px;height:16px;border-radius:50%;border:1.5px solid rgba(241,243,236,0.36);flex:none"></div><div style="flex:1;font:400 14.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Double-tap ⌘ — panel opens centred</div></div>
+<div style="min-height:56px;display:flex;align-items:center;gap:12px;padding:8px 14px"><div style="width:16px;height:16px;border-radius:50%;border:1.5px solid rgba(241,243,236,0.36);flex:none"></div><div style="flex:1;display:flex;flex-direction:column;gap:2px"><div style="font:400 14.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Quiet mode — no panel, just the menu bar</div><div style="font:400 11.5px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">The icon goes lime while it listens</div></div></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Panel</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;overflow:hidden;flex:none">
+<div style="min-height:56px;display:flex;align-items:center;gap:14px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="flex:1;font:400 15px/1.4 'Albert Sans',sans-serif">Position</div><div style="display:flex;gap:5px"><div style="border-radius:8px;padding:7px 12px;background:#BFF54A;color:#0A0B0A;font:600 12.5px/1 'Albert Sans',sans-serif">Bottom centre</div><div style="border-radius:8px;padding:7px 12px;background:#161616;color:rgba(241,243,236,0.60);font:600 12.5px/1 'Albert Sans',sans-serif">At the cursor</div><div style="border-radius:8px;padding:7px 12px;background:#161616;color:rgba(241,243,236,0.60);font:600 12.5px/1 'Albert Sans',sans-serif">Near the notch</div></div></div>
+<div style="min-height:56px;display:flex;align-items:center;gap:14px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="flex:1;font:400 15px/1.4 'Albert Sans',sans-serif">Launch at login</div><div style="width:44px;height:26px;border-radius:13px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box"><div style="width:20px;height:20px;border-radius:50%;background:#0A0B0A"></div></div></div>
+<div style="min-height:56px;display:flex;align-items:center;gap:14px;padding:0 14px"><div style="flex:1;display:flex;flex-direction:column;gap:2px"><div style="font:400 15px/1.4 'Albert Sans',sans-serif">Sound on insert</div><div style="font:400 11.5px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Off by default — the text appearing is enough</div></div><div style="width:44px;height:26px;border-radius:13px;background:#161616;border:1px solid rgba(255,255,255,0.09);display:flex;align-items:center;padding:0 3px;box-sizing:border-box"><div style="width:20px;height:20px;border-radius:50%;background:rgba(241,243,236,0.36)"></div></div></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isPrivacy }}" hint-placeholder-val="{{ false }}">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Privacy &amp; lock</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;overflow:hidden;flex:none">
+<div style="min-height:60px;display:flex;align-items:center;gap:14px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="flex:1;font:400 15px/1.4 'Albert Sans',sans-serif">Require Touch ID to open Dictly</div><div style="width:44px;height:26px;border-radius:13px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box"><div style="width:20px;height:20px;border-radius:50%;background:#0A0B0A"></div></div></div>
+<div style="min-height:60px;display:flex;align-items:center;gap:14px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="flex:1;font:400 15px/1.4 'Albert Sans',sans-serif">Lock after</div><div style="font:400 14.5px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Immediately</div><svg width="6" height="11" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg></div>
+<div style="min-height:60px;display:flex;align-items:center;gap:14px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="flex:1;font:400 15px/1.4 'Albert Sans',sans-serif">Require Touch ID to show API keys</div><div style="width:44px;height:26px;border-radius:13px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box"><div style="width:20px;height:20px;border-radius:50%;background:#0A0B0A"></div></div></div>
+<div style="min-height:60px;display:flex;align-items:center;gap:14px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="flex:1;display:flex;flex-direction:column;gap:2px"><div style="font:400 15px/1.4 'Albert Sans',sans-serif">Keep audio after a failure</div><div style="font:400 11.5px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">So a retry doesn't cost you the dictation</div></div><div style="width:44px;height:26px;border-radius:13px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box"><div style="width:20px;height:20px;border-radius:50%;background:#0A0B0A"></div></div></div>
+<div style="min-height:60px;display:flex;align-items:center;gap:14px;padding:0 14px"><div style="flex:1;font:400 15px/1.4 'Albert Sans',sans-serif">Keep history</div><div style="font:400 14.5px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">30 days</div><svg width="6" height="11" viewBox="0 0 8 14" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2" stroke-linecap="round"><path d="M1 1l6 6-6 6"></path></svg></div>
+</div>
+<div style="font:400 12px/1.5 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);max-width:560px">Dictation itself never asks for Touch ID — that would slow down every sentence. Keys live in the login keychain.</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Permissions</div>
+<div style="background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;overflow:hidden;flex:none">
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:7px;height:7px;border-radius:50%;background:#BFF54A"></div><div style="flex:1;font:400 14.5px/1.4 'Albert Sans',sans-serif">Microphone</div><div style="font:400 13px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Granted</div></div>
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:7px;height:7px;border-radius:50%;background:#BFF54A"></div><div style="flex:1;font:400 14.5px/1.4 'Albert Sans',sans-serif">Accessibility — insert text at the cursor</div><div style="font:400 13px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Granted</div></div>
+<div style="min-height:52px;display:flex;align-items:center;gap:12px;padding:0 14px"><div style="width:7px;height:7px;border-radius:50%;background:#BFF54A"></div><div style="flex:1;font:400 14.5px/1.4 'Albert Sans',sans-serif">Input Monitoring — hear the fn key</div><div style="font:400 13px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Granted</div></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isUsage }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Usage</div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">August 1–25 · estimated from published prices</div>
+</div>
+<div style="display:flex;gap:18px;align-items:stretch">
+<div style="flex:1;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;overflow:hidden;flex:none">
+<div style="min-height:60px;display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 15px/1.3 'Albert Sans',sans-serif">Groq</div><div style="font:400 11.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">96 min audio · 512 dictations</div></div><div style="font:600 15px/1.3 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums">$1.94</div></div>
+<div style="min-height:60px;display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 15px/1.3 'Albert Sans',sans-serif">Cerebras</div><div style="font:400 11.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">3.1M tokens · 508 cleanups</div></div><div style="font:600 15px/1.3 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums">$0.98</div></div>
+<div style="min-height:60px;display:flex;align-items:center;gap:12px;padding:10px 14px"><div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font:400 15px/1.3 'Albert Sans',sans-serif">OpenAI <span style="color:rgba(241,243,236,0.36)">fallback</span></div><div style="font:400 11.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">7 min audio · 9 dictations</div></div><div style="font:600 15px/1.3 'Albert Sans',sans-serif;font-variant-numeric:tabular-nums">$0.26</div></div>
+</div>
+<div style="width:300px;flex:none;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:14px">
+<div style="font:600 13px/1.3 'Albert Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,243,236,0.36)">By week</div>
+<div style="flex:1;display:flex;align-items:flex-end;gap:12px">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:100%;height:52px;border-radius:6px;background:#161616"></div><div style="font:400 11px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">w31</div></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:100%;height:78px;border-radius:6px;background:#161616"></div><div style="font:400 11px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">w32</div></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:100%;height:44px;border-radius:6px;background:#161616"></div><div style="font:400 11px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">w33</div></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:100%;height:104px;border-radius:6px;background:#BFF54A"></div><div style="font:400 11px/1 'Albert Sans',sans-serif;color:#F1F3EC;font-variant-numeric:tabular-nums">w34</div></div>
+</div>
+</div>
+</div>
+<div style="display:flex;align-items:baseline;justify-content:space-between;max-width:640px"><div style="font:400 15px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Total this month</div><div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em;font-variant-numeric:tabular-nums">$3.18</div></div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Estimates, not invoices. Your provider's bill is the truth.</div>
+</sc-if>
+
+<sc-if value="{{ isHistory }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">History</div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Kept on this Mac for 30 days, then deleted.</div>
+</div>
+<div style="height:38px;border-radius:10px;background:#161616;display:flex;align-items:center;gap:9px;padding:0 13px;flex:none;max-width:320px">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(241,243,236,0.36)" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="16" y1="16" x2="21" y2="21" stroke-linecap="round"></line></svg>
+<div style="font:400 14px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Search dictations</div>
+</div>
+<div style="flex:1;min-height:0;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);border-radius:14px;overflow:hidden;flex:none">
+<div style="min-height:74px;display:flex;align-items:center;gap:14px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:70px;flex:none;font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">9:38</div><div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0"><div style="font:400 14.5px/1.45 'Albert Sans',sans-serif">Running about ten minutes late — start without me and I'll catch up.</div><div style="font:400 11.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">Messages · 0:09 · Groq</div></div></div>
+<div style="min-height:74px;display:flex;align-items:center;gap:14px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:70px;flex:none;font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">9:21</div><div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0"><div style="font:400 14.5px/1.45 'Albert Sans',sans-serif">yeah I'll take the API tickets — can we push standup to 10:30</div><div style="font:400 11.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">Slack · 0:06 · Groq</div></div></div>
+<div style="min-height:74px;display:flex;align-items:center;gap:14px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:70px;flex:none;font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">8:54</div><div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0"><div style="font:400 14.5px/1.45 'Albert Sans',sans-serif">Hi Sarah, we're still on track for the 15th. Two things I need from you this week…</div><div style="font:400 11.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">Mail · 0:34 · Groq</div></div></div>
+<div style="min-height:74px;display:flex;align-items:center;gap:14px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.09)"><div style="width:70px;flex:none;font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">8:40</div><div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0"><div style="font:400 14.5px/1.45 'Albert Sans',sans-serif">git rebase -i origin/main</div><div style="font:400 11.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">Terminal · 0:04 · Groq</div></div></div>
+<div style="min-height:74px;display:flex;align-items:center;gap:14px;padding:12px 14px"><div style="width:70px;flex:none;font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">Yesterday</div><div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0"><div style="font:400 14.5px/1.45 'Albert Sans',sans-serif">Idea: the HUD should follow the display the cursor is on, not the built-in screen.</div><div style="font:400 11.5px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36);font-variant-numeric:tabular-nums">Notes · 0:12 · Groq</div></div></div>
+</div>
+<div style="display:flex;gap:10px"><div style="height:38px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);color:rgba(241,243,236,0.60);font:600 13.5px/1 'Albert Sans',sans-serif;display:flex;align-items:center;padding:0 16px">Export as text</div><div style="height:38px;border-radius:10px;border:1px solid rgba(255,92,92,0.5);color:#FF5C5C;font:600 13.5px/1 'Albert Sans',sans-serif;display:flex;align-items:center;padding:0 16px">Delete all</div></div>
+</sc-if>
+
+<sc-if value="{{ isDictionary }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:600 28px/1.15 'Albert Sans',sans-serif;letter-spacing:-.02em">Dictionary</div>
+<div style="font:400 14px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Names and jargon the cleanup step should never rewrite.</div>
+</div>
+<div style="display:flex;gap:10px;max-width:520px">
+<div style="flex:1;height:44px;border-radius:10px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);display:flex;align-items:center;padding:0 14px;font:400 14.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">Add a word or phrase</div>
+<div style="height:44px;border-radius:10px;background:#BFF54A;color:#0A0B0A;font:600 13.5px/1 'Albert Sans',sans-serif;display:flex;align-items:center;padding:0 20px">Add</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;max-width:760px">
+<div style="border-radius:22px;padding:9px 14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);font:400 13.5px/1 'Albert Sans',sans-serif">Kubernetes</div>
+<div style="border-radius:22px;padding:9px 14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);font:400 13.5px/1 'Albert Sans',sans-serif">Cerebras</div>
+<div style="border-radius:22px;padding:9px 14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);font:400 13.5px/1 'Albert Sans',sans-serif">Deepgram</div>
+<div style="border-radius:22px;padding:9px 14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);font:400 13.5px/1 'Albert Sans',sans-serif">whisper-large-v3-turbo</div>
+<div style="border-radius:22px;padding:9px 14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);font:400 13.5px/1 'Albert Sans',sans-serif">Sindre</div>
+<div style="border-radius:22px;padding:9px 14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);font:400 13.5px/1 'Albert Sans',sans-serif">Nordic Trend</div>
+<div style="border-radius:22px;padding:9px 14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);font:400 13.5px/1 'Albert Sans',sans-serif">OpenRouter</div>
+<div style="border-radius:22px;padding:9px 14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);font:400 13.5px/1 'Albert Sans',sans-serif">Elementor</div>
+<div style="border-radius:22px;padding:9px 14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);font:400 13.5px/1 'Albert Sans',sans-serif">Malmö</div>
+<div style="border-radius:22px;padding:9px 14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.09);font:400 13.5px/1 'Albert Sans',sans-serif">Ollama</div>
+</div>
+<div style="font:400 12px/1.4 'Albert Sans',sans-serif;color:rgba(241,243,236,0.36)">34 words · shared with every provider you use</div>
+</sc-if>
+
+</div>
+</div>
+
+<sc-if value="{{ hasSheet }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;justify-content:center;align-items:flex-start;padding-top:40px">
+<div style="width:560px;border-radius:14px;background:#0C0C0C;border:1px solid rgba(255,255,255,0.12);box-shadow:0 30px 90px rgba(0,0,0,0.8);padding:24px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:5px">
+<div style="font:600 20px/1.2 'Albert Sans',sans-serif;letter-spacing:-.01em">Add provider</div>
+<div style="font:400 13px/1.45 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Anything with a base URL and a key. Presets just prefill the URL.</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:7px">
+<div style="border-radius:22px;padding:8px 13px;background:#161616;border:1px solid rgba(255,255,255,0.14);font:600 12.5px/1 'Albert Sans',sans-serif">Groq</div>
+<div style="border-radius:22px;padding:8px 13px;background:#161616;font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">OpenAI</div>
+<div style="border-radius:22px;padding:8px 13px;background:#161616;font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Cerebras</div>
+<div style="border-radius:22px;padding:8px 13px;background:#161616;font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">OpenRouter</div>
+<div style="border-radius:22px;padding:8px 13px;background:#161616;font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Anthropic</div>
+<div style="border-radius:22px;padding:8px 13px;background:#161616;font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Mistral</div>
+<div style="border-radius:22px;padding:8px 13px;background:#161616;font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Deepgram</div>
+<div style="border-radius:22px;padding:8px 13px;background:#161616;font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Ollama — local</div>
+<div style="border-radius:22px;padding:8px 13px;background:#161616;border:1px dashed rgba(255,255,255,0.20);font:400 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Custom</div>
+</div>
+<div style="display:flex;gap:12px">
+<div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Display name</div><div style="height:42px;border-radius:10px;background:#000000;border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;padding:0 12px;font:400 14.5px/1 'Albert Sans',sans-serif">Groq</div></div>
+<div style="flex:2;display:flex;flex-direction:column;gap:6px"><div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,243,236,0.36)">Base URL</div><div style="height:42px;border-radius:10px;background:#000000;border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;padding:0 12px;font:400 12.5px/1 ui-monospace,Menlo,monospace;color:rgba(241,243,236,0.80)">https://api.groq.com/openai/v1</div></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px"><div style="font:600 11px/1.2 'Albert Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,243,236,0.36)">API key</div><div style="height:42px;border-radius:10px;background:#000000;border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;gap:10px;padding:0 12px"><div style="flex:1;font:400 15px/1 'Albert Sans',sans-serif;letter-spacing:.12em;color:rgba(241,243,236,0.60)">••••••••••••••••</div><div style="font:600 12.5px/1 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Paste</div></div></div>
+<div style="display:flex;gap:22px">
+<div style="display:flex;align-items:center;gap:10px"><div style="width:44px;height:26px;border-radius:13px;background:#BFF54A;display:flex;align-items:center;justify-content:flex-end;padding:0 3px;box-sizing:border-box"><div style="width:20px;height:20px;border-radius:50%;background:#0A0B0A"></div></div><div style="font:400 14px/1.3 'Albert Sans',sans-serif">Use for transcription</div></div>
+<div style="display:flex;align-items:center;gap:10px"><div style="width:44px;height:26px;border-radius:13px;background:#161616;border:1px solid rgba(255,255,255,0.09);display:flex;align-items:center;padding:0 3px;box-sizing:border-box"><div style="width:20px;height:20px;border-radius:50%;background:rgba(241,243,236,0.36)"></div></div><div style="font:400 14px/1.3 'Albert Sans',sans-serif;color:rgba(241,243,236,0.60)">Use for cleanup</div></div>
+</div>
+<div style="min-height:44px;border-radius:12px;background:rgba(191,245,74,0.12);display:flex;align-items:center;gap:10px;padding:0 14px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#BFF54A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 7"></path></svg><div style="font:400 13.5px/1.4 'Albert Sans',sans-serif;color:#BFF54A;font-variant-numeric:tabular-nums">Connected · 8 models found · 190 ms</div></div>
+<div style="display:flex;justify-content:flex-end;gap:10px"><div style="height:40px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);color:rgba(241,243,236,0.60);font:600 13.5px/1 'Albert Sans',sans-serif;display:flex;align-items:center;padding:0 18px">Cancel</div><div style="height:40px;border-radius:10px;background:#BFF54A;color:#0A0B0A;font:600 13.5px/1 'Albert Sans',sans-serif;display:flex;align-items:center;padding:0 18px">Save provider</div></div>
+</div>
+</div>
+</sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:980,&quot;height&quot;:800},&quot;pane&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;providers&quot;,&quot;models&quot;,&quot;general&quot;,&quot;privacy&quot;,&quot;usage&quot;,&quot;history&quot;,&quot;dictionary&quot;],&quot;default&quot;:&quot;providers&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;sheet&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;none&quot;,&quot;add&quot;],&quot;default&quot;:&quot;none&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;height&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:800,&quot;min&quot;:400,&quot;max&quot;:1000,&quot;step&quot;:20,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props.pane || 'providers';
+    const on = 'rgba(191,245,74,0.12)';
+    const off = 'transparent';
+    const lime = '#BFF54A';
+    const dim = 'rgba(241,243,236,0.60)';
+    const bright = '#F1F3EC';
+    const titles = {
+      providers: 'Providers & models', models: 'Providers & models', general: 'General',
+      privacy: 'Privacy & lock', usage: 'Usage', history: 'History', dictionary: 'Dictionary'
+    };
+    const isProvidersGroup = p === 'providers' || p === 'models';
+    return {
+      winH: (this.props.height || 800) + 'px',
+      winTitle: 'Dictly Settings — ' + (titles[p] || ''),
+      isProviders: p === 'providers', isModels: p === 'models', isGeneral: p === 'general',
+      isPrivacy: p === 'privacy', isUsage: p === 'usage', isHistory: p === 'history',
+      isDictionary: p === 'dictionary',
+      hasSheet: (this.props.sheet || 'none') === 'add',
+      selProviders: isProvidersGroup ? on : off, colProviders: isProvidersGroup ? lime : bright,
+      selGeneral: p === 'general' ? on : off, colGeneral: p === 'general' ? lime : dim,
+      selDictionary: p === 'dictionary' ? on : off, colDictionary: p === 'dictionary' ? lime : dim,
+      selHistory: p === 'history' ? on : off, colHistory: p === 'history' ? lime : dim,
+      selPrivacy: p === 'privacy' ? on : off, colPrivacy: p === 'privacy' ? lime : dim,
+      selUsage: p === 'usage' ? on : off, colUsage: p === 'usage' ? lime : dim
+    };
+  }
+}
+
+</script>
+</body>
+</html>
